@@ -1,89 +1,23 @@
 const menu = {
   'Home': {
-    'text': 'Home',
-    'href': 'https://github.com/fineanmol/Hacktoberfest2k18'
+    'text': 'Want to Publish?',
+    'href': 'https://github.com/fineanmol/Hacktoberfest2k18/blob/master/Contributors.html'
   },
   'Contributors': {
     'text': 'Contributors',
-    'href': 'index.html'
+    'href': 'https://fineanmol.github.io/Hacktoberfest2k18/Contributors.html'
   },
-  'Others': {
-    'Potato': {
+  //'Others': {
+    'Deepak': {
       'text': 'A to Z Resources for Students',
       'href': 'https://github.com/dipakkr/A-to-Z-Resources-for-Students'
     },
     'Tools': {
-      'text': 'Tools',
-      'href': 'tools.html',
+      'text': 'Age Converter',
+      'href': 'https://fineanmol.github.io/AgeGame',
       'id': 'tools'
-    },
-    'Invert': {
-      'text': 'Invert',
-      'href': '#',
-      'id': 'invert-btn'
-    },
-    'Fireworks': {
-      'text': 'Fireworks',
-      'href': 'Fireworks.html',
-      'id': 'fireworks'
-    },
-    'Learn': {
-      'text': 'Learn!',
-      'href': 'wow.html',
-      'id': 'learn'
-    },
-    'Bubble': {
-      'text': 'Bubble',
-      'href': 'bubble.html',
-      'id': 'Bubble'
-    },
-    'Canoi': {
-      'text': 'Canoi',
-      'href': 'canoi.html',
-      'id': 'Canoi'
-    },
-    'Colorgame': {
-      'text': 'Colorgame',
-      'href': 'colorgame.html',
-      'id': 'Colorgame'
-    },
-    'Foxy': {
-      'text': 'Foxy',
-      'href': 'foxy.html',
-      'id': 'Foxy'
-    },
-    'Gifheaven': {
-      'text': 'Gif Heaven',
-      'href': 'gifheaven.html',
-      'id': 'Gifheaven'
-    },
-    'Plainpage': {
-      'text': 'Plain Page',
-      'href': 'plain_page.html',
-      'id': 'Plainpage'
-    },
-    'Snek': {
-      'text': 'Snek',
-      'href': 'snek.html',
-      'id': 'Snek'
-    },
-    
-    'Values': {
-      'text': 'Values',
-      'href': 'values.html',
-      'id': 'Values'
-    },
-     'Flappy': {
-      'text': 'Flappy Game',
-      'href': 'Flappy.html',
-      'id': 'Flappy'
-    },
-    'Stay Dry': {
-      'text': 'Stay Dry',
-      'href': '/dry',
-      'id': 'dry'
     }
-  }
+
 }
 
 function buildMenuHTML (obj = {}) {

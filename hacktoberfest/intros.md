@@ -9,3 +9,4 @@
 | 7 | Tanay Toshniwal | <a href="https://github.com/tanaytoshniwal">tanaytoshniwal</a> | Jaipur, India | MEAN Stack, Ionic Framework, Android, Java |	| 7 | Vaibhav Khulbe | <a href="https://github.com/Kvaibhav01">Kvaibhav01</a> | Ghaziabad, India | Android, Flutter, Front-end web |
 | 8 | Renat Nagaev | <a href="https://github.com/renagaev">renagaev</a> | Tambov, Russia | Python |	| 8 | Tanay Toshniwal | <a href="https://github.com/tanaytoshniwal">tanaytoshniwal</a> | Jaipur, India | MEAN Stack, Ionic Framework, Android, Java |
 | 9 | Renat Nagaev | <a href="https://github.com/renagaev">renagaev</a> | Tambov, Russia | Python |
+| 10 | Amitava Mitra | <a href="https://github.com/Amitava123">Amitava Mitra</a> | West Bengal, India | Front End Web Development |

@@ -1,4 +1,4 @@
-# Hacktoberfest ([Live Website](https://hacktoberfest.fineanmol.com/))
+# Hacktoberfest ([Live Website](https://fineanmol.github.io/Hacktoberfest2k18/Contributors.html))
 
 This is a beginner-friendly project to help you get started with your
 [hacktoberfest](https://hacktoberfest.digitalocean.com/). If you don't
@@ -34,8 +34,8 @@ P.S. Star and share this repository, if you had fun!
 - Clone on your local machine
 
 ```terminal
-git clone https://github.com/fineanmol/hacktoberfest.git
-cd hacktoberfest
+git clone https://github.com/fineanmol/Hacktoberfest2k18.git
+cd Hacktoberfest2k18
 ```
 
 - Create a new branch
@@ -60,7 +60,7 @@ git push origin my-new-branch
 An easy way to avoid conflicts is to add an 'upstream' for your git repo, as other PR's may be merged while you're working on your branch/fork.   
 
 ```terminal
-git remote add upstream https://github.com/fineanmol/hacktoberfest
+git remote add upstream https://github.com/fineanmol/Hacktoberfest2k18
 ```
 
 You can verify that the new remote has been added by typing

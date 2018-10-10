@@ -1,0 +1,21 @@
+body, a {
+  background-color: black;
+  color: red;
+  font-family: 'Nosifer', cursive;
+}
+
+div {
+  height: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+img {
+  border-radius: 50%;
+  width: 40%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

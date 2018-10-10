@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    padding: 2.5vh 2.5vw;
+    margin: 2.5vh 2.5vw;
+}
+
+.row{
+    display: flex;
+    flex-flow: row wrap;
+    width: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.column{
+    display: flex;
+    flex-flow:column wrap;
+    width: auto;
+    align-self: center;
+}

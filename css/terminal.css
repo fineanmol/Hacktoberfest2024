@@ -1,0 +1,32 @@
+.terminal,
+.terminal * {
+    transition: 0s ease-in-out;
+    position: relative;
+    font-family: monospace;
+    background: black;
+    text-decoration: none;
+    color: green;
+    border: none;
+    border-radius: 0 !important; /* Because style="" *sigh* */
+    box-shadow: none !important;
+}
+
+.terminal [class~="bg-primary"],
+.terminal [class~="bg-primary"] *,
+.terminal #footer,
+.terminal #footer * {
+    color: white;
+    background: green !important; /* To override Bootstrap important background */
+}
+
+.terminal .btn-youtube,
+.terminal .btn-youtube * {
+    color: white;
+    background: red !important; /* To override gradient */
+}
+
+.terminal #contribution-rules,
+.terminal #contribution-rules * {
+    color: white;
+    background: green;
+}

@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton|Roboto');
+
+body{
+    background: #000;
+}
+
+h1{
+    font-size: 65px;
+    font-weight: 100;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: #f000ff;
+    font-family: 'Monoton', cursive;
+    font-weight: 100;
+}
+
+p{
+    background: #000;
+    color: #fff;
+    margin: 0;
+    padding: 10px 0;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+.top-bar .wrapper a:first-child{
+    margin-left: 0;
+}
+
+.wrapper{
+    margin: 0 20%;
+}
+
+.flex-box{
+    background:#fff;
+    height: 300px;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.flex{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #f000ff;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    margin: auto;
+}

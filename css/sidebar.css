@@ -1,0 +1,67 @@
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 9999;
+  width: 70px;
+  transition-property: width;
+  transition-duration: 1.5s;
+  transition-delay: 0.25s;
+}
+
+.icon-bar:hover {
+  width: 120px;
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.twitter {
+  background: #55acee;
+  color: white;
+}
+.twitter:hover {
+  
+}
+
+.instagram {
+  background: #f09433;
+  background: -moz-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+.youtube {
+  background: #bb0000;
+  color: white;
+}

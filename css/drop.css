@@ -1,0 +1,133 @@
+.drop1 {
+
+
+	width:1px;
+	height:89px;
+	position: absolute;
+	bottom:200px;
+	font-family: sans-serif;
+	font-size:30px;
+	animation: fall 3.63s linear infinite;
+}
+.drop2{
+
+
+	width:1px;
+	height:89px;
+	position: absolute;
+	bottom:200px;
+	font-family: sans-serif;
+	font-size:30px;
+	animation: fall 2.63s linear infinite;
+
+
+}
+.drop3 {
+
+
+	width:1px;
+	height:89px;
+	position: absolute;
+	bottom:200px;
+	font-family: sans-serif;
+	font-size:30px;
+	animation: fall 3s linear infinite;
+
+
+}
+.drop4 {
+
+
+	width:1px;
+	height:89px;
+	position: absolute;
+	bottom:200px;
+	font-family: sans-serif;
+	font-size:30px;
+	animation: fall 2.13s linear infinite;
+
+
+}
+.drop5 {
+
+
+	width:1px;
+	height:89px;
+	position: absolute;
+	bottom:200px;
+	font-family: sans-serif;
+	font-size:30px;
+	animation: fall 1.3s linear infinite;
+
+
+}
+.drop6 {
+
+
+	width:1px;
+	height:89px;
+	position: absolute;
+	bottom:200px;
+	font-family: sans-serif;
+	font-size:30px;
+	animation: fall 5.63s linear infinite;
+
+
+}
+.drop7 {
+
+
+	width:1px;
+	height:89px;
+	position: absolute;
+	bottom:200px;
+	font-family: sans-serif;
+	font-size:30px;
+	animation: fall 4.63s linear infinite;
+
+
+}
+.drop8 {
+
+
+	width:1px;
+	height:89px;
+	position: absolute;
+	bottom:200px;
+	font-family: sans-serif;
+	font-size:30px;
+	animation: fall 5.63s linear infinite;
+
+
+}
+.drop9 {
+
+
+	width:1px;
+	height:89px;
+	position: absolute;
+	bottom:200px;
+	font-family: sans-serif;
+	font-size:30px;
+	animation: fall 2.63s linear infinite;
+
+
+}
+.drop10 {
+
+
+	width:1px;
+	height:89px;
+	position: absolute;
+	bottom:200px;
+	font-family: sans-serif;
+	font-size:30px;
+	animation: fall 3.3s linear infinite;
+
+
+}
+
+/* animate the drops*/
+@keyframes fall {
+	to {margin-top:900px;}
+}

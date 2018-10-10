@@ -1,0 +1,84 @@
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    /* height: 100px; */
+    background: linear-gradient(to left, #FF0844, #FF4563);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    color: white;
+    text-align: center;
+    z-index: 1000;
+}
+
+#footer h3 {
+    padding: 5px;
+    height: 25px;
+}
+
+.footer-icon {
+    color: #e6e6fa;
+}
+
+.social-icons {
+    padding: 5px;
+}
+
+.social-icons> a img {
+   transition: all .2s ease-in-out;
+  }
+
+  .social-icons> a img:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+}
+
+#footer h3 span:hover {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.hacktoberfest-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    z-index: 999;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    background-color: #FF0844;
+    padding: 6px 10px 10px;
+    z-index: 1001;
+    animation: backToTopShowAnim .3s;
+    transition: transform .2s ease-out;
+}
+#backToTop svg {
+    width: 25px;
+    height: auto;
+    opacity: .6;
+}
+#backToTop:hover svg {
+    opacity: 1;
+}
+#backToTop:hover{transform: scale(1.1);}
+#backToTop.mousedown{transform: translateY(3px);}
+#backToTop.startscrolling{
+    animation: backToTopScrollingAnimation .8s infinite;
+    animation-timing-function: linear;
+}
+@keyframes backToTopShowAnim{
+    0%{transform: scale(0)}
+    50%{transform: scale(1.3)}
+    100%{transform: scale(1)}
+}
+@keyframes backToTopScrollingAnimation{
+    from{transform: rotate(0deg)}
+    to{transform: rotate(360deg)}
+}

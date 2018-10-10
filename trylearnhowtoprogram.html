@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/trylearnhowtoprogram.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="scripts/trylearnhowtoprogram.js"></script>
+  <title>Sweet way to learn</title>
+</head>
+
+<body>
+  <button onclick="topFunction()" class="btn btn-danger" id="myBtn" title="Go to top"><img src="https://png.icons8.com/ios/50/000000/circled-chevron-up.png"
+      alt="circled-chevron-up icon"></button>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="navbar">
+    <a class="navbar-brand" href="/">Hacktoberfest</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01"
+      aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"> <a class="nav-link" href="/">Home</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="./helpful-material.html">Helpful Material</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="./contributors.html">Contributors</a> </li>
+        <li class="dropdown drop">
+          <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Others
+            <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li class="nav-item"> <a class="nav-link-drop" href="https://cultofthepartyparrot.com/">PARROTS?!</a> </li>
+            <li class="nav-item"> <a class="nav-link-drop" id="twist" href="#">The twist</a> </li>
+            <li class="nav-item"> <a class="nav-link-drop" href="./potato.html">Potato</a> </li>
+            <li class="nav-item"> <a class="nav-link-drop" href="./cheese.html">Cheese!</a> </li>
+            <li class="nav-item"> <a class="nav-link-drop" id="learn" href="/Fireworks">Fireworks</a> </li>
+            <li class="nav-item"> <a class="nav-link-drop" href="./wow.html">Learn!</a> </li>
+            <li class="nav-item"> <a class="nav-link-drop" id="tools" href="./tools.html">Tools</a> </li>
+            <li class="nav-item"> <a class="nav-link-drop" href="./gifheaven.html">Gif heaven!</a> </li>
+            <li class="nav-item"> <a class="nav-link-drop" href="./trylearnhowtoprogram.html">Program for newcomers to
+                learn!</a> </li>
+            <li class="nav-item"> <a class="nav-link-drop" href="./values.html">Values</a> </li>
+            <li class="nav-item"> <a class="nav-link-drop" href="./snek.html">SNEK!</a> </li>
+            <li class="nav-item"> <a class="nav-link-drop" href="./canoi.html">Canoi</a> </li>
+            <li class="nav-item ml-lg-auto"> <a class="nav-link-drop" id="invert-btn" href="#">Invert</a> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid text-center">
+    <h1>An awesome resource to learn how to code</h1>
+    <span class="badge badge-primary">Newbie Friendly</span><span class="badge badge-secondary more">Find out more!</span>
+    <div id="main-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="text-center">
+            <h5>Struggling to figure out where to start?</h5>
+          </div>
+          <p>There are almost <em>too</em> many resources out there to learn how to program. And a lot of those
+            resources
+            leave people in vicious cycle where they complete tutorials, and then try and execute what they've learned
+            practically,
+            discover they can't, and go back to review those same tutorials (or slightly different ones that cover the
+            same material).
+            You don't have to get caught in the cycle! If you use <a href="https://www.learnhowtoprogram.com">this</a>
+            great resource,
+            you'll be challeneged every day you practice, and that challenege will translate into practical skills!
+          </p>
+          <p><a href="https://www.learnhowtoprogram.com">Learn how to program</a> is a website that hosts the
+            curriculum
+            of the coding
+            bootcamp Epicodus. That's right--<em>the entire program is hosted online</em>. You can complete it at your
+            own pace, with guidance
+            from videos and cheat sheets when you're learning a new concept, and not much guidance at all when you
+            actually have to do the project.
+            This will help you grow as a developer, and make sure you don't get stuck in a cycle of never <em>quite</em>
+            getting it.
+          </p>
+          <p>I know what you're thinking--I'm some shill from this camp. No. <b> I am in no way associated with</b> <b>Epicodus</b>.
+            I've just been having such a great time using their materials that I have to share it with anyone that'll
+            listen.
+          </p>
+          <p>Don't think it'll work? Checkout some of these projects that I've completed in my month of using <a href="https://www.learnhowtoprogram.com">Learn
+              how to program</a>.
+          </p>
+          <p><small>Also, I'm not very smart or very good at this. Think of what <em>you</em> could achieve if you gave
+              the program a shot!</small></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card">
+            <h5 class="card-title">The Sieve of Eratosthenes</h5>
+            <h6 class="card-subtitle mb-2 text-muted">An algorithm to find prime numbers</h6>
+            <form class="card-text" id="sieve_form">
+              <div class="form-group">
+                <label for="user_number">Enter a number and page will return every prime number less than that number.</label>
+                <input type="number" class="form-control" id="user_number" placeholder="100">
+              </div>
+              <br>
+              <div class="text-center">
+                <button type="submit" class="btn btn-lg btn-info">Submit</button>
+              </div>
+            </form>
+            <br>
+            <div class="card bg-light p-3">
+              <div class="text-center">
+                <h3>Results:</h3>
+              </div>
+              <span id="sieve_results"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card">
+            <h5 class="card-title">Palindrome Checker</h5>
+            <h6 class="card-subtitle mb-2 text-muted">A little program that checks whether text is a palindrome</h6>
+            <form class="card-text" id="palindrome_form">
+              <div class="form-group">
+                <label for="user_string">Enter a word or phrase below to see if it's a palindrome.</label>
+                <input class="form-control" id="user_string" type="text" placeholder="a but tuba.">
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-lg btn-info">Check</button>
+              </div>
+            </form>
+            <br>
+            <div id="output" class="card bg-light p-3">
+              <div class="text-center">
+                <h3>Results:</h3>
+              </div>
+              <p id="originalInput" class="text-center">
+              </p>
+              <span id="palindrome_results"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card">
+            <h5 class="card-title">Factorial Calculator</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Calculate any numbers factorial (!)</h6>
+            <form class="card-text" id="factorial_form">
+              <div class="form-group">
+                <p id="error" class="error">
+                </p>
+                <label for="user_factorial">Enter the number you'd like to compute below--remember, negative numbers
+                  can't be factorials!</label>
+                <input type="number" class="form-control" id="user_factorial">
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-lg btn-info">Calculate!</button>
+              </div>
+            </form>
+            <div class="card bg-light p-3">
+              <div class="text-center">
+                <h3>Results:</h3>
+              </div>
+              <p id="factorial_results">
+              </p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta name="description" content="This is a static website serving as a beginner friendly project to help developers get started with hacktoberfest.">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+  <!-- Github follow button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/navbar.css" />
+  <link rel="stylesheet" href="./css/footer.css" />
+  <link rel="stylesheet" href="./css/terminal.css" />
+  <link rel="stylesheet" href="./css/dry.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <title>!!STAY DRY HACKTOBERFEST!!</title>
+</head>
+<link rel="shortcut icon" href="./images/sh_icon_min.png" />
+
+
+<body id="body">
+  <!--
+      __  __              __    __          __                 ____             __
+    / / / /____ _ _____ / /__ / /_ ____   / /_   ___   _____ / __/___   _____ / /_
+    / /_/ // __ `// ___// //_// __// __ \ / __ \ / _ \ / ___// /_ / _ \ / ___// __/
+  / __  // /_/ // /__ / ,<  / /_ / /_/ // /_/ //  __// /   / __//  __/(__  )/ /_
+  /_/ /_/ \__,_/ \___//_/|_| \__/ \____//_.___/ \___//_/   /_/   \___//____/ \__/
+                                              i just want a t-shirt at this point
+  -->
+  <!--Navbar-->
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <a href="https://github.com/lingonsaft/hacktoberfest" class="github-corner" aria-label="View source on GitHub">
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve" role="img" aria-labelledby="dyn2wm4vin1xgraye3ggy9kf12oaz8a" class="header__logo" width="50px" height="50px"><title id="dyn2wm4vin1xgraye3ggy9kf12oaz8a">Hacktoberfest</title>
+		  <style type="text/css">
+			.st0{fill:#FF0844;}
+		  </style>
+		  <path class="st0" d="M0.7,0.7v298.7h298.7V0.7H0.7z M197.8,271.4l-32-32v-95.6l-31.4,31.4v79l-17.3,17.3L99.8,254V70.4L95,65.6  L73,87.7L61.7,76.5l47.8-47.8l0.1,0.1l0,0l1.9,1.8l22.8,22.8V136l31.4-31.4V70.2L150,54.4l25.8-25.8l24.7,24.7v169.1l12.1,12.1  l14.7-14.7l11.1,11.1L197.8,271.4z"></path>
+		</svg>
+      lingonsaft/Hacktoberfest 2018
+	  </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarColor01">
+		<ul class="navbar-nav mr-auto" id="menu">
+		  <!-- Menu -->
+		</ul>
+	  </div>
+	</nav>
+  <!-- End Navbar-->
+  <div class="rain"></div>
+  <!-- End Navbar-->
+
+  <!--Main content-->
+  <div class="container-fluid" id="main-container">
+    <div class="dry-container">
+      <canvas width="500" height="500" class="dry-game" />
+    </div>
+  </div>
+  <!--Main content-->
+
+  <div class="social-widget">
+    <div class="col">
+      <a href="https://github.com/lingonsaft">
+        <i class="footer-icon fa fa-fw fa-github fa-2x" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div class="col">
+      <a href="https://www.youtube.com/lingonsaft/">
+        <i class="footer-icon fa fa-fw fa-youtube fa-2x" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div class="col">
+      <a href="https://www.instagram.com/lingonsaftofficial/">
+        <i class="footer-icon fa fa-fw fa-instagram fa-2x" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div class="col">
+      <a href="https://twitter.com/lingonsaft1">
+        <i class="footer-icon fa fa-fw fa-twitter fa-2x" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+
+  <button id="backToTop" type="button" title="Back to Top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.189 511.189">
+      <g>
+        <path d="M364.858 157.935l-98.59-145.28c-8.547-12.586-22.158-12.331-30.25.526l-90.88 144.228c-8.093 12.857-2.56 23.381 12.302 23.381h26.639v50.148c0 15.7 12.742 28.445 28.445 28.445h85.333c15.73 0 28.445-12.743 28.445-28.445V180.79h27.008c14.875 0 20.109-10.269 11.547-22.855M51.115 338.627H19.641C5.774 338.627 0 328.502 0 318.702c0-10.097 7.225-19.91 19.641-19.91h106.226c12.43 0 19.655 9.813 19.655 19.91 0 9.8-5.773 19.925-19.655 19.925h-31.46v144.91c0 14.45-9.23 22.528-21.646 22.528s-21.646-8.079-21.646-22.527v-144.91zM300.559 401.561c0-34.93-18.19-66.417-54.273-66.417-36.096 0-54.286 31.487-54.286 66.417 0 35.214 17.621 66.389 54.286 66.389s54.273-31.175 54.273-66.389m-153.587 0c0-60.046 40.406-106.253 99.314-106.253 58.013 0 99.3 47.658 99.3 106.253 0 59.748-40.121 106.254-99.3 106.254-58.61 0-99.314-46.506-99.314-106.254M406.983 398.091h29.453c18.177 0 29.71-13.284 29.71-30.592 0-17.338-11.534-30.62-29.71-30.62h-29.453v61.212zm-43.32-76.786c0-13.582 8.092-22.5 22.542-22.5h51.073c42.453 0 73.912 27.691 73.912 68.978 0 42.14-32.611 68.422-72.164 68.422h-32.042v47.346c0 14.435-9.23 22.528-21.633 22.528-12.445 0-21.688-8.093-21.688-22.528V321.305z" />
+      </g>
+    </svg>
+  </button>
+
+
+  <!-- Latest compiled JavaScript -->
+  <script src="./scripts/scroll.js"></script>
+  <script src="./scripts/easter_egg.js"></script>
+  <script src="./scripts/dry.js"></script>
+  <!-- Latest compiled JavaScript -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script type="application/javascript" charset="utf-8" src="register.js"></script>
+  <script type="application/javascript" charset="utf-8" src="sw.js"></script>
+  <script src="scripts/konami.js" defer></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+
+</html>

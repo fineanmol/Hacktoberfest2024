@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&subset=latin-ext');
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+::selection {
+  background-color: #4835f7;
+  color: #fff;
+}
+/* * {
+  outline: none!important;
+} */
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Montserrat',sans-serif;
+  line-height: 1.5;
+}
+html,
+body {
+  background-color: #fff;
+}
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+  padding: 0 0 1.5rem;
+  position: relative;
+  font-family: "Open Sans",sans-serif;
+  font-size: 16px;
+}
+
+canvas {
+  cursor: crosshair;
+  display: block;
+}
+
+a {
+  /* color: #fff; */
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.content {
+  margin-top: 80px;
+}
+.box {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box-item {
+  position: relative;
+  display: block;
+  background-color: #FEEEF2;
+  color: #444;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  padding: 15px 8px 15px 70px;
+  margin: 10px;
+  font-size: 1rem;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+
+  .box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .box-item {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (min-width: 1100px) {
+
+  .box-item {
+    width: calc(25% - 20px);
+  }
+}
+
+.box-item:hover {
+  background-color: #FE0C43;
+  color: #fff;
+}
+
+.box-item::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.box-item img {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 50px;
+  float: left;
+  margin-right: 15px;
+  padding: 4px;
+}
+
+.box-item:hover a {
+  color: #fff;
+}
+
+.box-item.different-color {
+  background-color: #a7eded;
+}
+
+.box-item.different-color:hover {
+  background-color: #FE0C43;
+}

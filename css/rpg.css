@@ -1,0 +1,29 @@
+body {
+    background-color: whitesmoke;
+    font-family: Arial, sans-serif;
+}
+#rpg{
+    display: flex;
+    justify-content: space-between;
+}
+.character-box {
+    background-color: white;
+    box-shadow: 0 4px 10px #444;
+    padding: 10px 20px;
+    width: 100%;
+    margin: 20px;
+    transition: all .5s ease-in-out;
+}
+.character-box:hover {
+    transform: scale(1.1);
+}
+
+.character-box h1 {
+    font-size: 20px;
+}
+.character-box h2 {
+    font-size: 14px;
+}
+.character-box p {
+    font-size: 12px;
+}

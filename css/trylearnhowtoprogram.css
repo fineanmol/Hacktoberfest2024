@@ -1,0 +1,34 @@
+.more {
+  background-color: rgb(40, 167, 69);
+}
+
+.badge {
+  margin: 0 1rem;
+  font-size: 1.5rem;
+}
+
+#main-body {
+  margin-top: 2rem;
+}
+
+.card {
+  padding: 1rem;
+}
+
+.correct {
+  background-color: #00C851;
+  color: #fff;
+}
+.incorrect {
+  background-color: #CC0000;
+  color: #fff;
+}
+#originalInput {
+  font-size:4em;
+  font-weight:bold;
+  font-family:monospace;
+}
+.error {
+  color: red;
+  size: .89em;
+}

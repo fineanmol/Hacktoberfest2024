@@ -1,0 +1,16 @@
+.table-header {
+  background-color: rgb(245, 137, 164);
+}
+table {
+  table-layout: fixed;
+}
+section {
+  margin-top: 75px;
+}
+
+a {
+  color: #ff0844;
+}
+a:hover {
+  color: #96334f;
+}

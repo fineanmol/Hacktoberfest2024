@@ -1,0 +1,23 @@
+body {
+  background-image: linear-gradient(45deg, white, lightblue);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h4.hero-heading
+{
+     font-weight:700;
+     color:#FFF;
+}
+
+h1.hero-heading
+{
+     font-weight:900;
+     color:#FFF;
+}
+
+td, th {
+    padding: 0.5em 2em;
+}

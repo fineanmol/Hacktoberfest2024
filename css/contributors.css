@@ -81,7 +81,7 @@ a:hover {
   margin: 10px;
   font-size: 1rem;
   text-overflow: ellipsis;
-  overflow-x: hidden;
+  overflow: hidden;
   white-space: nowrap;
 }
 
@@ -105,8 +105,14 @@ a:hover {
   }
 }
 
+.box-item span,
+.box-item img {
+  position: relative;
+  display: block;
+  z-index: 10;
+}
+
 .box-item:hover {
-  background-color: #FE0C43;
   color: #fff;
 }
 
@@ -114,6 +120,41 @@ a:hover {
   content: "";
   display: table;
   clear: both;
+
+  background: #FE0C43;
+  z-index: 5;
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.box-item::after,
+.box-item::before {
+  position: absolute;
+  content: "";
+  color: #fff;
+  font-size: 1rem;
+  padding: 15px 8px 15px 70px;
+  top: 0;
+  left: calc(-100% - 40px);
+  width: calc(100% + 25px);
+  height: 100%;
+  transform: skew(-25deg);
+}
+
+.box-item::after {
+  background: #fff;
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+.box-item:hover::after {
+  left: calc(0% - 10px);
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.box-item:hover::before {
+  left: calc(0% - 10px);
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 .box-item img {

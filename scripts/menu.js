@@ -21,9 +21,9 @@ const menu = {
 }
 
 function buildMenuHTML (obj = {}) {
-  var html = ''
-  var path = window.location.pathname.split('/')
-  var currentPage = path[path.length - 1] === '' ? '/' : path[path.length - 1]
+  let html = ''
+  let path = window.location.pathname.split('/')
+  let currentPage = path[path.length - 1] === '' ? '/' : path[path.length - 1]
 
   Object.entries(obj).forEach(([key, item]) => {
     if (key == 'Others') {
@@ -40,7 +40,7 @@ function buildMenuHTML (obj = {}) {
       html += '</div>'
     } else {
       if (currentPage.indexOf('.html') == -1) {
-        currentPage = currentPage.concat('.html');
+        currentPage = currentPage.concat('.html')
       }
 
       let isCurrent = (currentPage === item.href)
@@ -54,7 +54,7 @@ function buildMenuHTML (obj = {}) {
 }
 
 function buildMenu () {
-  return buildMenuHTML(menu)
+  buildMenuHTML(menu)
 }
 
 buildMenu()

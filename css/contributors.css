@@ -83,6 +83,7 @@ a:hover {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  transition: color 0.5s ease-in;
 }
 
 @media (min-width: 768px) {

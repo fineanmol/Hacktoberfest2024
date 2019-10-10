@@ -1,4 +1,4 @@
-# Hacktoberfest ([Live Website](https://fineanmol.github.io/Hacktoberfest2k18/Contributors.html))
+# Hacktoberfest ([Live Website](https://fineanmol.github.io/Hacktoberfest2k19/Contributors.html))
 
 This is a beginner-friendly project to help you get started with your
 [hacktoberfest](https://hacktoberfest.digitalocean.com/). If you don't
@@ -7,7 +7,7 @@ read the contribution rules. Happy hacking <3 !!
 
 P.S. Star and share this repository, if you had fun!
 
-![Alt Text](https://raw.githubusercontent.com/lauras5/hacktoberfest/master/images/hacktoberfest2018.gif)
+![Alt Text](https://raw.githubusercontent.com/lauras5/hacktoberfest/master/images/hacktoberfest2019.gif)
 
 
 # Videos
@@ -34,8 +34,8 @@ P.S. Star and share this repository, if you had fun!
 - Clone on your local machine
 
 ```terminal
-git clone https://github.com/fineanmol/Hacktoberfest2k18.git
-cd Hacktoberfest2k18
+git clone https://github.com/fineanmol/Hacktoberfest2k19.git
+cd Hacktoberfest2k19
 ```
 
 - Create a new branch
@@ -60,7 +60,7 @@ git push origin my-new-branch
 An easy way to avoid conflicts is to add an 'upstream' for your git repo, as other PR's may be merged while you're working on your branch/fork.   
 
 ```terminal
-git remote add upstream https://github.com/fineanmol/Hacktoberfest2k18
+git remote add upstream https://github.com/fineanmol/Hacktoberfest2k19
 ```
 
 You can verify that the new remote has been added by typing
@@ -96,10 +96,10 @@ For more information on syncing forks [read this article from Github](https://he
   - Nope.
 - How many pull request (PR) must be made, if I can get a awesome shirt from Hacktoberfest 2018?
   - 5
-- How do I track my progress to get an awesome shirt from Hacktoberfest 2018?
+- How do I track my progress to get an awesome shirt from Hacktoberfest 2019?
   - go to : https://hacktoberfest.digitalocean.com/stats/ (Scroll down to Check Out Your Own Stats)
-- What is the duration of Hacktoberfest 2018?
-  - It is from 1st october to 31st october 2018...
+- What is the duration of Hacktoberfest 2019?
+  - It is from 1st october to 31st october 2019...
 - What is the event for?
   - For the open source community engagement
 

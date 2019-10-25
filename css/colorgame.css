@@ -19,6 +19,27 @@ body {
   margin: 20px auto;
 }
 
+.flex {
+	display: flex;
+}
+
+.flex-item-1 {
+	flex: 1;
+}
+
+.item {
+	margin: 5px;
+	background: steelblue;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.container-bottom {
+	max-width: 400px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+}
+
 h1 {
   color: white;
   text-align: center;
@@ -40,8 +61,8 @@ h1 {
 }
 
 #stripe {
-  background-color: white;
-  height: 30px;
+  background-color: gray;
+  height: 45px;
   text-align: center;
 }
 

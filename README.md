@@ -8,7 +8,8 @@ read the contribution rules. Happy hacking <3 !!
 P.S. Star and share this repository, if you had fun!
 
 ![Hacktoberfest 2020](https://raw.githubusercontent.com/lauras5/hacktoberfest/master/images/hacktoberfest2019.gif)
-(https://hacktoberfest.digitalocean.com/assets/HF-full-logo-b05d5eb32b3f3ecc9b2240526104cf4da3187b8b61963dd9042fdc2536e4a76c.svg)
+
+![Hacktoberfest 2020](https://hacktoberfest.digitalocean.com/assets/HF-full-logo-b05d5eb32b3f3ecc9b2240526104cf4da3187b8b61963dd9042fdc2536e4a76c.svg)
 
 
 # Videos
@@ -35,7 +36,7 @@ P.S. Star and share this repository, if you had fun!
 - Clone on your local machine
 
 ```terminal
-git clone https://github.com/fineanmol/Hacktoberfest2k19.git
+git clone https://github.com/fineanmol/Hacktoberfest2k20.git
 cd Hacktoberfest2k19
 ```
 

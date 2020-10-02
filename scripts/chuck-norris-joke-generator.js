@@ -2,7 +2,6 @@ const API_URL = 'https://api.chucknorris.io/jokes/random'
 
 /**
  * To run this you will need node installed
- * Run by executing `node chuck-norris-jokes.js`
  * @author milos5593
  */
 async function GET_JOKES() {

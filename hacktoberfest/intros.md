@@ -12,3 +12,4 @@
 | 10   | Amitava Mitra   | <a href="https://github.com/Amitava123">Amitava Mitra</a>            | West Bengal, India     | Front End Web Development                                   |
 | 11   | Rishu Raj       | <a href="https://github.com/rishurajcamnrdg">Rishu Raj</a>           | Patna, India           | Front End Web Development                                   |
 | 12   | Susnata Goswami | <a href="https://github.com/proghead00">Susnata Goswami</a>          | Kolkata, India         | Python, JavaScript, ReactJS, Java, Git, Firebase, CSS, HTML |
+| 13   | Rajneesh Khare | <a href="https://github.com/rajneeshk94">Rajneesh Khare</a>          | Bengaluru, India         | Python, Django |

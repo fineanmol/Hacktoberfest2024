@@ -15,3 +15,4 @@
 | 13   | Rajneesh Khare | <a href="https://github.com/rajneeshk94">Rajneesh Khare</a>          | Bengaluru, India         | Python, Django |
 | 13   | Shagufta Iqbal | <a href="https://github.com/Shagufta08">Shagufta Iqbal</a>          | Patna, India         |  Front End Web Development, Android | 
 | 14   | Moksh Tehlan | <a href="https://github.com/MokshTehlan">Moksh Tehlan</a>             | Haryana,India  | Java, HTML, CSS, JavaScript
+| 15   | Tomasz Wiejak | <a href="https://github.com/zomsik">zomsik</a>             | Lublin,Poland  | Java, C++

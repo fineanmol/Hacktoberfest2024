@@ -209,12 +209,10 @@
 </button>
 
 <script>
-      let contributors = document.querySelectorAll('a.box-item')
-      contributors.forEach(con => {
+      document.querySelectorAll('a.box-item').forEach(con => {
         console.log(con.href)
-        con.innerHTML += '<img src="https://avatars.githubusercontent.com/' + con.href.split('https://github.com/')[1] + '">'
+        con.innerHTML += `<img src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
       })
-
 </script>
 <script src="/scripts/scroll.js"></script>
 

@@ -178,21 +178,14 @@
 <a class="box-item" href="https://github.com/ameygangwal"><span>Amey</span></a>
 <a class="box-item" href="https://github.com/JoaoJesus94"><span>João Jesus</span></a>
 <a class="box-item" href="https://github.com/alvalle09"><span>Alfredo Valle</span></a>
+<a class="box-item" href="https://github.com/ydegtyar"><span>Yuriy Degtyar</span></a>
 
 <!--
         Add here
         format : <a class="box-item" href="https://github.com/<your-username>"><span>Your Name</span></a>
 -->
 
-
-
-
-
-
-
-
       </div>
-
     </div>
 </div>
 
@@ -209,12 +202,10 @@
 </button>
 
 <script>
-      let contributors = document.querySelectorAll('a.box-item')
-      contributors.forEach(con => {
+      document.querySelectorAll('a.box-item').forEach(con => {
         console.log(con.href)
-        con.innerHTML += '<img src="https://avatars.githubusercontent.com/' + con.href.split('https://github.com/')[1] + '">'
+        con.innerHTML += `<img src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
       })
-
 </script>
 <script src="/scripts/scroll.js"></script>
 

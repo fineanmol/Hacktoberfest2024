@@ -1,4 +1,4 @@
-# Hacktoberfest ([Live Website](https://fineanmol.github.io/Hacktoberfest2k20/Contributors.html))
+# Hacktoberfest ([Live Website](https://fineanmol.github.io/Hacktoberfest2k21/Contributors.html))
 
 This is a beginner-friendly project to help you get started with your
 [hacktoberfest](https://hacktoberfest.digitalocean.com/). If you don't
@@ -7,7 +7,7 @@ read the contribution rules. Happy hacking <3 !!
 
 P.S. Star and share this repository, if you had fun!
 
-![Hacktoberfest 2020](https://hacktoberfest.digitalocean.com/assets/HF-full-logo-b05d5eb32b3f3ecc9b2240526104cf4da3187b8b61963dd9042fdc2536e4a76c.svg)
+![Hacktoberfest 2021](https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg)
 
 
 # Videos
@@ -34,8 +34,8 @@ P.S. Star and share this repository, if you had fun!
 - Clone on your local machine
 
 ```terminal
-git clone https://github.com/fineanmol/Hacktoberfest2k20.git
-cd Hacktoberfest2k20
+git clone https://github.com/fineanmol/Hacktoberfest2k21.git
+cd Hacktoberfest2k21
 ```
 
 - Create a new branch
@@ -60,7 +60,7 @@ git push origin my-new-branch
 An easy way to avoid conflicts is to add an 'upstream' for your git repo, as other PR's may be merged while you're working on your branch/fork.   
 
 ```terminal
-git remote add upstream https://github.com/fineanmol/Hacktoberfest2k20
+git remote add upstream https://github.com/fineanmol/Hacktoberfest2k21
 ```
 
 You can verify that the new remote has been added by typing
@@ -98,8 +98,8 @@ For more information on syncing forks [read this article from Github](https://he
   - 5
 - How do I track my progress to get an awesome shirt from Hacktoberfest 2020?
   - [go to :](https://hacktoberfest.digitalocean.com/profile/). (Check Out Your Own Stats at Right Top)
-- What is the duration of Hacktoberfest 2020?
-  - It is from 1st october to 31st october 2020...
+- What is the duration of Hacktoberfest 2021?
+  - It is from 1st october to 31st october 2021...
 - What is the event for?
   - For the open source community engagement
 

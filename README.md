@@ -1,13 +1,13 @@
-# Hacktoberfest ([Live Website](https://fineanmol.github.io/Hacktoberfest2k18/Contributors.html))
+# Hacktoberfest ([Live Website](https://fineanmol.github.io/Hacktoberfest2k21/Contributors.html))
 
 This is a beginner-friendly project to help you get started with your
 [hacktoberfest](https://hacktoberfest.digitalocean.com/). If you don't
 know where to start, feel free to watch the videos linked below, and
-read the contribution rules. Happy hacking <3 !!
+read the contribution rules. Happy hacking <3 💙 !!
 
 P.S. Star and share this repository, if you had fun!
 
-![Alt Text](https://raw.githubusercontent.com/lauras5/hacktoberfest/master/images/hacktoberfest2018.gif)
+![Hacktoberfest 2021](https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg)
 
 
 # Videos
@@ -19,7 +19,7 @@ P.S. Star and share this repository, if you had fun!
 
 # Contribution rules
 
-- The project must work when opening index.html
+- The project must work when opening Contributors.html
 - You are allowed to make pull requests that break the rules. We just merge it ;)
 - Do NOT add any build steps e.g npm install (we want to keep this a simple static site)
 - Do NOT remove other content.
@@ -34,8 +34,8 @@ P.S. Star and share this repository, if you had fun!
 - Clone on your local machine
 
 ```terminal
-git clone https://github.com/fineanmol/Hacktoberfest2k18.git
-cd Hacktoberfest2k18
+git clone https://github.com/fineanmol/Hacktoberfest2k21.git
+cd Hacktoberfest2k21
 ```
 
 - Create a new branch
@@ -60,7 +60,7 @@ git push origin my-new-branch
 An easy way to avoid conflicts is to add an 'upstream' for your git repo, as other PR's may be merged while you're working on your branch/fork.   
 
 ```terminal
-git remote add upstream https://github.com/fineanmol/Hacktoberfest2k18
+git remote add upstream https://github.com/fineanmol/Hacktoberfest2k21
 ```
 
 You can verify that the new remote has been added by typing
@@ -86,7 +86,7 @@ For more information on syncing forks [read this article from Github](https://he
 - Are you getting paid for this?
   - Sadly no. But we think we should. This is 100% unofficial and we do it for fun, fame and glory.
 - Who are you and why are you doing this?
-  - We are two programmers from India [Anmol](https://github.com/fineanmol)
+  - We are two programmers from India [Anmol](https://www.linkedin.com/in/fineanmol/)
   and [Ritesh](https://github.com/ritesh2905). We are doing this because we love Open
   Source and Hacktoberfest. We want to make it easier for people to get started with Hacktoberfest and Open Source.
 - Why are you not using digitalocean?
@@ -94,12 +94,12 @@ For more information on syncing forks [read this article from Github](https://he
 
 - Should I come closer to the text saying 'Don't come closer' on the left side of the home tab ?
   - Nope.
-- How many pull request (PR) must be made, if I can get a awesome shirt from Hacktoberfest 2018?
+- How many pull request (PR) must be made, if I can get a awesome shirt from Hacktoberfest 2021?
   - 5
-- How do I track my progress to get an awesome shirt from Hacktoberfest 2018?
-  - go to : https://hacktoberfest.digitalocean.com/stats/ (Scroll down to Check Out Your Own Stats)
-- What is the duration of Hacktoberfest 2018?
-  - It is from 1st october to 31st october 2018...
+- How do I track my progress to get an awesome shirt from Hacktoberfest 2021?
+  - [go to :](https://hacktoberfest.digitalocean.com/profile/). (Check Out Your Own Stats at Right Top)
+- What is the duration of Hacktoberfest 2021?
+  - It is from 1st october to 31st october 2021...
 - What is the event for?
   - For the open source community engagement
 

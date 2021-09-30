@@ -1,20 +1,30 @@
 const menu = {
   'Home': {
     'text': 'Want to Publish?',
-    'href': 'https://github.com/fineanmol/Hacktoberfest2k18/blob/master/Contributors.html'
+    'href': 'https://github.com/fineanmol/Hacktoberfest2k20/blob/master/Contributors.html'
   },
   'Contributors': {
     'text': 'Contributors',
-    'href': 'https://fineanmol.github.io/Hacktoberfest2k18/Contributors.html'
+    'href': 'https://fineanmol.github.io/Hacktoberfest2k20/Contributors.html'
   },
   //'Others': {
-    'Deepak': {
-      'text': 'A to Z Resources for Students',
-      'href': 'https://github.com/dipakkr/A-to-Z-Resources-for-Students'
+    'Instagram': {
+      'text': 'Instagram Connect',
+      'href': 'https://instagram.com/nightowldevelopers'
     },
-    'Tools': {
-      'text': 'Age Converter',
-      'href': 'https://fineanmol.github.io/AgeGame',
+    'Facebook': {
+      'text': 'Facebook',
+      'href': 'https://www.facebook.com/nightowldevelopers',
+      'id': 'tools'
+    },
+    'Linkedin': {
+      'text': 'Linkedin',
+      'href': 'https://www.linkedin.com/company/nightowldevelopers',
+      'id': 'tools'
+    },
+    'NDC': {
+      'text': 'About Us',
+      'href': 'https://www.nightowldevelopers.com',
       'id': 'tools'
     }
 
@@ -34,7 +44,7 @@ function buildMenuHTML (obj = {}) {
         let isCurrent = (currentPage === item.href)
 
         html += '<div class="nav-item' + (isCurrent ? ' active' : '') + '">'
-        html += '<a class="nav-link" href="' + item.href + '"' + (item.id ? ' id="' + item.id + '"' : '') + '>' + item.text + '</a>'
+        html += '<a target="_blank" class="nav-link" href="' + item.href + '"' + (item.id ? ' id="' + item.id + '"' : '') + '>' + item.text + '</a>'
         html += '</div>'
       })
       html += '</div>'
@@ -46,7 +56,7 @@ function buildMenuHTML (obj = {}) {
       let isCurrent = (currentPage === item.href)
 
       html += '<li class="nav-item' + (isCurrent ? ' active' : '') + '">'
-      html += '<a class="nav-link" href="' + item.href + '"' + (item.id ? ' id="' + item.id + '"' : '') + '>' + item.text + '</a>'
+      html += '<a target="_blank" class="nav-link" href="' + item.href + '"' + (item.id ? ' id="' + item.id + '"' : '') + '>' + item.text + '</a>'
       html += '</li>'
     }
   })

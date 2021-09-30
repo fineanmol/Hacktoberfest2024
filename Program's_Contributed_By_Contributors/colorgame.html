@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Color Game</title>
+  <link rel="stylesheet" href="css/colorgame.css">
+</head>
+
+<body>
+  <section>
+  <h1>Color Game <br> <span id="colorDisplay"></span></h1>
+  <nav id="stripe">
+    <a id="back-to-index" type="button" name="button" href="./index.html"><span>Back to Index</span></a>
+    <span id="message"></span>
+    <button id="reset" type="button" name="button">New Colors</button>
+    <span id="message"></span>
+    <button id="easyBtn" type="button" name="button">Easy</button>
+    <button id="hardBtn" class="selected" type="button" name="button">Hard</button>
+  </nav>
+  </section>
+
+  <section class="container">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+  </section>
+
+
+
+  <section class="container-bottom flex ">
+    <div class="item flex-item-1">Start</div>
+    <div class="item flex-item-1">Stop</div>
+    <div class="item flex-item-1">Retry</div>
+  </section>
+
+
+  <script type="text/javascript" src="scripts/colorgame.js">
+  </script>
+</body>
+
+</html>

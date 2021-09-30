@@ -179,3 +179,17 @@ a:hover {
 .box-item.different-color:hover {
   background-color: #FE0C43;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  outline: none;
+  border-radius: 0;
+}

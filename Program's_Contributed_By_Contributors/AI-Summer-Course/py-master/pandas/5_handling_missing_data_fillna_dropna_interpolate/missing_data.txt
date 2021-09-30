@@ -1,3 +1,0 @@
-http://pandas.pydata.org/pandas-docs/version/0.15.2/10min.html
-
-check missing data section

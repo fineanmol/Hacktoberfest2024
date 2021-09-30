@@ -1,1 +1,0 @@
-![](derivatives_answer.jpg)

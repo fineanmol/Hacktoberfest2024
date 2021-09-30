@@ -1,25 +1,25 @@
 const menu = {
   'Home': {
-    'text': 'Want to Publish?',
-    'href': 'https://github.com/fineanmol/Hacktoberfest2k20/blob/master/Contributors.html'
+    'text': 'Add you Name here',
+    'href': 'https://github.com/fineanmol/Hacktoberfest2k21/blob/master/Contributors.html'
   },
   'Contributors': {
     'text': 'Contributors',
-    'href': 'https://fineanmol.github.io/Hacktoberfest2k20/Contributors.html'
+    'href': 'https://fineanmol.github.io/Hacktoberfest2k21/Contributors.html'
   },
   //'Others': {
     'Instagram': {
-      'text': 'Instagram Connect',
-      'href': 'https://instagram.com/nightowldevelopers'
+      'text': 'Instagram Profile',
+      'href': 'https://instagram.com/fineanmol'
     },
     'Facebook': {
-      'text': 'Facebook',
-      'href': 'https://www.facebook.com/nightowldevelopers',
+      'text': 'Facebook Profile',
+      'href': 'https://www.facebook.com/fineanmol',
       'id': 'tools'
     },
     'Linkedin': {
-      'text': 'Linkedin',
-      'href': 'https://www.linkedin.com/company/nightowldevelopers',
+      'text': 'Connect to get Linkedin Endorsement',
+      'href': 'https://www.linkedin.com/in/fineanmol/',
       'id': 'tools'
     },
     'NDC': {

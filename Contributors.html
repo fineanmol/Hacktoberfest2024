@@ -59,7 +59,7 @@
     <title>Hacktoberfest 2021 - Contributors</title>
 </head>
 
-<body>
+<body class="text">
 <!--
       __  __              __    __          __                 ____             __
     / / / /____ _ _____ / /__ / /_ ____   / /_   ___   _____ / __/___   _____ / /_
@@ -100,9 +100,16 @@
     <div class="container">
 
       <div class="heart"></div>
-      <h1 class="animated rubberBand delay-4s">Contributors</h1>
-      <p class="animated rubberBand delay-4s">Add yourself to the list if you contribute.</p>
-      <div class="box mx-auto">
+      <div class="header"> 
+        <div class="heading">
+          <h1 class="animated rubberBand delay-4s">Contributors</h1>
+        <p class="animated rubberBand delay-4s">Add yourself to the list if you contribute.</p>
+        </div>
+        <div class="theme-switch">
+          <div class="switch"></div>
+        </div>
+      </div>
+     <div class="box mx-auto">
 
 
 
@@ -205,7 +212,7 @@
       <a class="box-item" href="https://github.com/dhruvil-shah"><span>Dhruvil Shah</span></a>
       <a class="box-item" href="https://github.com/7suyash7"><span>Suyash Nayan</span></a>
       <a class="box-item" href="https://github.com/MananAg29"><span>Manan</span></a>
-
+      <a class="box-item" href="https://github.com/sahooankeeta"><span>Ankeeta Sahoo</span></a>
 
       </div>
     </div>
@@ -228,6 +235,14 @@
         console.log(con.href)
         con.innerHTML += `<img src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
       })
+</script>
+<script>
+   document.querySelector(".theme-switch").addEventListener("click", () => {
+    
+    document.querySelector("body").classList.toggle("dark-theme");
+    document.querySelector(".navbar").classList.toggle("bg-white");
+    
+});
 </script>
 <script src="/scripts/scroll.js"></script>
 

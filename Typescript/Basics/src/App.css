@@ -1,0 +1,30 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: cornflowerblue;
+}
+
+p{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.container{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 25rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.details{
+  text-align: left;
+}

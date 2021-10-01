@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=latin-ext");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&subset=latin-ext");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&subset=latin-ext');
 
 *,
 *::before,
@@ -20,13 +20,8 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Montserrat", sans-serif;
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Montserrat',sans-serif;
   line-height: 1.5;
 }
 html,
@@ -46,7 +41,7 @@ body {
   min-height: 100vh;
   padding: 0 0 1.5rem;
   position: relative;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans",sans-serif;
   font-size: 16px;
 }
 
@@ -67,7 +62,6 @@ a:hover {
 .content {
   margin-top: 80px;
 }
-
 .box {
   position: relative;
   display: flex;
@@ -77,7 +71,7 @@ a:hover {
 .box-item {
   position: relative;
   display: block;
-  background-color: #feeef2;
+  background-color: #FEEEF2;
   color: #444;
   font-weight: 600;
   width: 100%;
@@ -93,6 +87,7 @@ a:hover {
 }
 
 @media (min-width: 768px) {
+
   .box {
     display: flex;
     flex-wrap: wrap;
@@ -105,6 +100,7 @@ a:hover {
 }
 
 @media (min-width: 1100px) {
+
   .box-item {
     width: calc(25% - 20px);
   }
@@ -126,7 +122,7 @@ a:hover {
   display: table;
   clear: both;
 
-  background: #fe0c43;
+  background: #FE0C43;
   z-index: 5;
   transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
@@ -135,7 +131,7 @@ a:hover {
 .box-item::before {
   position: absolute;
   content: "";
-  color: rgb(253, 253, 253);
+  color: #fff;
   font-size: 1rem;
   padding: 15px 8px 15px 70px;
   top: 0;
@@ -181,7 +177,7 @@ a:hover {
 }
 
 .box-item.different-color:hover {
-  background-color: #fe0c43;
+  background-color: #FE0C43;
 }
 
 ::-webkit-scrollbar {
@@ -196,47 +192,4 @@ a:hover {
   background-color: #c1c1c1;
   outline: none;
   border-radius: 0;
-}
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.heading {
-  flex: 80%;
-}
-.theme-switch {
-  box-sizing: content-box;
-  width: 70px;
-  height: 30px;
-  border: 2px solid #fe0c43;
-  /* background: #fe0c43; */
-  border-radius: 50px;
-  position: relative;
-}
-.switch {
-  background: #fe0c43;
-  width: 24px;
-  height: 24px;
-
-  border-radius: 100%;
-  position: absolute;
-  top: 3px;
-  left: 4px;
-  transition: 0.5s all ease;
-}
-.dark-theme {
-  background-color: #3c3838;
-}
-.dark-theme .theme-switch {
-  background: #fe0c43;
-}
-.dark-theme .theme-switch .switch {
-  transform: translateX(37px);
-  background: white;
-}
-.dark-theme .box-item,
-.dark-theme .box-item::after {
-  background-color: #7a7476;
-  color: white;
 }

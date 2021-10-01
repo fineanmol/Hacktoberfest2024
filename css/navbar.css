@@ -1,6 +1,5 @@
 .navbar {
   padding: 0.5rem 2rem;
-  background-color: black;
 }
 nav {
   background-color: black;
@@ -27,12 +26,12 @@ nav {
   background-color: #f1ffc5;
 }
 
-.navbar-light .navbar-nav .active > .nav-link {
+.navbar-light .navbar-nav .active> .nav-link {
   color: #ff0844;
   font-weight: 700;
 }
 
-.navbar-light .navbar-nav .dropdown.show > .nav-link {
+.navbar-light .navbar-nav .dropdown.show> .nav-link {
   color: #ff0844;
 }
 .navbar-light .navbar-nav .nav-link::before {
@@ -69,12 +68,6 @@ nav {
   height: 25px;
   vertical-align: text-top;
 }
-.navbar-dark {
-  color: #c2bbbb;
-}
-.dark-theme .navbar-light .navbar-nav .nav-link {
-  color: #c2bbbb;
-}
 .dropdown-menu-others {
   display: none;
   position: relative;
@@ -110,11 +103,5 @@ nav {
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #ff0844;
+  color: #FF0844;
 }
-.dark-theme .navbar-light .navbar-toggler {
-  background-color: white;
-}
-/* .dark-theme  {
-  background-color: black;
-} */

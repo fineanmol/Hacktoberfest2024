@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Gabriela
+- Font Author: Copyright 2013 The Gabriela Project Authors (edu@tipo.net.ar), with Reserved Font Name "Gabriela".
+- Font Source: http://fonts.gstatic.com/s/gabriela/v9/qkBWXvsO6sreR8E-b_m-zrpHmRzC.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

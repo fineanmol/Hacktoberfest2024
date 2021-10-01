@@ -1,5 +1,3 @@
-// program to find the ASCII value of a character
-
 const string = 'T'
 
 // convert into ASCII value

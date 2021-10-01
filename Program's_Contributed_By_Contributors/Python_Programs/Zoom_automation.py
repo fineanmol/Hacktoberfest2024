@@ -1,4 +1,5 @@
 # Here we will make a Zoom automation system
+# Replace all the url with the appropriate url of the images in your file explorer.
 
 import os
 import pyautogui
@@ -16,7 +17,7 @@ def signIn(meeting_id, password):
 
 
     # Now we operate the button to join a meeting
-    join = pyautogui.locateCenterOnScreen("Zoom-Automation\zoom_join1.png")
+    join = pyautogui.locateCenterOnScreen("Zoom-Automation\zoom_join1.png") #Replace the zoom button url with the url in your machine.
     pyautogui.moveTo(join)
     pyautogui.click()
     

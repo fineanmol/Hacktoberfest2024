@@ -2,7 +2,7 @@
   padding: 0.5rem 2rem;
 }
 nav {
-  background-color: black;
+  background-color: var(--nav-color);
 }
 .navbar-nav {
   width: 100%;
@@ -17,7 +17,7 @@ nav {
   vertical-align: middle;
 }
 .navbar-light .navbar-nav .nav-link {
-  color: #444;
+  color: var(--text);
   position: relative;
   padding: 10px;
   margin: 0 10px !important;
@@ -26,12 +26,12 @@ nav {
   background-color: #f1ffc5;
 }
 
-.navbar-light .navbar-nav .active> .nav-link {
+.navbar-light .navbar-nav .active > .nav-link {
   color: #ff0844;
   font-weight: 700;
 }
 
-.navbar-light .navbar-nav .dropdown.show> .nav-link {
+.navbar-light .navbar-nav .dropdown.show > .nav-link {
   color: #ff0844;
 }
 .navbar-light .navbar-nav .nav-link::before {
@@ -103,5 +103,5 @@ nav {
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #FF0844;
+  color: #ff0844;
 }

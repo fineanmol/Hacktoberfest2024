@@ -232,12 +232,14 @@ a:hover {
 }
 .slider {
   background-color: #999;
+  background-image: linear-gradient(aqua, skyblue);
   bottom: 0;
   cursor: pointer;
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
+  margin:auto;
   transition: 0.4s;
 }
 .slider:before {
@@ -252,13 +254,16 @@ a:hover {
 }
 input:checked + .slider {
   background-color: rgb(163, 163, 163);
+  background-image: linear-gradient(midnightblue, rebeccapurple);
 }
 input:checked + .slider:before {
   transform: translateX(26px);
+  background-color: grey;
 }
 .slider.round {
   border-radius: 34px;
 }
 .slider.round:before {
   border-radius: 50%;
+  background-color: yellow;
 }

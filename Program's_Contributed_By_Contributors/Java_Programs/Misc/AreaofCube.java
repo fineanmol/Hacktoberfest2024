@@ -1,5 +1,3 @@
-
-
 class Cube 
 {
     double edge_length;

@@ -2,11 +2,6 @@
 <html lang="en">
 
 <head>
-  <style>
-    .container{
-      color: #229383;
-    }
-  </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <link rel = "icon" href ="https://hacktoberfestswaglist.com/img/Hacktoberfest_21.jpg" type = "image/x-icon">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74296045-6"></script>
@@ -69,7 +64,7 @@
                                               i just want a t-shirt at this point
   -->
 <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
     <a class="navbar-brand" href="/">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1"
              x="0px"
@@ -100,8 +95,16 @@
     <div class="container">
 
       <div class="heart"></div>
-      <h1 class="animated rubberBand delay-4s">Contributors</h1>
-      <p class="animated rubberBand delay-4s">Add yourself to the list if you contribute.</p>
+      <div class="wrapper">
+        <div>
+          <h1 class="animated rubberBand delay-4s">Contributors</h1>
+          <p class="animated rubberBand delay-4s">Add yourself to the list if you contribute.</p>
+        </div>
+        <label class="theme-switch" for="checkbox">
+           <input type="checkbox" id="checkbox" />
+           <div class="slider round"></div>
+        </label>
+      </div>
       <div class="box mx-auto">
 
 
@@ -253,6 +256,24 @@
         console.log(con.href)
         con.innerHTML += `<img src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
       })
+      const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+      const currentTheme = localStorage.getItem('theme');
+      if (currentTheme) {
+          document.documentElement.setAttribute('data-theme', currentTheme);
+          if (currentTheme === 'dark') {
+              toggleSwitch.checked = true;
+          }
+      }
+      function switchTheme(e) {
+          if (e.target.checked) {
+              document.documentElement.setAttribute('data-theme', 'dark');
+              localStorage.setItem('theme', 'dark');
+          } else {
+              document.documentElement.setAttribute('data-theme', 'light');
+              localStorage.setItem('theme', 'light');
+          }
+      }
+      toggleSwitch.addEventListener('change', switchTheme);
 </script>
 <script src="/scripts/scroll.js"></script>
 

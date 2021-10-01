@@ -1,23 +1,23 @@
 # Hacktoberfest ([Live Website](https://fineanmol.github.io/Hacktoberfest2k21/Contributors.html))
 
-This is a beginner-friendly project to help you get started with your
+**This is a beginner-friendly project to help you get started with your
 [hacktoberfest](https://hacktoberfest.digitalocean.com/). If you don't
 know where to start, feel free to watch the videos linked below, and
-read the contribution rules. Happy hacking <3 💙 !!
+read the contribution rules. Happy hacking <3 💙 !!**
 
-P.S. Star and share this repository, if you had fun!
+P.S. Star ⭐ and Share this repository, if you had fun!! 😍
 
 ![Hacktoberfest 2021](https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg)
 
 
-# Videos
+# 📌 Videos
 
 - [Hacktoberfest Intro](https://youtu.be/OsAFX_ZbgaE)
 - [How to pull request [Overview]](https://youtu.be/DIj2q02gvKs)
 - [Merge Conflict / comment](https://youtu.be/zOx5PJTY8CI)
 
 
-# Contribution rules
+# Contribution rules📚
 
 - The project must work when opening Contributors.html
 - You are allowed to make pull requests that break the rules. We just merge it ;)
@@ -28,13 +28,17 @@ P.S. Star and share this repository, if you had fun!
 - Try to keep pull requests small to minimize merge conflicts
 
 
-## Getting Started
+## Getting Started 🤗
 
 - Fork this repo (button on top)
 - Clone on your local machine
 
-```terminal
+```
 git clone https://github.com/fineanmol/Hacktoberfest2k21.git
+
+```
+- Navigate to project directory.
+```
 cd Hacktoberfest2k21
 ```
 
@@ -44,14 +48,19 @@ cd Hacktoberfest2k21
 git checkout -b my-new-branch
 ```
 - Add your contribution
-- Commit and push
+```
+git add .
+```
+- Commit your changes.
 
 ```markdown
-git add .
-git commit -m "your-commit-msg"
+git commit -m "Relevant message"
+
+```
+- Then push 
+```
 git push origin my-new-branch
 ```
-
 - Create a new pull request from your forked repository
 
 
@@ -78,7 +87,7 @@ This will give you any eventual conflicts and allow you to easily solve them in 
 For more information on syncing forks [read this article from Github](https://help.github.com/articles/syncing-a-fork/).
 
 
-# FAQs
+# FAQs 
 
 - Who can contribute?
   - Anyone with a github account and who is signed up for

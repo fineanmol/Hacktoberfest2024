@@ -3,18 +3,20 @@ using namespace std;
 
 int main() {
     int n;
-    long double factorial = 1.0;
+    int factorial = 1;
 
     cout << "Enter a positive integer: ";
     cin >> n;
 
     if (n < 0)
-        cout << "Error! Factorial of a negative number doesn't exist.";
-    else {
-        for(int i = 1; i <= n; ++i) {
+        cout << "\nError! Factorial of a negative number doesn't exist....\n";
+    else 
+    {
+        for(int i = 1; i <= n; i++) 
+        {
             factorial *= i;
         }
-        cout << "Factorial of " << n << " = " << factorial;    
+        cout << "\nFactorial of " << n << " = " << factorial;    
     }
 
     return 0;

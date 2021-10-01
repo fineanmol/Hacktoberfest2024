@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- We use header, footer, main, section and nav tags just to make our website more user friendly and easy for seo. -->
+    <header>
+        <h1> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim laudantium harum explicabo voluptatibus
+            eligendi. Voluptas quidem quis deserunt nam labore ut, accusamus vel.</h1>
+    </header>
+    <main>
+        <nav>
+            home<br>
+            about <br>
+            contact<br>
+        </nav>
+        <hr>
+        <section>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores odio dolorem consequuntur at. Deserunt
+            fuga architecto saepe, rem consequuntur cupiditate tenetur nostrum voluptatem enim minima odio eveniet
+            soluta fugiat corrupti ipsum impedit hic eius suscipit veniam aliquam? Dolorem nesciunt totam accusantium,
+            velit vitae dolore ab repellat dicta unde itaque ullam.
+        </section>
+        <br>
+        <hr>
+        <!-- example of absolute link -->
+        <h1><a href="/about.html" target="main">about me</a></h1>
+        <!-- example of relative link -->
+        <h2><a href="www.about.com">about me</a></h2>
+        <hr>
+        <!-- image tag -->
+        <!-- absolute -->
+        <img src="https://images.unsplash.com/photo-1502364069473-6237fca2b87e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80"
+            alt="not found" width="350">
+        <br>
+        <!-- relative -->
+        <img src="jyt.jfif" alt="not found" width="350" height="450">
+        <!-- span is an example of inline element -->
+        <br>
+        <hr>
+        <span>
+            I am span.
+        </span>
+        <!-- div is an example of block element -->
+        <div>
+            I am a div element.
+        </div>
+    </main>
+    <footer>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusamus ad sequi magni voluptate et pariatur
+        rem. Totam hic nam voluptate, voluptas ullam fuga, illum nesciunt vitae debitis consectetur esse!
+    </footer>
+    <table>
+        <thead>
+            <tr>
+                <th>S no.</th>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2</td>
+                <td>Rohit</td>
+                <td>12</td>
+                <td>79</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Raj</td>
+                <td>12</td>
+                <td>84</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Ronit</td>
+                <td>12</td>
+                <td>99</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/BsDoLVMnmZs" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    <div>
+        <video src="demo.mp4" controls width="800px"><br>
+    </div>
+    <form action="form.php">
+        <h1>Form </h1>
+        <label>
+            Enter your Name<input type="text" placeholder="Enter Yuor name">
+        </label><br>
+        <label for="age">
+            Enter your age
+            <input type="number" placeholder="your age">
+        </label>
+        <br>
+        <label for="gender">
+            <input type="radio" name="gender" id="Male">Male
+            <input type="radio" name="gender" id="Female">Female
+        </label>
+        <br>
+        <label for="food">
+            <input type="checkbox" name="food" id="food">Want food card
+        </label>
+        <br>
+        <label for="Email">
+            Email
+            <input type="email" name="Email" id="Email" placeholder="Enter e mail">
+        </label>
+        <br>
+        <label for="Password">
+            Enter Your Password
+            <input type="Password" name="Password" id="Password" placeholder="Password">
+        </label>
+        <br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>

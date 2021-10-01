@@ -103,6 +103,10 @@ For more information on syncing forks [read this article from Github](https://he
 - What is the event for?
   - For the open source community engagement
 
+# :handshake: Our Contributors
+<a href="https://github.com/fineanmol/Hacktoberfest2k21/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=fineanmol/Hacktoberfest2k21" />
+</a>
 
 
 ###### *We will do our best to merge as much as possible from everyone. However, time is limited and the merge conflicts are horrible <3*

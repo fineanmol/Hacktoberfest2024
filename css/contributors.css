@@ -210,6 +210,7 @@ a:hover {
   float: left;
   margin-right: 15px;
   padding: 4px;
+  border-radius: 50%;
 }
 
 .box-item:hover a {
@@ -244,50 +245,53 @@ a:hover {
   align-items: center;
 }
 .theme-switch {
-  display: inline-block;
+  padding: 0 6px;
+  display: flex;
   height: 34px;
   position: relative;
   width: 60px;
+  justify-content: space-between;
+  border-style: solid;
+  border-radius: 34px;
+  align-items: center;
 }
 .theme-switch input {
   display: none;
 }
+
 .slider {
-  background-color: #999;
-  background-image: linear-gradient(aqua, skyblue);
+  background-color: transparent;
   bottom: 0;
   cursor: pointer;
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
-  margin:auto;
+  margin: auto;
   transition: 0.4s;
 }
 .slider:before {
-  background-color: white;
+  background-color: rgb(255, 209, 4);
   bottom: 4px;
   content: "";
-  height: 26px;
+  height: 24px;
   left: 4px;
   position: absolute;
   transition: 0.4s;
-  width: 26px;
+  width: 24px;
 }
 input:checked + .slider {
-  background-color: rgb(163, 163, 163);
-  background-image: linear-gradient(midnightblue, rebeccapurple);
+  background-color: transparent;
 }
 input:checked + .slider:before {
-  transform: translateX(26px);
-  background-color: grey;
+  transform: translateX(23px);
+  background-color: white;
 }
 .slider.round {
   border-radius: 34px;
 }
 .slider.round:before {
   border-radius: 50%;
-  background-color: yellow;
 }
 #stats {
   background-color: #eeeeee;

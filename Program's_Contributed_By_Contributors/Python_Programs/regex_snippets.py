@@ -6,11 +6,18 @@ class regex:
         pass
 
     # Matching string
-    def match(self, pattern, string):
+    def str_match(self, pattern, string):
         if re.search(pattern, string):
-            return True
+            return True  # match
         else:
-            return False
+            return False  # no match
+
+    # Check the strength of password
+    def password_strength(self, password):
+        if re.fullmatch(r"[A-Za-z0-9@#$%^&+=]{8,}", password):
+            return True  # storng password
+        else:
+            return False  # weak password
 
 
 reg = regex()

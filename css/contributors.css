@@ -25,6 +25,7 @@
   box-sizing: inherit;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: 0.05s;
 }
 ::selection {
   background-color: #4835f7;
@@ -83,9 +84,30 @@ a:hover {
   text-decoration: none;
 }
 
+.heading {
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: default;
+}
+
+.moto {
+  font-size: 22px;
+  cursor: default;
+}
+.heading:hover {
+  color: #fe0c43;
+  transition: 1s;
+}
+.moto:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--gray);
+  transition: 1s linear;
+}
+
 .content {
   margin-top: 80px;
 }
+
 .box {
   position: relative;
   display: flex;
@@ -177,7 +199,7 @@ a:hover {
 
 .box-item:hover::before {
   left: calc(0% - 10px);
-  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: left 0.6s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 .box-item img {
@@ -232,12 +254,14 @@ a:hover {
 }
 .slider {
   background-color: #999;
+  background-image: linear-gradient(aqua, skyblue);
   bottom: 0;
   cursor: pointer;
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
+  margin:auto;
   transition: 0.4s;
 }
 .slider:before {
@@ -252,13 +276,27 @@ a:hover {
 }
 input:checked + .slider {
   background-color: rgb(163, 163, 163);
+  background-image: linear-gradient(midnightblue, rebeccapurple);
 }
 input:checked + .slider:before {
   transform: translateX(26px);
+  background-color: grey;
 }
 .slider.round {
   border-radius: 34px;
 }
 .slider.round:before {
   border-radius: 50%;
+  background-color: yellow;
+}
+#stats {
+  background-color: #eeeeee;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#stats a {
+  padding: 0 5px;
 }

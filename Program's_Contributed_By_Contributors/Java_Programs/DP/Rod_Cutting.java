@@ -3,6 +3,24 @@ Given a rod of length N inches and an array of prices, price[] that contains pri
 Determine the maximum value obtainable by cutting up the rod and selling the pieces
 */
 
+import java.util.Scanner;
+class RodCutting {
+
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        while (t-- > 0) {
+            int n = sc.nextInt();
+            int[] arr = new int[n];
+            for (int i = 0; i < n; i++) arr[i] = sc.nextInt();
+
+            Solution ob = new Solution();
+            System.out.println(ob.cutRod(arr, n));
+        }
+    }
+}
+
+
 class Solution{
     public int cutRod(int price[], int n) {
         

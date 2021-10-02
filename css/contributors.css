@@ -1,6 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&subset=latin-ext');
-
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&subset=latin-ext");
+:root {
+  --white: white;
+  --black: rgb(39 41 52);
+  --gray: #fafafa;
+  --text: black;
+  --box: #feeef2;
+  --box-hover: #fe0c43;
+  --nav-color: white;
+}
+[data-theme="dark"] {
+  --white: rgb(39 41 52);
+  --black: white;
+  --gray: black;
+  --text: rgb(242, 244, 251);
+  --box: rgb(61 63 73);
+  --box-hover: rgb(57 148 255);
+  --nav-color: #1e1e28;
+}
 *,
 *::before,
 *::after {
@@ -8,6 +25,7 @@
   box-sizing: inherit;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: 0.05s;
 }
 ::selection {
   background-color: #4835f7;
@@ -20,13 +38,18 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-h1,h2,h3,h4,h5,h6 {
-  font-family: 'Montserrat',sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
   line-height: 1.5;
 }
 html,
 body {
-  background-color: #fff;
+  background-color: var(--white);
 }
 body {
   display: -webkit-box;
@@ -41,10 +64,12 @@ body {
   min-height: 100vh;
   padding: 0 0 1.5rem;
   position: relative;
-  font-family: "Open Sans",sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
 }
-
+.container {
+  color: var(--text);
+}
 canvas {
   cursor: crosshair;
   display: block;
@@ -59,9 +84,30 @@ a:hover {
   text-decoration: none;
 }
 
+.heading {
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: default;
+}
+
+.moto {
+  font-size: 22px;
+  cursor: default;
+}
+.heading:hover {
+  color: #fe0c43;
+  transition: 1s;
+}
+.moto:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--gray);
+  transition: 1s linear;
+}
+
 .content {
   margin-top: 80px;
 }
+
 .box {
   position: relative;
   display: flex;
@@ -71,8 +117,8 @@ a:hover {
 .box-item {
   position: relative;
   display: block;
-  background-color: #FEEEF2;
-  color: #444;
+  background-color: var(--box);
+  color: var(--text);
   font-weight: 600;
   width: 100%;
   cursor: pointer;
@@ -87,7 +133,6 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-
   .box {
     display: flex;
     flex-wrap: wrap;
@@ -100,7 +145,6 @@ a:hover {
 }
 
 @media (min-width: 1100px) {
-
   .box-item {
     width: calc(25% - 20px);
   }
@@ -122,7 +166,7 @@ a:hover {
   display: table;
   clear: both;
 
-  background: #FE0C43;
+  background: var(--box-hover);
   z-index: 5;
   transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
@@ -155,7 +199,7 @@ a:hover {
 
 .box-item:hover::before {
   left: calc(0% - 10px);
-  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: left 0.6s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 .box-item img {
@@ -177,7 +221,7 @@ a:hover {
 }
 
 .box-item.different-color:hover {
-  background-color: #FE0C43;
+  background-color: var(--box-hover);
 }
 
 ::-webkit-scrollbar {
@@ -192,4 +236,67 @@ a:hover {
   background-color: #c1c1c1;
   outline: none;
   border-radius: 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+.theme-switch input {
+  display: none;
+}
+.slider {
+  background-color: #999;
+  background-image: linear-gradient(aqua, skyblue);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin:auto;
+  transition: 0.4s;
+}
+.slider:before {
+  background-color: white;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+input:checked + .slider {
+  background-color: rgb(163, 163, 163);
+  background-image: linear-gradient(midnightblue, rebeccapurple);
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+  background-color: grey;
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+  background-color: yellow;
+}
+#stats {
+  background-color: #eeeeee;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#stats a {
+  padding: 0 5px;
 }

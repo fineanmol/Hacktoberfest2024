@@ -1,0 +1,54 @@
+
+header h6{
+	color:white;
+
+}
+span{
+	color: #000000;
+}
+.intro{
+	font-size:20px;
+	display:flex;
+    justify-content:center;
+	align-items:center;
+	text-align:center;
+	font-family:arial;
+}
+
+div{
+	
+}
+#b:hover{
+	color:#00ffff;
+	text-shadow: 0px 2px 0px #ff4dc4;
+	transition-duration: 1s;
+	letter-spacing: 2px; 
+}
+nav{
+	
+	background-color:#3b3b3b;
+	border-radius: 0px 0px 5px 5px;
+	height:6%;
+	box-shadow:5px 5px 6px #ff1a1a;
+	position: absolute;
+	display:inline;
+}
+nav ul{
+	flex:1;
+    text-align:right;
+	float:right;
+}
+nav ul li{
+	color:white;
+	list-style:none;
+	display:inline-block;
+	font-size:15px;
+	padding:5px;
+}
+a:visited {
+  color:white;
+}
+a:hover{
+	color:#ff1a1a;
+	text-decoration:none;
+}

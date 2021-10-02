@@ -1,4 +1,4 @@
-import re # import regex module
+import re  # import regex module
 
 # check if date is valid (yyyy-mm-dd)
 def date_validation(self, date):
@@ -6,5 +6,6 @@ def date_validation(self, date):
         return True
     else:
         return False
-        
-date_validation(2022-02-29) # False/True
+
+
+date_validation("2022-02-29")  # False/True

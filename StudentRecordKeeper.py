@@ -131,6 +131,7 @@ def menu():
 			os.remove(filename)
 			
 		if choice == 6:
+			print("\nProgram Exited Successfully\n")
 			print("\n\tThank you")
 			print("------------------------------------------")
 if __name__ == "__main__":

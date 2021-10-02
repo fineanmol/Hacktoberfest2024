@@ -1,4 +1,4 @@
-//Coded by Shreeya Chatterji
+//Coded by shreeyachatzz
 /*Q. Write a program to convert a Decimal to it's BCD equivalent*/
 import java.util.*;
 public class Q20

@@ -50,3 +50,10 @@ class regex:
             return True
         else:
             return False
+
+    # check for empyt string
+    def empty_string_validaton(self, string):
+        if re.fullmatch(r"^\s*$", string):
+            return True
+        else:
+            return False

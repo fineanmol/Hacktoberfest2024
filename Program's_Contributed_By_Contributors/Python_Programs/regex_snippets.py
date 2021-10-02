@@ -26,6 +26,20 @@ class regex:
         else:
             return False  # invalid email
 
+    # check if the phone number is valid
+    def phone_validation(self, phone):
+        if re.fullmatch(r"/^\d{10}$/", phone):
+            return True  # valid phone
+        else:
+            return False  # invalid phone
+
+    # check if date is valid (yyyy-mm-dd)
+    def date_validation(self, date):
+        if re.fullmatch(r"/^\d{4}-\d{2}-\d{2}$/", date):
+            return True
+        else:
+            return False
+
 
 reg = regex()
 

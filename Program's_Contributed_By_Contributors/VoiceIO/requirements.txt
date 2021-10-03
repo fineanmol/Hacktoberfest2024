@@ -1,2 +1,0 @@
-pyttsx3==2.87
-SpeechRecognition==3.8.1

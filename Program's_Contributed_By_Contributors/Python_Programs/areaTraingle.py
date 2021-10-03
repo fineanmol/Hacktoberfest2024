@@ -1,5 +1,0 @@
-height = input("Enter the Height ")
-width = input("Enter the width ")
-height=int(height)
-width=int(width)
-print("The value of area of triangle is " , int(height*width)/2)

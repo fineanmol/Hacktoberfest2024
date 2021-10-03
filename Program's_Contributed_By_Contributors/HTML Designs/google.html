@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+.center
+{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 150px;
+}
+.bar{
+  margin:0 auto;
+  width:575px;
+  border-radius:30px;
+  border:1px solid #dcdcdc;
+}
+.input
+{
+    display: block;
+    height: 40px;
+    width: 500px;
+    font-size: medium;
+    margin-right: auto;
+    margin-left: auto;
+    border: none;
+}
+hi {
+  float: right;
+}
+
+hi a {
+  color: #000;
+  display: block;
+  text-align: center;
+  padding: 0px 10px;
+  text-decoration: none;
+  font-size:17px;
+}
+hi a:hover {
+  text-decoration: underline;
+}
+.buttons{
+    margin-top: 30px;
+  margin-left:500px;
+}
+.button{
+  background-color: #f5f5f5;
+  border:none;
+  color:#707070;
+  font-size:15px;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius:4px;
+  outline:none;
+}
+.sign {
+  background-color:#5d92ee;
+  color:#fff;
+   display: inline-block;
+   font-size: 16px;
+}
+ </style>   
+</head>
+<body>
+    <hi><button type="button" class="sign"  >Sign In</button></body></hi>
+    <hi><img src="https://cdn3.iconfinder.com/data/icons/navigation-and-settings/24/Material_icons-01-11-512.png" alt="Grid" height="20" width="20"></hi>
+    <hi><a href="#images">Images</a></hi>
+    <hi><a href="#gmail">Gmail</a></hi>
+     <br><br><br>
+    <img src="googleLogo.png" alt="Google" class="center" height="100"width="300">
+<div class="bar">
+<input type="text" id="Search" size="100" placeholder="Search Google or type a URL" class="input">
+</div>
+<div class="buttons">
+    <button class="button" onclick="myFunction()" type="button">Google Search</button>
+    <button class="button" type="button">I'm Feeling Lucky</button>
+   </div>
+   <script>
+    function myFunction() {
+        var x = document.getElementById("Search").value;
+        alert(x);
+    }
+    </script>
+</body>
+</html>

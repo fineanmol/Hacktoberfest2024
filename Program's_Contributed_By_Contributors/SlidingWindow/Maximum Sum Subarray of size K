@@ -1,0 +1,15 @@
+def getans(a,k):
+    i=j=0
+    s=0
+    ans=[]
+    while(j<len(a)):
+        s+=a[j]
+        if j-i+1<k:
+            j+=1
+        else:
+            ans.append(s)
+            s-=a[i]
+            i+=1
+            j+=1
+    return ans
+print(getans([2,5,1,8,2,9,1,6],7))

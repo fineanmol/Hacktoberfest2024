@@ -239,6 +239,14 @@ a:hover {
   border-radius: 0;
 }
 
+.heading {
+  color: black !important;
+}
+
+.heading:hover {
+  color: rgba(248, 0, 95, 0.973) !important;
+}
+
 .wrapper {
   display: flex;
   justify-content: space-between;

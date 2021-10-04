@@ -239,6 +239,14 @@ a:hover {
   border-radius: 0;
 }
 
+.heading {
+  color: black !important;
+}
+
+.heading:hover {
+  color: rgba(248, 0, 95, 0.973) !important;
+}
+
 .wrapper {
   display: flex;
   justify-content: space-between;
@@ -251,7 +259,7 @@ a:hover {
   position: relative;
   width: 60px;
   justify-content: space-between;
-  border-style: solid;
+  border: 1px solid rgb(80, 80, 80);
   border-radius: 34px;
   align-items: center;
 }
@@ -260,6 +268,7 @@ a:hover {
 }
 
 .slider {
+  border: 1px solid rgb(80, 80, 80);
   background-color: transparent;
   bottom: 0;
   cursor: pointer;
@@ -280,18 +289,25 @@ a:hover {
   transition: 0.4s;
   width: 24px;
 }
-input:checked + .slider {
+
+svg {
+  filter: invert(50%);
+}
+
+input:checked input:checked + .slider {
   background-color: transparent;
 }
 input:checked + .slider:before {
   transform: translateX(23px);
-  background-color: white;
+  background-color: rgb(80, 80, 80);
 }
 .slider.round {
+  border: 1px solid rgb(80, 80, 80);
   border-radius: 34px;
 }
 .slider.round:before {
   border-radius: 50%;
+  border: 1px solid rgb(80, 80, 80);
 }
 #stats {
   background-color: #eeeeee;
@@ -305,10 +321,6 @@ input:checked + .slider:before {
   padding: 0 5px;
 }
 
-
-
-
-
 body {
   background: floralwhite;
 }
@@ -318,8 +330,8 @@ form {
   background: orange;
   padding: 60px 120px 80px 120px;
   text-align: center;
-  -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
-  box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
 }
 label {
   display: block;
@@ -331,10 +343,10 @@ label {
   top: -1.6em;
   padding: 10px;
   font-family: sans-serif;
-  font-size: .8em;
+  font-size: 0.8em;
   letter-spacing: 1px;
   color: rgba(248, 0, 95, 0.973);
-  transition: ease .3s;
+  transition: ease 0.3s;
 }
 .input {
   width: 100%;
@@ -348,7 +360,7 @@ label {
   position: relative;
   width: 100%;
   height: 2px;
-  background: #BCBCBC;
+  background: #bcbcbc;
 }
 
 .line {
@@ -359,7 +371,7 @@ label {
   left: 50%;
   transform: translateX(-50%);
   background: black;
-  transition: ease .6s;
+  transition: ease 0.6s;
 }
 
 .input:focus + .line-box .line {
@@ -373,18 +385,17 @@ label {
 button {
   display: inline-block;
   padding: 12px 24px;
-  background: rgb(220,220,220);
+  background: rgb(220, 220, 220);
   font-weight: bold;
-  color: rgb(120,120,120);
+  color: rgb(120, 120, 120);
   border: none;
   outline: none;
   border-radius: 3px;
   cursor: pointer;
-  transition: ease .3s;
+  transition: ease 0.3s;
 }
 
 button:hover {
-  background: #8BC34A;
+  background: #8bc34a;
   color: #ffffff;
 }
-

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Coming Soon</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+        <a href="#" class="logo">Comming Soon</a>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <img src="images/curve.png" class="wave">
+        <div class="contentBx">
+            <h2>Coming Soon</h2>
+            <p>Breif Description Here</p>
+            <div class="countdown">
+                <div class="time"><div id="day"></div><span>Days</span></div>
+                <div class="time"><div id="hour"></div><span>Hours</span></div>
+                <div class="time"><div id="minute"></div><span>Minutes</span></div>
+                <div class="time"><div id="second"></div><span>Seconds</span></div>
+            </div>
+        <a href="#" onclick="toggle();">Notify Me!</a>
+        </div>
+        <div class="imgBx">
+            <img src="images/man.png">
+        </div>
+        <ul class="sci">
+            <li><a href="#"><img src="images/instagram.png"></a></li>
+            <li><a href="#"><img src="images/twitter.png"></a></li>
+        </ul>
+    </section>
+    <div class="newsletter">
+        <h2>Stay Tuned</h2>
+        <p>Get Notified at launch</p>
+        <div class="inputBox">
+            <form>
+                <input type="email" name="" required="" placeholder="Enter Email Address">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <img src="images/close.png" class="close" onclick="toggle();">
+    </div>
+    <script type="text/javascript">
+
+        function toggle(){
+            var newsletter=document.querySelector('.newsletter');
+            newsletter.classList.toggle('active')
+        }
+
+
+        var countDate=new Date('Dec 31,2021 00:00:00').getTime();
+        function cd(){
+            var now=new Date().getTime();
+            gap=countDate-now;
+            var second=1000;
+            var minute=second*60;
+            var hour=minute*60;
+            var day=hour*24;
+            var d=Math.floor(gap/day);
+            var h=Math.floor((gap%(day))/(hour));
+            var m=Math.floor((gap%(hour))/(minute));
+            var s=Math.floor((gap%(minute))/second);
+            document.getElementById('day').innerText=d;
+            document.getElementById('hour').innerText=h;
+            document.getElementById('minute').innerText=m;
+            document.getElementById('second').innerText=s;
+        }setInterval(function(){
+            cd();
+        },1000)
+    </script>
+    </body>
+</html>

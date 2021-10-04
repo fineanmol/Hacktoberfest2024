@@ -3,7 +3,7 @@
 public class IdentityMatrix
 {
     public static void main(String[] args) {
-        int rows, cols;
+        int rows, columns;
         boolean flag = true;
 
         //Initialize matrix a
@@ -17,18 +17,18 @@ public class IdentityMatrix
         //number of rows and columns
         //in the given matrix
         rows = arr.length;
-        cols = arr[0].length;
+        columns = arr[0].length;
 
         //Checks whether square matrix or not
-        if(rows != cols){
-            System.out.println("Matrix should be a square matrix");
+        if(rows != columns){
+            System.out.println("Enter a square matrix");
         }
         // For an identity matrix
         //Diagonal elements must equal 1
         //Others should equal 0
         else {
             for(int i = 0; i < rows; i++){
-                for(int j = 0; j < cols; j++){
+                for(int j = 0; j < columns; j++){
                     if(i == j && arr[i][j] != 1){
                         flag = false;
                         break;

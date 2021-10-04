@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="A Recreation of the Mydrugs website from the hit Netflix series 'How To Sell Drugs Online (Fast)">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta name="viewport" content="width-device-width , initail-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" >
+  <link charset="utf-8">
+  <title>mydrugs</title>
+  <style type="text/css">
+
+  
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  
+  justify-content: center;
+ background-color: #0e0e0e;
+}
+.wrapper{
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 700px;
+  height: 400px;
+}
+.wrapper .img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.wrapper .img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  clip-path: circle(0% at 0% 100%);
+  transition: all 0.7s;
+}
+#one:checked ~ .img-1 img{
+  clip-path: circle(150% at 0% 100%);
+}
+#two:checked ~ .img-1 img,
+#two:checked ~ .img-2 img{
+  clip-path: circle(150% at 0% 100%);
+}
+#three:checked ~ .img-1 img,
+#three:checked ~ .img-2 img,
+#three:checked ~ .img-3 img{
+  clip-path: circle(150% at 0% 100%);
+}
+#four:checked ~ .img-1 img,
+#four:checked ~ .img-2 img,
+#four:checked ~ .img-3 img,
+#four:checked ~ .img-4 img{
+  clip-path: circle(150% at 0% 100%);
+}
+#five:checked ~ .img-1 img,
+#five:checked ~ .img-2 img,
+#five:checked ~ .img-3 img,
+#five:checked ~ .img-4 img,
+#five:checked ~ .img-5 img{
+  clip-path: circle(150% at 0% 100%);
+}
+.wrapper .sliders{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  display: flex;
+}
+.wrapper .sliders label{
+  border: 2px solid rgb(142,197,252);
+  width: 13px;
+  height: 13px;
+  margin: 0 3px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#one:checked ~ .sliders label.one,
+#two:checked ~ .sliders label.two,
+#three:checked ~ .sliders label.three,
+#four:checked ~ .sliders label.four,
+#five:checked ~ .sliders label.five{
+  width: 35px;
+  border-radius: 14px;
+  background: rgb(142,197,252);
+}
+.sliders label:hover{
+  background: rgb(142,197,252);
+}
+input[type="radio"]{
+  display: none;
+}
+
+    
+  </style>
+  <script data-dapp-detection>
+    !function(){let e=!1;function n(){if(!e){const n=document.createElement("meta");n.name="dapp-detected",document.head.appendChild(n),e=!0}}if(window.hasOwnProperty("ethereum")){if(window.__disableDappDetectionInsertion=!0,void 0===window.ethereum)return;n()}else{var t=window.ethereum;Object.defineProperty(window,"ethereum",{configurable:!0,enumerable:!1,set:function(e){window.__disableDappDetectionInsertion||n(),t=e},get:function(){if(!window.__disableDappDetectionInsertion){const e=arguments.callee;e&&e.caller&&e.caller.toString&&-1!==e.caller.toString().indexOf("getOwnPropertyNames")||n()}return t}})}}();
+  </script>
+</head>
+<body>
+  <nav>
+<div class="logo">
+<a href="/">
+<img src="WhiteLogo.png" width="55">
+</a>
+ </div> 
+<input type="checkbox" id="click">
+<label for="click" class="menu-btn">
+
+<i class="fas fa-bars">
+</i>
+</label>
+<ul>
+<li>
+<a href="purchase.html">SHOP</a>
+</li>
+<li>
+  <a href="faq.html">FAQ</a>
+</li>
+<li>
+  <a href="safety.html">SAFETY</a>
+</li>
+<li>
+  <a href="forum.php">FORUM</a>
+</li>
+<li>
+  <a href="contact.html">CONTACT</a>
+</li>
+<li>
+  <a href="login.php">
+    <i class="fas fa-user-circle">
+</i>
+</a>
+</li>
+</ul>
+</nav>
+<div class="background-index">
+<br>
+<br>
+<h1 class="mydrugs2">BEST</h1>
+<div id="flip">
+<div>
+<div>QUALITY</div>
+</div>
+<div>
+<div>DELIVERY</div>
+</div>
+<div>
+<div>SECURITY</div>
+</div>
+</div>
+<h1 class="mydrugs2">IN MYDRUGS 2.0</h1>
+<p class="price">Prices as low as 0.0013 BTC.</p>
+<br>
+<br>
+<img width="400" align="center" src="powder.png">
+<div id="price">
+<p align="left" class="price-left">Fresh from our factory.</p>
+<br>
+<p align="right" class="price-right">MDMA in its purest form.</p>
+</div>
+<br>
+<div id="price">
+<p class="price-left">Constantly quality-checked by our experts.</p>
+<br>
+<p class="price-right">Delivery guaranteed within 5 days.</p>
+</div>
+</div>
+<br>
+<br>
+<section id="newline">
+<section id="shop">
+  <br>
+ <h1>Our explosive new lineup.</h1> 
+<p class="ppp">For the best MDMA experience Ever.</p>
+<br>
+<br>
+<img width="150" src="donald-pill.png">
+<img width="200" src="grenade-pill.png">
+<br>
+<br>
+<br>
+<br>
+<a class="a-line" href="purchase.html">
+Shop now 
+<i class="fas fa-chevron-right">
+</i>
+</a>
+<br>
+<br>
+
+</section>
+<h3 class="promo">Save 20% off your first order.</h3>
+<br>
+</section>
+<div class="footer">
+  <br>
+  <br>
+ <h1>The Red Heart</h1> 
+<p>Because we love you.</p>
+<a class="a-line" href="purchase.html">
+
+Shop now 
+
+<i class="fas fa-chevron-right">
+
+</i>
+</a>
+<br>
+<br>
+</div>
+<style type="text/css">
+
+  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+ .footer{
+  color: white;
+  text-align: center;
+
+ }
+
+ .ppp{
+  color: black;
+  font-size: 18.7px;
+ }
+.price-right{
+
+  margin-right: 400px;
+  color: #e2e2e2;
+ }
+
+ .price-left{
+  margin-left: 400px;
+  color: #e2e2e2;
+ }
+.price{
+  color: #e2e2e2;
+}
+  #price{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+ }
+            
+  
+.a-line{
+  color: #2f76ff;
+  
+  outline: none;
+  text-decoration: none;
+ 
+  
+  
+
+
+}
+.a-line:hover{
+    
+  outline: none;
+  text-decoration: none;
+  font-size: 15px;
+  transition: font-size 0.5s ease 0s;
+}
+
+.promo{
+   text-align: center;
+  color: black;
+  
+}
+#newline{
+  background: url(line.png);
+  background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+}
+#shop{
+  font-size: 32.5px;
+  text-align: center;
+  align-content: center;
+  
+  color: black;
+  font-family: sans-serif;
+}
+
+
+#flip {
+  font-size: 35px;
+  color: black;
+  font-family: sans-serif;
+  height: 50px;
+  overflow: hidden;
+  text-align: center;
+}
+
+#flip > div > div {
+  padding: 4px 12px;
+  height: 50px;
+  margin-bottom: 45px;
+  display: inline-block;
+}
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background: #42c58a;
+}
+#flip div:first-child div {
+  background: #4ec7f3;
+}
+#flip div:last-child div {
+  background: #DC143C;
+}
+@keyframes show {
+  0% {margin-top: -270px;}
+  5% {margin-top: -180px;}
+  33% {margin-top: -180px;}
+  38% {margin-top: -90px;}
+  66% {margin-top: -90px;}
+  71% {margin-top: 0px;}
+  99.99% {margin-top: 0px;}
+  100% {margin-top: -270px;}
+}
+
+.mydrugs2{
+ color: white;
+ font-size: 50px;
+ 
+}
+
+
+
+.background-index{
+  align-content: center;
+  z-index: -100;
+  margin-top: 80px;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #0e0e0e;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+.content div{
+  font-size: 40px;
+  font-weight: 700;
+}
+
+  
+</style>
+<style type="text/css"></style>
+</body>
+</html>

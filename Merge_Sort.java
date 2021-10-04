@@ -42,6 +42,8 @@ public class MergeSort {
       arr[i++] = first[f++];
     while (s < m)
       arr[i++] = second[s++];
+     while (s > m)
+      arr[i++] = second[s++];
     return arr;
   }
 }

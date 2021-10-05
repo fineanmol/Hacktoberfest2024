@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" href="./css/all.min.css">
+	<title>Game</title>
+</head>
+<body id="c-body">
+	<main>
+		<div class="chronometer-container">
+			<section class="content-container">
+				<div class="container">
+					<h1> Let's play</h1>
+					<button  onclick="startTimer()" class="green button ">Start</button>
+				</div>
+				<div id="chronometer">00:00</div>
+				<p id="currentText" class="info"> blue</p>
+				<div class="button-container">
+					<button  onclick="changeColor('Blue')" class="blue button ">Blue</button>
+					<button  onclick="changeColor('Red')" class="red button">Red</button>
+					<button  onclick="changeColor('Yellow')" class="yellow button">Yellow</button>
+				</div>
+			</section>
+		</div>
+	</main>
+	<script type="text/javascript" src='./index.js'></script>
+</body>
+</html>

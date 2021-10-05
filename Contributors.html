@@ -39,8 +39,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+  </script>
   <!-- Github follow button -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <link rel="stylesheet" href="./css/contributors.css">
@@ -328,8 +328,10 @@
         <a class="box-item" href="https://github.com/Aman1905"><span>Aman Chopra</span></a>
         <a class="box-item" href="https://github.com/mofazil17"><span>Mohamed Fazil</span></a>
         <a class="box-item" href="https://github.com/Tejaswi-Kumar"><span>Tejaswi Kumar</span></a>
+        <a class="box-item" href="https://github.com/TahuTech"><span>Nur Ali Sholikhin</span></a>
 
-        
+
+
         <!-- Please maintain the alignment... -->
 
 
@@ -356,7 +358,8 @@
   <script>
     document.querySelectorAll('a.box-item').forEach(con => {
       console.log(con.href)
-      con.innerHTML += `<img src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
+      con.innerHTML +=
+        `<img src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
     })
     const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
     const currentTheme = localStorage.getItem('theme');
@@ -366,6 +369,7 @@
         toggleSwitch.checked = true;
       }
     }
+
     function switchTheme(e) {
       if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');

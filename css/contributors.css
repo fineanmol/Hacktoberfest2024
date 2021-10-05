@@ -290,7 +290,7 @@ input:checked + .slider:before {
   background-color: yellow;
 }
 #stats {
-  background-color: #eeeeee;
+  background-color: #00FF00;
   padding: 20px;
   border-radius: 20px;
   display: flex;

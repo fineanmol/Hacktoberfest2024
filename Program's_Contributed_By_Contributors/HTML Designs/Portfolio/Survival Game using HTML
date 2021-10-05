@@ -1,0 +1,8 @@
+<body background="http://www.freelargeimages.com/wp-content/uploads/2016/06/Background-4.jpg">
+ <div1><h1>Welcome to the ULTIMITE SURVIVAL GAME!!!</h1>
+<center><p1>The goal of the game is to answer all five difficult survival questions. Remember to count the points to see your survival rank. </p><p> ARE YOU READY?</p>
+  
+  <button onclick="game()">PLAY</button></center></div>
+  <div><img src="http://www.101waystosurvive.com/wp-content/uploads/2014/11/survival.jpg"id="man"> <img src="https://uldissprogis.files.wordpress.com/2014/07/basic-survival-logo-1024x181.png" id="survival"> <img src="http://www.thepreparedpage.com/wp-content/uploads/2014/10/fire-survival-tips-.jpg" id="fire"> </div> 
+  
+  <h2>By Baibhav Tripathy.</h2>

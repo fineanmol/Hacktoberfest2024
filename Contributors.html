@@ -351,6 +351,7 @@ cses
 
 
         <!-- Add to the bottom of the list -->
+        <a class="box-item" href="https://github.com/parthiv11"><span>paRRthiv Makwana</span></a>
         <a class="box-item" href="https://github.com/fineanmol"><span>Anmol Agarwal</span></a>
         <a class="box-item" href="https://github.com/Amitava123"><span>Amitava Mitra</span></a>
         <a class="box-item" href="https://github.com/philson-philip"><span>Philson Philip</span></a>
@@ -608,9 +609,10 @@ master
 
   <script>
     document.querySelectorAll('a.box-item').forEach(con => {
-      console.log(con.href)
-      con.innerHTML +=
-        `<img src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
+
+      con.innerHTML += `<img src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
+
+
     })
     const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
     const currentTheme = localStorage.getItem('theme');

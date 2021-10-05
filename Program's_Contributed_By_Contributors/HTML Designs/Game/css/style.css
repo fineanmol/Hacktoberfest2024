@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,800;1,500&display=swap');
+
+:root {
+	--blue: #004283;
+	--yellow: #FFA400;
+	--white: #F5F5F5;
+	--green: #008000;
+    --red: #ff0000;
+}
+
+body, html {
+	font-size: 10px;
+	line-height: 1.5;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.6rem;
+	box-sizing: border-box;
+	height: 100%;
+	--primary-color: #005991;
+	--secondary-color: var(--yellow);
+}
+
+
+main {
+	display: flex;
+	min-height: calc(100vh - 80px);
+}
+h1 {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+.info {
+	text-align: center;
+	font-size: 5rem;
+}
+.chronometer-container {
+	flex: 8;
+	display: flex;
+	height: calc(100vh - 80px);
+}
+
+.content-container {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+.container {
+	display: flex;
+	flex: 3 1;
+	justify-content: space-around;
+	align-items: center;
+    flex-direction: column;
+
+}
+
+.button-container {
+	display: flex;
+	flex: 3 1;
+	justify-content: space-around;
+	align-items: flex-end;
+}
+
+
+.button {
+ 	border: none;
+ 	color: var(--white); 
+ 	padding: 2rem 0;
+ 	width: 200px;
+ 	font-size: 2rem;
+ 	font-style: bold;
+ 	cursor: pointer;
+ }
+
+ .green {
+    background: var(--green);
+}
+
+ .red {
+    background: var(--red);
+}
+
+ .yellow {
+ 	background: var(--yellow);
+ }
+
+ .blue {
+ 	background: var(--blue);
+ }
+
+
+ #chronometer {
+ 	font-size: 14rem;
+ 	flex: 3 1;
+ 	text-align: center;
+ }
+
+
+
+.control-container{
+ 	display: flex;
+ 	flex: 3 1;
+ 	justify-content: center;
+}
+
+@media (min-width: 1400px) {
+
+	.info {
+		width: 100%;
+	}
+
+	.chronometer-container {
+		justify-content: center;	
+	}
+
+	.content-container {
+		max-width: 65%
+	}
+
+	#chronometer {
+		display: flex;
+    	align-items: center;
+    	justify-content: center;
+	}
+
+  }
+
+@media (max-width: 1000px) {
+
+ 	.chronometer-container {
+ 		flex: 1;
+ 		height: calc(100vh - 80px);
+ 	}
+
+}
+
+
+

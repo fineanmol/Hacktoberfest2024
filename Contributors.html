@@ -356,7 +356,7 @@
 
   <script>
     document.querySelectorAll('a.box-item').forEach(con => {
-      console.log(con.href)
+      
       con.innerHTML += `<img src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
     })
     const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');

@@ -278,7 +278,6 @@ input:checked + .slider {
   background-color: rgb(163, 163, 163);
   background-image: linear-gradient(midnightblue, rebeccapurple);
 }
-
 input:checked + .slider:before {
   transform: translateX(26px);
   background-color: grey;
@@ -301,9 +300,3 @@ input:checked + .slider:before {
 #stats a {
   padding: 0 5px;
 }
-
-.mode-toggle{
-  display: flex;
-  flex-direction: row;
-}
-

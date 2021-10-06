@@ -1,0 +1,19 @@
+function palindrome(str) {
+str=str.toLowerCase();
+let newStr="";
+let regex=/[a-z]|[0-9]/;
+
+for(let char of str){
+  if(regex.test(char)){
+    newStr=newStr+char;
+  }
+}
+
+if(newStr.split('').join('')===newStr.split('').reverse().join('')){
+  return true;
+}else return false;
+}
+
+
+
+palindrome("eye");

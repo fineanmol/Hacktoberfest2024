@@ -5,7 +5,7 @@
     width: 100vw;
     /* height: 100px; */
     background: linear-gradient(to left, #FF0844, #FF4563);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     color: white;
     text-align: center;
     z-index: 1000;
@@ -21,7 +21,7 @@
 }
 
 .social-icons {
-    padding: 7px;
+    padding: 5px;
 }
 
 .social-icons> a img {

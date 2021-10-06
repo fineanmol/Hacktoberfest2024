@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// Convert an integer to roman numeral
+// Convert an integer between 1 <= num <= 3999 to a roman numeral.
 string intToRoman(int num) 
 {
     vector<string> thousands = {"", "M", "MM", "MMM"};

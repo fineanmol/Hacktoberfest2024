@@ -114,4 +114,5 @@ For more information on syncing forks [read this article from Github](https://he
 
 
 
-###### *We will do our best to merge as much as possible from everyone. However, time is limited and the merge conflicts are horrible <3*
+###### *We will do our best to merge as much as pull requests as possible from everyone. However, time is limited and the merge conflicts are horrible <3*
+###### *NOTE:- Only those pull requests will be merged which will be found relatable and approved by our project managers*

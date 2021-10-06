@@ -1,5 +1,5 @@
 .navbar {
-  padding: 0.4rem 2rem;
+  padding: 0.5rem 2rem;
 }
 nav {
   background-color: var(--nav-color);
@@ -19,8 +19,8 @@ nav {
 .navbar-light .navbar-nav .nav-link {
   color: var(--text);
   position: relative;
-  padding: 8px;
-  margin: 0 8px !important;
+  padding: 10px;
+  margin: 0 10px !important;
 }
 .navbar-light .navbar-nav .active {
   background-color: #f1ffc5;
@@ -42,9 +42,9 @@ nav {
   left: auto;
   right: 0;
   position: absolute;
-  -webkit-transition: width 0.5s ease-in-out;
-  -o-transition: width 0.5s ease-in-out;
-  transition: width 0.5s ease-in-out;
+  -webkit-transition: width 0.2s ease-in-out;
+  -o-transition: width 0.2s ease-in-out;
+  transition: width 0.2s ease-in-out;
   width: 0;
 }
 .navbar-light .navbar-nav .nav-social::before {
@@ -52,7 +52,7 @@ nav {
 }
 .navbar-light .navbar-nav .nav-social:hover {
   content: none;
-  transition: 0.4s;
+  transition: 0.3s;
   transform: scale(1.2);
 }
 .navbar-light .navbar-nav .nav-link:hover {

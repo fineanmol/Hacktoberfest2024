@@ -106,7 +106,7 @@ For more information on syncing forks [read this article from Github](https://he
 - How many pull request (PR) must be made, if I can get a awesome shirt from Hacktoberfest 2021?
   - 5
 - How do I track my progress to get an awesome shirt from Hacktoberfest 2021?
-  - [go to :](https://hacktoberfest.digitalocean.com/profile/). (Check Out Your Own Stats at Right Top)
+  - [go to this link :](https://hacktoberfest.digitalocean.com/profile/). (Check Out Your Own Stats at Right Top)
 - What is the duration of Hacktoberfest 2021?
   - It is from 1st october to 31st october 2021...
 - What is the event for?

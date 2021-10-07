@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanding Cards</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: beige;
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    .container {
+        display: flex;
+        width: 90vw;
+    }
+
+    .panel {
+        background-size: auto 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 80vh;
+        border-radius: 50px;
+        color: #ffffff;
+        cursor: pointer;
+        flex: 0.5;
+        margin: 10px;
+        position: relative;
+        transition: flex 0.7s ease-in;
+    }
+
+    .panel h3 {
+        font-size: 24px;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        margin: 0;
+        opacity: 0;
+    }
+
+    .panel.active {
+        flex: 5;
+    }
+
+    .panel.active h3 {
+        opacity: 1;
+        transition: opacity 0.3s ease-in 0.4s;
+    }
+
+    @media (max-width: 400px) {
+        .container {
+            width: 100vw;
+        }
+
+        .panel:nth-of-type(4),
+        .panel:nth-of-type(5) {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+    <h1>Images Slider</h1>
+    <div class="container">
+        <div class="panel active"
+            style="background-image: url('https://images.unsplash.com/photo-1629363726783-6e42c6e5f9fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80');">
+            <h3>Explore The World</h3>
+        </div>
+        <div class="panel"
+            style="background-image: url('https://images.unsplash.com/photo-1629199022827-eede3c3df471?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80');">
+            <h3>Explore The World</h3>
+        </div>
+        <div class="panel"
+            style="background-image: url('https://images.unsplash.com/photo-1586227740560-8cf2732c1531?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=828&q=80');">
+            <h3>Explore The World</h3>
+        </div>
+        <div class="panel"
+            style="background-image: url('https://images.unsplash.com/photo-1586227740560-8cf2732c1531?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=828&q=80');">
+            <h3>Explore The World</h3>
+        </div>
+        <div class="panel"
+            style="background-image: url('https://images.unsplash.com/photo-1586227740560-8cf2732c1531?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=828&q=80');">
+            <h3>Explore The World</h3>
+        </div>
+    </div>
+
+    <script>
+        const panels = document.querySelectorAll(".panel");
+
+        panels.forEach((panel) => {
+            panel.addEventListener("click", () => {
+                removeActiveClasses();
+                panel.classList.add("active");
+            });
+        });
+
+        function removeActiveClasses() {
+            panels.forEach((panel) => {
+                panel.classList.remove("active");
+            });
+        }
+
+    </script>
+</body>
+
+
+</html>

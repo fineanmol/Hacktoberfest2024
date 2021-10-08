@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+body{
+    width: 100%;
+    height:100vh;
+    position: relative;
+
+}
+
+.background{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /*background:linear-gradient(90deg,#320d3e 0%, #7e1544 35%,#4d5198 100%);*/
+    animation: animatee 10s linear infinite;
+}
+.background .box div{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 8px solid rgba(255, 255, 255, 0.5);
+}
+.background .box div:nth-child(1){
+    top: 15%;
+    left: 50%;
+    animation: animatedBox 10s linear infinite;
+    border-radius: 50%;
+}
+.background .box div:nth-child(2){
+    top: 25%;
+    left: 10%;
+    animation: animatedBox 13s linear infinite;
+}
+.background .box div:nth-child(3){
+    top: 78%;
+    left: 83%;
+    animation: animatedBox 10s linear infinite;
+    border-radius: 50%;
+}
+.background .box div:nth-child(4){
+    top: 65%;
+    left: 60%;
+    animation: animatedBox 15s linear infinite;
+}
+.background .box div:nth-child(5){
+    top: 15%;
+    left: 78%;
+    animation: animatedBox 7s linear infinite;
+    border-radius: 50%;
+}
+.background .box div:nth-child(6){
+    top: 25%;
+    left: 85%;
+    animation: animatedBox 5s linear infinite;
+}
+.background .box div:nth-child(7){
+    top: 75%;
+    left: 19%;
+    animation: animatedBox 8s linear infinite;
+    border-radius: 50%;
+}
+.background .box div:nth-child(8){
+    top: 85%;
+    left: 10%;
+    animation: animatedBox 17s linear infinite;
+}
+.background .box div:nth-child(9){
+    top: 17%;
+    left: 25%;
+    animation: animatedBox 13s linear infinite;
+    border-radius: 50%;
+}
+.background .box div:nth-child(10){
+    top: 12%;
+    left: 20%;
+    animation: animatedBox 9s linear infinite;
+}
+
+.background .box div:nth-child(11){
+    top: 1%;
+    left: 1%;
+    animation: animatedBox 6s linear infinite;
+    border-radius: 50%;
+}
+
+.background .box div:nth-child(12){
+    top: 50%;
+    left: 35%;
+    animation: animatedBox 7s linear infinite;
+}
+
+.background .box div:nth-child(13){
+    top: 65%;
+    left: 10%;
+    animation: animatedBox 8s linear infinite;
+    border-radius: 50%;
+}
+
+.background .box div:nth-child(14){
+    top: 95%;
+    left: 1%;
+    animation: animatedBox 9s linear infinite;
+}
+
+.background .box div:nth-child(15){
+    top: 90%;
+    left: 50%;
+    animation: animatedBox 10s linear infinite;
+    border-radius: 50%;
+}
+
+.background .box div:nth-child(16){
+    top: 1%;
+    left: 90%;
+    animation: animatedBox 11s linear infinite;
+}
+
+.background .box div:nth-child(17){
+    top: 50%;
+    left: 80%;
+    animation: animatedBox 12s linear infinite;
+    border-radius: 50%;
+}
+
+.background .box div:nth-child(18){
+    top: 11%;
+    left: 80%;
+    animation: animatedBox 13s linear infinite;
+}
+
+.background .box div:nth-child(19){
+    top: 48%;
+    left: 56%;
+    animation: animatedBox 14s linear infinite;
+    border-radius: 50%;
+}
+
+.background .box div:nth-child(20){
+    top: 45%;
+    left: 45%;
+    animation: animatedBox 15s linear infinite;
+}
+
+@keyframes animatedBox{
+    0%{
+        opacity:1;
+        transform:scale(0) translateY(0) rotate(0);
+    }
+    100%{
+        opacity:0;
+        transform:scale(1.5) translateY(90px) rotate(360deg);
+    }
+}
+
+@keyframes animatee{
+    0% ,18%, 20%, 35%, 50%,64.1%,76.3%,82.3%,88.7%,95.6%,99.7%{
+        background: linear-gradient(90deg,#320d3e 0%, #7e1544 35%,#4d5198 100%); ;
+    }
+    100%,0.1%,18.1%,35.5%,50.1%,64.5%,76.6%,83%,89%,96%{
+        background:
+        linear-gradient(90deg,#031163,#1978a5,#05716c,#1fbfb8),
+        linear-gradient(90deg,#320d3e 0%, #7e1544 35%,#4d5198 100%),
+        linear-gradient(135deg,#081c22,#176379 75%),
+        linear-gradient(90deg,#031163,#1978a5,#05716c,#1fbfb8),
+        linear-gradient(135deg,#081c22,#176379 75%);
+    }
+}
+
+.text{
+    font-size: 3em;
+    position: absolute;
+    top: 42%;
+    left:35%;
+    letter-spacing: 5px;
+    text-align: center;
+    -webkit-box-reflect: below 1px linear-gradient(blur,#000000);
+    line-height: 0.50em;
+    outline: none;
+    animation: animated-text 5s linear infinite;
+    color: tomato;
+}
+
+@keyframes animated-text{
+    0% ,18%, 20%, 35%, 50%,64.1%,76.3%,82.3%,88.7%,95.6%,99.7%{
+        text-shadow: none;
+    }
+    100%,0.1%,18.1%,35.5%,50.1%,64.5%,76.6%,83%,89%,96%{
+        text-shadow: 0 0 10px #03bcf4,
+        0 0 20px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 120px #03bcf4;
+    }
+}

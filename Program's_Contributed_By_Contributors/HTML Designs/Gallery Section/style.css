@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+.gallery-section {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.inner-width {
+  width: 100%;
+  max-width: 1;
+  margin: auto;
+}
+
+.gallery-section h1 {
+  text-align: center;
+  color: black;
+}
+
+.border {
+  width: 180px;
+  height: 4px;
+  background: #333;
+  margin: 60px auto;
+}
+
+.gallery-section .gallery {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+}
+
+.gallery-section .image {
+  flex: 28%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+}
+
+.gallery-section .image:hover img {
+  transform: scale(1.4) rotate(15deg);
+}

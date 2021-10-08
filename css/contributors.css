@@ -8,6 +8,8 @@
   --box: #feeef2;
   --box-hover: #fe0c43;
   --nav-color: white;
+  --footer-color:#ced4da;
+
 }
 [data-theme="dark"] {
   --white: rgb(39 41 52);
@@ -17,6 +19,9 @@
   --box: rgb(61 63 73);
   --box-hover: rgb(57 148 255);
   --nav-color: #1e1e28;
+  --footer-color:#6c757d;
+
+
 }
 *,
 *::before,
@@ -294,7 +299,7 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 #stats {
-  background-color: #eeeeee;
+  background-color:var(--footer-color);
   padding: 20px;
   border-radius: 20px;
   display: flex;

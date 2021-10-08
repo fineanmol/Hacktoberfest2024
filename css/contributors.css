@@ -68,6 +68,8 @@ body {
   font-size: 16px;
 }
 .container {
+
+  position: relative;
   color: var(--text);
 }
 canvas {
@@ -88,6 +90,8 @@ a:hover {
   text-transform: uppercase;
   font-weight: 700;
   cursor: default;
+  font-size: 2rem;
+  font-family: 'Special Elite', cursive;
 }
 
 .moto {
@@ -245,10 +249,13 @@ a:hover {
   align-items: center;
 }
 .theme-switch {
+  margin-right: 2px;
   padding: 0 6px;
   display: flex;
   height: 34px;
-  position: relative;
+  position: absolute;
+  right:0;
+  top:0;
   width: 60px;
   justify-content: space-between;
   border-style: solid;

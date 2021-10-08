@@ -1,4 +1,4 @@
-# Hacktoberfest ([Live Website](https://fineanmol.github.io/Hacktoberfest2k21/Contributors.html))
+# Hacktoberfest ([Live Website](https://fineanmol.github.io/Hacktoberfest2021/Contributors.html))
 
 **This is a beginner-friendly project to help you get started with your
 [hacktoberfest](https://hacktoberfest.digitalocean.com/). If you don't
@@ -10,14 +10,14 @@ P.S. Star ⭐ and Share this repository, if you had fun!! 😍
 ![Hacktoberfest 2021](https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg)
 
 
-# 📌 Videos
+# 📌 Videos:
 
 - [Hacktoberfest Intro](https://youtu.be/OsAFX_ZbgaE)
 - [How to pull request [Overview]](https://youtu.be/DIj2q02gvKs)
 - [Merge Conflict / comment](https://youtu.be/zOx5PJTY8CI)
 
 
-# Contribution rules📚
+# Contribution rules📚:
 
 - The project must work when opening Contributors.html
 - You are allowed to make pull requests that break the rules. We just merge it ;)
@@ -28,18 +28,18 @@ P.S. Star ⭐ and Share this repository, if you had fun!! 😍
 - Try to keep pull requests small to minimize merge conflicts
 
 
-## Getting Started 🤗
+## Getting Started 🤗:
 
 - Fork this repo (button on top)
 - Clone on your local machine
 
 ```
-git clone https://github.com/fineanmol/Hacktoberfest2k21.git
+git clone https://github.com/fineanmol/Hacktoberfest2021.git
 
 ```
 - Navigate to project directory.
 ```
-cd Hacktoberfest2k21
+cd Hacktoberfest2021
 ```
 
 - Create a new branch
@@ -69,7 +69,7 @@ git push origin my-new-branch
 An easy way to avoid conflicts is to add an 'upstream' for your git repo, as other PR's may be merged while you're working on your branch/fork.   
 
 ```terminal
-git remote add upstream https://github.com/fineanmol/Hacktoberfest2k21
+git remote add upstream https://github.com/fineanmol/Hacktoberfest2021
 ```
 
 You can verify that the new remote has been added by typing

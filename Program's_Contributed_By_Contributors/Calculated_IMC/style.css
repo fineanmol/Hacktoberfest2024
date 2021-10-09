@@ -1,0 +1,98 @@
+body {
+  margin: 0 auto;
+  max-width: 768px;  
+}
+
+header {
+  margin: 2.5rem 0;
+}
+header h3 {
+  font-size: 1.5rem;
+  padding: 1rem;
+  color: chocolate;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.fields {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.field label {
+  color: chocolate;
+}
+
+input {
+  height: 2rem;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+}
+
+input::placeholder {
+  text-align: right;
+  margin-right: 0.5rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
+button {
+  flex: 1;
+  height: 3rem;
+  max-width: 10rem;
+  border-radius: 1rem;
+  border: none;
+  
+  color: white;
+}
+
+button:first-child {
+  background-color: #ff5202;
+}
+
+button:last-child {
+  background-color: #1f5eaf;
+}
+
+button:hover {
+  filter: brightness(0.9);
+  cursor: pointer;
+}
+
+.content-result {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  max-width: 15rem;
+  margin: 1rem;
+  padding-left: 1rem;
+  
+  font-size: 1rem;
+  border: none;
+  color: white;
+  background-color: #ff5202;
+  border-radius: 1rem;
+  line-height: 3rem;
+}
+
+.content-result span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}

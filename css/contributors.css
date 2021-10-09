@@ -69,6 +69,35 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
 }
+
+#back-to-top-btn {
+  z-index: 1000;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  color: rgb(124, 117, 117);
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 25%;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-property: background, color;
+  transform: translateY(7px);
+  transition: 0.5s;
+}
+#back-to-top-btn:hover,
+#back-to-top-btn:focus {
+  background: 'transparent';
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transform: translateY(-7px);
+  transition: 0.5s;
+}
+
 .container {
   position: relative;
   color: var(--text);

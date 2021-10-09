@@ -43,6 +43,12 @@
   <link rel="stylesheet" href="css/explosion.css">
   <link rel="stylesheet" href="./css/terminal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
   <title>Hacktoberfest 2021 - Contributors</title>
 
 </head>
@@ -88,7 +94,7 @@
       <span class="heading">CONTRIBUTERS </span>
 
       <div class="heart"></div>
-      <label class="theme-switch" for="checkbox">
+      <!-- <label class="theme-switch" for="checkbox">
 
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun"
           viewBox="0 0 16 16">
@@ -103,8 +109,15 @@
         <input type="checkbox" class="checkbox" id="checkbox" />
 
         <div class="slider round"></div>
-      </label>
+      </label> -->
+      
       <p class=" rubberBand delay-4s">Add yourself to the list if you contribute.</p>
+      <input type="checkbox" class="check-box" id="check-box" />
+        <label for="check-box" class="label">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+          <i class="ball"></i>
+        </label>
       <hr style="width:80%">
     </div>
     <div class="box mx-auto">
@@ -389,15 +402,20 @@
         toggleSwitch.checked = true;
       }
     }
-    function switchTheme(e) {
-      if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-      }
-    }
+    // function switchTheme(e) {
+    //   if (e.target.checked) {
+    //     document.documentElement.setAttribute('data-theme', 'dark');
+    //     localStorage.setItem('theme', 'dark');
+    //   } else {
+    //     document.documentElement.setAttribute('data-theme', 'light');
+    //     localStorage.setItem('theme', 'light');
+    //   }
+    // }
+//     const checkBox = document.getElementById('check-box');
+
+// checkBox.addEventListener('change', () => {
+//     document.body.classList.toggle('dark');
+// })
     toggleSwitch.addEventListener('change', switchTheme);
     const spans = document.querySelectorAll('.word span');
     spans.forEach((span, idx) => {
@@ -418,9 +436,11 @@
   <script src="/scripts/scroll.js"></script>
 
   <script src="./scripts/menu.js"></script>
+  <script src="./scripts/contributors.js"></script>
   <div class="container">
     <div id="stats" style="margin-top: 1rem;"></div>
   </div>
+  
 </body>
 
 </html>

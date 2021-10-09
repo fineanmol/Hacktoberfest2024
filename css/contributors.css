@@ -52,10 +52,10 @@ h6 {
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
 }
-html,
+/* html,
 body {
-  background-color: var(--white);
-}
+  background-color: white;
+} */
 body {
   display: -webkit-box;
   display: -webkit-flex;
@@ -71,7 +71,23 @@ body {
   position: relative;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
+  transition: transform 0.3s linear;
 }
+body.dark {
+  background-color: rgb(59, 59, 59);
+}
+body.dark .heading {
+  color: rgb(255, 255, 255);
+}
+body.dark .rubberBand {
+  color: rgb(255, 255, 255);
+}
+nav.dark {
+  background-color: rgb(59, 59, 59);
+} 
+nav.dark .nav-item {
+  color: rgb(255, 255, 255);
+} 
 .container {
 
   position: relative;
@@ -97,8 +113,12 @@ a:hover {
   cursor: default;
   font-size: 2rem;
   font-family: 'Special Elite', cursive;
+  
 }
 
+.rubberBand {
+  color: #1e1e28;
+}
 .moto {
   font-size: 22px;
   cursor: default;
@@ -139,6 +159,10 @@ a:hover {
   overflow: hidden;
   white-space: nowrap;
   transition: color 0.5s ease-in;
+}
+body.dark .box-item {
+  background-color: rgb(160, 153, 153);
+  color: rgb(255, 255, 255);
 }
 
 @media (min-width: 768px) {
@@ -253,6 +277,46 @@ a:hover {
   justify-content: space-between;
   align-items: center;
 }
+/* Me */
+.label {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  left: 100%;
+  padding: 5px;
+  height: 26px;
+  width: 50px;
+  border-radius: 50px;
+  transform: scale(1.2);
+}
+.check-box {
+  opacity: 0;
+  position: absolute;
+}
+
+.ball {
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transition: transform 0.3s linear;
+}
+.check-box:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+.fa-sun {
+  color: rgb(236, 134, 39);
+}
+.fa-moon {
+  color: rgb(226, 226, 123);
+}
+/* Me end */
 .theme-switch {
   margin-right: 2px;
   padding: 0 6px;

@@ -1,0 +1,21 @@
+def sumOfGP( a, r, n) :
+    return ((a*(1-(r**n)))/(1-r)) 
+    #Return sum of G.P 
+
+def productOfGP(a, r, n):
+    product = 1;
+    for i in range(0, n):
+        product = product * a;
+        a = a * r;
+    return product;
+    # Return the product of g.p. 
+
+
+# Input first term
+a=int(input("Enter 1st Termm : "))
+# Input common ratio of G.P.
+r=int(input("Enter common ratio : "))
+# input number of terms
+n=int(input("Enter total no of terms : "))
+print('Sum of G.P. : '+str(sumOfGP(a, r, n)))
+print('Product of G.P. : '+str(productOfGP(a, r, n)))

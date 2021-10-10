@@ -39,6 +39,8 @@
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  padding:0px;
+  margin:0px;
 }
 h1,
 h2,
@@ -113,7 +115,8 @@ a {
   text-decoration: none;
 }
 a:hover {
-  text-decoration: none;
+  color:orange;
+  font-size:150%;
 }
 
 .heading {
@@ -260,7 +263,7 @@ a:hover {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 1rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -289,7 +292,7 @@ a:hover {
   width: 60px;
   justify-content: space-between;
   border-style: solid;
-  border-radius: 34px;
+  border-radius: 2rem;
   align-items: center;
 }
 .theme-switch input {
@@ -335,7 +338,7 @@ input:checked + .slider:before {
   padding: 20px;
   border-radius: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 #stats a {

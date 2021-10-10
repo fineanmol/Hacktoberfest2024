@@ -1,6 +1,6 @@
 const menu = {
   'Home': {
-    'text': 'Add you Name here',
+    'text': 'Add your Name here',
     'href': 'https://github.com/fineanmol/Hacktoberfest2k21/blob/master/Contributors.html'
   },
   'Contributors': {

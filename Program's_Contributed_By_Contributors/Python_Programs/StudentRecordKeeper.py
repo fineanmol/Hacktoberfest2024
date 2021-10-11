@@ -113,11 +113,11 @@ def menu():
 				f = open(filename, "r")
 				lines = f.readlines()
 				name = input("Enter name of student:")
-				Roll_no = input("Enter Roll no of student:")
+				Roll no = input("Enter Roll no of student:")
 				f.close()
 				f = open(filename, "w")
 				for line in lines:
-					if Roll_no in line and name in line:
+					if Roll no in line and name in line:
 						pass
 					else:
 						f.write(line)

@@ -1,0 +1,51 @@
+:root {
+
+  --darkbg:#251D29;
+
+  --darkt: #FFD1F7;
+
+  --lightbg: #fff;
+
+  --lightt: #D43370;
+
+  
+
+  --toggleHeight: 16em;
+
+  --toggleWidth: 30em;
+
+  --toggleBtnRadius: 10em;
+
+  --bgColor--night: #423966;
+
+  --toggleBtn-bgColor--night: var(--bgColor--night);
+
+  --mooncolor: #D9FBFF;
+
+  --bgColor--day: #9ee3fb;
+
+  --toggleBtn-bgColor--day: var(--bgColor--day);
+
+}
+
+body{
+
+  transition: all .2s ease-in-out;
+
+  background: var(--darkbg);
+
+  color: var(--darkt);
+
+  text-align: center;
+
+}
+
+.light{
+
+  background: var(--lightbg);
+
+  color: var(--lightt);
+
+}
+
+.tdnn {

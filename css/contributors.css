@@ -100,7 +100,7 @@ body {
 
 .container {
   position: relative;
-  color: var(--text);
+  color:#fc4670;
 }
 canvas {
   cursor: crosshair;

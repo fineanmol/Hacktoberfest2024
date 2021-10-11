@@ -1,0 +1,163 @@
+//The code given below is for the connection under java and MS Access
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package vehler;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
+
+
+public class DbConnection {
+     
+    private static Connection connection = null;
+    PreparedStatement pst = null;
+    ResultSet rst = null;
+    public Connection OpenConnection (){
+        
+            String dataSourceName = "DataBase/try2.accdb";
+            String dir = System.getProperty("user.dir");
+            String url = "jdbc:ucanaccess://" + dir + "/" + dataSourceName;
+     
+     connection = null;
+      try{
+          connection =   DriverManager.getConnection(url);
+      }catch(Exception e){
+          System.out.println(e);
+      }
+      return connection;
+    }
+    
+    public  ResultSet GetData(String Sql)// this method is used for Select Statement
+    {
+        try {
+            pst = connection.prepareStatement(Sql);
+             rst = pst.executeQuery();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex + "\nDbConnection GetData Error");
+        }
+        return rst;
+    }
+    
+    public int InsertUpdateDelete(String Sql)// this method is used for InsertUpdateDelete Statement
+    {
+        int flag=0;
+        try {
+            pst = connection.prepareStatement(Sql);
+            flag = pst.executeUpdate();
+        } catch (SQLException ex) {
+            
+        }
+         return flag ;
+    }
+    
+    public void CloseConnection(){
+        
+    if (rst != null) {
+        try {
+            rst.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+    if (pst != null) {
+        try {
+            pst.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+    if (connection != null) {
+        try {
+            connection.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+
+    }
+}
+
+
+//The code given below is for the admin module
+
+
+package vehler;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+public class Admin {
+
+    DbConnection conn = new DbConnection();
+    PreparedStatement pst = null;
+    ResultSet rst = null;
+   public void changePassword(String username,String newPassword)
+    {
+        int flag;
+        
+         try{
+        conn.OpenConnection();
+        String sql = "UPDATE Admint SET AdminP = '"+ newPassword +"' where AdminID = '"+username+ "'";
+       
+        flag = conn.InsertUpdateDelete(sql);
+           if(flag == 1){
+               JOptionPane.showMessageDialog(null, "YOUR PASSWORD HAS BEEN CHANGED  ");
+           }
+           else{
+                JOptionPane.showMessageDialog(null, "YOUR PASSWORD COULDn't BE CHANGED" );
+           }
+        }
+        catch(Exception e){
+             JOptionPane.showMessageDialog(null, "UpdatePassword Query Failed");
+        }
+        
+    }
+    public boolean chkAdminPass(String id, String pass){
+        boolean flag = false;
+        
+        try{
+            conn.OpenConnection();
+            String sql = "Select AdminID,AdminP from AdminT where AdminID = '" + id + "' and AdminP = '" + pass + "'";
+            rst= conn.GetData(sql);
+            if(rst.next()){
+                flag= true;
+                              
+            }
+            else 
+                flag=  false;
+            conn.CloseConnection();
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null, e+"\nInavlid Username or Password");
+        }
+       return flag; 
+    }
+    public ResultSet RideRealTimeCombined()
+    {
+        ResultSet rst1=null;
+    
+        
+        try{
+            conn.OpenConnection();
+            String sql = "Select Datee,Username,VehiclePlate,PUsername,Fromm,Too,StartTime,EndTime,RideStatus,BillStatus,Bill,NoOfPassengers from RideRealtime ";
+            rst1= conn.GetData(sql);
+                   do{
+                return rst1;
+            } 
+            while(rst1.next());
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null, e+"\nRide Realtime Combined Error");
+        }
+          
+        conn.CloseConnection();
+        return null;
+    }
+    
+}

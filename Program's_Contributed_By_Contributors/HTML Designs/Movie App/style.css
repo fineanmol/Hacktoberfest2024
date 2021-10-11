@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
+:root {
+	--primary-color: #22254b;
+	--secondary-color: #373b69;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--primary-color);
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+}
+header {
+	color: #fff;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--secondary-color);
+	height: 100px;
+}
+
+.search {
+	background-color: transparent;
+	border: 2px solid var(--primary-color);
+	border-radius: 5px;
+	font-family: inherit;
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+	color: #fff;
+}
+
+.search::placeholder {
+	color: #7378c5;
+}
+.search:focus {
+	outline: none;
+	background-color: var(--primary-color);
+}
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.movie {
+	width: 300px;
+	margin: 1rem;
+	background-color: var(--secondary-color);
+	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+	position: relative;
+	overflow: hidden;
+	border-radius: 3px;
+}
+.movie img {
+	width: 100%;
+}
+.movie-info {
+	color: #eee;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.5rem 1rem 1rem;
+	letter-spacing: 0.5px;
+}
+.movie-release {
+	color: rgb(149, 138, 248);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+	letter-spacing: 0.5px;
+	margin-top: 0;
+}
+.movie-info h3 {
+	margin-top: 0;
+}
+.movie-info span {
+	background-color: var(--primary-color);
+	padding: 0.25rem 0.5rem;
+	border-radius: 2px;
+	font-weight: bold;
+}
+
+.movie-info span.green {
+	color: rgb(161, 224, 161);
+}
+.movie-info span.red {
+	color: rgb(229, 153, 169);
+}
+.movie-info span.orange {
+	color: rgb(255, 214, 137);
+}
+
+.overview {
+	background-color: #fff;
+	padding: 2rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	max-height: 100%;
+	transform: translateY(101%);
+	transition: 0.3s ease-in;
+}
+
+.movie img {
+	transition: 0.3s ease;
+}
+
+.movie:hover img {
+	transform: scale(1.2);
+}
+
+.movie:hover .overview {
+	transform: translateY(0);
+}

@@ -40,6 +40,7 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 h1,
 h2,
 h3,
@@ -49,6 +50,12 @@ h6 {
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
 }
+
+h2 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
 html,
 body {
   background-color: var(--white);
@@ -117,11 +124,20 @@ a:hover {
 }
 
 .heading {
+  color: #fff;
   text-transform: uppercase;
   font-weight: 700;
   cursor: default;
   font-size: 2rem;
   font-family: "Special Elite", cursive;
+}
+
+.rubberBand {
+  color: #fff;
+}
+
+.header-dark {
+  color: var(--bgColor--night);
 }
 
 .moto {

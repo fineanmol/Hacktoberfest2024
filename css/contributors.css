@@ -117,11 +117,20 @@ a:hover {
 }
 
 .heading {
+  color: #fff;
   text-transform: uppercase;
   font-weight: 700;
   cursor: default;
   font-size: 2rem;
   font-family: "Special Elite", cursive;
+}
+
+.rubberBand {
+  color: #fff;
+}
+
+.header-dark {
+  color: var(--bgColor--night);
 }
 
 .moto {

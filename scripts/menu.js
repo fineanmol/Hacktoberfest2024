@@ -9,16 +9,16 @@ const menu = {
   },
   //'Others': {
     'Instagram': {
-      'text': '<i class="fa fa-instagram" style="font-size:23px; color: Red"></i>',
+      'text': 'Instagram Profile',
       'href': 'https://instagram.com/fineanmol'
     },
     'Facebook': {
-      'text': '<i class="fa fa-facebook-square" style="font-size:23px; color: blue"></i>',
+      'text': 'Facebook Profile',
       'href': 'https://www.facebook.com/fineanmol',
       'id': 'tools'
     },
     'Linkedin': {
-      'text': '<i class="fa fa-linkedin-square" style="font-size:23px; color: blue"></i>  Connect to get Linkedin Endorsement',
+      'text': 'Connect to get Linkedin Endorsement',
       'href': 'https://www.linkedin.com/in/fineanmol/',
       'id': 'tools'
     },

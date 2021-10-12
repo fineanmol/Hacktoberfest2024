@@ -78,6 +78,26 @@
           .st0 {
             fill: #FF0844;
           }
+          
+          #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #FF0844;
+            color: #FFFFFF;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+          }
+          
+          #myBtn:hover {
+            background-color: #555;
+          }
         </style>
         <path class="st0"
           d="M0.7,0.7v298.7h298.7V0.7H0.7z M197.8,271.4l-32-32v-95.6l-31.4,31.4v79l-17.3,17.3L99.8,254V70.4L95,65.6  L73,87.7L61.7,76.5l47.8-47.8l0.1,0.1l0,0l1.9,1.8l22.8,22.8V136l31.4-31.4V70.2L150,54.4l25.8-25.8l24.7,24.7v169.1l12.1,12.1  l14.7-14.7l11.1,11.1L197.8,271.4z">
@@ -124,7 +144,8 @@
     </div>
     <div class="box mx-auto">
 
-
+      <!--bottom to top button-->
+            <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
 
       <!-- Add to the bottom of the list -->
       <a class="box-item" href="https://github.com/fineanmol"><span>Anmol Agarwal</span></a>
@@ -513,6 +534,19 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+}
+  
+  var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
 }
 </script>
 

@@ -124,14 +124,18 @@ a:hover {
   cursor: default;
   font-size: 2rem;
   font-family: "Special Elite", cursive;
+  color: white;
+  color: goldenrod;
+  background-size: 100%;
 }
+
 
 .moto {
   font-size: 22px;
   cursor: default;
 }
 .heading:hover {
-  color: #fe0c43;
+  color:gold;
   transition: 1s;
 }
 .moto:hover {

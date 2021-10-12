@@ -47,7 +47,6 @@ nav {
   transition: width 0.2s ease-in-out;
   width: 0;
 }
-
 .navbar-light .navbar-nav .nav-social::before {
   content: none;
 }
@@ -104,5 +103,5 @@ nav {
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  color: purple;
+  color: #ff0844;
 }

@@ -1,0 +1,75 @@
+<style>
+			/* CSS comes here */
+       
+            
+			body{
+              display: grid;
+  justify-content: center;
+  align-items: center;
+    background-color: #FFE53B;
+    background-image: linear-gradient(147deg, #FFE53B 0%, #fd3838 74%);
+    min-height: 100vh;
+   
+}
+			input {
+			    padding:5px;
+			    background-color:transparent;
+			    border:none;
+			    border-bottom:solid 4px #eb2b2bea;
+			    width:250px;
+			    font-size:16px;
+			}
+			
+			.qr-btn {
+			    background-color:#eb2b2bea;   
+			    padding:8px;
+			    color:white;
+                border-radius: 50px 20px;
+			    cursor:pointer;
+          }
+          .qr-btn:hover {
+                    background-color: #3e8e41;
+                    color: white;
+                }
+          .center {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+          
+          @media (min-width: 768px) {
+  .container {
+    max-width: 770px;
+  }
+}
+header {
+  margin-top: 25px;
+  text-align: center;
+}
+h2 {
+  font-size: 3em;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+  .footer {
+   position: sticky;
+   left: 0;
+   color: white;
+   bottom:-60px;
+   width: 100%;
+   text-align: center;
+}       
+a:link, a:visited {
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+    border-radius: 40px;
+}
+
+a:hover, a:active {
+  background-color: red;
+} 
+         
+		</style>

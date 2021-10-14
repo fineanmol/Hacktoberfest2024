@@ -20,10 +20,6 @@ def divide(x, y):
    """This function divides two numbers"""
  
    return x / y
-def power(x,y):
- """This function divides two numbers"""
- 
-   return x**y
  
 # take input from the user
 print("Select operation.")
@@ -31,8 +27,8 @@ print("1.Add")
 print("2.Subtract")
 print("3.Multiply")
 print("4.Divide")
-print("5.Power") 
-choice = input("Enter choice(1/2/3/4/5):")
+ 
+choice = input("Enter choice(1/2/3/4):")
  
 num1 = int(input("Enter first number: "))
 num2 = int(input("Enter second number: "))
@@ -48,7 +44,5 @@ elif choice == '3':
  
 elif choice == '4':
    print(num1,"/",num2,"=", divide(num1,num2))
-elif choice == '5':
-   print(num1,"^",num2,"=",power(num1,num2))
 else:
    print("Invalid input")

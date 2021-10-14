@@ -605,7 +605,7 @@ input:checked + .slider:before {
 }
 :root {
   --darkbg: #251d29;
-  --darkt: #ff99ee;
+  --darkt: #e76898;
   --lightbg: #fff;
   --lightt: #d43370;
 

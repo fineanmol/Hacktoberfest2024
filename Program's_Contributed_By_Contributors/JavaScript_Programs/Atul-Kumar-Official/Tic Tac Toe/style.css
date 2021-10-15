@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+*
+{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    box-sizing: border-box;
+}
+html
+{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+body
+{
+    background: whitesmoke;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container
+{
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+}
+.container .row
+{
+    display: flex;
+}
+.container .row .cell
+{
+    border: 3px solid black;
+    padding: 1rem;
+    height: 10rem;
+    width: 10rem;
+    cursor: pointer;
+    font-size: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.result
+{
+    margin-top: 5rem;
+    color: green;
+    font-size: 3rem;
+}
+#new-game
+{
+    background: #0082e6;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+#new-game:hover
+{
+    background: #1b9bff;
+    transition: 0.5s;
+}

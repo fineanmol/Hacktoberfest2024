@@ -1,0 +1,298 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    box-sizing: border-box;
+}
+html
+{
+    font-size: 62.5%;
+    font-family: 'Calibri';
+}
+body
+{
+    background: whitesmoke;
+    width: 100vw;
+    height: 100vh;
+}
+.main
+{
+    background: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+.main .header
+{
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+.main .header .header-info
+{
+    display: flex;
+    justify-content: center;
+}
+.main .header .header-info img
+{
+    height: 2rem;
+    width: 2rem;
+    margin: 0.25rem;
+}
+.main .header .header-info span
+{
+    font-size: 1.4rem;
+    margin-left: 0.5rem;
+    line-height: 2.5rem;
+}
+.main .header .header-action
+{
+    display: flex;
+    position: absolute;
+    right: 0.2rem;
+}
+.main .header .header-action .action-btn
+{
+    background: none;
+    padding: 0rem 1.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    border: none;
+}
+.main .header .header-action .action-btn:hover
+{
+    background: #f3f1f1;
+    transition: 0.25s;
+}
+#exit:hover
+{
+    background: red;
+    color: white;
+    transition: 0.25s;
+}
+.navbar
+{
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    border-bottom: 2px solid lightgrey;
+}
+.navbar .tab
+{
+    font-size: 1.4rem;
+    padding: 0rem 0.75rem;
+    user-select: none;
+}
+.navbar .tab:hover
+{
+    background: rgb(192, 227, 248);
+    cursor: context-menu;
+    user-select: none;
+    border: 1px solid skyblue;
+}
+.container
+{
+    height: 100%;
+}
+.container .status-bar
+{
+    height: 2.5rem;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    background: lightgrey;
+}
+.container .status-bar div
+{
+    border: 1px solid grey;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+.container .status-bar .empty
+{
+    width: 70vw;
+}
+.container .status-bar .line-column-count
+{
+    padding: 0 3rem;
+    width: auto;
+}
+.container .status-bar .percentage,
+.container .status-bar .encoding
+{
+    padding: 0 2rem;
+}
+.container .status-bar .platform
+{
+    padding: 0 2.3rem;
+}
+.container .textarea
+{
+    width: 100%;
+    height: calc(100vh - 7.2rem);
+    padding: 0.25rem;
+    font-size: 16px;
+    overflow: scroll;
+    padding-bottom: 0.5rem;
+}
+.navbar .modal
+{
+    background: #ededed;
+    box-shadow: 0 0 2px black;
+    position: absolute;
+    top: 4.5rem;
+    display: none;
+    z-index: 1000000;
+}
+.navbar .modal .option
+{
+    font-size: 1.5rem;
+    padding: 0.25rem;
+    width: 100%;
+    background: none;
+}
+.navbar .modal .option:hover
+{
+    background:rgb(192, 227, 248);
+    cursor: context-menu;
+    user-select: none;
+}
+#file-modal
+{
+    left: 0;
+}
+#edit-modal
+{
+    left: 4rem;
+}
+#format-modal
+{
+    left: 8rem;
+}
+#view-modal
+{
+    left: 14rem;
+}
+#help-modal
+{
+    left: 18rem;
+}
+.overlay
+{
+    background: none;
+    width: 100%;
+    height: calc(100vh - 4.5rem);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+    display: none;
+}
+a
+{
+    color: black;
+    cursor: context-menu;
+}
+.active-tab
+{
+    background: rgb(192, 227, 248) !important;
+}
+.hidden
+{
+    display: none !important;
+}
+#zoom-submodal
+{
+    left: 20.5rem;
+}
+.active
+{
+    display: block !important;
+}
+.floating-modal
+{
+    background: #ededed;
+    border: 1px solid #4a4a4a;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40vh;
+    left: 40vw;
+    user-select: none;
+    display: none;
+    z-index: 100000000;
+}
+.floating-modal .modal-header
+{
+    background: white;   
+    padding: 0.5rem 1rem;
+}
+.floating-modal .modal-header span
+{
+    font-size: 1.5rem;
+}
+.floating-modal .modal-header span button
+{
+    float: right;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.floating-modal .modal-body
+{
+    padding: 1rem;
+}
+.floating-modal .modal-body .customize
+{
+    display: flex;
+}
+.floating-modal .modal-body .customize div
+{
+    margin: 1rem;
+}
+.floating-modal .modal-body .customize div label
+{
+    font-size: 1.5rem;
+}
+.floating-modal .modal-footer
+{
+    margin-top: 1rem;
+    padding: 1rem;
+}
+.floating-modal .modal-footer button
+{
+    background: white;
+    padding: 0.25rem 1rem;
+    border: 1px solid black;
+    float: right;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+.floating-modal .modal-footer button:hover
+{
+    background: lightblue;
+    border: 1px solid #066de2;
+    transition: 0.5s;
+}
+label[for='find'],
+label[for='replace']
+{
+    font-size: 1.5rem;
+}
+#find,
+#replace-val
+{
+    margin-bottom: 1rem;
+}

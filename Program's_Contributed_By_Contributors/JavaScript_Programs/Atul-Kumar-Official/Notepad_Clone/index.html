@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type = "text/css" href="style.css">
+    <script src = "app.js" defer></script>
+    <title>Notepad Clone</title>
+</head>
+<body>
+    <div class="main">
+        <header>
+
+            <div class="header">
+
+                <div class="header-info">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqdIK7IlccstcwtEEC0iMKrEtCvUzsQbXO6w&usqp=CAU" alt="logo">
+                    <span>Untitled - Notepad</span>
+                </div>
+
+                <div class="header-action">
+                    <button type = "button" class="action-btn">&minus;</button>
+                    <button type = "button" class="action-btn">&rect;</butt>
+                    <button type = "button" class="action-btn" id = "exit">X</button>
+                </div>
+            </div>
+
+            <div class="navbar">
+                <div class="tab" id = "file-tab">File</div>
+                <div class="tab" id = "edit-tab">Edit</div>
+                <div class="tab" id = "format-tab">Format</div>
+                <div class="tab" id = "view-tab">View</div>
+                <div class="tab" id = "help-tab">Help</div>
+
+                <div class = "modal" id="file-modal">
+                    <div class="option">New</div>
+                    <div class="option">Open</div>
+                    <div class="option" id = "save">Save</div>
+                    <div class="option">Page Setup...</div>
+                    <div class="option">Print...</div>
+                    <div class="option">Exit</div>
+                </div>
+
+                <div class = "modal" id="edit-modal">
+                    <div class="option command" id = "undo">Undo</div>
+                    <div class="option command" id = "cut">Cut</div>
+                    <div class="option command" id = "copy">Copy</div>
+                    <div class="option command" id = "paste">Paste</div>
+                    <div class="option command" id = "delete">Delete</div>
+                    <div class="option" id = "google-search">Search With Google...</div>
+                    <div class="option" id = "replace">Replace</div>
+                    <div class="option command" id = "selectAll">Select All</div>
+                    <div class="option" id = "time-date">Time/Date</div>
+                </div>
+
+                <div class = "modal" id="format-modal">
+                    <div class="option">Word Wrap</div>
+                    <div class="option" id = "font-modal-trigger">Font...</div>
+                </div>
+
+                <div class = "modal" id="view-modal">
+                    <div class="option" id = "zoom-submodal-trigger">Zoom...</div>
+                    <div class="option active-tab" id = "status-bar-check-box">Status Bar</div>
+                </div>
+
+                <div class = "modal" id="help-modal">
+                    <div class="option"><a href = "https://www.google.com/search?q=get+help+with+notepad+in+windows+10" target = "_blank">View Help</a></div>
+                    <div class="option"><a href = "https://support.microsoft.com/contactus" target = "_blank">Send Feedback</a></div>
+                    <div class="option"><a href = "https://en.wikipedia.org/wiki/Windows_Notepad#:~:text=Windows%20Notepad%20is%20a%20simple,since%20Windows%201.0%20in%201985." target = "_blank">About Notepad</a></div>
+                </div>
+
+                <div class="modal submodal" id = "zoom-submodal">
+                    <div class="option" id = "zoom-in">Zoom In</div>
+                    <div class="option" id = "zoom-out">Zoom Out</div>
+                    <div class="option" id = "default-zoom">Default</div>
+                </div>
+
+                <div class="floating-modal" id = "font-modal">
+                    <div class="modal-header">
+                        <span>Font</span><span id = "close-btn"><button type = "button" id = "close">X</button></span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="customize">
+                            <div class="font-family">
+                                <label for="font-family">Font:</label>
+                                <select id="font-family">
+                                    <option value="Calibri" selected>Calibri</option>
+                                    <option value="Cambria">Cambria</option>
+                                    <option value="Montserrat">Montserrat</option>
+                                    <option value="Tahoma">Tahoma</option>
+                                    <option value="Algerian">Algerian</option>
+                                </select>
+                            </div>
+                            <div class="font-style">
+                                <label for="font-style">Font Style:</label>
+                                <select id="font-style">
+                                    <option value="Regular" selected>Regular</option>
+                                    <option value="Bold">Bold</option>
+                                    <option value="Italic">Italic</option>
+                                    <option value="Bold-Italic">Bold Italic</option>
+                                </select>
+                            </div>
+                            <div class="font-size">
+                                <label for="font-size">Size:</label>
+                                <select id="font-size">
+                                    
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id = "font-submit" class="modal-btn">OK</button>
+                        <button class="modal-btn" id = "cancel">Cancel</button>
+                    </div>
+                </div>
+                <div class="floating-modal" id = "replace-modal">
+                    <div class="modal-header">
+                        <span>Replace</span><span><button type = "button" id = "close-replace">X</button></span=>
+                    </div>
+                    <div class="modal-body">
+                        <label for="find">Find:</label>
+                        <input type="text" id = "find">
+                        <br>
+                        <label for="replace">Replace With:</label>
+                        <input type="text" id = "replace-val">
+                    </div>
+                    <div class="modal-footer">
+                        <button id = "replace-submit" class="modal-btn">OK</button>
+                        <button class="modal-btn" id = "replace-cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="textarea" autofocus spellcheck = "false" contenteditable>
+                
+            </div>
+            <div class="status-bar">
+                <div class="empty">
+                    
+                </div>
+                <div class="line-column-count">
+                    Ln 1, Col 1
+                </div>
+                <div class="percentage">
+                    100%
+                </div>
+                <div class="platform">
+                    Windows (CLRF)
+                </div>
+                <div class="encoding">
+                    UTF-8
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+</body>
+</html>

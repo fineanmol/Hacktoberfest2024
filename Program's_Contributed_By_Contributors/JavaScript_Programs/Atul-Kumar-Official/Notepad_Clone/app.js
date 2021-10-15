@@ -1,36 +1,67 @@
+// Area where the user will type
 const writingArea = document.querySelector('.textarea');
+
 const span = document.querySelector('span');
 const tabs = document.getElementsByClassName('tab');
 const modals = document.getElementsByClassName('modal');
+
 const overlay = document.querySelector('.overlay');
+
 const statusBarCheckBox = document.getElementById('status-bar-check-box');
 const statusBar = document.querySelector('.status-bar');
+
+// Zoom buttons
 const zoomInButton = document.getElementById('zoom-in');
 const zoomOutButton = document.getElementById('zoom-out');
 const defaultZoom = document.getElementById('default-zoom');
+
+// Zoom submodals
 const zoomSubmodalTrigger = document.getElementById('zoom-submodal-trigger');
 const zoomSubmodal = document.getElementById('zoom-submodal');
+
+// Font Button
 const fontSizeSelector = document.getElementById('font-size');
-const closeBtn = document.getElementById('close');
+
+// Font Modals
 const fontModal = document.getElementById('font-modal');
 const fontModalOkButton = document.getElementById('font-submit');
-const cancelBtn = document.getElementById('cancel');
 const fontModalTrigger = document.getElementById('font-modal-trigger');
+
+// Close buttons
+const closeBtn = document.getElementById('close');
+const cancelBtn = document.getElementById('cancel');
+
 const timeDateTrigger = document.getElementById('time-date');
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
 const commandOptions = document.getElementsByClassName('command');
+
 const googleSearcher = document.getElementById('google-search');
+
+// Replace
 const replaceBtn = document.getElementById('replace-submit');
-const findValue = document.getElementById('find');
 const replaceValue = document.getElementById('replace-val');
 const replaceModalTrigger = document.getElementById('replace');
 const replaceModal = document.getElementById('replace-modal');
 const replaceCloseBtn = document.getElementById('close-replace');
 const replaceCancelBtn = document.getElementById('replace-cancel');
+
+// Find
+const findValue = document.getElementById('find');
+
+// Save Button
 const saveBtn = document.getElementById('save');
+
+// Exit Buttons
+const exitBtn = document.getElementById('exit');
+const exitWindowBtn = document.getElementById('exit-window');
+
+// Open Button
+const openBtn = document.getElementById('open-btn');
+
 let activeSubmodals = document.getElementsByClassName('active');
 
-
+// Load the text saved in localStorage
 load();
 
 // Checking if the local storage contains some text
@@ -47,8 +78,20 @@ let defaultFontSize = 16;
 
 // Adding event listeners
 
+openBtn.addEventListener('click', importData);
+
+exitBtn.addEventListener('click', () => {
+    window.close();
+})
+
+exitWindowBtn.addEventListener('click', () => {
+    window.close();
+});
+
 writingArea.addEventListener('input', ()=>
 {
+    // If the text in writingArea matches the text in localStorage, then asterisk will not 
+    // be shown in the title bar else it will be shown
     if(text != writingArea.textContent)
     {
         span.textContent = "*Untitled - Notepad";
@@ -60,8 +103,10 @@ writingArea.addEventListener('input', ()=>
         fileHasChanged = false;
     }
 });
+
 googleSearcher.addEventListener('click', () =>
 {
+    // Get the document selection and search google
     if(document.getSelection)
     {
         let selectedText = document.getSelection().toString();
@@ -89,8 +134,6 @@ replaceBtn.addEventListener('click', ()=>
 
     let wordsArray = text.split(" ");
 
-    let replacements = 0;
-
     wordsArray.forEach(function(word, index)
     {
         if(word === findText)
@@ -107,27 +150,21 @@ replaceBtn.addEventListener('click', ()=>
 timeDateTrigger.addEventListener('click', ()=>
 {
     deactivateModal();
+    
     let dateTime = new Date();
+
     let date = dateTime.getDate();
     let month = dateTime.getMonth();
     let year = dateTime.getFullYear();
     let hours = dateTime.getHours();
     let minutes = dateTime.getMinutes();
-    if(minutes == 0)
-    {
-        minutes = "00";
-    }
-
-    if(hours > 12)
-    {
-        let meridian = "PM";
-        writingArea.textContent += `${date} ${months[month-1]} ${year} ${hours}:${minutes} ${meridian}`;
-    }
-    else
-    {
-        let meridian = "AM";
-        writingArea.textContent += `${date} ${month} ${year} ${hours} ${minutes} ${meridian}`;
-    }
+    
+    minutes = minutes == 0 ? "00" : minutes.toString();
+    
+    let meridian;
+    meridian = hours > 12 ? "PM" : "AM";
+    
+    writingArea.textContent += `${date} ${months[month-1]} ${year} ${hours}:${minutes} ${meridian}`;
 
 });
 
@@ -135,6 +172,7 @@ cancelBtn.addEventListener('click', ()=>
 {
     deactivateFontModal();
 });
+
 closeBtn.addEventListener('click', ()=>
 {
     deactivateFontModal();
@@ -247,6 +285,7 @@ for(let tab of tabs)
 
 // Declaring functions
 
+// Function: Saves the text to localStorage
 function save()
 {
     deactivateModal();
@@ -267,25 +306,28 @@ function save()
     }
 }
 
+// Function: Loads the text from localStorage
 function load()
 {
     let text = localStorage.getItem('text');
     writingArea.textContent = text;
 }
 
-
+// Function: Deactivates the replace modal
 function deactivateReplaceModal()
 {
     replaceModal.style.display = "none";
     writingArea.setAttribute('contenteditable', true);
 }
 
+// Function: Deactivates the font modal
 function deactivateFontModal()
 {
     fontModal.style.display = "none";
     writingArea.setAttribute('contenteditable', true);
 }
 
+// Dynamically creating font sizes
 for(let i = 1; i <= 100; i++)
 {
     if(i === 16)
@@ -300,6 +342,7 @@ for(let i = 1; i <= 100; i++)
     }
 }
 
+// Function: Generates modal ID
 function generateModalId()
 {
     let tabId = event.target.id;
@@ -307,6 +350,7 @@ function generateModalId()
     return modalId;
 }
 
+// Function: Activates the specified modal
 function activateModal(modalToBeActivated)
 {
     for(let modal of modals)
@@ -316,11 +360,13 @@ function activateModal(modalToBeActivated)
     document.getElementById(modalToBeActivated).style.display = "block";
 }
 
+// Function: Activates the overlay
 function activateOverlay()
 {
     overlay.style.display = "block";
 }
 
+// Function: Deactives all the modals
 function deactivateModal()
 {
     for(let modal of modals)
@@ -329,6 +375,7 @@ function deactivateModal()
     }
 }
 
+// Function: Deactives all the submodals
 function deactivateSubmodals()
 {
     activeSubmodals = document.getElementsByClassName('active');
@@ -338,25 +385,54 @@ function deactivateSubmodals()
     }
 }
 
+// Function: Increases the font size by 2px
 function zoomIn()
 {
     defaultFontSize += 2;
     changeZoom(defaultFontSize);
 }
 
+// Function: Decreases the font size by 2px
 function zoomOut()
 {
     defaultFontSize -= 2;
     changeZoom(defaultFontSize);
 }
 
+// Function: Sets the font size to 16px
 function loadDefault()
 {
     defaultFontSize = 16;
     changeZoom(defaultFontSize);
 }
 
+// Function: Changes the font size
 function changeZoom(defaultFontSize)
 {
     writingArea.style.fontSize = `${defaultFontSize}px`;
+}
+
+// Function: Imports the data from the client's system
+function importData(){
+    const input = document.createElement('input');
+    input.type = "file";
+    input.click();
+
+    input.addEventListener('change', () => {
+        let file = input.files[0];
+        let text = file.text();
+        text
+        .then(content => {
+            writingArea.innerHTML = content;
+            let text = localStorage.getItem('text');
+
+            span.textContent = "*Untitled - Notepad";
+            fileHasChanged = true;
+
+            deactivateModal();
+        })
+        .catch(error => {
+            console.log(`Failed to import data: ${error}`);
+        });
+    })
 }

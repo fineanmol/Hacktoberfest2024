@@ -1,0 +1,9 @@
+{
+    "manifest_version" : 2,
+    "name" : "tap2meme",
+    "version" : "1.0",
+    "description" : "this is a simple meme viewer.when you tap on the screen it show you meme",
+    "browser_action": {
+        "default_popup" : "popup.html"
+    }
+}

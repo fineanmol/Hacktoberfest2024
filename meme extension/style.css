@@ -1,0 +1,12 @@
+body{
+    width:250px;
+    height: 350px;
+    background-color: black;
+    
+}
+#img{
+    max-width: 250px;
+    height:350px;
+    pad: 2px;
+    background-color: black;
+}

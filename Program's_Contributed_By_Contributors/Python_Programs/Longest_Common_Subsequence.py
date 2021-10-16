@@ -21,4 +21,3 @@ class Solution:
            
         return memo[0][0]
 
-This is the solution to the most common interview question Longest Common Subsequence.

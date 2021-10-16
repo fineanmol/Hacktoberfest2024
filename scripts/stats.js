@@ -8,12 +8,12 @@ let statsObj = {
 }
 
 const reqObj = [
-    ['https://api.github.com/repos/fineanmol/Hacktoberfest2k21/commits', 'commits'],
-    ['https://api.github.com/repos/fineanmol/Hacktoberfest2k21/forks', 'forks'],
-    ['https://api.github.com/repos/fineanmol/Hacktoberfest2k21/pulls', 'pr'],
-    ['https://api.github.com/repos/fineanmol/Hacktoberfest2k21/issues', 'issues'],
-    ['https://api.github.com/repos/fineanmol/Hacktoberfest2k21/stargazers', 'stars'],
-    ['https://api.github.com/repos/fineanmol/Hacktoberfest2k21/stats/contributors', 'contribut'],
+    ['https://api.github.com/repos/fineanmol/Hacktoberfest2021/commits', 'commits'],
+    ['https://api.github.com/repos/fineanmol/Hacktoberfest2021/forks', 'forks'],
+    ['https://api.github.com/repos/fineanmol/Hacktoberfest2021/pulls', 'pr'],
+    ['https://api.github.com/repos/fineanmol/Hacktoberfest2021/issues', 'issues'],
+    ['https://api.github.com/repos/fineanmol/Hacktoberfest2021/stargazers', 'stars'],
+    ['https://api.github.com/repos/fineanmol/Hacktoberfest2021/stats/contributors', 'contribut'],
 ]
 
 const getData = (url, key) => {

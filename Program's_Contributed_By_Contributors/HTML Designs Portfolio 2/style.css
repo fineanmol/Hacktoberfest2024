@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Work+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+}
+:root{
+    --font: 'Montserrat', sans-serif;
+    --prime-font: 'Work Sans', sans-serif;
+    --bg: #1a1c20;
+    --main-color: #f9813a;
+    --main-font-color: #fdfbfb;
+    --sec-font-color: #fcf1f1b4;
+}
+body{
+    background: var(--bg);
+    font-family: var(--font);
+    color: var(--main-font-color);
+    overflow-x: hidden;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* navbar */
+.nav {
+    width: 85%;
+    height: 70px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.checkBtn{
+    display: none;
+}
+.nav .logo{
+    font-size: 2em;
+}
+.nav ol{
+    list-style: none;
+}
+.nav ol a{
+    text-decoration: none;
+    color: var(--sec-font-color);
+    margin: 0.3em;
+    padding: 0.5em 1.5em;
+    border-radius: 10px;
+}
+.nav ol a:hover{
+    transition: background .8s;
+    background: var(--main-color);
+}
+/* mains section */
+.main{
+    width: 85%;
+    height: 650px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.main::before, .main::after{
+    content: '';
+    width: 80%;
+    height: 70%;
+    background: #151618;
+    position: absolute;
+    bottom: 0;
+    right: -10%;
+    z-index: -10;
+}
+.main::after{
+    background: #15161885;
+    height: 60%;
+    top: 20px;
+    left: -40%;
+    border-top: 1px solid #f9803a;
+    border-right: 1px solid #4985c9;
+    z-index: -11;
+}
+.box h1{
+    font-size: 4.5em;
+    margin-bottom: 0.2em;
+}
+.box p{
+    font-size: 1.2em;
+    color: var(--sec-font-color);
+    margin-bottom: 1.2em;
+}
+.box .btn{
+    font-size: 1.2em;
+    background: none;
+    color: var(--sec-font-color);
+    border: none;
+    cursor: pointer;
+    border: 1px solid var(--main-color);
+    width: 7em;
+    height: 2.2em;  
+    transition: all .4s;
+}
+.box .btn:hover{
+    background: var(--main-color);
+}
+.main img{
+    width: 35em;
+    position: absolute;
+    right: 60px;
+    z-index: -1;
+}
+@media (max-width: 1250px){
+    .main img{
+        width: 25em;
+        right: 0;
+    }
+}
+@media (max-width: 1000px){
+    body{
+        font-size: 14px;
+    }
+    .main img{
+        width: 35em;
+        top: 80px;
+    }
+    .main{
+        align-items: flex-end;
+    }
+    .checkBtn{
+        display: block;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        position: relative;
+        appearance: none;
+        -webkit-appearance: none;
+    }
+    .checkBtn::before{
+        content: '\f0c9';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 700;
+        font-size: 1.9em;
+        color: var(--sec-font-color);
+    }
+    .checkBtn:checked::before{
+        content: '\f00d';
+    }
+    .nav ol{
+        position: absolute;
+        width: 100%;
+        flex-direction: column;
+        background: var(--bg);
+        top: 80px;
+        left: 0;
+        z-index: 100;
+        padding: 1.2em;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: clip-path .4s;
+    }
+    .checkBtn:checked ~ ol{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .nav ol::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: var(--main-color);
+    }
+}
+@media (max-width: 900px){
+    .main img{
+        width: 30em;
+    }
+}
+@media (max-width: 600px){
+    .main img{
+        width: 22em;
+    }
+}
+@media (max-width: 400px){
+    body{
+        font-size: 10px;
+    }
+    .main{
+        height: 450px;
+    }
+}

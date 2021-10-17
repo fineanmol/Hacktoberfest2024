@@ -116,7 +116,7 @@
 
         <div class="slider round"></div>
       </label> -->
-            <div class="tdnn">
+      <div class="tdnn">
         <div class="moon">
         </div>
       </div>
@@ -139,7 +139,7 @@
       <a class="box-item" href="https://github.com/facundof13"><span>Facundo</span></a>
       <a class="box-item" href="https://github.com/Aashik96"><span>Aashik Ahamed</span></a>
       <a class="box-item" href="https://github.com/Hrishabh5"><span>Hrishabh Jain</span></a>
-<a class="box-item" href="https://github.com/alok2947"><span>Alok Kumar Jha</span></a>
+      <a class="box-item" href="https://github.com/alok2947"><span>Alok Kumar Jha</span></a>
       <a class="box-item" href="https://github.com/zonex909"><span>Rupna Maitra</span></a>
       <a class="box-item" href="https://github.com/skully-coder"><span>Abhinav Agarwal</span></a>
       <a class="box-item" href="https://github.com/sharron4me"><span>Mohammad Ummair</span></a>
@@ -361,17 +361,18 @@
       <a class="box-item" href="https://github.com/robertnjenga"><span>Robert Njenga</span></a>
       <a class="box-item" href="https://github.com/geekygirl8"><span>NIKITA</span></a>
       <a class="box-item" href="https://github.com/mariosamaaa"><span>mArio</span><a>
-      <a class="box-item" href="https://github.com/alishaac"><span>Alisha Chauhan</span></a>
-      <a class="box-item" href="https://github.com/MahimaKhatri"><span>Mahima Khatri</span></a>
-      <a class="box-item" href="https://github.com/vishwasluhana"><span>Vishwa Mittar</span></a>
-      <a class="box-item" href="https://github.com/NEELAKANTAGOUDAPATIL"><span>NEELAKANTA GOUDA PATIL</span></a>
-      <a class="box-item" href="https://github.com/shashishekhar11"><span>shashishekhar11</span></a>
-      <a class="box-item" href="https://github.com/H-M-Noman123"><span>H-M-Noman123</span></a>
-      <a class="box-item" href="https://github.com/barunipriyats"><span>Baruni Priya T S</span></a>
-      <a class="box-item" href="https://github.com/anmolg84"><span>Anmol Gupta</span></a>
-      <a class="box-item" href="https://github.com/khushi-mishra0408"><span>Khushi Mishra</span></a>
-      <a class="box-item" href="https://github.com/SayantanMaiti"><span>Sayantan Maiti</span></a>
-        <a class="box-item" href="https://github.com/Vishvesh-Codehunt"><span>Vishvesh Patel</span></a>
+          <a class="box-item" href="https://github.com/alishaac"><span>Alisha Chauhan</span></a>
+          <a class="box-item" href="https://github.com/MahimaKhatri"><span>Mahima Khatri</span></a>
+          <a class="box-item" href="https://github.com/vishwasluhana"><span>Vishwa Mittar</span></a>
+          <a class="box-item" href="https://github.com/NEELAKANTAGOUDAPATIL"><span>NEELAKANTA GOUDA PATIL</span></a>
+          <a class="box-item" href="https://github.com/shashishekhar11"><span>shashishekhar11</span></a>
+          <a class="box-item" href="https://github.com/H-M-Noman123"><span>H-M-Noman123</span></a>
+          <a class="box-item" href="https://github.com/barunipriyats"><span>Baruni Priya T S</span></a>
+          <a class="box-item" href="https://github.com/anmolg84"><span>Anmol Gupta</span></a>
+          <a class="box-item" href="https://github.com/khushi-mishra0408"><span>Khushi Mishra</span></a>
+          <a class="box-item" href="https://github.com/SayantanMaiti"><span>Sayantan Maiti</span></a>
+          <a class="box-item" href="https://github.com/Vishvesh-Codehunt"><span>Vishvesh Patel</span></a>
+          <a class="box-item" href="https://github.com/kirankrish792"><span>Kiran KS</span></a>
 
 
 
@@ -439,51 +440,51 @@
 
 
     /* Back-to-top button functionality */
-  const backToTopButton = document.querySelector("#back-to-top-btn");
+    const backToTopButton = document.querySelector("#back-to-top-btn");
 
-  window.addEventListener("scroll", scrollFunction);
-  function scrollFunction() {
-  if (window.pageYOffset > 300) { // Show backToTopButton
-      if(!backToTopButton.classList.contains("btnEntrance")) {
-      backToTopButton.classList.remove("btnExit");
-      backToTopButton.classList.add("btnEntrance");
-      backToTopButton.style.display = "block";
+    window.addEventListener("scroll", scrollFunction);
+    function scrollFunction() {
+      if (window.pageYOffset > 300) { // Show backToTopButton
+        if (!backToTopButton.classList.contains("btnEntrance")) {
+          backToTopButton.classList.remove("btnExit");
+          backToTopButton.classList.add("btnEntrance");
+          backToTopButton.style.display = "block";
+        }
       }
-  }
-  else { // Hide backToTopButton
-      if(backToTopButton.classList.contains("btnEntrance")) {
-      backToTopButton.classList.remove("btnEntrance");
-      backToTopButton.classList.add("btnExit");
-      setTimeout(function() {
-          backToTopButton.style.display = "none";
-      }, 250);
+      else { // Hide backToTopButton
+        if (backToTopButton.classList.contains("btnEntrance")) {
+          backToTopButton.classList.remove("btnEntrance");
+          backToTopButton.classList.add("btnExit");
+          setTimeout(function () {
+            backToTopButton.style.display = "none";
+          }, 250);
+        }
       }
-  }
-  }
+    }
 
-  backToTopButton.addEventListener("click", smoothScrollBackToTop);
+    backToTopButton.addEventListener("click", smoothScrollBackToTop);
 
-  function smoothScrollBackToTop() {
-  const targetPosition = 0;
-  const startPosition = window.pageYOffset;
-  const distance = targetPosition - startPosition;
-  const duration = 750;
-  let start = null;
-  window.requestAnimationFrame(step);
-  function step(timestamp) {
-      if (!start) start = timestamp;
-      const progress = timestamp - start;
-      window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
-      if (progress < duration) window.requestAnimationFrame(step);
-  }
-  }
+    function smoothScrollBackToTop() {
+      const targetPosition = 0;
+      const startPosition = window.pageYOffset;
+      const distance = targetPosition - startPosition;
+      const duration = 750;
+      let start = null;
+      window.requestAnimationFrame(step);
+      function step(timestamp) {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+        if (progress < duration) window.requestAnimationFrame(step);
+      }
+    }
 
-  function easeInOutCubic(t, b, c, d) {
-  t /= d/2;
-  if (t < 1) return c/2*t*t*t + b;
-  t -= 2;
-  return c/2*(t*t*t + 2) + b;
-  };
+    function easeInOutCubic(t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t * t + b;
+      t -= 2;
+      return c / 2 * (t * t * t + 2) + b;
+    };
 
   </script>
   <script src="/scripts/scroll.js"></script>
@@ -500,27 +501,27 @@
     });
   </script>
 
-<script>
-//Get the button
-var mybutton = document.getElementById("myBtn");
+  <script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-</script>
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 
 
 

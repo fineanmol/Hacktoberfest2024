@@ -1,0 +1,26 @@
+[
+    {
+        "Id": "01", "Name":"Salmaan", "Status":"Available"
+    },
+    {
+        "Id": "02", "Name":"Salmaan", "Status":"Available"
+    },
+    {
+        "Id": "03", "Name":"Salmaan", "Status":"Available"
+    },
+    {
+        "Id": "04", "Name":"Salmaan", "Status":"Not-Available"
+    },
+    {
+        "Id": "05", "Name":"Salmaan", "Status":"Available"
+    },
+    {
+        "Id": "06", "Name":"Salmaan", "Status":"Not-Available"
+    },
+    {
+        "Id": "07", "Name":"Salmaan", "Status":"Available"
+    },
+    {
+        "Id": "08", "Name":"Salmaan", "Status":"Not-Available"
+    }
+]

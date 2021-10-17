@@ -1,0 +1,26 @@
+[
+    {
+        "No": "1", "Name": "Alxa", "AssignDoc": "Dr. Kenny", "Disease": "Influenza", "Room": "101"
+    },
+    {
+        "No": "2", "Name": "Alxa","AssignDoc": "Dr. Kenny", "Disease": "Influenza", "Room": "101"
+    },
+    {
+        "No": "3", "Name": "Alxa", "AssignDoc": "Dr. Kenny", "Disease": "Influenza", "Room": "101"
+    },
+    {
+        "No": "4", "Name": "Alxa", "AssignDoc": "Dr. Kenny", "Disease": "Influenza", "Room": "101"
+    },
+    {
+        "No": "5", "Name": "Alxa", "AssignDoc": "Dr. Kenny", "Disease": "Influenza", "Room": "101"
+    },
+    {
+        "No": "6", "Name": "Alxa", "AssignDoc": "Dr. Kenny", "Disease": "Influenza", "Room": "101"
+    },
+    {
+        "No": "7", "Name": "Alxa", "AssignDoc": "Dr. Kenny", "Disease": "Influenza", "Room": "101"
+    },
+    {
+        "No": 8, "Name": "Alxa", "AssignDoc": "Dr. Kenny", "Disease": "Influenza", "Room": 101
+    }
+]

@@ -8,7 +8,7 @@
   --box: #feeef2;
   --box-hover: #fe0c43;
   --nav-color: rgb(255, 230, 230);
-  --footer-color: #ced4da;
+  --footer-color: #ededed;
 }
 [data-theme="dark"] {
   --white: rgb(39 41 52);
@@ -18,7 +18,7 @@
   --box: rgb(61 63 73);
   --box-hover: rgb(57 148 255);
   --nav-color: #1e1e28;
-  --footer-color: #6c757d;
+  --footer-color: #ededed;
   --container-text: #ffb3c6;
 }
 *,
@@ -605,7 +605,7 @@ input:checked + .slider:before {
 }
 :root {
   --darkbg: #251d29;
-  --darkt: #ffd1f7;
+  --darkt: #e76898;
   --lightbg: #fff;
   --lightt: #d43370;
 

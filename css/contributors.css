@@ -29,6 +29,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: 0.05s;
+  scroll-behavior: smooth;
 }
 ::selection {
   background-color: #4835f7;

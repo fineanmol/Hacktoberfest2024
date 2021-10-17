@@ -1,10 +1,11 @@
 #!usr/bin/env python3
 # logger.py
-#Author: s0v13tl3mon
-#Github: https://github.com/s0v13tl3m0n
+# Author: s0v13tl3mon
+# Github: https://github.com/s0v13tl3m0n
 
 # requires a .env file in the same directory with the discord bot token
 # format required is DISCORD_TOKEN=token_goes_here
+# also requires a logs directory for the logging process to work
 
 import os
 import datetime

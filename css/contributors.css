@@ -695,6 +695,17 @@ body {
   padding: 15px;
   border-radius: 4px;
 }
+*{
+    text-align: right;
+    padding-right: 18px;
+    padding-top: 140px;
+     padding-bottom: 90px;
+    width: 13%;
+    background-color: lightpink;
+    color: white; 
+    display: inline;
+     align-items: right;
+    } 
 
 #myBtn:hover {
   background-color: #555;

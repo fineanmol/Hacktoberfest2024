@@ -1,8 +1,6 @@
-import math, random
-def genrateOTP():
-    digits = "0123456789"
-    OTP = ""
-    for i in range(4):
-        OTP += digits[math.floor(random.random()*10)]
+import string, random
+def generateOTP(num):
+    OTP = ''.join(random.choices(string.digits,k=num))
     return OTP
-print("Your 4 digit OTp is:",genrateOTP())
+num=int(input("How many digits OTP: "))
+print(generateOTP(num))

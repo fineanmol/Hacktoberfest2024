@@ -54,7 +54,7 @@
 
 
   <!-- Back-to-top Button -->
-  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-2x fa-arrow-up"></i></button>
+  <button onclick="toTopFunction()" id="myBtn" title="Scroll to top"><i class="fa fa-2x fa-arrow-up"></i></button>
 
 
   <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
@@ -501,13 +501,12 @@
   </script>
 
 <script>
-//Get the button
-var mybutton = document.getElementById("myBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+const mybutton = document.getElementById("myBtn");
 
-function scrollFunction() {
+window.onscroll = function() {scrollUpFunction()};
+
+function scrollUpFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
   } else {
@@ -515,15 +514,11 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+function toTopFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
 }
 </script>
-
-
-
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 </body>
 

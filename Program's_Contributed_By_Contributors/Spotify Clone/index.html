@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player</title>
+    <link rel="icon" href="images/icon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <!-- Sidebar of Clone -->
+    <div id="sidebar">
+        <div id="logo">
+            <img src="images/logo.png" alt="Spotify logo">
+        </div>
+        <div id="navigation">
+            <a href="" class="navigation_item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="" class="navigation_item">
+                <i class="fas fa-search"></i>
+                <span>Search</span>
+            </a>
+            <a href="" class="navigation_item">
+                <i class="fas fa-grip-lines-vertical"></i>
+                <span>Your Library</span>
+            </a>
+        </div>
+        <div id="navigation_2">
+            <a href="" class="nav2_item">
+                <span class="nav2_icon" id="plus">
+                    <i class="fas fa-plus"></i>
+                </span>
+                <span>Create Playlist</span>
+            </a>
+            <a href="" class="nav2_item">
+                <span class="nav2_icon" id="heart">
+                    <i class="fas fa-heart"></i>
+                </span>
+                <span>Liked Songs</span>
+            </a>
+            <a href="" class="nav2_item">
+                <span class="nav2_icon" id="podcast">
+                    <i class="fas fa-podcast"></i>
+                </span>
+                <span>Your Episodes</span>
+            </a>
+        </div>
+        <hr class="line" />
+        <div id="bottom">
+            <ul id="music_list">
+                <li class="music_item"><a href="" class="music_link">Music Hip-Hop 1</a></li>
+                <li class="music_item"><a href="" class="music_link">Music Hip-Hop 2</a></li>
+                <li class="music_item"><a href="" class="music_link">Music Hip-Hop 3</a></li>
+                <li class="music_item"><a href="" class="music_link">Music Hip-Hop 4</a></li>
+            </ul>
+            <div id="download">
+                <a href="" id="download_link">
+                    <i class="fas fa-arrow-circle-down"></i>
+                    <span>Install App</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Content of Clone -->
+    <div id="content">
+        <!-- Nav Bar -->
+        <nav>
+            <div class="navigate">
+                <i class="fas fa-chevron-left"></i>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="buttons">
+                <button class="btn btn-upgrade">Upgrade</button>
+                <div class="profile-dropdown">
+                    <div class="visible">
+                        <img src="images/user.png" alt="User">
+                        <span id="user">Samyak Sand</span>
+                        <i class="fas fa-sort-down arrow"></i>
+                    </div>
+                    <div class="hidden">
+                        <ul>
+                            <li class="link">Account <i class="fas fa-external-link-alt"></i></li>
+                            <li class="link">Profile</li>
+                            <li class="link">Upgrade to Premium <i class="fas fa-external-link-alt"></i></li>
+                            <li class="link">Log Out</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Content of the clon -->
+
+        <main id="main">
+            <div class="card_container">
+                <div class="card_title">
+                    <h1 class="card_heading">Good Afternoon</h1>
+                    <p>SEE ALL</p>
+                </div>
+                <div class="card_collection">
+                    <div class="card_top">
+                        <img src="/images/content/finshots.jpg" alt="">
+                        <div class="card_info">
+                            <p class="card_name">Finshots Daily</p>
+                            <p class="card_artist">Finshots</p>
+                        </div>
+                        <i class="fas fa-circle"></i>
+                    </div>
+                    <div class="card_top">
+                        <img src="images/content/naval.png" alt="">
+                        <div class="card_info">
+                            <p class="card_name">Naval</p>
+                            <p class="card_artist">Naval</p>
+                        </div>
+                    </div>
+                    <div class="card_top">
+                        <img src="images/content/naval.png" alt="">
+                        <div class="card_info">
+                            <p class="card_name">Naval</p>
+                            <p class="card_artist">Naval</p>
+                        </div>
+                    </div>
+                    <div class="card_top">
+                        <img src="images/content/naval.png" alt="">
+                        <div class="card_info">
+                            <p class="card_name">Naval</p>
+                            <p class="card_artist">Naval</p>
+                        </div>
+                    </div>
+                    <div class="card_top">
+                        <img src="images/content/naval.png" alt="">
+                        <div class="card_info">
+                            <p class="card_name">Naval</p>
+                            <p class="card_artist">Naval</p>
+                        </div>
+                    </div>
+                    <div class="card_top">
+                        <img src="images/content/naval.png" alt="">
+                        <div class="card_info">
+                            <p class="card_name">Naval</p>
+                            <p class="card_artist">Naval</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card_container">
+                <div class="card_title">
+                    <h1 class="card_heading">Your Liked Songs</h1>
+                    <p>SEE ALL</p>
+                </div>
+                <div class="card_collection_main">
+
+                </div>
+            </div>
+
+            <div class="card_container">
+                <div class="card_title">
+                    <h1 class="card_heading">Your Songs</h1>
+                    <p>SEE ALL</p>
+                </div>
+                <div class="card_collection_main">
+                   
+                </div>
+            </div>
+
+            <div class="card_container">
+                <div class="card_title">
+                    <h1 class="card_heading">Your Songs</h1>
+                    <p>SEE ALL</p>
+                </div>
+                <div class="card_collection_main">
+                    
+                </div>
+            </div>
+        </main>
+
+    </div>
+    <div id="player">
+        <div id="player_artist">
+            <img src="images/artist_image.jpeg" alt="Artist" class="artist_image">
+            <div class="artist_details">
+                <a class="song">Eternal Youth</a>
+                <a class="artist">RUDE</a>
+                <span>
+                    <i class="fas fa-heart likeBtn"></i>
+                    <i class="fas fa-external-link-alt"></i>
+                </span>
+            </div>
+        </div>
+        <div id="player_controls">
+            <div id="controls">
+                <i class="fas fa-random" title="Enable Shuffle"></i>
+                <i class="fas fa-step-backward" title="Previous"></i>
+                <i class="fas fa-play-circle" title="Play" id="playBtn"></i>
+                <i class="fas fa-pause-circle" title="Play" id="pauseBtn"></i>
+                <i class="fas fa-step-forward" title="Next"></i>
+                <i class="fas fa-retweet" title="Repeat"></i>
+            </div>
+            <div id="timeline">
+                <div class="time">0:00</div>
+                <hr class="player_line" />
+                <div class="time" id="endTime">4:00</div>
+            </div>
+        </div>
+        <div id="player_cta">
+            <i class="fas fa-music" title="Lyrics"></i>
+            <i class="fas fa-list" title="Queue"></i>
+            <i class="fas fa-desktop" title="Connect to a Device"></i>
+            <i class="fas fa-volume-up" title="Volume"></i>
+            <hr class="speaker_line" />
+        </div>
+    </div>
+</body>
+
+</html>

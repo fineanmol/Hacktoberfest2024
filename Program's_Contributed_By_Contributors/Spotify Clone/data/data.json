@@ -1,0 +1,60 @@
+{
+    "songs": [
+        {
+            "name": "Eternal Youth",
+            "artist": "Rude",
+            "location": "./assets/Eternal.mp3",
+            "image": "./images/artist_image.jpeg",
+            "liked": true,
+            "id": 0
+        },
+        {
+            "name": "Never Gonna Give You Up",
+            "artist": "Rick Astely",
+            "location": "./assets/NGGYU.mp3",
+            "image": "./images/content/nggyp.jpg",
+            "liked": false,
+            "id": 1
+        },
+        {
+            "name": "Keeping It",
+            "artist": "Sou",
+            "location": "./assets/keepingIt.mp3",
+            "image": "./images/content/keepingIt.png",
+            "liked": false,
+            "id": 2
+        },
+        {
+            "name": "Eye of the Tiger",
+            "artist": "Surviour",
+            "location": "./assets/eyeTiger.mp3",
+            "image": "./images/content/survivor.jpg",
+            "liked": false,
+            "id": 3
+        },
+        {
+            "name": "Kenny G Collection",
+            "artist": "Kenny G",
+            "location": "./assets/kenny.mp3",
+            "image": "./images/content/kennyg.jpg",
+            "liked": false,
+            "id": 4
+        },
+        {
+            "name": "Noctornal",
+            "artist": "The Midnight",
+            "location": "./assets/noctornal.mp3",
+            "image": "./images/content/noctornal.jpg",
+            "liked": false,
+            "id": 5
+        },
+        {
+            "name": "Unravel",
+            "artist": "TK",
+            "location": "./assets/unravel.mp3",
+            "image": "./images/content/unravel.jpg",
+            "liked": false,
+            "id": 6
+        }
+    ]
+}

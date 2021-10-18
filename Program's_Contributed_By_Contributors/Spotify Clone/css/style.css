@@ -1,0 +1,421 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vh;
+    background: linear-gradient(0deg, rgb(177, 74, 74) 0%, rgb(19, 19, 19) 30%, rgba(22, 22, 22, 1) 50%, #202020 100%);
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    background: #000;
+    padding: 20px;
+    height: 100%;
+}
+
+#logo > img{
+    cursor: pointer;
+    width: 175px;
+    margin: 20px 10px;
+}
+
+#navigation, #navigation_2{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 10px;
+    color: #121212;
+    font-size: 16px;
+}
+
+.navigation_item{
+    margin: 5px 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    opacity: 0.8;
+}
+
+.navigation_item:hover{
+    background: #282828;
+    opacity: 1;
+}
+
+.navigation_item > span {
+    margin-left: 15px;
+}
+
+.nav2_item{
+    margin: 5px 0;
+    padding: 10px 10px;
+    border-radius: 5px;
+    opacity: 0.8;
+}
+
+.nav2_item:hover{
+    background: #282828;
+    opacity: 1;
+}
+
+.nav2_icon{
+    margin-right: 15px;
+    border-radius: 5px;
+    padding: 5px;
+    width: fit-content;
+}
+
+#plus{
+    background: grey;
+}
+
+#heart{
+    background: linear-gradient(125deg, purple, white);
+}
+
+#podcast{
+    background: #006450;
+    color: #17bd5c;
+}
+
+.line{
+    margin: 15px 0;
+}
+
+#bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#music_list{
+    list-style: none;
+    margin: 10px 15px;
+}
+
+.music_item{
+    opacity: 0.8;
+    margin: 10px 15px;
+}
+
+.music_item:hover{
+    opacity: 1;
+}
+
+#download{
+    padding: 10px 0;
+}
+
+/* Navbar Styling */
+
+#content{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 80%;
+    overflow-y: scroll;
+}
+
+#content::-webkit-scrollbar{
+    width: 10px;
+}
+
+#content::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 255, 255, 0.479);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+}
+
+nav .navigate i {
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 50%;
+    margin: 0 5px 0 0;
+    color: rgb(82, 82, 82);
+    background: #000;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+nav button{
+    cursor: pointer;
+    font-weight: 600;
+    width: 150px;
+    height: 32px;
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    margin-right: 15px;
+}
+
+
+nav .profile-dropdown, .profile-dropdown .visible{
+    display: inline;
+}
+
+.visible{
+    width: 180px;
+    height: 32px;
+    background: #282828;
+    color: #fff;
+    padding: 3px 10px 5px;
+    border-radius: 16px;
+}
+
+nav .profile-dropdown{
+    position: relative;
+}
+
+nav .profile-dropdown img{
+    width: 30px;
+    border-radius: 50%;
+    height: 28px;
+    position: relative;
+    top: 8px;
+    left: -10px;
+}
+
+nav .profile-dropdown span {
+    position: relative;
+    left: -5px;
+}
+
+.arrow{
+    position: relative;
+    top: -2px;
+}
+
+.hidden{
+    display: none;
+    position: absolute;
+    top: 25px;
+    right: 5px;
+    z-index: 2;
+    background: #282828;
+    box-shadow: 1px 1px 5px rgba(105, 72, 72, 0.2);
+    padding: 15px 4px;
+    width: 210px;
+    height: 170px;
+}
+
+.profile-dropdown:hover .hidden{
+    display: block;
+}
+
+.link{
+    list-style: none;
+    padding: 7px 15px 10px;
+    color: #fff;
+    font-size: 15px;
+}
+
+.link:hover{
+    background: #3b3b3b;
+    border-radius: 5px;
+}
+
+.link i{
+    float: right;
+}
+
+/* Music Player Head Styling */
+
+#player{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #181818;
+    color: #fff;
+}
+
+#player i{
+    color: rgb(82, 82, 82);
+}
+
+#player i:hover{
+    color: #fff;
+}
+
+#player_artist{
+    display: flex;
+    align-items: center;
+}
+
+#player_artist > * {
+    margin: 10px;
+}
+
+.artist_image{
+    width: 60px;
+    height: auto;
+}
+
+.artist_details > a{
+    display: block;
+}
+
+.artist_details > a:hover{
+    text-decoration: underline;
+}
+
+#player_controls{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#controls > * {
+    margin: 0 10px;
+}
+
+#timeline{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.player_line{
+    width: 150px;
+    margin: 0 5px;
+}
+
+#player_cta{
+    display: flex;
+    align-items: center;
+}
+
+#player_cta > * {
+    margin: 0 10px;
+}
+
+.speaker_line{
+    width: 50px;
+}
+
+/* Content section styling */
+
+#main{
+    padding: 20px;
+    color: #fff;
+    margin-top: 50px;
+}
+
+.card_container{
+    padding: 15px;
+}
+
+.card_title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card_title > p{
+    color: #808080;
+}
+
+.card_title > p:hover{
+    text-decoration: underline;
+    color: #fff;
+    cursor: pointer;
+}
+
+.card_collection{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card_top{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    width: 300px;
+    background-color: #57595794;
+    height: fit-content;
+    margin: 15px;
+    transition: transform 250ms;
+}
+
+.card_top > * {
+    margin-right: 10px;
+}
+
+.card_top:hover{
+    background-color: #575957;
+    transform: scale(1.05);
+}
+
+.card_top > img{
+    width: 75px;
+    height: 75px;
+    border-radius: 10px 0 0 10px;
+    /* top-left top-right bottom-right bottom-left */
+}
+
+.card_top .fa-circle{
+    color: blue;
+    margin-left: auto;
+}
+
+.card_collection_main{
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+.card_collection_main::-webkit-scrollbar{
+    display: none;
+}
+
+.card{
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #21212170;
+    margin: 15px;
+    transition: transform 250ms;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    background-color: #212121;
+}
+
+.card > img{
+    width: 200px;
+    border-radius: 10px;
+}
+
+#pauseBtn{
+    display: none;
+}

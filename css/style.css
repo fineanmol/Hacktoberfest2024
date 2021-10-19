@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/css?family=Be+Vietnam+Pro:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+ * { 
+     margin: 0;
+     padding: 0;
+ }
+
+ *::after , 
+ ::before { 
+     box-sizing: border-box;
+ }
+
+ body { 
+     display: flex;
+     align-items: center;
+     height: 100vh;
+     font-size: 1rem;
+     font-family: 'Be Vietnam Pro' , sans-serif;
+     letter-spacing: 1;
+     line-height: 1.5;
+     color: #606162;
+     background-color: #83A2A6;
+ }
+
+ ul li  { 
+     list-style: none;
+ }
+
+ img { 
+     max-width: 100%;
+     display: block;
+     height: auto;
+ }
+
+ .container { 
+     max-width: 400px;
+     margin-left: auto;
+     margin-right: auto;
+     padding: 23px;
+     background-color: #fff;
+     border-radius: 1rem;
+     width: calc(100% - 2rem);
+ }
+
+ .container > div { 
+     display: grid;
+     row-gap: 3rem;
+ }
+
+ .container .header { 
+     display: grid;
+     row-gap: 1.5rem;
+ }
+
+ .container .header h1 { 
+     font-weight: 600;
+ }
+
+ .container .header span { 
+     font-weight: 400;
+     font-size: 1rem;
+ }
+
+ .container .header-child { 
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+ .container .header img { 
+     width: 50px;
+     height: 50px;
+     border-radius: 5rem;
+ }
+
+ .container .header #txtString { 
+     width: 60%;
+     padding: .875rem;
+     border-radius: .750rem;
+     border: 2.5px solid #D4B8A6;
+ }
+
+ .container .header #btnSubmit { 
+     padding: 1rem;
+     margin-left: 1rem;
+     border: none;
+     border-radius: .750rem;
+     color: #fff;
+     font-weight: 600;
+     cursor: pointer;
+     background-color: #D4B8A6;
+ }
+
+ .container .list #todoList { 
+     margin-top: 1.5rem;
+     display: grid;
+     row-gap: 1rem;
+ }
+
+ .container .list #todoList li { 
+     display: flex;
+     justify-content: space-between;
+     padding-bottom: 1rem;
+     border-bottom: 1px solid #D4B8A6;
+     align-items: center;
+ }
+
+ .container .list #todoList #btnRemove { 
+     padding: 6px;
+     border-radius: 3px;
+     border: none;
+     color: #fff;
+     font-weight: 600;
+     cursor: pointer;
+     background-color: #D4B8A6;
+ }
+
+
+ @media (max-width : 560px) and (min-width : 0px) { 
+
+     body { 
+         padding: 1rem;
+         overflow: hidden;
+     }
+
+    .container { 
+         border-radius: 1rem;
+    }
+
+    .container form{ 
+        display: flex;
+
+    }

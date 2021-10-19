@@ -99,6 +99,7 @@ body {
   transition: 0.5s;
 }
 
+
 .container {
   position: relative;
   color: var(--container-text);
@@ -174,7 +175,9 @@ a:hover {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  transition: color 0.5s ease-in;
+  /* transition: color 0.5s ease-in; */
+  letter-spacing: 0px;
+  transition: letter-spacing 0.5s;
 }
 
 @media (min-width: 768px) {
@@ -204,6 +207,10 @@ a:hover {
 
 .box-item:hover {
   color: #fff;
+  letter-spacing: 2px;
+font-weight: bold;  
+transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+
 }
 
 .box-item::before {
@@ -239,6 +246,7 @@ a:hover {
 
 .box-item:hover::after {
   left: calc(0% - 10px);
+  
   transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
@@ -261,6 +269,9 @@ a:hover {
 .box-item:hover a {
   color: #fff;
 }
+
+.box-item:hover a span{
+letter-spacing: 4px;}
 
 .box-item.different-color {
   background-color: #a7eded;
@@ -702,7 +713,8 @@ body {
   color: white;
   cursor: pointer;
   padding: 15px;
-  border-radius: 4px;
+  border-radius: 50%;
+  width: 60px;
 }
 
 #myBtn:hover {

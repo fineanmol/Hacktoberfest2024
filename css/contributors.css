@@ -102,6 +102,15 @@ body {
 .container {
   position: relative;
   color: var(--container-text);
+  display: flex;
+}
+
+.titleContainer {
+  width: 88%;
+}
+
+.iconContainer {
+  margin-top: 10px;
 }
 
 canvas {

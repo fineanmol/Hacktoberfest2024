@@ -8,12 +8,12 @@ let statsObj = {
 }
 
 const reqObj = [
-    ['https://api.github.com/repos/fineanmol/Hacktoberfest2k21/commits', 'commits'],
-    ['https://api.github.com/repos/fineanmol/Hacktoberfest2k21/forks', 'forks'],
-    ['https://api.github.com/repos/fineanmol/Hacktoberfest2k21/pulls', 'pr'],
-    ['https://api.github.com/repos/fineanmol/Hacktoberfest2k21/issues', 'issues'],
-    ['https://api.github.com/repos/fineanmol/Hacktoberfest2k21/stargazers', 'stars'],
-    ['https://api.github.com/repos/fineanmol/Hacktoberfest2k21/stats/contributors', 'contribut'],
+    ['https://api.github.com/repos/fineanmol/Hacktoberfest2021/commits', 'commits'],
+    ['https://api.github.com/repos/fineanmol/Hacktoberfest2021/forks', 'forks'],
+    ['https://api.github.com/repos/fineanmol/Hacktoberfest2021/pulls', 'pr'],
+    ['https://api.github.com/repos/fineanmol/Hacktoberfest2021/issues', 'issues'],
+    ['https://api.github.com/repos/fineanmol/Hacktoberfest2021/stargazers', 'stars'],
+    ['https://api.github.com/repos/fineanmol/Hacktoberfest2021/stats/contributors', 'contribut'],
 ]
 
 const getData = (url, key) => {
@@ -37,10 +37,11 @@ const getData = (url, key) => {
         })
         .then(json => {
             statsObj[key] += json.length
-            document.getElementById('stats').innerHTML = 'Commits: ' + statsObj.commits + ' Forks: ' + statsObj.forks + ' Pull Requests: ' + statsObj.pr + ' Issues: ' + statsObj.issues + ' Stars: ' + statsObj.stars + ' Contributors: ' + statsObj.contribut
+           // document.getElementById('stats').innerHTML = 'Commits: ' + statsObj.commits + ' Forks: ' + statsObj.forks + ' Pull Requests: ' + statsObj.pr + ' Issues: ' + statsObj.issues + ' Stars: ' + statsObj.stars + ' Contributors: ' + statsObj.contribut
+	    document.getElementById('stats').innerHTML = 'You guys are awesome, we have passed the github rate again this hour. <a href="https://github.com/fineanmol/Hacktoberfest2021">Here</a> is a link to repo to check out live stats'
         }).catch(() => {
         	console.log('This catched 403');
-						document.getElementById('stats').innerHTML = 'You guys are awesome, we have passed the github rate again this hour. <a href="https://github.com/fineanmol/Hacktoberfest2k21">Here</a> is a link to repo to check out live stats'
+						document.getElementById('stats').innerHTML = 'You guys are awesome, we have passed the github rate again this hour. <a href="https://github.com/fineanmol/Hacktoberfest2021">Here</a> is a link to repo to check out live stats'
 				})
 }
 
@@ -51,4 +52,4 @@ setInterval(() => {
     reqObj.forEach(rq => {
         getData(rq[0], rq[1])
     })
- }, 600000)
+ }, 60000)

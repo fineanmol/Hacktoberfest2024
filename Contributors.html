@@ -5,7 +5,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <link rel="icon" href="https://hacktoberfestswaglist.com/img/Hacktoberfest_21.jpg" type="image/x-icon">
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74296045-6"></script>
- 
+
   <!--Stats Script-->
   <script src="scripts/stats.js"></script>
   <meta charset="UTF-8">
@@ -25,6 +25,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <!-- Font Style from google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
@@ -39,11 +43,22 @@
   <link rel="stylesheet" href="css/explosion.css">
   <link rel="stylesheet" href="./css/terminal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/d9f7ec7b29.js" crossorigin="anonymous"></script>
   <title>Hacktoberfest 2021 - Contributors</title>
 
 </head>
 
 <body>
+
+
+
+  <!-- Back-to-top Button -->
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-double-up"></i></button>
+  <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+
+
   <!--
       __  __              __    __          __                 ____             __
     / / / /____ _ _____ / /__ / /_ ____   / /_   ___   _____ / __/___   _____ / /_
@@ -81,27 +96,17 @@
   </nav>
   <div class="content">
     <div class="container">
-      <span>Contributors </span>
-
-      <div class="heart"></div>
-      <label class="theme-switch" for="checkbox">
-
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun"
-          viewBox="0 0 16 16">
-          <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-        </svg>
-
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon"
-          viewBox="0 0 16 16">
-          <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z" />
-        </svg>
-
-        <input type="checkbox" class="checkbox" id="checkbox" />
-
-        <div class="slider round"></div>
-      </label>
-      <p class=" rubberBand delay-4s">Add yourself to the list if you contribute.</p>
-      <hr style="width:80%">
+      <div class="titleContainer">
+        <span class="heading">CONTRIBUTORS </span>
+        <div class="heart"></div>
+        <p class=" rubberBand delay-4s">Add yourself to the list if you contribute.</p>
+      </div>
+      <div class="iconContainer">
+        <span class="tdnn">
+          <div class="moon">
+          </div>
+        </span>
+      </div>
     </div>
     <div class="box mx-auto">
 
@@ -119,11 +124,13 @@
       <a class="box-item" href="https://github.com/facundof13"><span>Facundo</span></a>
       <a class="box-item" href="https://github.com/Aashik96"><span>Aashik Ahamed</span></a>
       <a class="box-item" href="https://github.com/Hrishabh5"><span>Hrishabh Jain</span></a>
+      <a class="box-item" href="https://github.com/alok2947"><span>Alok Kumar Jha</span></a>
       <a class="box-item" href="https://github.com/zonex909"><span>Rupna Maitra</span></a>
       <a class="box-item" href="https://github.com/skully-coder"><span>Abhinav Agarwal</span></a>
       <a class="box-item" href="https://github.com/sharron4me"><span>Mohammad Ummair</span></a>
       <a class="box-item" href="https://github.com/dwiguna81"><span>Dwi Guna</span></a>
       <a class="box-item" href="https://github.com/Rajat-sharMaa"><span>Rajat Shamraa</span></a>
+      <a class="box-item" href="https://github.com/Samarth-Khatri"><span>Samarth Khatri</span></a>
       <a class="box-item" href="https://github.com/20manas"><span>Manas Khurana</span></a>
       <a class="box-item" href="https://github.com/manigedit"><span>Manish Kumar</span></a>
       <a class="box-item" href="https://github.com/vakilsahabh"><span>Vakeel Sahabh</span></a>
@@ -338,19 +345,32 @@
       <a class="box-item" href="https://github.com/aryankashyap7"><span>Aryan Kashyap</span></a>
       <a class="box-item" href="https://github.com/robertnjenga"><span>Robert Njenga</span></a>
       <a class="box-item" href="https://github.com/geekygirl8"><span>NIKITA</span></a>
-      <a class="box-item" href="https://github.com/mariosamaaa"><span>mArio</span><a>
+      <a class="box-item" href="https://github.com/mariosamaaa"><span>mArio</span></a>
       <a class="box-item" href="https://github.com/alishaac"><span>Alisha Chauhan</span></a>
       <a class="box-item" href="https://github.com/MahimaKhatri"><span>Mahima Khatri</span></a>
       <a class="box-item" href="https://github.com/vishwasluhana"><span>Vishwa Mittar</span></a>
       <a class="box-item" href="https://github.com/NEELAKANTAGOUDAPATIL"><span>NEELAKANTA GOUDA PATIL</span></a>
       <a class="box-item" href="https://github.com/shashishekhar11"><span>shashishekhar11</span></a>
       <a class="box-item" href="https://github.com/H-M-Noman123"><span>H-M-Noman123</span></a>
-      <a class="box-item" href="https://github.com/Tripti19-Rao"><span>Tripti</span></a>
+
+      <a class="box-item" href="https://github.com/barunipriyats"><span>Baruni Priya T S</span></a>
+      <a class="box-item" href="https://github.com/anmolg84"><span>Anmol Gupta</span></a>
+      <a class="box-item" href="https://github.com/khushi-mishra0408"><span>Khushi Mishra</span></a>
+      <a class="box-item" href="https://github.com/SayantanMaiti"><span>Sayantan Maiti</span></a>
+      <a class="box-item" href="https://github.com/Vishvesh-Codehunt"><span>Vishvesh Patel</span></a>
+      <a class="box-item" href="https://github.com/napster-ansh"><span>Ansh Jain</span></a>
+      <a class="box-item" href="https://github.com/smriti2411"><span>Smriti Gupta</span></a>
+      <a class="box-item" href="https://github.com/davidtheweiss"><span>David Weiss</span></a>
+      <a class="box-item" href="https://github.com/gulshanjakhon"><span>Gulshan Jakhon</span></a>
+      <a class="box-item" href="https://github.com/Sonalanand102"><span>Sonal Anand</span></a>
+    <a class="box-item" href="https://github.com/HarineM"><span>Harine Murugan</span></a>
+    <a class="box-item" href="https://github.com/diwuracreatives"><span>Diwura Creatives</span></a>
+    <a class="box-item" href="https://github.com/Vishvesh-Codehunt"><span>Vishvesh Patel</span></a>
+      <a class="box-item" href="https://github.com/vaishali8799"><span>Vaishali Kasondhan</span></a>
+    <a class="box-item" href="https://github.com/Tripti19-Rao"><span>Tripti</span></a>
 
 
-
-
-          <!-- Please maintain the alignment... -->
+      <!-- Please maintain the alignment... -->
 
 
 
@@ -411,6 +431,54 @@
       }, 750 * (idx + 1))
     });
 
+
+    /* Back-to-top button functionality */
+    const backToTopButton = document.querySelector("#back-to-top-btn");
+
+    window.addEventListener("scroll", scrollFunction);
+    function scrollFunction() {
+      if (window.pageYOffset > 300) { // Show backToTopButton
+        if (!backToTopButton.classList.contains("btnEntrance")) {
+          backToTopButton.classList.remove("btnExit");
+          backToTopButton.classList.add("btnEntrance");
+          backToTopButton.style.display = "block";
+        }
+      }
+      else { // Hide backToTopButton
+        if (backToTopButton.classList.contains("btnEntrance")) {
+          backToTopButton.classList.remove("btnEntrance");
+          backToTopButton.classList.add("btnExit");
+          setTimeout(function () {
+            backToTopButton.style.display = "none";
+          }, 250);
+        }
+      }
+    }
+
+    backToTopButton.addEventListener("click", smoothScrollBackToTop);
+
+    function smoothScrollBackToTop() {
+      const targetPosition = 0;
+      const startPosition = window.pageYOffset;
+      const distance = targetPosition - startPosition;
+      const duration = 750;
+      let start = null;
+      window.requestAnimationFrame(step);
+      function step(timestamp) {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+        if (progress < duration) window.requestAnimationFrame(step);
+      }
+    }
+
+    function easeInOutCubic(t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t * t + b;
+      t -= 2;
+      return c / 2 * (t * t * t + 2) + b;
+    };
+
   </script>
   <script src="/scripts/scroll.js"></script>
 
@@ -418,6 +486,39 @@
   <div class="container">
     <div id="stats" style="margin-top: 1rem;"></div>
   </div>
+  <script>
+    $('.tdnn').click(function () {
+      $("body").toggleClass('light');
+      $(".moon").toggleClass('sun');
+      $(".tdnn").toggleClass('day');
+    });
+  </script>
+
+  <script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 </body>
 
 </html>

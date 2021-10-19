@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background: url(mobile-2nd.jpg);
+        }
+        table{border: 2px solid #1af00a; 
+        width : 40%;
+        height : 40%;}
+        tr{border: 2px solid #1af00a;}
+        td{border: 2px solid #1af00a;}
+        button{ width: 60px;
+                height: 50px;
+                background-color:red;
+                color:gold;
+                opacity : 0.6;
+                font-size: larger;
+                font-weight: bolder;
+                 }
+        .btn:hover {
+                    
+                    opacity :1;
+                    cursor : pointer;
+                    ;
+                }
+        .block{
+            color: goldenrod;
+            top: 20%;
+            left: 6%;
+            position: absolute;
+        }
+        h1{
+            font-family: 'Reggae One', cursive;
+        }
+        .button {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            background-color: #538fbe;
+            padding: 10px 10px;
+            font-size: 20px;
+            border: 1px solid #2d6898;
+            background: rgb(10,241,238);
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+        @media only screen and (min-width: 768px) {
+            body{
+                background: url(3rd-image.jpg);
+            }
+            .block{
+                top: 20%;
+                left: 40%
+            }  
+        }
+    </style>
+</head>
+<body>
+    <a href=index.html class="button">Back</a>
+    <div class="block">
+        <h1 id = "tr"><u>DECIMAL POINT CALCULATOR</u></h1>
+        <table cellpadding="8">
+            <tr>
+                <td style="background-color: black; " colspan="3" >
+                    <input type="text" id = "showhere" name="fname" value=0 size="25"/>
+                </td>
+                <td>
+                    <button class="btn" onclick="clearAll()" >AC</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn" onclick="showValue(1)">1</button> 
+                </td>
+                <td>
+                    <button class="btn" onclick="showValue(2)" >2</button>
+                </td>
+                <td>
+                    <button class="btn" onclick="showValue(3)" >3</button>
+                </td>
+                <td>
+                    <button class="btn" onclick="showOperation('+')" >+</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn" onclick="showValue(4)" >4</button>
+                </td>
+                <td>
+                    <button class="btn" onclick="showValue(5)" >5</button>
+                </td>
+                <td>
+                    <button class="btn" onclick="showValue(6)" >6</button>
+                </td>
+                <td>
+                    <button class="btn" onclick="showOperation('-')" >-</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn" onclick="showValue(7)" >7</button>
+                </td>
+                <td>
+                    <button class="btn" onclick="showValue(8)" >8</button>
+                </td>
+                <td>
+                    <button class="btn" onclick="showValue(9)" >9</button>
+                </td>
+                <td>
+                    <button class="btn" onclick="showOperation('*')" *">*</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn" onclick="showValue(0)" >0</button>
+                </td>
+                <td>
+                    <button class="btn" onclick="showValue('.')" >.</button>
+                </td>
+                <td>
+                    <button class="btn" onclick="showOperation('/')" >/</button>
+                </td>
+                <td>
+                    <button class="btn" onclick="computeAnswer()" >=</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+<script >   
+let x,
+  topPosition = -1,
+  ar = [],
+  power = 1;
+let operationFlag = false,
+  valueFlag = false,
+  pointFlag = false,
+  answeredFlag = false;
+let operator = "",
+  expression = "";
+function showValue(x) {
+  if (answeredFlag) {
+    ar = [];
+    topPosition = -1;
+    expression = "";
+    valueFlag = false;
+    operationFlag = false;
+    pointflag = false;
+    power = 1;
+    answeredFlag = false;
+  }
+  expression += x;
+  if (x == "." && !pointFlag) {
+    if (ar.length === 0) {
+      ++topPosition;
+      ar[topPosition] = 0.0;
+    }
+    pointFlag = true;
+  } else {
+    if (pointFlag) {
+      ar[topPosition] = ar[topPosition] + x / 10 ** power;
+      console.log(x / 10 ** power, ar[topPosition]);
+      power++;
+    } else if (valueFlag) {
+      ar[topPosition] = ar[topPosition] * 10 + x;
+    } else {
+      ++topPosition;
+      ar[topPosition] = x;
+      valueFlag = true;
+    }
+  }
+  operationFlag = false;
+  document.getElementById("showhere").value = expression;
+  console.log(ar);
+}
+function showOperation(operator) {
+  answeredFlag = false;
+  power = 0;
+  expression += operator;
+  if (operationFlag) {
+    ar[topPosition] = operator;
+    expression = expression.slice(0, expression.length - 2) + operator;
+  } else {
+    ++topPosition;
+    ar[topPosition] = operator;
+  }
+  pointFlag = false;
+  operationFlag = true;
+  valueFlag = false;
+  document.getElementById("showhere").value = expression;
+  console.log(ar[topPosition]);
+  console.log(ar);
+}
+function computeAnswer() {
+  if (ar.length > 1) {
+    ar = performCalculation();
+  }
+  topPosition = 0;
+  ar[0] = parseFloat(ar[0].toFixed(2));
+  document.getElementById("showhere").value = ar[0];
+  console.log(ar);
+  expression = "" + ar[0];
+  answeredFlag = true;
+}
+function performCalculation() {
+  let value = ar[0],
+    i;
+  for (i = 1; i < ar.length; i += 2) {
+    operator = ar[i];
+    value2 = ar[i + 1];
+    if (operator === "+") {
+      value = value + value2;
+    } else if (operator === "-") {
+      value = value - value2;
+    } else if (operator === "*") {
+      value = value * value2;
+    } else if (operator === "/") {
+      value = value / value2;
+    }
+  }
+  return [value];
+}
+function clearAll() {
+  ar = [];
+  power = 1;
+  expression = "";
+  topPosition = -1;
+  answeredFlag = false;
+  operationFlag = false;
+  valueFlag = false;
+  document.getElementById("showhere").value = 0;
+  console.log(ar);
+}
+
+</script>
+</body>
+</html>

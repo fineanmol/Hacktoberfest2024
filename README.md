@@ -1,3 +1,4 @@
+
 # Hacktoberfest ([Live Website](https://fineanmol.github.io/Hacktoberfest2021/Contributors.html))
 
 **This is a beginner-friendly project to help you get started with your
@@ -8,16 +9,16 @@ read the contribution rules. Happy hacking <3 💙 !!**
 P.S. Star ⭐ and Share this repository, if you had fun!! 😍
 
 ![Hacktoberfest 2021](https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg)
+![Event Completed](https://github.com/fineanmol/Hacktoberfest2021/blob/master/scripts/hacktoberPest/Event_Completed.png)
 
-
-# 📌 Videos :
+# 📌 Videos:
 
 - [Hacktoberfest Intro](https://youtu.be/OsAFX_ZbgaE)
 - [How to pull request [Overview]](https://youtu.be/DIj2q02gvKs)
 - [Merge Conflict / comment](https://youtu.be/zOx5PJTY8CI)
 
 
-# Contribution rules📚 :
+# Contribution rules📚:
 
 - The project must work when opening Contributors.html
 - You are allowed to make pull requests that break the rules. We just merge it ;)
@@ -28,18 +29,18 @@ P.S. Star ⭐ and Share this repository, if you had fun!! 😍
 - Try to keep pull requests small to minimize merge conflicts
 
 
-## Getting Started🤗 :
+## Getting Started 🤗:
 
 - Fork this repo (button on top)
 - Clone on your local machine
 
 ```
-git clone https://github.com/fineanmol/Hacktoberfest2k21.git
+git clone https://github.com/fineanmol/Hacktoberfest2021.git
 
 ```
 - Navigate to project directory.
 ```
-cd Hacktoberfest2k21
+cd Hacktoberfest2021
 ```
 
 - Create a new branch
@@ -64,12 +65,12 @@ git push origin my-new-branch
 - Create a new pull request from your forked repository
 
 
-## Avoid Conflicts (Syncing your fork)💡 :
+## Avoid Conflicts (Syncing your fork)
 
 An easy way to avoid conflicts is to add an 'upstream' for your git repo, as other PR's may be merged while you're working on your branch/fork.   
 
 ```terminal
-git remote add upstream https://github.com/fineanmol/Hacktoberfest2k21
+git remote add upstream https://github.com/fineanmol/Hacktoberfest2021
 ```
 
 You can verify that the new remote has been added by typing
@@ -87,7 +88,7 @@ This will give you any eventual conflicts and allow you to easily solve them in 
 For more information on syncing forks [read this article from Github](https://help.github.com/articles/syncing-a-fork/).
 
 
-# FAQs 💬 :
+# FAQs 
 
 - Who can contribute?
   - Anyone with a github account and who is signed up for
@@ -114,4 +115,4 @@ For more information on syncing forks [read this article from Github](https://he
 
 
 
-###### *We will do our best to merge as much as possible from everyone. However, time is limited and the merge conflicts are horrible <3*
+###### *We will do our best to merge as much as possible from everyone. However, time is limited and the merge conflicts are horrible :astonished: <3*

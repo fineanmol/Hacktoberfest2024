@@ -53,10 +53,6 @@
 
 
 
-  <!-- Back-to-top Button -->
-
-  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-double-up"></i></button>
-  <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
 
 
   <!--
@@ -67,7 +63,8 @@
   /_/ /_/ \__,_/ \___//_/|_| \__/ \____//_.___/ \___//_/   /_/   \___//____/ \__/
                                               i just want a t-shirt at this point
   -->
-  <!--Navbar-->
+  
+  <!----------------- Navbar ------------------------>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
     <a class="navbar-brand" href="/">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1"
@@ -90,7 +87,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto" id="menu">
-        <!-- Menu -->
+        
+        <!------------------------ Menu ------------------------->
+        
       </ul>
     </div>
   </nav>
@@ -108,11 +107,12 @@
         </span>
       </div>
     </div>
-    <div class="box mx-auto">
+   
 
 
-
-      <!-- Add to the bottom of the list -->
+      <!-------------- Add yourself to the bottom of the list ------------------->
+    
+     <div class="box mx-auto">
       <a class="box-item" href="https://github.com/fineanmol"><span>Anmol Agarwal</span></a>
       <a class="box-item" href="https://github.com/Amitava123"><span>Amitava Mitra</span></a>
       <a class="box-item" href="https://github.com/philson-philip"><span>Philson Philip</span></a>
@@ -363,13 +363,15 @@
       <a class="box-item" href="https://github.com/davidtheweiss"><span>David Weiss</span></a>
       <a class="box-item" href="https://github.com/gulshanjakhon"><span>Gulshan Jakhon</span></a>
       <a class="box-item" href="https://github.com/Sonalanand102"><span>Sonal Anand</span></a>
-    <a class="box-item" href="https://github.com/HarineM"><span>Harine Murugan</span></a>
-    <a class="box-item" href="https://github.com/diwuracreatives"><span>Diwura Creatives</span></a>
-    <a class="box-item" href="https://github.com/Vishvesh-Codehunt"><span>Vishvesh Patel</span></a>
+      <a class="box-item" href="https://github.com/HarineM"><span>Harine Murugan</span></a>
+      <a class="box-item" href="https://github.com/diwuracreatives"><span>Diwura Creatives</span></a>
+      <a class="box-item" href="https://github.com/Vishvesh-Codehunt"><span>Vishvesh Patel</span></a>
       <a class="box-item" href="https://github.com/vaishali8799"><span>Vaishali Kasondhan</span></a>
-    <a class="box-item" href="https://github.com/Tripti19-Rao"><span>Tripti</span></a>
-     <a class="box-item" href="https://github.com/zedutra"><span>Jose Vitor Dutra</span></a>
-    <a class="box-item" href="https://github.com/Meenu-github"><span>Meenu Singh</span></a>
+      <a class="box-item" href="https://github.com/Tripti19-Rao"><span>Tripti</span></a>
+      <a class="box-item" href="https://github.com/zedutra"><span>Jose Vitor Dutra</span></a>
+      <a class="box-item" href="https://github.com/Meenu-github"><span>Meenu Singh</span></a>
+      <a class="box-item" href="https://github.com/sudarshan-kr"><span>Sudarshan</span></a>
+
 
 
       <!-- Please maintain the alignment... -->
@@ -377,23 +379,9 @@
 
 
 
-
-
     </div>
   </div>
   </div>
-
-  <button id="backToTop" type="button" title="Back to Top">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px"
-      y="0px" width="512px" height="512px" viewBox="0 0 284.929 284.929"
-      style="enable-background:new 0 0 284.929 284.929;" xml:space="preserve">
-      <g>
-        <path
-          d="M282.082,195.285L149.028,62.24c-1.901-1.903-4.088-2.856-6.562-2.856s-4.665,0.953-6.567,2.856L2.856,195.285   C0.95,197.191,0,199.378,0,201.853c0,2.474,0.953,4.664,2.856,6.566l14.272,14.271c1.903,1.903,4.093,2.854,6.567,2.854   c2.474,0,4.664-0.951,6.567-2.854l112.204-112.202l112.208,112.209c1.902,1.903,4.093,2.848,6.563,2.848   c2.478,0,4.668-0.951,6.57-2.848l14.274-14.277c1.902-1.902,2.847-4.093,2.847-6.566   C284.929,199.378,283.984,197.188,282.082,195.285z"
-          fill="#FFFFFF">
-      </g>
-    </svg>
-  </button>
 
   <script>
     document.querySelectorAll('a.box-item').forEach(con => {
@@ -432,77 +420,46 @@
         span.classList.add('active');
       }, 750 * (idx + 1))
     });
+    
+    </script>
 
 
-    /* Back-to-top button functionality */
-    const backToTopButton = document.querySelector("#back-to-top-btn");
+  <!-------------- Back-to-top Button ---------------------->
 
-    window.addEventListener("scroll", scrollFunction);
-    function scrollFunction() {
-      if (window.pageYOffset > 300) { // Show backToTopButton
-        if (!backToTopButton.classList.contains("btnEntrance")) {
-          backToTopButton.classList.remove("btnExit");
-          backToTopButton.classList.add("btnEntrance");
-          backToTopButton.style.display = "block";
-        }
-      }
-      else { // Hide backToTopButton
-        if (backToTopButton.classList.contains("btnEntrance")) {
-          backToTopButton.classList.remove("btnEntrance");
-          backToTopButton.classList.add("btnExit");
-          setTimeout(function () {
-            backToTopButton.style.display = "none";
-          }, 250);
-        }
-      }
-    }
 
-    backToTopButton.addEventListener("click", smoothScrollBackToTop);
+ <button onclick="topFunction()" id="backtoTopBtn" > <i class="fas fa-angle-double-up"></i></button>
 
-    function smoothScrollBackToTop() {
-      const targetPosition = 0;
-      const startPosition = window.pageYOffset;
-      const distance = targetPosition - startPosition;
-      const duration = 750;
-      let start = null;
-      window.requestAnimationFrame(step);
-      function step(timestamp) {
-        if (!start) start = timestamp;
-        const progress = timestamp - start;
-        window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
-        if (progress < duration) window.requestAnimationFrame(step);
-      }
-    }
+ <style>
 
-    function easeInOutCubic(t, b, c, d) {
-      t /= d / 2;
-      if (t < 1) return c / 2 * t * t * t + b;
-      t -= 2;
-      return c / 2 * (t * t * t + 2) + b;
-    };
+ #backtoTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
 
-  </script>
-  <script src="/scripts/scroll.js"></script>
+  #backtoTopBtn:hover {
+  background-color: #f76a76;
+}
 
-  <script src="./scripts/menu.js"></script>
-  <div class="container">
-    <div id="stats" style="margin-top: 1rem;"></div>
-  </div>
-  <script>
-    $('.tdnn').click(function () {
-      $("body").toggleClass('light');
-      $(".moon").toggleClass('sun');
-      $(".tdnn").toggleClass('day');
-    });
-  </script>
+</style>
 
-  <script>
-    //Get the button
-    var mybutton = document.getElementById("myBtn");
-
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function () { scrollFunction() };
-
+<script>
+    
+    var mybutton = document.getElementById("backtoTopBtn");
+    
+    
+    window.onscroll = function() {scrollFunction()};
+    
     function scrollFunction() {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         mybutton.style.display = "block";
@@ -510,17 +467,16 @@
         mybutton.style.display = "none";
       }
     }
-
-    // When the user clicks on the button, scroll to the top of the document
+    
     function topFunction() {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
-  </script>
+    </script>
+    
 
-
-
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  
+  
 </body>
 
 </html>

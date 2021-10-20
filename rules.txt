@@ -1,0 +1,36 @@
+Contribution rules📚:
+The project must work when opening Contributors.html🤩
+You are allowed to make pull requests that break the rules. We just merge it ;)
+Do NOT add any build steps e.g npm install (we want to keep this a simple static site)
+Do NOT remove other content.
+Styling/code can be pretty, ugly or stupid, big or small as long as it works
+Add your name to the Contributors.html file
+Try to keep pull requests small to minimize merge conflicts
+
+
+FAQs
+Who can contribute?
+Anyone with a github account and who is signed up for hacktoberfest :)
+
+Are you getting paid for this?
+Sadly no. But we think we should. This is 100% unofficial and we do it for fun, fame and glory.
+
+Who are you and why are you doing this?
+We are two programmers from India Anmol and Ritesh. We are doing this because we love Open Source and Hacktoberfest. We want to make it easier for people to get started with Hacktoberfest and Open Source.
+Why are you not using digitalocean?
+Because we only know JavaScript and suck at servers. We use now instead.
+
+Should I come closer to the text saying 'Don't come closer' on the left side of the home tab ?
+Nope.
+
+How many pull request (PR) must be made, if I can get a awesome shirt from Hacktoberfest 2021?
+5
+
+How do I track my progress to get an awesome shirt from Hacktoberfest 2021?
+go to :. (Check Out Your Own Stats at Right Top)
+
+What is the duration of Hacktoberfest 2021?
+It is from 1st october to 31st october 2021...
+
+What is the event for?
+For the open source community engagement

@@ -21,16 +21,14 @@ int main()
      cout<<" "<<a[i]<<" ";
    }
 
+    sort(a.begin(), a.end());
+    
     cout<<"\n\nDuplicate Values in Given Array are :: \n\n";
-    for(i=0; i<size; i++)
+    for(i=0; i<size-1; i++)
     {
-      for(j=i+1;j<size;j++)
-      {
-         if(a[i]==a[j])
-         {
-             cout<<" "<<a[i]<<" ";
-         }
-      }
+        if(a[i] == a[i+1]){
+            cout<<a[i];   
+        }
     }
 
      cout<<"\n";

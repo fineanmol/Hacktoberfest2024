@@ -27,12 +27,12 @@ nav {
 }
 
 .navbar-light .navbar-nav .active > .nav-link {
-  color: #ff0844;
+  color: #dc143c;
   font-weight: 700;
 }
 
 .navbar-light .navbar-nav .dropdown.show > .nav-link {
-  color: #ff0844;
+  color: #dc143c;
 }
 .navbar-light .navbar-nav .nav-link::before {
   background-color: currentColor;
@@ -103,5 +103,5 @@ nav {
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #ff0844;
+  color: #dc143c;
 }

@@ -1,6 +1,0 @@
-def KELVIN_TO_FAHRENHEIT(temp):
-    assert(temp>=0),"COLDER THAN ABSOLUTE ZERO..!!"
-    return((temp-273)*1.8)+32
-print(KELVIN_TO_FAHRENHEIT(273))
-print(int(KELVIN_TO_FAHRENHEIT(505.78)))
-print(KELVIN_TO_FAHRENHEIT(-5))

@@ -1,9 +1,0 @@
-Flask
-Flask-SQLAlchemy
-SQLAlchemy
-Click
-Jinja2
-itsdangerous
-MarkupSafe
-gunicorn
-Werkzeug

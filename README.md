@@ -113,6 +113,15 @@ For more information on syncing forks [read this article from Github](https://he
 - What is the event for?
   - For the open source community engagement
 
+# java oops concept
+In this page, we will learn about the basics of OOPs. Object-Oriented Programming is a paradigm that provides many concepts, such as inheritance, data binding, polymorphism, etc.
+
+Simula is considered the first object-oriented programming language. The programming paradigm where everything is represented as an object is known as a truly object-oriented programming language.
+
+Smalltalk is considered the first truly object-oriented programming language.
+
+The popular object-oriented languages are Java, C#, PHP, Python, C++, etc.
+
 
 
 ###### *We will do our best to merge as much as possible from everyone. However, time is limited and the merge conflicts are horrible :astonished: <3*

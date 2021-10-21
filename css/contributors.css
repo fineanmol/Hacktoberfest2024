@@ -5,9 +5,9 @@
   --black: rgb(39 41 52);
   --gray: #fafafa;
   --text: black;
-  --box: #feeef2;
-  --box-hover: #fe0c43;
-  --nav-color: rgb(255, 230, 230);
+  --box: #ffccc6;
+  --box-hover: #dc143c;
+  --nav-color: #fcb5ad;
   --footer-color: #ededed;
 }
 [data-theme="dark"] {
@@ -19,7 +19,7 @@
   --box-hover: rgb(57 148 255);
   --nav-color: #1e1e28;
   --footer-color: #ededed;
-  --container-text: #ffb3c6;
+  --container-text: #fcb5ad;
 }
 *,
 *::before,
@@ -141,7 +141,7 @@ a:hover {
   cursor: default;
 }
 .heading:hover {
-  color: #fe0c43;
+  color: #d6022c;
   transition: 1s;
 }
 
@@ -635,9 +635,9 @@ input:checked + .slider:before {
 }
 :root {
   --darkbg: #251d29;
-  --darkt: #e76898;
+  --darkt: #ff7566;
   --lightbg: #fff;
-  --lightt: #d43370;
+  --lightt: #ff7566;
 
   --toggleHeight: 16em;
   --toggleWidth: 30em;

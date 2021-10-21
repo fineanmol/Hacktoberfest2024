@@ -1,0 +1,99 @@
+body {
+  margin-top: 40px;
+  background-color: gainsboro;
+}
+.container {
+  max-width: 900px;
+  background-color: whitesmoke;
+  padding: 12px 0px 0px 0px;
+  border-radius: 10px;
+  border: 5px solid goldenrod;
+}
+.container h1 {
+  text-align: center;
+  border-bottom: 2px solid goldenrod;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.des {
+  border-bottom: 2px solid goldenrod;
+  padding-bottom: 10px;
+}
+.des h3 {
+  margin-left: 10px;
+}
+.cat{
+  border-bottom: 2px solid goldenrod;
+  margin: auto;
+}
+.cat h3{
+  margin-left: 10px;
+  margin-top: 10px;
+}
+input {
+  border-style: hidden;
+  background-color: whitesmoke;
+}
+.no-outline:focus {
+  outline: none;
+}
+.des input {
+  max-width: 900px;
+}
+
+.form-select:focus,
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+.form-select {
+  border: hidden;
+  background-color: whitesmoke;
+}
+.date {
+  border-left: 2px solid goldenrod;
+}
+.add {
+  text-align: right;
+  margin-right: 30px;
+}
+
+.btnn {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid goldenrod;
+  max-width: 1000px;
+  margin: auto;
+  align-items: center;
+}
+.checkbox {
+  margin-top: 50%;
+  margin-left: 50%;
+  width: 15px;
+  height: 15px;
+}
+.checkbox_label {
+  text-align: left;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.task_date {
+  margin-top: -4px;
+  margin-left: -30px;
+}
+
+.catogery {
+  margin-top: 10%;
+  margin-right: 5%;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.task{
+  padding-top: 10px;
+  border-bottom: 2px dashed goldenrod;
+  margin: auto;
+}

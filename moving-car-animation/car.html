@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Car Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="audio" controls style="display:none" loop>
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+    <div class="night">
+        <div id="instruction">
+            Enter:- Start/Stop car<br>
+            W:- Turn On/Off headlights<br>
+            1/2:- Play/Pause Lofi music
+        </div>
+        <div class="surface"></div>
+        <div class="car">
+            <img src="Img_06.png" alt="">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <script src="car.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<section id="Newtask">
+  <form action="/delete-task" method="GET">
+    <% for(let task of tasklist){%>
+    <div class="row task">
+      <div class="col-1">
+        <input type="checkbox" class="checkbox" id="<%=task.id%>" />
+      </div>
+      <div class="col-9">
+        <label for="checkbox" class="checkbox_label">
+          <% if((task.description).length==0){ %> No Description <%}else{%>
+          <%=task.description%> <%}%>
+        </label>
+        <div class="row">
+          <div class="col-1">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <div class="col">
+            <p class="task_date">
+              <% if((task.date).length==0){ %> No Due Date <%}else{%>
+              <%=task.date%> <%}%>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <% if(task.catogery!="Choose a catogery"){%>
+        <div class="catogery"><%=task.catogery%></div>
+        <%} %>
+      </div>
+    </div>
+    <%}%>
+  </form>
+</section>

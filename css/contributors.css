@@ -5,9 +5,9 @@
   --black: rgb(39 41 52);
   --gray: #fafafa;
   --text: black;
-  --box: #ffccc6;
-  --box-hover: #dc143c;
-  --nav-color: #fcb5ad;
+  --box: #feeef2;
+  --box-hover: #fe0c43;
+  --nav-color: rgb(255, 230, 230);
   --footer-color: #ededed;
 }
 [data-theme="dark"] {
@@ -19,7 +19,7 @@
   --box-hover: rgb(57 148 255);
   --nav-color: #1e1e28;
   --footer-color: #ededed;
-  --container-text: #fcb5ad;
+  --container-text: #ffb3c6;
 }
 *,
 *::before,
@@ -93,25 +93,15 @@ body {
 }
 #back-to-top-btn:hover,
 #back-to-top-btn:focus {
-  background: 'transparent';
+  background: "transparent";
   border: 2px solid rgba(255, 255, 255, 0.2);
   transform: translateY(-7px);
   transition: 0.5s;
 }
 
-
 .container {
   position: relative;
   color: var(--container-text);
-  display: flex;
-}
-
-.titleContainer {
-  width: 88%;
-}
-
-.iconContainer {
-  margin-top: 10px;
 }
 
 canvas {
@@ -141,10 +131,9 @@ a:hover {
   cursor: default;
 }
 .heading:hover {
-  color: #d6022c;
+  color: #fe0c43;
   transition: 1s;
 }
-
 .moto:hover {
   text-decoration: underline;
   text-decoration-color: var(--gray);
@@ -160,7 +149,6 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
 }
-
 
 .box-item {
   position: relative;
@@ -180,14 +168,6 @@ a:hover {
   /* transition: color 0.5s ease-in; */
   letter-spacing: 0px;
   transition: letter-spacing 0.5s;
-}
-
-.box-item:hover{
-  transform: scale(1.05);
-  transition: 1s;
-}
-.box-item:hover span{
-  color: navy;
 }
 
 @media (min-width: 768px) {
@@ -218,9 +198,8 @@ a:hover {
 .box-item:hover {
   color: #fff;
   letter-spacing: 2px;
-font-weight: bold;  
-transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
-
+  font-weight: bold;
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 .box-item::before {
@@ -256,7 +235,7 @@ transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 
 .box-item:hover::after {
   left: calc(0% - 10px);
-  
+
   transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
@@ -280,8 +259,9 @@ transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
   color: #fff;
 }
 
-.box-item:hover a span{
-letter-spacing: 4px;}
+.box-item:hover a span {
+  letter-spacing: 4px;
+}
 
 .box-item.different-color {
   background-color: #a7eded;
@@ -635,9 +615,9 @@ input:checked + .slider:before {
 }
 :root {
   --darkbg: #251d29;
-  --darkt: #ff7566;
+  --darkt: #e76898;
   --lightbg: #fff;
-  --lightt: #ff7566;
+  --lightt: #d43370;
 
   --toggleHeight: 16em;
   --toggleWidth: 30em;

@@ -144,6 +144,7 @@ a:hover {
   color: #d6022c;
   transition: 1s;
 }
+
 .moto:hover {
   text-decoration: underline;
   text-decoration-color: var(--gray);
@@ -159,6 +160,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
 }
+
 
 .box-item {
   position: relative;
@@ -178,6 +180,14 @@ a:hover {
   /* transition: color 0.5s ease-in; */
   letter-spacing: 0px;
   transition: letter-spacing 0.5s;
+}
+
+.box-item:hover{
+  transform: scale(1.05);
+  transition: 1s;
+}
+.box-item:hover span{
+  color: navy;
 }
 
 @media (min-width: 768px) {

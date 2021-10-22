@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task</title>
+
+	<!-- bootstrap css cdn -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<style type="text/css">
+		.primary-background{
+			background-color: #4834DF;
+		}
+	</style>
+	<script type="text/javascript">
+		function changeColor(cardid){
+
+			document.getElementById(cardid).style.background = "#4834DF";
+		}
+		function backColor(cardid){
+			document.getElementById(cardid).style.background = "white";
+		}
+	</script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-primary navbar-dark justify-content-end">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" href="#">About Us</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Features</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Pricing</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Contact</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Login</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div class="container-fluid p-0 m-0">
+		<div class="jumbotron bg-primary text-white">
+			<div class="container">
+
+				<img src="Group25.png" class="float-right" style="max-block-size: 260px;">
+
+				<h3>Create, market & run your referal program all in one place.</h3><br>
+				<div class="container text-center">
+					<button class="btn btn-outline-light btn-md">Know More</button>
+					<button class="btn btn-outline-light btn-md">View Demo</button>
+				</div>
+			</div>
+			<div></div>
+		</div>
+	</div>
+
+	<br><br><br><br>
+
+
+	<div class="container">
+		<div class="row">
+			<div class="container text-center">
+				<h4 style="color: blue;">Our Features</h4>
+				<p>Our simple, proven method to grow sales through referrals.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="card "onmouseover="changeColor(this.id)" onmouseout="backColor(this.id)" id="cardcolor1">
+					<div class="card-body">
+						<div class="container text-center">
+							<img class="mx-auto bg-primary" src="create.png" height="100px" width="100px">
+							<h5 class="card-title">Create</h5>
+						</div>
+						<p class="card-text">We take you step by step to create your own unique referral program from start to finish <b>all on the platform</b>.</p>
+						<ul>
+							<li>
+								Calculate and craft others that work for your unique business model
+							</li>
+							<li>
+								Create offers with simple landing pages
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card" onmouseover="changeColor(this.id)" onmouseout="backColor(this.id)" id="cardcolor2">
+					<div class="card-body">
+						<div class="container text-center">
+							<img class="mx-auto" src="project.png" height="100px" width="100px">
+							<h5 class="card-title">Launch</h5>
+						</div>
+						<p class="card-text">Our platform is built to deliver big results with little efforts, Launch your referral program ready to generate new customers <b>within 2 hours.</b></p>
+						<ul>
+							<li>
+								Upload emails of your potential referral sources
+							</li>
+							<li>
+								Invite and welcome your referral sources
+							</li>
+							<li>
+								Distribute your offers
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card" onmouseover="changeColor(this.id)" onmouseout="backColor(this.id)" id="cardcolor3">
+					<div class="card-body">
+						<div class="container text-center">
+							<img class="mx-auto" src="graph.png" height="100px" width="100px">
+							<h5 class="card-title">Grow</h5>
+						</div>
+						<p class="card-text">We are here to build with you. We know the power of this tool and we're excited to help you generate <b>NEW referral sources.</b></p>
+						<ul>
+							<li>
+								Track your referrals
+							</li>
+							<li>
+								Update your referral sources on new offers
+							</li>
+							<li>
+								Optimize your offers to maximize revenue
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br><br>
+	<div class="container-fluid bg-light p-0" style="background-color: #8395A7;">
+		<div class="row">
+
+			<div class="col">
+				<div class="container" style="padding: 50px;">
+					<h3>For ALL Solopreneurs, Entrepreneurs and Small Business Owners - NEW!</h3>
+					<p>Perfect for learning how to setup a referral program for ANY business</p>
+					<button class="btn btn-primary btn-md">Get Stated</button>
+				</div>
+			</div>
+			<div class="col">
+				<div class="container float-right my-3" style="max-width: 450px;">
+					<div class="card">
+						<div class="card-body">
+							<div class="container text-center">
+
+								<h5 style="color: blue;">Sign up today and get your first 90 days FREE.</h5>
+								<p>Stay tuned for updates along the way!</p>
+							</div>
+							<div class="form">
+								<form action="" method="post">
+									<div class="form-group">
+										<input class="form-control" type="text" name="username" required placeholder="Name">
+									</div>
+									<div class="form-group">
+										<input class="form-control" type="text" name="email" required placeholder="Email">
+									</div>
+									<div class="form-group">
+										<input class="form-control" type="text" name="businessName" required placeholder="Business Name">
+									</div>
+									<div class="container text-center">
+										<button type="submit" class="btn btn-primary">Sign Up</button>
+									</div>
+								</form>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container-fluid" style="background-color: #DAE0E2; padding-top: 20px;">
+		<div class="row">
+			<div class="container text-center">
+				<h3 style="color: blue;">Contact Us</h3>
+				<p>If you have any questions, get in touch with us here.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="card" style="max-block-size: 540px;">
+					<div class="card-body">
+						<div class="container text-center">
+							<h4 style="color: blue;">Let's get in touch!</h4>
+						</div>
+						<p>Please let us know what questions you have below and we will be in touch within 24 hours.</p>
+
+						<div class="form">
+							<form action="" method="post">
+								<div class="form-group">
+									<input class="form-control" type="text" name="username" required placeholder="Name">
+								</div>
+								<div class="form-group">
+									<input class="form-control" type="text" name="email" required placeholder="Email">
+								</div>
+								<div class="form-group">
+									<input class="form-control" type="number" name="phoneNumber" required placeholder="Phone Number">
+								</div>
+								<div class="form-group">
+									<input class="form-control" type="text" name="businessName" required placeholder="Message">
+								</div>
+								<div class="container text-center">
+									<button type="submit" class="btn btn-primary">Submit</button>
+								</div>
+							</form>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="card" style="max-block-size: 540px;">
+					<div class="card-body">
+
+						<div id="googleMap" style="width:100%;height:118px;"></div>
+
+						<script>
+						function myMap() {
+						var mapProp= {
+						  center:new google.maps.LatLng(51.508742,-0.120850),
+						  zoom:5,
+						};
+						var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+						}
+						</script>
+
+						<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz2c4OZHsYQrJhz5MFBukxDSGzOb7r1UM&callback=myMap"></script>
+
+
+					<br>
+						<h5 class="card-title">Address</h5>
+						<p class="card-text">123 Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.</p>
+						<h5 class="card-title">Call us on</h5>
+						<p class="card-text">0123456789</p>
+						<h5 class="card-title">Email us</h5>
+						<p class="card-text">info@test.com</p>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<div class="container-fluid text-center" style="background-color: #2475B0;">
+		<p>Copyright 2020 Test. All Rights Reserved.</p>
+	</div>
+
+</body>
+</html>

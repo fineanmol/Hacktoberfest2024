@@ -1,0 +1,90 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    width: 400px;
+    height: 550px;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.shape{
+    width: 250px;
+    height: 250px;
+    background-color: deeppink;
+    position: relative;
+}
+
+.handle{
+    position: absolute;
+    width: 265px;
+    height: 5px;
+    background-color: black;
+}
+
+#top{
+    top: -7px;
+    left: -5.5px;
+}
+
+#left{
+    top: 120.5px;
+    transform: rotate(270deg);
+    left: -135px;
+}
+
+#right{
+    top: 120.5px;
+    transform: rotate(270deg);
+    left: 122px;
+    color: orange;
+}
+
+#bottom{
+    bottom: -5px;
+    left: -5.5px;
+}
+
+input[type=range]::-webkit-slider-runnable-track{
+    cursor: pointer;
+    background-color: pink;
+    border-radius: 5px;
+    height: 10px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    background-color: orange;
+    color: aliceblue;
+    cursor: hand;
+    margin-top: -3px;
+}
+
+/* Css Result */
+h4{
+    text-shadow: 0.2px 0.2px 14px deeppink;
+}
+.css{
+    background-color: pink;
+    padding: 20px 40px;
+    width: 350px;
+    height: 130px;
+}
+
+

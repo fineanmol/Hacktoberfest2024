@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<HEAD>
+	<TITLE>ArteDesign</TITLE>
+	<META CHARSET="UTF-8">
+	<LINK REL="STYLESHEET" HREF="estilo.css" />
+	<LINK REL="SHORTCUT ICON" href="ed.png">
+	<!-- Start WOWSlider.com HEAD section -->
+	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+	<script type="text/javascript" src="engine1/jquery.js"></script>
+	<!-- End WOWSlider.com HEAD section -->
+</HEAD>
+
+<BODY>
+	<div class="cabecalho">
+		<div><img src="ad.png" width="120" height="70" /></div>
+		<div class="menu">
+			<ul>
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="empresa.html">LAYOUT</a></LI>
+				<li><a href="servicos.html">SITES PRONTOS</a></LI>
+				<li><a href="curso.html">CURSOS PHOTOSHOP</a></LI>
+				<li><a href="login css/index.html">ENTRAR</a></LI>
+				<li><a href="cadastro 1/index.html">CADASTRE-SE</a></LI>
+			</ul>
+		</div>
+	</div>
+	<div class="carrousel">
+		<br> <!-- Start WOWSlider.com BODY section -->
+		<div id="wowslider-container1">
+			<div class="ws_images">
+				<ul>
+					<li><img src="data1/images/1.jpg" alt="" title="" id="wows1_0" /></li>
+					<li><a href="http://wowslider.net"><img src="data1/images/3.jpg" alt="jquery slider" title=""
+								id="wows1_1" /></a></li>
+					<li><img src="data1/images/4.jpg" alt="" title="" id="wows1_2" /></li>
+				</ul>
+			</div>
+			<div class="ws_bullets">
+				<div>
+					<a href="#" title=""><span><img src="data1/tooltips/1.jpg" alt="" />1</span></a>
+					<a href="#" title=""><span><img src="data1/tooltips/3.jpg" alt="" />2</span></a>
+					<a href="#" title=""><span><img src="data1/tooltips/4.jpg" alt="" />3</span></a>
+				</div>
+			</div>
+			<div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.com">wowslider</a> by
+				WOWSlider.com v8.7</div>
+			<div class="ws_shadow"></div>
+		</div>
+		<script type="text/javascript" src="engine1/wowslider.js"></script>
+		<script type="text/javascript" src="engine1/script.js"></script>
+		<!-- End WOWSlider.com BODY section -->
+		</br>
+	</div>
+
+	<div class="mensagem">
+		Seja Bem Vindo!
+		<div class="frase">
+			Quinze anos atrás, as empresas competiam em preço. Hoje em qualidade. Amanhã será no design.
+		</div>
+	</div>
+
+	<div class="servicos">
+		<div class="item">
+			<center><img src=" " />
+				<p>Banners</p>
+				<hr><br>
+			</center><br>
+			O banner é uma forma comum na Internet, muito usado em propagandas para divulgação de sites que pagam por
+			sua inclusão
+		</div>
+		<div class="item">
+			<center><img src=" " />
+				<p>Logomarca</p>
+				<hr><br>
+			</center><br>
+			Logomarca, ou simplismente logo, é a representação gráfica do nome de uma empresa ou marca, que determina a
+			sua identidade visual e tem como objetivo facilitar o seu reconhecimento.
+		</div>
+		<div class="item">
+			<center><img src=" " />
+				<p>Web design</p>
+				<hr><br>
+			</center><br>
+			O web design é uma extensão da prática do design gráfico, onde o foco do projeto é a criação de web sites.
+		</div>
+	</div>
+	<div class="contato">
+		<div>Nossa Localização...
+			<div style="overflow:hidden;width: 700px;position: relative;"><iframe width="650" height="350" 
+				src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=Rua%20Francisco%20Valzaki%2C51%20Vila%20Rosa+(Etec%20Dans)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed"
+					frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe> 
+				<div
+					style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;">
+					<small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by <a
+							href="https://embedgooglemaps.com/fr/">https://embedgooglemaps.com/fr/</a> & <a
+							href="https://lasagradafamiliatickets.de/la-sagrada-familia-ticket/">https://lasagradafamiliatickets.de/la-sagrada-familia-ticket/</a></small>
+				</div> 
+				<style>
+					#gmap_canvas img {
+						max-width: none !important;
+						background: none !important
+					}
+				</style>
+			</div><br />
+		</div>
+	</div>
+	<div class="rodape">
+		<div><img src="ad.png" width="140" height="90" /></div>
+		<div>
+			<p>Rua Francisco Valzzachi, 55<br>Vila Rosa<br>Taquaritinga-sp</p>
+		</div>
+		<div>
+			<p>artedesign@gmail.com</p>
+		</div>
+		<div>
+			<p>+55(16) 3253-4562</p>
+		</div>
+	</div>
+
+	<div class="copyright">
+		<div class="copyright1">
+			© 2019. ArteDesign, todos os direitos reservados.
+		</div>
+		<div class="copydesign">
+			©WebDesign
+
+		</div>
+
+
+
+</BODY>
+
+</HTML>

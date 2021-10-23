@@ -78,7 +78,7 @@ body::-webkit-scrollbar-track {
 nav {
     position: relative;
     width: 100vw;
-    height: 50px;
+    height: 55px;
     line-height: 50px;
     padding: 0 30px;
     display: flex;
@@ -113,20 +113,25 @@ nav ul:last-child {
 
 nav ul:last-child li {
     margin-left: 10px;
+    padding: 0px  10px;
 }
 
 nav ul:last-child li>a {
     text-decoration: none;
     color: white;
+    font-weight:600 ;
 }
 
 nav ul:last-child li a.active {
     color: #F7717D;
 }
 
+
 nav ul:last-child li>a:hover {
-    border-bottom: 1px solid #F7717D;
-    padding-bottom: 2px;
+    /*border-bottom: 1px solid #094ba1;*/
+    background-color: gray;
+    border-radius: 10px;
+    padding: 8px 10px;
 }
 
 .banner {
@@ -250,6 +255,7 @@ nav ul:last-child li>a:hover {
         font-size: 1.2em;
         z-index: 1;
     }
+    
     .header-container.toggle .banner {
         padding-top: 80px;
     }
@@ -610,9 +616,12 @@ button:hover .button-text {
 }
 
 .article-projects .right .right-content {
-    background: var(--blue);
+   
     transform: rotate(0deg);
     transform: translateY(-20px);
+    background-image: url(img2.jpg);
+    background-size: cover;
+    width: 100%;
 }
 
 /* projects */
@@ -630,7 +639,8 @@ button:hover .button-text {
 }
 
 .form-part .left {
-    background-image: url('https://i.pinimg.com/originals/fd/e2/4b/fde24b89a56e6bbf894cb01699a1728c.gif');
+    /*background-image: url('https://i.pinimg.com/originals/fd/e2/4b/fde24b89a56e6bbf894cb01699a1728c.gif');*/
+    background-image: url(img9.png);
     width: 40vw;
     background-repeat: no-repeat;
     background-position: center;
@@ -651,6 +661,7 @@ button:hover .button-text {
 .contact-form input, .contact-form textarea {
     padding: 10px;
     width: 100%;
+    
     outline: none;
     border: none;
     border-radius: 3px;
@@ -658,6 +669,7 @@ button:hover .button-text {
 
 .contact-form textarea {
     resize: vertical;
+    height: 100px;
 }
 
 .contact-form button {
@@ -684,7 +696,7 @@ button:hover .button-text {
 
 footer {
     width: 100vw;
-    padding: 30px;
+    padding: 10px;
     background-color: #363636;
     background-image: url("https://www.transparenttextures.com/patterns/checkered-pattern.png");
     color: #ffffff;

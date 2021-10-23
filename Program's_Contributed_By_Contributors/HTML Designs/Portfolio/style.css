@@ -55,7 +55,7 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
     background-color: var(--orange);
-    border: 1px solid #351441e0;
+    border: 1px solid  #363636;
     border-radius: 10px;
 }
 
@@ -358,7 +358,7 @@ article {
 }
 
 .container {
-    background: #1f1f1f;
+    background:  #363636;
     position: absolute;
     top: 50%;
     left: 50%;

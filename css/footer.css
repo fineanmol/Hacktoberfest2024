@@ -4,7 +4,7 @@
     bottom: 0;
     width: 100vw;
     /* height: 100px; */
-    background: linear-gradient(to left, #FF0844, #FF4563);
+    background: linear-gradient(to left, #e6e6fa, #FF4563);
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     color: white;
     text-align: center;
@@ -17,7 +17,7 @@
 }
 
 .footer-icon {
-    color: #e6e6fa;
+    color: #FF0844;
 }
 
 .social-icons {
@@ -53,7 +53,7 @@
     cursor: pointer;
     border-radius: 50%;
     border: none;
-    background-color: #FF0844;
+    background-color:#FF4563 ;
     padding: 6px 10px 10px;
     z-index: 1001;
     animation: backToTopShowAnim .3s;

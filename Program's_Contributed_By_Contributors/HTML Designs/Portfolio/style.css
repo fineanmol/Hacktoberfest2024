@@ -15,25 +15,12 @@
     box-sizing: border-box;
 }
 
-html:focus-within {
-    scroll-behavior: smooth;
-}
 
 input, button, textarea, select {
     font: inherit;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    html:focus-within {
-        scroll-behavior: auto;
-    }
-    *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
+
 
 ::selection {
     background-color: #F7717D;
@@ -87,13 +74,7 @@ nav {
     /* transition: all 2s ease; */
 }
 
-nav.scroll {
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    background: #363636;
-    border-bottom: 1px solid rgba( 255, 255, 255, 0.18);
-}
+
 
 nav ul {
     list-style: none;
@@ -124,10 +105,6 @@ nav ul:last-child li a.active {
     color: #F7717D;
 }
 
-nav ul:last-child li>a:hover {
-    border-bottom: 1px solid #F7717D;
-    padding-bottom: 2px;
-}
 
 .banner {
     height: 100%;
@@ -164,17 +141,6 @@ nav ul:last-child li>a:hover {
     height: 91.7%;
 }
 
-.banner .left span:nth-child(2) {
-    font-size: 3.5em;
-    text-align: center;
-    margin-top: 0px;
-    font-weight: 200;
-}
-
-.banner .left span:nth-child(3) {
-    font-weight: 200;
-    margin-bottom: 20px;
-}
 
 #toggle-nav, #mobile-icons {
     display: none;
@@ -223,42 +189,10 @@ nav ul:last-child li>a:hover {
     #mobile-icons {
         display: block;
     }
-    .header-container.toggle nav {
-        width: 100vw;
-        height: 100px;
-        transition: height .5s ease;
-        background: var(--black);
-    }
-    .header-container.toggle nav ul:first-child, .header-container.toggle nav ul:nth-child(2) {
-        z-index: 2;
-    }
-    .header-container.toggle nav ul:last-child {
-        opacity: 1;
-        top: 60px;
-        left: 0;
-        position: absolute;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        height: 100vh;
-        transition: top .5s ease;
-        background: var(--black);
-        background-image: url('./assets/nav_bg.svg');
-        background-position: center;
-        background-size: cover;
-        font-size: 1.2em;
-        z-index: 1;
-    }
-    .header-container.toggle .banner {
-        padding-top: 80px;
-    }
+   
     /* article ke andar */
     .tech-list {
         text-align: center;
-    }
-    .tech-list .tech-wrapper {
-        /*justify-content: center !important;*/
     }
     .tech-list .tech-wrapper .tech-list-content {
         min-width: 110px !important;
@@ -417,26 +351,6 @@ article {
     animation: zoomer-2 2s 0.3500175009s ease infinite alternate;
 }
 
-@keyframes zoomer {
-    to {
-        transform: scale(1) rotate(360deg);
-        border-top-left-radius: 40%;
-        border-bottom-right-radius: 40%;
-    }
-}
-
-@keyframes zoomer-2 {
-    from {
-        transform: translate(-50%, -50%) scale(0);
-        opacity: 0;
-        letter-spacing: 1px;
-    }
-    to {
-        transform: translate(-50%, -50%) scale(1.01);
-        opacity: 1;
-        letter-spacing: 5px;
-    }
-}
 
 /* LoadingContainer */
 
@@ -522,28 +436,14 @@ button.learn-more .button-text {
     text-transform: uppercase;
 }
 
-button:hover .circle {
-    width: 100%;
-}
 
-button:hover .circle .icon.arrow {
-    background: #fff;
-    transform: translate(1rem, 0);
-}
 
-button:hover .button-text {
-    color: #fff;
-}
 
 .btn-container {
     display: flex;
     justify-content: center;
 }
 
-.btn-container span {
-    margin: 0;
-    line-height: 0;
-}
 
 /* Learn More btn */
 
@@ -568,10 +468,6 @@ button:hover .button-text {
     transition: color, border 0.2s ease;
 }
 
-.socials a i:hover {
-    color: white;
-    border: 2px solid white;
-}
 
 /* projects  */
 
@@ -672,10 +568,6 @@ button:hover .button-text {
 .contact-form button span:last-child {
     margin-left: 7px;
     transition: margin-left 0.5s ease;
-}
-
-.contact-form button:hover span:last-child {
-    margin-left: 13px;
 }
 
 /* contact form  */

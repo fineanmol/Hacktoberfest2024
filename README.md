@@ -1,5 +1,5 @@
-
-# Hacktoberfest ([Live Website](https://fineanmol.github.io/Hacktoberfest2021/Contributors.html))
+Hacktoberfest-2021
+# Hacktoberfest([Live Website](https://fineanmol.github.io/Hacktoberfest2021/Contributors.html))
 
 **This is a beginner-friendly project to help you get started with your
 [hacktoberfest](https://hacktoberfest.digitalocean.com/). If you don't
@@ -112,6 +112,15 @@ For more information on syncing forks [read this article from Github](https://he
   - It is from 1st october to 31st october 2021...
 - What is the event for?
   - For the open source community engagement
+
+# java oops concept
+In this page, we will learn about the basics of OOPs. Object-Oriented Programming is a paradigm that provides many concepts, such as inheritance, data binding, polymorphism, etc.
+
+Simula is considered the first object-oriented programming language. The programming paradigm where everything is represented as an object is known as a truly object-oriented programming language.
+
+Smalltalk is considered the first truly object-oriented programming language.
+
+The popular object-oriented languages are Java, C#, PHP, Python, C++, etc.
 
 
 

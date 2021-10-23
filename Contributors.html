@@ -16,6 +16,11 @@
   <meta http-equiv="Expires" content="0">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Expires" content="0">
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <meta name="description"
     content="This is a static website serving as a beginner friendly project to help developers get started with hacktoberfest -Gateway to open source.">
@@ -43,7 +48,6 @@
   <link rel="stylesheet" href="css/explosion.css">
   <link rel="stylesheet" href="./css/terminal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/d9f7ec7b29.js" crossorigin="anonymous"></script>
   <title>Hacktoberfest 2021 - Contributors</title>
 
@@ -54,7 +58,6 @@
 
 
   <!-- Back-to-top Button -->
-
   <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-double-up"></i></button>
   <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
 
@@ -96,17 +99,30 @@
   </nav>
   <div class="content">
     <div class="container">
-      <div class="titleContainer">
-        <span class="heading">CONTRIBUTORS </span>
-        <div class="heart"></div>
-        <p class=" rubberBand delay-4s">Add yourself to the list if you contribute.</p>
+      <span class="heading">CONTRIBUTORS </span>
+
+      <div class="heart"></div>
+      <!-- <label class="theme-switch" for="checkbox">
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun"
+          viewBox="0 0 16 16">
+          <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+        </svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon"
+          viewBox="0 0 16 16">
+          <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z" />
+        </svg>
+
+        <input type="checkbox" class="checkbox" id="checkbox" />
+
+        <div class="slider round"></div>
+      </label> -->
+      <div class="tdnn">
+        <div class="moon">
+        </div>
       </div>
-      <div class="iconContainer">
-        <span class="tdnn">
-          <div class="moon">
-          </div>
-        </span>
-      </div>
+
       <div class="box mx-auto">
 
 
@@ -341,11 +357,16 @@
       <a class=*box-item" href="https://github.com/mariosamaaa"><span>mArio</span><a>
         <a class="box-item" href="https://github.com/TahuTech"><span>Nur Ali Sholikhin</span></a>
         <a class="box-item" href="https://github.com/alishaac"><span>Alisha Chauhan</span></a>
+
+      <p class=" rubberBand delay-4s">Add yourself to the list if you contribute.</p>
+      <hr style="width:80%">
+
     </div>
     <div class="box mx-auto">
 
 
       <!-- Add to the bottom of the list -->
+
       <a class="box-item" href="https://github.com/fineanmol"><span>Anmol Agarwal</span></a>
       <a class="box-item" href="https://github.com/Amitava123"><span>Amitava Mitra</span></a>
       <a class="box-item" href="https://github.com/philson-philip"><span>Philson Philip</span></a>
@@ -368,15 +389,11 @@
       <a class="box-item" href="https://github.com/nnishad"><span>Nikhil Nishad</span></a>
       <a class="box-item" href="https://github.com/ShagiG"><span>ShagiGanesh</span></a>
       <a class="box-item" href="https://github.com/hidalgob"><span>Bruno Hidalgo</span></a>
+      <a class="box-item" href="https://github.com/punitsakre23"><span>Punit Sakre</span></a>
       <a class="box-item" href="https://github.com/dimitrisz123"><span>Jim Zervas</span></a>
-      <a class="box-item" href="https://github.com/proghead00"><span>Susnata Goswami</span></a>
-      <a class="box-item" href="https://github.com/gayathribuddhika"><span>Gayathri Buddhika</span></a>
-      <a class="box-item" href="https://github.com/rajneeshk94"><span>Rajneesh Khare</span></a>
-      <a class="box-item" href="https://github.com/milos5593"><span>Milos Vujinic</span></a>
-      <a class="box-item" href="https://github.com/senshiii"><span>Sayan Das</span></a>
-      <a class="box-item" href="https://github.com/Shagufta08"><span>Shagufta Iqbal</span></a>
       <a class="box-item" href="https://github.com/ishgary"><span>Ishant Garg</span></a>
       <a class="box-item" href="https://github.com/naman74"><span>Naman</span></a>
+      <a class="box-item" href="https://github.com/aakashjha017"><span>Aakash Jha</span></a>
       <a class="box-item" href="https://github.com/Sauvic016"><span>Sauvic P Choudhury </span></a>
       <a class="box-item" href="https://github.com/panchadeep"><span>Panchadeep Mazumder</span></a>
       <a class="box-item" href="https://github.com/savarbhasin"><span>Savar Bhasin</span></a>
@@ -388,6 +405,7 @@
       <a class="box-item" href="https://github.com/aman339"><span>Aman Kumar Choudhary</span></a>
       <a class="box-item" href="https://github.com/DataCrusade1999"><span>Ashutosh Pandey</span></a>
       <a class="box-item" href="https://github.com/zomsik"><span>Tomasz Wiejak</span></a>
+      <a class="box-item" href="https://github.com/GauthamG2"><span>Gautham Sritharan</span></a>
       <a class="box-item" href="https://github.com/elijahdaniel"><span>Elijah Paminsan</span></a>
       <a class="box-item" href="https://github.com/evergreen2001"><span>Ido Evergreen</span></a>
       <a class="box-item" href="https://github.com/Zaheudev"><span>Zaharia Iulian</span></a>
@@ -443,7 +461,7 @@
       <a class="box-item" href="https://github.com/osamakhan552"><span>Osama Khan</span></a>
       <a class="box-item" href="https://github.com/ShreyaChopra13"><span>Shreya Chopra</span></a>
       <a class="box-item" href="https://github.com/dynle"><span>Dynle</span></a>
-       <a class="box-item" href="https://github.com/20manas"><span>Manas Khurana</span></a>
+      <a class="box-item" href="https://github.com/20manas"><span>Manas Khurana</span></a>
       <a class="box-item" href="https://github.com/manigedit"><span>Manish Kumar</span></a>
       <a class="box-item" href="https://github.com/Triben-Choudhary"><span>Triben Choudhary</span></a>
       <a class="box-item" href="https://github.com/Starfire1853"><span>Lynn Nguyen</span></a>
@@ -538,14 +556,17 @@
       <a class="box-item" href="https://github.com/arunim-iiitlCS"><span>Arunim Singhal</span></a>
       <a class="box-item" href="https://github.com/ahad-abd"><span>Abdul Ahad</span></a>
       <a class="box-item" href="https://github.com/MFR414"><span>M Firmansyah Rifai</span></a>
-      <a class="box-item" href="https://github.com/AdityaSawant21"><span>Aditya Sawant</span></a>
-      <a class="box-item" href="https://github.com/kevadamar"><span>Keva Damar Galih</span></a>
       <a class="box-item" href="https://github.com/a-ayush19"><span>Ayush Awasthi</span></a>
-      <a class="box-item" href="https://github.com/SamarthSawhney"><span>Samarth Sawhney</span></a>
       <a class="box-item" href="https://github.com/highflyer910"><span>Thea M.</span></a>
       <a class="box-item" href="https://github.com/alfaniM"><span>M. Aulia Alfani</span></a>
       <a class="box-item" href="https://github.com/soumyajit1999"><span>Soumyajit Sen</span></a>
       <a class="box-item" href="https://github.com/vishnuramv"><span>Vishnu Ram V</span></a>
+      <a class="box-item" href="https://github.com/khushi-mishra0408"><span>Khushi Mishra</span></a>
+      <a class="box-item" href="https://github.com/SayantanMaiti"><span>Sayantan Maiti</span></a>
+      <a class="box-item" href="https://github.com/napster-ansh"><span>Ansh Jain</span></a>
+      <a class="box-item" href="https://github.com/s0v13tl3m0n"><span>s0v13tl3m0n</span></a>
+      <a class="box-item" href="https://github.com/smriti2411"><span>Smriti Gupta</span></a>
+      <a class="box-item" href="https://github.com/davidtheweiss"><span>David Weiss</span></a>
       <a class="box-item" href="https://github.com/nyctonio"><span>Ritesh Kumar</span></a>
       <a class="box-item" href="https://github.com/geeky01adarsh"><span>Adarsh Navneet Sinha</span></a>
       <a class="box-item" href="https://github.com/RAJASETHI"><span>Raja Sethi</span></a>
@@ -588,26 +609,63 @@
       <a class="box-item" href="https://github.com/H-M-Noman123"><span>H-M-Noman123</span></a>
       <a class="box-item" href="https://github.com/barunipriyats"><span>Baruni Priya T S</span></a>
       <a class="box-item" href="https://github.com/anmolg84"><span>Anmol Gupta</span></a>
-      <a class="box-item" href="https://github.com/khushi-mishra0408"><span>Khushi Mishra</span></a>
-      <a class="box-item" href="https://github.com/SayantanMaiti"><span>Sayantan Maiti</span></a>
-      <a class="box-item" href="https://github.com/Vishvesh-Codehunt"><span>Vishvesh Patel</span></a>
-      <a class="box-item" href="https://github.com/napster-ansh"><span>Ansh Jain</span></a>
-      <a class="box-item" href="https://github.com/s0v13tl3m0n"><span>s0v13tl3m0n</span></a>
-      <a class="box-item" href="https://github.com/smriti2411"><span>Smriti Gupta</span></a>
-      <a class="box-item" href="https://github.com/davidtheweiss"><span>David Weiss</span></a>
       <a class="box-item" href="https://github.com/gulshanjakhon"><span>Gulshan Jakhon</span></a>
       <a class="box-item" href="https://github.com/Sonalanand102"><span>Sonal Anand</span></a>
-    <a class="box-item" href="https://github.com/HarineM"><span>Harine Murugan</span></a>
-    <a class="box-item" href="https://github.com/diwuracreatives"><span>Diwura Creatives</span></a>
-    <a class="box-item" href="https://github.com/Vishvesh-Codehunt"><span>Vishvesh Patel</span></a>
+      <a class="box-item" href="https://github.com/HarineM"><span>Harine Murugan</span></a>
+      <a class="box-item" href="https://github.com/diwuracreatives"><span>Diwura Creatives</span></a>
+      <a class="box-item" href="https://github.com/Vishvesh-Codehunt"><span>Vishvesh Patel</span></a>
       <a class="box-item" href="https://github.com/vaishali8799"><span>Vaishali Kasondhan</span></a>
-    <a class="box-item" href="https://github.com/Tripti19-Rao"><span>Tripti</span></a>
-     <a class="box-item" href="https://github.com/zedutra"><span>Jose Vitor Dutra</span></a>
-    <a class="box-item" href="https://github.com/Meenu-github"><span>Meenu Singh</span></a>
-    <a class="box-item" href="https://github.com/Japoncio3k"><span>Gustavo Kamihara</span></a>
+      <a class="box-item" href="https://github.com/Tripti19-Rao"><span>Tripti</span></a>
+      <a class="box-item" href="https://github.com/nimishph"><span>Nimish Ph</span></a>
+      <a class="box-item" href="https://github.com/code08-ind"><span>Aryan Garg</span></a>
+      <a class="box-item" href="https://github.com/mariabarkouzou"><span>Maria Barkouzou</span></a>
+      <a class="box-item" href="https://github.com/andrianfaa"><span>Andrian Fadhilla</span></a>
+      <a class="box-item" href="https://github.com/proghead00"><span>Susnata Goswami</span></a>
+      <a class="box-item" href="https://github.com/gayathribuddhika"><span>Gayathri Buddhika</span></a>
+      <a class="box-item" href="https://github.com/rajneeshk94"><span>Rajneesh Khare</span></a>
+      <a class="box-item" href="https://github.com/rashmi-thakurr"><span>Rashmi Thakur</span></a>
+      <a class="box-item" href="https://github.com/milos5593"><span>Milos Vujinic</span></a>
+      <a class="box-item" href="https://github.com/senshiii"><span>Sayan Das</span></a>
+      <a class="box-item" href="https://github.com/Shagufta08"><span>Shagufta Iqbal</span></a>
+      <a class="box-item" href="https://github.com/zedutra"><span>Jose Vitor Dutra</span></a>
+      <a class="box-item" href="https://github.com/Meenu-github"><span>Meenu Singh</span></a>
+      <a class="box-item" href="https://github.com/Japoncio3k"><span>Gustavo Kamihara</span></a>
+      <a class="box-item" href="https://github.com/anilectjose"><span>Anilect Jose</span></a>
+      <a class="box-item" href="https://github.com/jyoti88"><span>Jyoti88</span></a>
+      <a class="box-item" href="https://github.com/ankitkumar5358"><span>Ankit Kumar</span></a>
+      <a class="box-item" href="https://github.com/GraniteMask"><span>Ratnadeep Das Choudhury</span></a>
+      <a class="box-item" href="https://github.com/Vaibhavwani11"><span>Vaibhav Wani</span></a>
+      <a class="box-item" href="https://github.com/Smriti129"><span>Smriti Srivastava</span></a>
+      <a class="box-item" href="https://github.com/venkateshtantravahi"><span>Venkatesh Tantravahi</span></a>
+      <a class="box-item" href="https://github.com/sarasana"><span>Sara</span></a>
+      <a class="box-item" href="https://github.com/mctraore"><span>MC</span></a>
+      <a class="box-item" href="https://github.com/tmttan03"><span>Theressa</span></a>
+      <a class="box-item" href="https://github.com/Summer-source"><span>Naushad Alam</span></a>
+      <a class="box-item" href="https://github.com/GoGi2712"><span>Ankita Mandal</span></a>
+      <a class="box-item" href="https://github.com/sathish-saminathan"><span>Sathish kumar Saminathan</span></a>
+      <a class="box-item" href="https://github.com/NIRMAL122"><span>Nirmal Singh</span></a>
+      <a class="box-item" href="https://github.com/caspero-62"><span>Uchechukwu Nwafor</span></a>
+      <a class="box-item" href="https://github.com/YogishaNiraula"><span>Yogisha Niraula</span></a>
+    <a class="box-item" href="https://github.com/Saurav017"><span>Saurav Purohit</span></a>
+     <a class="box-item" href="https://github.com/JuktaGoyari"><span>Jukta Goyari</span></a>
+    <a class="box-item" href="https://github.com/mritunjay7065"><span>Mritunjay Kumar</span></a>
+     <a class="box-item" href="https://github.com/praveenbhardwaj"><span>Praveen Bhardwaj</span></a>
+    <a class="box-item" href="https://github.com/caspero-62"><span>Ruben Kharel</span></a>
+      <a class="box-item" href="https://github.com/ianc1234"><span>Ian Cao</span></a>
+     <a class="box-item" href="https://github.com/sandwichleham"><span>Finn Haggen</span></a>
+     <a class="box-item" href="https://github.com/jyoti88"><span>Jyoti88</span></a>
+      <a class="box-item" href="https://github.com/bowo-anakdesa"><span>Sumitro Aji Prabowo</span></a>
+    <a class="box-item" href="https://github.com/zedutra"><span>Jose Vitor Dutra</span></a>
+      <a class="box-item" href="https://github.com/Meenu-github"><span>Meenu Singh</span></a>
+      <a class="box-item" href="https://github.com/Japoncio3k"><span>Gustavo Kamihara</span></a>
+      <a class="box-item" href="https://github.com/tallCoder02"><span>Emmanuel C. Jemeni</span></a>
+
+
 
 
       <!-- Please maintain the alignment... -->
+
+
 
 
 
@@ -629,7 +687,11 @@
       </g>
     </svg>
   </button>
-
+<footer class="footer mt-auto py-3 bg-light">
+  <div class="container">
+    <span class="text-muted">This Project is participating in Hacktoberfest.</span>
+  </div>
+</footer>
   <script>
     document.querySelectorAll('a.box-item').forEach(con => {
       console.log(con.href)

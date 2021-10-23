@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Radius Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="shape">
+            <input class="handle" id="top" type="range">
+            <input class="handle" id="left" type="range">
+            <input class="handle" id="bottom" type="range">
+            <input class="handle" id="right" type="range">
+        </div>
+         
+        <h4>Border Radius Property</h4>
+        
+        <div class="css">
+            <div class="border">border-top-left-radius: &nbsp;&nbsp;&nbsp; <span id="topLeft">0%</span></div>
+            <div class="border">border-top-right-radius: &nbsp;&nbsp;&nbsp;<span id="topRight">0%</span></div>
+            <div class="border">border-bottom-left-radius: &nbsp;&nbsp;&nbsp;<span id="bottomLeft">0%</span></div>
+            <div class="border">border-bottom-right-radius:&nbsp;&nbsp;<span id="bottomRight">0%</span></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

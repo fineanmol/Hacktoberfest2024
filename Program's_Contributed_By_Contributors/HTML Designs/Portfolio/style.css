@@ -42,7 +42,7 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
     background-color: var(--orange);
-    border: 1px solid #351441e0;
+    border: 1px solid  #363636;
     border-radius: 10px;
 }
 
@@ -65,7 +65,7 @@ body::-webkit-scrollbar-track {
 nav {
     position: relative;
     width: 100vw;
-    height: 50px;
+    height: 55px;
     line-height: 50px;
     padding: 0 30px;
     display: flex;
@@ -94,15 +94,26 @@ nav ul:last-child {
 
 nav ul:last-child li {
     margin-left: 10px;
+    padding: 0px  10px;
 }
 
 nav ul:last-child li>a {
     text-decoration: none;
     color: white;
+    font-weight:600 ;
 }
 
 nav ul:last-child li a.active {
     color: #F7717D;
+}
+
+
+
+nav ul:last-child li>a:hover {
+    /*border-bottom: 1px solid #094ba1;*/
+    background-color: gray;
+    border-radius: 10px;
+    padding: 8px 10px;
 }
 
 
@@ -189,7 +200,39 @@ nav ul:last-child li a.active {
     #mobile-icons {
         display: block;
     }
-   
+
+    .header-container.toggle nav {
+        width: 100vw;
+        height: 100px;
+        transition: height .5s ease;
+        background: var(--black);
+    }
+    .header-container.toggle nav ul:first-child, .header-container.toggle nav ul:nth-child(2) {
+        z-index: 2;
+    }
+    .header-container.toggle nav ul:last-child {
+        opacity: 1;
+        top: 60px;
+        left: 0;
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        transition: top .5s ease;
+        background: var(--black);
+        background-image: url('./assets/nav_bg.svg');
+        background-position: center;
+        background-size: cover;
+        font-size: 1.2em;
+        z-index: 1;
+    }
+    
+    .header-container.toggle .banner {
+        padding-top: 80px;
+    }
+
     /* article ke andar */
     .tech-list {
         text-align: center;
@@ -286,7 +329,7 @@ article {
 }
 
 .container {
-    background: #1f1f1f;
+    background:  #363636;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -506,9 +549,12 @@ button.learn-more .button-text {
 }
 
 .article-projects .right .right-content {
-    background: var(--blue);
+   
     transform: rotate(0deg);
     transform: translateY(-20px);
+    background-image: url(img2.jpg);
+    background-size: cover;
+    width: 100%;
 }
 
 /* projects */
@@ -526,7 +572,8 @@ button.learn-more .button-text {
 }
 
 .form-part .left {
-    background-image: url('https://i.pinimg.com/originals/fd/e2/4b/fde24b89a56e6bbf894cb01699a1728c.gif');
+    /*background-image: url('https://i.pinimg.com/originals/fd/e2/4b/fde24b89a56e6bbf894cb01699a1728c.gif');*/
+    background-image: url(img9.png);
     width: 40vw;
     background-repeat: no-repeat;
     background-position: center;
@@ -547,6 +594,7 @@ button.learn-more .button-text {
 .contact-form input, .contact-form textarea {
     padding: 10px;
     width: 100%;
+    
     outline: none;
     border: none;
     border-radius: 3px;
@@ -554,6 +602,7 @@ button.learn-more .button-text {
 
 .contact-form textarea {
     resize: vertical;
+    height: 100px;
 }
 
 .contact-form button {
@@ -576,7 +625,7 @@ button.learn-more .button-text {
 
 footer {
     width: 100vw;
-    padding: 30px;
+    padding: 10px;
     background-color: #363636;
     background-image: url("https://www.transparenttextures.com/patterns/checkered-pattern.png");
     color: #ffffff;

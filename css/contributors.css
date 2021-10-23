@@ -93,25 +93,15 @@ body {
 }
 #back-to-top-btn:hover,
 #back-to-top-btn:focus {
-  background: 'transparent';
+  background: "transparent";
   border: 2px solid rgba(255, 255, 255, 0.2);
   transform: translateY(-7px);
   transition: 0.5s;
 }
 
-
 .container {
   position: relative;
   color: var(--container-text);
-  display: flex;
-}
-
-.titleContainer {
-  width: 88%;
-}
-
-.iconContainer {
-  margin-top: 10px;
 }
 
 canvas {
@@ -208,9 +198,8 @@ a:hover {
 .box-item:hover {
   color: #fff;
   letter-spacing: 2px;
-font-weight: bold;  
-transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
-
+  font-weight: bold;
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 .box-item::before {
@@ -246,7 +235,7 @@ transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 
 .box-item:hover::after {
   left: calc(0% - 10px);
-  
+
   transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
@@ -270,8 +259,9 @@ transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
   color: #fff;
 }
 
-.box-item:hover a span{
-letter-spacing: 4px;}
+.box-item:hover a span {
+  letter-spacing: 4px;
+}
 
 .box-item.different-color {
   background-color: #a7eded;

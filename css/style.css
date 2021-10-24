@@ -48,6 +48,8 @@ h4 {
 }
 .css {
   background-color: pink;
+  color: yellow;
+  text-align: center;
   padding: 20px 40px;
   width: 350px;
   height: 130px;

@@ -1,11 +1,11 @@
 const menu = {
   'Home': {
-    'text': 'Add you Name here',
-    'href': 'https://github.com/fineanmol/Hacktoberfest2k21/blob/master/Contributors.html'
+    'text': 'Add your Name here',
+    'href': 'https://github.com/fineanmol/Hacktoberfest2021/blob/master/Contributors.html'
   },
   'Contributors': {
     'text': 'Contributors',
-    'href': 'https://fineanmol.github.io/Hacktoberfest2k21/Contributors.html'
+    'href': 'https://fineanmol.github.io/Hacktoberfest2021/Contributors.html'
   },
   //'Others': {
     'Instagram': {

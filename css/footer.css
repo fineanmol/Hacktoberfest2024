@@ -14,7 +14,7 @@
   height: 25px;
 }
 .footer-icon {
-  color: #ff0844;
+  color: #ff229b;
 }
 #footer h3 span:hover {
   cursor: pointer;
@@ -23,6 +23,7 @@
 .hacktoberfest-image {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 80px;
 }
 #backToTop {

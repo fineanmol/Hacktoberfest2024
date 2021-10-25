@@ -46,7 +46,7 @@ def draw_function(event, x,y,flags,param):
 cv2.namedWindow('image')
 cv2.setMouseCallback('image',draw_function)
 
-while(1):
+while(1):  # while loop execution stops when condition is false.
 
     cv2.imshow("image",img)
     if (clicked):

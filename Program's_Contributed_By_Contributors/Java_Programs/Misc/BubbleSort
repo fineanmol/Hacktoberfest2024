@@ -1,0 +1,39 @@
+package hacktoberfest;
+
+//Bubble sort program 
+
+import java.util.Arrays;
+
+public class BubbleSortClass {
+
+static void bubbleSort(int array[]) {
+ int size = array.length;
+ 
+ // Loop each array element
+ for (int i = 0; i < size - 1; i++)
+ 
+   // Compare array elements in loop
+   for (int j = 0; j < size - i - 1; j++)
+
+     // Compare two adjacent elements
+     // Modify > to < to sort in descending order
+     if (array[j] > array[j + 1]) {
+
+       // Swap if elements are not in the intended order
+       int temp = array[j];
+       array[j] = array[j + 1];
+       array[j + 1] = temp;
+     }
+}
+
+public static void main(String args[]) {
+   
+ int[] inputData = { -4, 42, 12, 0, -52 };
+ 
+ // Call bubblesort method
+ BubbleSortClass.bubbleSort(inputData);
+ 
+ System.out.println("Bubble Sorted Array in Ascending Order::");
+ System.out.println(Arrays.toString(inputData));
+}
+}

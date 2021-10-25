@@ -1,0 +1,7 @@
+from collections import deque 
+n, q, k = list(map(int, input().split()))
+a = list(map(int, input().split()))
+d = deque(a)
+d.rotate(q)
+for i in range(k):
+    print(d[int(input())])

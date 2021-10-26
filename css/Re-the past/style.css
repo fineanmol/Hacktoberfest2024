@@ -1,0 +1,49 @@
+*{
+  box-sizing: border-box;
+}
+:root{
+  font-size: 3vw;
+}
+body{
+  background: #111;
+  color: #eee;
+  font-family: monospace;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  font-size: 3rem;
+}
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: all 1s;
+  animation: 2s linear 0s infinite roullete;
+}
+
+#cover{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.re-star{
+  display: flex;
+  flex-direction: row;
+
+}
+.suffix{
+  height: 1em;
+  overflow: hidden;
+  padding-right: 0.5em;
+}
+@keyframes roullete{
+  from{
+    transform: translateY(0);
+  }
+  to{
+    transform: translateY(-5.8em);
+  }
+}

@@ -1,5 +1,5 @@
-
-# Hacktoberfest ([Live Website](https://fineanmol.github.io/Hacktoberfest2021/Contributors.html))
+Hacktoberfest-2021
+# Hacktoberfest([Live Website](https://fineanmol.github.io/Hacktoberfest2021/Contributors.html))
 
 **This is a beginner-friendly project to help you get started with your
 [hacktoberfest](https://hacktoberfest.digitalocean.com/). If you don't
@@ -87,6 +87,11 @@ This will give you any eventual conflicts and allow you to easily solve them in 
 
 For more information on syncing forks [read this article from Github](https://help.github.com/articles/syncing-a-fork/).
 
+## Swags of Hacktoberfest:
+- Many of the candidates get attracted towards hacktoberfest to get swags . So, after 4 successfully merged pull request as for 2021 you will be eligible to get a Hacktoberfest T-shirt and Some stickers on your doorstep.
+ 
+     <li><B><p><img src="https://miro.medium.com/max/1050/1*4JctIO7irt8hFxBmTvUpiQ.jpeg" width="400" height="225" style="width: 400px; height: 225px;" alt="tshirt image"></a></p><p><img src="https://miro.medium.com/max/1050/1*jkffr74bq5RsQ_xqDhgqYQ.jpeg" width="400" height="225" style="width: 400px; height: 225px;" alt="stickers image"></p>
+</b></li>
 
 # FAQs 
 
@@ -112,6 +117,15 @@ For more information on syncing forks [read this article from Github](https://he
   - It is from 1st october to 31st october 2021...
 - What is the event for?
   - For the open source community engagement
+
+# java oops concept
+In this page, we will learn about the basics of OOPs. Object-Oriented Programming is a paradigm that provides many concepts, such as inheritance, data binding, polymorphism, etc.
+
+Simula is considered the first object-oriented programming language. The programming paradigm where everything is represented as an object is known as a truly object-oriented programming language.
+
+Smalltalk is considered the first truly object-oriented programming language.
+
+The popular object-oriented languages are Java, C#, PHP, Python, C++, etc.
 
 
 

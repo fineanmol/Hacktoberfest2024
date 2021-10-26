@@ -17,7 +17,7 @@ body {
 .container {
   width: 400px;
   height: 550px;
-  background-color: #eee;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -25,20 +25,20 @@ body {
 }
 #top {
   top: -7px;
-  left: -5.5px;
+  left: -5.6px;
 }
 #bottom {
   bottom: -5px;
-  left: -5.5px;
+  left: -5.6px;
 }
 input[type="range"]::-webkit-slider-runnable-track {
   cursor: pointer;
-  background-color: pink;
+  background-color:blue;
   border-radius: 5px;
   height: 10px;
 }
 input[type="range"]::-webkit-slider-thumb {
-  background-color: orange;
+  background-color:grey;
   color: #f0f8ff;
   cursor: hand;
   margin-top: -3px;
@@ -47,8 +47,8 @@ h4 {
   text-shadow: 0.2px 0.2px 14px #ff1493;
 }
 .css {
-  background-color: pink;
-  color: yellow;
+  background-color: blue;
+  color: grey;
   text-align: center;
   padding: 20px 40px;
   width: 350px;

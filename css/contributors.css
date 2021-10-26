@@ -1,19 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=latin-ext);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&subset=latin-ext);
 :root {
-  --white: white;
+  --white:#fff;
   --black: rgb(39 41 52);
   --gray: #fafafa;
-  --text: black;
-  --box: #feeef2;
+  --text:#fff;
+  --box: #b30000;
   --box-hover: #fe0c43;
-  --nav-color: rgb(255, 230, 230);
+  --nav-color:  #b30000;
   --footer-color: #ededed;
 }
 [data-theme="dark"] {
   --white: rgb(39 41 52);
-  --black: white;
-  --gray: black;
+  --black:#fff;
+  --gray: #000;
   --text: rgb(242, 244, 251);
   --box: rgb(61 63 73);
   --box-hover: rgb(57 148 255);

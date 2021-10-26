@@ -19,14 +19,14 @@ nav {
 .navbar-light .navbar-nav .nav-link {
   color: var(--text);
   position: relative;
-  padding: 10px;
+  padding: 5px;
   margin: 0 10px !important;
 }
 .navbar-light .navbar-nav .active {
   background-color: #f1ffc5;
 }
 .navbar-light .navbar-nav .active > .nav-link {
-  color: #dc143c;
+  color: #df271a;
   font-weight: 700;
 }
 .navbar-light .navbar-nav .nav-link::before {

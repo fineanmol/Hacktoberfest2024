@@ -109,8 +109,8 @@ For more information on syncing forks [read this article from Github](https://he
 
 - Should I come closer to the text saying 'Don't come closer' on the left side of the home tab ?
   - Nope.
-- How many pull request (PR) must be made, if I can get a awesome shirt from Hacktoberfest 2021?
-  - 5
+- How many pull request (PR) must be made, if I want to get an awesome tshirt from Hacktoberfest 2021?
+  - 4
 - How do I track my progress to get an awesome shirt from Hacktoberfest 2021?
   - [go to :](https://hacktoberfest.digitalocean.com/profile/). (Check Out Your Own Stats at Right Top)
 - What is the duration of Hacktoberfest 2021?

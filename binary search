@@ -7,7 +7,7 @@ int binary_search(int A[], int l, int r, int key)
   int m;
   while( l <= r )     
   {
-    m = l + (r-l)/2;
+    m = l + (r-l)/2;  //for mid
     if( A[m] == key )     // Element found in search
       return m;
     if( A[m] < key )         // Search in right part of list (array)

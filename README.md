@@ -11,7 +11,7 @@ P.S. Star ⭐ and Share this repository, if you had fun!! 😍
 ![Hacktoberfest 2021](https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg)
 ![Event Completed](https://github.com/fineanmol/Hacktoberfest2021/blob/master/scripts/hacktoberPest/Event_Completed.png)
 
-# 📌 Videos:
+# 📌 Videos 📽️:
 
 - [Hacktoberfest Intro](https://youtu.be/OsAFX_ZbgaE)
 - [How to pull request [Overview]](https://youtu.be/DIj2q02gvKs)

@@ -6,7 +6,7 @@ print("\nWelcome to Hangman game by IT SOURCECODE\n")
 name = input("Enter your name: ")
 print("Hello " + name + "! Best of Luck!")
 time.sleep(2)
-print("The game is about to start!\n Let's play Hangman!")
+print("The game is about to start!\n Let us play Hangman!")
 time.sleep(3)
 
 

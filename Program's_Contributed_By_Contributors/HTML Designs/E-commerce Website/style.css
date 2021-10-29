@@ -513,3 +513,12 @@ form a{
         line-height: 32px;
     }
     }
+
+#social-media i{
+    margin-left: 10px;
+}
+
+#social-media i:hover{
+    cursor: pointer;
+    color: #fff;
+}

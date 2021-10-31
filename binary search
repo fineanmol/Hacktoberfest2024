@@ -1,31 +1,29 @@
 #include<iostream>
-#include<cstdio>
-#include<cmath>
 using namespace std;
-int binary_search(int A[], int l, int r, int key) 
-{
-  int m;
-  while( l <= r )     
-  {
-    m = l + (r-l)/2;  //for mid
-    if( A[m] == key )     // Element found in search
-      return m;
-    if( A[m] < key )         // Search in right part of list (array)
-      l = m + 1;
+
+int binary_search(int a[], int left, int right, int key) {
+  int mid;
+  while(left <= right) {
+    mid = left + (right - left) / 2;  //for mid
+    if (a[mid] == key)     // Element found in search
+      return mid;
+    if (a[mid] < key)         // Search in right part of list (array)
+      left = mid + 1;
     else            // Search in left part of list
-      r = m - 1;
+      right = mid - 1;
   }
   return -1;
 }
 
-int main() 
-{
-  int tag, x, array[]={10,11,12,13,14,25,26,37,48,59};
-  x = 26;        // element to be searched in data of thev the array
-  tag=binary_search(array,0,10,x);
-  if(tag != -1)
-    cout<<"Element found at location : "<<tag;
-  else
-    cout<<"Element not present in the array.";
+int main() {
+  int n;
+  cin >> n;
+  int a[n];
+  for (int i = 0; i < n; ++i) {
+    cin >> a[i];
+  }
+  int key;
+  cin >> key;
+  cout << binary_search(a, 0, n - 1, key);
   return 0;
 }

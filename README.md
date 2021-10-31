@@ -1,4 +1,4 @@
-# Hacktoberfest ([Live Website](https://fineanmol.github.io/Hacktoberfest2021/Contributors.html))
+# Hacktoberfest {[Live Website](https://fineanmol.github.io/Hacktoberfest2021/Contributors.html)}
 
 **This is a beginner-friendly project to help you get started with your
 [hacktoberfest](https://hacktoberfest.digitalocean.com/). If you don't
@@ -64,7 +64,7 @@ git push origin my-new-branch
 - Create a new pull request from your forked repository
 
 
-## Avoid Conflicts (Syncing your fork)
+## Avoid Conflicts {Syncing your fork}
 
 An easy way to avoid conflicts is to add an 'upstream' for your git repo, as other PR's may be merged while you're working on your branch/fork.   
 

@@ -119,7 +119,7 @@ For more information on syncing forks [read this article from Github](https://he
   - For the open source community engagement
 
 # java oops concept
-In this page, we will learn about the basics of OOPs. Object-Oriented Programming is a paradigm that provides many concepts, such as inheritance, data binding, polymorphism, etc.
+In this page, we will learn about the basics of OOPs. Object-Oriented Programming is a paradigm that stands on 4 pillars i.e. inheritance, data binding, polymorphism, etc. Apart from these, OOPS is far better than traditional Procedure Oriented Programming
 
 Simula is considered the first object-oriented programming language. The programming paradigm where everything is represented as an object is known as a truly object-oriented programming language.
 

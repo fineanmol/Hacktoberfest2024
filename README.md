@@ -43,7 +43,7 @@ git clone https://github.com/fineanmol/Hacktoberfest2021.git
 cd Hacktoberfest2021
 ```
 
-- Create a new branch
+- Create a new Branch
 
 ```markdown
 git checkout -b my-new-branch
@@ -93,7 +93,7 @@ For more information on syncing forks [read this article from Github](https://he
      <li><B><p><img src="https://miro.medium.com/max/1050/1*4JctIO7irt8hFxBmTvUpiQ.jpeg" width="400" height="225" style="width: 400px; height: 225px;" alt="tshirt image"></a></p><p><img src="https://miro.medium.com/max/1050/1*jkffr74bq5RsQ_xqDhgqYQ.jpeg" width="400" height="225" style="width: 400px; height: 225px;" alt="stickers image"></p>
 </b></li>
 
-# FAQs 
+# FAQs (Frequently Asked Questions)
 
 - Who can contribute?
   - Anyone with a github account and who is signed up for

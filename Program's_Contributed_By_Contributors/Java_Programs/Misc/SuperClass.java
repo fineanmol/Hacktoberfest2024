@@ -1,3 +1,5 @@
+//Demonstration of super class
+
 class Super
 {
 	int x;
@@ -7,7 +9,7 @@ class Super
 	}
 	void display()
 	{
-		System.out.println("Super x =" +x);
+		System.out.println("Super x =" +x); //print super object
 	}
 }
 Class Sub extends Super

@@ -29,7 +29,7 @@ P.S. Star ⭐ and Share this repository, if you had fun!! 😍
 - Try to keep pull requests small to minimize merge conflicts
 
 
-## Getting Started 🤗:
+## Getting Started 🤩🤗:
 
 - Fork this repo (button on top)
 - Clone on your local machine
@@ -43,7 +43,7 @@ git clone https://github.com/fineanmol/Hacktoberfest2021.git
 cd Hacktoberfest2021
 ```
 
-- Create a new branch
+- Create a new Branch
 
 ```markdown
 git checkout -b my-new-branch
@@ -93,7 +93,7 @@ For more information on syncing forks [read this article from Github](https://he
      <li><B><p><img src="https://miro.medium.com/max/1050/1*4JctIO7irt8hFxBmTvUpiQ.jpeg" width="400" height="225" style="width: 400px; height: 225px;" alt="tshirt image"></a></p><p><img src="https://miro.medium.com/max/1050/1*jkffr74bq5RsQ_xqDhgqYQ.jpeg" width="400" height="225" style="width: 400px; height: 225px;" alt="stickers image"></p>
 </b></li>
 
-# FAQs 
+# FAQs (Frequently Asked Questions)
 
 - Who can contribute?
   - Anyone with a github account and who is signed up for
@@ -109,8 +109,8 @@ For more information on syncing forks [read this article from Github](https://he
 
 - Should I come closer to the text saying 'Don't come closer' on the left side of the home tab ?
   - Nope.
-- How many pull request (PR) must be made, if I can get a awesome shirt from Hacktoberfest 2021?
-  - 5
+- How many pull request (PR) must be made, if I want to get an awesome tshirt from Hacktoberfest 2021?
+  - 4
 - How do I track my progress to get an awesome shirt from Hacktoberfest 2021?
   - [go to :](https://hacktoberfest.digitalocean.com/profile/). (Check Out Your Own Stats at Right Top)
 - What is the duration of Hacktoberfest 2021?
@@ -119,7 +119,7 @@ For more information on syncing forks [read this article from Github](https://he
   - For the open source community engagement
 
 # java oops concept
-In this page, we will learn about the basics of OOPs. Object-Oriented Programming is a paradigm that provides many concepts, such as inheritance, data binding, polymorphism, etc.
+In this page, we will learn about the basics of OOPs. Object-Oriented Programming is a paradigm that stands on 4 pillars i.e. inheritance, data binding, polymorphism, etc. Apart from these, OOPS is far better than traditional Procedure Oriented Programming
 
 Simula is considered the first object-oriented programming language. The programming paradigm where everything is represented as an object is known as a truly object-oriented programming language.
 

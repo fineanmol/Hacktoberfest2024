@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 2px solid DarkGrey;
+
+}
+
+</style>
+</head>
+<body style="background-color:GainsBoro;"> 
+
+<p style="color:SteelBlue; text-align: center"<span style="font-size:100px;">&#128187;</span>Technological Development of Apple</p<span style='font-size:100px;'>&#128187;</span>
+
+</body>
+</html>
+
+<table style="width:100%">
+  <tr>
+    <th style="color:LightSlateGrey;">Technology:</th>
+    <th style="color:LightSlateGrey;">Visual:</th>
+    <th style="color:LightSlateGrey;">Evolution:</th>
+  </tr>
+  <tr>
+    <td style="color:SlateGrey;"> iPhone</td>
+<td> <img src="https://images.dailyhive.com/20201022050311/Screen-Shot-2020-10-22-at-8.02.42-AM.png" width="200" height="150"> </td>
+    
+    <td style="color:SlateGrey;">iPhone was invented in 2007, and as of fall 2021 there have been a total of 13 series including multiple models.  </td>
+  </tr>
+  <tr>
+    <td style="color:SlateGrey;">Apple Watch</td>
+    <td> <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/FWW52_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=80&.v=1580326084542" width="200" height="150"> </td>
+    
+    <td style="color:SlateGrey;">Apple Watch series 1 was introduced in 2015. As the next Apple Watch series 3 came in 2017, it included various benefits like map features, music streaming, and text messages.</td>
+  </tr>
+  <tr>
+    <td style="color:SlateGrey;">iPad</td>
+    <td> <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-ipad-pro-11-wifi-silver-2019_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=80&.v=1581985474458" width="200" height="150"> </td>
+    
+    
+    <td style="color:SlateGrey;">The first iPad was unveiled in 2010. It evolved into unqualified success, carving out a space between laptop and phone, providing a handy device for checking emails, surfing the web, and reading e-books. </td>
+  </tr>
+  <tr>
+  	<td style="color:SlateGrey;">MacBook</td>
+    <td> <img src="https://www.apple.com/v/macbook-pro-14-and-16/a/images/meta/macbook-pro-14-and-16_overview__fz0lron5xyuu_og.png" width="200" height="150" </td>
+    
+    
+    <td style="color:SlateGrey;">The MacBook debuted in 1991, though there have been a variety of variety of different naming conventions and models over the years. </td>
+  </tr>
+  <tr>
+  	<td style="color:SlateGrey;">AirPods</td>
+    <td> <img src="https://cdn.tmobile.com/images/png/products/accessories/190199098428/190199098428-large.png" width="200" height="150" </td>
+    
+    
+    <td style="color:SlateGrey;">AirPods were introduced in 2016, and within two years they became Apple's most popular accessory. After three years, Apple released the second-generation AirPods which feature the H1 chip, longer talk time, and hands-free "Siri" support.</td>
+  </tr>
+  <tr>
+  	<td style="color:SlateGrey;">HomePod</td>
+    <td> <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/homepod-mini-og-202110?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1632930650000" width="200" height="150" </td>
+    
+    
+    <td style="color:SlateGrey;">HomePod is a smart speaker developed by Apple in 2017, which was designed to work with the Apple Music subscription service.</td>
+</table>
+
+</body>
+</html>

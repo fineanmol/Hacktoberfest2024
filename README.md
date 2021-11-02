@@ -1,4 +1,6 @@
+Hacktoberfest-2021
 # Hacktoberfest {[Live Website](https://fineanmol.github.io/Hacktoberfest2021/Contributors.html)}
+
 
 **This is a beginner-friendly project to help you get started with your
 [hacktoberfest](https://hacktoberfest.digitalocean.com/). If you don't
@@ -8,9 +10,9 @@ read the contribution rules. Happy hacking <3 💙 !!**
 P.S. Star ⭐ and Share this repository, if you had fun!! 😍
 
 ![Hacktoberfest 2021](https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg)
+![Event Completed](https://github.com/fineanmol/Hacktoberfest2021/blob/master/scripts/hacktoberPest/Event_Completed.png)
 
-
-# 📌 Videos:
+# 📌 Videos 📽️:
 
 - [Hacktoberfest Intro](https://youtu.be/OsAFX_ZbgaE)
 - [How to pull request [Overview]](https://youtu.be/DIj2q02gvKs)
@@ -28,7 +30,7 @@ P.S. Star ⭐ and Share this repository, if you had fun!! 😍
 - Try to keep pull requests small to minimize merge conflicts
 
 
-## Getting Started 🤗:
+## Getting Started 🤩🤗:
 
 - Fork this repo (button on top)
 - Clone on your local machine
@@ -42,7 +44,7 @@ git clone https://github.com/fineanmol/Hacktoberfest2021.git
 cd Hacktoberfest2021
 ```
 
-- Create a new branch
+- Create a new Branch
 
 ```markdown
 git checkout -b my-new-branch
@@ -86,8 +88,13 @@ This will give you any eventual conflicts and allow you to easily solve them in 
 
 For more information on syncing forks [read this article from Github](https://help.github.com/articles/syncing-a-fork/).
 
+## Swags of Hacktoberfest:
+- Many of the candidates get attracted towards hacktoberfest to get swags . So, after 4 successfully merged pull request as for 2021 you will be eligible to get a Hacktoberfest T-shirt and Some stickers on your doorstep.
+ 
+     <li><B><p><img src="https://miro.medium.com/max/1050/1*4JctIO7irt8hFxBmTvUpiQ.jpeg" width="400" height="225" style="width: 400px; height: 225px;" alt="tshirt image"></a></p><p><img src="https://miro.medium.com/max/1050/1*jkffr74bq5RsQ_xqDhgqYQ.jpeg" width="400" height="225" style="width: 400px; height: 225px;" alt="stickers image"></p>
+</b></li>
 
-# FAQs 
+# FAQs (Frequently Asked Questions)
 
 - Who can contribute?
   - Anyone with a github account and who is signed up for
@@ -103,14 +110,23 @@ For more information on syncing forks [read this article from Github](https://he
 
 - Should I come closer to the text saying 'Don't come closer' on the left side of the home tab ?
   - Nope.
-- How many pull request (PR) must be made, if I can get a awesome shirt from Hacktoberfest 2021?
-  - 5
+- How many pull request (PR) must be made, if I want to get an awesome tshirt from Hacktoberfest 2021?
+  - 4
 - How do I track my progress to get an awesome shirt from Hacktoberfest 2021?
   - [go to :](https://hacktoberfest.digitalocean.com/profile/). (Check Out Your Own Stats at Right Top)
 - What is the duration of Hacktoberfest 2021?
   - It is from 1st october to 31st october 2021...
 - What is the event for?
   - For the open source community engagement
+
+# java oops concept
+In this page, we will learn about the basics of OOPs. Object-Oriented Programming is a paradigm that stands on 4 pillars i.e. inheritance, data binding, polymorphism, etc. Apart from these, OOPS is far better than traditional Procedure Oriented Programming
+
+Simula is considered the first object-oriented programming language. The programming paradigm where everything is represented as an object is known as a truly object-oriented programming language.
+
+Smalltalk is considered the first truly object-oriented programming language.
+
+The popular object-oriented languages are Java, C#, PHP, Python, C++, etc.
 
 
 

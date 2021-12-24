@@ -1,4 +1,4 @@
-Hacktoberfest-2021
+Hacktoberfest-2022
 # Hacktoberfest {[Live Website](https://fineanmol.github.io/Hacktoberfest2021/Contributors.html)}
 
 
@@ -114,8 +114,8 @@ For more information on syncing forks [read this article from Github](https://he
   - 4
 - How do I track my progress to get an awesome shirt from Hacktoberfest 2021?
   - [go to :](https://hacktoberfest.digitalocean.com/profile/). (Check Out Your Own Stats at Right Top)
-- What is the duration of Hacktoberfest 2021?
-  - It is from 1st october to 31st october 2021...
+- What is the duration of Hacktoberfest 2022?
+  - It is from 1st october to 31st october 2022...
 - What is the event for?
   - For the open source community engagement
 

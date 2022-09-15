@@ -1,5 +1,5 @@
 Hacktoberfest-2022
-# Hacktoberfest {[Live Website](https://fineanmol.github.io/Hacktoberfest2021/Contributors.html)}
+# Hacktoberfest {[Live Website](https://fineanmol.github.io/Hacktoberfest2022/Contributors.html)}
 
 
 **This is a beginner-friendly project to help you get started with your
@@ -9,7 +9,7 @@ read the contribution rules. Happy hacking <3 💙 !!**
 
 P.S. Star ⭐ and Share this repository, if you had fun!! 😍
 
-![Hacktoberfest 2021](https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg)
+![Hacktoberfest 2022](https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg)
 ![Event Completed](https://github.com/fineanmol/Hacktoberfest2021/blob/master/scripts/hacktoberPest/Event_Completed.png)
 
 # 📌 Videos 📽️:

@@ -1,20 +1,18 @@
-Hacktoberfest-2021
-# Hacktoberfest {[Live Website](https://fineanmol.github.io/Hacktoberfest2021/Contributors.html)}
+Hacktoberfest-2022
+# Hacktoberfest {[Live Website](https://fineanmol.github.io/Hacktoberfest2022/Contributors.html)}
 
 
 **This is a beginner-friendly project to help you get started with your
-[hacktoberfest](https://hacktoberfest.digitalocean.com/). If you don't
-know where to start, feel free to watch the videos linked below, and
-read the contribution rules. Happy hacking <3 💙 !!**
+[hacktoberfest](https://hacktoberfest.digitalocean.com/). If you don't know where to start, feel free to watch the videos linked below, and read the contribution rules. Happy hacking <3 💙 !!**
 
 P.S. Star ⭐ and Share this repository, if you had fun!! 😍
 
 ![Hacktoberfest 2021](https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg)
-![Event Completed](https://github.com/fineanmol/Hacktoberfest2021/blob/master/scripts/hacktoberPest/Event_Completed.png)
+![Event Completed](https://raw.githubusercontent.com/fineanmol/Hacktoberfest2022/master/scripts/hacktoberPest/Event_Completed.png)
 
 # 📌 Videos 📽️:
 
-- [Hacktoberfest Intro](https://youtu.be/OsAFX_ZbgaE)
+- [Hacktoberfest Intro](https://www.youtube.com/watch?v=mq_FIHdxmIk)
 - [How to pull request [Overview]](https://youtu.be/DIj2q02gvKs)
 - [Merge Conflict / comment](https://youtu.be/zOx5PJTY8CI)
 
@@ -36,12 +34,12 @@ P.S. Star ⭐ and Share this repository, if you had fun!! 😍
 - Clone on your local machine
 
 ```
-git clone https://github.com/fineanmol/Hacktoberfest2021.git
+git clone https://github.com/fineanmol/Hacktoberfest2022.git
 
 ```
 - Navigate to project directory.
 ```
-cd Hacktoberfest2021
+cd Hacktoberfest2022
 ```
 
 - Create a new Branch
@@ -57,21 +55,23 @@ git add .
 
 ```markdown
 git commit -m "Relevant message"
-
 ```
 - Then push 
 ```
 git push origin my-new-branch
 ```
+
+
 - Create a new pull request from your forked repository
 
+<br>
 
 ## Avoid Conflicts {Syncing your fork}
 
 An easy way to avoid conflicts is to add an 'upstream' for your git repo, as other PR's may be merged while you're working on your branch/fork.   
 
 ```terminal
-git remote add upstream https://github.com/fineanmol/Hacktoberfest2021
+git remote add upstream https://github.com/fineanmol/Hacktoberfest2022
 ```
 
 You can verify that the new remote has been added by typing
@@ -103,30 +103,21 @@ For more information on syncing forks [read this article from Github](https://he
   - Sadly no. But we think we should. This is 100% unofficial and we do it for fun, fame and glory.
 - Who are you and why are you doing this?
   - We are two programmers from India [Anmol](https://www.linkedin.com/in/fineanmol/)
-  and [Ritesh](https://github.com/ritesh2905). We are doing this because we love Open
-  Source and Hacktoberfest. We want to make it easier for people to get started with Hacktoberfest and Open Source.
+  and [Ritesh](https://github.com/ritesh2905). We are doing this because we love Open Source and Hacktoberfest. We want to make it easier for people to get started with Hacktoberfest and Open Source.
 - Why are you not using digitalocean?
   - Because we only know JavaScript and suck at servers. We use [now](https://zeit.co/now) instead.
 
 - Should I come closer to the text saying 'Don't come closer' on the left side of the home tab ?
   - Nope.
-- How many pull request (PR) must be made, if I want to get an awesome tshirt from Hacktoberfest 2021?
+- How many pull request (PR) must be made, if I want to get an awesome tshirt from Hacktoberfest 2022?
   - 4
-- How do I track my progress to get an awesome shirt from Hacktoberfest 2021?
+- How do I track my progress to get an awesome shirt from Hacktoberfest 2022?
   - [go to :](https://hacktoberfest.digitalocean.com/profile/). (Check Out Your Own Stats at Right Top)
 - What is the duration of Hacktoberfest 2022?
   - It is from 1st october to 31st october 2022...
 - What is the event for?
   - For the open source community engagement
 
-# java oops concept
-In this page, we will learn about the basics of OOPs. Object-Oriented Programming is a paradigm that stands on 4 pillars i.e. inheritance, data binding, polymorphism, etc. Apart from these, OOPS is far better than traditional Procedure Oriented Programming
-
-Simula is considered the first object-oriented programming language. The programming paradigm where everything is represented as an object is known as a truly object-oriented programming language.
-
-Smalltalk is considered the first truly object-oriented programming language.
-
-The popular object-oriented languages are Java, C#, PHP, Python, C++, etc.
 
 
 

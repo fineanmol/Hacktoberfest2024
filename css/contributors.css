@@ -87,8 +87,8 @@ body {
   right: 30px;
   width: 40px;
   height: 40px;
-  color: #7c7575;
-  background-color: rgba(255, 255, 255, 0.1);
+  color: #000;
+  background-color: var(--lightt);
   cursor: pointer;
   outline: 0;
   border: none;
@@ -102,9 +102,14 @@ body {
 #back-to-top-btn:focus,
 #back-to-top-btn:hover {
   background: 0 0;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid var(--lightt);
   transform: translateY(-7px);
   transition: 0.5s;
+}
+
+.light #back-to-top-btn {
+  color: #7c7575;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .container {
   position: relative;
@@ -120,15 +125,21 @@ body {
   position: relative;
 }
 
-.form-control {
+.form-control,
+.form-control:focus,
+.from-control:active {
   text-indent: 30px;
-  border: none;
-  border-bottom: 1px solid #eee;
+  border: 1px solid var(--darkt) !important;
+  align-content: normal;
+  background: var(--darkbg);
+  outline: none;
+  color: #eee;
   width: 300px;
+  accent-color: var(--lightt);
+  box-shadow: none;
 }
 
-.form-control:focus {
-  color: #495057;
+.light .form-control {
   background-color: #fff;
   border-color: #eee;
   outline: 0;

@@ -61,7 +61,7 @@
 
 
   <!-- Back-to-top Button -->
-  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-double-up"></i></button>
+  <!-- <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-double-up"></i></button> -->
   <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
 
 
@@ -119,12 +119,18 @@
       </div>
       <hr style="width:80%">
     </div>
-    <div class="box mx-auto justify-content-center" id="contributors">
+    <div class="container" >
 
       <!-- Add to the bottom of the list -->
 
+    <div class="box mx-auto justify-content-center" id="contributors">
 
+    </div>
       <!-- Please maintain the alignment... -->
+
+      <div class="box mx-auto my-5 justify-content-center">
+        <a class="btn btn-outline-secondary load-more" onclick="loadMore()">Load More</a>
+      </div>
 
     </div>
   </div>
@@ -1880,18 +1886,21 @@
 
     const searchbox = document.getElementById('search');
     let searchResult = null;
-
+    let initialContributorsNumber = 45;
     let sortedContributors = contributors.sort((a, b) => {
       let textA = a.fullname.trim().toUpperCase();
       let textB = b.fullname.trim().toUpperCase();
       return textA.localeCompare(textB)
     });
 
+
+
     searchbox.addEventListener('keyup', async (e) => {
       searchResult = await filterUsers(e.target.value, sortedContributors )
 
-      document.getElementById('contributors').innerHTML = "<div class='text-center' id='loading'>Loading...</div>"
+      document.getElementById('contributors').innerHTML = e.target.value !== '' ? "<div class='text-center' id='loading'>Loading...</div>" : ''
 
+      e.target.value !== '' ?
       searchResult.forEach((item, i) => {
         let username = document.createElement('span');
         username.innerHTML = item.fullname;
@@ -1901,9 +1910,27 @@
         user.setAttribute('href', item.username)
         user.append(username)
         document.getElementById('contributors').append(user)
+
       })
+      :
+      sortedContributors.forEach((item, i) => {
+        let username = document.createElement('span');
+        username.innerHTML = item.fullname;
+
+        let user = document.createElement('a');
+        user.className = 'box-item'
+        user.setAttribute('href', item.username)
+        user.append(username)
+        document.getElementById('contributors').append(user)
+    })
+
+    document.querySelectorAll('a.box-item').forEach(con => {
+        // console.log(con.href)
+        con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
+    })
 
       document.getElementById('loading').setAttribute('hidden', true)
+
     })
 
     function filterUsers(str, array) {
@@ -1915,24 +1942,44 @@
 
 
 
+      function render(){
         sortedContributors.forEach((item, i) => {
-        let username = document.createElement('span');
-        username.innerHTML = item.fullname;
+            let username = document.createElement('span');
+            username.innerHTML = item.fullname;
 
-        let user = document.createElement('a');
-        user.className = 'box-item'
-        user.setAttribute('href', item.username)
-        user.append(username)
-        document.getElementById('contributors').append(user)
-      })
+            let user = document.createElement('a');
+            user.className = 'box-item'
+            user.setAttribute('href', item.username)
+            user.append(username)
 
+            if(i < initialContributorsNumber){
+                document.getElementById('contributors').append(user)
+            }
 
+        })
+      }
 
+      render();
+
+    function loadMore() {
+        if(initialContributorsNumber >= contributors.length ){
+            render()
+        }else {
+            initialContributorsNumber += 45;
+            render()
+            document.querySelectorAll('a.box-item').forEach(con => {
+                // console.log(con.href)
+                con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
+            })
+        }
+    }
 
     document.querySelectorAll('a.box-item').forEach(con => {
       // console.log(con.href)
       con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
     })
+
+
 
     function switchTheme(e) {
       if (e.target.checked) {
@@ -2023,7 +2070,7 @@
     });
   </script>
 
-  <script>
+  <!-- <script>
     //Get the button
     var mybutton = document.getElementById("myBtn");
 
@@ -2043,7 +2090,7 @@
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
-  </script>
+  </script> -->
 
 
 

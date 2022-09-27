@@ -1,0 +1,365 @@
+<!-- Author : Reksa Prayoga Syahputra -->
+<!-- Author GITHUB : KIGAMEKUN -->
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css" /> -->
+
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" /> -->
+    <title>ToTheMoon - PROJECT</title>
+</head>
+
+<body>
+    <div class="w-100 d-flex">
+        <div class="left-bar">
+            <center>
+                <div>
+                    <h1 class="logo"><span class="major">To</span><span class="major">The</span><span class="major">Moon</span></h1>
+
+                </div>
+                <br>
+                <br>
+                <br>
+                <ul>
+                    <li><button class="btn" style="border: 2px solid #6165d0;color:white;width:200px;">Home</button>
+                    </li>
+                    <li><button class="btn"
+                            style="border: 2px solid #6165d0;color:white;width:200px;">Bookmarks</button></li>
+                    <li><button class="btn" style="border: 2px solid #6165d0;color:white;width:200px;">Ticket</button>
+                    </li>
+                </ul>
+
+                <buton class="btn" style="background: #6165d0;color:white;margin-left:30px;width:200px;">
+                    Create Event
+                </buton>
+            </center>
+        </div>
+
+        <div class="containers">
+            <div class="d-flex" style="justify-content: space-around;">
+                <div class="search-wrap">
+                    <input type="text" placeholder="Search..." class="form-control">
+                </div>
+                <div class="icsearch d-flex gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-sliders" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-bell" viewBox="0 0 16 16">
+                        <path
+                            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+                    </svg>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <div class="hero w-100">
+                <center> <img src="assets/img/heromoon.png" class="rounded" style="height:600px;" alt=""></center>
+            </div>
+            <br>
+
+            <br>
+            <br>
+            <div class="filterTicket">
+                <form action="">
+                    <div class="d-flex gap-5" style="justify-content: space-around;">
+                        <input type="text" class="form-control" style="width:200px;" placeholder="From ...">
+                        <input type="text" class="form-control" style="width:200px;" placeholder="To ...">
+                        <input type="date" class="form-control" style="width:200px;" placeholder="Date ...">
+                        <button class="btn" style="background: #6165d0;color:white;">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <div class="d-flex justify-content-center gap-5">
+                <button class="btn" style="background: #6165d0;color:white;margin-left:30px;"
+                    style="border-radius: 15px;">All</button>
+                <button class="btn" style="background: #6165d0;color:white;margin-left:30px;"
+                    style="border-radius: 15px;">Earth</button>
+                <button class="btn" style="background: #6165d0;color:white;margin-left:30px;"
+                    style="border-radius: 15px;">Spaces</button>
+            </div>
+            <br>
+            <br>
+            <div class="card-wrap">
+                <div class="cards w-100">
+                    <div><img style="width: 300px;"
+                            src="https://i.pinimg.com/originals/73/ae/dc/73aedc45ebd253148f2c5e1f53558d08.png" alt="">
+                    </div>
+                    <div>
+                        <h4>To The Moon Package</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, at. Id doloribus error
+                            debitis harum ullam provident esse minima tempore impedit! Fuga eius, ipsa nihil numquam
+                            voluptate laudantium, at facilis quas, quia hic vel neque placeat rerum aliquam sequi
+                            debitis optio recusandae sit omnis accusamus nemo architecto beatae soluta. Eum.</p>
+                        <div class="d-flex justify-content-end align-items-center gap-3">
+                            <h4 style="color:#CCFF33;">$100.000</h4>
+                            <button class="btn" style="border: 2px solid #6165d0;color:white;">
+                                Buy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="cards w-100">
+                    <div><img style="width: 300px;"
+                            src="https://media.istockphoto.com/vectors/big-red-planet-with-craters-mars-vector-illustration-space-background-vector-id942602290?k=20&m=942602290&s=170667a&w=0&h=GwK2OEsCkSUsAntD4KJsCnc1zL3g_bCyx59ABEC1hrg="
+                            alt="">
+                    </div>
+                    <div>
+                        <h4>To The Mars Package</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, at. Id doloribus error
+                            debitis harum ullam provident esse minima tempore impedit! Fuga eius, ipsa nihil numquam
+                            voluptate laudantium, at facilis quas, quia hic vel neque placeat rerum aliquam sequi
+                            debitis optio recusandae sit omnis accusamus nemo architecto beatae soluta. Eum.</p>
+                        <div class="d-flex justify-content-end align-items-center gap-3">
+                            <h4 style="color:#CCFF33;">$200.000</h4>
+                            <button class="btn" style="border: 2px solid #6165d0;color:white;">
+                                Buy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards w-100">
+                    <div><img style="width: 300px;"
+                            src="https://img.freepik.com/free-vector/mother-earth-day-illustration-paper-style_23-2148890415.jpg?w=2000"
+                            alt="">
+                    </div>
+                    <div>
+                        <h4>Around Earth Package</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, at. Id doloribus error
+                            debitis harum ullam provident esse minima tempore impedit! Fuga eius, ipsa nihil numquam
+                            voluptate laudantium, at facilis quas, quia hic vel neque placeat rerum aliquam sequi
+                            debitis optio recusandae sit omnis accusamus nemo architecto beatae soluta. Eum.</p>
+                        <div class="d-flex justify-content-end align-items-center gap-3">
+                            <h4 style="color:#CCFF33;">$10.000</h4>
+                            <button class="btn" style="border: 2px solid #6165d0;color:white;">
+                                Buy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <div class="d-flex justify-content-end">
+                    <a href=""> View More !</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="right-bar">
+            <div style="justify-content: space-around;" class="d-flex">
+                <h4>Popular Events</h4>
+                <span style="color:#CCFF33;">See All</span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <ol>
+                <li>
+                    <h5 style="color:#CCFF33;">To The Moon Package</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus minima, distinctio
+                        repellat blanditiis ab quos.</p>
+                </li>
+                <li>
+                    <h5 style="color:#CCFF33;">To The Mars Package</h5>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus minima, distinctio
+                        repellat blanditiis ab quos.</p>
+                </li>
+                <li>
+                    <h5 style="color:#CCFF33;">Around Earth Package</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus minima, distinctio
+                        repellat blanditiis ab quos.</p>
+                </li>
+            </ol>
+            <br>
+            <br>
+            <h4>Special Offer</h4>
+            <br>
+            <br>
+            <center>
+                <div style="width: 300px;border-radius: 10px;" id="carouselExampleControls" class="carousel slide"
+                    data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img style="width:300px;border-radius: 10px;" src="assets/img/special-offer.png"
+                                class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img style="width:300px;border-radius: 10px;" src="assets/img/hero.webp"
+                                class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img style="width:300px;border-radius: 10px;" src="assets/img/hero.png"
+                                class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </center>
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <center><h3>Pay With ? </h3></center>
+    <br>
+    <div class="grid">
+           
+           
+            <div class="row" onclick="chosePaymentMethod('visa')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Visa_2021.svg">
+            </div>
+            <div class="row" onclick="chosePaymentMethod('mastercard')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg">
+            </div>
+           
+            <div class="row" onclick="chosePaymentMethod('paypal')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg">
+            </div>
+            <div class="row" onclick="chosePaymentMethod('bitcoin')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Bitcoin_logo.svg">
+            </div>
+            <div class="row" onclick="chosePaymentMethod('bitcoin')">
+                <img src="https://environment-indonesia.com/wp-content/uploads/2021/05/Gopay-Logo.png">
+            </div>
+       
+        </div>
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <div class="main">
+            <div class="col1">
+                <h3 class="heading">
+                    About the store
+                </h3>
+                <ul>
+                    <li>
+                        <a href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Become a customer
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            About us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            FAQ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Return policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Contact us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col2">
+                <h3 class="heading">
+                    Language
+                </h3>
+                <div class="languages">
+                    <a href="#">Deutsch</a>
+                    <a href="#">English</a>
+                    <a href="#">Espaṅol</a>
+                    <a href="#">Français</a>
+                    <a href="#">Indonesian</a>
+                    <a href="#">Italian</a>
+                    <a href="#">Nederlands</a>
+                    <a href="#">Polnisch</a>
+                    <a href="#">Português</a>
+                    <a href="#">pyccknṅ</a>
+                    <a href="#">Tiéng Viêt</a>
+                    <a href="#">Türkçe</a>
+                </div>
+            </div>
+
+            <div class="col3">
+                <h3 class="heading">
+                    Get in touch
+                </h3>
+                <div class="social">
+                    <a href="#">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <p class="terms">
+            <a href="#">Terms of purchase</a>
+            <a href="#">Security and privacy</a>
+            <a href="#">Newsletter</a>
+        </p>
+        <center>Copyright &copy ToTheMoonProject</center>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+</body>
+
+</html>

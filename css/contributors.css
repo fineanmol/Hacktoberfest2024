@@ -10,7 +10,7 @@
   --nav-color: rgb(255, 230, 230);
   --footer-color: #ededed;
 }
-[data-theme="dark"] {
+[data-theme='dark'] {
   --white: rgb(39 41 52);
   --black: white;
   --gray: black;
@@ -64,12 +64,14 @@ body {
   min-height: 100vh;
   padding: 0 0 1.5rem;
   position: relative;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 13px;
 }
 body {
   margin: 0;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
@@ -85,8 +87,8 @@ body {
   right: 30px;
   width: 40px;
   height: 40px;
-  color: #7c7575;
-  background-color: rgba(255, 255, 255, 0.1);
+  color: #000;
+  background-color: var(--lightt);
   cursor: pointer;
   outline: 0;
   border: none;
@@ -100,13 +102,55 @@ body {
 #back-to-top-btn:focus,
 #back-to-top-btn:hover {
   background: 0 0;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid var(--lightt);
   transform: translateY(-7px);
   transition: 0.5s;
+}
+
+.light #back-to-top-btn {
+  color: #7c7575;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .container {
   position: relative;
   color: var(--container-text);
+}
+
+.container p {
+  width: max-content;
+  margin: 0;
+}
+
+.inputs {
+  position: relative;
+}
+
+.form-control,
+.form-control:focus,
+.from-control:active {
+  text-indent: 30px;
+  border: 1px solid var(--darkt) !important;
+  align-content: normal;
+  background: var(--darkbg);
+  outline: none;
+  color: #eee;
+  width: 300px;
+  accent-color: var(--lightt);
+  box-shadow: none;
+}
+
+.light .form-control {
+  background-color: #fff;
+  border-color: #eee;
+  outline: 0;
+  box-shadow: none;
+}
+
+.inputs i {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  color: #b8b9bc;
 }
 a {
   color: #000;
@@ -120,7 +164,7 @@ a:hover {
   font-weight: 700;
   cursor: default;
   font-size: 2rem;
-  font-family: "Special Elite", cursive;
+  font-family: 'Special Elite', cursive;
 }
 .heading:hover {
   color: #fe0c43;
@@ -180,7 +224,7 @@ a:hover {
   transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 .box-item::before {
-  content: "";
+  content: '';
   display: table;
   clear: both;
   background: var(--box-hover);
@@ -190,7 +234,7 @@ a:hover {
 .box-item::after,
 .box-item::before {
   position: absolute;
-  content: "";
+  content: '';
   color: #fff;
   font-size: 1rem;
   padding: 15px 8px 15px 70px;
@@ -272,7 +316,7 @@ a:hover {
 .slider:before {
   background-color: #ffd104;
   bottom: 4px;
-  content: "";
+  content: '';
   height: 24px;
   left: 4px;
   position: absolute;

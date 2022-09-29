@@ -1,0 +1,19 @@
+:root {
+  /* colors */
+  --clr-main-bg: 0 0% 90%;
+  --clr-toggle-bg: 0 5% 81%;
+  --clr-screen-bg: 0 0% 93%;
+
+  --clr-accent-key-bg: 185 42% 37%;
+  --clr-accent-key-shadow: 185 58% 25%;
+  --clr-equal-key-bg: 25 98% 40%;
+  --clr-equal-key-shadow: 25 99% 27%;
+  --clr-num-key-bg: 45 7% 89%;
+  --clr-num-key-shadow: 35 11% 61%;
+
+  --clr-num-key-text: 60 10% 19%;
+  --clr-equal-key-text: 0 0% 100%;
+  --clr-white: 0 0% 100%;
+
+  --clr-top-text: 0 0% 0%;
+}

@@ -41,6 +41,7 @@
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- <link rel="stylesheet" href="css/explosion.css"> -->
   <!-- <link rel="stylesheet" href="./css/terminal.css"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
@@ -142,7 +143,6 @@
     <div class="container">
       <span class="text-muted">This Project is participating in Hacktoberfest.</span>
     </div>
-    <div>Made with ❤️ by <a href="https://twitter.com/fineanmol">Anmol Agarwal</a>.  © Copyright 2022 </div>
   </footer>
 
   <script>
@@ -1887,7 +1887,6 @@
     let sortedContributors = contributors.sort((a, b) => {
       let textA = a.fullname.trim().toUpperCase();
       let textB = b.fullname.trim().toUpperCase();
-      console.log('[contributors]',textA,textB)
       //#Use this localeCompare if you want show names in a sorted orders
     //   return textA.localeCompare(textB)  
     return textA
@@ -2018,7 +2017,9 @@
 
   <script src="./scripts/menu.js"></script>
   <div class="container">
-    <div id="stats" style="margin-top: 1rem;"></div>
+    
+    <div id="stats" style="margin-top: 1rem;">
+        <div>Made with ❤️ by <a href="https://twitter.com/fineanmol">Anmol Agarwal</a>.  © Copyright 2022 </div></div>
   </div>
   <script>
     $('.tdnn').click(function () {

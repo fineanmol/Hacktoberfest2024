@@ -3,7 +3,11 @@
 
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
+  <link rel="icon" href="https://hacktoberfestswaglist.com/img/Hacktoberfest_21.jpg" type="image/x-icon">
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74296045-6"></script> -->
 
+  <!--Stats Script-->
+  <!-- <script src="scripts/stats.js"></script> -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -22,10 +26,11 @@
   <meta name="description"
     content="This is a static website serving as a beginner friendly project to help developers get started with hacktoberfest -Gateway to open source.">
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <!-- Font Style from google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,24 +46,23 @@
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- <link rel="stylesheet" href="css/explosion.css"> -->
-  <!-- <link rel="stylesheet" href="./css/terminal.css"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
   <script src="https://kit.fontawesome.com/d9f7ec7b29.js" crossorigin="anonymous"></script>
-  <!-- Place this tag in your head or just before your close body tag. -->
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
   <title>Hacktoberfest 2022 - Contributors</title>
-
+<style>
+    .hidden{
+        display: none;
+    }
+</style>
 
 
 </head>
 
 <body>
 
-
-
   <!-- Back-to-top Button -->
+  <!-- <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-double-up"></i></button> -->
   <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
 
 
@@ -108,37 +112,35 @@
         </div>
       </div>
       <div class="d-flex justify-content-between align-items-center">
-        <p class="rubberBand delay-4s">Add yourself to the list if you contribute.</p>
+        <p class=" rubberBand delay-4s">Add yourself to the list if you contribute.</p>
         <div class="inputs mr-3">
             <i class="fa fa-search"></i>
             <input type="text" id="search" class="form-control " placeholder="Search Contributors..">
         </div>
       </div>
       <div>
-    <a class="github-button" href="https://github.com/fineanmol/Hacktoberfest2022" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star fineanmol/Hacktoberfest2022 on GitHub">To Get "HacktoberFest-Accepted" label, Star ✩ the repo </a>
-      </div>
-      <hr style="width:80%">
+        <a class="github-button" href="https://github.com/fineanmol/Hacktoberfest2022" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star fineanmol/Hacktoberfest2022 on GitHub">To Get "HacktoberFest-Accepted" label, Star ✩ the repo </a>
+          </div>
+      <hr style="width:90%">
     </div>
-    <div class="box mx-auto justify-content-center" id="contributors">    
+    <div class="box mx-auto justify-content-center" id="contributors" >
 
       <!-- Add to the bottom of the list -->
+      <div class="box mx-auto my-5 justify-content-center" id="contributors"></div>
 
+    </div>
+
+    </div>
+      <!-- Please maintain the alignment... -->
+
+      <div class="box mx-auto my-5 justify-content-center">
+        <a class="btn btn-outline-secondary btn-lg load-more" onclick="loadMore()"  id="loadMore">Load More</a>
+      </div>
 
     </div>
   </div>
   </div>
 
-  <button id="backToTop" type="button" title="Back to Top">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px"
-      y="0px" width="512px" height="512px" viewBox="0 0 284.929 284.929"
-      style="enable-background:new 0 0 284.929 284.929;" xml:space="preserve">
-      <g>
-        <path
-          d="M282.082,195.285L149.028,62.24c-1.901-1.903-4.088-2.856-6.562-2.856s-4.665,0.953-6.567,2.856L2.856,195.285   C0.95,197.191,0,199.378,0,201.853c0,2.474,0.953,4.664,2.856,6.566l14.272,14.271c1.903,1.903,4.093,2.854,6.567,2.854   c2.474,0,4.664-0.951,6.567-2.854l112.204-112.202l112.208,112.209c1.902,1.903,4.093,2.848,6.563,2.848   c2.478,0,4.668-0.951,6.57-2.848l14.274-14.277c1.902-1.902,2.847-4.093,2.847-6.566   C284.929,199.378,283.984,197.188,282.082,195.285z"
-          fill="#FFFFFF">
-      </g>
-    </svg>
-  </button>
   <footer class="footer mt-auto py-3 bg-light text-center">
     <div class="container">
       <span class="text-muted">This Project is participating in Hacktoberfest.</span>
@@ -147,6 +149,7 @@
 
   <script>
 
+    // Contributors array
     const contributors = [
       {
         "id": 1,
@@ -1880,64 +1883,106 @@
       },
 ];
 
-
     const searchbox = document.getElementById('search');
     let searchResult = null;
+    let initialContributorsNumber = 72;
 
-    let sortedContributors = contributors.sort((a, b) => {
-      let textA = a.fullname.trim().toUpperCase();
-      let textB = b.fullname.trim().toUpperCase();
-      //#Use this localeCompare if you want show names in a sorted orders
-    //   return textA.localeCompare(textB)  
-    return textA
-    });
-
-    searchbox.addEventListener('keyup', async (e) => {
-      searchResult = await filterUsers(e.target.value, sortedContributors )
-
-      document.getElementById('contributors').innerHTML = "<div class='text-center' id='loading'>Loading...</div>"
-
-      searchResult.forEach((item, i) => {
-        let username = document.createElement('span');
-        username.innerHTML = item.fullname;
-
-        let user = document.createElement('a');
-        user.className = 'box-item'
-        user.setAttribute('href', item.username)
-        user.append(username)
-        document.getElementById('contributors').append(user)
-      })
-
-      document.getElementById('loading').setAttribute('hidden', true)
-    })
 
     function filterUsers(str, array) {
-      if(str == '') return "Cannot be empty, please enter a name"
-      else return array.filter((item) => {
-        return item.fullname.toLowerCase().includes(str.toLowerCase())
-      })
+        if(str == '') return "Cannot be empty, please enter a name"
+        else return array.filter((item) => {
+            return item.fullname.toLowerCase().includes(str.toLowerCase())
+        })
     }
 
 
 
-        sortedContributors.forEach((item, i) => {
-        let username = document.createElement('span');
-        username.innerHTML = item.fullname;
+    function render(array){
+        array.forEach((item) => {
+            let username = document.createElement('span');
+            username.innerHTML = item.fullname;
 
-        let user = document.createElement('a');
-        user.className = 'box-item'
-        user.setAttribute('href', item.username)
-        user.append(username)
-        document.getElementById('contributors').append(user)
-      })
+            let user = document.createElement('a');
+            user.className = 'box-item'
+            user.setAttribute('href', item.username)
+            user.setAttribute('id', item.id)
+            user.append(username)
 
+            if(item.id <= initialContributorsNumber){
+                document.getElementById('contributors').append(user)
+            }
 
+        })
+    }
+
+    // Load contributors after document loads.
+    render(contributors);
+
+    function loadMore() {
+        if(initialContributorsNumber >= contributors.length ){
+            render(contributors)
+        }else {
+            initialContributorsNumber += 84;
+            render(contributors)
+            document.querySelectorAll('a.box-item').forEach(con => {
+                // console.log(con.href)
+                con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
+            })
+            if(initialContributorsNumber >= contributors.length){
+                document.getElementById('loadMore').setAttribute('hidden', true)
+            }
+        }
+    }
 
 
     document.querySelectorAll('a.box-item').forEach(con => {
       // console.log(con.href)
       con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
     })
+
+    searchbox.addEventListener('keyup', async (e) => {
+        searchbox.value !== '' ? document.getElementById('loadMore').classList.add('hidden') : document.getElementById('loadMore').classList.remove('hidden')
+
+        searchResult = await filterUsers(e.target.value, contributors )
+        document.getElementById('contributors').innerHTML = e.target.value !== '' ? "<div class='text-center' id='loading'>Loading...</div>" : ''
+
+        e.target.value !== '' ?
+        searchResult.forEach((item) => {
+            let username = document.createElement('span');
+            username.innerHTML = item.fullname;
+
+            let user = document.createElement('a');
+            user.className = 'box-item'
+            user.setAttribute('href', item.username)
+            user.append(username)
+
+            document.getElementById('contributors').append(user)
+        })
+      :
+        contributors.forEach((item) => {
+            let username = document.createElement('span');
+            username.innerHTML = item.fullname;
+
+            let user = document.createElement('a');
+            user.className = 'box-item'
+            user.setAttribute('href', item.username)
+            user.append(username)
+            if(item.id <= initialContributorsNumber){
+                document.getElementById('contributors').append(user)
+            }
+
+        })
+
+        document.querySelectorAll('a.box-item').forEach(con => {
+            // console.log(con.href)
+            con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
+        })
+
+        document.getElementById('loading').setAttribute('hidden', true)
+
+    })
+
+
 
     function switchTheme(e) {
       if (e.target.checked) {
@@ -2014,44 +2059,26 @@
 
   </script>
 
+  <!-- <script src="/scripts/scroll.js"></script> -->
 
   <script src="./scripts/menu.js"></script>
   <div class="container">
-    
+    <div id="stats" style="margin-top: 1rem;"></div>
+  </div>
+  <!-- <div class="container">
+
     <div id="stats" style="margin-top: 1rem;">
         <div>Made with ❤️ by <a href="https://twitter.com/fineanmol">Anmol Agarwal</a>.  © Copyright 2022 </div></div>
-  </div>
+  </div> -->
   <script>
+    document.getElementById('stats').innerHTML =
+        'You guys are awesome, we have passed the github rate again this hour. <a href="https://github.com/fineanmol/Hacktoberfest2022" target="_blank">Here</a> is a link to repo to check out live stats';
     $('.tdnn').click(function () {
       $("body").toggleClass('light');
       $(".moon").toggleClass('sun');
       $(".tdnn").toggleClass('day');
     });
   </script>
-
-  <script>
-    //Get the button
-    var mybutton = document.getElementById("myBtn");
-
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function () { scrollFunction() };
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        // mybutton.style.display = "block";
-      } else {
-        // mybutton.style.display = "none";
-      }
-    }
-
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-  </script>
-
-
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 </body>

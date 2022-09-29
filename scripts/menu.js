@@ -26,6 +26,11 @@ const menu = {
       'text': '<i class="fa fa-twitter" style="font-size:20px"></i>Twitter',
       'href': 'https://twitter.com/fineanmol',
       'id': 'tools'
+    },
+    'Stars': {
+      'text': '<a class="github-button" href="https://github.com/fineanmol/Hacktoberfest2022" data-icon="octicon-star" data-show-count="true" aria-label="Star fineanmol/Hacktoberfest2022 on GitHub">Stars</a>',
+      'href': 'https://github.com/fineanmol/Hacktoberfest2022',
+      'id': 'tools'
     }
 
 }

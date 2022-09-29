@@ -84,7 +84,7 @@ body {
   display: none;
   position: fixed;
   bottom: 20px;
-  right: 30px;
+  right: 40px;
   width: 40px;
   height: 40px;
   color: #000;
@@ -589,6 +589,7 @@ body {
   border-radius: var(--toggleHeight);
   transition: all 0.5s ease-in-out;
   background: var(--bgColor--night);
+  margin: 0 0 0 10px;
 }
 .day {
   background: #ffbf71;

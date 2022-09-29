@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+
+    <!-- theme css after switching through theme toggle -->
+    <link rel="stylesheet" id="selected-theme" href="" />
+
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+  <body>
+    <main class="main">
+      <div id="top" class="top flex">
+        <h1>calc</h1>
+
+        <div class="right-top flex">
+          <p>Theme</p>
+          <form>
+            <div class="switch-toggle switch-3 switch-candy">
+              <div class="flex labels">
+                <label class="label" for="theme-1">1 </label>
+                <label class="label" for="theme-2">2 </label>
+                <label class="label" for="theme-3">3 </label>
+              </div>
+              <div class="flex inputs">
+                <input
+                  id="theme-1"
+                  name="theme-toggle"
+                  type="radio"
+                  value="theme1"
+                  checked
+                />
+                <input
+                  id="theme-2"
+                  name="theme-toggle"
+                  type="radio"
+                  value="theme2"
+                />
+                <input
+                  id="theme-3"
+                  name="theme-toggle"
+                  type="radio"
+                  value="theme3"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="calculator flex flex-column">
+        <div class="screen">
+          <div id="result" class="screen">0</div>
+        </div>
+        <div class="keypad">
+          <button id="seven" class="num-btn">7</button>
+          <button id="eight" class="num-btn">8</button>
+          <button id="nine" class="num-btn">9</button>
+          <button id="del" data-action="clear">del</button>
+
+          <button id="four" class="num-btn">4</button>
+          <button id="five" class="num-btn">5</button>
+          <button id="six" class="num-btn">6</button>
+          <button id="add" class="key--operator" data-action="add">+</button>
+
+          <button id="one" class="num-btn">1</button>
+          <button id="two" class="num-btn">2</button>
+          <button id="three" class="num-btn">3</button>
+          <button id="substract" class="key--operator" data-action="substract">
+            -
+          </button>
+
+          <button id="point" data-action="decimal">.</button>
+          <button id="zero" class="num-btn">0</button>
+          <button id="divide" class="key--operator" data-action="divide">
+            /
+          </button>
+          <button id="multiply" class="key--operator" data-action="multiply">
+            &times;
+          </button>
+
+          <button id="reset" data-action="reset">reset</button>
+          <button id="equals" class="key--equal" data-action="calculate">
+            =
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="scripts.js"></script>
+</html>

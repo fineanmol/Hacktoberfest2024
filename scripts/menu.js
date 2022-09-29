@@ -1,30 +1,30 @@
 const menu = {
   'Home': {
-    'text': 'Add your Name here',
-    'href': 'https://github.com/fineanmol/Hacktoberfest2021/blob/master/Contributors.html'
-  },
-  'Contributors': {
-    'text': 'Contributors',
-    'href': 'https://fineanmol.github.io/Hacktoberfest2021/Contributors.html'
+    'text': 'Contribute here',
+    'href': 'https://github.com/fineanmol/Hacktoberfest2022/blob/master/Contributors.html#L1881'
   },
   //'Others': {
     'Instagram': {
-      'text': 'Instagram Profile',
+      'text': 'Instagram Connect',
+      'href': 'https://instagram.com/fineanmol'
+    },
+    'Instagram': {
+      'text': 'Connect on <i class="fa fa-instagram" style="font-size:22px"></i>',
       'href': 'https://instagram.com/fineanmol'
     },
     'Facebook': {
-      'text': 'Facebook Profile',
+      'text': '<i class="fa fa-facebook" style="font-size:20px"></i>acebook',
       'href': 'https://www.facebook.com/fineanmol',
-      'id': 'tools'
+      'id': 'facebook'
     },
     'Linkedin': {
-      'text': 'Connect to get Linkedin Endorsement',
+      'text': 'Linked<i class="fa fa-linkedin" style="font-size:20px"></i>',
       'href': 'https://www.linkedin.com/in/fineanmol/',
-      'id': 'tools'
+      'id': 'linkedin'
     },
     'NDC': {
-      'text': 'About Us',
-      'href': 'https://www.nightowldevelopers.com',
+      'text': '<i class="fa fa-twitter" style="font-size:20px"></i>Twitter',
+      'href': 'https://twitter.com/fineanmol',
       'id': 'tools'
     }
 

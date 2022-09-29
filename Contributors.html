@@ -46,10 +46,9 @@
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-  <link rel="stylesheet" href="css/explosion.css">
-  <link rel="stylesheet" href="./css/terminal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
   <script src="https://kit.fontawesome.com/d9f7ec7b29.js" crossorigin="anonymous"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
   <title>Hacktoberfest 2022 - Contributors</title>
 <style>
     .hidden{
@@ -119,9 +118,12 @@
             <input type="text" id="search" class="form-control " placeholder="Search Contributors..">
         </div>
       </div>
-      <hr style="width:80%">
+      <div>
+        <a class="github-button" href="https://github.com/fineanmol/Hacktoberfest2022" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star fineanmol/Hacktoberfest2022 on GitHub">To Get "HacktoberFest-Accepted" label, Star ✩ the repo </a>
+          </div>
+      <hr style="width:90%">
     </div>
-    <div class="container" >
+    <div class="box mx-auto justify-content-center" id="contributors" >
 
       <!-- Add to the bottom of the list -->
       <div class="box mx-auto my-5 justify-content-center" id="contributors"></div>
@@ -1873,12 +1875,17 @@
           "id": 345,
           "fullname": "Ankur Singh",
           "username": "https://github.com/progressive-coder-ankur"
-      }
+      },
+      {
+          "id": 346,
+          "fullname": "Ankush jagga",
+          "username": "https://github.com/AnkushJagga"
+      },
 ];
 
     const searchbox = document.getElementById('search');
     let searchResult = null;
-    let initialContributorsNumber = 48;
+    let initialContributorsNumber = 72;
 
 
     function filterUsers(str, array) {
@@ -1915,7 +1922,7 @@
         if(initialContributorsNumber >= contributors.length ){
             render(contributors)
         }else {
-            initialContributorsNumber += 48;
+            initialContributorsNumber += 84;
             render(contributors)
             document.querySelectorAll('a.box-item').forEach(con => {
                 // console.log(con.href)
@@ -2058,9 +2065,14 @@
   <div class="container">
     <div id="stats" style="margin-top: 1rem;"></div>
   </div>
+  <!-- <div class="container">
+
+    <div id="stats" style="margin-top: 1rem;">
+        <div>Made with ❤️ by <a href="https://twitter.com/fineanmol">Anmol Agarwal</a>.  © Copyright 2022 </div></div>
+  </div> -->
   <script>
     document.getElementById('stats').innerHTML =
-        'You guys are awesome, we have passed the github rate again this hour. <a href="https://github.com/fineanmol/Hacktoberfest2021">Here</a> is a link to repo to check out live stats';
+        'You guys are awesome, we have passed the github rate again this hour. <a href="https://github.com/fineanmol/Hacktoberfest2022" target="_blank">Here</a> is a link to repo to check out live stats';
     $('.tdnn').click(function () {
       $("body").toggleClass('light');
       $(".moon").toggleClass('sun');

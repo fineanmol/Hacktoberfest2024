@@ -7,7 +7,7 @@ Hacktoberfest-2022
 
 P.S. Star ⭐ and Share this repository, if you had fun!! 😍
 
-![Hacktoberfest 2021](https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg)
+![Hacktoberfest 2022](https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg)
 ![Event Completed](https://raw.githubusercontent.com/fineanmol/Hacktoberfest2022/master/scripts/hacktoberPest/Event_Completed.png)
 
 # 📌 Videos 📽️:

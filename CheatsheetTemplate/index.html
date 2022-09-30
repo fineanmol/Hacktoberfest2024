@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 950px)" href="responsive.css">
+
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>Full Html Cheatsheet Template - By Vin</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <span class="logo"><img src="logo.png"></span>
+        <div class="content center">
+            <span><a href="#boilerPlate">Boiler Plate</a></span>
+            <span><a href="#htmlTags">Html Tags</a></span>
+            <span><a href="#htmlLists">Html Lists</a></span>
+            <span><a href="#htmlTables">Html Tables</a></span>
+            <span><a href="#htmlForms">Html Forms</a></span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="boilerPlate"><h1>Starter Template</h1><b>Boiler Plate</b> - Basic html starter
+                <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+
+
+                <div id="htmlTags">
+            <h1>Html tags</h1>
+<ol>
+            <li><b>Heading Tag</b> - Basic h1 to h6 tags
+<pre class="language-html"><code>&lt;h1&gt;This is h1&lt;/h1&gt;>
+&lt;h2&gt;This is h2&lt;/h2&gt;>
+&lt;h3&gt;This is h3&lt;/h3&gt;>
+&lt;h4&gt;This is h4&lt;/h4&gt;>
+&lt;h5&gt;This is h5&lt;/h5&gt;>
+&lt;h6&gt;This is h6&lt;/h6&gt;></code></pre>
+            </li>
+            <li><b>Div tag</b> - Leaves a line at the end
+<pre class="language-html"><code>&lt;div&gt;This is a paragraph. It is a block level elemnt&lt;/div&gt;</code></pre>
+            </li>
+            <li><b>Paragraph tag</b>
+<pre class="language-html"><code>&lt;p&gt;This is a paragraph. It is a block level elemnt&lt;/p&gt;</code></pre>
+            </li>
+            <li><b>Span tag</b> - Does not leave a line
+                <pre class="language-html"><code>&lt;span&gt;This is span tag. It is an inline element&lt;/span&gt;</code></pre>
+            </li>
+            <li><b>Anchor Tag</b> - Used to add external links
+            <pre class="language-html"><code>&lt;a href="https://github.com/Vinayak2805"&gt;Visit my github profile&lt;/a&gt;</code></pre>
+            </li>
+            <li><b>Image Tag</b> - Used to add images
+                <pre class="language-html"><code>&lt;img src="vin.jpg" alt="Vin's Image"&gt;</code></pre>
+            </li>
+            <li><b>Text-styling tags</b> - b, i, u, big, small
+                <pre class="language-html"><code>&lt;div&gt;
+    &lt;b&gt;Html&lt;/b&gt;is a markup language. 
+    &lt;i&gt;Italics&lt;/i&gt;
+    &lt;u&gt;Underlined&lt;/u&gt;
+    &lt;big&gt;This is big&lt;/big&gt;
+    &lt;small&gt;This is small&lt;/small&gt;
+&lt;/div&gt;</code></pre>
+            </li>
+            <li><b>Subscript and Superscript</b>- To modify text
+            <pre class="language-html"><code>&lt;div&gt;2&lt;sup&gt;2&lt;/sup&gt; equals 4&lt;/div&gt;
+&lt;div&gt;Water's chemical formula is H&lt;sub&gt;2&lt;/sub&gt;O&lt;/div&gt;</code></pre></li>
+<li><b>hr(horizontal rule) and br(break line) tags</b> <pre class="language-html"><code>&lt;div&gt;I am Vin. &lt;br&gt;This is a new line&lt;/div&gt;
+&lt;hr&gt;</code></pre></li>
+
+<li><b>pre tag</b> - Used to display extra spaces between texts
+<pre class="language-html"><code>&lt;pre&gt;This     is
+    me   .
+&lt;/pre&gt;</code></pre></li>
+        </ol>
+    </div>
+
+
+        <div id="htmlLists">
+        <h1>Html Lists</h1>
+        <ul>
+        <li><b>Ordered Lists</b> </li>
+        <pre class="language-html"><code>&lt;ol type="i"&gt;
+    &lt;li&gt;This is item number 1&lt;/li&gt;
+    &lt;li&gt;This is item number 2&lt;/li&gt;
+    &lt;li&gt;This is item number 3&lt;/li&gt;
+    &lt;li&gt;This is item number 4&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+<p>The possible values of type attribute in Ordered Lists are "i/I/1/A/a"
+</p>
+<br>
+        <li><b>Unordered Lists</b></li>
+        <pre class="language-html"><code>&lt;ul type="square"&gt;
+    &lt;li&gt;This is an item&lt;/li&gt;
+    &lt;li&gt;This is an item&lt;/li&gt;
+    &lt;li&gt;This is an item&lt;/li&gt;
+    &lt;li&gt;This is an item&lt;/li&gt;
+&lt;/ul&gt;</code></pre>    
+<p>The possible of type attribute in Unordered Lists are "disc/square/circle etc."</p>
+</ul>
+        </div>
+
+
+        <div id="htmlTables">
+<h1>Html Tables</h1>
+<p>Sample layout:</p>
+<pre class="language-html"><code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;ID&lt;/th&gt;
+            &lt;th&gt;Income&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Tom&lt;/td&gt;
+            &lt;td&gt;2337&lt;/td&gt;
+            &lt;td&gt;&dollar;1&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Jerry&lt;/td&gt;
+            &lt;td&gt;2338&lt;/td&gt;
+            &lt;td&gt;&dollar;2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<ul>
+<li><b>tr: used to display table row</b></li>
+<li><b>td: used to display table data</b></li>
+<li><b>th: used in place of table data for displaying headers</b></li>
+<li><b>thead: used to wrap table head</b></li>
+<li><b>tbody: used to wrap table body</b></li>
+</ul>
+        </div>
+
+
+<br>
+<div id="htmlForms">
+<h1>Html Forms</h1>
+<p><b>Forms are generally used in contact page</b> - We can use forms to take users' input</p>
+<pre class="language-html"><code>&lt;form action="backend.php"&gt;
+    Name: &lt;input type="text" placeholder="Enter your name"&gt;
+    &lt;br&gt;
+    Email: &lt;input type="email" placeholder="Enter your email"&gt;
+    &lt;br&gt;
+    Message:
+    &lt;br&gt;
+    &lt;textarea&gt; name="message"cols="30" rows="5" placeholder="Type your querry here"&lt;/textarea&gt;
+&lt;/form&gt;</code></pre>
+</div>
+
+
+
+<br>
+<h1>Video Embedding</h1>
+<p><b>Videos can be embeded using video tags</b></p>
+<pre class="language-html"><code>&lt;video src="vin.mp4" width="100px"&gt;Error&lt;/video&gt;</code></pre>
+</div>
+    <footer><p>Copyright &copy; <a class="footerAnchor" href="#">VinWebsites</a> || All rights reserved</p>
+    <a href="https://vinwebsitesmyblog.wordpress.com/" class="footerAnchor dnone" target="_blank">Visit My Blog</a>
+    <a href="https://github.com/Vinayak2805" class="footerAnchor dnone" target="_blank">Visit my Github Account</a>
+    <a href="#" class="footerAnchor Back">Back to top</a>
+    </footer>
+</body>
+
+</html>

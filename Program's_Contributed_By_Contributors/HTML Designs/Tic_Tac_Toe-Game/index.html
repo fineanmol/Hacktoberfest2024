@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Acme&display=swap" rel="stylesheet">
+    <!-- fonts awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="Assets/styles/style.css">
+    <title>Tic-Tac-Toe</title>
+</head>
+
+<body>
+
+    <!-- this is the navbar section -->
+    <nav class="navbar">
+        <!-- <div class="navbar-brand">player1</div> -->
+        <div class="container-fluid">
+
+            <span class="navbar-brand h1">Tic</span>
+            <span class="navbar-brand h1">Tac</span>
+            <span class="navbar-brand h1">Toe</span>
+        </div>
+        <!-- <div class="navbar-brand">Player2</div> -->
+    </nav>
+    <div class="container">
+        <div class="player-name">
+            <h4 id="plr1">Player1 | <i class="fa-solid fa-xmark "></i> |</h4>
+        </div>
+        <div class="player-name">
+            <h4 id="plr2">Player2 | <i class="fa-regular fa-o"></i> |</h4>
+        </div>
+    </div>
+
+
+
+
+    <!-- this is the board of the game -->
+
+
+
+
+
+
+
+
+    <div class="board">
+        <div class="row1">
+            <div id="box1" class="box"></div>
+            <div id="box4" class="box"></div>
+            <div id="box7" class="box"></div>
+        </div>
+        <div class="row2">
+            <div id="box2" class="box"></div>
+            <div id="box5" class="box"></div>
+            <div id="box8" class="box"></div>
+        </div>
+        <div class="row3">
+            <div id="box3" class="box"></div>
+            <div id="box6" class="box"></div>
+            <div id="box9" class="box"></div>
+        </div>
+        
+    </div>
+    <div class="credits">
+            <p>❤ from Tuhin and Arian</p>
+        </div>
+
+    <!-- scoreboard -->
+
+    <div class="scoreboard">
+        <div class="score">
+            <div class="reset-exit my-2">
+                <i id="reset" class="fa-solid fa-arrow-rotate-right fa-2x"></i>
+                <i id="exit" class="fa-solid fa-person-walking-arrow-right fa-2x"></i>
+            </div>
+            <h3>Score</h3>
+            <div class="player-names-score">
+                <h4 id="score-1" class="player-score">Player1</h4>
+                <i id="fa-arrow" class="fa-solid fa-arrows-left-right fa-2x"></i>
+                <h4 id="score-2" class="player-score">Player2</h4>
+            </div>
+            <div class="player-names-score">
+                <h4 id="plrscr1" class="player-score">0</h4>
+                <i id="fa-arrow-psuedo" class="fa-solid fa-arrows-left-right fa-2x"></i>
+                <h4 id="plrscr2" class="player-score">0</h4>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- MODAL -->
+    <div id="modal" class="">
+        <div class="modal-content">
+            <div class="header">
+                <h2 class="modal-title">Welcome!</h2>
+            </div>
+            <div class="copy">
+
+                <div class="input mb-4">
+                    <label for="name1" class="form-label mb-1">Enter Player1 Name..</label>
+                    <input type="text" class="form-control" id="player1" placeholder="Player 1   | X |">
+                </div>
+                <div class="input mb-4">
+                    <label for="name2" class="form-label mb-1">Enter Player2 Name..</label>
+                    <input type="text" class="form-control" id="player2" placeholder="Player 2   | 0 |">
+                </div>
+                <div class="input mb-1">
+                    <label for="range" class="form-label mb-1">How many times you can beat your opponent?</label>
+                </div>
+                <div class="rounds">
+                    <div class="value">5</div>
+                    <input id="rounds" type="range" min="1" max="7" step="2">
+                    <p class="play btn btn-play" id="play" href="">PLAY!</p>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+
+    <!--end game-->
+    <div id="end" class="end end_hidden">
+        <div class="reset_text">
+            <h1 class="my-4" id="win_reset">GG! Wp </h1>
+            <i class='bx bx-happy-heart-eyes bx-tada bx-lg'></i>
+            <h4 class="my-4">Play Next Round..</h4>
+            <p class="my-4">Click Anywhere to continue</p>
+        </div>
+    </div>
+
+    <!--draw game-->
+    <div id="draw" class="end end_hidden">
+        <div class="reset_text">
+            <h1 class="my-4" id="draw_reset">Its a Draw <i class='bx bx-meh bx-tada' ></i></h1>
+            <p class="my-4">Click Anywhere to continue</p>
+        </div>
+    </div>
+
+    
+
+    <!--message-->
+    <div id="win_modal" class="win_modal win_modal_hidden">
+        <div id="message_box" class="message_box message_box_hidden">
+            <div class="header">
+                <h2 class="win_modal_title"> Congratulations!</h2>
+                <i class='bx bx-party bx-tada bx-md'></i><i class='bx bx-party bx-tada bx-md'></i>
+            </div>
+            <div class="copy">
+                <h4 id="winner" > yay! you have won </h3>
+                    <div class="footer">
+                        <p id="won" class="play btn btn-play">GG</p>
+                    </div>
+            </div>
+        </div>
+        <!-- <div class="overlay"></div> -->
+    </div>
+
+
+
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+<script src="Assets/js/main.js"></script>
+
+</html>

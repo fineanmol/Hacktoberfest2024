@@ -1,16 +1,16 @@
 def sort012(array):
   low=0
   high=len(array)-1
-  mid=0
-  while mid<=high:
-    if array[mid]==0:
-      array[low],array[mid]=array[mid],array[low]
+  middle=0
+  while middle<=high:
+    if array[middle]==0:
+      array[low],array[middle]=array[middle],array[low]
       low=low+1
-      mid=mid+1
-    elif array[mid]==1:
-      mid=mid+1
+      middle=middle+1
+    elif array[middle]==1:
+      middle=middle+1
     else:
-      array[mid],array[high]=array[high],array[mid]
+      array[middle],array[high]=array[high],array[middle]
       high=high-1
   return array
 

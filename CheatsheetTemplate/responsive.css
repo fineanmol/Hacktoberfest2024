@@ -1,0 +1,53 @@
+.logo{
+    display: none;
+}
+
+h1{
+    font-size: 1.5em;
+    padding-top: 1em;
+}
+
+.container{
+    padding: 1em 0em;
+}
+
+footer{
+    height: 30vh;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+}
+
+.footer a{
+    font-size: 0.5em;
+}
+
+@media only screen and (max-width:850px){
+    .container{
+        width: 90vw;
+    }
+
+    .navbar{
+        height: 33vh;
+        /* padding-top: 0.1em; */
+        position: relative;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+    .content span a{
+       font-size: 0.6em;
+       padding: 0em;
+    }
+
+}
+
+@media screen and (max-width:360px) {
+    .dnone{
+        display: none;
+    }
+}

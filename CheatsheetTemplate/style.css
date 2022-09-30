@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 12vh;
+    width: 100vw;
+    background-color: #272822;
+    position: fixed;
+    z-index: 2;
+}
+
+.content span a{
+    text-decoration: none;
+    color: white;
+    padding: 2em;
+}
+
+.content span a:hover{
+    color: wheat;
+    text-decoration: underline;
+}
+
+.content span a:active{
+    color: rgb(173, 216, 194);
+    text-decoration: underline;
+}
+
+.content{
+    font-family: 'Potta One', cursive;
+}
+
+.logo{
+    padding: 0px 1.5em ;
+}
+
+.logo img{
+    width: 5vw;
+}
+
+.container{
+    width: 60vw;
+    padding: 3em 0px;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.toolbar-item button{
+    cursor: pointer !important;
+    background-color: white;
+    color: black !important;
+    border: 1px solid black !important;
+    border-radius: 15px !important;
+    padding: 5px 10px !important;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+    color: white;
+    background-color: #272822;
+    font-family: 'Comic sans ms';
+}
+
+h1{
+    padding-top: 3em;
+}
+
+.footerAnchor{
+    margin: 0.1em;
+    text-decoration: underline;
+    color: rgb(226, 224, 224);
+}
+
+.Back{
+    color: wheat !important;
+}

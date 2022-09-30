@@ -1,0 +1,22 @@
+int maxMeetings(int start[], int end[], int n)
+    {
+       vector<pair<int,int>> vpair;  // making pair and sorting acc. to end time
+       for(int k=0;k<n;++k){
+       vpair.push_back(make_pair(end[k],start[k])); //pushing 'end time' first because we need 
+       }                                            // to sort according to end time
+       sort(vpair.begin(),vpair.end());  //since sort will occur with first value of the pair
+       
+       
+       int i=0;    //iterator for previous activity
+       int count=1;  // since activities are sorted according to finish time first activity will always be considered by default
+       for(int j=1;j<n;++j){ // iterator for current activity
+           if(vpair[j].second>vpair[i].first){ // start time of current activity shud be > than finish
+               i=j;                //time of prev activity(not equal since stated in q.) 
+               count++;            //prev activity i now is equal to current activity 'j'      
+           }                       //since we move to search next activity
+       }
+       return count;
+       
+       
+        
+    }

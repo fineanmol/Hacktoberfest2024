@@ -1,0 +1,102 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	background: #f5f5f5;
+}
+
+@-webkit-keyframes initial-loading {
+	0%,
+	100% {
+		-webkit-transform: translate(-34px, 0);
+		transform: translate(-34px, 0);
+	}
+	50% {
+		-webkit-transform: translate(96px, 0);
+		transform: translate(96px, 0);
+	}
+}
+
+@keyframes initial-loading {
+	0%,
+	100% {
+		-webkit-transform: translate(-34px, 0);
+		transform: translate(-34px, 0);
+	}
+	50% {
+		-webkit-transform: translate(96px, 0);
+		transform: translate(96px, 0);
+	}
+}
+
+.center {
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+}
+
+.initial-load-animation {
+	width: 200px;
+	margin: 0 auto;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	transition: -webkit-transform 0.5s ease;
+	transition: transform 0.5s ease;
+	transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.initial-load-animation .logo-image {
+	background-image: url(linkedin-logo.svg);
+	height: 48px;
+	width: 48px;
+	margin: 0 auto 32px;
+	-webkit-transform: translate(0, 0);
+	transform: translate(0, 0);
+	opacity: 1;
+	transition: all 0.5s ease-out;
+}
+
+.initial-load-animation .loading-bar {
+	width: 130px;
+	height: 2px;
+	margin: 0 auto;
+	border-radius: 2px;
+	background-color: #cfcfcf;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	-webkit-transform: rotateY(0);
+	transform: rotateY(0);
+	transition: -webkit-transform 0.3s ease-in;
+	transition: transform 0.3s ease-in;
+	transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+}
+
+.initial-load-animation .loading-bar .blue-bar {
+	height: 100%;
+	width: 68px;
+	position: absolute;
+	-webkit-transform: translate(-34px, 0);
+	transform: translate(-34px, 0);
+	background-color: #0073b1;
+	border-radius: 2px;
+	-webkit-animation: initial-loading 1.5s infinite ease;
+	animation: initial-loading 1.5s infinite ease;
+}
+
+.initial-load-animation.fade-load .logo-image {
+	-webkit-transform: translate(0, 10px);
+	transform: translate(0, 10px);
+	opacity: 0;
+}
+
+.initial-load-animation.fade-load .loading-bar {
+	-webkit-transform: rotateY(90deg);
+	transform: rotateY(90deg);
+}

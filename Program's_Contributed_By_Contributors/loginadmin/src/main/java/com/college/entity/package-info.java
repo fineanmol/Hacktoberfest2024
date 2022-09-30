@@ -1,1 +1,0 @@
-package com.college.entity;

@@ -198,9 +198,11 @@ a:hover{
     z-index:10
 }
 .box-item:hover{
-    color:#fff;
+    size: 30cm;
+    color:navy;
     letter-spacing:2px;
     font-weight:700;
+    transform: rotate(3deg);
     transition:left 1s cubic-bezier(.86,0,.07,1)
 }
 .box-item::before{

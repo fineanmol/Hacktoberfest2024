@@ -177,6 +177,59 @@ a:hover{
     letter-spacing:0;
     transition:letter-spacing .5s
 }
+
+h2 {
+    position: relative;
+    display: flex;
+    gap: 5px;
+    color: var(--lightt);
+    font-size: 2em;
+    cursor: pointer;
+}
+
+h2 span {
+    position: relative;
+    filter: blur(5px);
+    padding: 0 5px;
+    transition: 0.5s;
+}
+
+h2 span:hover {
+    filter: blur(0px);
+    transition: 0.5s;
+}
+
+h2 span i {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+}
+
+h2 span:hover i::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 8px;
+    background: var(--lightt);
+    box-shadow: 0 53px var(--lightt),
+        36px 53px var(--lightt),
+        36px 0 var(--lightt);
+}
+
+h2 span:hover i::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 2px;
+    background: var(--lightt);
+    box-shadow: 0 60px var(--lightt),
+        30px 60px var(--lightt),
+        30px 0 var(--lightt);
+}
 @media (min-width:768px){
     .box{
         display:flex;

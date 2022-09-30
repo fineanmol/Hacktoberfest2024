@@ -10,4 +10,10 @@ def countdown(time_sec):
 
     print("stop")
 
-countdown(10)
+# countdown(10)
+
+# Enable the user to enter custom input
+
+
+ ur_time = int(input("Please Enter Required Time in Seconds - "))
+    countdown(ur_time)

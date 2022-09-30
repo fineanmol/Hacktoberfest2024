@@ -48,12 +48,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
   <script src="https://kit.fontawesome.com/d9f7ec7b29.js" crossorigin="anonymous"></script>
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- <script async defer src="https://buttons.github.io/buttons.js"></script> -->
   <title>Hacktoberfest 2022 - Contributors</title>
 <style>
     .hidden{
         display: none;
     }
+    .st0 {
+            fill: #FF0844;
+          }
 </style>
 
 
@@ -81,11 +84,6 @@
         x="0px" y="0px" viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve" role="img"
         aria-labelledby="dyn2wm4vin1xgraye3ggy9kf12oaz8a" class="header__logo" width="50px" height="50px">
         <title id="dyn2wm4vin1xgraye3ggy9kf12oaz8a">Hacktoberfest</title>
-        <style type="text/css">
-          .st0 {
-            fill: #FF0844;
-          }
-        </style>
         <path class="st0"
           d="M0.7,0.7v298.7h298.7V0.7H0.7z M197.8,271.4l-32-32v-95.6l-31.4,31.4v79l-17.3,17.3L99.8,254V70.4L95,65.6  L73,87.7L61.7,76.5l47.8-47.8l0.1,0.1l0,0l1.9,1.8l22.8,22.8V136l31.4-31.4V70.2L150,54.4l25.8-25.8l24.7,24.7v169.1l12.1,12.1  l14.7-14.7l11.1,11.1L197.8,271.4z">
         </path>
@@ -123,7 +121,7 @@
           </div>
       <hr style="width:90%">
     </div>
-    <div class="box mx-auto justify-content-center" id="contributors" >
+    <div class="container-fluid">
 
       <!-- Add to the bottom of the list -->
       <div class="box mx-auto my-5 justify-content-center" id="contributors"></div>
@@ -1893,12 +1891,21 @@
           "fullname": "Srinjoy Pati",
           "username": "https://github.com/srinjoy-26"
       },
+
       
       {
           "id": 349,
           "fullname": "Bhumit",
           "username": "https://github.com/BhumitRohilla"
       }
+
+      {
+
+        "id":350,
+        "fullname": "d-coder111",
+        "username": "https://github.com/d-coder111"
+      },
+
     ];
 
 
@@ -1942,11 +1949,13 @@
             render(contributors)
         }else {
             initialContributorsNumber += 84;
+            document.getElementById('contributors').innerHTML = "<div class='text-center' id='loading'>Loading...</div>"
             render(contributors)
             document.querySelectorAll('a.box-item').forEach(con => {
                 // console.log(con.href)
                 con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
             })
+            document.getElementById('loading').setAttribute('hidden', true)
             if(initialContributorsNumber >= contributors.length){
                 document.getElementById('loadMore').setAttribute('hidden', true)
             }
@@ -2103,3 +2112,6 @@
 </body>
 
 </html>
+
+
+

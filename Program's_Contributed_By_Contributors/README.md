@@ -1,7 +1,7 @@
 Thank you for this repo :)
 Please contribute any program here.
 
-
+```C++
 // SUDOKU SOLVER //
 
 class Solution {
@@ -64,3 +64,4 @@ void solveSudoku(vector<vector<char>> &bd)
     sl(bd, 0, 0);
 }
 };
+```

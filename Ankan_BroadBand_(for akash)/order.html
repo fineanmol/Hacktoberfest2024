@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      body {
+        background-color: #5cdb95;
+      }
+      form {
+        padding: 0%;
+        margin: 0 auto;
+
+        border: 5px solid #05386b;
+        width: 20%;
+        background: #edf5e1;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="final.html">
+      <center>
+        <u><h1>Book Here</h1></u>
+        <br />
+        <label for="reg">Name</label><br />
+        <input type="text" id="reg" placeholder="required(*)" required /><br />
+        <label for="user">Select Service</label><br />
+        <input type="text" id="user" placeholder="required(*)" required /><br />
+        <label for="pwd">Select Circle</label><br />
+        <input type="text" id="pwd" placeholder="required(*)" required /><br />
+        <label for="email">Email</label><br />
+        <input
+          type="email"
+          id="email"
+          placeholder="required(*)"
+          required
+        /><br />
+        <label for="num">Mobile Number</label><br />
+        <input
+          type="number"
+          id="num"
+          pattern="^[0-9]{10}$"
+          placeholder="required(*)"
+          required
+        /><br />
+        <label for="dob">Date of Birth</label><br />
+        <input
+          type="date"
+          id="dob"
+          placeholder="required(*)"
+          required
+        /><br /><br /><br />
+        <input type="submit" />
+        <input type="reset" />
+      </center>
+    </form>
+  </body>
+</html>

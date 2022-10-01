@@ -8,7 +8,7 @@ import (
 	"os"
 	"os/user"
 	"runtime"
-  "time"
+	"time"
 
 	"github.com/gookit/color"
 	"github.com/shirou/gopsutil/v3/cpu"
@@ -19,8 +19,8 @@ import (
 func main() {
 
 	// Get Time
-  dt := time.Now()
-  color.Magenta.Println(dt.Format(time.ANSIC))
+	dt := time.Now()
+	color.Magenta.Println(dt.Format(time.ANSIC))
 
 	// Get Hostname
 	hostname, err := os.Hostname()

@@ -1,0 +1,23 @@
+body{
+    background:url(./assets/bg-hd.jpg) no-repeat center center fixed;
+    background-size: cover;
+
+}
+
+
+.hero{
+    color: #fff;
+    margin-top: 1%;
+    /* text-align: center; */
+    padding-left: -20px;
+    font-size: 75px; 
+    letter-spacing: -0.05em;
+    font-family: 'Revalia', cursive;
+}
+
+
+.ima{
+    margin-top: 5%;
+    height: 150px;
+    width: 250px;
+}

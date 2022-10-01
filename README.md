@@ -41,7 +41,7 @@ Hacktoberfest 2022
 git clone https://github.com/fineanmol/Hacktoberfest2022.git
 
 ```
-- Navigate to project directory.
+- Navigate to the project directory.
 ```
 cd Hacktoberfest2022
 ```
@@ -100,7 +100,7 @@ For more information on syncing forks [read this article from Github](https://he
 
 # FAQs (Frequently Asked Questions)
 
-- Who all can contribute?
+- Who can contribute?
   - Anyone with a github account and who is signed up for
 [hacktoberfest](https://hacktoberfest.digitalocean.com/) :)
 - Are you getting paid for this?

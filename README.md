@@ -1,5 +1,9 @@
 Hacktoberfest-2022
-# Hacktoberfest {[Live Website](https://fineanmol.github.io/Hacktoberfest2022/Contributors.html)}
+
+# Submit your PR on this new repo [Hacktoberfest_Accepted](https://github.com/fineanmol/hacktoberfest) , there we are merging all PR. 
+
+In this current repo, there are alot of conflicts, we are not merging until all conflicts get resolved.
+Hacktoberfest {[Live Website](https://fineanmol.github.io/Hacktoberfest2022/Contributors.html)}
 
 
 **This is a beginner-friendly project to help you get started with your
@@ -96,7 +100,7 @@ For more information on syncing forks [read this article from Github](https://he
 
 # FAQs (Frequently Asked Questions)
 
-- Who can contribute?
+- Who all can contribute?
   - Anyone with a github account and who is signed up for
 [hacktoberfest](https://hacktoberfest.digitalocean.com/) :)
 - Are you getting paid for this?

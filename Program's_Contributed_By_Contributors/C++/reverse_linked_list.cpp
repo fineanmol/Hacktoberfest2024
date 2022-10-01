@@ -29,7 +29,6 @@ public:
         ptr2->next=ptr1;
         head=ptr2;
         }
-        return head;
-        
+        return head; 
     }
 };

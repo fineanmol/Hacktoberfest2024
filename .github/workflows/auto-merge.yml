@@ -1,35 +1,15 @@
-name: Automerge
-
+name: Auto-Merge
 on:
-  push:
-
-  schedule:
-    - cron: 0 * * * *
-
   pull_request_target:
-    types:
-      - opened
-      - synchronized
-      - reopened
-      - edited
-      - labeled
-      - unlabeled
-      - ready_for_review
-
-  workflow_dispatch:
-    inputs:
-      pull-request:
-        description: Pull Request Number
-        required: false
+    types: [labeled]
 
 jobs:
-  automerge:
+  enable-auto-merge:
     runs-on: ubuntu-latest
+
+    # Specifically check that dependabot (or another trusted party) created this pull-request, and that it has been labelled correctly.
+    if: github.event.pull_request.user.login == 'dependabot[bot]' && contains(github.event.pull_request.labels.*.name, 'dependencies')
     steps:
-      - uses: reitermarkus/automerge@v2
-        with:
-          token: ${{ secrets.MY_GITHUB_TOKEN }}
-          merge-method: rebase
-          do-not-merge-labels: never-merge
-          required-labels: automerge
-          dry-run: false
+    - uses: alexwilson/enable-github-automerge-action@main
+      with:
+        github-token: "${{ secrets.GITHUB_TOKEN }}"

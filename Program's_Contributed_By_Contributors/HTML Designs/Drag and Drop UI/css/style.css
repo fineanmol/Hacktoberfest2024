@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap");
+
+:root {
+    --first-color: #272A3A;
+    --first-color-light: #8A8EAA;
+    --first-color-lighten: #F8F8FC;
+
+    --body-font: 'Ubuntu', sans-serif;
+    --normal-font-size: 1rem;
+    --smaller-font-size: .813rem;
+}
+
+*,::before,::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    background-color: var(--first-color-lighten);
+}
+
+h1 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Drag and Drop Card */
+.drop, .drop__container {
+    display: grid;
+}
+
+.drop {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.drop__container {
+    row-gap: 1rem;
+    padding: 2rem;
+    box-shadow: 4px 4px 16px #E1E1E1;
+}
+
+.drop__card, .drop__data {
+    display: flex;
+    align-items: center;
+}
+
+.drop__card {
+    width: 360px;
+    justify-content: space-between;
+    padding: .75rem 1.25rem .75rem .75rem;
+    background-color: var(--first-color-lighten);
+    box-shadow: 4px 4px 16px #E1E1E1, -2px -2px 16px #FFF;
+    border-radius: 2.5rem;
+}
+
+.drop__img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.drop__name {
+    font-size: var(--normal-font-size);
+    color: var(--first-color);
+    font-weight: 500;
+}
+
+.drop__profession {
+    font-size: var(--smaller-font-size);
+    color: var(--first-color-light);
+}
+
+.drop__social {
+    margin: 0 .375rem;
+    color: var(--first-color-light);
+    transition: .4s;
+}
+
+.drop__social:hover {
+    color: var(--first-color);
+}
+
+.sortable-chosen {
+    box-shadow: 8px 8x 32px #E1E1E1;
+}
+
+.sortable-drag {
+    opacity: 0;
+}

@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+string longestPalindrome (string S)
+{
+        int count=0, n=S.size(), si=0, sj=0;
+        
+        for(int i=0;i<n;i++)
+        {
+            //odd condition
+            int left=i-1,right=i+1,len=1;
+            while(right<n && left>=0 && S[left]==S[right])
+            {
+                len+=2;
+                right++;
+                left--;
+            }
+            
+            if(count<len)
+            {
+                count=len;
+                si=left+1;
+                sj=right-1;
+            }
+
+            //even condition
+            left=i, right=i+1; len=0;
+            while(left>=0 && right<n && S[left]==S[right]){
+                len+=2; left--; right++;
+            }
+            if(count<len){
+                count=len; si=left+1;  sj=right-1;
+            }
+        }
+        
+        return S.substr(si, sj-si+1);
+}

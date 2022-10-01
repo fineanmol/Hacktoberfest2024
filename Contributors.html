@@ -1952,6 +1952,9 @@
         </div>
     </footer>
 
+
+    <script type="module">
+
     <script>
 
         // Contributors array
@@ -3830,6 +3833,8 @@
 
 //----------------------------------------------------------------
 
+
+        import { contributors } from './contributors/data.js';
         const searchbox = document.getElementById('search');
         let searchResult = null;
         let initialContributorsNumber = 72;
@@ -3866,8 +3871,10 @@
         // Load contributors after document loads.
         render(contributors);
 
-        function loadMore() {
-            if (initialContributorsNumber >= contributors.length) {
+        const loadMore = document.getElementById("loadMore")
+
+        loadMore.addEventListener('click', ()=>{
+          if (initialContributorsNumber >= contributors.length) {
                 render(contributors)
             } else {
                 initialContributorsNumber += 84;
@@ -3875,19 +3882,19 @@
                 render(contributors)
                 document.querySelectorAll('a.box-item').forEach(con => {
                     // console.log(con.href)
-                    con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
+                    con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}" alt="${con.href.split('https://github.com/')[1]}">`
                 })
                 document.getElementById('loading').setAttribute('hidden', true)
                 if (initialContributorsNumber >= contributors.length) {
                     document.getElementById('loadMore').setAttribute('hidden', true)
                 }
             }
-        }
+        })
 
 
         document.querySelectorAll('a.box-item').forEach(con => {
             // console.log(con.href)
-            con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
+            con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}" alt="${con.href.split('https://github.com/')[1]}">`
         })
 
         searchbox.addEventListener('keyup', async (e) => {
@@ -3924,7 +3931,7 @@
 
             document.querySelectorAll('a.box-item').forEach(con => {
                 // console.log(con.href)
-                con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
+                con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}" alt="${con.href.split('https://github.com/')[1]}">`
             })
 
             document.getElementById('loading').setAttribute('hidden', true)

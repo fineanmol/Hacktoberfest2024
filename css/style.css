@@ -5,6 +5,25 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+/* Adding custom scrollbar */
+::-webkit-scrollbar{
+    width: 20px
+}
+::-webkit-scrollbar-track{
+background-color: rgb(14, 17, 18);
+
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(107, 107, 214);
+    border-radius: 1rem;
+    border:.3rem solid transparent;
+    background-clip: content-box;
+}
+
+
 body {
   display: flex;
   justify-content: center;

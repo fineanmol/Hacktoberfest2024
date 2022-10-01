@@ -199,10 +199,10 @@ a:hover{
 }
 .box-item:hover{
     size: 30cm;
-    color:navy;
+    color:rgb(255, 255, 255);
     letter-spacing:2px;
     font-weight:700;
-    transform: rotate(3deg);
+    /* transform: rotate(3deg); */
     transition:left 1s cubic-bezier(.86,0,.07,1)
 }
 .box-item::before{

@@ -23,6 +23,6 @@ jobs:
     steps:
       - id: automerge
         name: automerge
-        uses: "fineanmol/Hacktoberfest2022@v0.15.3"
+        uses: "fineanmol/Hacktoberfest2022"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"

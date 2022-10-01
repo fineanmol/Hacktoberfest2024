@@ -1,6 +1,6 @@
 on:
   check_suite:
-    types: ["completed"]
+    types: ["opened","reopened" ,"completed","labeled"]
   workflow_run:
     workflows: ["CI"]
     branches: ["auto/*"]

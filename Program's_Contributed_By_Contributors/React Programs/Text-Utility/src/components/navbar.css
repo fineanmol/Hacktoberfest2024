@@ -1,0 +1,69 @@
+#nav-heading {
+  font-size: 1.5rem;
+  padding-right: 3vw;
+  background-image: linear-gradient(
+    -225deg,
+    #0097fc 0%,
+    #09ff15 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: mytextanimation1 5s infinite;
+}
+.anime {
+  animation: focus-in-contract 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: focus-in-contract 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+}
+
+@keyframes mytextanimation1 {
+  0% {
+    text-transform: uppercase;
+  }
+
+  33% {
+    text-transform: lowercase;
+  }
+
+  66% {
+    text-transform: capitalize;
+  }
+  100% {
+    text-transform: uppercase;
+  }
+}
+
+@-webkit-keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}

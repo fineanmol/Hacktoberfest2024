@@ -4,7 +4,7 @@ on:
   workflow_run:
     workflows: ["CI"]
     branches: ["auto/*"]
-    types: ["completed"]
+    types: [ "opened","reopened" ,"completed","labeled"]
   workflow_dispatch:
     inputs:
       pull-request:

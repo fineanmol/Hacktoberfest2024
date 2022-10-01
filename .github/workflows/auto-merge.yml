@@ -32,5 +32,4 @@ jobs:
           merge-method: rebase
           do-not-merge-labels: never-merge
           required-labels: automerge
-          pull-request: ${{ github.event.inputs.pull-request }}
           dry-run: false

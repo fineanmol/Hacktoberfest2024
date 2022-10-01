@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+int main(){
+	
+	int a[1000], n, max_sum ;
+	cin>>n;
+	
+	for(int i=0; i<n; i++){
+		cin>>a[i];
+	}
+	cout<<endl ;
+	int left = -1 ;
+	int right = -1 ;
+	//generate all subarrays
+	for (int i=0; i<n; i++){
+		for (int j=0; j<n; j++){
+			int cur_sum = 0;
+			for (int k=i; k<=j; k++){
+				
+				cur_sum += a[k] ;
+			}
+			//update max_sum if cs > ms
+			if(cur_sum > max_sum){
+				max_sum = cur_sum;
+				left = i ;
+				right = j ;
+			}
+			
+		}
+	}
+	//print the maximum sum 
+	cout<<"maximum sum = "<<max_sum<<endl;
+	cout<<"maximum sum subarray is  ";
+	for(int k=left; k<=right; k++){
+		cout<<a[k]<<" ";
+	}
+	return 0;
+}

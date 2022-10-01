@@ -2,6 +2,7 @@
 // range [n, m]
 import java.util.*;
 
+
 class Main
 {
 	// Prints all stepping numbers reachable from num
@@ -9,7 +10,8 @@ class Main
 	public static void bfs(int n,int m,int num)
 	{
 		// Queue will contain all the stepping Numbers
-		Queue<Integer> q = new LinkedList<Integer> ();
+		Queue<Integer> q = new java.util.LinkedList<Integer>() ;
+		
 
 		q.add(num);
 

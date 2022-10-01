@@ -1,0 +1,96 @@
+<!--  Contributed By Manan Bansal -->
+<!-- My Github : https://github.com/mananbansal2002  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Three js skybox test</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+  <style>
+*{
+margin:0;
+padding:0;}
+body{ height:100vh;
+	width:100vw;
+}
+
+</style>
+<body>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/104/three.js"></script>    
+  <script>      
+  window.addEventListener('click', function() {
+    if (document.documentElement.requestFullscreen) {
+    document.documentElement.requestFullscreen();
+  }    
+  })
+  </script>
+  <script src="https://unpkg.com/three@0.85.0/examples/js/controls/OrbitControls.js"></script>
+  <script>    
+let camera, scene, renderer  , controls, stargeo ,stars;  
+          
+  function init() {
+                            
+scene = new THREE.Scene();
+camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 1, 1000);
+camera.position.z=1;
+      camera.rotation.x=Math.PI/2;
+
+
+renderer = new THREE.WebGLRenderer({antialias: true});
+renderer.setSize( window.innerWidth, window.innerHeight );
+document.body.appendChild( renderer.domElement );
+
+
+// var controls = new THREE.OrbitControls( camera, renderer.domElement );
+// controls.maxDistance = 1500;
+      stargeo = new THREE.Geometry();
+      for(var i=0;i<6000;i++)
+          {
+              star=new THREE.Vector3(Math.random()*600-300,
+              Math.random()*600-300,
+              Math.random()*600-300
+               );
+              star.velocity=0;
+              star.accelerate=0.02;
+              
+                                   
+              stargeo.vertices.push(star);
+              
+              
+          }
+      
+      let sprite = new THREE.TextureLoader().load("https://i.ibb.co/Zmf54xg/12-127931-download-star-png-images-background-white-star-vector.jpg");
+      let starmaterial = new THREE.PointsMaterial({color:0xaaaaaa, size:0.7,map:sprite});
+ stars=new THREE.Points(stargeo,starmaterial);
+      scene.add(stars);
+      
+      update();
+  }
+
+function update() {
+    
+    stargeo.vertices.forEach(p=>{
+        p.velocity+=p.accelerate;
+        p.y-=p.velocity;
+        if(p.y<-200)
+            p.y=200 , p.velocity=0;
+    })
+  stargeo.verticesNeedUpdate=true;
+    requestAnimationFrame(update);
+   camera.rotation.y+=0.002
+    renderer.render(scene, camera);        
+}
+
+
+
+init();
+
+  </script>    
+
+</body></html>

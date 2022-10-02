@@ -6,6 +6,27 @@ const allTaskList = document.querySelector('.all-task')
 const completed_task = document.querySelector('.completed-task');
 const completed_task_heading = document.querySelector('.completed-task-heading')
 
+
+task.addEventListener("keypress", function(event) {
+    // If the user presses the "Enter" key on the keyboard
+    if (event.key === "Enter") {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Trigger the button element with a click
+      btn.click();
+    }
+  });
+
+task.addEventListener("keypress", function(event) {
+    // If the user presses the "Enter" key on the keyboard
+    if (event.key === "Enter") {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Trigger the button element with a click
+      btn.click();
+    }
+  });
+
 btn.onclick= function() {
     const typedValue =task.value;
     if(typedValue!==''){

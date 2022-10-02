@@ -1,26 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
 .navbar{
-  padding:.5rem 2rem
+  padding:.2rem 2rem
+  gap:1.5rem;
+  align-items:end;
 }
 nav{
-  background-color:var(--nav-color)
+  background-color:rgb(65, 45,45);
 }
 .navbar-nav{
-  width:100%
+  width:100%;
+  justify-content: flex-end;
+  gap: 10px;
 }
 .navbar-brand{
-  line-height:1;
+  line-height:0.5;
   margin-right:1rem
 }
 .navbar-brand svg{
   height:37px;
   width:auto;
   vertical-align:middle
+  padding-left:0.5rem;
+  margin-left:1rem;
 }
 .navbar-light .navbar-nav .nav-link{
-  color:var(--text);
+  color:rgb(255 ,255,255);
   position:relative;
   padding:5px;
   margin:0 10px!important
+  font-size:0.9rem;
+  font-family:Poppins,Montserrat,Verdana,Arial,sans-serif;
+  font-weight:300;
 }
 .navbar-light .navbar-nav .active{
   background-color:#f1ffc5
@@ -57,4 +68,17 @@ nav{
 }
 .navbar-light .navbar-nav .nav-link:hover{
   color:#dc143c
+}
+
+.widget{
+  margin: 0 0 5% 25%;
+  font-family: Poppins;
+  font-weight: 200;
+  align-self: center;
+
+}
+
+.btn{
+  color:#fff;
+  background-image: linear-gradient(180deg,#000,#217cc5);
 }

@@ -23,6 +23,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
     <meta name="description"
         content="This is a static website serving as a beginner friendly project to help developers get started with hacktoberfest -Gateway to open source.">
     <!-- Latest compiled and minified CSS -->
@@ -143,7 +145,7 @@
     </div>
     </div>
 
-    <footer class="footer mt-auto py-3 bg-light text-center">
+    <footer class="footer mt-auto py-3 bg-transparent text-center">
         <div class="container">
             <span class="text-muted">This Project is participating in Hacktoberfest.</span>
         </div>
@@ -2014,6 +2016,11 @@
                 "fullname": "Theis Andatu",
                 "username": "https://github.com/antheiz"
             },
+            {
+                "id": 365,
+                "fullname": "Swastik Bose",
+                "username": "https://github.com/swastik-bose007"
+            },
         ]
 
 
@@ -2204,8 +2211,18 @@
     <!-- <script src="/scripts/scroll.js"></script> -->
 
     <script src="./scripts/menu.js"></script>
-    <div class="container">
-        <div id="stats" style="margin-top: 1rem;"></div>
+    <div class="footer-links">
+        <ul class="lists">
+            <li class="mx-2 mx-md-4 mt-3"><a href="https://www.facebook.com/fineanmol" target="_blank"><i class="ri-facebook-fill p-3 icon"></i></a></li>
+            <li class="mx-2 mx-md-4 mt-3"><a href="https://www.linkedin.com/in/fineanmol/" target="_blank"><i class="ri-linkedin-fill p-3 icon"></i></a></li>
+            <li class="mx-2 mx-md-4 mt-3"><a href="https://www.instagram.com/fineanmol/" target="_blank"><i class="ri-instagram-line p-3 icon"></i></a></li>
+            <li class="mx-2 mx-md-4 mt-3"><a href="https://twitter.com/fineanmol" target="_blank"><i class="ri-twitter-fill p-3 icon"></i></a></li>
+        </ul>
+    </div>
+    <div class="container proper-alg">
+        <div id="stats" style="margin-top: 1rem; width: 100%;">
+            You guys are awesome, we have passed the github rate again this hour. <a href="https://github.com/fineanmol/Hacktoberfest2022" target="_blank">Here</a> is a link to repo to check out live stats
+        </div>
     </div>
     <!-- <div class="container">
 
@@ -2213,8 +2230,7 @@
         <div>Made with ❤️ by <a href="https://twitter.com/fineanmol">Anmol Agarwal</a>.  © Copyright 2022 </div></div>
   </div> -->
     <script>
-        document.getElementById('stats').innerHTML =
-            'You guys are awesome, we have passed the github rate again this hour. <a href="https://github.com/fineanmol/Hacktoberfest2022" target="_blank">Here</a> is a link to repo to check out live stats';
+        
         $('.tdnn').click(function () {
             $("body").toggleClass('light');
             $(".moon").toggleClass('sun');

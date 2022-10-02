@@ -117,10 +117,24 @@ body{
     background:var(--darkbg);
     outline:0;
     color:#eee;
-    width:300px;
+    width:20rem;
     accent-color:var(--lightt);
     box-shadow:none
 }
+@media (max-width:768px){
+    .form-control,.form-control:focus,.from-control:active{
+        width:14rem;
+    }
+}
+/* To Make Input field transparent during auto-complete */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #fff !important;
+}
+
 .light .form-control{
     background-color:#fff;
     border-color:#eee;

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bird catching game</title>
+</head>
+<body>
+    <div class="screen">
+        <h1>Catch The Insect</h1>
+        <button class="btn" id="start-btn">Play Game</button>
+    </div>
+   <div class="screen">
+       <h1>What is your "favourite Bird"</h1>
+       <ul class="insects-list">
+        <li>
+            <button class="choose-insect-btn">
+                <p>Gray</p>
+                <img src="https://i.gifer.com/OFAH.gif" alt="purple guy">
+            </button>
+            <button class="choose-insect-btn">
+                <p>Purple</p>
+                <img src="https://cms-assets.tutsplus.com/uploads/users/1112/posts/25209/image/animate-bird-slide-25.gif" alt="purple guy">
+            </button>
+            <button class="choose-insect-btn">
+                <p>Blue</p>
+                <img src="https://bestanimations.com/media/birds/424983890cute-animated-bird-gif.gif" alt="purple guy">
+            </button>
+            <button class="choose-insect-btn">
+                <p>Red</p>
+                    <img src="https://media0.giphy.com/media/3ornjQQZhry6bF31CM/source.gif" alt="purple guy">
+            </button>
+        </li>
+    </ul>
+   </div>
+
+   <div class="screen game-container" id="game-container">
+       <h3 id="time" class="time">Time: 00:00</h3>
+       <h3 id="score" class="score">Score: 0</h3>
+       <h5 id="message" class="message">
+           Are you annoyed yet? <br>
+           You are playing an inpossible game!!
+       </h5>
+
+       <div class="insect">
+        
+       </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="./themes/resume.css" id="theme" />
+</head>
+
+<body>
+    <div class="header">Resume Builder</div>
+    <div id="main">
+        <div class="inputMain">
+            <div class="inputHeader">INPUT YOUR DETAILS</div>
+            <div class="categories">
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                      <ul class="nav navbar-nav">
+                        <li class="active"><a href="#personal">Personal</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li class="dropdown">
+                          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Themes
+                          <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#" id="default">Default</a></li>
+                            <li><a href="#" id="blue">Blue</a></li>
+                            <li><a href="#" id="grey">Grey</a></li>
+                          </ul>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                  </nav>
+            </div>
+            <div class="inputForm">
+                <form name='registration' onSubmit="return formValidation();">
+                    <ul>
+                        <li>
+                            <h3 id="personal" style="text-align: left; font-weight: bold;">Personal Details</h3>
+                        </li>
+                        <li><label for="username">Name:</label></li>
+                        <li><input type="text" name="username" size="30" /></li>
+
+                        <li><label for="address">Address:</label></li>
+                        <li><input type="text" name="address" size="30" /></li>
+
+                        <li><label for="country">Country:</label></li>
+                        <li>
+                            <select name="country">
+                                <option selected="" value="Default">(Please select a country)</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Canada">Canada</option>
+                                <option value="India">India</option>
+                                <option value="Russia">Russia</option>
+                                <option value="USA">USA</option>
+                            </select>
+                        </li>
+                        <li><label for="zip">ZIP Code:</label></li>
+                        <li><input type="text" name="zip" /></li>
+
+                        <li><label for="email">Email:</label></li>
+                        <li><input type="text" name="email" size="30" /></li>
+
+                        <li><label id="gender">Sex:</label></li>
+                        <li><input type="radio" name="sex" value="Male" /><span>Male</span></li>
+                        <li><input type="radio" name="sex" value="Female" /><span>Female</span></li>
+
+                        <li><label>Language:</label></li>
+                        <li><input type="checkbox" name="language" value="English" checked /><span>English</span></li>
+                        <li><input type="checkbox" name="language" value="Hindi" /><span>Hindi</span></li>
+                        <li><input type="checkbox" name="language" value="French" /><span>French</span></li>
+                        <li><input type="checkbox" name="language" value="Spanish" /><span>Spanish</span></li>
+                        <li><input type="checkbox" name="language" value="Russian" /><span>Russsian</span></li>
+                        <li><label for="desc">About:</label></li>
+                        <li><textarea name="desc" id="desc"></textarea></li>
+                    </ul>
+                    <br>
+                    <ul>
+
+                        <li>
+                            <h3><label id="education" style="text-align: center;">Education</label></h3>
+
+                        </li>
+                        <div class="eform">
+                            <li><label for="institute">Institution:</label></li>
+                            <li><input type="text" required name="insti" size="30" /></li>
+
+                            <li><label for="degree">Degree:</label></li>
+                            <li><input type="text" name="degree" size="20" required /></li>
+                            <li><label for="year">End Year:</label></li>
+                            <li><input type="text" required name="year" size="10" /></li>
+                            <li><label for="result">Result:</label></li>
+                            <li><input type="text" required name="result" size="20" /></li>
+                        </div>
+                    </ul>
+                    <br>
+                    <ul>
+                        <li>
+                            <h3><label id="projects"
+                                    style="text-align: center; margin-top: 2%; margin-top: 2%;">Projects</label></h3>
+                        </li>
+                        <div id="pform">
+                            <li><label for="pname">Name: </label></li>
+                            <li><input type="text" name="pname" size="20" /></li>
+
+                            <li><label for="pabout">About:</label></li>
+                            <li><textarea type="text" name="pabout" size="30"></textarea></li>
+                        </div>
+                    </ul>
+                    <br>
+                    <ul>
+                        <li>
+                            <h3><label id="experience"
+                                    style="text-align: center; margin-top: 2%; margin-top: 2%;">Experience</label></h3>
+                        </li>
+                        <div id="expform">
+                            <li><label for="position">Position: </label></li>
+                            <li><input type="text" name="position" size="20" /></li>
+                            <li><label for="company">Firm:</label></li>
+                            <li><input type="text" name="company" size="30"></li>
+                            <li><label for="duration">Duration:</label></li>
+                            <li><input type="text" name="duration" size="10"></li>
+                        </div>
+
+                        <li><input type="submit" name="submit" value="Submit" style="color: aliceblue;" /></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+        <div class="previewMain">
+            <div class="inputHeader">PREVIEW RESUME</div>
+            <div id="container">
+                <div class="left">
+                    <img src="assets/female.png">
+                    <div>
+                        <h4>GENDER</h4>
+                    </div>
+                    <h2>CONTACT ME</h2>
+                    <div class="contact">
+                        <h3>Email</h3>
+                        <a href="" id="mail" style="padding-bottom: 2%;">your mail-id</a><br>
+                        <h3>Address</h3>
+                        <div id="address">Your Adress</div>
+                    </div>
+                    <div>
+                        <h2>LANGUAGES</h2>
+                        <div id="lang">
+                            Language 1
+                            <br>
+                            Language 2
+                        </div>
+                    </div>
+
+                </div>
+                <div class="right">
+                    <h1 style="text-align:left;" id="name">YOUR NAME</h1>
+                    <div style="text-align:left;">
+                        <h2>ABOUT ME</h2>
+                        <div id="about">About you. Your qualities and soft skills</div>
+                    </div>
+                    <div>
+                        <h2>EDUCATION</h2>
+                        <table>
+                            <tr>
+                                <td class="yr">Year</td>
+                                <td class="deg">Degree Name</td>
+                                <td class="insti">Institute Name</td>
+                                <td class="res">Result</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="pinfo">
+                        <h2>PROJECTS</h2>
+                        <table>
+                            <tr>
+                                <td class="pname" style="width: 10%;">Name</td>
+                                <td class="pabout" style="width: 20%;">About the project</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="expinfo">
+                        <h2>EXPERIENCES</h2>
+                        <table>
+                            <tr>
+                                <td class="position" style="width: 10%;">Position</td>
+                                <td class="company" style="width: 20%;">Company</td>
+                                <td class="duration" style="width: 20%;">Duration</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="form.js"></script>
+</body>
+
+</html>

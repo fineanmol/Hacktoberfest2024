@@ -1,0 +1,109 @@
+#main{
+    width:100%;
+}
+
+
+
+h3{
+    margin-top: 2%;
+}
+
+label{
+    height: 30px;
+    padding-top: 5px;
+}
+
+input{
+    border: none;
+    background-color: antiquewhite;
+    height: 30px;
+}
+
+form li {  
+    list-style: none;  
+    margin-bottom: 5px; 
+    font-size:17px;  
+}  
+      
+form ul li label{  
+    float: left;  
+    clear: left;  
+    width: 100px;  
+    text-align: left; 
+    margin-right: 7px;
+    font-family:Verdana, Arial, Helvetica, sans-serif;  
+    padding-bottom: 2%;
+}  
+
+form ul li input, select, span {
+    float: left;
+    margin-bottom: 10px;
+    height: 30px;
+    padding-top: 1%;
+    padding-right: 2%;
+}
+select{
+    padding-top: 0%;
+    padding-inline-end: 2%;
+}
+
+form textarea {  
+    float: left;  
+    width: 350px;  
+    height: 150px;
+    margin: 2%;  
+}  
+
+
+[type="submit"] {  
+    clear: left;  
+    margin: 20px 0 0 230px;  
+    font-size:18px;
+    background-color: rgb(1, 65, 124);
+    padding-bottom: 1%;
+    margin-bottom: 3%;
+}  
+
+p {  
+    margin-left: 70px;  
+    font-weight: bold;  
+}  
+
+.header{
+    padding: 25px;
+    font-size: 350%;
+    text-align: center;
+    border: 1px solid #eee;
+}
+.inputMain{
+
+    width: 48%;
+    display: block;
+    float: left;
+    text-align: center;
+}
+
+.inputHeader{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    padding: 2%;
+}
+
+.categories{
+    padding: 0 2% 2% 2% ; 
+    font-size: large;
+}
+
+.previewMain #container{
+    width: 50%;
+    float: right;
+    border-style: solid;
+    border-collapse: collapse;
+    border-color: rgb(59, 59, 58);
+    background-color: azure;
+    text-align: center;
+    height: 100%;
+}
+

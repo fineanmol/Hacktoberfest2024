@@ -1841,28 +1841,33 @@ export const contributors = [
         "username": "https://github.com/shubham-1903"
     },
     {
-        "id": 361,
+        "id": 362,
         "fullname": "Ian Kisali",
         "username": "https://github.com/iankisali"
     },
     {
-        "id": 362,
+        "id": 363,
         "fullname": "Priya Rawat",
         "username": "https://github.com/Priya19999"
     },
     {
-        "id": 363,
+        "id": 364,
         "fullname": "Aditya Priyanshu",
         "username": "https://github.com/Adityap-3055"
     },
     {
-        "id": 364,
+        "id": 365,
         "fullname": "Theis Andatu",
         "username": "https://github.com/antheiz"
     },
     {
-      "id":365,
+      "id":366,
       "fullname": "Prajwal Kulkarni",
       "username": "https://github.com/prajwalkulkarni"
+    },
+    {
+      "id":367,
+      "fullname": "Prakhar Goyal",
+      "username": "https://github.com/Prakhar-Goyal-3014"
     }
 ]

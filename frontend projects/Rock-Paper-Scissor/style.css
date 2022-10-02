@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #D4B483;
+}
+.container{
+    background: white;
+    padding: 32px;
+    max-width: 425px;
+    width: 100%;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+.container h2{
+    margin-bottom: 32px ;
+    text-align: center;
+}
+.rpgcont{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+.rpgcont img{
+    padding: 8px ;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    transition: 0.15s;
+}
+.rpgcont img:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.rpgcont img:active, .rpgcont img:focus{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.container p{
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 12px 0;
+    transition: 0.2s;
+}
+#score{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#score .sides{
+    display: inline-block;
+    padding: 12px 20px;
+    background: #EEE;
+    border-radius: 20px;
+
+}
+.win{
+    background: rgb(0, 255, 76);
+}
+.lose{
+    background: #ff4719;
+}
+.tie{
+    background: rgb(199, 199, 199);
+}

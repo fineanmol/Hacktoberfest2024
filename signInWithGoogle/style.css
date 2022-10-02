@@ -1,0 +1,46 @@
+body{
+    background-color: aqua;
+}
+#userDetails p{
+    display:flex;
+    justify-content: center;
+    text-decoration: 5px wavy underline #0734fa;
+    font-size:34px;
+    font-family: Fira Code;
+    font-weight: bold;
+    color:cadetblue
+}
+#logout{
+    display: flex;
+    justify-content: center;
+}
+#logout #logoutButton{
+    background-color: #0734fa;
+    color: white;
+    font-size: 20px;
+    font-family: Fira Code;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    
+}
+#loginForm {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#loginForm #login{
+    background-color: #0734fa;
+    color: white;
+    font-size: 20px;
+    font-family: Fira Code;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}

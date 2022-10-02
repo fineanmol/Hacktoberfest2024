@@ -1,0 +1,41 @@
+body {
+    background-image: url(bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 1%;
+    font-family: 'Lucida Grande', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 3px;
+}
+
+.box {
+    border: 1px solid rgb(95, 91, 91);
+    box-shadow: 2px 2px 2px rgb(105, 104, 104);
+    width: 450px;
+    padding: 2%;
+    height: 550px;
+    margin-top: 1%;
+    background-color: rgba(255, 248, 220, 0.376);
+}
+
+.input {
+    display: flex;
+    margin-right: 5px;
+}
+
+button {
+    margin-left: 10px;
+    width: 100px;
+}
+

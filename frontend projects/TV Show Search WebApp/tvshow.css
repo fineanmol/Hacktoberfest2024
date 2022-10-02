@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body{
+    margin: 0;
+    font-family: Inter, sans-serif;
+    background-color: #48496B;
+}
+.navbar{
+    background-color: #333552;
+    color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    
+}
+h1{
+    margin: 0;
+    font-weight: 400;
+    font-size: 20px;
+    margin-left: 35px;
+}
+
+.form-container{
+    background-color: #3D4164;
+    height: 35px;
+    border-radius: 5px;
+    width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 40px; */
+}
+input{
+    background: transparent;
+    border: none;
+    width: 80%;
+    height: 35px;
+    color: white;
+}
+input:focus{
+    outline: none;
+}
+.search-btn{
+    background: transparent;
+    border: none;
+    color: white;
+}
+::placeholder{
+    color:white;
+    font-size: 12px;
+}
+.search-area{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    position: relative;
+    top: 40px;
+    margin-bottom: 70px;
+}
+.results-area{
+    margin-left: 50px;
+    margin-right: 20px;
+}
+.shows-list{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+hr{
+    margin-right: 30px;
+}
+img{
+    box-shadow: 1px 1px 8px black;
+}
+.Movies{
+    color: white;
+    font-weight: 500;
+}
+.shows-container{
+    margin-right: 15px;
+}

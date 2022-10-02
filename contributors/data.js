@@ -1861,8 +1861,13 @@ export const contributors = [
         "username": "https://github.com/antheiz"
     },
     {
-      "id":365,
-      "fullname": "Prajwal Kulkarni",
-      "username": "https://github.com/prajwalkulkarni"
+        "id": 365,
+        "fullname": "Prajwal Kulkarni",
+        "username": "https://github.com/prajwalkulkarni"
+    },
+    {
+        "id": 366,
+        "fullname": "Piyush Sagar",
+        "username": "https://github.com/piyush362"
     }
 ]

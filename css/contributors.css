@@ -119,7 +119,8 @@ body{
     color:#eee;
     width:20rem;
     accent-color:var(--lightt);
-    box-shadow:none
+    box-shadow:none;
+    caret-color: var(--darkt);
 }
 @media (max-width:768px){
     .form-control,.form-control:focus,.from-control:active{

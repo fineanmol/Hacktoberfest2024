@@ -1864,5 +1864,15 @@ export const contributors = [
       "id":365,
       "fullname": "Prajwal Kulkarni",
       "username": "https://github.com/prajwalkulkarni"
-    }
+    },
+    {
+        "id":365,
+      "fullname": "Prajwal Kulkarni",
+      "username": "https://github.com/prajwalkulkarni"
+    },
+    {
+        "id": 366,
+        "fullname": "Harsh Ranjan",
+        "username": "https://github.com/harshranjan63"
+    },
 ]

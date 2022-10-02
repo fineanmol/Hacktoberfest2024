@@ -1,6 +1,3 @@
 {
-    "files.associations": {
-        "iterator": "cpp",
-        "xutility": "cpp"
-    }
+  "liveServer.settings.port": 5501
 }

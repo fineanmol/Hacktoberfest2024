@@ -1,0 +1,21 @@
+class Solution {
+    
+    public int fib(int n) {
+        if(n==0){
+            return 0;
+        }
+        int a[]=new int [n+1];
+        Arrays.fill(a,-1);
+        a[0]=0;
+        a[1]=1;
+        int x=traversal(a,n);
+        //System.out.println()
+        return x;
+    }
+    public int traversal(int[] a,int n){
+        if(a[n]==-1){
+            a[n]=traversal(a,n-1)+traversal(a,n-2);
+        }
+        return a[n];
+    }
+}

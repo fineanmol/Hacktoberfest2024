@@ -29,7 +29,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: linear-gradient(to right, coral, #fbd786, #c6ffdd);
+    background-image: linear-gradient(to right, rgb(255, 175, 146), #ffe097, #afffcf);
 
 
 
@@ -44,6 +44,7 @@ body {
     border-radius: 15px;
     border: 2px solid black;
     overflow-y: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
 }
 
@@ -51,6 +52,7 @@ body {
     display: grid;
     gap: 15px;
     grid-template-columns: 3fr 1fr;
+ 
 
 
 }
@@ -61,6 +63,7 @@ body {
     padding: 4px;
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
 }
 
@@ -70,6 +73,7 @@ body {
     font-size: 18px;
     border-radius: 6px;
     border: 2px solid black;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 .to-add-button:hover {

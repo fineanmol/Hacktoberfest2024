@@ -1,0 +1,307 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Color+Emoji&family=Roboto:wght@400;500;700;900&display=swap');
+
+/*  Default Setting */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --text-color : #7391B4;
+    --dark-color : #221E1D;
+    --box-background : #F2F5FD;
+    --yellow-color : #FFD447;
+    /* --moon-color : #F0EAD2; */
+    --moon-color : #FFCE61;
+    --correct-color : #7FB0AF
+}
+
+/* Dark Mode */
+body.dark{
+    background: var(--dark-color);
+    color: var(--box-background);
+}
+.instruction{
+	font-size: 2rem;
+	margin: 1.5rem auto;
+	color: var(--text-color);
+	font-weight:900;
+	text-align:center;
+	font-family: 'Roboto',sans-serif
+}
+a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+}
+a:hover{
+    color: var(--yellow-color);
+}
+*::selection,svg::selection{
+    background: none;
+}
+
+body{
+    background-color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+}
+.title{
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 5rem;
+    padding-top: 1.25rem;
+    color: var(--text-color);
+}
+.guess-container{
+    width: 100%;
+    height: auto;
+    font-size: 4.25rem;
+    font-family: 'Lobster', cursive;
+    margin: 1rem auto;
+    text-align: center;
+    font-weight: 900;
+}
+.random-value {
+    padding: 0.5rem 2.5rem;
+    color:var(--text-color) ;
+    border-bottom: 2px solid var(--dark-color);
+    width: 10%;
+    margin: auto;
+    /* border-left-width: 2rem;
+    border-right-width: 2rem; */
+    text-align: center;
+}
+.random-value.dark{
+    border-bottom-color: #F2F5FD;
+}
+.moon,.sun{
+    cursor: pointer;
+    position: fixed;
+    bottom: 3rem;
+    right: 1rem;
+}
+.none{
+    visibility: hidden;
+}
+.moon{
+    rotate: -45deg;
+    color:var(--moon-color) ;
+}
+.sun {
+    color: var(--yellow-color);
+}
+
+main{
+    height: auto;
+    display: flex;
+    width: 100%;
+    margin: 5rem auto;
+}
+.left-content,.right-content{
+    width: 50%;
+    height: auto;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+    .right-content{
+        text-align: center;
+    color: var(--text-color);
+    font-weight: 600;
+    }
+
+.emoji{
+    font-family: 'Noto Color Emoji', sans-serif;
+}
+input {
+    border: none;
+    border-radius: 15px;
+    background-color: var(--box-background);
+    width: 20%;
+    height: auto;
+    outline: none;
+    padding: 0.8rem 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 900;
+    margin-bottom: 1rem;
+    border: 0.5px solid var(--text-color);
+}
+input:active{
+    box-shadow: inset 1px 1px 1px var(--dark-color);
+
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input::placeholder{
+    font-weight: 100;
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin-top: 2rem;
+}
+.button-container{
+    width: 40%;
+    text-align: center;
+    color: var(--box-background);
+}
+
+.btn{
+    background: red;
+    margin: 10px;
+    width: 100%;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0px 2px 4px var(--dark-color);
+}
+.btn:active{
+    box-shadow: inset 2px 2px 4px var(--dark-color);
+}
+.check{
+    background: var(--correct-color);
+}
+.reset{
+    background: var(--text-color);
+}
+.sun{
+    transform: translate(-5px) translateY(2px);
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.25rem;
+}
+@media only screen and (max-width: 1024px) {
+.button-container{
+    width: 80%;
+}
+.random-value{
+    width: 20%;
+}
+input{
+    width: 60%;
+    translate: 10px;
+}
+.toggle-mode{
+    position: fixed;
+    top: 0rem;
+    right: -3rem;
+}
+}
+/* Mobile Version */
+@media only screen and (max-width: 480px){
+.title{
+    font-size: 4rem;
+}
+.toggle-mode{
+    position: absolute;
+    height: 100%;
+    bottom: -5rem;
+    right: 1rem ;
+}
+main{
+    flex-direction: column;
+}
+.left-content,.right-content{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.random-value{
+    width: 25%;
+}
+input{
+    width: 40%;
+}
+.button-container{
+width: 60%;
+}
+.btn{
+    font-size: 1.75rem;
+    padding: 0.75rem;
+}
+.right-content{
+font-size: 2rem;
+margin-top: 2rem;
+line-height: 1.5;
+}
+footer{
+ position: sticky;
+ background:transparent
+ padding: 0.5rem auto;
+ bottom: 0;
+ transform :translateY(40px);
+}
+}
+@media only screen and (max-width: 720px){
+.title{
+    font-size: 4rem;
+}
+.toggle-mode{
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    right: 1rem ;
+}
+main{
+    flex-direction: column;
+}
+.left-content,.right-content{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.random-value{
+    width: 25%;
+}
+input{
+    width: 40%;
+}
+.button-container{
+width: 60%;
+}
+.btn{
+    font-size: 1.75rem;
+    padding: 0.75rem;
+}
+.right-content{
+font-size: 2.5rem;
+margin-top: 2rem;
+line-height: 1.5;
+}
+}
+/*
+COLORS
+#FFFFFF Background
+ var(--box-background) Boxes colors
+ #221E1D shadow color
+#7391B4 text color
+
+FONTS
+font-family: 'Lobster', cursive;
+font-family: 'Noto Color Emoji', sans-serif;
+font-family: 'Roboto', sans-serif;
+
+*/

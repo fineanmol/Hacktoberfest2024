@@ -4,12 +4,12 @@ const task=document.querySelector('.typed-list');
 const allTask=document.querySelector('.tasks');
 const allTaskList = document.querySelector('.all-task')
 const completed_task = document.querySelector('.completed-task');
-const completed_task_heading = document.querySelector('.completed-task-heading')
+const completed_task_heading = document.querySelector('.completed-task-heading');
+let count_task_done = 0;
 
 btn.onclick= function() {
     const typedValue =task.value;
     if(typedValue!==''){
-
         const newtaskbox=document.createElement('div');
         newtaskbox.classList.add('task-list');
 
@@ -46,9 +46,11 @@ btn.onclick= function() {
          
         del_btn.onclick = () => {
             allTaskList.removeChild(newtaskbox);
+            
      }
    
         done_btn.onclick = () => {
+            count_task_done++;
             allTaskList.removeChild(newtaskbox);
             completed_task_heading.classList.remove('visibility');
 
@@ -67,7 +69,7 @@ btn.onclick= function() {
             new_completed_task.value = newtask_input.value;
             new_completed_task.setAttribute('readonly','readonly');
 
-             const del_after=document.createElement('button');
+            const del_after=document.createElement('button');
             del_after.classList.add('del-after');
             del_after.innerText='Delete';
             
@@ -84,7 +86,10 @@ btn.onclick= function() {
 
             del_after.onclick = () => {
             completed_task.removeChild(new_completed_task_box);
-
+            count_task_done--;
+            if(count_task_done==0){
+                completed_task_heading.classList.add('visibility');
+            }
             
         } 
     }

@@ -1,5 +1,4 @@
-export const contributors = [
-    {
+export const contributors = [{
         "id": 1,
         "fullname": "Anmol Agarwal",
         "username": "https://github.com/fineanmol"
@@ -1861,8 +1860,12 @@ export const contributors = [
         "username": "https://github.com/antheiz"
     },
     {
-      "id":365,
-      "fullname": "Prajwal Kulkarni",
-      "username": "https://github.com/prajwalkulkarni"
+        "id": 365,
+        "fullname": "Prajwal Kulkarni",
+        "username": "https://github.com/prajwalkulkarni"
+    }, {
+        "id": 366,
+        "fullname": "Malindu Nimalsiri",
+        "username": "https://github.com/jetMalindu"
     }
 ]

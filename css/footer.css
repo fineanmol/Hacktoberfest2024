@@ -28,6 +28,30 @@
   flex-wrap: wrap;
   margin-bottom: 80px;
 }
+.proper-alg{
+  display: flex;
+}
+.footer-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lists{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+.icon{
+  color: #ff229b;
+  border: 2px solid #ff229b;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.icon:hover{
+  color: #FF0844;
+  border: 2px solid #FF0844;
+}
 #backToTop {
   display: none;
   position: fixed;

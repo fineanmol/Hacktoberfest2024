@@ -284,8 +284,7 @@ a:hover{
     background-color:var(--footer-color);
     padding:20px;
     border-radius:20px;
-    display:flex;
-    justify-content:center
+    text-align: center;
 }
 #stats a{
     padding:0 5px

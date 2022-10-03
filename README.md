@@ -37,12 +37,11 @@ Hacktoberfest 2022
 - Fork this repo (button on top)
 - Clone on your local machine
 
-```
+```terminal
 git clone https://github.com/fineanmol/Hacktoberfest2022.git
-
 ```
 - Navigate to project directory.
-```
+```terminal
 cd Hacktoberfest2022
 ```
 
@@ -52,7 +51,7 @@ cd Hacktoberfest2022
 git checkout -b my-new-branch
 ```
 - Add your contribution
-```
+```markdown
 git add .
 ```
 - Commit your changes.
@@ -61,7 +60,7 @@ git add .
 git commit -m "Relevant message"
 ```
 - Then push 
-```
+```markdown
 git push origin my-new-branch
 ```
 

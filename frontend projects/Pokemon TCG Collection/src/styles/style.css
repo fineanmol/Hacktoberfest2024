@@ -1,0 +1,260 @@
+body {
+    background:rgb(148, 13, 13);
+    height:100%;
+}
+
+
+.loade2r {
+  position: absolute;
+  top:50%;
+  bottom:50%;
+  
+  width:190px;
+  height:150px;
+  background: url("https://cdn.dribbble.com/users/1663937/screenshots/3598052/pokeball.gif");
+  background-size: cover;
+}
+
+.center-on-page {
+  position: absolute;
+  top: 60%;
+  left: 95%;
+  right:50%;
+  transform: translate(-50%,-50%);
+}
+/* Poké Styles */
+.pokeball {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  border: 10px solid #000;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: inset -10px 10px 0 10px #ccc;
+  animation: fall .25s ease-in-out,
+             shake 1.25s cubic-bezier(.36,.07,.19,.97) 3;
+}
+.pokeball::before,
+.pokeball::after {
+  content:"";
+  position: absolute;
+}
+.pokeball::before {
+  background: red;
+  width: 100%;
+  height: 50%;
+}
+.pokeball::after {
+  top: calc(50% - 10px);
+  width: 100%;
+  height: 20px;
+  background: #000;
+}
+.pokeball__button {
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 60px;
+  background: #7f8c8d;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 0 0 10px black;
+  animation: blink .5s alternate 7;
+}
+/* Animation */
+@keyframes blink {
+  from { background: #eee;}
+  to { background: #e74c3c; }
+}
+@keyframes shake {
+   { transform: translate(0, 0) rotate(0); }
+  20% { transform: translate(-10px, 0) rotate(-20deg); }
+  30% { transform: translate(10px, 0) rotate(20deg); }
+  50% { transform: translate(-10px, 0) rotate(-10deg); }
+  60% { transform: translate(10px, 0) rotate(10deg); }
+  100% { transform: translate(0, 0) rotate(0); }
+}
+@keyframes fall {
+  0% { top: -200px }
+  60% { top: 0 }
+  80% { top: -20px }
+  100% { top: 0 }
+}
+
+.homeCardRow {
+  height:"512px"
+}
+
+
+@media screen and (min-width: 300px) {
+  .homeCardRow {
+    height:"12px"
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .homeCardRow {
+    height:"512px"
+  }
+}
+
+.search{
+  position: relative;
+  box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+    
+  }
+
+  .search input{
+
+   height: 60px;
+   text-indent: 25px;
+   border: 2px solid #d6d4d4;
+
+
+  }
+
+
+  .search input:focus{
+
+   box-shadow: none;
+   border: 2px solid blue;
+
+
+  }
+
+  .search .fa-search{
+
+   position: absolute;
+   top: 20px;
+   left: 16px;
+
+  }
+
+  .search button{
+
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   height: 50px;
+   width: 110px;
+   background: blue;
+
+  }
+
+
+  @media screen and (min-width: 300px) {
+    .search input {
+      height:40px;
+    }
+    .search button {
+      position: absolute;
+      top: 0;
+      right:0;
+      height:100%;
+      width:80px;
+    }
+  }
+  
+  @media screen and (min-width: 600px) {
+    .search input {
+      height:50px;
+    }
+    .search button {
+      height:50px;
+      width:110px;
+    }
+  }
+  
+
+  .logo{
+    max-height: 90px;
+    margin-bottom: 13px;
+    transition: transform 0.3s ease, margin 0.3s ease;
+  }
+
+
+
+  @keyframes stripe-slide {
+    0% {
+      background-position: 0% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+
+  .navbtn {
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font: inherit;
+    line-height: normal;
+    cursor: pointer;
+    -moz-user-select: text;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 16px 36px 22px;
+    background-color: #fff;
+    color: #666;
+    border: 2px solid #666;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    transition: all 0.5s ease;
+  }
+  .nav:-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+  .navbtn--stripe {
+    overflow: hidden;
+    position: relative;
+  }
+  .navbtn--stripe:after {
+    content: '';
+    display: block;
+    height: 7px;
+    width: 100%;
+    background-image: repeating-linear-gradient(45deg, #666, #666 1px, transparent 2px, transparent 5px);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-top: 1px solid #666;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-size: 7px 7px;
+  }
+  .navbtn--stripe:hover {
+    background-color: #666;
+    color: #fff;
+    border-color: #000;
+  }
+  .navbtn--stripe:hover:after {
+    background-image: repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
+    border-top: 1px solid #000;
+    animation: stripe-slide 12s infinite linear forwards;
+  }
+  .navbtn--large {
+    width: 50%;
+  }
+  .navbtn--radius {
+    border-radius: 36px;
+  }
+  
+
+  @media screen and (min-width: 300px) {
+.navbtn {
+  padding: 10px 16px 12px;
+}
+  }
+  
+  @media screen and (min-width: 600px) {
+.navbtn {
+  padding: 8px 36px 16px;
+}
+  }

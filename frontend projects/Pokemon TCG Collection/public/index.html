@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      /*
+
+  using 
+    - an animated gif of sparkles.
+    - an animated gradient as a holo effect.
+    - color-dodge mix blend mode
+  
+*/
+var x;
+var $cards = $(".card");
+var $style = $(".hover");
+
+$cards
+  .on("mousemove touchmove", function(e) { 
+    // normalise touch/mouse
+    console.log("tessss");
+    var pos = [e.offsetX,e.offsetY];
+    e.preventDefault();
+    if ( e.type === "touchmove" ) {
+      pos = [ e.touches[0].clientX, e.touches[0].clientY ];
+    }
+    var $card = $(this);
+    // math for mouse position
+    var l = pos[0];
+    var t = pos[1];
+    var h = $card.height();
+    var w = $card.width();
+    var px = Math.abs(Math.floor(100 / w * l)-100);
+    var py = Math.abs(Math.floor(100 / h * t)-100);
+    var pa = (50-px)+(50-py);
+    // math for gradient / background positions
+    var lp = (50+(px - 50)/1.5);
+    var tp = (50+(py - 50)/1.5);
+    var px_spark = (50+(px - 50)/7);
+    var py_spark = (50+(py - 50)/7);
+    var p_opc = 20+(Math.abs(pa)*1.5);
+    var ty = ((tp - 50)/2) * -1;
+    var tx = ((lp - 50)/1.5) * .5;
+    // css to apply for active card
+    var grad_pos = `background-position: ${lp}% ${tp}%;`
+    var sprk_pos = `background-position: ${px_spark}% ${py_spark}%;`
+    var opc = `opacity: ${p_opc/100};`
+    var tf = `transform: rotateX(${ty}deg) rotateY(${tx}deg)`
+    // need to use a <style> tag for psuedo elements
+    var style = `
+      .card:hover:before { ${grad_pos} }  /* gradient */
+      .card:hover:after { ${sprk_pos} ${opc} }   /* sparkles */ 
+    `
+    // set / apply css class and style
+    $cards.removeClass("active");
+    $card.removeClass("animated");
+    $card.attr( "style", tf );
+    $style.html(style);
+    if ( e.type === "touchmove" ) {
+      return false; 
+    }
+    clearTimeout(x);
+  }).on("mouseout touchend touchcancel", function() {
+    // remove css, apply custom animation on end
+    var $card = $(this);
+    $style.html("");
+    $card.removeAttr("style");
+    x = setTimeout(function() {
+      $card.addClass("animated");
+    },2500);
+  });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

@@ -1,0 +1,444 @@
+[
+    {
+      "id": "d-bw1-1",
+      "name": "Green Tornado",
+      "types": [
+        "Grass",
+        "Psychic"
+      ],
+      "cards": [
+        {
+          "id": "bw1-5",
+          "name": "Serperior",
+          "rarity": "Rare Holo",
+          "count": 1
+        },
+        {
+          "id": "bw1-5",
+          "name": "Serperior",
+          "rarity": "Rare",
+          "count": 1
+        },
+        {
+          "id": "bw1-3",
+          "name": "Servine",
+          "rarity": "Uncommon",
+          "count": 3
+        },
+        {
+          "id": "bw1-1",
+          "name": "Snivy",
+          "rarity": "Common",
+          "count": 4
+        },
+        {
+          "id": "bw1-7",
+          "name": "Pansage",
+          "rarity": "Common",
+          "count": 2
+        },
+        {
+          "id": "bw1-9",
+          "name": "Petilil",
+          "rarity": "Common",
+          "count": 2
+        },
+        {
+          "id": "bw1-13",
+          "name": "Deerling",
+          "rarity": "Common",
+          "count": 2
+        },
+        {
+          "id": "bw1-14",
+          "name": "Sawsbuck",
+          "rarity": "Rare",
+          "count": 1
+        },
+        {
+          "id": "bw1-49",
+          "name": "Musharna",
+          "rarity": "Rare",
+          "count": 1
+        },
+        {
+          "id": "bw1-48",
+          "name": "Munna",
+          "rarity": "Uncommon",
+          "count": 2
+        },
+        {
+          "id": "bw1-54",
+          "name": "Scolipede",
+          "rarity": "Rare",
+          "count": 1
+        },
+        {
+          "id": "bw1-53",
+          "name": "Whirlipede",
+          "rarity": "Uncommon",
+          "count": 2
+        },
+        {
+          "id": "bw1-52",
+          "name": "Venipede",
+          "rarity": "Uncommon",
+          "count": 2
+        },
+        {
+          "id": "bw1-77",
+          "name": "Patrat",
+          "rarity": "Common",
+          "count": 2
+        },
+        {
+          "id": "bw1-87",
+          "name": "Audino",
+          "rarity": "Uncommon",
+          "count": 2
+        },
+        {
+          "id": "bw1-93",
+          "name": "Energy Search",
+          "rarity": "Common",
+          "count": 2
+        },
+        {
+          "id": "bw1-100",
+          "name": "Potion",
+          "rarity": "Common",
+          "count": 2
+        },
+        {
+          "id": "bw1-92",
+          "name": "Energy Retrieval",
+          "rarity": "Uncommon",
+          "count": 2
+        },
+        {
+          "id": "bw1-97",
+          "name": "Poké Ball",
+          "rarity": "Uncommon",
+          "count": 2
+        },
+        {
+          "id": "bw1-99",
+          "name": "Pokémon Communication",
+          "rarity": "Uncommon",
+          "count": 2
+        },
+        {
+          "id": "bw1-101",
+          "name": "Professor Juniper",
+          "rarity": "Uncommon",
+          "count": 2
+        },
+        {
+          "id": "bw1-102",
+          "name": "Revive",
+          "rarity": "Uncommon",
+          "count": 2
+        },
+        {
+          "id": "hgss1-115",
+          "name": "Grass Energy",
+          "rarity": "Common",
+          "count": 10
+        },
+        {
+          "id": "hgss1-119",
+          "name": "Psychic Energy",
+          "rarity": "Common",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "id": "d-bw1-2",
+      "name": "Red Frenzy",
+      "types": [
+        "Fire",
+        "Fighting"
+      ],
+      "cards": [
+        {
+          "id": "bw1-19",
+          "name": "Emboar",
+          "rarity": "Rare Holo",
+          "count": 1
+        },
+        {
+          "id": "bw1-19",
+          "name": "Emboar",
+          "rarity": "Rare",
+          "count": 1
+        },
+        {
+          "id": "bw1-17",
+          "name": "Pignite",
+          "rarity": "Uncommon",
+          "count": 3
+        },
+        {
+          "id": "bw1-15",
+          "name": "Tepig",
+          "rarity": "Common",
+          "count": 4
+        },
+        {
+          "id": "bw1-22",
+          "name": "Simisear",
+          "rarity": "Uncommon",
+          "count": 2
+        },
+        {
+          "id": "bw1-21",
+          "name": "Pansear",
+          "rarity": "Common",
+          "count": 3
+        },
+        {
+          "id": "bw1-25",
+          "name": "Darmanitan",
+          "rarity": "Rare",
+          "count": 1
+        },
+        {
+          "id": "bw1-23",
+          "name": "Darumaka",
+          "rarity": "Common",
+          "count": 4
+        },
+        {
+          "id": "bw1-58",
+          "name": "Timburr",
+          "rarity": "Common",
+          "count": 2
+        },
+        {
+          "id": "bw1-83",
+          "name": "Stoutland",
+          "rarity": "Rare",
+          "count": 1
+        },
+        {
+          "id": "bw1-82",
+          "name": "Herdier",
+          "rarity": "Uncommon",
+          "count": 2
+        },
+        {
+          "id": "bw1-81",
+          "name": "Lillipup",
+          "rarity": "Common",
+          "count": 3
+        },
+        {
+          "id": "bw1-89",
+          "name": "Cinccino",
+          "rarity": "Rare",
+          "count": 1
+        },
+        {
+          "id": "bw1-88",
+          "name": "Minccino",
+          "rarity": "Common",
+          "count": 2
+        },
+        {
+          "id": "bw1-93",
+          "name": "Energy Search",
+          "rarity": "Common",
+          "count": 2
+        },
+        {
+          "id": "bw1-104",
+          "name": "Switch",
+          "rarity": "Common",
+          "count": 2
+        },
+        {
+          "id": "bw1-92",
+          "name": "Energy Retrieval",
+          "rarity": "Uncommon",
+          "count": 2
+        },
+        {
+          "id": "bw1-99",
+          "name": "Pokémon Communication",
+          "rarity": "Uncommon",
+          "count": 2
+        },
+        {
+          "id": "bw1-101",
+          "name": "Professor Juniper",
+          "rarity": "Uncommon",
+          "count": 2
+        },
+        {
+          "id": "bw1-102",
+          "name": "Revive",
+          "rarity": "Uncommon",
+          "count": 2
+        },
+        {
+          "id": "bw1-106",
+          "name": "Fire Energy",
+          "count": 12
+        },
+        {
+          "id": "bw1-110",
+          "name": "Fighting Energy",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "id": "d-bw1-3",
+      "name": "Blue Assault",
+      "types": [
+        "Water",
+        "Lightning"
+      ],
+      "cards": [
+        {
+          "id": "bw1-31",
+          "name": "Samurott",
+          "rarity": "Rare Holo",
+          "count": 1
+        },
+        {
+          "id": "bw1-31",
+          "name": "Samurott",
+          "rarity": "Rare",
+          "count": 1
+        },
+        {
+          "id": "bw1-29",
+          "name": "Dewott",
+          "rarity": "Uncommon",
+          "count": 3
+        },
+        {
+          "id": "bw1-27",
+          "name": "Oshawott",
+          "rarity": "Common",
+          "count": 4
+        },
+        {
+          "id": "bw1-34",
+          "name": "Simipour",
+          "rarity": "Uncommon",
+          "count": 2
+        },
+        {
+          "id": "bw1-33",
+          "name": "Panpour",
+          "rarity": "Common",
+          "count": 3
+        },
+        {
+          "id": "bw1-37",
+          "name": "Swanna",
+          "rarity": "Rare",
+          "count": 1
+        },
+        {
+          "id": "bw1-36",
+          "name": "Ducklett",
+          "rarity": "Common",
+          "count": 2
+        },
+        {
+          "id": "bw1-35",
+          "name": "Basculin",
+          "rarity": "Uncommon",
+          "count": 2
+        },
+        {
+          "id": "bw1-46",
+          "name": "Galvantula",
+          "rarity": "Rare",
+          "count": 1
+        },
+        {
+          "id": "bw1-45",
+          "name": "Joltik",
+          "rarity": "Common",
+          "count": 2
+        },
+        {
+          "id": "bw1-40",
+          "name": "Blitzle",
+          "rarity": "Common",
+          "count": 2
+        },
+        {
+          "id": "bw1-86",
+          "name": "Unfezant",
+          "rarity": "Rare",
+          "count": 1
+        },
+        {
+          "id": "bw1-85",
+          "name": "Tranquill",
+          "rarity": "Uncommon",
+          "count": 2
+        },
+        {
+          "id": "bw1-84",
+          "name": "Pidove",
+          "rarity": "Common",
+          "count": 3
+        },
+        {
+          "id": "bw1-93",
+          "name": "Energy Search",
+          "rarity": "Common",
+          "count": 2
+        },
+        {
+          "id": "bw1-100",
+          "name": "Potion",
+          "rarity": "Common",
+          "count": 2
+        },
+        {
+          "id": "bw1-92",
+          "name": "Energy Retrieval",
+          "rarity": "Uncommon",
+          "count": 2
+        },
+        {
+          "id": "bw1-97",
+          "name": "Poké Ball",
+          "rarity": "Uncommon",
+          "count": 2
+        },
+        {
+          "id": "bw1-101",
+          "name": "Professor Juniper",
+          "rarity": "Uncommon",
+          "count": 2
+        },
+        {
+          "id": "bw1-102",
+          "name": "Revive",
+          "rarity": "Uncommon",
+          "count": 2
+        },
+        {
+          "id": "bw1-107",
+          "name": "Water Energy",
+          "rarity": "Common",
+          "count": 12
+        },
+        {
+          "id": "bw1-108",
+          "name": "Lightning Energy",
+          "rarity": "Common",
+          "count": 6
+        }
+      ]
+    }
+  ]

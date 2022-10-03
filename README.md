@@ -12,7 +12,7 @@ Hacktoberfest { [Live Website](https://fineanmol.github.io/Hacktoberfest2022/Con
 P.S. Star ⭐ and Share this repository, if you had fun!! 😍
 
 Hacktoberfest 2022
-![Event Completed](https://raw.githubusercontent.com/fineanmol/Hacktoberfest2022/master/scripts/hacktoberPest/Event_Completed.png)
+![Event Completed](/scripts/Event_Completed.png)
 
 # 📌 Videos 📽️:
 
@@ -50,7 +50,7 @@ cd Hacktoberfest2022
 ```markdown
 git checkout -b my-new-branch
 ```
-- Add your contribution
+- Add your Name to `contributors/contributorsList.js`
 ```markdown
 git add .
 ```
@@ -127,7 +127,7 @@ For more information on syncing forks [read this article from Github](https://he
 ###### *We will do our best to merge as much as possible from everyone. However, time is limited and the merge conflicts are horrible :astonished: <3*
 <br>
 
-## Our Top 100 Contributors 
+## Our Top Contributors 
 <p align="center"><a href="https://github.com/fineanmol/Hacktoberfest2022/graphs/contributors">
   <img src="https://contributors-img.web.app/image?repo=fineanmol/Hacktoberfest2022" />
 </a></p>

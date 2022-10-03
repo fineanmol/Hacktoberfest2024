@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Color Guessing Game</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <h1>The RGB Color Guessing Game
+            <br> 
+            <span id="colorDisplay">RGB</span>
+        </h1>
+        
+        <div id="details">
+            <button id="reset">New Colors</button>
+            <span id="message"></span>
+            <button id="easyButton">Easy</button>
+            <button id="hardButton" class="selected">Hard</button>
+            
+        </div>
+        <div id="container">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+    <div class="footer flex-shrink-0 py-4 bg-dark ">
+            <div class="container text-center">
+                <small>Copyright &copy; 2022</small>
+            </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

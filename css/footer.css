@@ -1,75 +1,203 @@
-#footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100vw;
-    /* height: 100px; */
-    background: linear-gradient(to left, #FF0844, #FF4563);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    color: wheat;
-    text-align: center;
-    z-index: 1000;
+html{
+  font-size: 62.5%;
+}
+.footer{
+  background-color: #333;
+  padding: 10rem 0;
+  font-size: 1.4rem;
+  color: #f7f7f7;
+}
+.footer-logo-box{
+text-align: center;
+margin-bottom: 8rem;
+}
+.footer-logo{
+width: 15rem;
+height: auto;
+}
+.footer-navigation{
+border-top: 1px solid #777;
+padding: 2rem;
+display: inline-block;
+/* to cut the line left and right */
+}
+.footer-list{
+list-style: none;
+}
+.footer-items{
+display: inline-block;
+}
+.footer-items:not(:last-child){
+margin-right: 1.5rem;
+}
+.footer-link:link,.footer-link:visited{
+  background-color: #333;
+color: #f7f7f7;
+text-decoration: none;
+text-transform: uppercase;
+display: inline-block;
+transition: all .2s;
+}
+.footer-link:hover,.footer-link:active{
+  color: #5c95c1;
+  box-shadow: 0 1rem 2rem rgba(1,1,1,.4);
+  transform: rotate(5deg) scale(1.3);
+}
+.footer-copyright{
+  border-top: 1px solid #777;
+  padding: 2rem;
+width: 80%;
+float: right;
+}
+.row{
+  max-width: 114rem;
+  /* background-color: #eee; */
+  margin: 0 auto;
+}
+.row .row:not(:last-child){
+  margin-bottom: 8rem;
+}
+.row [class^="col-"]{
+  float: left;
+}
+.row::after{
+  content: '';
+  display: table;
+  clear: both;
+}
+.row .col-1-of-2{
+  width: calc((100% - 6rem)/2);
 
 }
-#footer h3 {
-  padding: 5px;
-  height: 25px;
+.row .col-1-of-2:not(:last-child){
+  margin-right: 6rem;
 }
-.footer-icon {
-  color: #ff229b;
+
+
+
+
+
+
+
+
+
+
+.section-book{
+  padding :15rem 0;
+  background-image: linear-gradient(to right bottom,#93bacb,#154e88);
 }
-#footer h3 span:hover {
-  cursor: pointer;
-  cursor: hand;
+.section-book .book{
+  /* background-color on top of image? use solid color gradient */
+background-image: linear-gradient(105deg,
+                  rgba(167, 219, 227, 0.9) 0%,
+                  rgba(88, 124, 197, 0.9) 50%,
+                 transparent 50%),
+                url("");
+background-size: 100%;
+/* its like cover */
+height: 50rem;
+border-radius: 3px;
+box-shadow: 0 1.5rem 4rem rgba(1,1,1,.2);
+
+
 }
-.hacktoberfest-image {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 80px;
+.section-book .book-form{
+  width: 50%;
+  padding: 6rem;
 }
-#backToTop {
-  display: none;
-  position: fixed;
-  bottom: 50px;
-  right: 30px;
-  z-index: 999;
-  cursor: pointer;
-  border-radius: 50%;
+
+form .form-group:not(:last-child){
+margin-bottom: 2rem;
+}
+form .form-input{
+  color: inherit;
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: #fff;
   border: none;
-  background-color: #ff4563;
-  padding: 6px 10px 10px;
-  z-index: 1001;
-  animation: backToTopShowAnim 0.3s;
-  transition: transform 0.2s ease-out;
+border-bottom: 3px solid transparent;
+/* to align perfectly */
+width: 90%;
+display: block;
+transition: all .3s;
 }
-#backToTop svg {
-  width: 25px;
-  height: auto;
-  opacity: 0.6;
+
+ form .form-input:focus{  /*to chage border (when v click border vil come na) */
+outline: none;
+box-shadow: 0 1rem 2rem rgba(1,1,1,.1);
+border-bottom: 3px solid #5099a4;
 }
-#backToTop:hover svg {
-  opacity: 1;
+ form .form-input:focus:invalid{
+   border-bottom: 3px solid #ff7730;
+ }
+ /* to change colour if invalid input */
+form .form-input::-webkit-input-placeholder{
+  color: #999;
 }
-#backToTop:hover {
-  transform: scale(1.1);
+form .form-label{
+font-size: 1.2rem;
+font-weight: 700;
+margin-left: 2rem;
+margin-top: .7rem;
+display: block;
+/* to use all properties v r keeping block */
+transition: all .3s;
 }
-@keyframes backToTopShowAnim {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.3);
-  }
-  100% {
-    transform: scale(1);
-  }
+form .form-input:placeholder-shown + .form-label{ /*  +(silbling selector) is to select adjacent sibiling */
+  opacity: 0;
+  visibility: hidden;
+  /* v cannot animate visibility so opacity also there */
+  transform: translateY(-4rem);
+/* simply if v start writing these opacity and visibility vil be gone */
 }
-@keyframes backToTopScrollingAnimation {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.btn,.btn:link,.btn:visited{
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block; /* to get some space btw primary-sub n btn  */
+  border-radius: 10rem;
+  transition: all 0.2s;
+  /* all aniamtions with 0.2 duration */
+  position: relative;
+font-size: 1.6rem;
+/* //changes for button element */
+border: none;
+cursor: pointer;
+}
+.btn:hover{
+transform: translateY(-3px);
+box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+/* x offset y offset blur shadow */
+}
+.btn:active,.btn:focus{ /* for radio down thing  */
+  outline: none;/* for radio down thing  */
+ transform: translateY(-1px);
+ /* active is when v cick the button */
+ box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+}
+
+.btn-white{
+  background-color: #fff;
+  color: #777;
+}
+
+.heading-secondary{
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right,rgba(179, 125, 233, 0.633),rgba(216, 20, 233, 0.8) );
+  -webkit-background-clip:text;
+  /* clips completele background only for text */
+  /* to see text now make text trasparent */
+  color: transparent;
+  letter-spacing: .2rem;
+  transition: all .2s;
+}
+.heading-secondary:hover{
+  transform: skewY(2deg) skewX(15deg) scale(1.1);
+  text-shadow: .5rem 1rem 2rem rgba(0,0,0,.2);
 }

@@ -22,178 +22,69 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap" rel="stylesheet">
 
-    <style>
-
-        .logo {
-
-            color: white;
-
-            font-size: 50px;
-
-        }
-
-        
-
-        body {
-
-            background-color: #589ED9;
-
-            width: 200px;
-
-            margin: 0 auto;
-
-        }
-
-        
-
-        button {
-
-            background-color: #1782DB;
-
-            width: 100%;
-
-            height: 40px;
-
-            border: none;
-
-            margin-top: 10px;
-
-            border-radius: 3px;
-
-            color: white;
-
-            font-family: 'Open Sans', sans-serif;
-
-        }
-
-        
-
-        .title {
-
-            color: white;
-
-            font-family: 'Open Sans', sans-serif;
-
-            text-align: center;
-
-        }
-
-        
-
-        .first {
-
-            display: flex;
-
-            justify-content: center;
-
-            height: 50px;
-
-            width: 200px;
-
-            border-radius: 10px 10px 0px 0px;
-
-            border: none;
-
-            margin-bottom: 2px;
-
-            text-indent: 20px;
-
-        }
-
-        
-
-        .second {
-
-            display: flex;
-
-            justify-content: center;
-
-            height: 50px;
-
-            width: 200px;
-
-            border-radius: 0px 0px 10px 10px;
-
-            border: none;
-
-            text-indent: 20px;
-
-        }
-
-        
-
-        .header {
-
-            margin-top: 150px;
-
-        }
-
-        
-
-        a {
-
-            color: white;
-
-            font-family: 'Open Sans', sans-serif;
-
-            text-decoration: none;
-
-        }
-
-        
-
-        .footer p {
-
-            color: white;
-
-            font-family: 'Work Sans', sans-serif;
-
-            font-weight: 300
-
-        }
-
-    </style>
+    
+    <link rel="stylesheet" href="footer.css">
 
 </head>
 
 <body>
+  <section class="section-book">
+    <div class="row">
+      <div class="book">
+        <div class="book-form">
+          <form action="#" class="form">
+            <div class="margin-8">
+              <h2 class="heading-secondary">
+             Welcome
+              </h2>
 
-    <div class="header">
 
-        <div class="logo">
+            <div class="form-group">
+              <input type="email" class="form-input" placeholder="Email Address" id="email" required>
+            <label for="name" class="form-label">Email Address</label>
+            </div>
+            
+            <div class="form-group">
+              
 
-            <i class="fa-brands fa-weibo"></i>
-
+              <input type="password" placeholder="Password" name="password" class="form-input" />
+            <label for="name" class="form-label">Password</label>
+            </div>
+            
+   
+            <div class="form-group">
+              <div ><button class="btn" type="submit" value="Login">Login</button> </div>
+            </div>
+          </form>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="title">
 
-            <h1> Welcome. </h1>
-
+    <footer class="footer">
+        <div class="footer-logo-box" >
+          <img src="images/logo-green-2x.png" alt="Full logo" class="footer-logo">
         </div>
+        <div class="row">
+          <div class="col-1-of-2">
+            <div class="footer-navigation">
+              <ul class="footer-list">
 
-    </div>
-
-    <div class="container">
-
-        <div class="field">
-
-            <input type="email" placeholder="Email" name="email" class="first" />
-
-            <input type="password" placeholder="Password" name="password" class="second" />
-
+                <li class="footer-items"><a href="" class="footer-link">Company</a></li>
+                <li class="footer-items"><a href="" class="footer-link">Contact us</a></li>
+                <li class="footer-items"><a href="" class="footer-link">Privacy policy</a></li>
+                <li class="footer-items"><a href="" class="footer-link">Terms</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-1-of-2">
+            <p class="footer-copyright">
+              Built by <a href="#" class="footer-link">Sandeep</a> .
+            </p>
+          </div>
         </div>
-
-        <div class="button"><button type="submit" value="Login">Login</button> </div>
-
-    </div>
-
-    <div class="footer">
-
-        <p> <a href="#">Sign up</a> for a new account</p>
-
-    </div>
-
+      </footer>
 </body>
 
 </html>

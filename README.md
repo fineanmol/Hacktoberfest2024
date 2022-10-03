@@ -3,7 +3,7 @@ Hacktoberfest-2022
 # Submit your PR on this new repo [Hacktoberfest_Accepted](https://github.com/fineanmol/hacktoberfest) , There we are merging all PR. 
 
 In this current repo, there are alot of conflicts, we are not merging until all conflicts get resolved.
-Hacktoberfest { [Live Website](https://fineanmol.github.io/Hacktoberfest2022/Contributors.html)}
+Hacktoberfest { [Live Website](https://fineanmol.github.io/Hacktoberfest2022/)}
 
 
 **This is a beginner-friendly project to help you get started with your
@@ -23,12 +23,11 @@ Hacktoberfest 2022
 
 # Contribution Rules📚:
 
-- The project must work when opening Contributors.html
 - You are allowed to make pull requests that break the rules. We just merge it ;)
 - Do NOT add any build steps e.g npm install (we want to keep this a simple static site)
 - Do NOT remove other content.
 - Styling/code can be pretty, ugly or stupid, big or small as long as it works
-- Add your name to the Contributors.html file
+- Add your name to the contributorsList file
 - Try to keep pull requests small to minimize merge conflicts
 
 

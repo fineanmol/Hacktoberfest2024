@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #524A4E;
+    color: #FDEFF4;
+    font-family: sans-serif;
+    background-image: url("bg.jpg");
+    background-size: cover;
+}
+
+.sign-up {
+    text-align: center;
+    width: 400px;
+    padding: 20px;
+    margin: 6% auto 0;
+
+}
+
+.card {
+    width: 390px;
+    height: 480px;
+    background-image: linear-gradient(163deg, red 0%, rgb(163, 5, 221) 100%);
+    border-radius: 20px;
+    transition: all .3s;
+    padding: 0px;
+    margin: 8% auto 0;
+}
+
+.card2 {
+    width: 391px;
+    height: 481px;
+    background-color: #1f2222;
+    border-radius: 20px;
+    transition: all .2s;
+    padding: 0px;
+    margin: 8% auto 0;
+}
+
+.card2:hover {
+    transform: scale(0.97);
+    border-radius: 20px;
+
+}
+
+.card:hover {
+    box-shadow: 0px 0px 30px 1px rgb(105, 1, 1);
+
+}
+
+h2 {
+    font-family: sans-serif;
+    color: rgb(221, 204, 204);
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin: 10px 0;
+}
+
+
+button {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    background-color: #ff1919;
+    box-shadow: 0px 15px 20px rgba(149, 0, 0, 0.682);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+button:active {
+    transform: translateY(-1px);
+}
+
+.response-box {
+    border-radius: 20px;
+    padding: 10px;
+    width: 80%;
+    border: 1px solid hsl(0, 100%, 66%);
+}
+
+.si {
+    text-decoration: #d90000;
+    color: #c20505;
+}
+
+
+h1 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 26.4px;
+    text-transform: uppercase;
+    padding-top: 30px;
+}

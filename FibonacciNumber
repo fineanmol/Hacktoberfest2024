@@ -5,7 +5,7 @@ Memonization
 https://leetcode.com/problems/fibonacci-number/
 
 
-class Solution {
+class Solutions {
     
     public int fib(int n) {
         if(n==0){

@@ -1,0 +1,31 @@
+/*************TAG SELECTORS*******************/
+h1{
+  color: red;
+  font-size:150px;
+}
+/*img{
+  background-color:#ff8080;
+}*/
+
+
+/*********************CLASS SELECTORS**************/
+.bacon{
+  background-color:#ff8080;
+}
+.broccoli{
+  background-color:#8cff66;
+}
+
+
+
+/******************ID SELECTORS****************/
+
+#heading{
+  color:Blue;
+}
+
+
+/***********PSEUDO CLASS SELECTORS**************/
+img:hover{
+  background-color:gold;
+}

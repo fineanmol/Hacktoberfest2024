@@ -31,7 +31,13 @@ const menu = {
       'text': '<a class="github-button" href="https://github.com/fineanmol/Hacktoberfest2022" data-icon="octicon-star" data-show-count="true" aria-label="Star fineanmol/Hacktoberfest2022 on GitHub">Stars</a>',
       'href': 'https://github.com/fineanmol/Hacktoberfest2022',
       'id': 'tools'
+    },
+    'Forks': {
+      'text': '<a class="github-button" href="https://github.com/fineanmol/Hacktoberfest2022/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork fineanmol/Hacktoberfest2022 on GitHub">Fork</a>',
+      'href': 'https://github.com/fineanmol/Hacktoberfest2022',
+      'id': 'tools'
     }
+    
 
 }
 

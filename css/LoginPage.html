@@ -22,178 +22,139 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap" rel="stylesheet">
 
+     </head>
+  
+    <div class="background-box">
+
+    </div>
+   
+    
+    </div>
+    <div class="form">
+        <p><b>Login Here</b></p>
+        <form action=" " method=" ">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter Username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter Password" required>
+            </div>
+            <div class="form-login">
+                <button>SIGN IN</button>
+            </div>
+        </form>
+
+       <div>
+        <p><strong>Sign Up</strong> for new account.</p>
+       </div> 
+    </div>
     <style>
-
-        .logo {
-
-            color: white;
-
-            font-size: 50px;
-
-        }
-
-        
-
         body {
-
-            background-color: #589ED9;
-
-            width: 200px;
-
-            margin: 0 auto;
-
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-image: url('https://orig00.deviantart.net/88e5/f/2017/143/7/a/backgroundo_by_standlessfulla-dba6l7g.gif');
         }
-
         
-
-        button {
-
-            background-color: #1782DB;
-
+        .login {
+            width: 300px;
+            height: 300px;
+            background: #2c3e50;
+            color: #fff;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            padding: 70px 30px;
+        }
+        .form {
+            width: 300px;
+            height: 300px;
+            background: #00000000;
+            color: #fff;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            padding: 70px 30px;
+            
+        }
+        .form-group {
+            margin-bottom: 15px;
+            border-radius: 10%;
+          
+        }
+        .form-group label {
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+            display: block;
+        }
+        .form-group input {
             width: 100%;
+            margin-top: 5px;
+        }
+        .form-group input[type="submit"] {
+            
+           
+            width: 100%;
+            background: #2ecc71;
+            border: 0;
+            border-radius: 30px;
+            padding: 10px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 18px;}
 
-            height: 40px;
+           
 
-            border: none;
+            .background-box {
+                width: 300px;
+                height: 300px;
+                background: #0000007b;
+                position: absolute;
+                top: 37%;
+                left:39%;
+                z-index: -1;
+            }
+        
+            button{
+                width: 100%;
+                background: #ffffff;
+                border: 0;
+                border-radius: 10px;
+                padding: 10px;
+                color: rgb(0, 0, 0);
+                cursor: pointer;
+                font-size: 15px;
+            }
 
-            margin-top: 10px;
-
-            border-radius: 3px;
-
-            color: white;
-
-            font-family: 'Open Sans', sans-serif;
-
+        button:hover{
+            background: #17bd05;
+            color: #fff;
+            border-radius: 10px;
+            transition: 0.30s;
         }
 
-        
-
-        .title {
-
-            color: white;
-
-            font-family: 'Open Sans', sans-serif;
-
+        p{
+            
             text-align: center;
-
+            font-size: 15px;
         }
 
+        strong:hover{
+            color: #2f7cf0;
+            transition: 0.30s;
+        }
+        b{
+            font-size: 17px;
+            text-align: center;
+        }
         
-
-        .first {
-
-            display: flex;
-
-            justify-content: center;
-
-            height: 50px;
-
-            width: 200px;
-
-            border-radius: 10px 10px 0px 0px;
-
-            border: none;
-
-            margin-bottom: 2px;
-
-            text-indent: 20px;
-
-        }
-
-        
-
-        .second {
-
-            display: flex;
-
-            justify-content: center;
-
-            height: 50px;
-
-            width: 200px;
-
-            border-radius: 0px 0px 10px 10px;
-
-            border: none;
-
-            text-indent: 20px;
-
-        }
-
-        
-
-        .header {
-
-            margin-top: 150px;
-
-        }
-
-        
-
-        a {
-
-            color: white;
-
-            font-family: 'Open Sans', sans-serif;
-
-            text-decoration: none;
-
-        }
-
-        
-
-        .footer p {
-
-            color: white;
-
-            font-family: 'Work Sans', sans-serif;
-
-            font-weight: 300
-
-        }
-
     </style>
-
-</head>
-
-<body>
-
-    <div class="header">
-
-        <div class="logo">
-
-            <i class="fa-brands fa-weibo"></i>
-
-        </div>
-
-        <div class="title">
-
-            <h1> Welcome. </h1>
-
-        </div>
-
-    </div>
-
-    <div class="container">
-
-        <div class="field">
-
-            <input type="email" placeholder="Email" name="email" class="first" />
-
-            <input type="password" placeholder="Password" name="password" class="second" />
-
-        </div>
-
-        <div class="button"><button type="submit" value="Login">Login</button> </div>
-
-    </div>
-
-    <div class="footer">
-
-        <p> <a href="#">Sign up</a> for a new account</p>
-
-    </div>
-
-</body>
-
-</html>
+    </body>
+    </html>

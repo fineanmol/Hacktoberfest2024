@@ -2003,15 +2003,33 @@
           "id": 365,
           "fullname": "Arnold Daniels",
           "username": "https://github.com/ImArnoldDCODES"
+        },
+        {
+          "id": 373,
+          "fullname": "Arnold Schawrtseneger",
+          "username": "https://github.com/aiiaahh"
         }
       ];
+      
+      /**
+       * returns with next available id since we cant add uuid node package
+       * and user might manually add id thats higher then the array length
+       */
+      const getNextId = (next = 0) => {
+        let nextId = next || contributors.length + 1;
+        // check that next id is available
+        if (contributors.find((cont) => cont.id === nextId)) {
+          return getNextId(nextId + 1);
+        }
+        return nextId;
+      }
       
       /**
        * Push a contributer with auto id to array
        */
       const addContributer = (fullname, username) => {
         contributors.push({
-          id: contributors.length + 1,
+          id: getNextId(),
           fullname: fullname,
           username: username
         });

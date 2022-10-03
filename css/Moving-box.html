@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+        <meta charset="UTF-8" />
+
+        
+    </head>
+    
+    <body>
+        
+        <style>
+            .title {
+    margin-left: 500px;
+    margin-top: 10px;;
+    font-size: 30px;
+    color: #ffffff;
+    font-family: Orbitron, monospace;
+}
+
+body {
+    background-color: #000000;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: square;
+    animation-duration: 4s;
+    border-radius: 20%;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+}
+
+@keyframes square {
+   0% {
+       background-color: red;
+       left: 0px;
+       top: 0px;
+       border-radius: 0%;
+}
+
+   25% {
+       background-color: lime;
+       left: 1200px;
+       top: 0px;
+       border-radius: 20%;
+    }
+
+   50% {
+       background-color: dodgerblue;
+       left: 1200px;
+       top: 450px;
+       border-radius: 50%;
+    }
+
+   75% {
+       background-color: orangered;
+       left: 0px;
+       top: 450px;
+       border-radius: 25%
+    }
+
+   100% {
+       background-color: blue;
+       border-radius: 0%;
+       top: 0px;
+       left: 0px;
+    }
+}
+        </style>
+        <h1 class="title">Moving Box Animation</h1>
+
+        <div></div>
+    </body>
+</html>

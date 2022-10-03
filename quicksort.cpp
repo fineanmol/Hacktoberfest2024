@@ -1,69 +1,83 @@
-#include <iostream>
-
+#include<iostream>
+#include<cmath>
 using namespace std;
-
-int partition(int *a, int s, int e)
+int cnt;
+int iPartition(int a[], int left, int right)
 {
-    int i = s-1;              
-    int j = s;                
-    
-    int pivot = a[e];
-    
-    for( ; j <= e-1; )        
+    int i, j, pivot, temp;
+    pivot = a[left];
+    i = left + 1;
+    j = right;
+    while (1)
     {
-        if(a[j] <= pivot)
+        while (pivot >= a[i] && i <= right)
         {
-            
-            i = i + 1;        
-            
-            swap(a[i], a[j]);
-            
-            
+            i++;
+            cnt++;
         }
-        
-        j = j+1;
-        
+        while (pivot < a[j] && j > left)
+        {
+            j--;
+            cnt++;
+        }
+        if (i < j)
+        {
+            swap(a[i], a[j]);
+        }
+        else
+        {
+            a[left] = a[j];
+            a[j] = pivot;
+            return j;
+        }
     }
-    
-    swap(a[i+1], a[e]);
-
-    
-    return i+1;
 }
-
-
-void quicksort(int *arr, int s, int e)
+void qSort(int arr[], int l, int h)
 {
-    if(s >= e)
+    if (l < h)
     {
-        return;
+        int p = iPartition(arr, l, h);
+        qSort(arr, l, p - 1);
+        qSort(arr, p + 1, h);
     }
-    
-    int p = partition(arr, s, e);
-
-    quicksort(arr, s, p-1);
-    
-    quicksort(arr, p+1, e);
-    
-    
-    
-    
 }
-
-
-
 int main()
 {
-    int arr[] = {2,7,8,6,1,5,4};
-    int n = sizeof(arr)/ sizeof(int);
-    
-    quicksort(arr,0,n-1);         
-    
-    for(int i = 0; i <= n-1; i++)
-    {
-        
-        cout << arr[i] << " ";
+    int n, c1, c2, c3;
+    cout << "Enter the no of elements to be sorted" << endl;
+    cin >> n;
+    int a[1000], b[1000], c[1000];
+    cout << "Enter the elements" << endl;
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
+    cnt = 0;
+    qSort(a, 0, n - 1);
+    cout << "Elements after sorting" << endl;
+    for (int i = 0; i < n; i++)
+        cout << a[i] << " ";
+    cout << endl;
+    cout << "No of count is " << cnt << endl;
+    printf("SIZE\tASC\ttime\tDESC\ttime\tRAND\ttime\n");
+    for (int i = 8; i < 1000; i = i * 2)
+    {        int   ln=2*i*log(i)/log(2);
+        for (int j = 0; j < i; j++)
+        {
+            a[j] = j;
+            b[j] = i - j;
+            c[j] = rand() % i;
+        }
+        cnt = 0;
+        qSort(a, 0, i - 1);
+        c1 = cnt;
+        cnt = 0;
+        qSort(b, 0, i - 1);
+        c2 = cnt;
+        cnt = 0;
+        qSort(c, 0, i - 1);
+        c3 = cnt;
+        cout << endl;
+       printf("%d\t%d\t%d\t%d\t%d\t%d\t%d\n",i,c1,i*i,c2,i*i,c3,ln);
     }
-
-    return 0;
+    cout << endl;
+    return (0);
 }

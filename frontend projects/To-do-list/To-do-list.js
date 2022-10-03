@@ -6,7 +6,14 @@ const allTaskList = document.querySelector('.all-task')
 const completed_task = document.querySelector('.completed-task');
 const completed_task_heading = document.querySelector('.completed-task-heading')
 
-btn.onclick= function() {
+btn.addEventListener("click", myFunction);
+window.addEventListener("keypress",function(event){
+    if(event.key === "Enter"){
+        myFunction();
+    }
+});
+
+function myFunction() {
     const typedValue =task.value;
     if(typedValue!==''){
 
@@ -92,4 +99,3 @@ btn.onclick= function() {
 }
 
 };
-

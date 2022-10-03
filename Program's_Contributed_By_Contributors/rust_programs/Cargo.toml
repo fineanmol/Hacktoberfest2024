@@ -1,0 +1,9 @@
+[workspace]
+members = ["programs/hello_world/",
+           "programs/class_strength",
+           "programs/factorial",
+           "programs/palindromestr",
+           "programs/prime",
+           "programs/series1",
+           "programs/series2",
+           ]

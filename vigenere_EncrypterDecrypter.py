@@ -81,7 +81,7 @@ def encrypt(msg,key):
 	return c
 
 
-a = encrypt("my name is mohammed ansah","mak")
+a = encrypt("my name is ansah","mak")
 print(a)
 c = decrypt(a,"mak")
 print(c)

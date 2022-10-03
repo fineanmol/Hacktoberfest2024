@@ -29,7 +29,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: linear-gradient(to right, coral, #fbd786, #c6ffdd);
+    background-image: linear-gradient(to right,#916b6b, coral, #fbd786, #c6ffdd,#648a64);
 
 
 
@@ -40,9 +40,9 @@ body {
     width: 470px;
     height: 30px;
     padding: 20px;
-    background-color: coral;
-    border-radius: 15px;
-    border: 2px solid black;
+    background-color: #2d2551;
+    border-radius: 5px 20px;
+    border: 2px solid #a9e0d7;
     overflow-y: hidden;
 
 }
@@ -69,7 +69,7 @@ body {
     color: white;
     font-size: 18px;
     border-radius: 6px;
-    border: 2px solid black;
+    border: 2px solid #a9e0d7;
 }
 
 .to-add-button:hover {

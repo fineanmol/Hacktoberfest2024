@@ -1,0 +1,4 @@
+What is Piet?
+I really enjoy this language (just language, not coding :D), especially how it looks like. I learnt about it when I was at the university, it was really fun to get acquainted with plenty of esoteric programming languages. And when BrainFuck and Whitespace are mainstream, Piet was a real discover for me.
+The main idea of it is really simple. It provides a set of assembler-like instructions, so all you have to do is to code it like in Assembly and after that parse it into the image (every instruction has its own set of pixels).
+Here you can find more: https://www.dangermouse.net/esoteric/piet.html

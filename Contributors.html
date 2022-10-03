@@ -1,9 +1,3 @@
-{
-"id": 348,
-"fullname": "Smit Shah",
-"username": "https://github.com/smit-sms"
-}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -1912,18 +1906,15 @@
                 "username": "https://github.com/AnkushJagga"
             },
             {
-
                 "id": 348,
                 "fullname": "Dicky",
                 "username": "https://github.com/dickytrianza"
             },
-
             {
                 "id": 347,
                 "fullname": "Srinjoy Pati",
                 "username": "https://github.com/srinjoy-26"
             },
-
             {
                 "id": 349,
                 "full name": "Rajpreet Kaur",
@@ -1934,34 +1925,27 @@
                 "fullname": "Bhumit",
                 "username": "https://github.com/BhumitRohilla"
             },
-
             {
-
                 "id": 350,
                 "fullname": "d-coder111",
                 "username": "https://github.com/d-coder111"
             },
             {
-
                 "id": 351,
                 "fullname": "ritam77",
                 "username": "https://github.com/ritam77"
             },
-
             {
-
                 "id": 351,
                 "fullname": "Arpit Ujjwal",
                 "username": "https://github.com/ArpitUjjwal"
             },
             {
-
                 "id": 352,
                 "fullname": "Amisha Aggarwal",
                 "username": "https://github.com/amishaagg"
             },
             {
-
                 "id": 353,
                 "fullname": "Rohit Singh",
                 "username": "https://github.com/rohitsingh2k"
@@ -1992,12 +1976,10 @@
                 "username": "https://github.com/shivamRamani"
             },
             {
-
                 "id": 357,
                 "fullname": "Nabeel Hussain M N",
                 "username": "https://github.com/nabeel001"
             },
-
             {
                 "id": 358,
                 "fullname": "Debdeep Ghosal",
@@ -2012,8 +1994,6 @@
                 "id": 360,
                 "fullname": "Abiola Ayodele",
                 "username": "https://github.com/babboe1"
-
-
             },
             {
                 "id": 361,
@@ -2054,14 +2034,17 @@
                 "id": 366,
                 "fullname": "Dulya Perera",
                 "username": "https://github.com/Dulyaaa"
+            },
+            {
+                "id": 367,
+                "fullname": "Alejandro García",
+                "username": "https://github.com/OwboxAl3x"
             }
         ];
-
 
         const searchbox = document.getElementById('search');
         let searchResult = null;
         let initialContributorsNumber = 72;
-
 
         function filterUsers(str, array) {
             if (str == '') return "Cannot be empty, please enter a name"
@@ -2069,8 +2052,6 @@
                 return item.fullname.toLowerCase().includes(str.toLowerCase())
             })
         }
-
-
 
         function render(array) {
             array.forEach((item) => {
@@ -2111,7 +2092,6 @@
             }
         }
 
-
         document.querySelectorAll('a.box-item').forEach(con => {
             // console.log(con.href)
             con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
@@ -2147,7 +2127,6 @@
                     if (item.id <= initialContributorsNumber) {
                         document.getElementById('contributors').append(user)
                     }
-
                 })
 
             document.querySelectorAll('a.box-item').forEach(con => {
@@ -2156,10 +2135,7 @@
             })
 
             document.getElementById('loading').setAttribute('hidden', true)
-
         })
-
-
 
         function switchTheme(e) {
             if (e.target.checked) {
@@ -2170,6 +2146,7 @@
                 localStorage.setItem('theme', 'light');
             }
         }
+
         // toggleSwitch.addEventListener('change', switchTheme);
         const spans = document.querySelectorAll('.word span');
         spans.forEach((span, idx) => {
@@ -2186,10 +2163,8 @@
             }, 750 * (idx + 1))
         });
 
-
         /* Back-to-top button functionality */
         const backToTopButton = document.querySelector("#back-to-top-btn");
-
         window.addEventListener("scroll", scrollFunction);
         function scrollFunction() {
             if (window.pageYOffset > 300) { // Show backToTopButton
@@ -2253,7 +2228,6 @@
         AOS.init();
     </script>
 
-
     <script>
         document.getElementById('stats').innerHTML =
             'You guys are awesome, we have passed the github rate again this hour. <a href="https://github.com/fineanmol/Hacktoberfest2022" target="_blank">Here</a> is a link to repo to check out live stats';
@@ -2263,7 +2237,6 @@
             $(".tdnn").toggleClass('day');
         });
     </script>
-
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 </body>

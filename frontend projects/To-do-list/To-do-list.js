@@ -54,6 +54,7 @@ btn.onclick= function() {
 
             const new_completed_task_box = document.createElement('div');
             new_completed_task_box.classList.add('task-lists');
+            new_completed_task_box.classList.add('overflow-hidden');
 
             const new_completed_task_item = document.createElement('div');
             new_completed_task_item.classList.add('items');

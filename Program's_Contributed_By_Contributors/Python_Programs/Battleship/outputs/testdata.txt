@@ -1,0 +1,19 @@
+C:\Users\amand\PycharmProjects\Battleship\venv\Scripts\python.exe C:/Users/amand/PycharmProjects/Battleship/Gameplay.py
+Player-1 fires a missile with target A1 which got miss
+Player-2 fires a missile with target A1 which got hit
+Player-2 fires a missile with target B2 which got miss
+Player-1 fires a missile with target B2 which got hit
+Player-1 fires a missile with target B2 which got hit
+Player-1 fires a missile with target B3 which got miss
+Player-2 fires a missile with target B3 which got miss
+Player-1 has no more missiles left to launch
+Player-2 fires a missile with target A1 which got hit
+Player-2 fires a missile with target D1 which got miss
+Player-1 has no more missiles left to launch
+Player-2 fires a missile with target E1 which got miss
+Player-1 has no more missiles left to launch
+Player-2 fires a missile with target D4 which got hit
+Player-2 fires a missile with target D4 which got miss
+Player-1 has no more missiles left to launch
+Player-2 fires a missile with target D5 which got hit
+Player-2 won the battle

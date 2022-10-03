@@ -1,0 +1,13 @@
+body {
+    margin-top: 30px;
+    
+}
+.button {
+    transition-duration: 0.4s;
+    padding: 15px 32px;
+  }
+  
+.button:hover {
+    background-color: #343634; 
+    color: white;
+}

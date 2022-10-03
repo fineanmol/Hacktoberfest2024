@@ -1,123 +1,87 @@
-""" Alarm Clock
 
-----------------------------------------
-
-"""
-
+# Import Required Library
+from tkinter import *
 import datetime
-
-import os
-
 import time
-
-import random
-
-import webbrowser
-
-# If video URL file does not exist, create one
-
-if not os.path.isfile("youtube_alarm_videos.txt"):
-
-print('Creating "youtube_alarm_videos.txt"...')
-
-with open("youtube_alarm_videos.txt", "w") as alarm_file:
-
-alarm_file.write("https://www.youtube.com/watch?v=anM6uIZvx74")
-
-def check_alarm_input(alarm_time):
-
-"""Checks to see if the user has entered in a valid alarm time"""
-
-if len(alarm_time) == 1: # [Hour] Format
-
-if alarm_time[0] < 24 and alarm_time[0] >= 0:
-
-return True
-
-if len(alarm_time) == 2: # [Hour:Minute] Format
-
-if alarm_time[0] < 24 and alarm_time[0] >= 0 and \
-
-alarm_time[1] < 60 and alarm_time[1] >= 0:
-
-return True
-
-elif len(alarm_time) == 3: # [Hour:Minute:Second] Format
-
-if alarm_time[0] < 24 and alarm_time[0] >= 0 and \
-
-alarm_time[1] < 60 and alarm_time[1] >= 0 and \
-
-alarm_time[2] < 60 and alarm_time[2] >= 0:
-
-return True
-
-return False
-
-# Get user input for the alarm time
-
-print("Set a time for the alarm (Ex. 06:30 or 18:30:00)")
-
-while True:
-
-alarm_input = input(">> ")
-
-try:
-
-alarm_time = [int(n) for n in alarm_input.split(":")]
-
-if check_alarm_input(alarm_time):
-
-break
-
-else:
-
-raise ValueError
-
-except ValueError:
-
-print("ERROR: Enter time in HH:MM or HH:MM:SS format")
-
-# Convert the alarm time from [H:M] or [H:M:S] to seconds
-
-seconds_hms = [3600, 60, 1] # Number of seconds in an Hour, Minute, and Second
-
-alarm_seconds = sum([a*b for a,b in zip(seconds_hms[:len(alarm_time)], alarm_time)])
-
-# Get the current time of day in seconds
-
-now = datetime.datetime.now()
-
-current_time_seconds = sum([a*b for a,b in zip(seconds_hms, [now.hour, now.minute, now.second])])
-
-# Calculate the number of seconds until alarm goes off
-
-time_diff_seconds = alarm_seconds - current_time_seconds
-
-# If time difference is negative, set alarm for next day
-
-if time_diff_seconds < 0:
-
-time_diff_seconds += 86400 # number of seconds in a day
-
-# Display the amount of time until the alarm goes off
-
-print("Alarm set to go off in %s" % datetime.timedelta(seconds=time_diff_seconds))
-
-# Sleep until the alarm goes off
-
-time.sleep(time_diff_seconds)
-
-# Time for the alarm to go off
-
-print("Wake Up!")
-
-# Load list of possible video URLs
-
-with open("youtube_alarm_videos.txt", "r") as alarm_file:
-
-videos = alarm_file.readlines()
-
-# Open a random video from the list
-
-webbrowser.open(random.choice(videos))
+import winsound
+from threading import *
+ 
+# Create Object
+root = Tk()
+ 
+# Set geometry
+root.geometry("400x200")
+ 
+# Use Threading
+def Threading():
+    t1=Thread(target=alarm)
+    t1.start()
+ 
+def alarm():
+    # Infinite Loop
+    while True:
+        # Set Alarm
+        set_alarm_time = f"{hour.get()}:{minute.get()}:{second.get()}"
+ 
+        # Wait for one seconds
+        time.sleep(1)
+ 
+        # Get current time
+        current_time = datetime.datetime.now().strftime("%H:%M:%S")
+        print(current_time,set_alarm_time)
+ 
+        # Check whether set alarm is equal to current time or not
+        if current_time == set_alarm_time:
+            print("Time to Wake up")
+            # Playing sound
+            winsound.PlaySound("sound.wav",winsound.SND_ASYNC)
+ 
+# Add Labels, Frame, Button, Optionmenus
+Label(root,text="Alarm Clock",font=("Helvetica 20 bold"),fg="red").pack(pady=10)
+Label(root,text="Set Time",font=("Helvetica 15 bold")).pack()
+ 
+frame = Frame(root)
+frame.pack()
+ 
+hour = StringVar(root)
+hours = ('00', '01', '02', '03', '04', '05', '06', '07',
+         '08', '09', '10', '11', '12', '13', '14', '15',
+         '16', '17', '18', '19', '20', '21', '22', '23', '24'
+        )
+hour.set(hours[0])
+ 
+hrs = OptionMenu(frame, hour, *hours)
+hrs.pack(side=LEFT)
+ 
+minute = StringVar(root)
+minutes = ('00', '01', '02', '03', '04', '05', '06', '07',
+           '08', '09', '10', '11', '12', '13', '14', '15',
+           '16', '17', '18', '19', '20', '21', '22', '23',
+           '24', '25', '26', '27', '28', '29', '30', '31',
+           '32', '33', '34', '35', '36', '37', '38', '39',
+           '40', '41', '42', '43', '44', '45', '46', '47',
+           '48', '49', '50', '51', '52', '53', '54', '55',
+           '56', '57', '58', '59', '60')
+minute.set(minutes[0])
+ 
+mins = OptionMenu(frame, minute, *minutes)
+mins.pack(side=LEFT)
+ 
+second = StringVar(root)
+seconds = ('00', '01', '02', '03', '04', '05', '06', '07',
+           '08', '09', '10', '11', '12', '13', '14', '15',
+           '16', '17', '18', '19', '20', '21', '22', '23',
+           '24', '25', '26', '27', '28', '29', '30', '31',
+           '32', '33', '34', '35', '36', '37', '38', '39',
+           '40', '41', '42', '43', '44', '45', '46', '47',
+           '48', '49', '50', '51', '52', '53', '54', '55',
+           '56', '57', '58', '59', '60')
+second.set(seconds[0])
+ 
+secs = OptionMenu(frame, second, *seconds)
+secs.pack(side=LEFT)
+ 
+Button(root,text="Set Alarm",font=("Helvetica 15"),command=Threading).pack(pady=20)
+ 
+# Execute Tkinter
+root.mainloop()

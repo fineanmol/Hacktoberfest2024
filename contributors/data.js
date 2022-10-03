@@ -1869,5 +1869,5 @@ export const contributors = [
         "id": 366,
         "fullname": "Akshay Khale",
         "username": "https://github.com/akshaykhale1992"
-    },
+    }
 ]

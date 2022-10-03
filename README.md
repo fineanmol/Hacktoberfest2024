@@ -1,6 +1,6 @@
 Hacktoberfest-2022
 
-# Submit your PR on this new repo [Hacktoberfest_Accepted](https://github.com/fineanmol/hacktoberfest) , there we are merging all PR. 
+# Submit your PR on this new repo [Hacktoberfest_Accepted](https://github.com/fineanmol/hacktoberfest) , There we are merging all PR. 
 
 In this current repo, there are alot of conflicts, we are not merging until all conflicts get resolved.
 Hacktoberfest { [Live Website](https://fineanmol.github.io/Hacktoberfest2022/Contributors.html)}
@@ -21,7 +21,7 @@ Hacktoberfest 2022
 - [Merge Conflict / comment](https://youtu.be/zOx5PJTY8CI)
 
 
-# Contribution rules📚:
+# Contribution Rules📚:
 
 - The project must work when opening Contributors.html
 - You are allowed to make pull requests that break the rules. We just merge it ;)
@@ -37,12 +37,11 @@ Hacktoberfest 2022
 - Fork this repo (button on top)
 - Clone on your local machine
 
-```
+```terminal
 git clone https://github.com/fineanmol/Hacktoberfest2022.git
-
 ```
 - Navigate to project directory.
-```
+```terminal
 cd Hacktoberfest2022
 ```
 
@@ -52,7 +51,7 @@ cd Hacktoberfest2022
 git checkout -b my-new-branch
 ```
 - Add your contribution
-```
+```markdown
 git add .
 ```
 - Commit your changes.
@@ -61,7 +60,7 @@ git add .
 git commit -m "Relevant message"
 ```
 - Then push 
-```
+```markdown
 git push origin my-new-branch
 ```
 

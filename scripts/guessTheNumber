@@ -1,0 +1,65 @@
+console.log("Rules : ")
+
+console.log("1 - You have only 10 turns.")
+
+console.log("2 - You have to choose the correct number using the hints given to you during the game.")
+
+console.log("3 - The correct number is between 1 to 100 .")
+
+console.log("6 - Your score will be 0 is you are unable to choose the correct number in the given turns.")
+
+console.log("4 - Maximum score : 100")
+
+console.log("5 - Minimum score : 10")
+
+console.log("")
+
+console.log("Best of luck")
+
+console.log("")
+
+let random_number = Math.floor(Math.random() * 100) + 1
+
+for (let i = 0; i < 11; i++) {
+
+    if (i === 10) {
+
+        console.log(`Alas! you ran out of turns, so your score is "${0}"`)
+
+        break
+
+    }
+
+    else {
+
+        let user_input = prompt("Enter your number")
+
+        user_input = Number.parseInt(user_input)
+
+        if (user_input === random_number) {
+
+            console.log(`Hurraay, you choosen the correct number in ${i + 1} ${i === 0 ? "turn" : "turns"}`)
+
+            let score = (10 - i) * 10
+
+            console.log(`your score is "${score}"`)
+
+            break
+
+        }
+
+        else if (user_input > random_number) {
+
+            console.log("Your choosen number is greater than the correct number")
+
+        }
+
+        else {
+
+            console.log("Your choosen number is lesser than the correct number")
+
+        }
+
+    }
+
+}

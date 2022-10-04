@@ -1815,14 +1815,19 @@ contributors = [
     fullname: "Nuruddeen Sambo",
     username: "https://github.com/sambonuruddeen",
   },
-    {
+  {
     id: 375,
     fullname: "Rukshan Uddin",
     username: "https://github.com/rukshanuddin",
   },
   {
-    id:373,
+    id: 373,
     fullname: "Utkarsh Mishra",
     username: "https://github.com/devUT27",
-  }
+  },
+  {
+    id: 374,
+    fullname: "Archit Gupta",
+    username: "https://github.com/i-archit-gupta",
+  },
 ];

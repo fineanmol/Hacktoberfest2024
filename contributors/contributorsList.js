@@ -1821,12 +1821,12 @@ contributors = [
     username: "https://github.com/rukshanuddin",
   },
   {
-    id: 376,
+    id: 373,
     fullname: "Utkarsh Mishra",
     username: "https://github.com/devUT27",
   },
   {
-    id: 377,
+    id: 374,
     fullname: "Archit Gupta",
     username: "https://github.com/i-archit-gupta",
   },

@@ -173,10 +173,13 @@
         let initialContributorsNumber = 72;
 
 
-        function filterUsers(str, array) {
+        function filterUsers(str='ContributorName', array) {
+            const inputString = typeof str === 'string' ? str.toLowerCase() : '';
+            var fullName=''
             if (str == '') return "Cannot be empty, please enter a name"
             else return array.filter((item) => {
-                return item.fullname.toLowerCase().includes(str.toLowerCase())
+                const fullName = item.fullname || '';
+                return fullName.toLowerCase().includes(inputString)
             })
         }
 

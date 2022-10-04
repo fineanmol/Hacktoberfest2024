@@ -1900,4 +1900,9 @@ contributors = [
     fullname: "Nuruddeen Sambo",
     username: "https://github.com/sambonuruddeen",
   },
+  {
+    id: 375,
+    fullname: "Rohan Shakya",
+    username: "https://github.com/Rohan-Shakya/Hacktoberfest2022-1.git",
+  },
 ];

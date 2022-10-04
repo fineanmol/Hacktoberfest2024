@@ -1893,6 +1893,6 @@ contributors = [
   {
     id: 373,
     fullname: "Abdul Fatao Abdulrahman",
-    username: "https://github.com/Faatao",
+    username: "https://github.com/Fatao",
   },
 ];

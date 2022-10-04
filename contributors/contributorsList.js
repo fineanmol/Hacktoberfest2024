@@ -1895,4 +1895,9 @@ contributors = [
     fullname: "Miryam Vicente Ollero",
     username: "https://github.com/IryaDev",
   },
+  {
+    id: 374,
+    fullname: "Nuruddeen Sambo",
+    username: "https://github.com/sambonuruddeen",
+  },
 ];

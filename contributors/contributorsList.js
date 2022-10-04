@@ -185,6 +185,12 @@ contributors = [
     username: "https:github.com/evergreen2001",
   },
   {
+    id: 400,
+    fullname: "Syed Mohammad Osama",
+    username: "https://github.com/syed-m-osama",
+
+  },
+  {
     id: 38,
     fullname: "Zaharia Iulian",
     username: "https:github.com/Zaheudev",

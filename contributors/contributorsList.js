@@ -1824,5 +1824,10 @@ contributors = [
     id:373,
     fullname: "Utkarsh Mishra",
     username: "https://github.com/devUT27",
+  },
+  {
+    id:374,
+    fullname: "Sujit Kumar",
+    username: "https://github.com/executionBeast",
   }
 ];

@@ -1894,5 +1894,6 @@ contributors = [
     id: 373,
     fullname: "lingeshwaran",
     username: "https://github.com/lingeshwaran05",
+    profile: "https://github.com/lingeshwaran05.png"
   },
 ];

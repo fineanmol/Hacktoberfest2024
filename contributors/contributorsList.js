@@ -1890,4 +1890,9 @@ contributors = [
     fullname: "Vikhrama SPJ",
     username: "https://github.com/MangEs23/",
   },
+  {
+    id: 373,
+    fullname: "Yashika Jain",
+    username: "https://github.com/Yashika1410/",
+  },
 ];

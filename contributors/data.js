@@ -1870,4 +1870,4 @@ export const contributors = [
         "fullname": "Stevanus Christian",
         "username": "https://github.com/stevanus-christian"
     }
-]
+];

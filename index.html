@@ -262,7 +262,7 @@
 
             document.querySelectorAll('a.box-item').forEach(con => {
                 // console.log(con.href)
-                con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
+                con.innerHTML += `<img loading="lazy" src="https://github.com/${con.href.split('https://github.com/')[1]}.png">`
             })
 
             document.getElementById('loading').setAttribute('hidden', true)

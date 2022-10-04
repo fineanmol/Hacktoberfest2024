@@ -1,0 +1,14 @@
+Create 10 Products with different Product Names, Discrption & Family
+
+public class Addten {
+    public static void newOpp() {
+        list<Product2> pro1=new list<Product2>();
+        for(integer i=0;i<10;i++){
+            Product2 pro = new Product2();
+            pro.Name='Name'+i;
+            pro.Description='Description';
+            pro.Family= 'None';
+            pro1.add(pro);
+        } insert pro1;
+    }
+}

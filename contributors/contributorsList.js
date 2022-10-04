@@ -1900,4 +1900,9 @@ contributors = [
     fullname: "Nuruddeen Sambo",
     username: "https://github.com/sambonuruddeen",
   },
+  {
+    id: 375,
+    fullname: "Moksh Gupta",
+    username: "https://github.com/Moksh45",
+  },
 ];

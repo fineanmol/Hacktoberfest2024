@@ -21,7 +21,6 @@ int towerTop[3] = {DISKS-1,-1,-1};
 
 int tries = 0; 
 int score = 0; 
-
 void gotoxy(int x, int y){
 	CursorPosition.X = x;
 	CursorPosition.Y = y;

@@ -173,10 +173,13 @@
         let initialContributorsNumber = 72;
 
 
-        function filterUsers(str, array) {
+        function filterUsers(str='ContributorName', array) {
+            const inputString = typeof str === 'string' ? str.toLowerCase() : '';
+            var fullName=''
             if (str == '') return "Cannot be empty, please enter a name"
             else return array.filter((item) => {
-                return item.fullname.toLowerCase().includes(str.toLowerCase())
+                const fullName = item.fullname || '';
+                return fullName.toLowerCase().includes(inputString)
             })
         }
 
@@ -262,7 +265,7 @@
 
             document.querySelectorAll('a.box-item').forEach(con => {
                 // console.log(con.href)
-                con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
+                con.innerHTML += `<img loading="lazy" src="https://github.com/${con.href.split('https://github.com/')[1]}.png">`
             })
 
             document.getElementById('loading').setAttribute('hidden', true)

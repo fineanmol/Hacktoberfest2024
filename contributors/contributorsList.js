@@ -1893,6 +1893,6 @@ contributors = [
     {
     id: 373,
     fullname: "Kuntal Paul",
-    username: "https://github.com/helplessThor",
+    username: "https://github.com/helplessThor/",
   },
 ];

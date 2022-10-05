@@ -1,5 +1,6 @@
-import turtle
+import turtle  # Importing turtle library
 
+# Defining the dimensions of the pen 
 anki1 = [[(-40, 120), (-70, 260), (-130, 230), (-170, 200), (-170, 100), (-160, 40), (-170, 10), (-150, -10), (-140, 10),
            (-40, -20), (0, -20)],
           [(0, -20), (40, -20), (140, 10), (150, -10), (170, 10), (160, 40), (170, 100), (170, 200), (130, 230), (70, 260),
@@ -13,23 +14,23 @@ anki3 = [[(-60, -220), (-80, -240), (-110, -220), (-120, -250), (-90, -280), (-6
           [(0, -250), (20, -250), (30, -260), (60, -260), (90, -280), (120, -250), (110, -220), (80, -240), (60, -220),
            (0, -220)]]
 
-turtle.hideturtle()
+turtle.hideturtle()    # for hihe the turtle mark
 turtle.bgcolor('#000000')  # Dark Red
 turtle.setup(500, 600)
-turtle.title("I AM IRONMAN")
+turtle.title("I AM IRONMAN")  # Sheet title
 anki1Goto = (0, 120)
 anki2Goto = (0, -30)
 anki3Goto = (0, -220)
-turtle.speed(2)
+turtle.speed(2)   # Definig the speed of pen for making design
 
 
 def logo(a, b):
-    turtle.penup()
+    turtle.penup() # Start designing
     turtle.goto(b)
-    turtle.pendown()
+    turtle.pendown()  # Stop designing
     turtle.color('#fab104')  # Light Yellow
     turtle.begin_fill()
-
+# defining the range where pen can move
     for i in range(len(a[0])):
         x, y = a[0][i]
         turtle.goto(x, y)
@@ -44,4 +45,4 @@ logo(anki1, anki1Goto)
 logo(anki2, anki2Goto)
 logo(anki3, anki3Goto)
 turtle.hideturtle()
-turtle.done()
+turtle.done()       

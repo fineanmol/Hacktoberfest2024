@@ -1911,22 +1911,27 @@ contributors = [
     username: "https://github.com/Triben-Choudhary",
   },
   {
-    id:368,
+    id:380,
     fullname: "Vakeel Sahabh",
     username: "https://github.com/vakilsahabh",
   },
-  {
-    id:369,
+
+    id:381,
+    fullname: "Ayush kumar",
+    username: "https://github.com/Ayush4345",
+  },
+
+    id:382,
     fullname: "Fred la",
     username: "https://github.com/flagage",
 },
 {
-id:370,
+id:383,
     fullname: "YTW7",
     username: "https://github.com/ytw7",
   },
    {
-      id:371,
+      id:384,
     fullname: "Sahil Rawat",
     username: "https://github.com/sahilrawat001",
     

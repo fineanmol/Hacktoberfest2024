@@ -1834,5 +1834,9 @@ contributors = [
     id:378,
     fullname: "Prashant singh",
     username: "https://github.com/prashant5025",
+  },
+  {
+    id : 379,
+    username : "https://github.com/Danish-Belal",
   }
 ];

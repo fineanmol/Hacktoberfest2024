@@ -1842,8 +1842,9 @@ contributors = [
   },
   {
     id:368,
-    fullname: "Kushagra Mathur",
-    username: "https://github.com/CoderGhost37",
+    fullname: "Tara Choudhary",
+    username: "https://github.com/Tara-Choudhary",
+
   },
   {
     id:369,
@@ -1906,9 +1907,20 @@ contributors = [
     username: "https://github.com/vakilsahabh",
   },
   {
-    id:368,
-    fullname: "Shagun Rathore",
-    username: "https://github.com/itshagunrathore",
+    id:369,
+    fullname: "Fred la",
+    username: "https://github.com/flagage",
+},
+{
+id:370,
+    fullname: "YTW7",
+    username: "https://github.com/ytw7",
   },
-  
+   {
+      id:371,
+    fullname: "Sahil Rawat",
+    username: "https://github.com/sahilrawat001",
+    
+  },
+
 ];

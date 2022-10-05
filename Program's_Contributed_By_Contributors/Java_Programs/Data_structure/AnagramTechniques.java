@@ -12,7 +12,17 @@ public class AnagramTechniques {
         // You can use py counters -- return Counter(s) == Counter(t)
 
     }
-
+    public static boolean isAnagramUsingSorting(String s, String t) {
+        if (s.length() != t.length()) return false;
+        // You can use py counters -- return Counter(s) == Counter(t)
+        // You can also use sroting -- sorted(s) == sorted(t) -- PY || O(nlogn)  /O(1)
+        char[] str1 = s.toCharArray();
+        char[] str2 = t.toCharArray();
+        Arrays.sort(str1);
+        Arrays.sort(str2);
+        return Arrays.equals(str1, str2);
+    }
+    
     public static boolean isAnagramIUsingHash(String s, String t) {
 
         if (s.length() != t.length()) return false;

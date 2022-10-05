@@ -1829,5 +1829,10 @@ contributors = [
     id:377,
     fullname: "Anusha Gupta",
     username: "https://github.com/anushagupta1312",
+  },
+  {
+    id:378,
+    fullname: "Andri Januardy"
+    username: "https://github.com/anditsung",
   }
 ];

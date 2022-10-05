@@ -153,6 +153,7 @@ input:-webkit-autofill:active {
 .light .form-control {
   background-color: #fff;
   border-color: #eee;
+  color: #000;
   outline: 0;
   box-shadow: none;
 }

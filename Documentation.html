@@ -1,0 +1,495 @@
+<nav id="navbar">
+    <header>Java Documentation</header>
+    <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#Syntax">Syntax</a></li>
+        <li><a class="nav-link" href="#Comments">Comments</a></li>
+        <li><a class="nav-link" href="#Variables">Variables</a></li>
+        <li><a class="nav-link" href="#Data_Types">Data Types</a></li>
+        <li><a class="nav-link" href="#Type_Casting">Type Casting</a></li>
+        <li><a class="nav-link" href="#Operators">Operators</a></li>
+        <li><a class="nav-link" href="#If_else_Statement">If else Statement</a></li>
+        <li><a class="nav-link" href="#Switch">Switch</a></li>
+        <li><a class="nav-link" href="#While_Loop">While Loop</a></li>
+        <li><a class="nav-link" href="#For_Loop">For Loop</a></li>
+        <li><a class="nav-link" href="#Break_Continue">Break Continue</a></li>
+        <li><a class="nav-link" href="#Arrays">Arrays</a></li>
+
+        <h3>Java Classes</h3>
+        <li><a class="nav-link" href="#OOP">OOP</a></li>
+        <li><a class="nav-link" href="#Classes">Classes</a></li>
+        <li><a class="nav-link" href="#Constructors">Constructors</a></li>
+        <li><a class="nav-link" href="#Encapsulation">Encapsulation</a></li>
+        <li><a class="nav-link" href="#Inheritance">Inheritance</a></li>
+        <li><a class="nav-link" href="#Polymorphism">Polymorphism</a></li>
+        <li><a class="nav-link" href="#Abstraction">Abstraction</a></li>
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
+    </ul>
+</nav>
+<style>
+    body {
+    min-width: 290px;
+    color: #4d4e53;
+    background-color: #ffffff;
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.5;
+    }
+
+    #navbar {
+    position: fixed;
+    min-width: 290px;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100%;
+    border-right: solid;
+    border-color: rgba(0, 22, 22, 0.4);
+    }
+
+    header {
+    color: black;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: thin;
+    }
+
+    #main-doc header {
+    text-align: left;
+    margin: 0px;
+    }
+
+    #navbar ul {
+    height: 88%;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    }
+
+    #navbar li {
+    color: #4d4e53;
+    border-top: 1px solid;
+    list-style: none;
+    position: relative;
+    width: 100%;
+    }
+
+    #navbar a {
+    display: block;
+    padding: 10px 30px;
+    color: #4d4e53;
+    text-decoration: none;
+    cursor: pointer;
+    }
+
+    #main-doc {
+    position: absolute;
+    margin-left: 310px;
+    padding: 20px;
+    margin-bottom: 110px;
+    }
+
+    section article {
+    color: #4d4e53;
+    margin: 15px;
+    font-size: 0.96em;
+    }
+
+    section li {
+    margin: 15px 0px 0px 20px;
+    }
+
+    code {
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    background-color: #f7f7f7;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    }
+
+    @media only screen and (max-width: 815px) {
+    /* For mobile phones: */
+    #navbar ul {
+    border: 1px solid;
+    height: 207px;
+    }
+
+    #navbar {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
+    }
+
+    #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 270px;
+    }
+    }
+
+    @media only screen and (max-width: 400px) {
+    #main-doc {
+    margin-left: -10px;
+    }
+
+    code {
+    margin-left: -20px;
+    width: 100%;
+    padding: 15px;
+    padding-left: 10px;
+    padding-right: 45px;
+    min-width: 233px;
+    }
+    }
+</style>
+<main id="main-doc">
+    <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+            <p>
+                Java is a class-based, object-oriented programming language and was developed by <b>James Gosling</b> at
+                Sun Microsystems Inc in the year 1995. It is a simple programming language and it makes writing,
+                compiling, and debugging programming easy. It helps to create reusable code and modular programs.
+                It is used for:
+            <ul>
+                <li>Mobile applications.</li>
+                <li>Desktop applications.</li>
+                <li>Web applications.</li>
+                <li>Database connection.</li>
+                <li>Games.</li>
+
+            </ul>
+            </p>
+        </article>
+    </section>
+
+    <section class="main-section" id="Syntax">
+        <header>Syntax</header>
+        <article>
+            <p>
+                The process of Java programming can be simplified in three steps:
+                <li>Create the program by typing it into a text editor and saving it to a file HelloWorld.java.</li>
+                <li>Compile it by typing “javac HelloWorld.java” in the terminal window.</li>
+                <li>Execute (or run) it by typing “java HelloWorld” in the terminal window.</li>
+            <p>First "Hello World" in Java</p>
+            <code>System.out.println("Hello World!");</code>
+            </p>
+
+            <p>The Print() Method:</p>
+            <p>There is also a print() method, which is similar to println().
+
+                <br>The only difference is that it does not insert a new line at the end of the output:</br>
+            </p>
+        </article>
+    </section>
+
+    <section class="main-section" id="Comments">
+        <header>Comments</header>
+        <article>
+            <p>Comments can be used to explain Java code, and to make it more readable. It can also be used to prevent
+                execution when testing alternative code.
+                <br>There are two types of comments-
+                <br>1. Single line comment.
+                <br>2. Multiline comment.
+            </p>
+        </article>
+    </section>
+
+    <section class="main-section" id="Variables">
+        <header>Variables</header>
+        <article>
+            <p>
+                Variables are containers for storing data values. In Java, there are different types of variables, for
+                example:
+                <li>String- Stores text.</li>
+                <li>int- Stores integers.</li>
+                <li>float- Stores floating point number.</li>
+                <li>char- Stores single character.</li>
+                <li>boolean- Stores values with true and false.</li>
+            </p>
+        </article>
+    </section>
+
+    <section class="main-section" id="Data_Types">
+        <header>Data Types</header>
+        <article>
+            <p>
+                Data types are divided into two groups:
+                <br><b>Primitive data types</b> - includes byte, short, int, long, float, double, boolean and char
+                <br><b>Non-primitive data types</b> - such as String, Arrays and Classes
+            </p>
+        </article>
+    </section>
+
+    <section class="main-section" id="Type_Casting">
+        <header>Type Casting</header>
+        <article>
+            <p>Type casting is when you assign a value of one primitive data type to another type.
+
+                In Java, there are two types of casting:
+            <ul>
+                <li>Widening Casting (automatically) - converting a smaller type to a larger type size
+                    byte -> short -> char -> int -> long -> float -> double</li>
+
+                <li>Narrowing Casting (manually) - converting a larger type to a smaller size type
+                    double -> float -> long -> int -> char -> short -> byte</li>
+            </ul>
+            </p>
+        </article>
+    </section>
+
+    <section class="main-section" id="Operators">
+        <header>Operators</header>
+        <article>
+            <p>
+                Operators are used to perform operations on variables and values.
+                Java divides the operators into the following groups:
+            <ul>
+                <li>Arithmetic operators</li>
+                <li>Assignment operators</li>
+                <li>Comparison operators</li>
+                <li>Logical operators</li>
+                <li>Bitwise operators</li>
+            </ul>
+            </p>
+        </article>
+    </section>
+
+    <section class="main-section" id="If_else_Statement">
+        <header>If else statement</header>
+        <article>
+            <p>
+                If statement is used to specify a block of Java code to be executed if a condition is true.</p>
+
+            <code>if (condition) {
+                      // block of code to be executed if the condition is true
+                    }
+                </code>
+
+            <header>The else Statement</header>
+            <p>
+                Use the else statement to specify a block of code to be executed if the condition is false.
+            </p>
+
+            <code>if (condition) {
+                  // block of code to be executed if the condition is true
+                } else {
+                  // block of code to be executed if the condition is false
+                }
+            </code>
+        </article>
+    </section>
+
+    <section class="main-section" id="Switch">
+        <header>Switch</header>
+        <article>
+            <p>
+                Use the switch statement to select one of many code blocks to be executed.
+            </p>
+            <code>
+                switch(expression) {
+                case x:
+                // code block
+                break;
+                case y:
+                // code block
+                break;
+                default:
+                // code block
+                }
+            </code>
+        </article>
+    </section>
+
+    <section class="main-section" id="While_Loop">
+        <header>While Loop</header>
+        <article>
+            <p>
+                The while loop loops through a block of code as long as a specified condition is true:
+            </p>
+            <code>while (condition) {// code block to be executed}
+            </code>
+        </article>
+    </section>
+
+
+    <section class="main-section" id="For_Loop">
+        <header>For Loop</header>
+        <article>
+            <code>for (statement 1; statement 2; statement 3) {
+    // code block to be executed}
+            </code>
+        </article>
+    </section>
+
+
+    <section class="main-section" id="Break_Continue">
+        <header>Break Continue</header>
+        <article>
+            The break statement can also be used to jump out of a loop.
+            The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues
+            with the next iteration in the loop
+        </article>
+
+        <section class="main-section" id="Arrays">
+            <header>Arrays</header>
+            <article>
+                <p>
+                    Arrays are used to store multiple values in a single variable, instead of declaring separate
+                    variables for each value.
+
+                    To declare an array, define the variable type with square brackets:
+                </p>
+                <code>String[] cars;</code>
+            </article>
+        </section>
+
+        <section class="main-section" id="OOP">
+            <header>OOP</header>
+            <article>
+                <p>
+                    OOP stands for Object-Oriented Programming.
+                    Object-oriented programming has several advantages over procedural programming:
+                    <li>OOP is faster and easier to execute.</li>
+                    <li>OOP provides a clear structure for the programs.</li>
+                    <li>OOP makes it possible to create full reusable applications with less code and shorter
+                        development time.</li>
+                </p>
+            </article>
+        </section>
+
+
+
+        <section class="main-section" id="Classes">
+            <header>Classes</header>
+            <article>
+                <p>
+                    Java is an object-oriented programming language.
+                    A Class is like an object constructor, or a "blueprint" for creating objects.</p>
+                <b>Create a Class: </b>To create a class, use the keyword class:
+                <code>
+                    public class Main {
+                    int x = 5;
+                    }
+            </code>
+            </article>
+        </section>
+
+
+        <section class="main-section" id="Constructors">
+            <header>Constructors</header>
+            <article>
+                <p>
+
+                    A constructor in Java is a special method that is used to initialize objects.
+                    The constructor is called when an object of a class is created.
+                    It can be used to set initial values for object attributes:
+                </p>
+                <code>
+                    class v {
+                    public:
+                    v(v);
+                    };        
+            </code>
+            </article>
+        </section>
+
+
+        <section class="main-section" id="Encapsulation">
+            <header>Encapsulation</header>
+            <article>The meaning of Encapsulation, is to make sure that "sensitive" data is hidden from users.
+                <p>
+                <ul>
+                    <li>declare class variables/attributes as private.</li>
+                    <li>provide public get and set methods to access and update the value of a private variable.</li>
+                </ul>
+                </p>
+                <code>
+                    public class Person {
+                    private String name;       // private = restricted access
+        
+                    // Getter
+                    public String getName() {
+                    return name;
+                    }
+        
+                    // Setter
+                    public void setName(String newName) {
+                    this.name = newName;
+                    }
+                    }
+            </code>
+            </article>
+        </section>
+
+
+        <section class="main-section" id="Inheritance">
+            <header>Inheritance</header>
+            <article>
+                <p>
+                    Inheritance in Java is a mechanism in which one object acquires all the properties and behaviors of
+                    a parent object
+                </p>
+                <code>
+                    class Subclass-name extends Superclass-name  
+                    {  
+                    //methods and fields  
+                    }  
+            </code>
+            </article>
+        </section>
+
+        <section class="main-section" id="Polymorphism">
+            <header>Polymorphism</header>
+            <article>
+                <p>
+                    Polymorphism means "many forms", and it occurs when we have many classes that are related to each
+                    other by inheritance.
+                </p>
+            </article>
+        </section>
+
+
+        <section class="main-section" id="Abstraction">
+            <header>Abstraction</header>
+            <article>
+                <p>
+                    Data abstraction is the process of hiding certain details and showing only essential information to
+                    the user.</p>
+                <code>
+                    abstract class Animal {
+                    public abstract void animalSound();
+                    public void sleep() {
+                    System.out.println("Zzz");
+                    }
+                    }
+            </code>
+            </article>
+        </section>
+
+
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <article>
+                <ul>
+                    <li>
+                        All the documentation in this page is taken from
+                        <a href="https://www.w3schools.com/java/" target="_blank">W3 School</a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+</main>

@@ -1,3 +1,7 @@
 *.iml
 .git/objects/
 .DS_Store
+.vscode/
+
+.exe
+*.out

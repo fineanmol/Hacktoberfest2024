@@ -1836,14 +1836,24 @@ contributors = [
     username: "https://github.com/prashant5025",
   },
   {
+    id : 377,
+    fullname: "Korada saikiran",
+    username: "https://github.com/saikiran76",
+  },
+  {
     id:367,
     fullname: "Sabin Thapa",
     username: "https://github.com/sabin-thapa",
+  },{
+    id:368,
+    fullname: "Kenny",
+    username: "https://github.com/KennyAwesome",
   },
   {
     id:368,
-    fullname: "Kushagra Mathur",
-    username: "https://github.com/CoderGhost37",
+    fullname: "Tara Choudhary",
+    username: "https://github.com/Tara-Choudhary",
+
   },
   {
     id:369,
@@ -1905,9 +1915,26 @@ contributors = [
     fullname: "Vakeel Sahabh",
     username: "https://github.com/vakilsahabh",
   },
-  {
+
     id:381,
     fullname: "Ayush kumar",
     username: "https://github.com/Ayush4345",
   },
+
+    id:382,
+    fullname: "Fred la",
+    username: "https://github.com/flagage",
+},
+{
+id:383,
+    fullname: "YTW7",
+    username: "https://github.com/ytw7",
+  },
+   {
+      id:384,
+    fullname: "Sahil Rawat",
+    username: "https://github.com/sahilrawat001",
+    
+  },
+
 ];

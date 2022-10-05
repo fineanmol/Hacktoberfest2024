@@ -1915,12 +1915,12 @@ contributors = [
     fullname: "Vakeel Sahabh",
     username: "https://github.com/vakilsahabh",
   },
-
+{
     id:381,
     fullname: "Ayush kumar",
     username: "https://github.com/Ayush4345",
   },
-
+{
     id:382,
     fullname: "Fred la",
     username: "https://github.com/flagage",
@@ -1934,7 +1934,12 @@ id:383,
       id:384,
     fullname: "Sahil Rawat",
     username: "https://github.com/sahilrawat001",
-    
+
+  },
+  {
+    id: 385,
+    fullname: "Dhananjay Patel",
+    username: "https://github.com/dhanu0510",
   },
 
 ];

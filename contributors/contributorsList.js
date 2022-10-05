@@ -1840,7 +1840,7 @@ contributors = [
     fullname: "Sabin Thapa",
     username: "https://github.com/sabin-thapa",
   },
-   {
+  {
     id:368,
     fullname: "Ankit Kumar",
     username: "https://github.com/ankitkumar174",

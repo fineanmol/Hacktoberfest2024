@@ -1839,7 +1839,7 @@ contributors = [
     id : 377,
     fullname: "Korada saikiran",
     username: "https://github.com/saikiran76",
-  }
+  },
   {
     id:367,
     fullname: "Sabin Thapa",

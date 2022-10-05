@@ -1844,5 +1844,9 @@ contributors = [
     id:368,
     fullname: "Kushagra Mathur",
     username: "https://github.com/CoderGhost37",
-  },
+  },{
+    id:369,
+    fullname: "Ayushi Chaudhari",
+    username: "https://github.com/GLADIATRO",
+  }
 ];

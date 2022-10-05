@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background: linear-gradient(180deg, rgb(102, 184, 156), rgb(213, 154, 231));
+}
+
+.card {
+    width: 350px;
+    height: 250px;
+    border-radius: .5rem;
+    background: white;
+    position: relative;
+    transition: .5s;
+}
+
+.card:hover {
+    height: 450px;
+}
+
+.card .imgholder {
+    height: 150px;
+    width: 150px;
+    background: black;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10%;
+    border-radius: 50%;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.card:hover .imgholder {
+    width: 200px;
+    height: 200px;
+}
+
+.card .imgholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 10%;
+    border-radius: 50%;
+}
+
+.card .content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.card .content .details {
+    width: 100%;
+    padding: 3rem;
+    text-align: center;
+    transform: translateY(100px);
+    transition: .5s;
+}
+
+.card:hover .details {
+    transform: translateY(0);
+}
+
+.card .content .details h2 {
+    font-size: 1.5rem;
+    font-family: pacifico;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.card .content .details h2 span {
+    font-size: 1.1rem;
+    font-family: poppins;
+    font-style: oblique;
+    font-weight: 300;
+}
+
+.card .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    font-family: poppins;
+    color: rgb(64, 61, 61);
+    font-size: .9rem;
+}
+
+.card .links .fa {
+    text-align: center;
+    text-decoration: none;
+    margin: 10px 10px;
+    border-radius: 50%;
+}
+
+.card .links .fa:hover {
+    opacity: 0.7;
+}
+
+.card .links .fa-twitter {
+    padding: 5px;
+    font-size: 20px;
+    background: #55ACEE;
+    color: white;
+}
+
+.card .links .fa-linkedin {
+    padding: 5px;
+    font-size: 20px;
+    background: #007bb5;
+    ;
+    color: white;
+}
+
+.card .links .fa-github {
+    padding: 5px;
+    font-size: 20px;
+    background: #434444;
+    color: white;
+}

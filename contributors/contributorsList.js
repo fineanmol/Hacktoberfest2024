@@ -1844,5 +1844,72 @@ contributors = [
     id:368,
     fullname: "Tara Choudhary",
     username: "https://github.com/Tara-Choudhary",
+
+  },
+  {
+    id:369,
+    fullname: "Akash Ratan Verma",
+    username: "https://github.com/akash-10-23",
+  },
+  {
+    id:370,
+    fullname: "Elysia Ong",
+    username: "https://github.com/xevenheaven",
+  },
+  {
+    id:371,
+    fullname: "Kushagra Mathur",
+    username: "https://github.com/CoderGhost37",
+  },
+  {
+    id:372,
+    fullname: "Nikhil Kr. Nishad",
+    username: "https://github.com/nnishad",
+  },
+  {
+    id:373,
+    fullname: "Shagiththya G",
+    username: "https://github.com/ShagiG",
+  },
+  {
+    id:374,
+    fullname: "Rajneesh Khare",
+    username: "https://github.com/rajneeshk94",
+  },
+  {
+    id:375,
+    fullname: "Shagufta Iqbal",
+    username: "https://github.com/Shagufta08",
+  },
+  {
+    id:376,
+    fullname: "Sauvic P Choudhury",
+    username: "https://github.com/Sauvic016",
+  },
+  {
+    id:377,
+    fullname: "Panchadeep Mazumder",
+    username: "https://github.com/panchadeep",
+  },
+  {
+    id:378,
+    fullname: "Amitava Mitra",
+    username: "https://github.com/Amitava123",
+  },
+  {
+    id:379,
+    fullname: "Triben Choudhary",
+    username: "https://github.com/Triben-Choudhary",
+  },
+  {
+    id:368,
+    fullname: "Vakeel Sahabh",
+    username: "https://github.com/vakilsahabh",
+  },
+  {
+    id:369,
+    fullname: "YTW7",
+    username: "https://github.com/ytw7",
+
   },
 ];

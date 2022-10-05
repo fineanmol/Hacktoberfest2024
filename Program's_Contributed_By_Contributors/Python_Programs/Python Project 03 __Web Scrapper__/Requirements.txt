@@ -1,0 +1,12 @@
+Hi,
+For using this you just need to install these two libraries.
+
+Happy Scrapping!
+
+
+
+
+
+
+!pip install requests bs4
+!pip install pandas

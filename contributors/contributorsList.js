@@ -1908,8 +1908,14 @@ contributors = [
   },
   {
     id:369,
+
+    fullname: "Fred la",
+    username: "https://github.com/flagage",
+},{
+id:370,
     fullname: "YTW7",
     username: "https://github.com/ytw7",
+
 
   },
 ];

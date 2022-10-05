@@ -1842,8 +1842,9 @@ contributors = [
   },
   {
     id:368,
-    fullname: "Kushagra Mathur",
-    username: "https://github.com/CoderGhost37",
+    fullname: "Tara Choudhary",
+    username: "https://github.com/Tara-Choudhary",
+
   },
   {
     id:369,
@@ -1909,5 +1910,6 @@ contributors = [
     id:369,
     fullname: "YTW7",
     username: "https://github.com/ytw7",
+
   },
 ];

@@ -1832,7 +1832,12 @@ contributors = [
   },
   {
     id:378,
+<<<<<<< HEAD
     fullname: "GhulamID",
     username: "https://github.com/ubay887",
+=======
+    fullname: "Prashant singh",
+    username: "https://github.com/prashant5025",
+>>>>>>> b07ad67cf64bf93d5fcd99bda1e5d8f362b0e9fe
   }
 ];

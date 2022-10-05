@@ -811,6 +811,11 @@ contributors = [
   },
   {
     id: 172,
+    fullname: "Tanmay Nath",
+    username: "https://github.com/1305Tanmay",
+  },
+  {
+    id: 172,
     fullname: "Yamini Bansal",
     username: "https://github.com/yamini236",
   },

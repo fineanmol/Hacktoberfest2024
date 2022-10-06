@@ -1945,5 +1945,4 @@ contributors = [
     fullname: "Archis Vaze",
     username: "https://github.com/archisvaze"
   }
-
 ];

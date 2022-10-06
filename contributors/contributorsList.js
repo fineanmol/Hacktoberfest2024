@@ -1955,5 +1955,10 @@ contributors = [
     fullname: "Abhishek Anand",
     username: "https://github.com/picturepatch07"
   }
+   {
+    id: 389,
+    fullname: "Dan Bradt",
+    username: "https://github.com/denschiro"
+  }
 
 ];

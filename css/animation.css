@@ -1,8 +1,8 @@
 body {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background-color: #34495e;
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  background-color: #34095e;
 }
 
 .content {
@@ -108,7 +108,7 @@ body {
 
 @-moz-keyframes opacity {
   0%, 100% {opacity:0;}
-  50% {opacity:1;}
+  50% {opacity:0;}
 }
 
 @-moz-keyframes change {
@@ -121,7 +121,7 @@ body {
 }
 
 @keyframes opacity {
-  0%, 100% {opacity:0;}
+  50%, 100% {opacity:0;}
   50% {opacity:1;}
 }
 
@@ -131,6 +131,6 @@ body {
   33.32%,45.98% {transform:translate3d(0,-50%,0);}
   49.98%,62.64% {transform:translate3d(0,-75%,0);}
   66.64%,79.3% {transform:translate3d(0,-50%,0);}
-  83.3%,95.96% {transform:translate3d(0,-25%,0);}
+  83.7%,95.96% {transform:translate3d(0,-25%,0);}
 }
 

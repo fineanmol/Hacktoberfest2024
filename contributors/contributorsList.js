@@ -1815,28 +1815,28 @@ contributors = [
     fullname: "Nuruddeen Sambo",
     username: "https://github.com/sambonuruddeen",
   },
-    {
+  {
     id: 363,
     fullname: "Rukshan Uddin",
     username: "https://github.com/rukshanuddin",
   },
   {
-    id:364,
+    id: 364,
     fullname: "Utkarsh Mishra",
     username: "https://github.com/devUT27",
   },
   {
-    id:365,
+    id: 365,
     fullname: "Anusha Gupta",
     username: "https://github.com/anushagupta1312",
   },
   {
-    id:366,
+    id: 366,
     fullname: "Prashant singh",
     username: "https://github.com/prashant5025",
   },
   {
-    id : 377,
+    id: 367,
     fullname: "Korada saikiran",
     username: "https://github.com/saikiran76",
   },
@@ -1891,6 +1891,10 @@ contributors = [
     username: "https://github.com/Shagufta08",
   },
   {
+    id: 368,
+    fullname: "Chatmethar Chantawibool",
+    username: "https://github.com/chatmethar-comp",
+  },
     id:376,
     fullname: "Sauvic P Choudhury",
     username: "https://github.com/Sauvic016",
@@ -1939,6 +1943,11 @@ contributors = [
     id:385,
     fullname: "Philip Mello",
     username: "https://github.com/PhilipMello"
+  },
+  {
+    id:386,
+    fullname: "Chatmethar Chantawibool",
+    username: "https://github.com/chatmethar-comp"
   }
 
 ];

@@ -1939,6 +1939,11 @@ contributors = [
     id:385,
     fullname: "Philip Mello",
     username: "https://github.com/PhilipMello"
+  },
+  {
+    id:385,
+    fullname: "Jonatan Teofilus",
+    username: "https://github.com/anonimak"
   }
 
 ];

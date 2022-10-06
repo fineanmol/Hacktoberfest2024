@@ -1939,7 +1939,7 @@ contributors = [
     id:385,
     fullname: "Philip Mello",
     username: "https://github.com/PhilipMello"
-  }
+  },
   {
     id:386,
     fullname: "Anggi Ramadyansyah",

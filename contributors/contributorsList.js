@@ -1950,5 +1950,9 @@ contributors = [
     fullname: "Navneet Raj",
     username: "https://github.com/2nav"
   }
-
+  {
+    id:388,
+    fullname: "Shrish Tripathi",
+    username: "https://github.com/shrishtrip"
+  }
 ];

@@ -1937,6 +1937,11 @@ contributors = [
 	},
 	{
 		id: 385,
+		fullname: "Philip Mello",
+		username: "https://github.com/PhilipMello",
+	},
+	{
+		id: 386,
 		fullname: "Nick Mezacapa",
 		username: "https://github.com/NickMezacapa",
 	},

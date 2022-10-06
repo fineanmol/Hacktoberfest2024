@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lato:wght@400;700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="score-cont">
+        <h3 class="score">Score : 0</h3>
+        <ion-icon name="trophy"></ion-icon>
+        <span class="high-score"></span>
+    </div>
+    <canvas id="#snakeCanvas" class="snakeCanvas">
+    </canvas>
+    <div class="start-game">
+        <h2 class="name">Snake Game</h2>
+        <div class="btn">Start Game</div>
+    </div>
+    <div class="counter">
+        <h3></h3>
+    </div>
+    <div class="game-over-box hide">
+        <h3 class="game-over">Game Over</h3>
+        <div class="btn">Play Again</div>
+    </div>
+
+<script src="script.js"></script>    
+</body>
+</html>

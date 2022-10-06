@@ -20,8 +20,7 @@ Hacktoberfest 2022
 # 📌 Videos 📽️:
 
 - [Hacktoberfest Intro](https://www.youtube.com/watch?v=mq_FIHdxmIk)
-- [How to pull request [Overview]](https://youtu.be/DIj2q02gvKs)
-- [Merge Conflict / comment](https://youtu.be/zOx5PJTY8CI)
+k- [Merge Conflict / comment](https://youtu.be/zOx5PJTY8CI)
 
 
 # Contribution Rules📚:

@@ -1,4 +1,4 @@
-contributors = [
+contributors = [ 
   {
     id: 1,
     fullname: "Anmol Agarwal",
@@ -1944,6 +1944,11 @@ contributors = [
     id:386,
     fullname: "Abhash Chakraborty",
     username: "https://github.com/Abhash-Chakraborty"
+  },
+  {
+    id:387,
+    fullname: "Jay Gala",
+    username: "https://github.com/jaygala223"
   }
 
 ];

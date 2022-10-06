@@ -2,11 +2,11 @@ const menu = {
   'Home': {
     'text': 'Contribute here',
     'href': 'https://github.com/fineanmol/Hacktoberfest2022/blob/master/contributors/contributorsList.js#L1934'
-  },hacktoberfest1{
+  },'hacktoberfest1':{
 'text':'HacktoberFest Project 1',
   'href':'https://github.com/fineanmol/Annoying-submit-button'
   
-},hacktoberfest2{
+},'hacktoberfest2':{
 'text':'HacktoberFest Project 2',
   'href':'https://github.com/fineanmol/hacktoberfest'
   

@@ -3,8 +3,7 @@
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <link rel="icon" href="https://hacktoberfestswaglist.com/img/Hacktoberfest_21.jpg" type="image/x-icon">
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74296045-6"></script> -->
+    <link rel="icon" href="https://hacktoberfestswaglist.com/img/hacktoberfest-favicon.ico" type="image/x-icon">
 
     <!--Stats Script-->
     <!-- <script src="scripts/stats.js"></script> -->
@@ -60,6 +59,7 @@
         .st0 {
             fill: #FF0844;
         }
+        
     </style>
 
 
@@ -105,7 +105,7 @@
     </nav>
     <div class="content">
         <div class="container">
-            <span class="heading">CONTRIBUTORS </span>
+            <span class="heading"><b>CONTRIBUTORS</b> </span>
 
             <div class="heart"></div>
 
@@ -134,9 +134,8 @@
         </div>
     </div>
     <!-- Please maintain the alignment... -->
-    <div class="box mx-auto my-5 justify-content-center">
-        <a data-aos="zoom-in-down" class="btn btn-outline-secondary btn-lg load-more" onclick="loadMore()"
-            id="loadMore">Load More</a>
+    <div class="box mx-auto my-5 justify-content-center" id="box">
+        <a data-aos="zoom-in-down" class="btn btn-outline-secondary btn-lg load-more" onclick="loadMore()" id="loadMore"><u>Load More</u></a>
     </div>
     </div>
     </div>
@@ -149,7 +148,7 @@
     <footer>
         <div class="footer-content">
             <h3>Hacktoberfest 2022</h3>
-            <p>This Project is participating in Hacktoberfest. Copyright &copy; 2022</p>
+            <p>This Project is participating in <b>Hacktoberfest</b>. Copyright &copy; 2022.</p>
            
             <div class="footer-menu">
             <ul class="socials">
@@ -159,6 +158,7 @@
                 <li><a href="https://www.instagram.com/fineanmol"><i class="fa fa-youtube"></i></a></li>
                 <li><a href="https://www.linkedin.com/in/fineanmol/"><i class="fa fa-linkedin-square"></i></a></li>
             </ul>
+            </div>
         </div>
     </footer>
     <script>
@@ -171,10 +171,13 @@
         let initialContributorsNumber = 72;
 
 
-        function filterUsers(str, array) {
+        function filterUsers(str='ContributorName', array) {
+            const inputString = typeof str === 'string' ? str.toLowerCase() : '';
+            var fullName=''
             if (str == '') return "Cannot be empty, please enter a name"
             else return array.filter((item) => {
-                return item.fullname.toLowerCase().includes(str.toLowerCase())
+                const fullName = item.fullname || '';
+                return fullName.toLowerCase().includes(inputString)
             })
         }
 
@@ -260,7 +263,7 @@
 
             document.querySelectorAll('a.box-item').forEach(con => {
                 // console.log(con.href)
-                con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
+                con.innerHTML += `<img loading="lazy" src="https://github.com/${con.href.split('https://github.com/')[1]}.png">`
             })
 
             document.getElementById('loading').setAttribute('hidden', true)
@@ -362,7 +365,7 @@
 
     <script>
         document.getElementById('stats').innerHTML =
-            'You guys are awesome, we have passed the github rate again this hour. <a href="https://github.com/fineanmol/Hacktoberfest2022" target="_blank">Here</a> is a link to repo to check out live stats';
+            'You guys are awesome, we have again passed the github rate this hour. <a href="https://github.com/fineanmol/Hacktoberfest2022" target="_blank">Here</a> is a link to check out our repo`s live stats.';
         $('.tdnn').click(function () {
             $("body").toggleClass('light');
             $(".moon").toggleClass('sun');

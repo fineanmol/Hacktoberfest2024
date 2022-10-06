@@ -1,7 +1,7 @@
 const menu = {
   'Home': {
     'text': 'Contribute here',
-    'href': 'https://github.com/fineanmol/Hacktoberfest2022/blob/master/Contributors.html#L2021'
+    'href': 'https://github.com/fineanmol/Hacktoberfest2022/blob/master/contributors/contributorsList.js#L1934'
   },
   //'Others': {
     'Instagram': {

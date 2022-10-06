@@ -1947,6 +1947,11 @@ contributors = [
   },
   {
     id:387,
+    fullname: "Navneet Raj",
+    username: "https://github.com/2nav"
+  },
+  {
+    id:388,
     fullname: "Yash Raj Singh",
     username: "https://github.com/yashrajyash"
   }

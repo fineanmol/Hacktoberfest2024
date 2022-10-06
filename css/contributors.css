@@ -95,7 +95,7 @@ body {
   border-radius: 25%;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
-  transition-property: background, color;
+  transition-property: position, color;
   transform: translateY(7px);
   transition: 0.5s;
 }
@@ -106,6 +106,14 @@ body {
   transform: translateY(-7px);
   transition: 0.5s;
 }
+
+/* changing the color of the btn on hover */
+#back-to-top-btn:hover .fa-angle-double-up{
+  color:#d43370;
+}
+
+
+
 .light #back-to-top-btn {
   color: #7c7575;
   background-color: rgba(255, 255, 255, 0.1);

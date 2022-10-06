@@ -1,0 +1,29 @@
+.main{
+    position: absolute;
+    top: 33%;
+    left: 33%;
+    width: 100px;
+    border: 1px solid black;
+    height: 5px;
+    border-radius: 10px;
+    z-index: 2;
+    padding: 2px;
+}
+
+.box{
+    border-radius: 10px;
+    width: 100px;
+    height: 5px;
+    background-color: black;
+    animation: anima;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes anima {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 100px;
+    }
+}

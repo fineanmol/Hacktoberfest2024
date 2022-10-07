@@ -32,8 +32,9 @@ contributors = [
   {
     id: 7,
     fullname: "Ritesh Kumar",
-    username: "https://github.com/ritesh2905",
+    username: "https://github.com/ritesh2905"
   },
+  
   {
     id: 8,
     fullname: "Elysia Ong",
@@ -1954,6 +1955,11 @@ contributors = [
     id: 388,
     fullname: "Abhishek Anand",
     username: "https://github.com/picturepatch07"
+  },
+  { 
+    id: 8,
+    fullname: "Deepanshu khandelwal",
+    username: "https://github.com/deepanshu1201"
   }
 
 ];

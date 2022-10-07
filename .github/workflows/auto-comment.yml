@@ -9,8 +9,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           issuesOpened: |
              @{{ author }} Please Star ⭐️ the repo to earn "**_hacktober-accepted_**" label for the event.
-             Meanwhile if you want to work on this issue, Please raise the PR and we will review and merge it.
-       
+             Meanwhile if you want to work on this issue, Please raise the PR and we will review and merge it. 
 
           pullRequestOpened: |
              @{{ author }} Please Star ⭐️ the repo to earn "**_hacktober-accepted_**" label for the event.

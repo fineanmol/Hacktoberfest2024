@@ -1966,7 +1966,17 @@ contributors = [
     username: "https://github.com/surajkeshari"
   },
   {
-    id:391,
+    id: 391,
+    fullname: "Rohan Das",
+    username: "https://github.com/rohan26062001"
+  },
+  {
+    id: 392,
+    fullname: "Benjamin Norman",
+    username: "https://github.com/BenjaminN117",
+  },
+  {
+    id:393,
     fullname: "Damian Teske",
     username: "https://github.com/DamianT7",
   },

@@ -1945,6 +1945,7 @@ contributors = [
 
     fullname: "Flourish Oke",
     username: "https://github.com/TimTemi"
+  },
   {
     id:387,
     fullname: "Abhash Chakraborty",

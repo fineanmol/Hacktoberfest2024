@@ -1962,8 +1962,8 @@ contributors = [
   },
   {
     id: 390,
-    fullname: "Vishal Mishra",
-    username: "https://github.com/vishalaadee",
-  }
+    fullname: "Amitava Mitra",
+    username: "https://github.com/Amitava123",
+  },
 
 ];

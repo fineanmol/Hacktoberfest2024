@@ -1964,6 +1964,6 @@ contributors = [
     id: 390,
     fullname: "Vishal Mishra",
     username: "https://github.com/vishalaadee",
-  }
+  },
 
 ];

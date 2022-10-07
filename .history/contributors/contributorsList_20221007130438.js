@@ -1959,11 +1959,10 @@ contributors = [
     id: 389,
     fullname: "suraj keshari",
     username: "https://github.com/surajkeshari"
+  }{
+    id: 2,
+    fullname: "Amitava Mitra",
+    username: "https://github.com/Amitava123",
   },
-  {
-    id: 390,
-    fullname: "Vishal Mishra",
-    username: "https://github.com/vishalaadee",
-  }
 
 ];

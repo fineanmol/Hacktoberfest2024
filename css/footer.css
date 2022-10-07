@@ -126,17 +126,21 @@ footer {
   color: #fff;
   border: 1.1px solid white;
   padding: 5px;
-  border-radius: 50%;
+  border-radius: 20%;
 }
 
 .socials a i {
   font-size: 1.1rem;
   width: 20px;
-  transition: color .4s ease;
+  
+  position: relative;
+    top: 0;
+    transition: top ease 0.5s;
 }
 
 .socials a:hover i {
-  color: aqua;
+  color: rgb(229, 233, 4);
+  top: -5px;
 }
 
 .footer-bottom {

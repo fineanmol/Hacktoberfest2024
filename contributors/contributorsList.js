@@ -1836,9 +1836,18 @@ contributors = [
     username: "https://github.com/prashant5025",
   },
   {
+    id : 377,
+    fullname: "Korada saikiran",
+    username: "https://github.com/saikiran76",
+  },
+  {
     id:367,
     fullname: "Sabin Thapa",
     username: "https://github.com/sabin-thapa",
+  },{
+    id:368,
+    fullname: "Kenny",
+    username: "https://github.com/KennyAwesome",
   },
   {
     id:368,
@@ -1902,25 +1911,76 @@ contributors = [
     username: "https://github.com/Triben-Choudhary",
   },
   {
-    id:368,
+    id:380,
     fullname: "Vakeel Sahabh",
     username: "https://github.com/vakilsahabh",
   },
   {
-    id:369,
+    id:381,
+    fullname: "Ayush kumar",
+    username: "https://github.com/Ayush4345",
+  },
+  {
+    id:382,
     fullname: "Fred la",
     username: "https://github.com/flagage",
-},
-{
-id:370,
+  },
+  {
+    id:383,
     fullname: "YTW7",
     username: "https://github.com/ytw7",
   },
    {
-      id:371,
+    id:384,
     fullname: "Sahil Rawat",
     username: "https://github.com/sahilrawat001",
-    
   },
+  {
+    id:385,
+    fullname: "Philip Mello",
+    username: "https://github.com/PhilipMello"
+  },
+  {
+    id:386,
 
+    fullname: "Flourish Oke",
+    username: "https://github.com/TimTemi"
+  },
+  {
+    id:387,
+    fullname: "Abhash Chakraborty",
+    username: "https://github.com/Abhash-Chakraborty"
+  },
+  {
+    id:388,
+    fullname: "Navneet Raj",
+    username: "https://github.com/2nav"
+  },
+  {
+    id: 389,
+    fullname: "Abhishek Anand",
+    username: "https://github.com/picturepatch07"
+  },
+  {
+    id: 390,
+    fullname: "suraj keshari",
+    username: "https://github.com/surajkeshari"
+
+  },
+  {
+    id: 391,
+    fullname: "Rohan Das",
+    username: "https://github.com/rohan26062001"
+
+  },
+  {
+    id: 392,
+    fullname: "Benjamin Norman",
+    username: "https://github.com/BenjaminN117",
+  },
+  {
+    id:393,
+    fullname:"Ujjawal Dwivedi",
+    username:"https://github.com/ujjawalD07",
+  }
 ];

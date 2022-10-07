@@ -1957,7 +1957,7 @@ contributors = [
   },
   {
     id:389,
-    fullname:"Raghav Kumar Jha",
+    fullname:"RAGHAV KUMAR JHA",
     username: "https://github.com/jharaghav32"
   }
 

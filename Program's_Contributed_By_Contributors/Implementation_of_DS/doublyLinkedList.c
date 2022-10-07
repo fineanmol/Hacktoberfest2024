@@ -12,6 +12,10 @@ void insertHead(struct Node** head, int new_data);
 void insertAfter(struct Node* prevNode, int new_data);
 void insertEnd(struct Node** head, int newData);
 void printList(struct Node* temp);
+void deleteEnd(struct Node** head);
+void deleteHead(struct Node** head);
+void deleteUser(struct Node** head, int position);
+
 
 int main()
 {
@@ -59,11 +63,22 @@ int main()
     insertAfter(head->next, 8);
     printList(head);
 
+    printf("\nDeleting at position 3");
+    deleteUser(&head, 3);
+    printf(" and the list becomes :");
+    printList(head);
+
     printf("\nInserting 3 at end :");
     insertEnd(&head, 3);
     printList(head);
 
-    
+    printf("\nDeleting head node becomes : ");
+    deleteHead(&head);
+    printList(head);
+
+    printf("\nDeleting last node becomes : ");
+    deleteEnd(&head);
+    printList(head);
 
     return 0;
 }
@@ -153,4 +168,73 @@ void printList(struct Node* temp)
         //make temp point to next data
         temp = temp->next;
     }
+}
+
+void deleteEnd(struct Node** head)
+{
+    //if head has one node
+    if ((*head)->next == NULL)
+        {
+            //free the memory
+            free(head);
+            head = NULL;
+        }
+    //struct variable called temp
+    struct Node* temp = *head, *prev_node;
+
+    //traverse through DLL
+    while(temp->next != NULL)
+    {
+        prev_node = temp;
+        temp = temp->next;
+    }
+    //free memory of last node
+    free(temp);
+    //make previous nod.Next equal to NULL
+    prev_node->next = NULL;
+}
+
+void deleteHead(struct Node** head)
+{
+    //create a temp variable to store head
+    struct Node* temp;
+
+    if (*head == NULL)
+    {
+        printf(" Cannot delete from an empty list ");
+        return;
+    }
+    else
+    {
+        temp = *head;
+
+        //update head value to next value in LL
+        *head = (*head)->next;
+
+        //head.Prev will equal NULL
+        (*head)->prev = NULL;
+
+        //free memory
+        free(temp);
+    }
+    
+}
+
+void deleteUser(struct Node** head, int position)
+{
+    struct Node* temp = *head;
+    
+    while (position > 1)
+    {
+        temp = temp->next;
+        position--;
+    }
+    //this line will make the the next of previous node point to the next node
+    temp->prev->next = temp->next;
+
+    //this line makes the previous of next node to be deleted point to prev node
+    temp->next->prev = temp->prev;
+
+    //free unused memory
+    free(temp);
 }

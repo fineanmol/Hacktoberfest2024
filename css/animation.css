@@ -17,25 +17,26 @@ body {
   font-size: 35px;
   line-height: 40px;
   color: #ecf0f1;
+}
   
-  &__container {
+  .container {
     font-weight: 600;
     overflow: hidden;
     height: 40px;
     padding: 0 40px;
-
-    &:before {
+  }
+    ::before {
       content: '[';
       left: 0;
     }
 
-    &:after {
+    ::after {
       content: ']';
       position: absolute;
       right: 0;
     }
 
-    &:after, &:before {
+    ::after, ::before {
       position: absolute;
       top: 0;
       

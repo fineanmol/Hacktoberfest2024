@@ -1945,6 +1945,7 @@ contributors = [
 
     fullname: "Flourish Oke",
     username: "https://github.com/TimTemi"
+  },
   {
     id:387,
     fullname: "Abhash Chakraborty",
@@ -1971,5 +1972,10 @@ contributors = [
     fullname: "Rohan Das",
     username: "https://github.com/rohan26062001"
 
-  }
+  },
+  {
+    id: 392,
+    fullname: "Santosh Vasisht",
+    username: "https://github.com/santosh50",
+  },
 ];

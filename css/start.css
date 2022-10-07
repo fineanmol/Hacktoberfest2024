@@ -1,0 +1,173 @@
+*
+{
+  margin-left: 3%;
+  margin-right: 3%;
+  padding: 0;
+}
+
+a
+{
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover
+{
+  color: red;
+}
+
+a:active
+{
+  color: green;
+}
+
+a:visited
+{
+  color:blue;
+}
+
+body
+{
+  background-color: #f4f4f4;
+  color: #555555;
+  /*
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  Same as below
+  */
+  font: bold 16px Arial, Helvetica,sans-serif;
+  line-height: 1.6em;
+}
+
+.container
+{
+  width: 80%/*500px*/;
+  margin:  auto;
+}
+
+.box1
+{
+  background-color: #333;
+  color: #fff;
+  margin-top: 2em;
+
+  /* border-right: 5px red solid;
+  border-left: 5px red solid;
+  border-top: 5px red solid;
+  border-bottom: 5px red solid;
+  SAME AS BELOW */
+
+  border: 5px red double;
+  padding: 2em;
+
+  /* border-width-bottom: 3px;
+  border-top-style: dotted */
+}
+
+h1
+{
+  font-family: Tahoma;
+  font-weight: 1000;
+  font-style: italic;
+  text-decoration: underline;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  word-spacing: 1em;
+}
+
+.box2
+{
+  width: 60%;
+  border: 3px dotted #ccc;
+  padding: 1em;
+  margin: auto;
+  margin-top: 2em;
+}
+
+.cat
+{
+  border-radius: 1px #ccc solid;
+  padding: 1em;
+  border-radius: 1.5em;
+}
+
+.cat h2
+{
+  text-align: center;
+}
+
+.cat ul
+{
+  padding: 0;
+  list-style: square;
+  list-style: none;
+}
+
+.cat li
+{
+  padding-bottom: 6px;
+  border-bottom:dotted 1px #333;
+  /* list-style-image: url(); */
+}
+
+.f
+{
+  padding: 20px;
+}
+
+.f .form
+{
+  padding-bottom: 15px;
+}
+
+.f label
+{
+  display:block;
+}
+
+.f input[type = "text"], .f textarea
+{
+  padding: 8px;
+  width: 100%
+}
+
+.f input[type = "Submit"]
+{
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border:none
+}
+
+.block
+{
+  float: left;
+  width: 30%;
+  border: 1px solid #ccc;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.clr
+{
+  clear:both;
+}
+
+#main
+{
+  float: left;
+  width: 70%
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+#side
+{
+  float: right;
+  width: 30%;
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  box-sizing: border-box;
+}

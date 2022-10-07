@@ -1941,10 +1941,12 @@ contributors = [
     username: "https://github.com/PhilipMello"
   },
   {
-    id:386,
+    id: 386,
 
     fullname: "Flourish Oke",
     username: "https://github.com/TimTemi"
+  },
+
   {
     id:387,
     fullname: "Abhash Chakraborty",
@@ -1964,6 +1966,10 @@ contributors = [
     id: 390,
     fullname: "suraj keshari",
     username: "https://github.com/surajkeshari"
-
+  },
+  {
+    id: 391,
+    fullname: "laksh sadhwani",
+    username: "https://github.com/Laaaaksh"
   }
 ];

@@ -38,7 +38,7 @@ void print(int arr[], int size)
 // Driver code
 int main()
 {
-	int arr[] = { 5, 1, 4, 2, 8};
+	int arr[] = {9,3,4,2,7,6};
 	int N = sizeof(arr) / sizeof(arr[0]);
 	bubbleSort(arr, N);
 	cout << "Sorted array: \n";

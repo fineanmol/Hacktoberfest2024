@@ -1,0 +1,35 @@
+.container{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    color: white;
+    
+}
+#tsparticles{
+    position: absolute;
+    left: 0px ;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+.board button{
+    width:90px;
+    height:90px;
+    background-color: gray;
+    margin: 1px;
+    border: 4px solid black;
+    border-radius: 50%;
+}
+.board{
+   transition: 0.8s;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+.board:hover{
+    box-shadow: 0px 0px 40px rgb(13, 255, 73);
+}
+p{
+    text-align: right;
+    font-size: 2em;
+}

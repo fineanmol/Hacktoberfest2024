@@ -1942,23 +1942,28 @@ contributors = [
   },
   {
     id:386,
+
+    fullname: "Flourish Oke",
+    username: "https://github.com/TimTemi"
+  {
+    id:387,
     fullname: "Abhash Chakraborty",
     username: "https://github.com/Abhash-Chakraborty"
   },
   {
-    id:387,
+    id:388,
     fullname: "Navneet Raj",
     username: "https://github.com/2nav"
   },
   {
-    id: 388,
+    id: 389,
     fullname: "Abhishek Anand",
     username: "https://github.com/picturepatch07"
   },
   {
-    id: 389,
+    id: 390,
     fullname: "suraj keshari",
     username: "https://github.com/surajkeshari"
-  }
 
+  }
 ];

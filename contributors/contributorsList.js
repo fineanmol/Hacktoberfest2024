@@ -1951,9 +1951,12 @@ contributors = [
     username: "https://github.com/2nav"
   },
   {
-    id:388,
+    id: 388,
+    fullname: "Abhishek Anand",
+    username: "https://github.com/picturepatch07"
+  },
+   id:389,
     fullname: "Alisha Gupta",
     username: "https://github.com/1Alisha"
-  }
-
+}
 ];

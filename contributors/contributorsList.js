@@ -1954,11 +1954,11 @@ contributors = [
     id: 388,
     fullname: "Abhishek Anand",
     username: "https://github.com/picturepatch07"
-  },
+  }
   {
     id: 389,
-    fullname: "suraj keshari",
-    username: "https://github.com/surajkeshari"
+    fullname: "Bikrant Mishra",
+    username: "https://github.com/Bikrant5202"
   }
 
 ];

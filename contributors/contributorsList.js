@@ -1959,6 +1959,11 @@ contributors = [
     id: 389,
     fullname: "suraj keshari",
     username: "https://github.com/surajkeshari"
+  },
+  {
+    id: 390,
+    fullname: "Parth Nanda",
+    username: "https://github.com/parthn2"
   }
 
 ];

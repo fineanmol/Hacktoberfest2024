@@ -1,3 +1,6 @@
 {
-  "liveServer.settings.port": 5501
+  "java.project.sourcePaths": [
+    "Program's_Contributed_By_Contributors/Java_Programs/Sorting/QuickSort.java",
+    "Program's_Contributed_By_Contributors/Java_Programs/Data_structure"
+  ]
 }

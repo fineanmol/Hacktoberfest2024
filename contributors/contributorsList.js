@@ -1977,4 +1977,9 @@ contributors = [
     fullname: "Benjamin Norman",
     username: "https://github.com/BenjaminN117",
   },
+  {
+    id: 373,
+    fullname: "Gazi Md Shahnewaz",
+    username: "https:github.com/shahnewaztameem"
+  }
 ];

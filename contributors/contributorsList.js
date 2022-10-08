@@ -1991,8 +1991,7 @@ contributors = [
     fullname: "Geonu Lim",
     username: "https://github.com/rjsdn0124",
   },
-
-   {
+  {
     id: 395,
     fullname: "Dan Bradt",
     username: "https://github.com/denschiro"
@@ -2006,15 +2005,15 @@ contributors = [
     id: 397,
     fullname: "Hakim Madani",
     username: "https://github.com/DVCone"
-  }
-  id: 397,
+  },
+  {
+    id: 397,
     fullname: "SJayaditya Mishra",
     username: "https://github.com/JayM2510"
-  }
-    {
+  },
+  {
     id: 396,
     fullname: "Vaibahv Aswal",
     username: "https://github.com/ShrutiMishra-2005"
   }
-
 ];

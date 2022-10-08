@@ -59,6 +59,34 @@
         .st0 {
             fill: #FF0844;
         }
+        .circle-border {
+            width: 30px;
+            height: 30px;
+            padding: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: rgb(63,249,220);
+            background: linear-gradient(0deg, rgba(249, 63, 209, 0.1) 33%, rgb(252, 214, 255) 100%);
+            animation: spin 800ms linear 0s infinite;
+            }
+
+            .circle-core {
+            width: 100%;
+            height: 100%;
+            background-color: #251d29;
+            border-radius: 50%;
+            }
+            @keyframes spin {
+            from {
+                transform: rotate(0);
+            }
+            to{
+                transform: rotate(359deg);
+            }
+            }
+
         
     </style>
 
@@ -135,7 +163,8 @@
     </div>
     <!-- Please maintain the alignment... -->
     <div class="box mx-auto my-5 justify-content-center" id="box">
-        <a data-aos="zoom-in-down" class="btn btn-outline-secondary btn-lg load-more" onclick="loadMore()" id="loadMore"><u>Load More</u></a>
+        <a data-aos="zoom-in-down" class="btn btn-outline-secondary btn-lg load-more" onclick="loadMore()" id="loadMore">
+            <u id="Loading">Load More</u></a>
     </div>
     </div>
     </div>
@@ -205,11 +234,14 @@
         render(contributors);
 
         function loadMore() {
+            this.innerHTML = "";
             if (initialContributorsNumber >= contributors.length) {
                 render(contributors)
             } else {
-                initialContributorsNumber += 84;
-                document.getElementById('contributors').innerHTML = "<div class='text-center' id='loading'>Loading...</div>"
+                document.getElementById('box').innerHTML = "<div class='spinner-box'><div class='circle-border'><div class='circle-core'></div></div>  </div>"
+                function x(){
+                    initialContributorsNumber += 84;
+                    document.getElementById('box').innerHTML = '<a data-aos="zoom-in-down" class="btn btn-outline-secondary btn-lg load-more" onclick="loadMore()" id="loadMore"><u>Load More</u></a>';
                 render(contributors)
                 document.querySelectorAll('a.box-item').forEach(con => {
                     // console.log(con.href)
@@ -219,6 +251,10 @@
                 if (initialContributorsNumber >= contributors.length) {
                     document.getElementById('loadMore').setAttribute('hidden', true)
                 }
+                
+                }
+                setTimeout(x,1500);
+                
             }
         }
 

@@ -17,7 +17,7 @@ const menu = {
       'href': 'https://instagram.com/fineanmol'
     },
     'Instagram': {
-      'text': 'Connect on <i class="fa fa-instagram" style="font-size:22px"></i>',
+      'text': 'Follow Us <i class="fa fa-instagram" style="font-size:22px"></i>',
       'href': 'https://instagram.com/fineanmol'
     },
     'Facebook': {
@@ -26,7 +26,7 @@ const menu = {
       'id': 'facebook'
     },
     'Linkedin': {
-      'text': 'Linked<i class="fa fa-linkedin" style="font-size:20px"></i>',
+      'text': 'Connect <i class="fa fa-linkedin" style="font-size:20px"></i>',
       'href': 'https://www.linkedin.com/in/fineanmol/',
       'id': 'linkedin'
     },

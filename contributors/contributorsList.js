@@ -1968,4 +1968,9 @@ contributors = [
     fullname: "Isnani",
     username: "https://github.com/Isnani25",
   },
+  {
+    id: 411,
+    fullname: "Yannick Fuchs",
+    username: "https://github.com/Fuchsi94",
+  },
 ];

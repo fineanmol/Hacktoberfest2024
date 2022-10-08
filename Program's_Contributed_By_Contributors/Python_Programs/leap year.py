@@ -8,9 +8,6 @@ def leap_year_check(yr):
             leap = False
         else: 
             leap = True
-    if leap: 
-        print("{0} is a leap year".format(yr))
-    else: 
-        print("{0} is not a leap year".format(yr))
+        print(leap?"{0} is a leap year".format(yr):"{0} is not a leap year".format(yr))
 
 leap_year_check(1700)

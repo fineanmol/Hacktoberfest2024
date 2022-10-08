@@ -1990,9 +1990,4 @@ contributors = [
     fullname: "Dan Bradt",
     username: "https://github.com/denschiro"
   },
-  {
-    id: 396,
-    fullname: "DVCone",
-    username: "https://github.com/DVCone"
-  }
 ];

@@ -2014,7 +2014,7 @@ contributors = [
   id: 396,
    fullname: "Romy Kumari",
    username: "https://github.com/romy421kumari"
-
+  },
 
   {
     id: 396,
@@ -2049,7 +2049,8 @@ id: 400,
     fullname: "Abel Aditya Philipose",
     username: "https://github.com/AbelAditya",
   },
-id: 401,
+  {
+    id: 401,
     fullname: "Shruti Mishra",
     username: "https://github.com/ShrutiMishra-2002"
   },
@@ -2071,6 +2072,11 @@ id: 401,
     fullname: "Vaibahv Aswal",
     username: "https://github.com/ShrutiMishra-2005"
 
+  },
+  {
+    id:402,
+    fullname: "Aman Mehta",
+    username: "https://github.com/aman4411"
   }
 
 

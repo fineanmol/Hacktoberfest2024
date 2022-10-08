@@ -2009,6 +2009,12 @@ contributors = [
     username: "https://github.com/denschiro"
   },
 
+  {
+    id: 396,
+    fullname: "Abhishek Anand",
+    username: "https://github.com/picturepatch07"
+},
+
    {
     id: 396,
     fullname: "Justin Michael Raj",
@@ -2020,7 +2026,7 @@ contributors = [
     username: "https://github.com/Rajat009-Ra1",
   },
    
-
+{
 
     fullname: "Akarshit Batra",
     username: "https://github.com/Akarshit7",
@@ -2042,7 +2048,8 @@ contributors = [
     fullname: "SJayaditya Mishra",
     username: "https://github.com/JayM2510"
 
-  }
+
+  },
     {
     id: 396,
     fullname: "Vaibahv Aswal",

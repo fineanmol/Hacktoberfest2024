@@ -1995,4 +1995,8 @@ contributors = [
     fullname: "Shruti Mishra",
     username: "https://github.com/ShrutiMishra-2002"
   }
+  id: 397,
+    fullname: "SJayaditya Mishra",
+    username: "https://github.com/JayM2510"
+  }
 ];

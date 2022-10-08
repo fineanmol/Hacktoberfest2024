@@ -99,7 +99,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto" id="menu">
-                <!-- Menu -->
+                <!-- <p>hello</p> -->
             </ul>
         </div>
     </nav>
@@ -134,9 +134,8 @@
         </div>
     </div>
     <!-- Please maintain the alignment... -->
-    <div class="box mx-auto my-5 justify-content-center">
-        <a data-aos="zoom-in-down" class="btn btn-outline-secondary btn-lg load-more" onclick="loadMore()"
-            id="loadMore"><u>Load More</u></a>
+    <div class="box mx-auto my-5 justify-content-center" id="box">
+        <a data-aos="zoom-in-down" class="btn btn-outline-secondary btn-lg load-more" onclick="loadMore()" id="loadMore"><u>Load More</u></a>
     </div>
     </div>
     </div>
@@ -171,7 +170,7 @@
         let searchResult = null;
         let initialContributorsNumber = 72;
 
-
+        console.log(contributors)
         function filterUsers(str='ContributorName', array) {
             const inputString = typeof str === 'string' ? str.toLowerCase() : '';
             var fullName=''

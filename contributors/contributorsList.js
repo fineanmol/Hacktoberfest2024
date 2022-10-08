@@ -1968,4 +1968,9 @@ contributors = [
     fullname: "Isnani",
     username: "https://github.com/Isnani25",
   },
+  {
+    id: 390,
+    fullname: "Khush Sachdeva",
+    username: "khush3211/Hacktoberfest2022",
+  },
 ];

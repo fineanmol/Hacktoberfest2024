@@ -1985,9 +1985,94 @@ contributors = [
     fullname: "Matvey Romanov",
     username: "https://github.com/ra1nbow1",
   },
+
+
+
+  {
+    id: 395,
+    fullname: "Kanishka Panwar",
+    username: "https://github.com/kanishka-p1",
+  },
+
+
+
+  {
+    id: 395,
+    fullname: "Geonu Lim",
+    username: "https://github.com/rjsdn0124",
+  },
+
    {
+
+
     id: 395,
     fullname: "Dan Bradt",
     username: "https://github.com/denschiro"
+  },
+
+  {
+  id: 396,
+   fullname: "Romy Kumari",
+   username: "https://github.com/romy421kumari"
+
+
+  {
+    id: 396,
+    fullname: "Rishabh Bhardwaj",
+    username: "https://github.com/rbhardy"
+},
+
+  {
+    id: 396,
+    fullname: "Abhishek Anand",
+    username: "https://github.com/picturepatch07"
+},
+
+   {
+    id: 396,
+    fullname: "Justin Michael Raj",
+    username: "https://github.com/justinmraj1984"
+},
+  {
+
+    fullname: "Rajat Singh",
+    username: "https://github.com/Rajat009-Ra1",
+  },
+   
+{
+id: 399,
+    fullname: "Akarshit Batra",
+    username: "https://github.com/Akarshit7",
+},
+{
+id: 400,
+    fullname: "Abel Aditya Philipose",
+    username: "https://github.com/AbelAditya",
+  },
+id: 401,
+    fullname: "Shruti Mishra",
+    username: "https://github.com/ShrutiMishra-2002"
+  },
+  {
+    id: 397,
+    fullname: "Hakim Madani",
+
+
+  },
+  {
+  id: 397,
+    fullname: "SJayaditya Mishra",
+    username: "https://github.com/JayM2510"
+
+
+  },
+    {
+    id: 396,
+    fullname: "Vaibahv Aswal",
+    username: "https://github.com/ShrutiMishra-2005"
+
   }
+
+
 ];
+

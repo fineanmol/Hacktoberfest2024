@@ -1989,5 +1989,5 @@ contributors = [
     id: 395,
     fullname: "Dan Bradt",
     username: "https://github.com/denschiro"
-  },
+  }
 ];

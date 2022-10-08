@@ -1986,6 +1986,13 @@ contributors = [
     username: "https://github.com/ra1nbow1",
   },
 
+  {
+    id: 395,
+    fullname: "Kanishka Panwar",
+    username: "https://github.com/kanishka-p1",
+  },
+
+
 
   {
     id: 395,
@@ -2023,6 +2030,7 @@ contributors = [
     fullname: "Vaibahv Aswal",
     username: "https://github.com/ShrutiMishra-2005"
   }
+
 
 
 ];

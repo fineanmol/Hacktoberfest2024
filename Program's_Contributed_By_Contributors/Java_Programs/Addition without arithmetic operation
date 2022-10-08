@@ -1,0 +1,17 @@
+public class Add_Without_Arithmetic{
+public static void main(String []args){          
+         int first = 2;
+         int sec = 5;
+         int ans=add(first, sec);
+         System.out.println(ans);
+     }
+     static int add(int a, int b){
+         if (b==0)
+         {
+             return a;
+         }
+         int c = a^b;
+         int d = (a&b)<<1;
+         return add(c,d);
+     } 
+}

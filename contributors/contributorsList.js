@@ -2015,5 +2015,10 @@ contributors = [
     id: 396,
     fullname: "Vaibahv Aswal",
     username: "https://github.com/ShrutiMishra-2005"
+  },
+  {
+    id: 397,
+    fullname: "Muhammad Khuzaima Umair",
+    username: "https://github.com/mkhuzaima"
   }
 ];

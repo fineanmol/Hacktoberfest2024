@@ -2066,4 +2066,9 @@ contributors = [
     fullname: "Shubham Rawat",
     username: "https://github.com/shubhamrawat090",
   },
+  {
+    id: 410,
+    fullname: "Tahalu Indo",
+    username: "https://github.com/tahaluindo",
+  },
 ];

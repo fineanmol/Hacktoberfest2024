@@ -2010,6 +2010,10 @@ contributors = [
   {
     id: 396,
 
+    fullname: "Akarshit Batra",
+    username: "https://github.com/Akarshit7",
+
+
     fullname: "Abel Aditya Philipose",
     username: "https://github.com/AbelAditya",
   },
@@ -2020,7 +2024,7 @@ contributors = [
   {
     id: 397,
     fullname: "Hakim Madani",
-    username: "https://github.com/DVCone"
+
   }
   id: 397,
     fullname: "SJayaditya Mishra",

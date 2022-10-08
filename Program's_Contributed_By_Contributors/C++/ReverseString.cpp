@@ -1,24 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-
- void reverse( string s){
-if(s.length()==0){
-    return ;
-}
- 
-string r=s.substr(1);
-
-
-reverse(r);
-cout<<s[0];
-
+//reverse function logic using iterative method
+ string reverse( string s){
+  int i=0;
+  int j=s.length()-1;
+  while(i<j){
+   swap(s[i++],s[j--]);
+  }
+  return s;
  }
-
-
+//main driver code
 int main(){
 string a="sahil";
-reverse(a);
-
+string s=reverse(a);
+cout<<s;
     return 0;
 }

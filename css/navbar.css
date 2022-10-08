@@ -5,11 +5,12 @@ nav{
   background-color:var(--nav-color)
 }
 .navbar-nav{
-  width:100%
+  width:100%;
+  color: #dc143c;
 }
 .navbar-brand{
   line-height:1;
-  margin-right:1rem
+  margin-right:1.5rem
 }
 .navbar-brand svg{
   height:37px;

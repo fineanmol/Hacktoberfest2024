@@ -1987,7 +1987,13 @@ contributors = [
   },
   {
     id: 395,
+    fullname: "Dan Bradt",
+    username: "https://github.com/denschiro"
+  },
+  {
+    id: 396,
     fullname: "Rajat Singh",
     username: "https://github.com/Rajat009-Ra1",
   },
+   
 ];

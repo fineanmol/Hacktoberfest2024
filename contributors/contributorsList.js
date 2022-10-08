@@ -1965,7 +1965,14 @@ contributors = [
   },
   {
     id: 410,
+
+    fullname: "Vjelson Tuazonl",
+    username: "https://github.com/VJelson"
+
+  },{
+id: 411,
     fullname: "Isnani",
     username: "https://github.com/Isnani25",
   },
+
 ];

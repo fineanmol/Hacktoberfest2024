@@ -1,0 +1,9 @@
+---------
+Animated Profile Card UI design using html and css 
+
+->Its is a responsive profile card
+
+->At first, on the webpage, there is only an image with a round border-color. But when you hover on that card, then the height and width of the card smoothly expand and show the contents of the card.
+ 
+->Animated Profile Card that you can use as an ID and can share with anyone. It contains links for your social media accounts, and a bit about yourself.
+

@@ -1985,9 +1985,9 @@ contributors = [
     fullname: "Matvey Romanov",
     username: "https://github.com/ra1nbow1",
   },
-  {
+   {
     id: 395,
-    fullname: "sablea",
-    username: "https://github.com/sablea",
-  },
+    fullname: "Dan Bradt",
+    username: "https://github.com/denschiro"
+  }
 ];

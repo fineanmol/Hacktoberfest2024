@@ -1970,7 +1970,7 @@ contributors = [
   },
   {
     id: 390,
-    fullname: "Khush Sachdeva"
-    username: "https://github.com/khush3211",
+    fullname: "Khush Sachdeva",
+    username: "https://github.com/khush3211"
   },
 ];

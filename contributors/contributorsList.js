@@ -1987,6 +1987,7 @@ contributors = [
   },
 
 
+
   {
     id: 395,
     fullname: "Kanishka Panwar",
@@ -2008,7 +2009,12 @@ contributors = [
     username: "https://github.com/denschiro"
   },
   {
-    id: 396,
+
+    fullname: "Rajat Singh",
+    username: "https://github.com/Rajat009-Ra1",
+  },
+   
+
 
     fullname: "Akarshit Batra",
     username: "https://github.com/Akarshit7",
@@ -2035,7 +2041,6 @@ contributors = [
     fullname: "Vaibahv Aswal",
     username: "https://github.com/ShrutiMishra-2005"
   }
-
 
 
 ];

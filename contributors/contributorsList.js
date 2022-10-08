@@ -1985,4 +1985,54 @@ contributors = [
     fullname: "Matvey Romanov",
     username: "https://github.com/ra1nbow1",
   },
+
+
+  {
+    id: 395,
+    fullname: "Kanishka Panwar",
+    username: "https://github.com/kanishka-p1",
+  },
+
+
+
+  {
+    id: 395,
+    fullname: "Geonu Lim",
+    username: "https://github.com/rjsdn0124",
+  },
+
+   {
+
+    id: 395,
+    fullname: "Dan Bradt",
+    username: "https://github.com/denschiro"
+  },
+  {
+    id: 396,
+
+    fullname: "Abel Aditya Philipose",
+    username: "https://github.com/AbelAditya",
+  },
+
+    fullname: "Shruti Mishra",
+    username: "https://github.com/ShrutiMishra-2002"
+  },
+  {
+    id: 397,
+    fullname: "Hakim Madani",
+    username: "https://github.com/DVCone"
+  }
+  id: 397,
+    fullname: "SJayaditya Mishra",
+    username: "https://github.com/JayM2510"
+  }
+    {
+    id: 396,
+    fullname: "Vaibahv Aswal",
+    username: "https://github.com/ShrutiMishra-2005"
+  }
+
+
+
 ];
+

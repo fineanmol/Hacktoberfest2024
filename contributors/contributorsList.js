@@ -2004,10 +2004,17 @@ contributors = [
 
    {
 
+
     id: 395,
     fullname: "Dan Bradt",
     username: "https://github.com/denschiro"
   },
+
+  {
+    id: 396,
+    fullname: "Rishabh Bhardwaj",
+    username: "https://github.com/rbhardy"
+},
 
   {
     id: 396,
@@ -2043,7 +2050,9 @@ contributors = [
     id: 397,
     fullname: "Hakim Madani",
 
-  }
+
+  },
+  {
   id: 397,
     fullname: "SJayaditya Mishra",
     username: "https://github.com/JayM2510"

@@ -13,4 +13,4 @@ jobs:
        
 
           pullRequestOpened: |
-             @{{ author }} Please Star ⭐️ the repo to earn "**_hacktober-accepted_**" label for the event.
+             @{{ author }} Please Star ⭐️ the repo to earn "**_hacktober-accepted_**" label for the event..

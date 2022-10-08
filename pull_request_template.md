@@ -1,13 +1,12 @@
 
 
 # Problem
--
+- nothing
 # Solution
--
+- nothing
 
 ## Changes proposed in this Pull Request :
--  `1.`<!-- transform property added to box-item on hover -->
--  `..`
+-  `1.` add contributor in list
 
 ## Other changes
--
+- nothing

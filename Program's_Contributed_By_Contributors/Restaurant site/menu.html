@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hungry Hulk</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="calculate.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="navbar">
+            <img class="logo-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6SLuGqinTZMbdLWKfbdrkwD0FT7sQSH9Qwg&usqp=CAU">
+            <a class="name" href="#">Hungry Hulk</a>
+            <p style="font-style: italic; font-size: 20px;">The only thing we are serious is food</p>
+        </div>
+        <div class="options">
+            <a href="homepage.html">HOME</a>
+            <a href="menu.html">MENU</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+    </div>
+    <div class="menu-box">
+        <div class="menu">
+            <h1>The Menu</h1>
+        </div>
+        <div class="opt">
+        <a href="#pizza"><div class="pizz">Pizza</div></a>
+        <a href="#chinese"><div class="chine">Chinese</div></a>
+        <a href="#coffee"><div class="coffe">Coffee</div></a>
+        </div>
+        <div id="pizza" class="category-1">
+            <h1><b>Margherita</b><span class="pizza1">Rs. 250</span></h1>
+            <p>Fresh Tomatoes, fresh mozzarella, fresh basil</p>
+            <hr>
+            <h1><b>Formaggio</b><span class="pizza1">Rs. 300</span></h1>
+            <p>Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
+            <hr>
+            <h1><b>Paneer Pizza</b><span class="pizza1">Rs. 150</span></h1>
+            <p>Fresh paneer,fresh vegetables,tomatoes</p>
+        </div>
+        <h1 id="chinese" class="heading-1">Chinese</h1>
+        <div class="category-2">
+            <h1><b>Chowmein</b><span class="item">Rs. 50</span></h1>
+            <p>Fresh vegetables, fresh noodles, sauce</p>
+            <hr>
+            <h1><b>Chilli Potatoes</b><span class="item">Rs. 70</span></h1>
+            <p>Fresh Potatoes, red chilli</p>
+            <hr>
+            <h1><b>Momos (12 pieces)</b><span class="item">Rs. 40</span></h1>
+            <p>Fresh vegetables, Sauce, Mayonnaise</p>
+        </div>
+        <h1 id="coffee" class="heading-1">Coffee</h1>
+        <div class="category-2">
+            <h1><b>Hot Coffee</b><span class="item">Rs. 150</span></h1>
+            <p>Fresh coffee beans,Cinnamon</p>
+            <hr>
+            <h1><b>Cold Coffee</b><span class="item">Rs. 170</span></h1>
+            <p>Ice,Fresh coffe beans,butter</p>
+            <hr>
+            <h1><b>Latte</b><span class="item">Rs. 240</span></h1>
+            <p>Fresh milk,espresso coffee</p>
+        </div>
+       
+        
+    </div>
+    <form name="tblform" >
+        <table width="80%"  id="alignment" >
+        <tr>
+        <th>Food Item</th>
+        <th> </th>
+        <th>Quantity</th>
+        <th>Price</th> 
+        </tr>
+        <tr> 
+        <td>Pizza:</td> 
+        <td>
+        <select id="item1">
+        <option value="1">--Select Item--</option> 
+        <option value="Margherita">Margherita</option> 
+        <option value="Formaggio">Formaggio</option> 
+        <option value="Paneer Pizza">Paneer Pizza</option>  
+        </select>
+        </td> 
+        <td><input type="number" value="0" id="q1"></td>
+        <td><input type="text" id="p1"></td>
+        </tr>   
+        <tr>
+        <td>Chinese:</td>
+        <td>
+        <select id="item2"> 
+        <option value="1">--Select Item--</option> 
+        <option value="Chowmein">Chowmein</option> 
+        <option value="Chilli Potatoes">Chilli Potatoes</option> 
+        <option value="Momos (12 pieces)">Momos (12 pieces)</option>    
+        </select>
+        </td>
+        <td><input  type="number" value="0" id="q2"></td>  
+        <td><input type="text"  id="p2"></td>  
+        </tr> 
+        <tr>
+        <td>Coffee:</td>
+        <td><select id="item3">  
+        <option value="1">--Select Item--</option> 
+        <option value="Hot Coffee">Hot Coffee</option>  
+        <option value="Cold Coffee">Cold Coffee</option> 
+        <option value="Latte">Latte</option> 
+        </select>
+        </td>
+        <td><input type="number" value="0" id="q3"></td>
+        <td><input type="text"  id="p3"></td> 
+        </tr>    
+        <tr>
+        <td></td> 
+        <td></td> 
+        <td><input type="submit" class="button" value="Create Bill" onclick=createBill()></td>
+        <td><input type="reset" class="button" value="Clear"></td>
+        </tr>
+        </table>
+    </form>
+    <h1>Pay Here</h1>
+    <img src="data:image/png;base64,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">
+    <div class="footer">
+        <h3> &copy Copyright-2022</h3>
+        <h3> Website created and designed by Abhishek Pandey</h3>
+       <div class="social">
+           <a class="instagram" href="https://www.instagram.com/invites/contact/?i=8ov46xvjhf7t&utm_content=kkzbokg"></a>
+           <a class="facebook" href="https://www.facebook.com/profile.php?id=100068065698448"></a>
+        </div>
+
+    </div>
+     
+</body>
+</html>

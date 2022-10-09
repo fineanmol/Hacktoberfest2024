@@ -1951,9 +1951,8 @@ contributors = [
   {
     id: 387,
     fullname: "Vaibahv Aswal",
-    username: "https://github.com/ShrutiMishra-2005"
-
-  }
+    username: "https://github.com/ShrutiMishra-2005",
+  },
   {
     id: 388,
     fullname: "Samarjeet Singh Gandhi",
@@ -1969,12 +1968,16 @@ contributors = [
     id: 410,
 
     fullname: "Vjelson Tuazonl",
-    username: "https://github.com/VJelson"
-
-  },{
-id: 411,
+    username: "https://github.com/VJelson",
+  },
+  {
+    id: 411,
     fullname: "Isnani",
     username: "https://github.com/Isnani25",
   },
-
+  {
+    id: 412,
+    fullname: "SarinSthapit",
+    username: "https://github.com/SarinSthapit",
+  },
 ];

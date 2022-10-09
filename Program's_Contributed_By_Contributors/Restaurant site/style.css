@@ -1,0 +1,330 @@
+body{
+    margin: 0;
+}       
+.header{
+   padding: 20px 20px 40px 20px;
+   background-color: #0D2A79;
+   color: white;
+}
+.logo-image{
+   width: 100px;
+   height: 100px;
+   float: left;
+}
+.name{
+   font-size: 40px;
+   color: #A76502;
+   font-weight: bold;
+   padding: 15px ;
+}
+.navbar a{
+   text-decoration: none;
+}
+.options{
+   float: right;
+   color: #060E22;
+}
+.options a{
+   text-decoration: none;
+   color: #A76502;
+   font-weight: bold;
+   padding: 5px;
+   font-size: 25px;
+}
+.options a:hover{
+   background-color: white;
+}
+.container{
+   display: flex;
+   flex-wrap: wrap;
+   position: relative;
+}
+.order-button{
+margin: 0;
+ position: absolute;
+ top: 60%;
+ left: 61%;
+ -ms-transform: translateY(-50%);
+ transform: translateY(-50%);
+}
+.book-button{
+ margin: 0;
+ position: absolute;
+ top: 50%;
+ left: 61%;
+ -ms-transform: translateY(-50%);
+ transform: translateY(-50%);
+
+}
+
+.left{
+   padding: 8px;
+   flex: 40%;
+   background-color: white;
+}
+.right{
+   flex: 60%;
+   padding: 5px;
+   background-color: #E0A54D;
+}
+.right h1{
+   font-size: 80px;
+   font-weight: bold;
+   text-align: center;
+}
+.right p{
+   text-align: center;
+   font-size: 30px;
+}
+@media screen and (max-width: 700px) {
+ .container {
+   flex-direction: column;
+ }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+ .navbar a {
+   float: none;
+   width: 100%;
+ }
+ .container {
+   flex-direction: column;
+
+ }
+ 
+}
+.footer{
+   padding: 10px;
+   display: block;
+   background-color: #060E22;
+   flex: 100%;
+}
+.footer h3{
+   color: white;
+   text-align: center;
+}
+*{
+   box-sizing: border-box;
+}
+.order-button{
+   width: 20% ;
+   color: white;
+   text-align: center;
+   background-color: black;
+   font-size: 20px;
+   font-weight: bold;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   padding: 10px;
+   cursor:grab;
+   border-radius: 12px;
+   display: block;
+   border: 2px solid yellow;
+}
+.right a{
+   text-decoration: none;
+}
+.right button:hover{
+   background-color: green;
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+.book-button{
+   width: 20% ;
+   color: white;
+   text-align: center;
+   background-color: black;
+   font-size: 20px;
+   font-weight: bold;
+   padding: 10px;
+   cursor:grab;
+   border-radius: 12px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   border: 2px solid yellow;
+}
+.social{
+   float: right;
+   padding: 20px;
+ font-size: 30px;
+ width: 30px;
+ text-align: center;
+ text-decoration: none;
+ margin: 5px 2px;
+ border-radius: 50%;
+}
+.instagram{
+   background: green;
+ color: white;
+}
+.about{
+    display: block;
+   
+}
+.about h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #A76502;
+}
+.img1{
+    float: left;
+}
+.container{
+    background-color:#E0A54D;
+}
+.container p{
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+.contact{
+    display: block;
+}
+.contact h1{
+    text-align: center;
+    color: #A76502;
+    font-size: 30px;
+    font-weight: bold;
+}
+.intro{
+    flex: 40%;
+    
+}
+.intro img{
+    border: 5px solid #eb4d4b;
+}
+.intro a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #0D2A79;
+    font-weight: bold;
+}
+.chat-box{
+    flex: 60%;
+}
+.chat-box h2{
+    text-align: center;
+}
+/*contact*/
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+input[type=text],select,textarea{
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: 2px solid black;
+    resize: vertical;
+    padding: 10px;
+}
+input[type=number]{
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: 2px solid black;
+}
+input[type=datetime-local]{
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: 2px solid black;
+}
+label{
+    display: inline-block;
+    padding: 6px;
+}
+input[type=submit]{
+    padding: 3px;
+    background-color: #20bf6b;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+input[type=submit]:hover{
+    background-color: #4cd137 ;
+}
+.col-25{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    width: 25%;
+    float: left;
+    margin-top: 6px;
+}
+.col-75{
+    float: left;
+    margin-top: 6px;
+    width: 75%;
+}
+.chat-box{
+    background-color:#f6e58d;
+    padding: 20px;
+}
+@media screen and (max-width: 700px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  /* menu */
+  .menu{
+      text-align: center;
+      color: #A76502;
+  }
+  .opt{
+      display: flex;
+  }
+  .opt a{
+      text-decoration: none;
+      width: 33.4%;
+      padding: 15px;
+      background-color:#E0A54D;
+      border: 3px solid black;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 25px;
+  }
+  .opt a:hover{
+      background-color: #A76502;
+  }
+  .heading-1{
+      text-align: center;
+      background-color:#060E22;
+      color: white;
+  }
+  .item ,.pizza1{
+      float: right;
+  }
+  .category-1 p{
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+  .category-1,.category-2{
+      background-color: #fad390;
+  }
+  .category-2 p{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  @media screen and (max-width: 700px){
+      .opt a{
+         width: 100%;
+      }
+     
+  }
+  @media screen and (max-width: 400px){
+    .opt a{
+       width: 100%;
+    }
+   
+}

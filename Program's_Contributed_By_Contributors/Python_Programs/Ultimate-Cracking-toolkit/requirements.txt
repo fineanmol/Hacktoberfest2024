@@ -1,0 +1,5 @@
+pikepdf
+tqdm
+pathlib
+hashlib
+zipfile

@@ -2,7 +2,7 @@
 Coded By Bishal Aryal \
 Twitter @C15C01337 
 
-# Tools available:
+# Tools availables:
 1.Dictionary Generator \
 2.Pdf Cracker \
 3.Zip Cracker \

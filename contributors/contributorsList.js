@@ -1979,6 +1979,6 @@ contributors = [
     id: 412,
     fullname:"Ameer Wajid Ali",
     username: "github.com/ameer-w-ali",
-  }
+  },
 
 ];

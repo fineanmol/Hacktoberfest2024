@@ -1,6 +1,11 @@
 contributors = [
   {
     id: 1,
+    fullname: "David Gillick",
+    username: "https://github.com/VertexAssassins",
+  },
+  {
+    id: 1,
     fullname: "Anmol Agarwal",
     username: "https://github.com/fineanmol",
   },

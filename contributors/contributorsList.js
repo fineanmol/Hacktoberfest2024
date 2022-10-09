@@ -1967,14 +1967,17 @@ contributors = [
 
   {
     id: 410,
-
     fullname: "Vjelson Tuazonl",
     username: "https://github.com/VJelson"
 
   },{
-id: 411,
+    id: 411,
     fullname: "Isnani",
     username: "https://github.com/Isnani25",
   },
-
+  {
+    id: 412,
+    fullname: "Rohit Kanojiya",
+    username: "https://github.com/rohit010pro",
+  }
 ];

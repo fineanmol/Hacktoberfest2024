@@ -1953,7 +1953,7 @@ contributors = [
     fullname: "Vaibahv Aswal",
     username: "https://github.com/ShrutiMishra-2005"
 
-  }
+  },
   {
     id: 388,
     fullname: "Samarjeet Singh Gandhi",
@@ -1964,7 +1964,11 @@ contributors = [
     fullname: "Shubham Rawat",
     username: "https://github.com/shubhamrawat090",
   },
-
+  {
+    id: 390,
+    fullname: "Ritika Dhamija",
+    username: "https://github.com/rit-clone",
+  },
   {
     id: 410,
 

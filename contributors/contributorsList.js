@@ -1989,4 +1989,9 @@ contributors = [
     fullname: "David Gillick",
     username: "https://github.com/VertexAssassins",
   },
+  {
+    id: 415,
+    fullname: "Vatsal K",
+    username: "https://github.com/vatsalkudecha",
+  },
 ];

@@ -1971,10 +1971,16 @@ contributors = [
     fullname: "Vjelson Tuazonl",
     username: "https://github.com/VJelson"
 
-  },{
+  },
+{
 id: 411,
     fullname: "Isnani",
     username: "https://github.com/Isnani25",
   },
+  {
+    id: 389,
+    fullname: "Maciej Kisielewicz",
+    username: "https://github.com/Kisielos10",
+  }
 
 ];

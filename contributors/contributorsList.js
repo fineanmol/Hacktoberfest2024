@@ -1,11 +1,6 @@
 contributors = [
   {
     id: 1,
-    fullname: "David Gillick",
-    username: "https://github.com/VertexAssassins",
-  },
-  {
-    id: 1,
     fullname: "Anmol Agarwal",
     username: "https://github.com/fineanmol",
   },
@@ -1935,7 +1930,6 @@ contributors = [
   },
   {
     id: 383,
-
     fullname: "Abel Aditya Philipose",
     username: "https://github.com/AbelAditya",
   },
@@ -1979,15 +1973,20 @@ contributors = [
     id: 411,
     fullname: "Isnani",
     username: "https://github.com/Isnani25",
-  }, 
-{
-  id: 412,
+  },
+  {
+    id: 412,
     fullname: "Garima Jain",
     username: "https://github.com/garimajain12",
   },
   {
-    id: 412,
+    id: 413,
     fullname: "Niraj Pradhan",
     username: "https://github.com/nirajpdn",
+  },
+  {
+    id: 414,
+    fullname: "David Gillick",
+    username: "https://github.com/VertexAssassins",
   },
 ];

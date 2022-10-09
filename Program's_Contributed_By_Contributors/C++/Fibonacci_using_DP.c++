@@ -1,26 +1,33 @@
-#include<bits/stdc++.h>
-
+#include <bits/stdc++.h>
 using namespace std;
-
-int fib(int n){
-    int prev = 0, cur = 1, c, i;
-    if(n == 0)  return prev;
-    if(n == 1)  return cur;
-    
-    for(i = 2; i <= n; i++){
-       c = prev + cur;
-       prev = cur;
-       cur = c;
-    }
-    return cur;
-}
-
-int main(){
-    int n;  cin>>n;
-    int res = fib(n);
-    cout<<"N-th Fibonacci Number: "<<res<<endl;
+const int N=1e+5;
+int dp[N];
+static int c=0;
+unsigned long long int fib( unsigned long long int  n)
+{
+    if(n==1)
     return 0;
-}
+     if(n==2)
+         return 1;
+    if(dp[n]!=-1){
+        c++;
+    return dp[n];
+    }
 
-// Time Complexity: O(n) 
-// Extra Space: O(1)
+    else
+    return  dp[n]= fib(n-1)+fib(n-2);
+}
+int main()
+{
+    memset(dp,-1,sizeof(dp));
+    fib(20);
+cout<<"NUmber of overlapping subproblems "<<c;
+    // const int n=70;
+    // cout<<"Fibonacci series upto 70 terms"<<endl;
+    // for(int i=1;i<=70;i++)
+    // cout<<fib(i)<<" ";
+    
+    
+    return 0;
+    
+}

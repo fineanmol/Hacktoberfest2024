@@ -1,4 +1,7 @@
-import nmap
+try:
+    import nmap
+except ImportError:
+    raise ImportError('Try: pip install python-nmap')
 # initialize the port scanner
 nmScan = nmap.PortScanner()
 

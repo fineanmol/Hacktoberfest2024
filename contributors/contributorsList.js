@@ -1953,7 +1953,7 @@ contributors = [
     fullname: "Vaibahv Aswal",
     username: "https://github.com/ShrutiMishra-2005"
 
-  }
+  },
   {
     id: 388,
     fullname: "Samarjeet Singh Gandhi",
@@ -1971,10 +1971,16 @@ contributors = [
     fullname: "Vjelson Tuazonl",
     username: "https://github.com/VJelson"
 
-  },{
-id: 411,
+  },
+  {
+    id: 411,
     fullname: "Isnani",
     username: "https://github.com/Isnani25",
   },
+  {
+    id: 412,
+    fullname: "Yuvraj Singh",
+    username: "https://github.com/yuvraj-2503",
+  }
 
 ];

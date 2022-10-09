@@ -4,6 +4,7 @@ contributors = [
     fullname: "Anmol Agarwal",
     username: "https://github.com/fineanmol",
   },
+  
   {
     id: 2,
     fullname: "Amitava Mitra",
@@ -1975,6 +1976,11 @@ contributors = [
 id: 411,
     fullname: "Isnani",
     username: "https://github.com/Isnani25",
+  },
+    {
+    id: 441,
+    fullname: "Parth Panjwani",
+    username: "https://github.com/Parth-Panjwani",
   },
 
 ];

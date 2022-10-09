@@ -1984,9 +1984,14 @@ contributors = [
     fullname: "Niraj Pradhan",
     username: "https://github.com/nirajpdn",
   },
-  {
+    {
     id: 414,
     fullname: "David Gillick",
     username: "https://github.com/VertexAssassins",
-  },
+  },{
+    id: 415,
+    fullname: "Abhinav Singh",
+    username: "https://github.com/Abhi16DTU",
+    },
+  
 ];

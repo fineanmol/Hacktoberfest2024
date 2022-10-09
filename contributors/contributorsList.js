@@ -1962,7 +1962,6 @@ contributors = [
     fullname: "Shubham Rawat",
     username: "https://github.com/shubhamrawat090",
   },
-
   {
     id: 410,
 
@@ -1988,5 +1987,10 @@ contributors = [
     id: 414,
     fullname: "David Gillick",
     username: "https://github.com/VertexAssassins",
+  },
+  {
+    id: 420,
+    fullname: "R Dewangga Risang Aji",
+    username: "https://github.com/rusagaib",
   },
 ];

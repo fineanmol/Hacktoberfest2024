@@ -9,11 +9,10 @@ try:
     # sys.argv module begin with index 0, 1, 2 ... n 
     # example: ~$ python resize_img.py name-image.png 200 300 
     # which mean index orders:
-    # 0 = python
-    # 1 = resize_img.py
-    # 2 = name-image.png
-    # 3 = 200 
-    # 4 = 300
+    # 0 = resize_img.py
+    # 1 = name-image.png
+    # 2 = 200 
+    # 3 = 300
     arg1 = sys.argv[1]
     new_width = int(sys.argv[2])
     new_height = int(sys.argv[3])

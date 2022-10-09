@@ -5,7 +5,7 @@ contributors = [
     username: "https://github.com/fineanmol",
   },
   {
-    id: 2,
+    id: 2 ,
     fullname: "Amitava Mitra",
     username: "https://github.com/Amitava123",
   },

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photo album</title>
+  
+</head>
+<body>
+    <div class="gallery">
+        <img src="love.webp" alt="a lovely kiss in the night">
+        <img src="dog and women.jpg" alt="a women inside a car">
+        <img src="baby.webp" alt="a baby">
+        <img src="girl.jpg" alt="a girl in the forest">
+        <img src="father and son.jpg" alt="a girl">
+        <img src="5.webp" alt="fair">
+      </div>
+      <style>
+        /* number of images*/
+.gallery {
+    --d: 10s;
+    /* duration */
+    display: grid;
+    width: 220px;
+  }
+  
+  .gallery > img {
+    grid-area: 1/1;
+    width: 140%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 10px solid #f2f2f2;
+    box-shadow: 0 0 4px #0007;
+    animation: slide var(--d) infinite;
+  }
+  
+  .gallery img:last-child {
+    animation-name: slide-last;
+  }
+  
+  .gallery > img:nth-child(1) {
+    animation-delay: calc(0*var(--d));
+    --r: -10deg;
+  }
+  
+  .gallery > img:nth-child(2) {
+    animation-delay: calc(-0.2*var(--d));
+    --r: 19deg;
+  }
+  
+  .gallery > img:nth-child(3) {
+    animation-delay: calc(-0.4*var(--d));
+    --r: -19deg;
+  }
+  
+  .gallery > img:nth-child(4) {
+    animation-delay: calc(-0.6*var(--d));
+    --r: 9deg;
+  }
+  
+  .gallery > img:nth-child(5) {
+    animation-delay: calc(-0.8*var(--d));
+    --r: 8deg;
+  }
+  
+  @keyframes slide {
+    0%, 100%, 80.01% {
+      transform: translateX(0%) rotate(var(--r));
+      z-index: 3;
+    }
+    10% {
+      transform: translateX(120%) rotate(var(--r));
+      z-index: 3;
+    }
+    10.01% {
+      transform: translateX(120%) rotate(var(--r));
+      z-index: -3;
+    }
+    20%, 80% {
+      transform: translateX(0%) rotate(var(--r));
+      z-index: -3;
+    }
+  }
+  @keyframes slide-last {
+    0%, 100%, 90.01% {
+      transform: translateX(0%) rotate(var(--r));
+      z-index: 3;
+    }
+    10% {
+      transform: translateX(120%) rotate(var(--r));
+      z-index: 3;
+    }
+    10.01% {
+      transform: translateX(120%) rotate(var(--r));
+      z-index: -3;
+    }
+    20%, 90% {
+      transform: translateX(0%) rotate(var(--r));
+      z-index: -3;
+    }
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background: #CDB380;
+    overflow: hidden;
+  }
+      </style>
+</body>
+</html>

@@ -1964,17 +1964,19 @@ contributors = [
     fullname: "Shubham Rawat",
     username: "https://github.com/shubhamrawat090",
   },
-
   {
     id: 410,
-
     fullname: "Vjelson Tuazonl",
     username: "https://github.com/VJelson"
-
-  },{
-id: 411,
+  },
+  {
+    id: 411,
     fullname: "Isnani",
     username: "https://github.com/Isnani25",
   },
-
+  {
+    id: 801,
+    fullname: "Karthik Lal",
+    username: "https://github.com/karthik558",
+  },
 ];

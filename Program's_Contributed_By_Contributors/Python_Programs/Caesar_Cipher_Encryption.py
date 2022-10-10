@@ -1,5 +1,5 @@
 #caesar cipher encryption | Twitter @C15C01337
-
+# new added
 message = input('Enter a message: ')
 key = int(input('Enter a key: '))
 def encrypt_char(char, key):

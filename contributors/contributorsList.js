@@ -4,6 +4,7 @@ contributors = [
     fullname: "Anmol Agarwal",
     username: "https://github.com/fineanmol",
   },
+  
   {
     id: 2,
     fullname: "Amitava Mitra",
@@ -1979,6 +1980,14 @@ contributors = [
     fullname: "Isnani",
     username: "https://github.com/Isnani25",
   },
+
+    {
+    id: 441,
+    fullname: "Parth Panjwani",
+    username: "https://github.com/Parth-Panjwani",
+  },
+
+
   {
     id: 412,
     fullname: "Garima Jain",
@@ -2008,9 +2017,11 @@ contributors = [
     fullname: "Krish Katyal",
     username: "https://github.com/krishkatyal",
   },
+
   {
     id: 418,
     fullname: "Arshpreet Singh Bedi",
     username: "https://github.com/avibedi1768",
   },
+
 ];

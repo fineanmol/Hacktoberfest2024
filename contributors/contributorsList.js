@@ -1819,6 +1819,12 @@ contributors = [
     username: "https://github.com/sabin-thapa",
   },
   {
+
+    id: 373,
+    fullname: "Anurag Pandey",
+    username: "https://github.com/eagleanurag/",
+  },
+  {
     id: 361,
     fullname: "Kenny",
     username: "https://github.com/KennyAwesome",
@@ -2023,5 +2029,6 @@ contributors = [
     fullname: "Arshpreet Singh Bedi",
     username: "https://github.com/avibedi1768",
   },
+
 
 ];

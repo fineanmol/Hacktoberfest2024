@@ -2001,7 +2001,7 @@ contributors = [
   },
   {
 id: 417,
-    fullname: "Evander Siregar",
+    fullname: "Actias Luna",
     username: "https://github.com/egocider",
   },
 ];

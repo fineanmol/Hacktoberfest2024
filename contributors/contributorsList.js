@@ -1999,6 +1999,11 @@ contributors = [
     fullname: "Alejandro Armenta",
     username: "https://github.com/alexanderNWO",
   },
+  {
+    id: 417,
+    fullname: "Nitish Pal",
+    username: "https://github.com/Nitishpal68",
+  },
 ];
  id: 415,
     fullname: "Krish Katyal",

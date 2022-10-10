@@ -138,6 +138,12 @@ footer {
 .socials a:hover i {
   color: aqua;
 }
+.socials a:hover.insta i {
+  color: rgb(190, 19, 110);
+}
+.socials a:hover.yt i {
+  color: rgb(190, 19, 19);
+}
 
 .footer-bottom {
   position: absolute;

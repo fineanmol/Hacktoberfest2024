@@ -1,3 +1,6 @@
 *.iml
 .git/objects/
 .DS_Store
+*.idea*
+.github
+*.github/

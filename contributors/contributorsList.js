@@ -1991,7 +1991,7 @@ contributors = [
   },
   {
     id: 415,
-    fullname: "Tanya Ahuja",
+fullname: "Tanya Ahuja",
     username: "https://github.com/Tanya401",
-  },
-];
+    },
+    ];

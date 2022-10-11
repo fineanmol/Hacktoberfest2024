@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seach functionality by Abhisek730</title>
+    <!------------------------------- Css ------------------------->
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+      #searchBar {
+        width: 70%;
+        margin: 10px 15%;
+        padding: 10px;
+        border-radius: 10px;
+        background: none;
+        border: 2px solid white;
+        color: white;
+        font-weight: bold;
+        font-size: 1rem;
+        letter-spacing: 1px;
+      }
+
+      #List {
+        margin-left: 10%;
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <!-------------------------------- html ------------------------->
+  <body>
+    <input
+      type="text"
+      onkeyup="searchFunction()"
+      id="searchBar"
+      name="search"
+      placeholder="Search college..."
+    />
+
+    <!-- Order List -->
+    <ol id="List"></ol>
+
+    <!------------------ javascript -------------------->
+    <script>
+      var data;
+      var List = document.getElementById("List");
+      // fetching data to display as list
+      async function fetchData() {
+        const response = await fetch(
+          "http://universities.hipolabs.com/search?country=India"
+        );
+        data = await response.json();
+        console.log(data);
+        createRows(data);
+      }
+
+      fetchData();
+
+      // To create data rows
+      function createRows(data) {
+        console.log(data);
+        data.map((college) => {
+          console.log(college);
+          const li = document.createElement("li");
+          li.classList.add("college-name");
+          li.textContent = college.name;
+          List.appendChild(li);
+        });
+      }
+
+      // main search functionality
+      function searchFunction() {
+        var input = document.getElementById("searchBar").value;
+        input = input.toLowerCase();
+        console.log(input);
+        var collegeArray = document.getElementsByClassName("college-name");
+        console.log(collegeArray);
+
+        for (i = 0; i < collegeArray.length; i++) {
+          if (collegeArray[i].innerHTML.toLowerCase().includes(input)) {
+            collegeArray[i].style.display = "list-item";
+          } else {
+            collegeArray[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

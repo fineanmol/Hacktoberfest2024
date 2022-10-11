@@ -1,0 +1,24 @@
+import java.util.Iterator;
+import java.util.LinkedList;
+
+public class LinkedListDemo {
+	
+	public static void main(String aa[]) {
+		LinkedList<String> list=new LinkedList<String>();
+		
+		list.add("himanshu");
+		list.add("ajay");
+		list.add("mukesh");
+		list.add("himanshu");
+		list.add("ajay");
+		list.add("mukesh");
+		
+		
+		Iterator it=list.iterator();
+		
+		while(it.hasNext()) {
+			System.out.println(it.next());
+		}
+	}
+
+}

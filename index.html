@@ -115,7 +115,7 @@
                 id="Layer_1" x="0px" y="0px" viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;"
                 xml:space="preserve" role="img" aria-labelledby="dyn2wm4vin1xgraye3ggy9kf12oaz8a" class="header__logo"
                 width="50px" height="50px">
-                <title id="dyn2wm4vin1xgraye3ggy9kf12oaz8a">Hacktoberfest</title>
+                <title id="dyn2wm4vin1xgraye3ggy9kf12oaz8a">Hacktoberfest 2022</title>
                 <path class="st0"
                     d="M0.7,0.7v298.7h298.7V0.7H0.7z M197.8,271.4l-32-32v-95.6l-31.4,31.4v79l-17.3,17.3L99.8,254V70.4L95,65.6  L73,87.7L61.7,76.5l47.8-47.8l0.1,0.1l0,0l1.9,1.8l22.8,22.8V136l31.4-31.4V70.2L150,54.4l25.8-25.8l24.7,24.7v169.1l12.1,12.1  l14.7-14.7l11.1,11.1L197.8,271.4z">
                 </path>
@@ -163,8 +163,12 @@
     </div>
     <!-- Please maintain the alignment... -->
     <div class="box mx-auto my-5 justify-content-center" id="box">
+
         <a data-aos="zoom-in-down" class="btn btn-outline-secondary btn-lg load-more" onclick="loadMore()" id="loadMore">
             <u id="Loading">Load More</u></a>
+
+        <a data-aos="zoom-in-down" class="btn btn-outline-secondary btn-lg load-more" id="loadMore"><u>Load More</u></a>
+
     </div>
     </div>
     </div>
@@ -181,11 +185,11 @@
            
             <div class="footer-menu">
             <ul class="socials">
-                <li><a href="https://www.facebook.com/fineanmol"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="https://twitter.com/fineanmol"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://www.instagram.com/fineanmol"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="https://www.instagram.com/fineanmol"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/fineanmol/"><i class="fa fa-linkedin-square"></i></a></li>
+                <li><a href="https://www.facebook.com/fineanmol" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/fineanmol" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/fineanmol" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.instagram.com/fineanmol" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/fineanmol/" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
             </ul>
             </div>
         </div>
@@ -257,6 +261,9 @@
                 
             }
         }
+
+		const loadMoreBtn = document.getElementById("loadMore")
+		loadMoreBtn.addEventListener("click", loadMore)
 
 
         document.querySelectorAll('a.box-item').forEach(con => {

@@ -1968,16 +1968,23 @@ contributors = [
     id: 389,
     fullname: "Shubham Rawat",
     username: "https://github.com/shubhamrawat090",
-
   },
   {  id: 390,
     fullname: "Shivam Sisodia",
     username: "https://github.com/shivamsisodia07",
   },
-
+  {
+    id: 390,
+    fullname: "suraj keshari",
+    username: "https://github.com/surajkeshari"
+  },
+  {
+    id: 391,
+    fullname: "Rohan Das",
+    username: "https://github.com/rohan26062001"
+  },
   {
     id: 410,
-
     fullname: "Vjelson Tuazonl",
     username: "https://github.com/VJelson",
   },
@@ -1986,14 +1993,11 @@ contributors = [
     fullname: "Isnani",
     username: "https://github.com/Isnani25",
   },
-
-    {
+  {
     id: 441,
     fullname: "Parth Panjwani",
     username: "https://github.com/Parth-Panjwani",
   },
-
-
   {
     id: 412,
     fullname: "Garima Jain",
@@ -2023,12 +2027,14 @@ contributors = [
     fullname: "Krish Katyal",
     username: "https://github.com/krishkatyal",
   },
-
   {
     id: 418,
     fullname: "Arshpreet Singh Bedi",
     username: "https://github.com/avibedi1768",
   },
-
-
+  {
+    id: 419,
+    fullname: "Damian Teske",
+    username: "https://github.com/DamianT7",
+  },
 ];

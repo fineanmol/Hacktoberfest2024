@@ -1627,13 +1627,11 @@ contributors = [
     fullname: "Dicky",
     username: "https://github.com/dickytrianza",
   },
-
   {
     id: 326,
     fullname: "Srinjoy Pati",
     username: "https://github.com/srinjoy-26",
   },
-
   {
     id: 327,
     fullname: "Rajpreet Kaur",
@@ -1645,7 +1643,6 @@ contributors = [
     fullname: "Bhumit",
     username: "https://github.com/BhumitRohilla",
   },
-
   {
     id: 329,
     fullname: "d-coder111",
@@ -1929,7 +1926,6 @@ contributors = [
     fullname: "Rajat Singh",
     username: "https://github.com/Rajat009-Ra1",
   },
-
   {
     id: 382,
     fullname: "Akarshit Batra",
@@ -1974,7 +1970,6 @@ contributors = [
     fullname: "Shivam Sisodia",
     username: "https://github.com/shivamsisodia07",
   },
-
   {
     id: 410,
 
@@ -1986,14 +1981,11 @@ contributors = [
     fullname: "Isnani",
     username: "https://github.com/Isnani25",
   },
-
-    {
+  {
     id: 441,
     fullname: "Parth Panjwani",
     username: "https://github.com/Parth-Panjwani",
   },
-
-
   {
     id: 412,
     fullname: "Garima Jain",

@@ -2033,7 +2033,7 @@ contributors = [
     {
       id: 419,
       fullname: "Ritesh Mohan,
-      username: "https://github.com/RiteshMohan186"
+      username: "https://github.com/RiteshMohan186",
     },
 
 

@@ -17,6 +17,23 @@ P.S. Star ⭐ and Share this repository, if you had fun!! 😍
 Hacktoberfest 2022
 ![Event Completed](/scripts/Event_Completed_.png)
 
+<h3>fineanmol helps students to start their open source journey.Fineanmol focuses on begginer-friendly contributions</h3>
+<h1>Website</h1>
+https://fineanmol.github.io/Hacktoberfest2022/
+
+<h2>Screenshots</h2>
+<h3>Fineanmol list the all Contributors</h3>
+
+>Interface of the Fineanmol website in dark mode
+
+<img width="925" alt="image" src="https://user-images.githubusercontent.com/114678694/195136604-f4c16214-0ae2-41a7-b4c7-d23b8fd3adfb.png">
+
+>Interface of the website in light mode
+
+![image](https://user-images.githubusercontent.com/114678694/195137837-90e0aaf8-8a86-474e-917e-3d485a770c05.png)
+
+
+
 # 📌 Videos 📽️:
 
 - [Hacktoberfest Intro](https://www.youtube.com/watch?v=mq_FIHdxmIk)

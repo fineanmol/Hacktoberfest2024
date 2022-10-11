@@ -1,0 +1,30 @@
+abstract class MyClass{
+  
+  abstract void calculate(int x);
+
+}
+
+class Square extends MyClass{
+
+  public void calculate(int x){
+    System.out.println("Square = "+(x*x));
+  }
+  
+
+}
+
+class Cube extends MyClass{
+
+  void calculate(int x){
+    System.out.println("Cube = "+(x*x*x));
+  }
+
+}
+
+class SquareRoot extends MyClass{
+
+  void calculate(int x){
+    System.out.println("SquareRoot = "+Math.sqrt(x));
+  }
+
+}

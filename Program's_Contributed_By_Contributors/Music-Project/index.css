@@ -1,0 +1,97 @@
+body{
+    background-color: #f7f7f7;
+    font-family: Open sans;
+}
+
+img{
+    width: 100%;
+    min-height: 250px;
+}
+
+.main{
+    padding: 40px 0;
+}
+
+.col-md-3{
+    margin-bottom: 40px;
+}
+
+.album-poster{
+    position: relative;
+    display: block;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px #3d2173a1;
+    transition: all ease 0.4s;
+}
+
+.album-poster:hover{
+    box-shadow: none;
+    transform: scale(0.98) translateY(5px);
+}
+  
+h3{
+    font-size: 34px;
+    margin-bottom: 34px;
+    border-bottom: 4px solid #e6e6e6;
+    padding-bottom: 15px;
+}
+  
+p{
+    font-size: 15px; 
+}
+  
+h4{
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    font-weight: 700;
+}
+  
+#aplayer{
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    box-shadow: 0 -2px 2px #dadada;
+    background-color: #fff;
+    transition: all ease 0.5s;
+}
+
+#aplayer.showPlayer{
+    bottom: 0;
+}
+
+/*Customizing music player*/
+span{
+    color: #000 !important;
+    font-size: 16px;
+}
+
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
+    background: #e0e0e0;
+    height: 4px;
+}
+
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played {
+    height: 4px;
+    background-color: #2196f3 !important;
+}
+
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb {
+    background-color: #2196f3 !important;
+}
+
+.aplayer .aplayer-icon{
+    width: 20px;
+    height: 20px;
+}
+
+.aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path {
+    fill: #000;
+}
+      
+.aplayer .aplayer-info .aplayer-music {
+    margin-bottom: 5px;
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sea-mod Sign in</title>
+</head>
+
+<body>
+  <h4>Sign in</h4>
+  <form action="" method="post">
+    <input type="text" id="firstname" name="firstname" class="form-control" placeholder="Firstname">
+    <input type="text" id="surname" name="surname" class="form-control" placeholder="Surname"><br>
+    <input type="text" id="username" name="username" class="form-control" placeholder="Username">
+    <input type="password" id="password" name="password" class="form-control" placeholder="Password"><br>
+    <input type="email" id="email" name="email" class="form-control" placeholder="E-mail"><br>
+    <input type="date" id="birthday" name="birthday">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <center>If you have an account<a href="LOGIN.html" target="_blank">Log In</a> </center>
+  <script>
+    const form = document.getElementById('regis')
+    form.addEventListener('submit', register)
+    async function register(event) {
+      event.preventDefault()
+      const firstname = document.getElementById('firstname')
+      const surname = document.getElementById('surname')
+      const username = document.getElementById('username')
+      const password = document.getElementById('password')
+      const email = document.getElementById('email')
+      const date = document.getElementById('date')
+      const result = await fetch('/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+
+        },
+        bodsy: JSON.stringify({
+          firstname,
+          surname,
+          username,
+          password,
+          email,
+          date
+        })
+      }).then((res) => res.json)
+    }
+    fs.writeFile('user.json', data, (err) => {
+      if (err) {
+        throw err;
+      }
+      console.log("JSON data is saved.");
+    });
+  </script>
+</body>
+
+</html>

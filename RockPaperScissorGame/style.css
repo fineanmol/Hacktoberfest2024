@@ -1,0 +1,72 @@
+body{
+    background-color: #ffe3db;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+}
+#img1{
+    padding-top: 40px;
+    margin-left: 336px;
+    transform: rotateY(200deg);
+}
+#img2{
+    position: absolute;
+    top: 20%;
+    left: 52%;
+    padding-top: 30px;
+}
+#rock{
+    position: absolute;
+    left: 500px;
+    top: 75%;
+}
+#paper{
+    position: absolute;
+    left: 700px;
+    top: 75%;
+}
+#scissors{
+    position: absolute;
+    top: 75%;
+    left: 900px;
+}
+
+button{
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(18, 18, 18);
+    color: white;
+    border: 2px solid rgb(236, 232, 232);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+@keyframes LeftHand {
+    0%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    50%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    100%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+}
+
+@keyframes RightHand {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}

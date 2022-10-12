@@ -5,7 +5,9 @@ nav{
   background-color:var(--nav-color)
 }
 .navbar-nav{
-  width:100%
+  width:100%;
+  display: flex;
+  justify-content: space-between;
 }
 .navbar-brand{
   line-height:1;

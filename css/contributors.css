@@ -75,10 +75,19 @@ body {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
-  color: #212529;
+  color: #425F57;
   text-align: left;
   background-color: #fff;
 }
+
+.nav-link:hover {
+  color: #3C2317 !important;
+}
+
+.footer-menu a:hover {
+  background-color: #FB2576 !important;
+}
+
 #back-to-top-btn {
   z-index: 1000;
   display: none;
@@ -536,12 +545,12 @@ a:hover {
 }
 body {
   transition: all 0.2s ease-in-out;
-  background: var(--darkbg);
-  color: var(--darkt);
+  background: #251B37;
+  color: #47B5FF;
 }
 .light {
-  background: var(--lightbg);
-  color: var(--lightt);
+  background: #FFE3E1;
+  color: #06283D;
 }
 .tdnn {
   float: right;

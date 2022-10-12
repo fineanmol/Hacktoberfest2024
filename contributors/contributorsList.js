@@ -2019,6 +2019,7 @@ contributors = [
     fullname: "Alejandro Armenta",
     username: "https://github.com/alexanderNWO",
   },
+  {
     id: 417,
     fullname: "Krish Katyal",
     username: "https://github.com/krishkatyal",
@@ -2028,6 +2029,11 @@ contributors = [
     id: 418,
     fullname: "Arshpreet Singh Bedi",
     username: "https://github.com/avibedi1768",
+  },
+  {
+    id:419,
+    fullname: "Vighnesh Deep Sharan",
+    username:"https://github.com/vighneshdeepweb",
   },
 
 

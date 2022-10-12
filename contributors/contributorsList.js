@@ -2023,12 +2023,14 @@ contributors = [
     fullname: "Krish Katyal",
     username: "https://github.com/krishkatyal",
   },
-
   {
     id: 418,
     fullname: "Arshpreet Singh Bedi",
     username: "https://github.com/avibedi1768",
   },
-
-
+  {
+    id: 419,
+    fullname: "Fikri Alwan Ramadhan",
+    username: "https://github.com/fikrialwan",
+  },
 ];

@@ -3,7 +3,7 @@ Hacktoberfest-2022
 **Checkout this Project as well [Annoying Button😡](https://annoyingsubmitbutton.netlify.app/) , It's hacktoberfest github : [https://github.com/fineanmol/Annoying-submit-button](https://github.com/fineanmol/Annoying-submit-button)**
 
 
-# Submit your PR on this new repo [Hacktoberfest](https://github.com/fineanmol/hacktoberfest) , There we are merging all PR. 
+# Submit your PR on this new repo [Hacktoberfest](https://github.com/fineanmol/hacktoberfest) , There we are merging all PR to help u guys. 
 
 In this current repo, there are alot of conflicts, we are not merging until all conflicts get resolved.
 Hacktoberfest { [Live Website](https://fineanmol.github.io/Hacktoberfest2022/)}

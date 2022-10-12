@@ -2029,6 +2029,10 @@ contributors = [
     fullname: "Arshpreet Singh Bedi",
     username: "https://github.com/avibedi1768",
   },
-
+  {
+    id: 419,
+    fullname: "deepanganth",
+    username: "https://github.com/deepanganth",
+  },
 
 ];

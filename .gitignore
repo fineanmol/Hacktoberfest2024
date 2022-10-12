@@ -5,3 +5,4 @@
 .github
 *.github/
 /.vs
+__pycache__

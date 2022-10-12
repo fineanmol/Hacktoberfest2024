@@ -1,0 +1,52 @@
+body {
+    background: #f7f7f7;
+}
+
+.search-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+input {
+    font-size: 1rem;
+}
+
+.height {
+    height: 100vh;
+}
+
+.form {
+    position: relative;
+    left: 200px;
+}
+
+.form .fa-search {
+    position: absolute;
+    top:20px;
+    left: 20px;
+    color: #9ca3af;
+}
+
+.form span {
+    position: absolute;
+    right: 17px;
+    top: 13px;
+    padding: 2px;
+    border-left: 1px solid #d1d5db;
+}
+
+.left-pan {
+    padding-left: 7px;
+}
+
+.left-pan {
+    padding-left: 10px;
+}
+
+.form-input {
+    height: 30px;
+    text-indent: 10%;
+    border-radius: 30px;
+}
+

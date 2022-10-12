@@ -1,0 +1,127 @@
+<!doctype html>
+  <head>
+  
+    <!-- include main.js -->
+    <script type="module" src="main.js"></script>
+    <!-- include sidebar -->
+    <my-header></my-header>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.rtl.min.css" integrity="sha384-OXTEbYDqaX2ZY/BOaZV/yFGChYHtrXH2nyXJ372n2Y8abBhrqacCEe+3qhSHtLjy" crossorigin="anonymous">
+    
+    <!-- APlayer CSS for playing music-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css" integrity="sha512-CIYsJUa3pr1eoXlZFroEI0mq0UIMUqNouNinjpCkSWo3Bx5NRlQ0OuC6DtEB/bDqUWnzXc1gs2X/g52l36N5iw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jQuery script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title> Sea-Music </title>
+    <link rel="stylesheet" href="index.css">
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Hit Songs</h3>
+          </div>
+          <div class="col-md-3">
+            <a href="#" class="album-poster" data-switch="0">
+              <img src="https://i.scdn.co/image/ab67616d0000b27391492f8e1e57fba17e4b36e4" alt="">
+            </a>
+            <h4>Can You Feel My Heart</h4>
+            <p>Bring me the horizon - 2013</p>
+          </div>
+          <div class="col-md-3">
+            <a href="#" class="album-poster" data-switch="1">
+              <img src="https://i.scdn.co/image/ab67616d00001e028e92d3433b9a8fd952c98b1c" alt="">
+            </a>
+            <h4>Lettin' Go</h4>
+            <p>Killaheadz - 2020</p>
+          </div>
+          <div class="col-md-3">
+            <a href="#" class="album-poster" data-switch="2">
+              <img src="https://cdns-images.dzcdn.net/images/cover/1a2ff1ad7241739d524583d6f775c379/500x500.jpg" alt="">
+            </a>
+            <h4>Let Me Down Slowly</h4>
+            <p>Alec Benjamin - 2018</p>
+          </div>
+          <div class="col-md-3">
+            <a href="#" class="album-poster" data-switch="3">
+              <img src="https://i.scdn.co/image/ab67616d00001e02174e964b6fdf664e564b4f62" alt="">
+            </a>
+            <h4>Legend</h4>
+            <p>Tevvez - 2020</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="aplayer"></div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <!-- APlayer Jquery Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js" integrity="sha512-RWosNnDNw8FxHibJqdFRySIswOUgYhFxnmYO3fp+BgCU7gfo4z0oS7mYFBvaa8qu+axY39BmQOrhW3Tp70XbaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      $(document).ready(function() {
+        $(".album-poster").click(function(){
+  			  var dataSwitchId = $(this).attr('data-switch');
+  			  console.log(dataSwitchId);
+  
+  			  // and now i use aplayer switch function see
+  			  ap.list.switch(dataSwitchId); //this is static id but i use dynamic 
+  
+  			  // aplayer play function
+  			  // when i click any song to play
+  			  ap.play();
+  
+  			  // click to slideUp player see
+  			  $("#aplayer").addClass('showPlayer');
+  		  });
+      });
+
+      const ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        listFolded: true,
+        volume: 0.2,
+        audio: [
+          {
+            name: 'Can You Feel My Heart',
+            artist: 'Bring me the horizon',
+            url: 'music/Can You Feel My Heart.mp3',
+            cover: 'https://i.scdn.co/image/ab67616d0000b27391492f8e1e57fba17e4b36e4'
+          },
+          {
+            name: 'Lettin\' GO',
+            artist: 'Killaheadz',
+            url: 'music/Lettin Go.mp3',
+            cover: 'https://i.scdn.co/image/ab67616d00001e028e92d3433b9a8fd952c98b1c'
+          },
+          {
+            name: 'Let Me Down Slowly',
+            artist: 'Alec Benjamin',
+            url: 'music/Let Me Down Slowly.mp3',
+            cover: 'https://cdns-images.dzcdn.net/images/cover/1a2ff1ad7241739d524583d6f775c379/500x500.jpg'
+          },
+          {
+            name: 'Legend',
+            artist: 'Tevvez',
+            url: 'music/Legend.mp3',
+            cover: 'https://i.scdn.co/image/ab67616d00001e02174e964b6fdf664e564b4f62'
+          }
+        ]
+      });
+    </script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

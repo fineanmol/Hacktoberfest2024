@@ -3,7 +3,7 @@
 **Checkout this Project as well [Annoying Button😡](https://annoyingsubmitbutton.netlify.app/) , It's hacktoberfest github : [https://github.com/fineanmol/Annoying-submit-button](https://github.com/fineanmol/Annoying-submit-button)**
 
 
-# Submit your PR on this new repo [Hacktoberfest](https://github.com/fineanmol/hacktoberfest) , There we are merging all PR For you . 
+# Submit your PR on this new repo [Hacktoberfest2022](https://github.com/fineanmol/hacktoberfest) , There we are merging all PR For you . 
 
 In this current repo, there are alot of conflicts, we are not merging until all conflicts get resolved.
 Hacktoberfest { [Live Website](https://fineanmol.github.io/Hacktoberfest2022/)}
@@ -114,8 +114,8 @@ For more information on syncing forks [read this article from Github](https://he
 
 - Should I come closer to the text saying 'Don't come closer' on the left side of the home tab ?
   - Nope.
-- How many pull request (PR) must be made, if I want to get an awesome tshirt from Hacktoberfest 2022?
-  - 4
+- How many pull request (PR) must be made, if I want to get an awesome T-shirt from Hacktoberfest-2022?
+  - 4 PR's
 - How do I track my progress to get an awesome T-shirt from Hacktoberfest-2022?
   - [go to :](https://hacktoberfest.digitalocean.com/profile/). (Check Out Your Own Stats at Right Top)
 - What is the duration of Hacktoberfest 2022?

@@ -4,7 +4,7 @@ contributors = [
     fullname: "Anmol Agarwal",
     username: "https://github.com/fineanmol",
   },
-  
+
   {
     id: 2,
     fullname: "Amitava Mitra",
@@ -1970,7 +1970,8 @@ contributors = [
     username: "https://github.com/shubhamrawat090",
 
   },
-  {  id: 390,
+  {
+    id: 390,
     fullname: "Shivam Sisodia",
     username: "https://github.com/shivamsisodia07",
   },
@@ -1987,7 +1988,7 @@ contributors = [
     username: "https://github.com/Isnani25",
   },
 
-    {
+  {
     id: 441,
     fullname: "Parth Panjwani",
     username: "https://github.com/Parth-Panjwani",
@@ -2019,6 +2020,7 @@ contributors = [
     fullname: "Alejandro Armenta",
     username: "https://github.com/alexanderNWO",
   },
+  {
     id: 417,
     fullname: "Krish Katyal",
     username: "https://github.com/krishkatyal",
@@ -2028,6 +2030,11 @@ contributors = [
     id: 418,
     fullname: "Arshpreet Singh Bedi",
     username: "https://github.com/avibedi1768",
+  },
+  {
+    id: 419,
+    fullname: "Marcelo Fagner da Silva Andrade",
+    username: "https://github.com/MagnerSA",
   },
 
 

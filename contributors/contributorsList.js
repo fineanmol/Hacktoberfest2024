@@ -2034,5 +2034,10 @@ contributors = [
     fullname: "KiriNeTo",
     username: "https://github.com/KiriNeTo",
   },
+  {
+    id: 420,
+    fullname: "Amit Kumar",
+    username: "https://github.com/amit-kumar",
+  },
 
 ];

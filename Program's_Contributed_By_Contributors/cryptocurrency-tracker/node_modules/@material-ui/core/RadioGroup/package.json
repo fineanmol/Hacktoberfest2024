@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "module": "../esm/RadioGroup/index.js",
+  "typings": "./index.d.ts"
+}

@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "module": "../esm/TabPanel/index.js",
+  "typings": "./index.d.ts"
+}

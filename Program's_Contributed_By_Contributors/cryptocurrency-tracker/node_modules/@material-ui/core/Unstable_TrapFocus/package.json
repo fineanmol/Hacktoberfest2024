@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "module": "../esm/Unstable_TrapFocus/index.js",
+  "typings": "./index.d.ts"
+}

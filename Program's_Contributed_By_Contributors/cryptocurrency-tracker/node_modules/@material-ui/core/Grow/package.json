@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "module": "../esm/Grow/index.js",
+  "typings": "./index.d.ts"
+}

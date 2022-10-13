@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "module": "../esm/TableFooter/index.js",
+  "typings": "./index.d.ts"
+}

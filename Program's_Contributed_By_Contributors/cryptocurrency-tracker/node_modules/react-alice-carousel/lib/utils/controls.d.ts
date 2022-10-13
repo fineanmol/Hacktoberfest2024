@@ -1,0 +1,11 @@
+import { Props, State } from '../types';
+export declare function shouldDisableControls(props: Props, state: State): boolean | undefined;
+export declare function shouldDisableDots(props: Props, state: State): boolean | undefined;
+export declare function shouldDisableButtons(props: Props, state: State): boolean | undefined;
+export declare const isStrategy: (strategy: any, value: any) => any;
+export declare const hasDotForEachSlide: (autoWidth: any, controlsStrategy: any) => any;
+export declare const getDotsNavigationLength: (itemsCount: number | undefined, itemsInSlide: number | undefined, hasDotForEachSlide: any) => number;
+export declare const checkIsTheLastDotIndex: (index: number, infinite: boolean, dotsLength: number) => boolean;
+export declare const getItemIndexForDotNavigation: (index: number, isTheLastIndex: boolean, slidesLength: number, itemsInSlide: number) => number;
+export declare const shouldCancelAutoPlayOnAction: (strategy?: string) => boolean;
+export declare const shouldCancelAutoPlayOnHover: (strategy?: string) => boolean;

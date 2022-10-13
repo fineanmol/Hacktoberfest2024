@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "module": "../esm/ServerStyleSheets/index.js",
+  "typings": "./index.d.ts"
+}

@@ -1,0 +1,27 @@
+$headerLinkColor: #cc0000;
+
+header {
+  h1 {
+    padding: 0 0 1rem;
+  }
+  a {
+    float: right;
+    text-decoration: none;
+    color: $headerLinkColor;
+    line-height: 32px;
+    svg {
+      margin-right: 5px;
+      position: relative;
+      top: 2px;
+      #github {
+        fill: $headerLinkColor;
+      }
+    }
+    &:hover {
+      color: darken($headerLinkColor, 10%);
+      #github {
+        fill: darken($headerLinkColor, 10%);
+      }
+    }
+  }
+}

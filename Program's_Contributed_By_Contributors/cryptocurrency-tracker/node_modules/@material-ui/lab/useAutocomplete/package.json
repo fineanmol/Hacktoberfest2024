@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "module": "../esm/useAutocomplete/index.js",
+  "typings": "./index.d.ts"
+}

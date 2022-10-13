@@ -1,0 +1,24 @@
+import { State, Props, ItemCoords } from '../types';
+export declare const getShiftIndex: (itemsInSlide?: number, itemsOffset?: number) => number;
+export declare const getStartIndex: (index?: number, itemsCount?: number) => number;
+export declare const getActiveIndex: ({ startIndex, itemsCount, infinite }: {
+    startIndex?: number | undefined;
+    itemsCount?: number | undefined;
+    infinite?: boolean | undefined;
+}) => number;
+export declare const getUpdateSlidePositionIndex: (activeIndex: number, itemsCount: number) => number;
+export declare const shouldRecalculateSlideIndex: (activeIndex: any, itemsCount: any) => boolean;
+export declare const shouldCancelSlideAnimation: (activeIndex: any, itemsCount: any) => boolean;
+export declare const getSwipeLimitMin: (state: Partial<State>, props: Partial<Props>) => number;
+export declare const getSwipeLimitMax: (state: Partial<State>, props: Partial<Props>) => number;
+export declare const shouldRecalculateSwipePosition: (currentPosition: any, minPosition: any, maxPosition: any) => boolean;
+export declare const getIsLeftDirection: (deltaX?: number) => boolean;
+export declare const getItemCoords: (cursor?: number, transformationSet?: ItemCoords[]) => ItemCoords;
+export declare const getSwipeShiftValue: (cursor?: number, transformationSet?: ItemCoords[]) => number;
+export declare const getTransformationItemIndex: (transformationSet?: ItemCoords[], position?: number) => number;
+export declare const getSwipeTransformationCursor: (transformationSet?: ItemCoords[], position?: number, deltaX?: number) => number;
+export declare const getSwipeTouchendPosition: (state: State, deltaX: number, swipePosition?: number) => number;
+export declare const getSwipeTouchendIndex: (position: any, state: State) => number;
+export declare const getFadeoutAnimationIndex: (state: State) => number;
+export declare const getFadeoutAnimationPosition: (nextIndex: any, state: State) => number;
+export declare const isVerticalTouchmoveDetected: (absX: number, absY: number, swipeDelta?: number) => boolean;

@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "module": "../esm/ThemeProvider/index.js",
+  "typings": "./index.d.ts"
+}

@@ -1,0 +1,1 @@
+"use strict";var __importDefault=function(e){return e&&e.__esModule?e:{default:e}},react_1=(Object.defineProperty(exports,"__esModule",{value:!0}),exports.StageItem=void 0,__importDefault(require("react")));exports.StageItem=function(e){var t=e.item,r=e.className,e=e.styles;return react_1.default.createElement("li",{style:e,className:r},t)};

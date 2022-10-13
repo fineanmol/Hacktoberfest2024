@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "module": "../esm/mergeClasses/index.js",
+  "typings": "./index.d.ts"
+}

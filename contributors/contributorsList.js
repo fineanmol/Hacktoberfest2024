@@ -2033,9 +2033,13 @@ contributors = [
 
   {
     id: 419,
+    fullname: "Amit Kumar",
+    username: "https://github.com/amit-kumar",
+  },
+  {
+    id: 420,
     fullname: "Luciane Fernandes Roque",
     username: "https://github.com/LucianeFernandesRoque"
   }
-
 
 ];

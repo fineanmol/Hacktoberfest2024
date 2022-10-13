@@ -1627,13 +1627,11 @@ contributors = [
     fullname: "Dicky",
     username: "https://github.com/dickytrianza",
   },
-
   {
     id: 326,
     fullname: "Srinjoy Pati",
     username: "https://github.com/srinjoy-26",
   },
-
   {
     id: 327,
     fullname: "Rajpreet Kaur",
@@ -1645,7 +1643,6 @@ contributors = [
     fullname: "Bhumit",
     username: "https://github.com/BhumitRohilla",
   },
-
   {
     id: 329,
     fullname: "d-coder111",
@@ -1656,7 +1653,6 @@ contributors = [
     fullname: "ritam77",
     username: "https://github.com/ritam77",
   },
-
   {
     id: 331,
     fullname: "Arpit Ujjwal",
@@ -1702,7 +1698,6 @@ contributors = [
     fullname: "Nabeel Hussain M N",
     username: "https://github.com/nabeel001",
   },
-
   {
     id: 340,
     fullname: "Debdeep Ghosal",
@@ -1819,7 +1814,6 @@ contributors = [
     username: "https://github.com/sabin-thapa",
   },
   {
-
     id: 373,
     fullname: "Anurag Pandey",
     username: "https://github.com/eagleanurag/",
@@ -1968,16 +1962,13 @@ contributors = [
     id: 389,
     fullname: "Shubham Rawat",
     username: "https://github.com/shubhamrawat090",
-
   },
   {  id: 390,
     fullname: "Shivam Sisodia",
     username: "https://github.com/shivamsisodia07",
   },
-
   {
     id: 410,
-
     fullname: "Vjelson Tuazonl",
     username: "https://github.com/VJelson",
   },
@@ -1986,14 +1977,6 @@ contributors = [
     fullname: "Isnani",
     username: "https://github.com/Isnani25",
   },
-
-    {
-    id: 441,
-    fullname: "Parth Panjwani",
-    username: "https://github.com/Parth-Panjwani",
-  },
-
-
   {
     id: 412,
     fullname: "Garima Jain",
@@ -2023,7 +2006,6 @@ contributors = [
     fullname: "Krish Katyal",
     username: "https://github.com/krishkatyal",
   },
-
   {
     id: 418,
     fullname: "Arshpreet Singh Bedi",
@@ -2035,9 +2017,14 @@ contributors = [
     username: "https://github.com/amit-kumar",
   },
   {
-    id: 420,
+    id: 441,
+    fullname: "Parth Panjwani",
+    username: "https://github.com/Parth-Panjwani",
+  },
+  {
+    id: 444,
     fullname: "Christian Durazo",
     username: "https://github.com/ctdurazo",
-  },
+  }
 
 ];

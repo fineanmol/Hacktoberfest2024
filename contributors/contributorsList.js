@@ -2044,6 +2044,6 @@ contributors = [
     id: 421,
     fullname: "Manav Ukani",
     username: "https://github.com/manavukani",
-  },
+  }
 
 ];

@@ -2029,11 +2029,18 @@ contributors = [
     fullname: "Arshpreet Singh Bedi",
     username: "https://github.com/avibedi1768",
   },
+
     
   {
     id: 419,
     fullname:"Yash Salunke",
     username:"https://github.com/YashSalunke12",
+
+  {
+    id: 420,
+    fullname: "Amit Kumar",
+    username: "https://github.com/amit-kumar",
+
   },
 
 ];

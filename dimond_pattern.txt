@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+void printDiamond(int n) {
+       
+         int k=1;
+        for(int i=0;i<n;i++)
+        {
+            for(int s=k/2+1;s<n;s++)
+            cout<<" ";
+            for(int j=1;j<=k;j++)
+            {
+                string str=(j%2!=0)?"*":" ";
+                cout<<str;
+            }
+            cout<<"\n";
+            k+=2;
+        }
+        k=n*2-1;
+        for(int i=0;i<n;i++)
+        {
+            for(int s=k/2+1;s<n;s++)
+            cout<<" ";
+            for(int j=1;j<=k;j++)
+            {
+                string str=(j%2!=0)?"*":" ";
+                cout<<str;
+            }
+            cout<<"\n";
+            k-=2;
+        }
+  }
+int main()
+{
+	int n;
+	cin>>n;
+	printDiamond(n);
+	return 0;
+	
+}

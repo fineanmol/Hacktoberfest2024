@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "module": "../esm/SvgIcon/index.js",
+  "typings": "./index.d.ts"
+}

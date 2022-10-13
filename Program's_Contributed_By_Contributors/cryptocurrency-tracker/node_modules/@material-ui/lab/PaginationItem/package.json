@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "module": "../esm/PaginationItem/index.js",
+  "typings": "./index.d.ts"
+}

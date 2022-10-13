@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "module": "../esm/TabList/index.js",
+  "typings": "./index.d.ts"
+}

@@ -1,0 +1,1 @@
+"use strict";function debounce(i,n){void 0===n&&(n=0);var u=void 0;return function(){for(var e=this,o=[],t=0;t<arguments.length;t++)o[t]=arguments[t];u&&(clearTimeout(u),u=void 0),u=window.setTimeout(function(){i.apply(e,o),u=void 0},n)}}Object.defineProperty(exports,"__esModule",{value:!0}),exports.debounce=void 0,exports.debounce=debounce;

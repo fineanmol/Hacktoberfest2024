@@ -1,0 +1,52 @@
+{
+  "name": "@material-ui/lab",
+  "version": "4.0.0-alpha.61",
+  "private": false,
+  "author": "Material-UI Team",
+  "description": "Material-UI Lab - Incubator for Material-UI React components.",
+  "main": "./index.js",
+  "keywords": [
+    "react",
+    "react-component",
+    "material design",
+    "material-ui",
+    "lab"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mui-org/material-ui.git",
+    "directory": "packages/material-ui-lab"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mui-org/material-ui/issues"
+  },
+  "homepage": "https://github.com/mui-org/material-ui/tree/master/packages/material-ui-lab",
+  "peerDependencies": {
+    "@material-ui/core": "^4.12.1",
+    "@types/react": "^16.8.6 || ^17.0.0",
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.4",
+    "@material-ui/utils": "^4.11.3",
+    "clsx": "^1.0.4",
+    "prop-types": "^15.7.2",
+    "react-is": "^16.8.0 || ^17.0.0"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "module": "./esm/index.js",
+  "typings": "./index.d.ts"
+}

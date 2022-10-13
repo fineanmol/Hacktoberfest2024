@@ -1,0 +1,1 @@
+"use strict";function debug(){for(var e=[],o=0;o<arguments.length;o++)e[o]=arguments[o];"development"===process.env.NODE_ENV&&console.debug.apply(console,e)}Object.defineProperty(exports,"__esModule",{value:!0}),exports.debug=void 0,exports.debug=debug;

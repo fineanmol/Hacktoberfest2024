@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "module": "../esm/TimelineDot/index.js",
+  "typings": "./index.d.ts"
+}

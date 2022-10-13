@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "module": "../esm/SpeedDialIcon/index.js",
+  "typings": "./index.d.ts"
+}

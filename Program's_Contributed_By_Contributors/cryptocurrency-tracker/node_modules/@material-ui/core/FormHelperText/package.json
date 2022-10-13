@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "module": "../esm/FormHelperText/index.js",
+  "typings": "./index.d.ts"
+}

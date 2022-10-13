@@ -1,0 +1,35 @@
+$button-background: #3498db;
+
+#editor {
+  border: 1px solid #aaa;
+  display: flex;
+  flex-direction: column;
+  #HTML_EDITOR {
+    flex: 1;
+  }
+  .presets {
+    padding: 5px 10px;
+    border-bottom: 1px solid #aaa;
+    display: flex;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      flex: 1;
+      text-align: right;
+    }
+
+    li {
+      margin: 0;
+      padding: 0 10px;
+      list-style-type: none;
+      display: inline;
+      border-right: 1px solid #aaa;
+      &:last-of-type {
+        border: none;
+        padding-right: 0;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,88 @@
+/*general*/
+
+html{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	background: #EEE;
+	font: 18px Georgia, Times, "Times New Roman", Serif;
+}
+
+#main-content{
+	width: 500px;
+	margin: 0 auto; padding: 20px 0;
+}
+
+h1{
+	font: 30px Arial, "Helvetica Neue", Helvetica, Sans-Serif;
+}
+
+/*menu page*/
+
+ul#measurement-types{
+	list-style-type: none;
+	margin: 1em 0;
+	padding: 0;
+}
+
+ul#measurement-types li{
+	height: auto;
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+ul#measurement-types li a{
+	text-decoration: none;
+	color: black;
+	display: block;
+	background: white;
+	padding: 16px 24px;
+	width: 180px;
+	border: 1px solid black;
+}
+
+ul#measurement-types li a:hover{
+	color: white;
+	background: #FDB912;
+}
+
+/*Conversion forms*/
+
+form label{
+	display: inline-block;
+	width: 45px;
+}
+
+form input[type="text"]{
+	width: 80px;
+	font-size: 16px;
+	line-height: 16px;
+}
+
+form select{
+	margin: 1em 0;
+	font-size: 14px;
+}
+
+form input[type="submit"]{
+	font-size: 1em;
+	text-decoration: none;
+	color: black;
+	display: block;
+	background: white;
+	margin: 2em 0 2em 25px;
+	padding: 6px 12px;
+	border: 1px solid black;
+}
+
+form input[type="submit"]:hover{
+	color: white;
+	background: #FDB912;
+}

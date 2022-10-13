@@ -1,0 +1,1 @@
+display(A,n);

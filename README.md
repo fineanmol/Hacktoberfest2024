@@ -30,7 +30,7 @@ Hacktoberfest 2022
 - Do NOT add any build steps e.g npm install (we want to keep this a simple static site)
 - Do NOT remove other content.
 - Styling/code can be pretty, ugly or stupid, big or small as long as it works
-- Add your name to the contributorsList file
+<!-- - Add your name to the contributorsList file. -->
 - Try to keep pull requests small to minimize merge conflicts
 
 
@@ -52,7 +52,9 @@ cd Hacktoberfest2022
 ```markdown
 git checkout -b my-new-branch
 ```
-- Add your Name to `contributors/contributorsList.js`
+
+<!--- - Add your Name to `contributors/contributorsList.js`. -->
+
 ```markdown
 git add .
 ```
@@ -121,7 +123,7 @@ For more information on syncing forks [read this article from Github](https://he
 - What is the duration of Hacktoberfest 2022?
   - It is from 1st october to 31st october 2022...
 - What is the event for?
-  - For the open source community engagement
+  - For the open source community engagement and learn how to contribute to open source.
 
 
 

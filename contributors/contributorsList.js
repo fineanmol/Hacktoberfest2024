@@ -1966,15 +1966,23 @@ contributors = [
   },
   {
     id: 389,
-    fullname: "Shubham Rawat",
-    username: "https://github.com/shubhamrawat090",
-
+    fullname: "suraj keshari",
+    username: "https://github.com/surajkeshari"
   },
-  {  id: 390,
+  {
+    id: 390,
+    fullname: "Pratik Butani",
+    username: "https://github.com/pratikbutani"
+  },
+  {  id: 391,
     fullname: "Shivam Sisodia",
     username: "https://github.com/shivamsisodia07",
   },
-
+  {
+    id: 410,
+    fullname: "Pratik Butani",
+    username: "https://github.com/pratikbutani"
+  },
   {
     id: 410,
 
@@ -2034,5 +2042,4 @@ contributors = [
     fullname: "Amit Kumar",
     username: "https://github.com/amit-kumar",
   },
-
 ];

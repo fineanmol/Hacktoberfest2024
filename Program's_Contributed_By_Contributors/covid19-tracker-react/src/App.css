@@ -1,0 +1,45 @@
+* {
+  margin: 0%;
+}
+body {
+  background-color: #f5f6fa;
+}
+.app {
+  display: flex;
+  justify-content: space-evenly;
+}
+.app__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.app__header>h1{
+  color: red;
+  font-size: 2rem;
+}
+
+.app__left {
+  flex: 0.9;
+}
+
+.app__stats {
+  display: flex;
+  justify-content: space-between;
+}
+svg {
+  height: auto;
+  width: auto;
+}
+.WorldWideh3{
+  margin: 2rem;
+}
+.LineGraph{
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .app {
+    flex-direction: column;
+  }
+}

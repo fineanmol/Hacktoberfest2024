@@ -2019,11 +2019,10 @@ contributors = [
     fullname: "Alejandro Armenta",
     username: "https://github.com/alexanderNWO",
   },
-    id: 417,
+  { id: 417,
     fullname: "Krish Katyal",
     username: "https://github.com/krishkatyal",
   },
-
   {
     id: 418,
     fullname: "Arshpreet Singh Bedi",
@@ -2033,6 +2032,11 @@ contributors = [
     id: 419,
     fullname: "Amit Kumar",
     username: "https://github.com/amit-kumar",
+  },
+  {
+    id: 420,
+    fullname: "Pedro Brandão",
+    username: "https://github.com/pedrohenriquebrandao",
   },
 
 ];

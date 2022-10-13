@@ -31,7 +31,7 @@ int Empty (struct stack * ptr){
 int main()
 {
     // struct stack s ;
-    // s.size = 80;
+    // s.size = 90;
     // s.top = -1;
     // s.array = (int*) malloc(s.size*size of (int));
     // return 0;

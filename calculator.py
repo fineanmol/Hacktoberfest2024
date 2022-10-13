@@ -110,7 +110,7 @@ class calc:
 
 			Button(master,text="7",width=5,height=3, 
 				fg="blue",bg="orange", 
-				command=lambda:self.action('7')).grid(row=1, column=0) 
+				command=lambda:self.action(7)).grid(row=1, column=0) 
 
 			Button(master,text="8",width=5,height=3, 
 				fg="red",bg="light green", 

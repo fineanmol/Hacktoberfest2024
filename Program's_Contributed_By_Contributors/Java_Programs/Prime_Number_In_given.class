@@ -1,0 +1,20 @@
+import java.util.*;
+public class Prime_Number_In_given {
+	public static void main(String[] args){
+		int M = 1,N=10;
+	  ArrayList<Integer> a = new ArrayList<Integer>();
+		boolean isPrime = true;       
+	  	for(int i=M; i<=N;i++){
+		            for(int j=2; j*j<=i; j++){
+		                if(i%j==0){
+		                	isPrime = false;
+		                }
+		            }
+		            if(isPrime && i!=1){
+		            	a.add(i);
+		            }
+	
+		        }
+		        System.out.println(a);
+	}
+}

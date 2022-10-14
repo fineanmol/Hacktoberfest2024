@@ -20,6 +20,7 @@ void S_S(vector<int> &A, int n)
             {
                 min = A[j];
                 pos = j;
+                
             }
         }
         swap(A[i], A[pos]);

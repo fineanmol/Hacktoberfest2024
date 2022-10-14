@@ -1,0 +1,240 @@
+[data-theme="dark"]{
+    --bg-color: #191919;
+    --form-bg: #474747;
+    --form-font: #919191;
+    --button-bg:#c15511;
+    --button-border:#c15511;
+    --button-color:rgb(122 61 0);
+}
+
+[data-theme="light"]{
+    --bg-color: #fff;
+    --form-bg: #d9dddf;
+    --form-font: #191919;
+    --button-bg:#fff;
+    --button-border:#191919;
+    --button-color:#191919;
+}
+
+.toggle-theme{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--button-bg);
+    border-radius: 50px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    border:2px solid var(--button-border);
+}
+
+.toggle-theme .fas{
+    color: var(--button-color);
+    font-size: 22px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background:var(--bg-color);
+    font-family: 'Poppins', sans-serif;
+    min-width: 100vh;
+    position: relative;
+    height: 100vh;
+}
+body header h1{
+    color: #dd6418;
+    ;          
+}
+
+header
+{
+    font-size: 1.5rem;
+}
+header,
+form
+{ 
+    min-height: 20vh;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+form input,
+form button
+{
+    padding: 0.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    border: none;
+    background: var(--form-bg);
+    color: var(--form-font);
+    text-align: center;
+    
+
+}
+.todo-input{
+    border:1px solid #c15511;
+}
+form input:focus
+{
+    outline: none !important;
+    
+}
+form button
+{
+    color: rgb(122 61 0);
+    background: #c15511;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+form button:hover
+{
+    background: var(--form-bg);
+    color: #d46a28;
+}
+.todo-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list
+{
+    min-width: 30%;
+    list-style: none;
+}
+.todo
+{
+    margin: 0.5rem;
+    background: var(--form-bg);
+    color: var(--form-font);
+    text-align: center;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 500ms ease;    
+}
+.todo li
+{
+    flex: 1;
+}
+.trash-btn, .complete-btn
+{
+    background: #481c00;
+    color: #e76311;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+        
+}
+.complete-btn
+{
+    background: #e76311;
+    color: #515151;
+}
+.complete-btn:hover
+{
+    background: rgb(204, 89, 17);
+    
+}
+.trash-btn:hover
+{
+    background: #2e1200;
+}
+.todo-item
+{
+    padding: 0rem 0.5rem;
+}
+.fa-trash, .fa-check
+{
+    pointer-events: none;
+}
+.completed
+{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.fall
+{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select
+{
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     outline: none;
+     border: none;
+}
+.select
+{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;    
+}
+select 
+{
+    background: var(--form-bg);
+    color: var(--form-font);
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.select::after
+{
+    content: "\25BC";
+    position: absolute;
+    color: rgb(122 61 0);
+    background: #c15511;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after
+{
+    background: var(--form-bg);
+    color: #d36926;
+}
+select option
+{
+    font-size: 17px;
+}
+select {
+    font-size:17px;
+    padding-left: 6px;
+    justify-content: center;
+   }
+
+@media (max-width: 376px)
+{
+    header
+    {   
+        font-size: 1rem;
+        justify-content: left;
+    }
+
+    form input,
+    form button
+    {
+    padding: 0.2rem;
+    font-size: 1rem;
+    display: flex;
+    }
+}

@@ -1,4 +1,4 @@
-# importing Tkinter and math 
+
 from tkinter import *
 import math 
 

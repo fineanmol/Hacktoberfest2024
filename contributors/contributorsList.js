@@ -1961,6 +1961,11 @@ contributors = [
   },
   {
     id: 388,
+    fullname: "Abhishek Anand",
+    username: "https://github.com/picturepatch07"
+  },
+  {
+    id: 389,
     fullname: "Samarjeet Singh Gandhi",
     username: "https://github.com/gandhi25samar",
   },
@@ -2039,6 +2044,10 @@ contributors = [
     id:420,
     fullname:"Auro S.",
     username:"https://github.com/aurocodes",
+  },
+  {
+    id: 421,
+    fullname: "Tejas Singh",
+    username: "https://github.com/ec-026"
   }
-
 ];

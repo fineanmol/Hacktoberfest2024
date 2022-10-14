@@ -31,4 +31,4 @@ To continue, please press 1.
         else:
             print("Ah! You Lose : Better luck next time.")
     else:
-        print("You are not willing to play : See you again!")    
+        print("You chose not to play : See you again!")    

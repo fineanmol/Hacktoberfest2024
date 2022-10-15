@@ -2021,7 +2021,7 @@ contributors = [
     fullname: "Alejandro Armenta",
     username: "https://github.com/alexanderNWO",
   },
-  {  
+  {
     id: 418,
     fullname: "Krish Katyal",
     username: "https://github.com/krishkatyal",
@@ -2037,5 +2037,10 @@ contributors = [
     fullname: "Amit Kumar",
     username: "https://github.com/amit-kumar",
   },
+  {
+    id:420,
+    fullname:"Auro S.",
+    username:"https://github.com/aurocodes",
+  }
 
 ];

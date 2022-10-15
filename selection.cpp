@@ -12,17 +12,18 @@ void S_S(vector<int> &A, int n)
 {
     for (int i = 0; i < n - 1; i++)
     {
-        int min = A[i];
-        int pos = i;
+        int min = i;
+//         int pos = i;
         for (int j = i + 1; j < n; j++)
         {
-            if (A[j] < min)
+            if (A[j] < A[min])
             {
-                min = A[j];
-                pos = j;
+                min = j;
+//                 pos = j;
             }
         }
-        swap(A[i], A[pos]);
+        if(min!=i)
+            swap(A[i], A[min]);
     }
 }
 

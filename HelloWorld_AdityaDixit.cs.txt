@@ -1,0 +1,7 @@
+public class Solution
+{
+    static public void Main(String[] args)
+    {
+        Console.WriteLine("Hello Hacktoberfest 2022");
+    }
+}

@@ -1,0 +1,54 @@
+from sys import stdin, setrecursionlimit
+import queue
+
+
+setrecursionlimit(10 ** 6)
+
+
+#Following is the structure used to represent the Binary Tree Node
+class BinaryTreeNode:
+    def __init__(self, data):
+        self.data = data
+        self.left = None
+        self.right = None
+
+
+class Height:
+    def __init(self):
+        self.h = 0
+
+def diameterOpt(root, height) :
+    # Your code goes here
+   # to store height of left and right subtree
+    lh = Height()
+    rh = Height()
+ 
+    # base condition- when binary tree is empty
+    if root is None:
+        height.h = 0
+        return 0
+ 
+     
+    # ldiameter --> diameter of left subtree
+    # rdiameter  --> diameter of right subtree
+     
+    # height of left subtree and right subtree is obtained from lh and rh
+    # and returned value of function is stored in ldiameter and rdiameter
+     
+    ldiameter = diameterOpt(root.left, lh)
+    rdiameter = diameterOpt(root.right, rh)
+ 
+    # height of tree will be max of left subtree
+    # height and right subtree height plus1
+ 
+    height.h = max(lh.h, rh.h) + 1
+ 
+    # return maximum of the following
+    # 1)left diameter
+    # 2)right diameter
+    # 3)left height + right height + 1
+    return max(lh.h + rh.h + 1, max(ldiameter, rdiameter))
+
+def diameterOfBinaryTree(root):
+    height = Height()
+    return diameterOpt(root, height)

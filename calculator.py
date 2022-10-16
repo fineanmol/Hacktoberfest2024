@@ -1,176 +1,161 @@
-# importing Tkinter and math 
+# calculator using Tkinter
+
+# import everything from tkinter module
 from tkinter import *
-import math 
 
-# calc class 
-class calc: 
-
-	def getandreplace(self): 
-
-		"""replace x with * and ÷ with /"""
-		self.expression = self.e.get() 
-		self.newtext=self.expression.replace('/','/') 
-		self.newtext=self.newtext.replace('x','*') 
+# globally declare the expression variable
+expression = ""
 
 
-	def equals(self): 
-		"""when the equal button is pressed"""
-		self.getandreplace() 
-		try: 
-			# evaluate the expression using the eval function 
-			self.value= eval(self.newtext) 
-		except SyntaxError or NameError: 
-			self.e.delete(0,END) 
-			self.e.insert(0,'Invalid Input!') 
-		else: 
-			self.e.delete(0,END) 
-			self.e.insert(0,self.value) 
+# Function to update expression
+# in the text entry box
+def press(num):
+	# point out the global expression variable
+	global expression
 
-	def squareroot(self): 
-		"""squareroot method"""
-		self.getandreplace() 
-		try: 
-			# evaluate the expression using the eval function 
-			self.value= eval(self.newtext) 
-		except SyntaxError or NameError: 
-			self.e.delete(0,END) 
-			self.e.insert(0,'Invalid Input!') 
-		else: 
-			self.sqrtval=math.sqrt(self.value) 
-			self.e.delete(0,END) 
-			self.e.insert(0,self.sqrtval) 
+	# concatenation of string
+	expression = expression + str(num)
 
-	def square(self): 
-		"""square method"""
-		self.getandreplace() 
-		try: 
-			#evaluate the expression using the eval function 
-			self.value= eval(self.newtext) 
-		except SyntaxError or NameError: 
-			self.e.delete(0,END) 
-			self.e.insert(0,'Invalid Input!') 
-		else: 
-			self.sqval=math.pow(self.value,2) 
-			self.e.delete(0,END) 
-			self.e.insert(0,self.sqval) 
+	# update the expression by using set method
+	equation.set(expression)
 
-	def clearall(self): 
-			"""when clear button is pressed,clears the text input area"""
-			self.e.delete(0,END) 
 
-	def clear1(self): 
-			self.txt=self.e.get()[:-1] 
-			self.e.delete(0,END) 
-			self.e.insert(0,self.txt) 
+# Function to evaluate the final expression
+def equalpress():
+	# Try and except statement is used
+	# for handling the errors like zero
+	# division error etc.
 
-	def action(self,argi): 
-			"""pressed button's value is inserted into the end of the text area"""
-			self.e.insert(END,argi) 
+	# Put that code inside the try block
+	# which may generate the error
+	try:
 
-	def __init__(self,master): 
-			"""Constructor method"""
-			master.title('Calulator') 
-			master.geometry() 
-			self.e = Entry(master) 
-			self.e.grid(row=0,column=0,columnspan=6,pady=3) 
-			self.e.focus_set() #Sets focus on the input text area 
+		global expression
 
-			# Generating Buttons 
-			Button(master,text="=",width=11,height=3,fg="blue", 
-				bg="orange",command=lambda:self.equals()).grid( 
-									row=4, column=4,columnspan=2) 
+		# eval function evaluate the expression
+		# and str function convert the result
+		# into string
+		total = str(eval(expression))
 
-			Button(master,text='AC',width=5,height=3, 
-						fg="red", bg="light green", 
-			command=lambda:self.clearall()).grid(row=1, column=4) 
+		equation.set(total)
 
-			Button(master,text='C',width=5,height=3, 
-				fg="red",bg="light green", 
-				command=lambda:self.clear1()).grid(row=1, column=5) 
+		# initialize the expression variable
+		# by empty string
+		expression = ""
 
-			Button(master,text="+",width=5,height=3, 
-				fg="blue",bg="orange", 
-				command=lambda:self.action('+')).grid(row=4, column=3) 
+	# if error is generate then handle
+	# by the except block
+	except:
 
-			Button(master,text="x",width=5,height=3, 
-					fg="blue",bg="orange", 
-					command=lambda:self.action('x')).grid(row=2, column=3) 
+		equation.set(" error ")
+		expression = ""
 
-			Button(master,text="-",width=5,height=3, 
-					fg="red",bg="light green", 
-					command=lambda:self.action('-')).grid(row=3, column=3) 
 
-			Button(master,text="÷",width=5,height=3, 
-				fg="blue",bg="orange", 
-				command=lambda:self.action('/')).grid(row=1, column=3) 
+# Function to clear the contents
+# of text entry box
+def clear():
+	global expression
+	expression = ""
+	equation.set("")
 
-			Button(master,text="%",width=5,height=3, 
-				fg="red",bg="light green", 
-				command=lambda:self.action('%')).grid(row=4, column=2) 
 
-			Button(master,text="7",width=5,height=3, 
-				fg="blue",bg="orange", 
-				command=lambda:self.action('7')).grid(row=1, column=0) 
+# Driver code
+if __name__ == "__main__":
+	# create a GUI window
+	gui = Tk()
 
-			Button(master,text="8",width=5,height=3, 
-				fg="red",bg="light green", 
-				command=lambda:self.action(8)).grid(row=1, column=1) 
+	# set the background colour of GUI window
+	gui.configure(background="light green")
 
-			Button(master,text="9",width=5,height=3, 
-				fg="blue",bg="orange", 
-				command=lambda:self.action(9)).grid(row=1, column=2) 
+	# set the title of GUI window
+	gui.title("Simple Calculator")
 
-			Button(master,text="4",width=5,height=3, 
-				fg="red",bg="light green", 
-				command=lambda:self.action(4)).grid(row=2, column=0) 
+	# set the configuration of GUI window
+	gui.geometry("270x150")
 
-			Button(master,text="5",width=5,height=3, 
-				fg="blue",bg="orange", 
-				command=lambda:self.action(5)).grid(row=2, column=1) 
+	# StringVar() is the variable class
+	# we create an instance of this class
+	equation = StringVar()
 
-			Button(master,text="6",width=5,height=3, 
-				fg="white",bg="blue", 
-				command=lambda:self.action(6)).grid(row=2, column=2) 
+	# create the text entry box for
+	# showing the expression .
+	expression_field = Entry(gui, textvariable=equation)
 
-			Button(master,text="1",width=5,height=3, 
-				fg="red",bg="light green", 
-				command=lambda:self.action(1)).grid(row=3, column=0) 
+	# grid method is used for placing
+	# the widgets at respective positions
+	# in table like structure .
+	expression_field.grid(columnspan=4, ipadx=70)
 
-			Button(master,text="2",width=5,height=3, 
-				fg="blue",bg="orange", 
-				command=lambda:self.action(2)).grid(row=3, column=1) 
+	# create a Buttons and place at a particular
+	# location inside the root window .
+	# when user press the button, the command or
+	# function affiliated to that button is executed .
+	button1 = Button(gui, text=' 1 ', fg='black', bg='red',
+					command=lambda: press(1), height=1, width=7)
+	button1.grid(row=2, column=0)
 
-			Button(master,text="3",width=5,height=3, 
-				fg="white",bg="blue", 
-				command=lambda:self.action(3)).grid(row=3, column=2) 
+	button2 = Button(gui, text=' 2 ', fg='black', bg='red',
+					command=lambda: press(2), height=1, width=7)
+	button2.grid(row=2, column=1)
 
-			Button(master,text="0",width=5,height=3, 
-				fg="white",bg="blue", 
-				command=lambda:self.action(0)).grid(row=4, column=0) 
+	button3 = Button(gui, text=' 3 ', fg='black', bg='red',
+					command=lambda: press(3), height=1, width=7)
+	button3.grid(row=2, column=2)
 
-			Button(master,text=".",width=5,height=3, 
-				fg="red",bg="light green", 
-				command=lambda:self.action('.')).grid(row=4, column=1) 
+	button4 = Button(gui, text=' 4 ', fg='black', bg='red',
+					command=lambda: press(4), height=1, width=7)
+	button4.grid(row=3, column=0)
 
-			Button(master,text="(",width=5,height=3, 
-				fg="white",bg="blue", 
-				command=lambda:self.action('(')).grid(row=2, column=4) 
+	button5 = Button(gui, text=' 5 ', fg='black', bg='red',
+					command=lambda: press(5), height=1, width=7)
+	button5.grid(row=3, column=1)
 
-			Button(master,text=")",width=5,height=3, 
-				fg="blue",bg="orange", 
-				command=lambda:self.action(')')).grid(row=2, column=5) 
+	button6 = Button(gui, text=' 6 ', fg='black', bg='red',
+					command=lambda: press(6), height=1, width=7)
+	button6.grid(row=3, column=2)
 
-			Button(master,text="?",width=5,height=3, 
-				fg="red",bg="light green", 
-				command=lambda:self.squareroot()).grid(row=3, column=4) 
+	button7 = Button(gui, text=' 7 ', fg='black', bg='red',
+					command=lambda: press(7), height=1, width=7)
+	button7.grid(row=4, column=0)
 
-			Button(master,text="x²",width=5,height=3, 
-				fg="white",bg="blue", 
-				command=lambda:self.square()).grid(row=3, column=5) 
+	button8 = Button(gui, text=' 8 ', fg='black', bg='red',
+					command=lambda: press(8), height=1, width=7)
+	button8.grid(row=4, column=1)
 
-# Driver Code 
-root = Tk() 
+	button9 = Button(gui, text=' 9 ', fg='black', bg='red',
+					command=lambda: press(9), height=1, width=7)
+	button9.grid(row=4, column=2)
 
-obj=calc(root) # object instantiated 
+	button0 = Button(gui, text=' 0 ', fg='black', bg='red',
+					command=lambda: press(0), height=1, width=7)
+	button0.grid(row=5, column=0)
 
-root.mainloop() 
+	plus = Button(gui, text=' + ', fg='black', bg='red',
+				command=lambda: press("+"), height=1, width=7)
+	plus.grid(row=2, column=3)
+
+	minus = Button(gui, text=' - ', fg='black', bg='red',
+				command=lambda: press("-"), height=1, width=7)
+	minus.grid(row=3, column=3)
+
+	multiply = Button(gui, text=' * ', fg='black', bg='red',
+					command=lambda: press("*"), height=1, width=7)
+	multiply.grid(row=4, column=3)
+
+	divide = Button(gui, text=' / ', fg='black', bg='red',
+					command=lambda: press("/"), height=1, width=7)
+	divide.grid(row=5, column=3)
+
+	equal = Button(gui, text=' = ', fg='black', bg='red',
+				command=equalpress, height=1, width=7)
+	equal.grid(row=5, column=2)
+
+	clear = Button(gui, text='Clear', fg='black', bg='red',
+				command=clear, height=1, width=7)
+	clear.grid(row=5, column='1')
+
+	Decimal= Button(gui, text='.', fg='black', bg='red',
+					command=lambda: press('.'), height=1, width=7)
+	Decimal.grid(row=6, column=0)
+	# start the GUI
+	gui.mainloop()

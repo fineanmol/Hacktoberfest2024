@@ -2,7 +2,6 @@
 ====================================================================================
 Title:  Factorial of number using recursion
 Author: Bhupendra Dangwal
-Date:   DD-MM-YYYY
 ====================================================================================
 */
 #include<bits/stdc++.h>

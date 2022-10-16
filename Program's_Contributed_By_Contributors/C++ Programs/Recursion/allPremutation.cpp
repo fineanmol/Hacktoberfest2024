@@ -2,28 +2,10 @@
 ====================================================================================
 Title:  all possible permutation using recursion
 Author: Bhupendra Dangwal
-Date:   16-09-2022
 ====================================================================================
 */
 #include <bits/stdc++.h>
 using namespace std;
-// void allPermutation(int nums[], int size){
-//     int l = 0;
-//     int r = size-1;
-//     for(int i = 0; i < size-1; i++){
-//         for(int j = 0; j < size-1; j++){
-//             if(i != j){
-//                 swap(nums[i], nums[j]);
-//             }
-//             for(int i = 0; i < size; i++){
-//         cout<<nums[i];
-//         }
-//         cout<<endl;
-//     }
-
-//     }
-
-// }
 
 void helper(vector<vector<int>> &res, vector<int> &nums, int i)
 {

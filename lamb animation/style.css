@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #1c0136;
+  min-height: 100vh;
+}
+.scene {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
+}
+img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-69.5%, -26%);
+  opacity: 0.2;
+  height: 1300px;
+}
+.lava-lamp {
+  height: calc(var(--height) * 1px);
+  width: calc(var(--width) * 1px);
+  position: relative;
+}
+.lava-lamp:after {
+  content: '';
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  background: radial-gradient(circle at 50% 50%, #19b5fe, transparent 60%);
+  top: 45%;
+  left: 50%;
+  z-index: 4;
+  transform: translate(-50%, -50%);
+  filter: blur(10px);
+  opacity: 0.5;
+}
+.lava-lamp:before {
+  content: '';
+  height: 25%;
+  width: 300%;
+  border-radius: 100%;
+  background: radial-gradient(ellipse at 50% 50%, #19b5fe, transparent 60%);
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0.5;
+  filter: blur(10px);
+}
+.lava-lamp__main {
+  border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+.lava-lamp__main:after,
+.lava-lamp__main:before {
+  background: #000;
+  content: '';
+  height: 12%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+.lava-lamp__main:after {
+  top: 0;
+}
+.lava-lamp__main:before {
+  bottom: 0;
+  height: 26%;
+}
+.lava-lamp__glass {
+  background: radial-gradient(circle at 50% 50%, #3a539b 25%, #19b5fe);
+  border-radius: 50%/10%;
+  overflow: hidden;
+  height: 70%;
+  left: 0;
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  z-index: 2;
+}
+.lava-lamp__base {
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  border-radius: 0 0 50% 50%/0 0 35% 35%;
+}
+.lava-lamp__base:before {
+  content: '';
+  background: #000;
+  border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+  position: absolute;
+  top: -60%;
+  height: calc(var(--height) * 1px);
+  width: calc(var(--width) * 1px);
+}
+.lava-lamp__lava {
+  border-radius: 50%/10%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  filter: url("#goo");
+}
+.lava-lamp__lava svg {
+  height: 280px;
+  width: 150px;
+}
+.blob {
+  -webkit-animation-delay: calc(var(--delay) * 1s);
+          animation-delay: calc(var(--delay) * 1s);
+  -webkit-animation-direction: var(--direction);
+          animation-direction: var(--direction);
+  -webkit-animation-duration: calc(var(--speed) * 1s);
+          animation-duration: calc(var(--speed) * 1s);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: blob;
+          animation-name: blob;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  fill: #29f1c3;
+  transform-box: fill-box;
+}
+.blob--bottom,
+.blob--top {
+  -webkit-animation: none;
+          animation: none;
+}
+.blob--top {
+  -webkit-animation: sway 20s infinite linear;
+          animation: sway 20s infinite linear;
+}
+@-webkit-keyframes sway {
+  50% {
+    transform: translate(50%, 0);
+  }
+}
+@keyframes sway {
+  50% {
+    transform: translate(50%, 0);
+  }
+}
+@-webkit-keyframes blob {
+  from {
+    transform: skew(calc(var(--skewX) * 1deg), calc(var(--skewY) * 1deg)) translate(0, 0);
+  }
+  to {
+    transform: skew(calc(var(--skewX) * 1deg), calc(var(--skewY) * 1deg)) translate(0, calc((400 + (var(--height) * 2)) * -1px));
+  }
+}
+@keyframes blob {
+  from {
+    transform: skew(calc(var(--skewX) * 1deg), calc(var(--skewY) * 1deg)) translate(0, 0);
+  }
+  to {
+    transform: skew(calc(var(--skewX) * 1deg), calc(var(--skewY) * 1deg)) translate(0, calc((400 + (var(--height) * 2)) * -1px));
+  }
+}

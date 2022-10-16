@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="tic tac toe.css">
+</head>
+
+
+    <nav>
+        
+            <a href="#" class="box01">Cross & Circles</a>
+            
+       
+    </nav>
+    <body>
+    <div class="gameinfo">
+        <h1>Welcome to the Game!!</h1>
+        <div>
+        <span class="info">Turn For X</span>
+        <button id="reset">Reset</button>
+        </div>
+        <div class="imgbox">
+          <img src="win.gif" alt="">
+        </div>
+
+    </div>
+    <div class="gamecontainer">
+        <div class="container">
+            <div class="line"></div>
+        <div class="box br-l br-t"><span class="boxtext"></span></div>
+        <div class="box br-t"><span class="boxtext"></span></div>
+        <div class="box br-t br-r"><span class="boxtext"></span></div>
+        <div class="box br-l"><span class="boxtext"></span></div>
+        <div class="box br-t"><span class="boxtext"></span></div>
+        <div class="box br-r"><span class="boxtext"></span></div>
+        <div class="box  br-l br-d"><span class="boxtext"></span></div>
+        <div class="box br-d"><span class="boxtext"></span></div>
+        <div class="box br-d br-r"><span class="boxtext"></span></div>
+        </div>
+        
+    </div>
+   
+
+
+    
+    <script src="tic tac toe.js"></script>
+</body>
+</html>

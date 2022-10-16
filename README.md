@@ -123,7 +123,7 @@ For more information on syncing forks [read this article from Github](https://he
 - What is the duration of Hacktoberfest 2022?
   - It is from 1st october to 31st october 2022...
 - What is the event for?
-  - For the open source community engagement
+  - For the open source community engagement and learn how to contribute to open source.
 
 
 

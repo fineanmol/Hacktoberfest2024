@@ -1,0 +1,41 @@
+*:not(.calculator, .calculator-button, .calculator input) {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(28deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+}
+
+.calculator .buttons {
+    /* display to center of screen */
+    transform: translate(35%, 25vh);
+    display: grid;
+    grid-template-rows: repeat(5, 10vh);
+    grid-template-columns: repeat(4, 7vw);
+}
+
+.calculator-button {
+    background:rgba(255, 255, 255, 0.5);
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 0.5em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.calculator-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.calculator input {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #000;
+    width: 26.2%;
+    transform: translate(35vw, 25vh);
+    border-radius: 5px;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 0.5em;
+    text-align: center;
+    cursor: pointer;
+}

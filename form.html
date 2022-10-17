@@ -1,0 +1,45 @@
+<html>
+
+    <head>
+
+        <title>Form</title>
+        <!--CSS Only-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="./style.css">
+                
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-md-5 shadow-lg p-3 mb-5 bg-white rounded">
+
+                    <h1>Form Validation</h1>
+
+                    <input type="text" id="username" class="form control" placeholder="Username">
+                    <small id="username_error">Username must contain atleast 8 characters</small>
+
+                    <input type="text" id="email" class="form control" placeholder="Email ID">
+                    <small id="email_error">Enter valid email ID</small>
+
+                    <input type="text" id="password" class="form control" placeholder="Password">
+                    <small id="password_error"></small>
+
+                    <input type="text" id="password_check" class="form control" placeholder="Confirm Password">
+                    <small id="username_error">Enter same password</small>
+
+                    <button class="btn btn-primary" onclick="validate()">SUBMIT</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+<script src="./index.js"></script>

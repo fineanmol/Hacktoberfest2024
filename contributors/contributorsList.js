@@ -2019,6 +2019,7 @@ contributors = [
     fullname: "Alejandro Armenta",
     username: "https://github.com/alexanderNWO",
   },
+  {
     id: 417,
     fullname: "Krish Katyal",
     username: "https://github.com/krishkatyal",
@@ -2030,7 +2031,17 @@ contributors = [
   },
   {
     id: 419,
-        fullname: "Diane Delallée",
-      username: "https://github.com/dianedelallee",
+    fullname: "Amit Kumar",
+    username: "https://github.com/amit-kumar",
+  },
+  {
+    id:420,
+    fullname:"Auro S.",
+    username:"https://github.com/aurocodes",
+  },
+ {
+    id: 421,
+    fullname: "Diane Delallée",
+    username: "https://github.com/dianedelallee",
   },
 ];

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background: #08c;
+        }
+        .rgb{
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 3, 221, 1);
+        }
+        .hexa{
+            width: 100px;
+            height: 100px;
+            background: #0000ff;
+        }
+        .hsl{
+            width: 100px;
+            height: 100px;
+            background: hsl(0, 89%, 48%);
+        }
+        .card{
+            width: 300px;
+            height: 100px;
+            background-color: #f2f2f2;
+        }
+        .img-bg{
+            width: 600px;
+            height: 400px;
+            background-image: url(https://picsum.photos/seed/picsum/200/300.jpg);
+        }
+        .repeat{
+            background-repeat: url(https://picsum.photos/seed/picsum/200/300.jpg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Coloring CSS -->
+
+        <div class="rgb">
+            <p>ini rgb</p>
+        </div>
+
+        <div class="hexa">
+            <p>ini hexacolor</p>
+        </div>
+
+        <div class="hsl">
+            <p>ini hsl</p>
+        </div>
+
+        <!-- background -->
+
+        <div class="card"></div>
+        <div class="img-bg"></div>
+        <div class="repeat"></div>
+    </div>
+</body>
+</html>

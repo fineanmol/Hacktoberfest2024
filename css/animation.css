@@ -25,12 +25,12 @@ body {
     padding: 0 40px;
   }
 
-    before {
+    a::before{
       content: '[';
       left: 0;
     }
 
-    after {
+    a::after {
       content: ']';
       position: absolute;
       right: 0;

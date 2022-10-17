@@ -635,3 +635,17 @@ body {
   font-weight: 600;
   box-shadow: inset 120px 0 0 0 #fe0c43;
 }
+
+#star-button-mobile {
+  display: none !important;
+}
+
+@media only screen and (max-width: 425px) {
+  #star-button-mobile {
+    display: block !important;
+  }
+
+  #star-button-desktop {
+    display: none !important;
+  }
+}

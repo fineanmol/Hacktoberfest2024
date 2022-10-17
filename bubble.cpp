@@ -10,13 +10,19 @@ void display(vector<int> A, int n)
 
 void B_S(vector<int> &A, int n)
 {
+    bool swapped;
     for (int i = 0; i < n - 1; i++)
     {
+        swapped = false;
         for (int j = 0; j < n - 1 - i; j++)
         {
             if (A[j] > A[j + 1])
                 swap(A[j], A[j + 1]);
         }
+        // IF no two elements were swapped
+     // by inner loop, then break
+     if (swapped == false)
+        break;
     }
 }
 

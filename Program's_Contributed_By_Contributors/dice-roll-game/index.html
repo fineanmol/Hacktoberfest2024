@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roll</title>
+    <style>
+        #box_main{
+            border: 2px solid black;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding:5%;
+            width: 8%;
+            margin-top: 20%;
+            margin-left: 38%;
+
+        }
+        #button{
+            display: block;
+            border: 2px solid white;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin-top: 10%;
+            padding: 5%;
+            text-align: center;
+            cursor: pointer;
+            /* padding-left: 15%;
+            padding-right: 15%; */
+        }
+        #result_span{
+            display: block;
+            margin-left: 38%;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box_main"> 
+      <span id="result_span">0</span> <br>
+      <span id="button" onclick="result()">Roll</span>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>

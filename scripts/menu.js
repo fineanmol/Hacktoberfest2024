@@ -12,6 +12,15 @@ const menu = {
   
 },
   //'Others': {
+  'Portfolio': {
+      'text': 'Portfolio',
+      'href': 'https://akshaykn.vercel.app/'
+    },
+  'StackOverflow': {
+      'text': 'StackOverflow',
+      'href': 'https://stackoverflow.com/users/7481663/akshay-k-nair'
+    },
+  
     'Instagram': {
       'text': 'Instagram Connect',
       'href': 'https://instagram.com/fineanmol'

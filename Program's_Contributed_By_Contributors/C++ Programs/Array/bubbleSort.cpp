@@ -29,3 +29,10 @@ int main(){
         printf("%d ",arr[i]);
     }
 }
+
+
+#Changes proposed in this Pull Request :
+# 1. Added a new python program for finding the longest common prefix in a list of strings
+
+#Other changes :
+#none

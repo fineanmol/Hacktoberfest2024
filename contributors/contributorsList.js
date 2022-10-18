@@ -4,7 +4,7 @@ contributors = [
     fullname: "Anmol Agarwal",
     username: "https://github.com/fineanmol",
   },
-  
+
   {
     id: 2,
     fullname: "Amitava Mitra",
@@ -1819,7 +1819,6 @@ contributors = [
     username: "https://github.com/sabin-thapa",
   },
   {
-
     id: 373,
     fullname: "Anurag Pandey",
     username: "https://github.com/eagleanurag/",
@@ -1968,13 +1967,12 @@ contributors = [
     id: 389,
     fullname: "Shubham Rawat",
     username: "https://github.com/shubhamrawat090",
-
   },
-  {  id: 390,
+  {
+    id: 390,
     fullname: "Shivam Sisodia",
     username: "https://github.com/shivamsisodia07",
   },
-
   {
     id: 410,
 
@@ -1986,14 +1984,11 @@ contributors = [
     fullname: "Isnani",
     username: "https://github.com/Isnani25",
   },
-
-    {
+  {
     id: 441,
     fullname: "Parth Panjwani",
     username: "https://github.com/Parth-Panjwani",
   },
-
-
   {
     id: 412,
     fullname: "Garima Jain",
@@ -2036,15 +2031,18 @@ contributors = [
     username: "https://github.com/amit-kumar",
   },
   {
-    id:420,
-    fullname:"Auro S.",
-    username:"https://github.com/aurocodes",
+    id: 420,
+    fullname: "Auro S.",
+    username: "https://github.com/aurocodes",
   },
-  
-   {
-    id:421,
-    fullname:"Gautami SInha",
-    username:"https://github.com/amnotcreative",
-  }
-
+  {
+    id: 421,
+    fullname: "Gautami SInha",
+    username: "https://github.com/amnotcreative",
+  },
+  {
+    id: 422,
+    fullname: "Oleg Semenov",
+    username: "https://github.com/ilmonyd",
+  },
 ];

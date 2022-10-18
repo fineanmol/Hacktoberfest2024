@@ -5,7 +5,7 @@ Hacktoberfest-2022
 
 # Submit your PR on this new repo [Hacktoberfest](https://github.com/fineanmol/hacktoberfest) , There we are merging all PR. 
 
-In this current repo, there are alot of conflicts, we are not merging until all conflicts get resolved.
+In this current repo, there are alot of conflicts, we are not merging until all conflicts get resolved./
 Hacktoberfest { [Live Website](https://fineanmol.github.io/Hacktoberfest2022/)}
 
 

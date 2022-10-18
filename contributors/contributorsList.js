@@ -2045,7 +2045,7 @@ contributors = [
     id:421,
     fullname:"Gautami SInha",
     username:"https://github.com/amnotcreative",
-  }
+  },
   {
     id: 422,
     fullname: "Uday Kharatmol",

@@ -32,9 +32,9 @@ jobs:
   automerge:
     runs-on: ubuntu-latest
     steps:
-      - id: automerge
-        name: automerge
-        uses: "pascalgn/automerge-action@v0.15.5"
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          PULL_REQUEST: ${{ github.event.inputs.pull-request }}
+      - uses: reitermarkus/automerge@v2
+        with:
+           token: ${{ secrets.GITHUB_TOKEN }}
+           merge-method: rebase
+           do-not-merge-labels: never-merge
+           pull-request: ${{ github.event.inputs.pull-request }}

@@ -26,3 +26,4 @@ if __name__ == "__main__":
     n = int(input())
     arr = [int(i) for i in input().split(" ")]
     print(maxSum(arr,n))
+# input : 1 2 5 6 8 -4 5

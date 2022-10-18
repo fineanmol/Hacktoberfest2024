@@ -34,3 +34,10 @@ class Solution:
         ans = head.traverse(strs[0],len(strs))
         print(ans)
         return strs[0][:ans]
+
+
+#Changes proposed in this Pull Request :
+# 1. Added a new python program for finding the longest common prefix in a list of strings
+
+#Other changes :
+#none

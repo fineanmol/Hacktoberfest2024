@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form>
+        <!-- username -->
+        <div>
+            <label for="user">Username</label><br>
+            <input type="text" id="user" required>
+        </div>
+        <!-- email -->
+        <div>
+            <label for="mail">Email</label><br>
+            <input type="email" id="mail" required placeholder="abc@example.com">
+        </div>
+        <!-- time -->
+        <div>
+            <label for="tim">Time</label><br>
+            <input type="time" id="tim">
+        </div>
+        <!-- url -->
+        <div>
+            <label for="link">URL</label><br>
+            <input type="url" id="link">
+        </div>
+        <!-- range -->
+        <div>
+            <label for="range">Range</label><br>0
+            <input type="range" id="range" step="1" min="0" max="10">10
+        </div>
+        <!-- country -->
+        <div>
+            <div>
+                <label for="desh">Country</label><br>
+                <input type="text" id="desh" name="country" value="India" disabled>
+                <!-- disabled freezes the value -->
+                <!-- value will automatically allot default value in the box -->
+            </div>
+        </div>
+        <!-- password -->
+        <div>
+            <label for="pass">Password</label><br>
+        <input type="password" id="pass" required>
+        </div>
+        <!-- gender -->
+        <div>
+                <label for="sex">Gender</label><br>
+                <input type="radio" id="sex" name="sss">male
+                <input type="radio" id="sex" name="sss">female
+                <input type="radio" id="sex" name="sss">other
+                <!-- if we give differnt values of name in all multiple genders will be selected which we don't want but in this case we are giving same name only one value of gender can be allocated to sss so radio will only select only value -->
+
+        </div>
+        <!-- course done -->
+        <div>
+            <p>Course done</p>
+            <input type="checkbox" id="x" name="course" value="C++" checked>C++<br>
+            <input type="checkbox" id="x" name="course" value="Java" >Java<br>
+            <input type="checkbox" id="x" name="course" value="WebD" >WebD<br>
+        </div>
+        <!-- month -->
+        <div>
+            <p>Month</p>
+            <select name="month_selected" id="">
+                <option value="Jan">Jan</option>
+                <option value="Feb">Feb</option>
+                <option value="Mar">Mar</option>
+                <option value="Apr">Apr</option>
+                <option value="May">May</option>
+                <option value="Jun" selected>Jun</option>
+                <option value="Jul">Jul</option>
+                <option value="Aug">Aug</option>
+            </select>
+        </div>
+        <!-- suggestion -->
+        <div>
+            <p>
+                Any Suggestions !
+            </p>
+            <textarea name="suggestion" rows="5" cols="30">
+            </textarea>
+        </div>
+        <!-- button -->
+        <div>
+            <p>Buttons</p>
+            <input type="button" name="button 1" value="button 1">
+            <button type="button">
+                Button 2
+            </button>
+            <button type="reset">
+                Reset
+            </button>
+            <button type="submit">
+                Submit
+            </button>
+            <button type="button">
+                <img src="button.jpg" height="30" width="30" >
+            </button>
+            <!-- we can't add image using input tag -->
+        </div>
+        <!-- submit -->
+        <div>
+            <br>
+
+        <input type="submit">
+        </div>
+    </form>
+</body>
+</html>

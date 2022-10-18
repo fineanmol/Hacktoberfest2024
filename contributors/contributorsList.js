@@ -2040,11 +2040,14 @@ contributors = [
     fullname:"Auro S.",
     username:"https://github.com/aurocodes",
   },
-  
-   {
+  {
     id:421,
+    fullname:"Ivan Moll",
+    username:"https://github.com/imollm",
+  },
+  {
+    id:422,
     fullname:"Gautami SInha",
     username:"https://github.com/amnotcreative",
   }
-
 ];

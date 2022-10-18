@@ -2046,5 +2046,11 @@ contributors = [
     fullname:"Gautami SInha",
     username:"https://github.com/amnotcreative",
   }
+    {
+    id: 1,
+    fullname: "Uday Kharatmol",
+    username: "https://github.com/UdayKharatmol",
+  },
+  
 
 ];

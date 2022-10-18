@@ -38,5 +38,15 @@
       <span id="button" onclick="result()">Roll</span>
     </div>
 </body>
-<script src="main.js"></script>
+<script>
+function result(){
+  var result=dice.roll()
+}
+dice = {
+        sides: 6,
+        roll: function () {
+         var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+         return randomNumber; 
+        }}
+  </script>
 </html>

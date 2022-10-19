@@ -16,6 +16,7 @@ class calc:
 	def equals(self): 
 		"""when the equal button is pressed"""
 		self.getandreplace() 
+		# this is important
 		try: 
 			# evaluate the expression using the eval function 
 			self.value= eval(self.newtext) 

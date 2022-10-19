@@ -9,6 +9,7 @@ void display(vector<int> A, int n)
 }
 
 void B_S(vector<int> &A, int n)
+    
 {
     vector<int> B[n];
     for(int i=0;i<n;i++){
@@ -16,10 +17,10 @@ void B_S(vector<int> &A, int n)
     }
 }
 
-int main()
+int main() //making main function
 {
     vector<int> V;
-    int ch, n;
+    int ch, n; //defining variables
     cout << "size: ";
     cin >> n;
     cout << "ENTER ARRY: ";

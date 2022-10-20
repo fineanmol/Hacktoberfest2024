@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+	<title>Random Images</title>
+</head>
+
+<body>
+
+	<center>
+		<div class="card mb-3" style="width: 50%; margin-top: 50px;">
+
+			<div id="spinner" style="display: none" class="text-center">
+				<div style="margin-top: 250px; margin-bottom: 225px;" class="spinner-border" role="status">
+					<span class="sr-only">Loading...</span>
+				</div>
+			</div>
+
+			<img id="img_random" src="https://source.unsplash.com/collection/190727/800x600" class="card-img-top"
+				alt="...">
+			<div class="card-body" onclick="randomizeImage()">
+				<a id="btn_random" class="btn btn-primary">Random Image</a>
+			</div>
+		</div>
+
+	</center>
+
+	<script>
+
+		var counter = 0
+		function randomizeImage() {
+
+			document.getElementById('spinner').style.display = 'inline'
+
+			if (counter % 2 == 0) {
+				src = 'https://source.unsplash.com/random/800x600?=' + getRandomInt(0, 999999)
+			}
+			else {
+				src = 'https://source.unsplash.com/random/800x600?=' + getRandomInt(0, 999999)
+			}
+
+			document.getElementById('img_random').src = src
+			document.getElementById('img_random').style.display = 'none'
+
+
+			sleep(3000).then(() => {
+				document.getElementById('spinner').style.display = 'none'
+				document.getElementById('img_random').style.display = 'inline'
+			});
+
+			counter++
+		}
+
+		function getRandomInt(min, max) {
+			min = Math.ceil(min);
+			max = Math.floor(max);
+			return Math.floor(Math.random() * (max - min)) + min;
+		}
+
+		function sleep(time) {
+			return new Promise((resolve) => setTimeout(resolve, time));
+		}
+
+	</script>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

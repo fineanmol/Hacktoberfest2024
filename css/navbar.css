@@ -1,0 +1,60 @@
+.navbar{
+  padding:.5rem 2rem
+}
+nav{
+  background-color:var(--nav-color)
+}
+.navbar-nav{
+  width:100%
+}
+.navbar-brand{
+  line-height:1;
+  margin-right:1rem
+}
+.navbar-brand svg{
+  height:37px;
+  width:auto;
+  vertical-align:middle
+}
+.navbar-light .navbar-nav .nav-link{
+  color:var(--text);
+  position:relative;
+  padding:5px;
+  margin:0 10px!important
+}
+.navbar-light .navbar-nav .active{
+  background-color:#f1ffc5
+}
+.navbar-light .navbar-nav .active>.nav-link{
+  color:#df271a;
+  font-weight:700
+}
+.navbar-light .navbar-nav .nav-link::before{
+  background-color:currentColor;
+  bottom:-1px;
+  content:"";
+  height:1px;
+  left:auto;
+  right:0;
+  position:absolute;
+  -webkit-transition:width .2s ease-in-out;
+  -o-transition:width .2s ease-in-out;
+  transition:width .2s ease-in-out;
+  width:0
+}
+.navbar-light .navbar-nav .nav-link:hover{
+  color:#000
+}
+.navbar-light .navbar-nav .nav-link:hover::before{
+  left:0;
+  right:auto;
+  width:100%
+}
+.nav-link svg{
+  width:auto;
+  height:25px;
+  vertical-align:text-top
+}
+.navbar-light .navbar-nav .nav-link:hover{
+  color:#dc143c
+}

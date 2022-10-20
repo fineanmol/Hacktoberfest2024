@@ -24,15 +24,15 @@ int main()
 {
     vector<int> V;
     int ch, n;
-    cout << "size: ";
-    cin >> n;
+    cout << "size: ";     
+    cin >> n;		//taking size from user
     cout << "ENTER ARRY: ";
     for (int i = 0; i < n; i++)
     {
-        cin >> ch;
+        cin >> ch;		//taking array values
         V.push_back(ch);
     }
 
-    B_S(V, n);
-    display(V, n);
+    B_S(V, n);			//user defined fxn to sort the array
+    display(V, n);		//to display the array
 }

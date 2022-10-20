@@ -27,14 +27,15 @@ int main()
     vector<int> V;
     int ch, n;
     cout << "size: ";
-    cin >> n;
+    cin >> n;                //taking size from user
     cout << "ENTER ARRY: ";
     for (int i = 0; i < n; i++)
     {
         cin >> ch;
-        V.push_back(ch);
+        V.push_back(ch);	//taking and storing array values form user
+
     }
 
-    I_S(V, n);
-    display(V, n);
+    I_S(V, n);			//user defined sort fun
+    display(V, n);		// to display array
 }

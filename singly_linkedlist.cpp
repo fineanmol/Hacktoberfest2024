@@ -110,7 +110,8 @@ int main()
     insert(head, 10);
     itail(tail, 22);
     print(head);
- 
+ //ayushsavner
+ cout<<"Ayush";
     print(head);
     deleteNode(3, head);
     print(head);

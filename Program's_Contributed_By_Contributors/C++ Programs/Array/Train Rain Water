@@ -1,0 +1,54 @@
+//Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
+//Input: arr = [0,1,0,2,1,0,1,3,2,1,2,1]
+//Output: 6
+
+#include<iostream>
+using namespace std;
+int trapRainWater(int arr[],int n){
+    int res=0;
+    for (int i = 0; i < n-1; i++)
+    {
+        int rightmax=arr[i];
+        int rightstep=0;
+        int rightsum=0;
+        int leftAns=0;
+        for (int j = i+1; j <n; j++)
+        {
+            if(arr[i]>=arr[j]){
+                rightsum+=arr[j];
+                rightstep++;
+            }
+            else{
+                leftAns=((arr[i])*rightstep)-rightsum;
+                break;
+            }
+        }
+        int leftmax = arr[i];
+        int leftstep = 0;
+        int leftsum = 0;
+        int rightAns=0;
+        for (int j = i; j >=0 ; j--)
+        {
+            if (arr[i] >= arr[j])
+            {
+                leftsum += arr[j];
+                leftstep++;
+            }
+            else
+            {
+                rightAns = (arr[i] * leftstep) - leftsum;
+                break;
+            }
+        }
+        cout<<leftAns<<" "<<rightAns<<endl;
+res=max(res,leftAns+rightAns);
+    }
+    return res;
+}
+int main()
+{
+    int arr[]={3,0,1,2,5,0,0,6};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    cout<<trapRainWater(arr,n);
+return 0;
+}

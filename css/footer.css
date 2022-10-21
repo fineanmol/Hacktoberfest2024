@@ -6,17 +6,17 @@
     /* height: 100px; */
     background: linear-gradient(to left, #FF0844, #FF4563);
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    color: wheat;
+    color: blue;
     text-align: center;
     z-index: 1000;
 
 }
 #footer h3 {
-  padding: 5px;
-  height: 25px;
+  padding: 5rem;
+  height: 30px;
 }
 .footer-icon {
-  color: #ff229b;
+  color: #ff2222;
 }
 #footer h3 span:hover {
   cursor: pointer;

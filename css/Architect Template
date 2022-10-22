@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>cs.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+<div class="cs-top">
+  <div class="cs-bar cs-white cs-wide cs-padding cs-card">
+    <a href="#home" class="cs-bar-item cs-button"><b>BR</b> Architects</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="cs-right cs-hide-small">
+      <a href="#projects" class="cs-bar-item cs-button">Projects</a>
+      <a href="#about" class="cs-bar-item cs-button">About</a>
+      <a href="#contact" class="cs-bar-item cs-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<header class="cs-display-container cs-content cs-wide" style="max-width:1500px;" id="home">
+  <img class="cs-image" src="/csimages/architect.jpg" alt="Architecture" width="1500" height="800">
+  <div class="cs-display-middle cs-margin-top cs-center">
+    <h1 class="cs-xxlarge cs-text-white"><span class="cs-padding cs-black cs-opacity-min"><b>BR</b></span> <span class="cs-hide-small cs-text-light-grey">Architects</span></h1>
+  </div>
+</header>
+
+<div class="cs-content cs-padding" style="max-width:1564px">
+
+  <div class="cs-container cs-padding-32" id="projects">
+    <h3 class="cs-border-bottom cs-border-light-grey cs-padding-16">Projects</h3>
+  </div>
+
+  <div class="cs-row-padding">
+    <div class="cs-col l3 m6 cs-margin-bottom">
+      <div class="cs-display-container">
+        <div class="cs-display-topleft cs-black cs-padding">Summer House</div>
+        <img src="/csimages/house5.jpg" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="cs-col l3 m6 cs-margin-bottom">
+      <div class="cs-display-container">
+        <div class="cs-display-topleft cs-black cs-padding">Brick House</div>
+        <img src="/csimages/house2.jpg" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="cs-col l3 m6 cs-margin-bottom">
+      <div class="cs-display-container">
+        <div class="cs-display-topleft cs-black cs-padding">Renovated</div>
+        <img src="/csimages/house3.jpg" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="cs-col l3 m6 cs-margin-bottom">
+      <div class="cs-display-container">
+        <div class="cs-display-topleft cs-black cs-padding">Barn House</div>
+        <img src="/csimages/house4.jpg" alt="House" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-row-padding">
+    <div class="cs-col l3 m6 cs-margin-bottom">
+      <div class="cs-display-container">
+        <div class="cs-display-topleft cs-black cs-padding">Summer House</div>
+        <img src="/csimages/house2.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="cs-col l3 m6 cs-margin-bottom">
+      <div class="cs-display-container">
+        <div class="cs-display-topleft cs-black cs-padding">Brick House</div>
+        <img src="/csimages/house5.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="cs-col l3 m6 cs-margin-bottom">
+      <div class="cs-display-container">
+        <div class="cs-display-topleft cs-black cs-padding">Renovated</div>
+        <img src="/csimages/house4.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="cs-col l3 m6 cs-margin-bottom">
+      <div class="cs-display-container">
+        <div class="cs-display-topleft cs-black cs-padding">Barn House</div>
+        <img src="/csimages/house3.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-container cs-padding-32" id="about">
+    <h3 class="cs-border-bottom cs-border-light-grey cs-padding-16">About</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+      occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+      laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+  </div>
+
+  <div class="cs-row-padding cs-grayscale">
+    <div class="cs-col l3 m6 cs-margin-bottom">
+      <img src="/csimages/team2.jpg" alt="John" style="width:100%">
+      <h3>John Doe</h3>
+      <p class="cs-opacity">CEO & Founder</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="cs-button cs-light-grey cs-block">Contact</button></p>
+    </div>
+    <div class="cs-col l3 m6 cs-margin-bottom">
+      <img src="/csimages/team1.jpg" alt="Jane" style="width:100%">
+      <h3>Jane Doe</h3>
+      <p class="cs-opacity">Architect</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="cs-button cs-light-grey cs-block">Contact</button></p>
+    </div>
+    <div class="cs-col l3 m6 cs-margin-bottom">
+      <img src="/csimages/team3.jpg" alt="Mike" style="width:100%">
+      <h3>Mike Ross</h3>
+      <p class="cs-opacity">Architect</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="cs-button cs-light-grey cs-block">Contact</button></p>
+    </div>
+    <div class="cs-col l3 m6 cs-margin-bottom">
+      <img src="/csimages/team4.jpg" alt="Dan" style="width:100%">
+      <h3>Dan Star</h3>
+      <p class="cs-opacity">Architect</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="cs-button cs-light-grey cs-block">Contact</button></p>
+    </div>
+  </div>
+
+  <div class="cs-container cs-padding-32" id="contact">
+    <h3 class="cs-border-bottom cs-border-light-grey cs-padding-16">Contact</h3>
+    <p>Lets get in touch and talk about your next project.</p>
+    <form action="/action_page.php" target="_blank">
+      <input class="cs-input cs-border" type="text" placeholder="Name" required name="Name">
+      <input class="cs-input cs-section cs-border" type="text" placeholder="Email" required name="Email">
+      <input class="cs-input cs-section cs-border" type="text" placeholder="Subject" required name="Subject">
+      <input class="cs-input cs-section cs-border" type="text" placeholder="Comment" required name="Comment">
+      <button class="cs-button cs-black cs-section" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </form>
+  </div>
+  
+<div class="cs-container">
+  <img src="/csimages/map.jpg" class="cs-image" style="width:100%">
+</div>
+
+</div>
+
+<footer class="cs-center cs-black cs-padding-16">
+</footer>
+
+</body>
+</html>

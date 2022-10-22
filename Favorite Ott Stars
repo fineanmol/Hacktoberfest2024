@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<title> 
+    OTT KINGS
+</title>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">INDIAN OTT KINGS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="https://www.netflix.com/in/">Netflix</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.primevideo.com/?ref_=dvm_pds_amz_in_as_s_g_146">Amazon Prime</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     More ?
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="https://www.google.co.in/">Disney+ Hotstar</a></li>
+                    <li><a class="dropdown-item" href="https://www.google.co.in/imghp?hl=en&ogbl">Zee5</a></li>
+                
+                    <li><a class="dropdown-item" href="https://www.youtube.com/">Voot</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit" href="https://www.google.co.in\">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <div class="container">
+            <div class="row ">
+              <div class="col-lg-9" style="background-color: #ffffffdc;">
+                <div style="margin: 20px; text-align:center;">
+                <br> <b> Jitendra Kumar as Abhishek </b> <br> <br>
+                in Panchayat (April 2020)<br> <br>
+                <img src="https://filmfare.wwmindia.com/content/2021/jan/6mostlovedottcharactersfrom202011611582607.jpg" class="img-fluid" style="width:100%" >
+                <p> <br> The plot of the show itself was interesting enough to garner attention. The show revolved around the storyline of the lead character played by Jitendra Kumar who finds himself adapting to a new life in a village. After having a degree in engineering, he finds it difficult to cope up with all the new adjustments in the village. After a highly impressive performance in Shubh Mangal Zyada Saavdhan opposite Ayushmann Khurrana, his OTT performance left a lasting impression as well. </p>
+                </div> <hr>
+
+                <div class="col-lg-12" style="background-color: #ffffffdc;">
+                  <div style="margin: 20px; text-align:center;">
+                  <br> <b> Maanvi Gagroo as Siddhi </b> <br> <br>
+                   in Four More Shots Please (April 2020) <br> <br>
+                  <img src="https://filmfare.wwmindia.com/content/2021/jan/6mostlovedottcharactersfrom202021611582666.jpg" class="img-fluid" style="width:100%" >
+                  <p> <br>  Maanvi’s character evolved beautifully in the second season of Four more shots please that was released back in April 2020. The show also got nominated for the Emmy which pretty much proves its success rate. The show revolves around 4 women and their struggles in the lives they lead. However, Siddhi’s character was the most loved and admired. She played the role of a girl, burdened with the wishes of her mother, constantly body shamed. But it was eventually her breaking all the shackles and finding her worth amidst all of it that made her the most loved character of the show. </p></div>
+                </div> <hr>
+
+                <div class="col-lg-12" style="background-color: #ffffffdc;">
+                  <div style="margin: 20px; text-align:center;">
+                  <br> <b> Jaideep Ahlawat as Hathi Ram Chaudhary </b> <br> <br>
+                  in Paatal Lok (May 2020) <br> <br>
+                  <img src="https://filmfare.wwmindia.com/content/2021/jan/6mostlovedottcharactersfrom202031611582637.jpg" class="img-fluid" style="width:100%" >
+                  <p> <br>Even after giving convincing [performances in Raazi and Gangs of Wasseypur, it was only in the OTT show Paatal Lok, where Jaideep Ahlawat got to showcase his talent completely. His role as an honest Delhi cop in solving a case of a failed assassination was highly appreciated. So much so, that he went on to win the award for Best Actor in a drama series in the recently held Filmfare’s OTT Awards. His effortless acting became the talk of the town in no time. </p></div>
+                </div><hr>
+
+                <div class="col-lg-12" style="background-color: #ffffffdc;">
+                  <div style="margin: 20px; text-align:center;">
+                  <br> <b> Pratik Gandhi as Harshad Mehta</b> <br> <br>
+                  in Scam 1992: The Harshad Mehta Story (October 2020) <br> <br>
+                  <img src="https://filmfare.wwmindia.com/content/2021/jan/6mostlovedottcharactersfrom202061611582719.jpg" class="img-fluid" style="width:100%" >
+                  <p> <br> The actor spoke at length about how after years of struggles, he finally found his footing in the industry through this show. Scam 1992 got explosive ratings and reviews and was an overnight successful show. Pratik Gandhi’s portrayal of the pivotal character – Harshad Mehta was unbeatable. A man who changed the face of the stock market and took it to unbeatable heights was portrayed effortlessly by Pratik Gandhi. The storyline was very intriguing with the depiction of all the ups and downs he faced as a businessman and stockbroker and how it changed his life forever. </p></div>
+                </div><hr>
+ 
+                <div class="col-lg-12" style="background-color: #ffffffdc;">
+                  <div style="margin: 20px; text-align:center;">
+                  <br> <b> Shreya Dhanwantary as Sucheta Dalal  </b> <br> <br>
+                  in Scam 1992: The Harshad Mehta Story (October 2020) <br> <br>
+                  <img src="https://filmfare.wwmindia.com/content/2021/jan/6mostlovedottcharactersfrom202051611582700.jpg" class="img-fluid" style="width:100%" >
+                  <p> <br> Pratik Gandhi was surely the star of the most successful show from 2020. However, Shreya’s portrayal as the headstrong and honest lawyer named Sucheta Dalal was also highly impressive. Her journey towards exposing the Harshad Mehta Scam was played with utmost conviction and she sure got her share of the limelight to bask in the unimaginable glory that the show achieved. </p></div>
+                </div><hr>
+              </div>
+            </div>
+        </div>
+</body>
+</head>
+</html>

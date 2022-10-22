@@ -1,4 +1,4 @@
-# Program to check if a number is prime or not
+# Program to check if a number is prime or not lable
 
 num = 29
 

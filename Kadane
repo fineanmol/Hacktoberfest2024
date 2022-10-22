@@ -1,0 +1,55 @@
+// Github Username: amitagoel
+#include <iostream>
+using namespace std;
+
+class Solution{
+    public:
+
+    //Function to find the sum of contiguous subarray with maximum sum.
+    long long max(long long x, long long y){
+        if(x > y){
+            return x;
+        }else{
+            return y;
+        }
+    }
+    
+    long long maxSubarraySum(int arr[], int n){
+        
+        long long max_current = arr[0];
+        long long max_global = arr[0];
+        
+        for(int i=1; i<=n-1; i++){
+            max_current = max(arr[i], max_current + arr[i]); 
+            
+            if(max_current > max_global){
+                max_global = max_current;
+            }
+        }
+        
+        return max_global;
+        
+    }
+};
+
+
+int main()
+{
+    int t,size;
+    
+    cin>>t; //input testcases
+    while(t--) //while testcases exist
+    {
+        
+        cin>>size; //input the size of array
+        
+        int a[size];
+        
+        for(int i=0;i<size;i++)
+            cin>>a[i]; //input the elements of array
+            
+        Solution obj;
+        
+        cout << obj.maxSubarraySum(a, size) << endl;
+    }
+}

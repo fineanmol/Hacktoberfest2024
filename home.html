@@ -1,0 +1,732 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+    <script>
+
+        function text() {
+            var a = document.getElementById("text1").value;
+            alert("WELCOME TO CARVAN ");
+
+        }
+
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+
+
+
+    </script>
+    
+
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #head {
+            height: 105px;
+            width: 100%;
+            background: -webkit-linear-gradient(#333,white);
+            position: absolute;
+            z-index: 10000;
+			z-index:1px;
+			position:fixed;
+        }
+
+        #logo {
+            height: 105px;
+            width: 220px;
+           
+            margin-left: 20px;
+			
+        }
+
+        #nav ul {
+            list-style: none;
+			z-index:1px;
+			position:fixed;
+        }
+
+            #nav ul li {
+                background-color: black;
+                border: 1px solid red;
+                width: 120px;
+                height: 35px;
+                line-height: 35px;
+                text-align: center;
+                float: left;
+                border-radius: 8px;
+                position: relative;
+            }
+
+                #nav ul li a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 16px;
+                    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+                    display: block;
+                }
+
+                    #nav ul li a:hover {
+                        background-color: #999;
+                        border-radius: 8px;
+                        color: black;
+                    }
+
+            #nav ul ul {
+                position: absolute;
+                display: none;
+            }
+
+            #nav ul li:hover > ul {
+                display: block;
+            }
+
+            #nav ul ul ul {
+                margin-left: 120px;
+                top: 0px;
+            }
+
+        #videoo {
+            height: 600px;
+            width: 100%;
+            background-color: #0FF;
+        }
+
+        img {
+            width: 220px;
+            height: 105px;
+        }
+
+        #video {
+            width: 100%;
+            /* margin-top: 105px; */
+            position: absolute;
+            top: -40px;
+        }
+		
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image:url(pic7.jpg);
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image:url(pic2.jpg);
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image:url(pic5.jpg);
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color:none;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+#modal{
+	background-color:red;
+	height:300px;
+	width:100%;
+	position:relative;
+	margin-top:-30px;}
+	
+.container {
+    position: relative;
+height:340px;
+    width: 33.33%;
+    float:left;
+	background-color:#333;
+	margin-top:auto;
+}
+
+.image {
+float:left;
+  
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+  opacity: 0.4;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  
+  color: white;
+  font-size: 26px;
+
+}
+
+.mainfooter{
+	width:100%;
+	height:350px;
+	background-image:url(img.jpg);
+	position:absolute;
+	margin-top:350px;
+	
+	
+	
+	}
+
+.footer1
+{ width:30%;
+height:300px;
+background-color:#626262;
+margin-left:10px;
+margin-top: 40px;
+position:absolute;
+
+
+}
+
+.footer2
+{ width:30%;
+height:300px;
+background-color:#626262;
+float:right;
+margin-top:40px;
+margin-right:10px;
+
+}
+
+.footer3
+{ width:30%;
+height:300px;
+background-color:#626262;
+margin-left:470px;
+margin-top:40px;
+
+
+}
+
+a{text-decoration:none;}
+	#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 1;
+  border: none;
+  outline: none;
+  background-color: Black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+    </style>
+</head>
+
+<body bgcolor="#000000">
+    <div id="head">
+ 
+
+ 
+        <div id="logo">
+            <img src="LOGO.png"style="height:155px;margin-top:-20px;width:200px;" />
+        </div>
+        <div id="nav" style="margin-top:-40px;margin-left:350px;">
+            <ul>
+                <li><a href="home-page.html">Home</a> </li>
+                <li><a href="Pre-owned car/Pre-owned.html">PreOwned Cars</a> </li>
+
+
+                <li>
+                    <a href="#">Brands</a>
+                    <ul>
+                        <li>
+                            <a href="#">Toyota</a>
+                            <ul>
+                                <li><a href="Brands/toyota prius/toyo.html">Toyota Prius</a></li>
+                                <li><a href="Brands/toyota-corolla/toyo-corolla.html">Toyota Corolla</a></li>
+                                <li><a href="Brands/toyota-corolla/toyo-corolla.html">Toyota Camry</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Suzuki</a>
+                           <ul>
+                                <li><a href="Brands/suzuki Swift/Suzuki Swift.html">Suzuki Swift</a></li>
+                                <li><a href="Brands/Suzuki Vitara/Suzuki Vitara.html">Suzuki Vitara</a></li>
+                                <li><a href="Brands/Suzuki/Suzuki Er.html">Suzuki ER</a></li>
+                            </ul>
+
+                        </li>
+                        <li>
+                            <a href="#">Honda</a>
+                            <ul>
+                                <li><a href="Brands/Honda City/Honda city.html">Honda City</a></li>
+                                <li><a href="Brands/Honda Cvic/Honda Cvic.html">Honda Cvic</a></li>
+                                <li><a href="Brands/Honda CR-V/Honda CR-V.html">Honda CV-R</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="#">Range of Cars</a>
+                    <ul>
+                        <li>
+                            <a href="Rang of cars/Small Cars/Small cars.html">Small Car</a>
+
+
+                        </li>
+                        <li>
+                            <a href="Rang of cars/Sedan Cars/sedan cars.html">SEDAN</a>
+
+                        </li>
+                        <li>
+                            <a href="Rang of cars/Van/Van.html">VAN</a>
+
+                        </li>
+                        <li>
+                            <a href="Rang of cars/Jeep/Jeep.html">JEEPS</a>
+
+                        </li>
+                    </ul>
+
+
+                </li>
+
+
+                <li><a href="About us/About us.html">About Us</a> </li>
+                <li><a href="Contact us/Contact us.html">Contact Us</a> </li>
+
+            </ul>
+
+
+
+        </div>
+    </div>
+
+    <div style="clear:both"></div>
+
+    <div id="videoo" >
+
+        <video id="video" style="width: 100%;" autoplay="autoplay" loop="loop" muted=muted>
+            <source src="1.MP4" type="video/mp4" />
+
+
+        </video>
+
+
+    </div>
+    <div id="login">
+
+
+
+        <input type="text" id="text1" required=required style=" text-align: center; width: 260px; height: 35px; border: solid rgba(139,139,139,1.00) 3px; opacity: 0.6; position:absolute;  margin-left: 560px; margin-top: -140px;" />
+
+        <input type="button" value="Login" onclick="text()" style="position: absolute; width: 60px; height: 35px; background-color:#999; margin-left: 650px; margin-top: -90px; opacity: 0.5; border: rgba(221,176,177,1.00); border-radius: 20px;" />
+
+        <p style="text-align:center;color:white;position:absolute;margin-left:520px;margin-top:-285px;font-size:36px;font-family:Georgia, 'Times New Roman', Times, serif;"><b>Welcome To Carvan</b></p></br>
+        <p style="text-align:center;color:white;position:absolute;margin-left:370px;margin-top:-270px;font-size:36px;font-family:Georgia, 'Times New Roman', Times, serif;">You Are Here To Hire a Best Car Dealer</p>
+
+
+
+    </div>
+     
+ <div class="bgimg-1">
+  <div class="caption">
+    <span class="border">WRANGLER UNLIMITED</span>
+  </div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h3 style="text-align:center;">WRANGLER UNLIMITED</h3>
+  <p>Inside the 2017 Wrangler Unlimited, you'll enjoy ample storage space, thoughtfully designed ergonomics and noise, vibration and harshness protection. You'll also get comfort and convenience features including available heated leather-trimmed front seats and an available auto-dimming rearview mirror with integrated LED map lights.
+Adventure freely, safely and securely with available Wrangler Unlimited off-road features like Hill Start Assist, Hill Descent Control and the Tire Pressure Monitoring Display System.Stay connected with your vehicle and the outside world. Packaging equipment together into the Connectivity Group gives you the most popular available features at a great value.</p>
+</div>
+
+<div class="bgimg-2">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">COROLLA HUBCAPS</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>Corolla is down for fun with its available 7-in. touch-screen display featuring an available Entune Audio Plus system and Connected Navigation. .</p>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SUZUKI MEHRAN</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>The Suzuki Mehran is a globally retired small car manufactured and marketed by Pak Suzuki Motors, a subsidiary of Suzuki in Pakistan. It is a rebadged second-generation Suzuki Alto which was sold in the Japanese and European market from 1984 to 1988. Pakistan remains the only country where the vehicle is still in production until 2017.
+</p>
+  </div>
+</div>
+
+<div class="bgimg-1">
+  <div class="caption">
+    <span class="border">JEEP!</span>
+  </div>
+</div>
+
+<p><center  style="font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif;font-size:36px;margin-top:0px;" >HONDA</center></p>
+
+
+<div class="container">
+  <img src="honda xr-v.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+   <a href="Brands/Honda CR-V/Honda CR-V.html" style="text-decoration:none;"> <div class="text">HONDA CV-R</div></a>
+  </div>
+</div>
+ 
+ <div class="container">
+  <img src="hondacivic.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+   <a href="Brands/Honda Cvic/Honda Cvic.html"> <div class="text">HONDA CIVIC</div></a>
+  </div>
+</div>
+  
+  <div class="container">
+  <img src="honda-civichybrid.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+   <a href="Brands/Honda City/Honda city.html"> <div class="text">HONDA City</div></a>
+  </div>
+</div>
+  
+  
+ <p><center  style="font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif;font-size:36px;margin-top:-20px;" >TOYOTA</center></p>
+
+
+<div class="container">
+  <img src="toyota-prius.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+   <a href="Brands/toyota prius/toyo.html"> <div class="text">TOYOTA-PRIUS</div></a>
+  </div>
+</div>
+ 
+ <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+ 
+ <div class="container">
+  <img src="toyota corolla.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+   <a href="Brands/toyota-corolla/toyo-corolla.html"> <div class="text">TOYOTA COROLLA</div></a>
+  </div>
+</div>
+  
+  <div class="container">
+  <img src="toyota -camry.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+   <a href="Brands/toyota camry/toyo camry.html"> <div class="text">TOYOTA CAMRY</div></a>
+  </div>
+</div>
+
+
+<p><center  style="font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif;font-size:36px;" >SUZUKI</center></p>
+
+
+<div class="container">
+  <img src="suzukigrand.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+    <a href="Brands/Suzuki Vitara/Suzuki Vitara.html"><div class="text">SUZUKI Vitara</div></a>
+  </div>
+</div>
+ 
+ <div class="container">
+  <img src="Brands/suzuki Swift/d.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+   <a href="Brands/suzuki Swift/Suzuki Swift.html"> <div class="text">SUZUKI SWIFT</div></a>
+  </div>
+</div>
+  
+  <div class="container">
+  <img src="Brands/Suzuki/specialImg.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+    <a href="Brands/Suzuki/Suzuki Er.html"><div class="text">SUZUKI ER</div></a>
+  </div>
+</div>
+
+
+<p><center  style="font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif;font-size:36px;" >Small Car</center></p>
+
+
+<div class="container">
+  <img src="4.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+   <a href="Brands/suzuki Swift/Suzuki Swift.html"> <div class="text">Swift</div></a>
+  </div>
+</div>
+ 
+ <div class="container">
+  <img src="5.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+   <a href="Rang of cars/Small Cars/Small cars.html"> <div class="text">Mehran</div></a>
+  </div>
+</div>
+  
+  <div class="container">
+  <img src="8.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+    <a href="Rang of cars/Small Cars/Small cars.html"><div class="text">Vitz</div></a>
+  </div>
+</div>
+
+<p><center  style="font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif;font-size:36px;" >SEDAN</center></p>
+
+
+<div class="container">
+  <img src="1.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+   <a href="Rang of cars/Sedan Cars/sedan cars.html"> <div class="text">toyota Corolla</div></a>
+  </div>
+</div>
+ 
+ <div class="container">
+  <img src="7.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+   <a href="Rang of cars/Sedan Cars/sedan cars.html"> <div class="text">toyota Camry</div></a>
+  </div>
+</div>
+  
+  <div class="container">
+  <img src="6.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+    <a href="Rang of cars/Sedan Cars/sedan cars.html"><div class="text">Honda accord</div></a>
+  </div>
+</div>
+
+<p><center  style="font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif;font-size:36px;" >VAN</center></p>
+
+
+<div class="container">
+  <img src="retro van.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+    <div class="text">Retro Van</div>
+  </div>
+</div>
+ 
+ <div class="container">
+  <img src="Daihatsu Delta Van.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+    <div class="text">Daihatsu Delta Van</div>
+  </div>
+</div>
+  
+  <div class="container">
+  <img src="Van Sunray.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+    <div class="text">Van Sunray</div>
+  </div>
+</div>
+<p><center  style="font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif;font-size:36px;" >JEEPS</center></p>
+
+
+<div class="container">
+  <img src="rubicon.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+    <div class="text">Rubicon Jeep</div>
+  </div>
+</div>
+ 
+ <div class="container">
+  <img src="grand cheroke.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+    <div class="text">Grand Cheroke</div>
+  </div>
+</div>
+  
+  <div class="container">
+  <img src="renegade.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+    <div class="text">renegade Jeep</div>
+  </div>
+</div>
+<p><center  style="font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif;font-size:36px;" >PreOwned Cars</center></p>
+
+
+<div class="container">
+  <img src="Ermelo Car.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+    <div class="text">Ermelo Car</div>
+  </div>
+</div>
+ 
+ <div class="container">
+  <img src="Brickell Honda.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+    <div class="text">Brickell Honda</div>
+  </div>
+</div>
+  
+  <div class="container">
+  <img src="mercedes.jpg" alt="Avatar" class="image" style="height:340px;
+    width: 100%;">
+  <div class="middle">
+    <div class="text">mercedes
+   </div>
+  </div>
+</div>
+
+<div class="mainfooter">
+
+
+	
+	<div class="footer1">
+		
+		<p style="text-align: center; font-size: 35px; color: #FFFFFF; font-family:'Times New Roman', Times, serif; margin-top: px;" ><b>Feature</b></p>
+		
+		<ul type="none" style="font-size: 18px; color: #FFFFFF; font-family:'Times New Roman', Times, serif; margin-top: px; margin-left: 70px; position: absolute;	">
+			<li>Our Company</li>
+			<li>About Cars</li>
+			<li>Investor Realation</li>
+			<li>Contacts Cars</li>
+			<li>Careers</li>
+			<li>Licensing & Repair</li>
+			
+			
+			
+		</ul>
+		
+		
+	</div>
+	
+	<div class="footer2">
+	
+	<p style="margin-top: px; font-size: 35px; text-align: center; font-family:'Times New Roman', Times, serif; color: #FFFFFF;"><b>Feedback Email</b></p>
+		
+		<p style="font-size: 15px; color: #FFFFFF; font-family:'Times New Roman', Times, serif; position: absolute; margin-left: 110px; margin-top:50px;"><b>Join Our People who recive<br/>bi-weakly new car modals </b></p>
+		
+		<input type="text" placeholder="Email Address" style="width: 250px; height: 30px; margin-top: 100px; margin-left: 80px; text-align: center; border: solid 3px; ">
+		
+		<input type="button" value="Sgin up" style="width: 80px; height: 40px; background-color: #1EC541; border: solid 2px; border-radius: 10px; margin-left: 166px; margin-top: 10px;">
+		
+	</div>
+	
+	<div class="footer3">
+		<p style="text-align: center; font-family:'Times New Roman', Times, serif; font-size: 35px; color: #FFFFFF;  text-align: center; "><b>About the Company</b></p>
+		
+		<ul type="none" style=" font-family:'Times New Roman', Times, serif; font-size: 18px; color: #FFFFFF; margin-top: px; margin-left: 70px; position: absolute;	">
+			<li>Buy & Selling </li>
+			<li>Find a Car</li>
+			<li>Used Cars Buying</li>
+			<li>Sell Your Car</li>
+			<li>Car Dealer</li>
+			<li>Certified Pre-owned</li>
+		</ul>
+	</div>
+	
+	
+</div>
+
+</body>
+</html>

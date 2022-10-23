@@ -1,6 +1,6 @@
 Thank you for this repo :)
-Please contribute any program here.
 
+Please contribute any program here.
 
 // SUDOKU SOLVER //
 
@@ -29,7 +29,6 @@ public:
                 return 0;
         }
     }
-
     return 1;
 }
 

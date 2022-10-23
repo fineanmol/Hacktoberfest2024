@@ -71,4 +71,4 @@ int main()
     scanf("%s",&pattern);
     KMPSearch(pattern, textString); 
     return 0; 
-} 
+}

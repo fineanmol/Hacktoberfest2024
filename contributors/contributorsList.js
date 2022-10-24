@@ -10,6 +10,12 @@ contributors = [
     fullname: "Amitava Mitra",
     username: "https://github.com/Amitava123",
   },
+	{
+    id: 2,
+    fullname: "Amitava Mitra",
+    username: "https://github.com/Amitava123",
+  },
+
   {
     id: 3,
     fullname: "Philson Philip",
@@ -2045,6 +2051,11 @@ contributors = [
     id:421,
     fullname:"Gautami SInha",
     username:"https://github.com/amnotcreative",
+  }
+  {
+    id:388,
+    fullname: "Bella Emz",
+    username: "https://github.com/EmzB"
   }
 
 ];

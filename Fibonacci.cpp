@@ -1,4 +1,4 @@
- Fibonacci sequence is like this,
+ /*Fibonacci sequence is like this,
 a,b,c(fibonacci series start with 0,1 )
   a,b,a+b......
 then fibonacci series,
@@ -51,3 +51,34 @@ int main () {
 Outputs:-
   Enter number of terms: 10
  10th Fibonacci Terms: 55
+*/
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, t1 = 0, t2 = 1, nextTerm = 0;
+
+    cout << "Enter the number of terms: ";
+    cin >> n;
+
+    cout << "Fibonacci Series: ";
+
+    for (int i = 0; i <= n; ++i) {
+        // Prints the first two terms.
+        if(i == 1) {
+            cout << t1 << ", ";
+            continue;
+        }
+        if(i == 2) {
+            cout << t2 << ", ";
+            continue;
+        }
+        nextTerm = t1 + t2;
+        t1 = t2;
+        t2 = nextTerm;
+        
+        cout << nextTerm << ", ";
+    }
+    return 0;
+}

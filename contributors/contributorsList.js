@@ -2045,6 +2045,12 @@ contributors = [
     id:421,
     fullname:"Gautami SInha",
     username:"https://github.com/amnotcreative",
+  },
+
+   {
+    id:422,
+    fullname:"Sameer Patil",
+    username:"https://github.com/ThePhilosopher4097",
   }
 
 ];

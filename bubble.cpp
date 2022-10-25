@@ -6,7 +6,7 @@ void display(vector<int> A, int n)
     cout << endl;
     for (auto i : A)
         cout << i << " ";
-}
+} // new coding
 
 void B_S(vector<int> &A, int n)
 {

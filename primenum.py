@@ -14,4 +14,4 @@ if num > 1:
        
 # Else if the input number is less than or equal to 1
 else:
-   print(num,"is not a prime number")
+   print(num,"is not a prime number") 

@@ -613,7 +613,7 @@ body {
 
 #animation {
   transition: all 1s;
-}
+} //spelling mistake
 
 #animation:hover {
   transform: scale(1.1);

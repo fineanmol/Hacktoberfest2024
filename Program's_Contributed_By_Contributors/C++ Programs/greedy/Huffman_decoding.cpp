@@ -40,6 +40,8 @@ struct MinHeapNode
 };
 
 
+
+
 struct compare
 {
 	bool operator()(MinHeapNode* l, MinHeapNode* r)

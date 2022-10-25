@@ -1,24 +1,9 @@
-/*
-*****************************************************************************
-                          Workshop - #6 (P2)
-Full Name  : So Yon Lee 
-Student ID#: 179142211
-Email      : slee550@myseneca.ca
-Section    : NDD
-
-Authenticity Declaration:
-I declare this submission is the result of my own work and has not been
-shared with any other student or 3rd party content provider. This submitted
-piece of work is entirely of my own creation.
-*****************************************************************************
-*/
-
 #define _CRT_SECURE_NO_WARNINGS
 #define ITEMNUM 10
 
 #include <stdio.h>
 
-int mainboo(void)
+int main(void)
 {
     const double minIncome = 500.00, maxIncome = 400000.00, minCost = 100.00;
     double myIncome = 0.0, annualIncome = 0.0, totalCost = 0, filteredTotalCost = 0.0, forecastMonthResult = 0.0;

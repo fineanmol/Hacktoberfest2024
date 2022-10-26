@@ -1,0 +1,49 @@
+Euclid’s algorithm (or Euclidean algorithm) is a method for efficiently finding the greatest common divisor (GCD) of two numbers. The GCD of two integers, X and Y, is the largest number that divides both X and Y without leaving a remainder.
+
+For example,
+
+Euclid(30, 50) = 10
+ 
+Euclid(2740, 1760) = 20
+Practice This Problem
+
+The Euclidean algorithm is based on the principle that the greatest common divisor of two numbers does not change if the larger number is replaced by its difference with the smaller number.
+
+For example, 21 is the GCD of 252 and 105 (252 = 21 × 12 and 105 = 21 × 5), and the same number 21 is also the GCD of 105 and 147 (147 = 252 - 105).
+
+ 
+Since this replacement reduces the larger of the two numbers, repeating this process gives successively smaller pairs of numbers until the two numbers become equal. When that occurs, they are the GCD of the original two numbers.
+
+The following C program demonstrates it:
+
+
+#include <stdio.h>
+ 
+// Iterative function to calculate gcd of two numbers
+// using Euclid’s algorithm (basic version)
+int euclid(int a, int b)
+{
+    // do until the two numbers become equal
+    while (a != b)
+    {
+        // replace the larger number by its difference with the smaller number
+        if (a > b) {
+            a = a - b;
+        }
+        else {
+            b = b - a;
+        }
+    }
+ 
+    return a;        // or `b` (since both are equal)
+}
+ 
+int main()
+{
+    int a = 30;
+    int b = 50;
+ 
+    printf("Euclid(%d, %d) = %d", a, b, euclid(a, b));
+ 
+    return 0;
+}

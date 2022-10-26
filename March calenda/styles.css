@@ -1,0 +1,28 @@
+table {
+    border-collapse: collapse;
+    border: 0.5px solid black;
+}
+
+tr {
+    border: 0.5px solid black;
+}
+
+td,
+th {
+    border: 0.5px solid black;
+}
+
+.not {
+    color: #f0b286;
+}
+
+.yes,
+.not {
+    text-align: center;
+}
+
+#box {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+}

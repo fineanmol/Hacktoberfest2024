@@ -1,0 +1,51 @@
+N queens Leetcode problem
+
+#I need to check all the col above that
+def checkColumn(board, row, column, n):
+    #If there is already 1 placed in that column somewhere so check that
+    for i in range(row, -1, -1):
+        if board[i][column] == 1:
+            return False
+    return True
+   
+def checkDiagonal(board, row, column, n):
+    #there are 4 ways to go diagonaly
+    #row++ and column++ -> top left->bottom right
+    #row++ and column-- -> Right top to lefy bottom
+    #row-- and column++ -> left bottom to Right top
+    #row-- and column-- -> Right bottom to left top
+    
+    #diagonally moving towards top left
+    for i, j in zip(range(row, -1, -1), range(column, -1, -1)):
+        if board[i][j] == 1:
+            return False
+    
+    #diagonally moving towards top Right
+    for i, j in zip(range(row, -1, -1), range(column, n)):
+        if board[i][j] == 1:
+            return False
+    return True
+    
+
+#Backtracking logic
+def NQueens(board, row, n):
+    #since list of lists is 0 indexed
+    if row == n:
+        return True
+        
+    for i in range(n):
+        if (checkColumn(board, row, i, n) == True and checkDiagonal(board, row, i, n)==True):
+            board[row][i] = 1
+            if NQueens(board, row+1, n):
+                return True
+            board[row][i] = 0
+    return False
+    
+n = int(input())
+global board
+board = [[0 for i in range(n)] for i in range(n)]
+print(board)
+#call NQueens
+NQueens(board, 0, n)
+for row in board:
+    print(row)

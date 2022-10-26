@@ -1,82 +1,74 @@
-#include <limits.h>
-#include <stdio.h>
+#include <cstdio>
+#include <queue>
+#include <vector>
+#include <iostream>
  
-
-#define V 9
+using namespace std;
  
-
-int minDistance(int dist[], bool sptSet[])
+#define MAX 100001
+#define INF (1<<20)
+#define pii pair< int, int >
+#define pb(x) push_back(x)
+ 
+struct comp
 {
-    
-    int min = INT_MAX, min_index;
+        bool operator()(const pii &a, const pii &b)
+        {
+            return a.second > b.second;
+        }
+};
  
-    for (int v = 0; v < V; v++)
-        if (sptSet[v] == false && dist[v] <= min)
-            min = dist[v], min_index = v;
+priority_queue<pii, vector<pii > , comp> Q;
+vector<pii > G[MAX];
+int D[MAX];
+bool F[MAX];
  
-    return min_index;
-}
- 
-
-int printSolution(int dist[], int n)
-{
-    printf("Vertex   Distance from Source\n");
-    for (int i = 0; i < V; i++)
-        printf("%d \t\t %d\n", i, dist[i]);
-}
- 
-
-void dijkstra(int graph[V][V], int src)
-{
-    int dist[V]; // The output array.  dist[i] will hold the shortest
-    
- 
-    bool sptSet[V]; // sptSet[i] will be true if vertex i is included in shortest
-    
- 
-    
-    for (int i = 0; i < V; i++)
-        dist[i] = INT_MAX, sptSet[i] = false;
- 
-    
-    dist[src] = 0;
- 
-    
-    for (int count = 0; count < V - 1; count++) {
-        
-        int u = minDistance(dist, sptSet);
- 
-        
-        sptSet[u] = true;
- 
-        
-        for (int v = 0; v < V; v++)
- 
-            
-            if (!sptSet[v] && graph[u][v] && dist[u] != INT_MAX
-                && dist[u] + graph[u][v] < dist[v])
-                dist[v] = dist[u] + graph[u][v];
-    }
- 
-    
-    printSolution(dist, V);
-}
- 
-
 int main()
 {
-    
-    int graph[V][V] = { { 0, 4, 0, 0, 0, 0, 0, 8, 0 },
-                        { 4, 0, 8, 0, 0, 0, 0, 11, 0 },
-                        { 0, 8, 0, 7, 0, 4, 0, 0, 2 },
-                        { 0, 0, 7, 0, 9, 14, 0, 0, 0 },
-                        { 0, 0, 0, 9, 0, 10, 0, 0, 0 },
-                        { 0, 0, 4, 14, 10, 0, 2, 0, 0 },
-                        { 0, 0, 0, 0, 0, 2, 0, 1, 6 },
-                        { 8, 11, 0, 0, 0, 0, 1, 0, 7 },
-                        { 0, 0, 2, 0, 0, 0, 6, 7, 0 } };
+    int i, u, v, w, sz, nodes, edges, starting;
  
-    dijkstra(graph, 0);
+    // create graph
+    cout << "Enter the number of vertices and edges: ";
+    cin >> nodes >> edges;
+    cout << "Enter the edges with weigth: <source> <destination> <weigth>: \n";
+    for (i = 0; i < edges; i++)
+    {
+        cin >> u >> v >> w;
+        G[u].pb(pii(v, w));
+        G[v].pb(pii(u, w)); // for undirected
+    }
+    cout << "Enter the source node: ";
+    cin >> starting;
  
+    // initialize distance vector
+    for (i = 1; i <= nodes; i++)
+        D[i] = INF;
+    D[starting] = 0;
+    Q.push(pii(starting, 0));
+ 
+    // dijkstra
+    while (!Q.empty())
+    {
+        u = Q.top().first;
+        Q.pop();
+        if (F[u])
+            continue;
+        sz = G[u].size();
+        for (i = 0; i < sz; i++)
+        {
+            v = G[u][i].first;
+            w = G[u][i].second;
+            if (!F[v] && D[u] + w < D[v])
+            {
+                D[v] = D[u] + w;
+                Q.push(pii(v, D[v]));
+            }
+        }
+        F[u] = 1; // done with u
+    }
+ 
+    // result
+    for (i = 1; i <= nodes; i++)
+        cout << "Node " << i << ", min weight = " << D[i] << endl;
     return 0;
 }

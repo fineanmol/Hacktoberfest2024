@@ -1,16 +1,14 @@
-def greatest_number():
-    a=list(map(int,input("Input the 5 numbers with spaces - ").split(' ')))
-    if len(a)==5:
-        flag=a[0]
-        for i in a[1:]:
-            if i>=flag:
-                flag=i
-            else:
-                continue
-        print("The greatest number is",flag)
-    else:
-        print('You were supposed to enter 5 numbers.')
-        
-        
-greatest_number()
-        
+# Python program to find the largest number among the three input numbers
+# take three numbers from user
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+num3 = float(input("Enter third number: "))
+ 
+if (num1 > num2) and (num1 > num3):
+   largest = num1
+elif (num2 > num1) and (num2 > num3):
+   largest = num2
+else:
+   largest = num3
+ 
+print("The largest number is",largest)

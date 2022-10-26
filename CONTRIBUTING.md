@@ -14,7 +14,7 @@
 - Fork this repo (button on top)
 - Clone on your local machine
 
-```terminal
+```terminal (remember to change the repository path to your own fork)
 git clone https://github.com/fineanmol/Hacktoberfest2022.git
 ```
 - Navigate to project directory.

@@ -1,0 +1,59 @@
+Generate all Valid IP Address
+
+Program to generate all possible valid IP addresses from given string
+
+PROBLEM STATEMENT  (https://www.geeksforgeeks.org/program-generate-possible-valid-ip-addresses-given-string/)
+
+Given a string containing only digits, restore it by returning all possible valid IP address combinations.
+A valid IP address must be in the form of A.B.C.D, where A, B, C, and D are numbers from 0-255.
+The numbers cannot be 0 prefixed unless they are 0.
+
+// SOL URL -> https://ide.geeksforgeeks.org/CFdfMhHmHx
+
+#code
+
+## valid IP case
+# len > 0 and <= 3
+# if first char == 0 then it should only be 0 then after that no char
+# cnvt to int and check its between 0 to 255 so valid
+def CheckValidIP(ip):
+    if len(ip) <= 0 or len(ip) > 3:
+        return False
+    
+    if ip[0] == "0":
+        if len(ip) != 1:
+            return False
+            
+    if int(ip) < 0 or int(ip) > 255:
+        return False
+        
+    return True
+                
+
+def isValidIP(s, n, i, j, k):
+    #accessing all the four parts of IP address
+    first = s[:i+1]
+    second = s[i+1:j+1]
+    third = s[j+1:k+1]
+    fourth = s[k+1:]
+    
+    if(CheckValidIP(first) and CheckValidIP(second) and CheckValidIP(third) and CheckValidIP(fourth)):
+        return True
+    
+    return False
+
+
+s = input()
+n = len(s)
+res = []
+for i in range(0, n-3):
+    for j in range(i+1, n-2):
+        for k in range(j+1, n-1):
+            if isValidIP(s, n, i, j, k):
+                ans = s[:i+1]+"."+s[i+1:j+1]+"."+s[j+1:k+1]+"."+s[k+1:]
+                res.append(ans)
+                
+if res:
+    print(res)
+else:
+    print("No combinations can be made")

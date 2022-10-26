@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void display(vector<int> A, int n)
+void display(vector<int>&A, int n)
 {
     cout << endl;
     for (auto i : A)

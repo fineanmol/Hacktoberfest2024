@@ -1,0 +1,60 @@
+Problem Link -> https://leetcode.com/discuss/interview-question/2073103/rat-in-a-maze-problem
+
+#code
+n = 4
+
+def isSafe(maze, x, y):
+    if x >= 0 and x < n and y >= 0 and y < n and maze[x][y] == 1:
+        return True
+     
+    return False
+    
+def SolveMazeUtil(maze, x, y, sol):
+    #If x and y is the goal then return True from here only
+    if x== n-1 and y==n-1 and maze[x][y] == 1:
+        sol[x][y] = 1
+        return True
+        
+    #check if x-Y pos is valid
+    if isSafe(maze, x, y):
+        #if it is already part of sol
+        if sol[x][y] == 1:
+            return False
+        
+        #mark x-y as safe
+        sol[x][y] = 1
+        
+        #Move Forward in X-dir
+        if SolveMazeUtil(maze, x+1, y, sol):
+            return True
+            
+        #If x does not give sol then try to move in Y dir
+        if SolveMazeUtil(maze, x, y+1, sol):
+            return True
+            
+        #If moving forward in either X-Y does not give sol then Backtrack
+        if SolveMazeUtil(maze, x-1, y, sol):
+            return True
+        
+        if SolveMazeUtil(maze, x, y-1, sol):
+            return True
+            
+        sol[x][y] = 0
+        return False
+        
+def solveMaze(maze):
+    sol = [[0 for j in range(4)] for i in range(4)]
+    if SolveMazeUtil(maze, 0, 0, sol) == False:
+        print("Solution doesn't exist");
+        return False
+     
+    print(sol)
+    return True
+
+maze = [[1, 0, 0, 0],
+        [1, 1, 0, 1],
+        [0, 1, 0, 0],
+        [1, 1, 1, 1] 
+       ]
+              
+print(solveMaze(maze))

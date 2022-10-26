@@ -34,6 +34,10 @@ try:
 
     # Input the plain text
     plain_text = input("Enter plain text: ").lower()
+    
+    # key length check
+    if len(key) > len(plain_text):
+        raise Exception("Key length is greater than plain text length")
 
     # Initialise the cipher text
     cipher_text = ""

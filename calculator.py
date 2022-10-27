@@ -4,7 +4,7 @@ import math
 
 # calc class 
 class calc: 
-
+	# function for replace
 	def getandreplace(self): 
 
 		"""replace x with * and ÷ with /"""
@@ -12,7 +12,7 @@ class calc:
 		self.newtext=self.expression.replace('/','/') 
 		self.newtext=self.newtext.replace('x','*') 
 
-
+	# function for equal
 	def equals(self): 
 		"""when the equal button is pressed"""
 		self.getandreplace() 

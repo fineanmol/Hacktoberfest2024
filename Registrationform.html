@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+<title> Registration Form </title>
+<h1 align="center">Welcome to Registeration Form</h1>
+<style>
+
+body {background-color:grey;}
+h1 {display: block; font-weight: bold; }
+h2
+{
+ display: block;
+ font-family: Sans-serif;   
+ color: blue;
+}
+</style>
+
+<script>
+function allok() {
+var name = document.form1.Name;
+var email= document.form1.email;
+var phone= document.form1.phone;
+
+var addr=document.form1.Address;
+
+if (name.value.length <= 0)
+{
+alert("Name is required");
+fname.focus();
+return false;
+}
+
+if((addr.value.length<=8) || (addr.value.length>40))
+{
+alert("Please enter full address!");
+address.focus();
+return(false);
+}
+if (!(/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/.test(email.value)))
+{
+alert("Enter valid email");
+return (false);
+}
+if (!(/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(phone.value)))
+{
+alert("Enter valid phone number");
+return (false);
+}
+return (true);
+}
+function allright()
+{
+if(allok()==true){
+alert("Form Submitted.");
+}
+}
+
+</script>
+</head>
+<body>
+
+<form action="#" name="form1" onsubmit="return allright()"><b>
+<h2>
+<div class="content">
+Full Name:<input type="text" name="Name" ><br><br>
+<label for="language">Preferred Language of Code:</label>
+<select placeholder="choose language" name="language" id="language">
+<option value=" " disabled selected>select language</option>
+<option value="C">C</option>
+<option value="C++">C++</option>
+<option value="python">python</option>
+<option value="java">java/option>
+<option value="other">Other</option>
+</select><br><br>
+Age:
+<input type="radio" id="class1" name="class" value="A">
+<label for="age1">18-30</label>
+<input type="radio" id="class2" name="class" value="B">
+<label for="age2">31-50</label>
+<input type="radio" id="class3" name="class" value="C">
+<label for="age3">51-75</label><br><br>
+Address:<input type="text" name="Address" autocomplete><br><br>
+E-mail:<input type="email" name="email";><br><br>
+Phone number:<input type="tel" name="phone" required><br><br>
+</b>
+<input type="submit" >
+<input type="reset">
+</div>
+</h2>
+</form>
+</table>
+</body>
+</html>

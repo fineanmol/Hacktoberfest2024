@@ -8,6 +8,6 @@ int main() {
   cout << "Enter the string s2: ";
   getline(cin, s2);
   string resString = s1 + s2;
-  cout << "Resultant String = " resString;
+  cout << "Resultant String = " << resString;
   return 0;
 }

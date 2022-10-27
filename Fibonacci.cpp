@@ -1,4 +1,9 @@
- Fibonacci sequence is like this,
+#include <bits/stdc++.h>
+using namespace std;
+#define RANGE 255
+#define ll long long int
+
+Fibonacci sequence is like this,
 a,b,c(fibonacci series start with 0,1 )
   a,b,a+b......
 then fibonacci series,
@@ -39,15 +44,17 @@ int genFibonacci(int n) {
    fibo[1] = 1;
    for (int i = 2; i <= n; i++) {
       fibo[i] = fibo[i-1] + fibo[i-2]; //generate ith term using previous
-      two terms
+      
    }
    return fibo[n];
 }
 int main () {
    int n;
-   cout << "Enter number of terms: "; cin >>n;
+   cout << "Enter number of terms: "; 
+   cin >>n;
    cout << n<<" th Fibonacci Terms: "<<genFibonacci(n)<<endl;
 }
-Outputs:-
-  Enter number of terms: 10
- 10th Fibonacci Terms: 55
+/*Outputs:-
+Enter number of terms: 10
+10th Fibonacci Terms: 55
+*/

@@ -1,38 +1,38 @@
+// C++ program for implementation
+// of Bubble sort
 #include <bits/stdc++.h>
 using namespace std;
 
-void display(vector<int> A, int n)
+// A function to implement bubble sort
+void bubbleSort(int arr[], int n)
 {
-    cout << endl;
-    for (auto i : A)
-        cout << i << " ";
+	int i, j;
+	for (i = 0; i < n - 1; i++)
+
+		// Last i elements are already
+		// in place
+		for (j = 0; j < n - i - 1; j++)
+			if (arr[j] > arr[j + 1])
+				swap(arr[j], arr[j + 1]);
 }
 
-void B_S(vector<int> &A, int n)
+// Function to print an array
+void printArray(int arr[], int size)
 {
-    for (int i = 0; i < n - 1; i++)
-    {
-        for (int j = 0; j < n - 1 - i; j++)
-        {
-            if (A[j] > A[j + 1])
-                swap(A[j], A[j + 1]);
-        }
-    }
+	int i;
+	for (i = 0; i < size; i++)
+		cout << arr[i] << " ";
+	cout << endl;
 }
 
+// Driver code
 int main()
 {
-    vector<int> V;
-    int ch, n;
-    cout << "size: ";
-    cin >> n;
-    cout << "ENTER ARRY: ";
-    for (int i = 0; i < n; i++)
-    {
-        cin >> ch;
-        V.push_back(ch);
-    }
-
-    B_S(V, n);
-    display(V, n);
+	int arr[] = { 5, 1, 4, 2, 8};
+	int N = sizeof(arr) / sizeof(arr[0]);
+	bubbleSort(arr, N);
+	cout << "Sorted array: \n";
+	printArray(arr, N);
+	return 0;
 }
+// This code is contributed by rathbhupendra

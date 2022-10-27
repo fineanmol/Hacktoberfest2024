@@ -8,31 +8,34 @@ void display(vector<int> A, int n)
         cout << i << " ";
 }
 
-void B_S(vector<int> &A, int n)
-{
-    for (int i = 0; i < n - 1; i++)
-    {
-        for (int j = 0; j < n - 1 - i; j++)
-        {
-            if (A[j] > A[j + 1])
-                swap(A[j], A[j + 1]);
+void bubbleSort (int arr[], int n){
+    int i ,j ;
+    bool swapped;
+    for(i=0;i<n-1;i++){
+        swapped = false;
+
+    for (j=0;j<n-i-1;j++){
+        if(arr[j] > arr[j+1]){
+            swap(arr[j],arr[j+1]);
+            swapped =true;
         }
     }
+    if (swapped == false)
+    break;
+    }
+}
+void printArray(int arr[],int size){
+    int i;
+    for(i=0;i < size;i++)
+    cout << " "<< arr[i];
 }
 
 int main()
 {
-    vector<int> V;
-    int ch, n;
-    cout << "size: ";
-    cin >> n;
-    cout << "ENTER ARRY: ";
-    for (int i = 0; i < n; i++)
-    {
-        cin >> ch;
-        V.push_back(ch);
-    }
-
-    B_S(V, n);
-    display(V, n);
+    int arr[] = {5,3,1,9,8,2,4,7};
+    int N =sizeof(arr)/sizeof(arr[0]);
+    bubbleSort(arr,N);
+    cout<< "Sorted array";
+    printArray(arr,N);
+    return 0; 
 }

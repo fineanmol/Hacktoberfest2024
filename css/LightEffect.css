@@ -1,0 +1,46 @@
+body{
+    --var-color:rgb(0,238,255);
+    background:#000;
+}
+.light{
+    font-size=2rem;
+    color:var(--var-color);
+    position:relative;
+    font-weight:bold;	
+    }
+.light::before{
+    position: absolute;
+    content: attr(data-text);
+    text-shadow: 0px 0px 20px var(--var-color);
+    filter: blur(10px) brightness(0);
+    animation: flicker 2s linear forwards;
+    animation-delay: 1s;
+    background-image;
+}
+@keyframes flicker {
+    0%{
+        filter:blur(5px) brightness(1)
+    }
+    3%{
+        filter:blur(5px) brightness(0)
+    }
+    6%{
+        filter:blur(5px) brightness(0)
+    }
+    7%{
+        filter:blur(5px) brightness(1)
+    }
+    8%{
+        filter:blur(5px) brightness(0)
+    }
+    9%{
+        filter:blur(5px) brightness(1)
+    }
+    10%{
+        filter:blur(5px) brightness(0)
+    }
+    20%{
+        filter:blur(5px) brightness(1)
+    }
+    
+}

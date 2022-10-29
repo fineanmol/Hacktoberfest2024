@@ -1,0 +1,73 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Festive&family=Zen+Kurenaido&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url(background.jpg)no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container{
+    /* border: 12px solid black; */
+    position: absolute;
+    top: 32%;
+    left: 37%;
+}
+
+.container h1{
+    margin: 0 128px;
+    display: inline-block;
+    border-bottom: 2px solid black;
+    font-size: 40px;
+    margin-bottom: 41px;
+    padding: 8px 0;
+    font-family: 'Festive', cursive;
+}
+
+.box{
+    /* border: 8px solid black; */
+    width: 100%;
+    
+}
+
+.box i{
+    width: 25px;
+    /* float: left; */
+    text-align: center;
+    margin: 0 12px;
+}
+
+.box input{
+    background: none;
+    width: 75%;
+    border: none;
+    outline: none;
+    margin: 12px 0px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border-bottom: 2px solid black;
+
+}
+
+#btn{
+    background: none;
+    cursor: pointer;
+    width: 25%;
+    outline: none;
+    margin: 20px 150px;
+    border-radius: 8px;
+    
+
+}
+
+#btn:hover{
+    color:black;
+    background-color: white;
+    opacity: 0.4;
+}
+

@@ -1,8 +1,8 @@
 # Check if two words are anagrams 
 # An anagram is a woed or phrase that is created by rearranging the letters of another word or phrase.
 # Example:
-# find_anagrams("hello", "check") --> False
-# find_anagrams("below", "elbow") --> True
+# find_anagrams("hello", "check") -> False
+# find_anagrams("below", "elbow") -> True
 
 
 def find_anagram(word, anagram):

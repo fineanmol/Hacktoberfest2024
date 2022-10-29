@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class MinimumSubsetIter
+public class MinimumSubsetSum
 {
 	boolean t[][];
 

@@ -2050,7 +2050,7 @@ contributors = [
   {
     id:422,
     fullname:"Nayanika Singha Chowdhury",
-    username:"https://github.com/Nayanika-12"
+    username:"https://github.com/Nayanika-12",
   }
 
 ];

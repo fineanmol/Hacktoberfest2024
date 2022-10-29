@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    margin-bottom: 10px;
+    text-align: center;
+    color: rgb(206, 135, 43);
+    width: 210px;
+    border: solid black 2px;
+}
+
+
+input[type="button"]
+{
+    background-color: burlywood;
+    color: black;
+    border: solid black 2px;
+    width: 100%;
+}
+
+input[type="text"]{
+    background-color: whitesmoke;
+    border: solid black 2px;
+    width: 100%;
+}
+
+.container{
+display: grid;
+place-items: center;
+height: 600px;
+
+
+}

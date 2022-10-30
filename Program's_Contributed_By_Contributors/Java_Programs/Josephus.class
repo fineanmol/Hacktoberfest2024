@@ -1,0 +1,34 @@
+import java.util.*;
+
+    public static void josephus(String[] args)
+    {
+        int numPeople, skip, targetIndex;
+        List<String> list = new ArrayList<String>();
+        Scanner in = new Scanner(System.in);
+
+      
+        System.out.print("Enter the number of soldiers: ");
+        numPeople = in.nextInt();
+        in.nextLine();  
+
+
+        System.out.print("Enter the number of soldiers to skip: ");
+        skip = in.nextInt();  
+
+
+        for (int count = 1; count <= numPeople; count++)
+        {
+            list.add("Soldier " + count);
+        }
+		
+        targetIndex = skip; 
+        System.out.println("The order is: ");
+
+        while (!list.isEmpty()) 
+        {
+            System.out.println(list.remove(targetIndex));
+            if (list.size() > 0)
+                targetIndex = (targetIndex + skip) % list.size();
+        }
+    }
+}

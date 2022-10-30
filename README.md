@@ -1,18 +1,21 @@
 Hacktoberfest-2022
 
-# Submit your PR on this new repo [Hacktoberfest_Accepted](https://github.com/fineanmol/hacktoberfest) , there we are merging all PR. 
+**Checkout this Project as well [Annoying Button😡](https://annoyingsubmitbutton.netlify.app/) , It's hacktoberfest github : [https://github.com/fineanmol/Annoying-submit-button](https://github.com/fineanmol/Annoying-submit-button)**
+
+
+# Submit your PR on this new repo [Hacktoberfest](https://github.com/fineanmol/hacktoberfest) , There we are merging all PR. 
 
 In this current repo, there are alot of conflicts, we are not merging until all conflicts get resolved.
-Hacktoberfest {[Live Website](https://fineanmol.github.io/Hacktoberfest2022/Contributors.html)}
+Hacktoberfest { [Live Website](https://fineanmol.github.io/Hacktoberfest2022/)}
 
 
 **This is a beginner-friendly project to help you get started with your
-[hacktoberfest](https://hacktoberfest.digitalocean.com/). If you don't know where to start, feel free to watch the videos linked below, and read the contribution rules. Happy hacking <3 💙 !!**
+[hacktoberfest](https://hacktoberfest.digitalocean.com/). If you don't know where to start, feel free to watch the videos linked below, and read the contribution rules. Happy Learning <3 💙 !!**
 
 P.S. Star ⭐ and Share this repository, if you had fun!! 😍
 
 Hacktoberfest 2022
-![Event Completed](https://raw.githubusercontent.com/fineanmol/Hacktoberfest2022/master/scripts/hacktoberPest/Event_Completed.png)
+![Event Completed](/scripts/Event_Completed_.png)
 
 # 📌 Videos 📽️:
 
@@ -21,14 +24,13 @@ Hacktoberfest 2022
 - [Merge Conflict / comment](https://youtu.be/zOx5PJTY8CI)
 
 
-# Contribution rules📚:
+# Contribution Rules📚:
 
-- The project must work when opening Contributors.html
 - You are allowed to make pull requests that break the rules. We just merge it ;)
 - Do NOT add any build steps e.g npm install (we want to keep this a simple static site)
 - Do NOT remove other content.
 - Styling/code can be pretty, ugly or stupid, big or small as long as it works
-- Add your name to the Contributors.html file
+<!-- - Add your name to the contributorsList file. -->
 - Try to keep pull requests small to minimize merge conflicts
 
 
@@ -37,12 +39,11 @@ Hacktoberfest 2022
 - Fork this repo (button on top)
 - Clone on your local machine
 
-```
+```terminal
 git clone https://github.com/fineanmol/Hacktoberfest2022.git
-
 ```
 - Navigate to project directory.
-```
+```terminal
 cd Hacktoberfest2022
 ```
 
@@ -51,8 +52,10 @@ cd Hacktoberfest2022
 ```markdown
 git checkout -b my-new-branch
 ```
-- Add your contribution
-```
+
+<!--- - Add your Name to `contributors/contributorsList.js`. -->
+
+```markdown
 git add .
 ```
 - Commit your changes.
@@ -61,7 +64,7 @@ git add .
 git commit -m "Relevant message"
 ```
 - Then push 
-```
+```markdown
 git push origin my-new-branch
 ```
 
@@ -120,9 +123,15 @@ For more information on syncing forks [read this article from Github](https://he
 - What is the duration of Hacktoberfest 2022?
   - It is from 1st october to 31st october 2022...
 - What is the event for?
-  - For the open source community engagement
+  - For the open source community engagement and learn how to contribute to open source.
 
 
 
 
 ###### *We will do our best to merge as much as possible from everyone. However, time is limited and the merge conflicts are horrible :astonished: <3*
+<br>
+
+## Our Top Contributors 
+<p align="center"><a href="https://github.com/fineanmol/Hacktoberfest2022/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=fineanmol/Hacktoberfest2022" />
+</a></p>

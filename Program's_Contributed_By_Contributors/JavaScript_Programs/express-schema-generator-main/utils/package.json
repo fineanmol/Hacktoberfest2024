@@ -1,0 +1,40 @@
+{
+	"name": "express-schema-generator",
+	"version": "1.0.1",
+	"description": "This Package Create Express+Mongoose Schema BoilerPlate",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"server": "nodemon src/index"
+	},
+	"keywords": [
+		"express-schema-generator",
+		"express-mongoose-boilerplate",
+		"mongoose-boilerplate",
+		"mvc express schema",
+		"express-schema",
+		"create-express-server",
+		"create-express-Schema",
+		"create-mongoose-server"
+	],
+	"author": {
+		"name": "Shantanu Bombatkar",
+		"email": "shodkkshantanu@gmail.com",
+		"url": "https://github.com/shaantanu9"
+	},
+	"files":[
+		"commands/*",
+		"index.js"
+	],
+	"bin": {
+		"create-express-schema": "index.js"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"@tos_/cli-welcome": "^1.0.2",
+		"axios": "^0.25.0",
+		"commander": "^9.0.0",
+		"shelljs": "^0.8.5"
+	}
+}
+

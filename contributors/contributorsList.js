@@ -1846,7 +1846,7 @@ contributors = [
   },
   {
     id: 365,
-    fullname: "Fred la",
+    fullname: "lag fred",
     username: "https://github.com/flagage",
   },
   {

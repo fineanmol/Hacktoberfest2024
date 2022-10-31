@@ -4,7 +4,7 @@ a,b,c(fibonacci series start with 0,1 )
 then fibonacci series,
 
 
-0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55,……
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 77, ..... 
 In this sequence the nth term is the sum of (n-1)th and (n-2)th terms.
 
 To generate we can use the recursive approach, but in dynamic programming the procedure is simpler. It can store all Fibonacci numbers in a table, by using that table it can easily generate the next terms in this sequence.

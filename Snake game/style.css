@@ -1,0 +1,122 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /*1rem = 10px*/
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fff;
+  font-family: 'Gochi Hand', 'sans-serif';
+  padding: 1rem 0;
+  overflow: scroll;
+  overflow-x: hidden;
+  background-image: url(./bg.jpg);
+  background-size: cover;
+}
+
+canvas {
+  position: relative;
+}
+
+.name {
+  font-size: 7rem;
+  font-family: 'Gochi Hand';
+  color: #0db329;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+}
+.start-game {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.btn {
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  border: 2px solid #fff;
+  cursor: pointer;
+  margin: 2rem 0;
+  letter-spacing: 3px;
+  word-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #011638;
+}
+.score-cont {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1rem 0;
+  align-items: center;
+}
+
+.score-cont h3 {
+  font-size: 3rem;
+}
+
+.high-score {
+  font-size: 3rem;
+}
+
+ion-icon[name='trophy'] {
+  color: rgb(235, 235, 38);
+  font-size: 4rem;
+  margin: 0 1rem 0 15rem;
+}
+
+.counter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.counter h3 {
+  font-size: 25rem;
+  color: #0db329;
+}
+
+.none {
+  display: none;
+}
+
+.game-over-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.game-over {
+  color: #0db329;
+  font-size: 7rem;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}

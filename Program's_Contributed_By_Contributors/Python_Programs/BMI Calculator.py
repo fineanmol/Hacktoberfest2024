@@ -14,6 +14,6 @@ if(BMI>0):
     elif (BMI <= 30):
         print("you are overwight")
     else:17
-        print("You are severaly overweight")
+        print("You are severely overweight")
 else:
     print("enter valid details")

@@ -4,6 +4,11 @@ contributors = [
     fullname: "Anmol Agarwal",
     username: "https://github.com/fineanmol",
   },
+   {
+    id: 1,
+    fullname: "Vishal Kesharwani",
+    username: "https://github.com/vishal10kesharwani",
+  },
   
   {
     id: 2,

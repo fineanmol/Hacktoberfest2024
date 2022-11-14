@@ -1,11 +1,11 @@
 Hacktoberfest-2022
 
-**Checkout this Project as well [Annoying Button😡](https://annoyingsubmitbutton.netlify.app/) , It's hacktoberfest github : [https://github.com/fineanmol/Annoying-submit-button](https://github.com/fineanmol/Annoying-submit-button)**
+**Check out this Project as well [Annoying Button😡](https://annoyingsubmitbutton.netlify.app/) , It's hacktoberfest github : [https://github.com/fineanmol/Annoying-submit-button](https://github.com/fineanmol/Annoying-submit-button)**
 
 
 # Submit your PR on this new repo [Hacktoberfest](https://github.com/fineanmol/hacktoberfest) , There we are merging all PR. 
 
-In this current repo, there are alot of conflicts, we are not merging until all conflicts get resolved.
+In this current repo, there are a lot of conflicts, we are not merging until all conflicts get resolved.
 Hacktoberfest { [Live Website](https://fineanmol.github.io/Hacktoberfest2022/)}
 
 
@@ -42,7 +42,7 @@ Hacktoberfest 2022
 ```terminal
 git clone https://github.com/fineanmol/Hacktoberfest2022.git
 ```
-- Navigate to project directory.
+- Navigate to the project directory.
 ```terminal
 cd Hacktoberfest2022
 ```
@@ -96,32 +96,32 @@ This will give you any eventual conflicts and allow you to easily solve them in 
 For more information on syncing forks [read this article from Github](https://help.github.com/articles/syncing-a-fork/).
 
 ## Swags of Hacktoberfest:
-- Many of the candidates get attracted towards hacktoberfest to get swags . So, after 4 successfully merged pull request as for 2021 you will be eligible to get a Hacktoberfest T-shirt and Some stickers on your doorstep.
+- Many of the candidates get attracted towards hacktoberfest to get swags. So, after 4 successfully merged pull requests for 2022 you will be eligible to get a Hacktoberfest T-shirt and Some stickers on your doorstep.
  
      <li><B><p><img src="https://miro.medium.com/max/1050/1*4JctIO7irt8hFxBmTvUpiQ.jpeg" width="400" height="225" style="width: 400px; height: 225px;" alt="tshirt image"></a></p><p><img src="https://miro.medium.com/max/1050/1*jkffr74bq5RsQ_xqDhgqYQ.jpeg" width="400" height="225" style="width: 400px; height: 225px;" alt="stickers image"></p>
 </b></li>
 
 # FAQs (Frequently Asked Questions)
 
-- Who all can contribute?
+- Who can contribute?
   - Anyone with a github account and who is signed up for
 [hacktoberfest](https://hacktoberfest.digitalocean.com/) :)
 - Are you getting paid for this?
-  - Sadly no. But we think we should. This is 100% unofficial and we do it for fun, fame and glory.
+  - Sadly no. But we think we should. This is 100% unofficial and we do it for fun, fame, and glory.
 - Who are you and why are you doing this?
   - We are two programmers from India [Anmol](https://www.linkedin.com/in/fineanmol/)
   and [Ritesh](https://github.com/ritesh2905). We are doing this because we love Open Source and Hacktoberfest. We want to make it easier for people to get started with Hacktoberfest and Open Source.
 - Why are you not using digitalocean?
   - Because we only know JavaScript and suck at servers. We use [now](https://zeit.co/now) instead.
 
-- Should I come closer to the text saying 'Don't come closer' on the left side of the home tab ?
+- Should I come closer to the text saying 'Don't come closer' on the left side of the home tab?
   - Nope.
-- How many pull request (PR) must be made, if I want to get an awesome tshirt from Hacktoberfest 2022?
+- How many pull requests (PR) must be made if I want to get an awesome T-shirt from Hacktoberfest 2022?
   - 4
 - How do I track my progress to get an awesome shirt from Hacktoberfest 2022?
   - [go to :](https://hacktoberfest.digitalocean.com/profile/). (Check Out Your Own Stats at Right Top)
 - What is the duration of Hacktoberfest 2022?
-  - It is from 1st october to 31st october 2022...
+  - It is from 1st October to 31st October 2022...
 - What is the event for?
   - For the open source community engagement and learn how to contribute to open source.
 

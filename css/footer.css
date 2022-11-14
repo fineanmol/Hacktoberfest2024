@@ -124,7 +124,7 @@ footer {
 .socials a {
   text-decoration: none;
   color: #fff;
-  border: 1.1px solid white;
+  border: 1.3px solid white;
   padding: 5px;
   border-radius: 50%;
 }
@@ -184,8 +184,41 @@ footer {
   text-decoration: none;
 }
 
-.footer-menu ul li a:hover {
-  color: #27bcda;
+.footer-menu li:hover {
+  transition: all ease 0.4s;
+  transform: scale(1.1);
+}
+
+.footer-menu li:nth-child(1) a:hover {
+  background-color: #385999;
+}
+
+.footer-menu li:nth-child(2) a:hover {
+  background-color: #3F9CEA;
+}
+
+.footer-menu li:nth-child(3) a:hover {
+  background-color: #E4405F;
+}
+
+.footer-menu li:nth-child(4) a:hover {
+  background-color: #E24712;
+}
+
+.footer-menu li:nth-child(5) a:hover {
+  background-color: #2E77B5;
+}
+
+.socials a:hover i {
+  color: white;
+}
+
+.hacktoberfest-link{
+  color: #2E77B5;
+}
+
+.hacktoberfest-link:focus{
+  color: #FF0844;
 }
 
 @media (max-width:500px) {

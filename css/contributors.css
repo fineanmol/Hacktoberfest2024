@@ -28,11 +28,11 @@
   box-sizing: inherit;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: 50ms;
+  transition: 70ms;
 }
 ::selection {
   background-color: #4835f7;
-  color: #fff;
+  color: #f6f;
 }
 html {
   -webkit-box-sizing: border-box;

@@ -2031,6 +2031,15 @@ contributors = [
     username: "https://github.com/avibedi1768",
   },
   {
+    id:385,
+    fullname: "Philip Mello",
+    username: "https://github.com/PhilipMello"
+  },
+  {
+    id:386,
+    fullname: "Anggi Ramadyansyah",
+    username: "https://github.com/sukalaper"
+  },
     id: 419,
     fullname: "Amit Kumar",
     username: "https://github.com/amit-kumar",
@@ -2040,11 +2049,10 @@ contributors = [
     fullname:"Auro S.",
     username:"https://github.com/aurocodes",
   },
-  
-   {
-    id:421,
-    fullname:"Gautami SInha",
-    username:"https://github.com/amnotcreative",
+  {
+   id:421,
+   fullname:"Gautami SInha",
+   username:"https://github.com/amnotcreative",
   }
 
 ];

@@ -2046,5 +2046,9 @@ contributors = [
     fullname:"Gautami SInha",
     username:"https://github.com/amnotcreative",
   }
-
+  {
+    id:387,
+    fullname: "Pamela Sarnia",
+    username: "https://github.com/pamela-sarnia"
+  }
 ];

@@ -8,7 +8,7 @@ class Coffee:
                 if not isinstance(budget, (int, float)):
                         print('Enter float or int')
                         exit()
-                if budget < 0: 
+                if budget <= 0: 
                     print('Sorry you don\'t have money') 
                     exit() 
         def get_change(self, budget):

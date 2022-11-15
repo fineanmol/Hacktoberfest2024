@@ -19,6 +19,7 @@ nav{
 .navbar-light .navbar-nav .nav-link{
   color:var(--text);
   position:relative;
+  letter-spacing: 2px;
   padding:5px;
   margin:0 10px!important
 }

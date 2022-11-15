@@ -58,3 +58,15 @@ nav{
 .navbar-light .navbar-nav .nav-link:hover{
   color:#dc143c
 }
+
+.content{
+  padding-top:50px;
+}
+
+.para{
+  padding:20px 0 40px;
+}
+
+.inputs{
+  margin-top:35px;
+}

@@ -4,7 +4,7 @@ contributors = [
     fullname: "Anmol Agarwal",
     username: "https://github.com/fineanmol",
   },
-  
+
   {
     id: 2,
     fullname: "Amitava Mitra",
@@ -2040,11 +2040,14 @@ contributors = [
     fullname:"Auro S.",
     username:"https://github.com/aurocodes",
   },
-  
-   {
+  {
     id:421,
     fullname:"Gautami SInha",
     username:"https://github.com/amnotcreative",
+  },
+  {
+    id:422,
+    fullname:"Artur Polo Norte",
+    username:"https://github.com/arturhvcpn",
   }
-
 ];

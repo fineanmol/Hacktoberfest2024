@@ -1,9 +1,6 @@
-Height = float(input("Enter your height in centimeters: "))
+Height = float(input("Enter your height in centimeters: "))/100
 Weight = float(input("Enter your Weoght in Kg: "))
-Height = Height/100
-BMI = Weight/(Height*Height)
-print(f"Your Body Mass Index is: {BMI}")
-
+print(f"Your Body Mass Index is: {}").format(Weight/(Height**2))
 if(BMI>0):
     if(BMI<=16):
         print("ypu are severaly underweigth")

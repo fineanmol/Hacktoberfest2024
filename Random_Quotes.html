@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Quote</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row text-center">
+            <h1>Quotes</h1>
+        <div id="quote" class="well col-xs-12 message">
+            <h4>Click the button for new Quotes today</h4>
+        </div>
+        </div>
+
+        <div class="col-xs-12 row text-center">
+            <button id="getQuote" class="btn btn-primary">Get The Quote</button>
+        </div>
+
+    </div>
+
+    <script>$("getQuote").on('click',function(){
+
+        $.ajaxSetup ({cache:false});
+    
+        $.getJSON("https://goquotes-api.herokuapp.com/api/v1/all/quotes",function(quotes){
+    
+            $(".message").html(quotes[0].text + "_" + quotes[0].author)
+        });
+    });
+    
+    
+    </script>
+</body>
+</html>

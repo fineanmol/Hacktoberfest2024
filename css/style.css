@@ -12,7 +12,7 @@ body {
   flex-direction: column;
   height: 100vh;
   margin: 0;
-  font-family: Montserrat, sans-serif;
+  font-family: Georgia, serif;
 }
 .container {
   width: 28rem;
@@ -33,13 +33,13 @@ body {
 }
 input[type="range"]::-webkit-slider-runnable-track {
   cursor: pointer;
-  background-color:blue;
+  background-color:red;
   border-radius: 0.3rem;
   height: 0.6rem;
 }
 input[type="range"]::-webkit-slider-thumb {
-  background-color:grey;
-  color:navy;
+  background-color:white;
+  color:black;
   cursor: hand;
   margin-top: -0.1rem;
 }
@@ -47,9 +47,9 @@ h4 {
   text-shadow: 0.2px 0.2px 14px #ff1493;
 }
 .css {
-  background-color: blue;
+  background-color: green;
   color: grey;
-  text-align: center;
+  text-align: left;
   padding: 1.25rem 2.5rem;
   width: 21.87rem;
   height: 8.1rem;

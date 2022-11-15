@@ -1,0 +1,16 @@
+import java.util.Calendar;  
+import java.util.GregorianCalendar;  
+public class AgeCalculatorExample4   
+{  
+public static void main(String args[])   
+{  
+  Calendar dob = new GregorianCalendar(1990, 21, 3);  
+  Calendar currentDate = new GregorianCalendar();  
+  int age = currentDate.get(Calendar.YEAR) - dob.get(Calendar.YEAR);  
+if ((dob.get(Calendar.MONTH) > currentDate.get(Calendar.MONTH)) || (dob.get(Calendar.MONTH) == currentDate.get(Calendar.MONTH) && dob.get(Calendar.DAY_OF_MONTH) > currentDate.get(Calendar.DAY_OF_MONTH)))   
+{  
+      age--;  
+}  
+  System.out.println("Your age is: "+age);  
+}  
+}  

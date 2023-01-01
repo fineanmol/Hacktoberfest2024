@@ -1,0 +1,18 @@
+The object oriented programming part: 
+
+Parent Class : User
+- Holds details about a user
+- Has a function to show user details
+
+Child Class : Bank
+- Stores details about the account balance
+- Stores details about the amount
+- Allows for deposits, withdraw, view_balance
+
+The GUI part :
+- Allow the user to register an account
+- Allow the user to login
+- Allow the user to deposit money
+- Allow the user to withdraw money
+- Allow the user to view account balance
+- Allow the user to edit personal details

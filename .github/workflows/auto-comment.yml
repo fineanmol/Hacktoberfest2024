@@ -1,5 +1,5 @@
 name: Auto Comment
-on: [issues, pull_request]
+on: [issues]
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -13,4 +13,4 @@ jobs:
        
 
           pullRequestOpened: |
-             @{{ author }} Please Star ⭐️ the repo to earn "**_hacktober-accepted_**" label for the event.
+             @{{ author }} Please Star ⭐️ the repo to earn "**_hacktober-accepted_**" label for the event..

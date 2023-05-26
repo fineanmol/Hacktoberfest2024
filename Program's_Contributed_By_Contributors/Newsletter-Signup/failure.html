@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.101.0">
+    <title>Failure</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/jumbotron/">
+
+    <link href="/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+        <style>
+            .container{
+                background-color: rgb(242, 240, 240);
+                margin: 0 ;
+                padding: 10%;
+            }
+            .display-4{
+                font-weight: bolder;
+            }
+        </style>
+
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h2 class="display-4">Uh Oh!</h2>
+            <p class="lead">There was a problem signing you up. Please try again or contact the developer!</p>
+            <form action="/failure" method="post">
+                <button class="btn btn-lg btn-warning" type="submit" name="button">Try Again</button>
+            </form>
+        </div>
+        
+    </div>
+</body>
+
+</html>

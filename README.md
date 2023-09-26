@@ -1,4 +1,4 @@
-Hacktoberfest-2022
+Hacktoberfest-2023
 
 **Checkout this Project as well [Annoying Button😡](https://annoyingsubmitbutton.netlify.app/) , It's hacktoberfest github : [https://github.com/fineanmol/Annoying-submit-button](https://github.com/fineanmol/Annoying-submit-button)**
 
@@ -14,7 +14,7 @@ Hacktoberfest { [Live Website](https://fineanmol.github.io/Hacktoberfest2022/)}
 
 P.S. Star ⭐ and Share this repository, if you had fun!! 😍
 
-Hacktoberfest 2022
+Hacktoberfest 2023
 ![Event Completed](/scripts/Event_Completed_.png)
 
 # 📌 Videos 📽️:
@@ -96,9 +96,10 @@ This will give you any eventual conflicts and allow you to easily solve them in 
 For more information on syncing forks [read this article from Github](https://help.github.com/articles/syncing-a-fork/).
 
 ## Swags of Hacktoberfest:
-- Many of the candidates get attracted towards hacktoberfest to get swags . So, after 4 successfully merged pull request as for 2021 you will be eligible to get a Hacktoberfest T-shirt and Some stickers on your doorstep.
+- No T-Shirt This Year ? 😒 <br>
+As Hacktoberfest has grown, so have the logistical challenges associated with creating a reward. Unfortunately, it’s no longer feasible for us to provide a free t-shirt. Nevertheless, we still want participants to have a memorable experience and receive a special memento marking their participation and the year. Instead of a t-shirt reward, we’re partnering with Holopin and our sponsors to provide digital rewards, making global delivery much simpler. We believe this shift will allow Hacktoberfest to continue supporting and raising awareness for open-source projects worldwide for years to come.
  
-     <li><B><p><img src="https://miro.medium.com/max/1050/1*4JctIO7irt8hFxBmTvUpiQ.jpeg" width="400" height="225" style="width: 400px; height: 225px;" alt="tshirt image"></a></p><p><img src="https://miro.medium.com/max/1050/1*jkffr74bq5RsQ_xqDhgqYQ.jpeg" width="400" height="225" style="width: 400px; height: 225px;" alt="stickers image"></p>
+     <li><B><p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/DigitalOcean_logo.svg/1200px-DigitalOcean_logo.svg.png" width="400" height="225" style="width: 400px; height: 225px;" alt="tshirt image"></a></p><p><img src="https://appwrite.io/images-ee/press/square-logo-pink.svg" width="400" height="225" style="width: 400px; height: 225px;" alt="stickers image"></p>
 </b></li>
 
 # FAQs (Frequently Asked Questions)
@@ -116,12 +117,12 @@ For more information on syncing forks [read this article from Github](https://he
 
 - Should I come closer to the text saying 'Don't come closer' on the left side of the home tab ?
   - Nope.
-- How many pull request (PR) must be made, if I want to get an awesome tshirt from Hacktoberfest 2022?
+- How many pull request (PR) must be made, if I want to get an awesome tshirt from Hacktoberfest 2023?
   - 4
-- How do I track my progress to get an awesome shirt from Hacktoberfest 2022?
+- How do I track my progress to get an awesome shirt from Hacktoberfest 2023?
   - [go to :](https://hacktoberfest.digitalocean.com/profile/). (Check Out Your Own Stats at Right Top)
-- What is the duration of Hacktoberfest 2022?
-  - It is from 1st october to 31st october 2022...
+- What is the duration of Hacktoberfest 2023?
+  - It is from 1st october to 31st october 2023...
 - What is the event for?
   - For the open source community engagement and learn how to contribute to open source.
 

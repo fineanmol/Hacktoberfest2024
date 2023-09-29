@@ -1,0 +1,12 @@
+# Solve the equation: 2x + 5 = 12
+
+# Constants
+left_side_coefficient = 2
+constant_term = 5
+right_side_value = 12
+
+# Calculate the solution
+x = (right_side_value - constant_term) / left_side_coefficient
+
+# Print the solution
+print(f"The solution to the equation is x = {x}")

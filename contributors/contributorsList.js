@@ -2050,9 +2050,12 @@ contributors = [
     id:422,
     fullname:"Evgeny Skorlov",
     username:"https://github.com/ru-asdx",
+  },
+  {
+    id:422,
+    fullname:"Parthiv",
+    username:"https://github.com/Parthiv93",
   }
-
-
 
 
 ];

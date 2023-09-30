@@ -2046,13 +2046,16 @@ contributors = [
     fullname:"Gautami SInha",
     username:"https://github.com/amnotcreative",
   },
+
   {
     id:422,
     fullname:"Evgeny Skorlov",
     username:"https://github.com/ru-asdx",
+  },
+
+  {
+    id:423,
+    fullname:"Duncan Currie",
+    username:"https://github.com/duncan-hub",
   }
-
-
-
-
 ];

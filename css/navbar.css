@@ -43,7 +43,7 @@ nav{
   width:0
 }
 .navbar-light .navbar-nav .nav-link:hover{
-  color:#000
+  color:#0000
 }
 .navbar-light .navbar-nav .nav-link:hover::before{
   left:0;
@@ -52,7 +52,7 @@ nav{
 }
 .nav-link svg{
   width:auto;
-  height:25px;
+  height:26px;
   vertical-align:text-top
 }
 .navbar-light .navbar-nav .nav-link:hover{

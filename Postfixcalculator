@@ -1,0 +1,64 @@
+class Postfixcalculator:
+    def __init__ (self):
+        self.operandStack=Stack()
+        self.SaveStack=Stack()
+    def value(self,x):
+        self.operandStack.push(x)
+    def result(self):
+        assert not self.operandStack.isEmpty(), "Empty stack"
+        return self.operandStack.peek()
+    def clear(self):
+        for i in range(len(self.operandstack)):
+            self.operandStack.pop()
+        for i in range(len(self.savestack)):
+            self.SaveStack.pop()
+
+    def clearlast(self):
+        assert not self.operandStack.isEmpty(), "Empty stack"
+        self.operandStack.pop()
+    def compute (self,op):
+        assert not self.operandStack.isEmpty(),"Empty stack"
+        assert len(self.operandStack) >=2, "not enough operands"
+        b=self.operandStack.pop()
+        a=self.operandStack.pop()
+        if op == "+":
+            self.operandStack.push( a + b )
+        elif op == "-":
+            self.operandStack.push( a - b )
+        elif op == "*":
+            self.operandStack.push( a * b )
+        elif op == "/":
+            self.operandStack.push( a / b )
+        elif op == "**":
+            self.operandStack.push( a ** b )
+        elif op == "abs":
+            self.operandStack.push(abs(a) )
+        elif op == "sqrt":
+            self.operandStack.push( sqrt(a))
+        elif op == "sin":
+            self.operandStack.push( sin(a) )
+        elif op == "cos":
+            self.operandStack.push( cos(a))
+        elif op == "tan":
+            self.operandStack.push( tan(a) )
+        else:
+            assert False,"Invalid operation"
+    def store(self):
+        assert not self.operandStack.isEmpty(),"Empty stack"
+        self.operandStack.push(self.SaveStack.pop())
+    def recall(self):
+        assert not self.operandStack.isEmpty(),"Empty stack"
+        self.operandStack.push(self.SaveStack.pop())
+
+c= Postfixcalculator()
+c.value(2)
+c.value(3)
+c.compute("+")
+print(c.result())
+c.value(4)
+c.compute("*")
+print(c.result())
+c.value(2)
+c.value(5)
+c.compute("**")
+print(c.result())

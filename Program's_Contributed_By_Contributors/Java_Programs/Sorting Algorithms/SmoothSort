@@ -1,0 +1,23 @@
+import java.util.Arrays;
+
+public class SmoothSort {
+    public static void smoothSort(int[] arr) {
+        int n = arr.length;
+
+        for (int i = 1; i < n; i++) {
+            int j = i;
+            while (j > 0 && arr[j - 1] > arr[j]) {
+                int temp = arr[j];
+                arr[j] = arr[j - 1];
+                arr[j - 1] = temp;
+                j--;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+        smoothSort(arr);
+        System.out.println("Sorted array: " + Arrays.toString(arr));
+    }
+}

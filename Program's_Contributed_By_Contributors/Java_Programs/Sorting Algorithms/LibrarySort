@@ -1,0 +1,30 @@
+import java.util.Arrays;
+
+public class LibrarySort {
+    public static void librarySort(int[] arr) {
+        int n = arr.length;
+        int[] sorted = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            int j = 0;
+            while (j < i && arr[i] > sorted[j]) {
+                j++;
+            }
+
+            for (int k = i; k > j; k--) {
+                sorted[k] = sorted[k - 1];
+            }
+            sorted[j] = arr[i];
+        }
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sorted[i];
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+        librarySort(arr);
+        System.out.println("Sorted array: " + Arrays.toString(arr));
+    }
+}

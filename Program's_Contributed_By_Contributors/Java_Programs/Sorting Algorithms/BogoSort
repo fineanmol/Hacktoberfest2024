@@ -1,0 +1,35 @@
+import java.util.Arrays;
+import java.util.Random;
+
+public class BogoSort {
+    public static void bogoSort(int[] arr) {
+        while (!isSorted(arr)) {
+            shuffle(arr);
+        }
+    }
+
+    public static boolean isSorted(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < arr[i - 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void shuffle(int[] arr) {
+        Random random = new Random();
+        for (int i = 0; i < arr.length; i++) {
+            int j = random.nextInt(i + 1);
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+        bogoSort(arr);
+        System.out.println("Sorted array: " + Arrays.toString(arr));
+    }
+}

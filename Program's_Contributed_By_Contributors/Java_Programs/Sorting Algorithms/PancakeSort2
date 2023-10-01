@@ -1,0 +1,42 @@
+import java.util.Arrays;
+
+public class PancakeSortVariant {
+    public static void pancakeSort(int[] arr) {
+        int n = arr.length;
+
+        for (int i = n - 1; i > 0; i--) {
+            int maxIndex = findMaxIndex(arr, i);
+            if (maxIndex != i) {
+                flip(arr, maxIndex);
+                flip(arr, i);
+            }
+        }
+    }
+
+    public static int findMaxIndex(int[] arr, int n) {
+        int maxIndex = 0;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] > arr[maxIndex]) {
+                maxIndex = i;
+            }
+        }
+        return maxIndex;
+    }
+
+    public static void flip(int[] arr, int index) {
+        int start = 0;
+        while (start < index) {
+            int temp = arr[start];
+            arr[start] = arr[index];
+            arr[index] = temp;
+            start++;
+            index--;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+        pancakeSort(arr);
+        System.out.println("Sorted array: " + Arrays.toString(arr));
+    }
+}

@@ -1,0 +1,29 @@
+import java.util.Arrays;
+
+public class PigeonholeSort {
+    public static void pigeonholeSort(int[] arr) {
+        int min = Arrays.stream(arr).min().getAsInt();
+        int max = Arrays.stream(arr).max().getAsInt();
+        int range = max - min + 1;
+        int[] pigeonholes = new int[range];
+
+        for (int value : arr) {
+            pigeonholes[value - min]++;
+        }
+
+        int index = 0;
+        for (int i = 0; i < range; i++) {
+            while (pigeonholes[i] > 0) {
+                arr[index] = i + min;
+                pigeonholes[i]--;
+                index++;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+        pigeonholeSort(arr);
+        System.out.println("Sorted array: " + Arrays.toString(arr));
+    }
+}

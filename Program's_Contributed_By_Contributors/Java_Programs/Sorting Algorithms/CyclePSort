@@ -1,0 +1,48 @@
+import java.util.Arrays;
+
+public class CyclePSort {
+    public static void cyclePSort(int[] arr) {
+        int n = arr.length;
+        int[] temp = new int[n];
+        int[] position = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            temp[i] = arr[i];
+            position[i] = -1;
+        }
+
+        Arrays.sort(temp);
+
+        for (int i = 0; i < n; i++) {
+            if (position[i] == -1) {
+                int j = i;
+                while (position[j] == -1) {
+                    position[j] = i;
+                    j = Arrays.binarySearch(temp, arr[j]);
+                }
+            }
+        }
+
+        for (int i = 0; i < n; i++) {
+            if (position[i] != i) {
+                int curr = arr[i];
+                int pos = position[i];
+                while (pos != i) {
+                    int next = arr[pos];
+                    arr[pos] = curr;
+                    position[pos] = pos;
+                    curr = next;
+                    pos = position[i];
+                }
+                arr[i] = curr;
+                position[i] = i;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+        cyclePSort(arr);
+        System.out.println("Sorted array: " + Arrays.toString(arr));
+    }
+}

@@ -1,0 +1,42 @@
+import java.util.Arrays;
+
+public class BitonicMergeSort {
+    public static void bitonicSort(int[] arr, int low, int count, boolean order) {
+        if (count > 1) {
+            int k = count / 2;
+            bitonicSort(arr, low, k, true);
+            bitonicSort(arr, low + k, k, false);
+            bitonicMerge(arr, low, count, order);
+        }
+    }
+
+    public static void bitonicMerge(int[] arr, int low, int count, boolean order) {
+        if (count > 1) {
+            int k = count / 2;
+            for (int i = low; i < low + k; i++) {
+                compareAndSwap(arr, i, i + k, order);
+            }
+            bitonicMerge(arr, low, k, order);
+            bitonicMerge(arr, low + k, k, order);
+        }
+    }
+
+    public static void compareAndSwap(int[] arr, int i, int j, boolean order) {
+        if ((arr[i] > arr[j] && order) || (arr[i] < arr[j] && !order)) {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+    }
+
+    public static void bitonicSort(int[] arr) {
+        int n = arr.length;
+        bitonicSort(arr, 0, n, true);
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+        bitonicSort(arr);
+        System.out.println("Sorted array: " + Arrays.toString(arr));
+    }
+}

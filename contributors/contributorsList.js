@@ -1898,6 +1898,7 @@ contributors = [
     fullname: "Benjamin Norman",
     username: "https://github.com/BenjaminN117",
   },
+
   {
     id: 376,
     fullname: "Ujjawal Dwivedi",
@@ -2053,5 +2054,10 @@ contributors = [
     id: 423,
     fullname: "Mohit Yadav",
     username: "https://github.com/ymohit1603",
+  },
+   {
+    id: 424,
+    fullname: "Dan Bradt",
+    username: "https://github.com/denschiro"
   },
 ];

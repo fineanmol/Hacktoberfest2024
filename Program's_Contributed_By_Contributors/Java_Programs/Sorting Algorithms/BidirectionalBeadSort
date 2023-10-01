@@ -1,0 +1,41 @@
+import java.util.Arrays;
+
+public class BidirectionalBeadSort {
+    public static void bidirectionalBeadSort(int[] arr) {
+        int n = arr.length;
+        int max = Arrays.stream(arr).max().getAsInt();
+        int[] beads = new int[max * n];
+
+        for (int i = 0; i < n; i++) {
+            int num = arr[i];
+            for (int j = 0; j < num; j++) {
+                beads[i * max + j] = 1;
+            }
+        }
+
+        for (int j = 0; j < max; j++) {
+            int sum = 0;
+            for (int i = 0; i < n; i++) {
+                sum += beads[i * max + j];
+                beads[i * max + j] = 0;
+            }
+
+            for (int i = n - sum; i < n; i++) {
+                beads[i * max + j] = 1;
+            }
+        }
+
+        for (int i = 0; i < n; i++) {
+            int j;
+            for (j = 0; j < max && beads[i * max + j] == 1; j++) {
+            }
+            arr[i] = j;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+        bidirectionalBeadSort(arr);
+        System.out.println("Sorted array: " + Arrays.toString(arr));
+    }
+}

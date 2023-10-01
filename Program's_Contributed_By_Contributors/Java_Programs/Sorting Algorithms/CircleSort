@@ -1,0 +1,52 @@
+import java.util.Arrays;
+
+public class CircleSort {
+    public static void circleSort(int[] arr) {
+        int n = arr.length;
+
+        for (int cycleStart = 0; cycleStart < n - 1; cycleStart++) {
+            int item = arr[cycleStart];
+            int pos = cycleStart;
+            for (int i = cycleStart + 1; i < n; i++) {
+                if (arr[i] < item) {
+                    pos++;
+                }
+            }
+
+            if (pos == cycleStart) {
+                continue;
+            }
+
+            while (item == arr[pos]) {
+                pos++;
+            }
+
+            int temp = arr[pos];
+            arr[pos] = item;
+            item = temp;
+
+            while (pos != cycleStart) {
+                pos = cycleStart;
+                for (int i = cycleStart + 1; i < n; i++) {
+                    if (arr[i] < item) {
+                        pos++;
+                    }
+                }
+
+                while (item == arr[pos]) {
+                    pos++;
+                }
+
+                temp = arr[pos];
+                arr[pos] = item;
+                item = temp;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+        circleSort(arr);
+        System.out.println("Sorted array: " + Arrays.toString(arr));
+    }
+}

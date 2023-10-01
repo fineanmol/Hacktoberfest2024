@@ -1,0 +1,57 @@
+import java.util.Arrays;
+
+class TreeNode {
+    int data;
+    TreeNode left, right;
+
+    public TreeNode(int data) {
+        this.data = data;
+        left = right = null;
+    }
+}
+
+public class BinaryTreeSort {
+    TreeNode root;
+
+    public void insert(int data) {
+        root = insertRec(root, data);
+    }
+
+    public TreeNode insertRec(TreeNode root, int data) {
+        if (root == null) {
+            root = new TreeNode(data);
+            return root;
+        }
+        if (data < root.data) {
+            root.left = insertRec(root.left, data);
+        } else if (data > root.data) {
+            root.right = insertRec(root.right, data);
+        }
+        return root;
+    }
+
+    public void inOrder(TreeNode root, int[] arr, int[] index) {
+        if (root != null) {
+            inOrder(root.left, arr, index);
+            arr[index[0]] = root.data;
+            index[0]++;
+            inOrder(root.right, arr, index);
+        }
+    }
+
+    public void binaryTreeSort(int[] arr) {
+        int n = arr.length;
+        int[] index = {0};
+        for (int value : arr) {
+            insert(value);
+        }
+        inOrder(root, arr, index);
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+        BinaryTreeSort binaryTreeSort = new BinaryTreeSort();
+        binaryTreeSort.binaryTreeSort(arr);
+        System.out.println("Sorted array: " + Arrays.toString(arr));
+    }
+}

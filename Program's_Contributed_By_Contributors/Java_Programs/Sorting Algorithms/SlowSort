@@ -1,0 +1,23 @@
+import java.util.Arrays;
+
+public class SlowSort {
+    public static void slowSort(int[] arr, int low, int high) {
+        if (low < high) {
+            int mid = (low + high) / 2;
+            slowSort(arr, low, mid);
+            slowSort(arr, mid + 1, high);
+            if (arr[mid] > arr[high]) {
+                int temp = arr[mid];
+                arr[mid] = arr[high];
+                arr[high] = temp;
+            }
+            slowSort(arr, low, high - 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+        slowSort(arr, 0, arr.length - 1);
+        System.out.println("Sorted array: " + Arrays.toString(arr));
+    }
+}

@@ -1,0 +1,41 @@
+import java.util.Arrays;
+
+public class BeadSortVariant {
+    public static void beadSort(int[] arr) {
+        int max = Arrays.stream(arr).max().getAsInt();
+        char[][] grid = new char[arr.length][max];
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i]; j++) {
+                grid[i][j] = '*';
+            }
+        }
+
+        for (int j = 0; j < max; j++) {
+            int sum = 0;
+            for (int i = 0; i < arr.length; i++) {
+                if (grid[i][j] == '*') {
+                    sum++;
+                }
+                grid[i][j] = ' ';
+            }
+
+            for (int i = arr.length - sum; i < arr.length; i++) {
+                grid[i][j] = '*';
+            }
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            int j;
+            for (j = 0; j < max && grid[i][j] == '*'; j++) {
+            }
+            arr[i] = j;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+        beadSort(arr);
+        System.out.println("Sorted array: " + Arrays.toString(arr));
+    }
+}

@@ -1,0 +1,52 @@
+class BikeShop:
+    def __init__(self, stock):
+        self.stock = stock
+
+    def displayBike(self):
+        print("Total Bikes:", self.stock)
+
+    def rentBike(self, q):
+        if q <= 0:
+            print("Enter a positive value greater than zero.")
+        elif q > self.stock:
+            print("Enter a value less than or equal to stock.")
+        else:
+            self.stock -= q
+            print("Total price:", q * 100)
+            print("Total Bikes:", self.stock)
+
+
+bikes = {"bike1": 12, "bike2":8, "bike3": 6, "bike4": 4}
+shop = BikeShop(sum(bikes.values()))
+
+while True:
+    print("Welcome to the bike rental system!")
+    print("1. Display available bikes")
+    print("2. Request a bike for rent")
+    print("3. Exit system")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        print("Available bikes:")
+        for bike, quantity in bikes.items():
+            if quantity > 0:
+                print(bike, "-", quantity)
+        shop.displayBike()
+
+    elif choice == "2":
+        bike_name = input("Enter the name of the bike you want to rent: ")
+        if bike_name in bikes and bikes[bike_name] > 0:
+            bikes[bike_name] -= 1
+            print("You have rented", bike_name)
+            payment = input("Please pay 380 Rs. ")
+            shop.rentBike(1)
+        else:
+            print("Sorry, that bike is not available for rent.")
+
+    elif choice == "3":
+        print("Thank you for using the bike rental system!")
+        break
+
+    else:
+        print("Invalid choice. Please try again.")

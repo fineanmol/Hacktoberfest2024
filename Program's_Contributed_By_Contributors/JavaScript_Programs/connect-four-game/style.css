@@ -1,0 +1,26 @@
+.turnRed{
+    background-color: rgb(218, 17, 17);
+}
+
+.turnBlue{
+    background-color: rgb(43, 43, 204);
+}
+
+td{
+    height: 60px;
+    width: 60px;
+    background-color: rgb(99, 98, 98);
+    border-radius: 50%;
+    /* border: 4px solid black; */
+}
+
+#tbl td:hover{
+    cursor: pointer;
+}
+
+.table-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}

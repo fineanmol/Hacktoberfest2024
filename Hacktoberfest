@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Assignment2_Q8</title>
+</head>
+<style media="screen">
+    div{
+      background-color:lightblue;
+      padding:15px;
+    }
+    input[type=text],select{
+      border:3px solid blue;
+      width:100%;
+      display:inline-block;
+      border-radius:5px;
+      margin:6px;
+      box-sizing:border-box;
+    }
+input[type=number]{
+      border:3px solid blue;
+      width:100%;
+      display:inline-block;
+      border-radius:5px;
+      margin:6px;
+      box-sizing:border-box;
+    }
+    input[type=submit]{
+      background-color:orange;
+      width:100%;
+      border-radius:4px;
+      border:none;
+      color:brown;
+      padding:12px 16px;
+      cursor:pointer;
+    }
+    input[type=submit]:hover{
+      background-color:green;
+    }
+  </style>
+  <body>
+     <h3 style="color:red;">A page with Form elements</h3>
+  <div>
+    <form action="/action_page.php">
+      <label for="emp">Your Name</label><input type="text" id="emp" name="employee name" placeholder="Your name.."><br>
+      <label for="dept">Department</label><input type="text" id="dept" name="department" placeholder="Your department.."><br>
+      <label for="regd">Regd No.</label><input type="number" id="emp" name="employee name" placeholder="Your Reg. no.."><br>
+
+      <label for="city">City</label>
+          <select id="city" name="city">
+              <option value="Cuttack">Cuttack</option>
+              <option value="Bhubaneswar">Bhubaneswar</option>
+              <option value="Baleswar">Baleswar</option>
+           </select><br>
+              <input type="submit" value="Confirm">
+    </form>
+  </div>
+  </body>
+</html>

@@ -45,28 +45,14 @@ public class Main {
     // pn(max);
     // *********************** Code Begins From Here*************************
     public static void solve() {
-        int n = c.i();
-        long a[] = new long[n];
-        a[0] = 1;
-        a[1] = 4;
-        for (int i = 2; i < n; i++) {
-            a[i] = i + 4;
-            long x = a[i - 1] + a[i - 2], tmp = a[i];
-            while ((3 * tmp) % x == 0)
-                tmp++;
-            a[i] = tmp;
-            // for (int j = 1;; j++) {
-            // if (((3 * (x + j)) % x) != 0) {
-            // a[i] = x + j;
-            // break;
-            // }
-            // }
+        int n = c.i(), k = c.i();
+        long x = c.l();
+        long sum = k * (k + 1L) >> 1, lastK = (n * (n + 1L) >> 1) - ((n - k) * (n - k + 1L) >> 1);
+        if (sum <= x && lastK >= x) {
+            pry();
+            return;
         }
-        // for (int i = 2; i < n; i++) {
-        // if ((3 * a[i]) % (a[i - 1] + a[i - 2]) == 0)
-        // pn(0);
-        // }
-        watch(a);
+        prn();
     }
 
     public static void main(String[] args) throws FileNotFoundException {

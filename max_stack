@@ -1,0 +1,73 @@
+# Design a Max Stack
+
+Problem Statement: Design a data structure that supports the following operations in constant time:
+
+push(val): Pushes an element val onto the stack.
+pop(): Removes the element on the top of the stack.
+top(): Retrieves the maximum element in the stack.
+getMax(): Retrieves the maximum element in the stack in constant time.
+
+# Solution Approach :
+
+import java.util.Stack;
+
+class MaxStack {
+    private Stack<Integer> stack;
+    private Stack<Integer> maxStack;
+
+    public MaxStack() {
+        stack = new Stack<>();
+        maxStack = new Stack<>();
+    }
+
+    public void push(int val) {
+        stack.push(val);
+        if (maxStack.isEmpty() || val >= maxStack.peek()) {
+            maxStack.push(val);
+        }
+    }
+
+    public int pop() {
+        if (stack.isEmpty()) {
+            throw new IllegalStateException("Stack is empty");
+        }
+        int val = stack.pop();
+        if (val == maxStack.peek()) {
+            maxStack.pop();
+        }
+        return val;
+    }
+
+    public int top() {
+        if (stack.isEmpty()) {
+            throw new IllegalStateException("Stack is empty");
+        }
+        return stack.peek();
+    }
+
+    public int getMax() {
+        if (maxStack.isEmpty()) {
+            throw new IllegalStateException("Stack is empty");
+        }
+        return maxStack.peek();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MaxStack maxStack = new MaxStack();
+
+        maxStack.push(5);
+        maxStack.push(1);
+        maxStack.push(5);
+        System.out.println(maxStack.top()); // Output: 5
+        System.out.println(maxStack.pop()); // Output: 5
+        System.out.println(maxStack.getMax()); // Output: 5
+    }
+}
+
+# Explanation:
+
+In this implementation, we maintain two stacks: stack for the actual elements and maxStack to keep track of the maximum element at each position. When pushing an element, we check if it's greater than or equal to the current maximum and update maxStack accordingly. When popping an element, we check if it's the maximum and remove it from maxStack. The top() and getMax() functions simply return the top elements of their respective stacks.
+
+This implementation ensures that the getMax() operation is performed in constant time.

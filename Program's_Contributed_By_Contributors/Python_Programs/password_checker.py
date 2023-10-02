@@ -1,24 +1,21 @@
-l, u, p, d = 0, 0, 0, 0
 s = "we_lov3_h@ct0ber"
-if (len(s) >= 8):
-	for i in s:
 
-		# counting lowercase alphabets in the given password
-		if (i.islower()):
-			l+=1		
+has_lower, has_upper, has_special, has_digit = False, False, False, False
 
-		# counting uppercase alphabets in the given password
-		if (i.isupper()):
-			u+=1		
-
-		# counting digits in the given password
-		if (i.isdigit()):
-			d+=1		
-
-		# counting the mentioned special characters
-		if(i=='@'or i=='$' or i=='_'):
-			p+=1		
-if (l>=1 and u>=1 and p>=1 and d>=1 and l+p+u+d==len(s)):
-	print("Valid Password!")
+if len(s) < 8:
+    print("Invalid Password")
 else:
-	print("Invalid Password")
+    for char in s:
+        if char.islower():
+            has_lower = True
+        elif char.isupper():
+            has_upper = True
+        elif char.isdigit():
+            has_digit = True
+        elif char in '@$_':
+            has_special = True
+
+    if all([has_lower, has_upper, has_digit, has_special]):
+        print("Valid Password!")
+    else:
+        print("Invalid Password")

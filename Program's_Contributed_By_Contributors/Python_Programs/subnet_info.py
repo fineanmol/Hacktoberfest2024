@@ -80,15 +80,16 @@ def IPClass(str):
     '''returns the class of the IP'''
     dot_index = str.find('.')
     s = int(str[:dot_index])
+    
     if s <= 127:
         return "A"
-    if s >= 128 and s <= 191:
+    elif s <= 191:
         return "B"
-    if s >= 192 and s <= 223:
+    elif s <= 223:
         return "C"
-    if s >= 224 and s <= 239:
+    elif s <= 239:
         return "D"
-    if s >= 240:
+    else:
         return "E"
 
 

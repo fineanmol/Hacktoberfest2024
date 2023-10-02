@@ -1,0 +1,16 @@
+name: Auto Comment
+on: [issues]
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wow-actions/auto-comment@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          issuesOpened: |
+             @{{ author }} Please Star ⭐️ the repo to earn "**_hacktober-accepted_**" label for the event.
+             Meanwhile if you want to work on this issue, Please raise the PR and we will review and merge it.
+       
+
+          pullRequestOpened: |
+             @{{ author }} Please Star ⭐️ the repo to earn "**_hacktober-accepted_**" label for the event..

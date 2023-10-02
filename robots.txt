@@ -1,4 +1,0 @@
-# Robots.txt
-
-User-agent: *
-Allow: /

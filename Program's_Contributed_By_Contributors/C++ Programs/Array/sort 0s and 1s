@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"array size : ";
+    cin>>n;
+    int arr[n];
+    cout<<"array elements : ";
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    int i=0,j=n-1;
+    while(j>i){
+        if(arr[i]==1 && arr[j]==0){
+            
+        int temp=arr[i];
+        arr[i]=arr[j];
+        arr[j]=temp; 
+        i++;
+        j--;
+       
+        }
+       else if(arr[i]==0){
+         i++;
+       }
+       else{
+        j--;
+       }
+       
+       
+    }
+    cout<<"sorted "<<endl;
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<endl;
+    }
+    
+}

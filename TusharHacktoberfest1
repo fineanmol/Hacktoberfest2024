@@ -1,0 +1,523 @@
+//**************************************** School Management project *************************************************//
+
+
+import com.twilio.type.PhoneNumber;
+import java.net.URISyntaxException;
+import java.time.LocalDate;
+import java.sql.SQLOutput;
+import java.time.LocalDateTime;
+import java.util.*;
+
+public class Project {
+    public static void main(String[] args) throws InterruptedException, URISyntaxException {
+        Scanner scan=new Scanner(System.in);
+        School school=new School();
+
+        school.setStudent(new ArrayList<>());
+
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t*********************");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t*********************");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t****     ***     ****");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t***       *       ***");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t**  WELCOME TO MY  **");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t**       MINI      **");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t***  ..PROJECT..  ***");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t****             ****");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t*******      ********");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t*********  **********");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t*********************");
+        System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tTulsi Ram Maheshwari Public School");
+        while(true){
+
+            System.out.println("\nPress -> 1 For Add Student");
+            System.out.println("Press -> 2 For Print Student Information");
+            System.out.println("Press -> 3 Find by Student Id");
+            System.out.println("Press -> 4 Find by Student Name");
+            System.out.println("Press -> 5 Fees Data Of Student");
+            System.out.println("Press -> 6 Find by Student Standard");
+            System.out.println("Press -> 7 Upload Marks of the student");
+            System.out.println("Press -> 8 Sort the percentage by their student Id");
+            System.out.println("Press -> 9 Exit");
+
+            System.out.println("\nEnter your Choice");
+            int choice =scan.nextInt();
+
+            if(choice==1){
+
+                Student s1=new Student();
+                s1.getFeesData().add(LocalDate.now());
+                Address addr=new Address();
+
+                System.out.println("Enter the Student name");
+
+                String name1 = scan.next();
+                while(!name1.matches("[a-zA-Z]*")){
+                    System.out.println("\nYou Entered the Wrong input");
+
+                    System.out.println("Enter the Student name again");
+                     name1 =scan.next();
+                }
+                s1.setName(name1);
+                s1.setAdmissionDate(LocalDate.now());              //now is a static function and localdate is a class
+
+
+                System.out.println("Enter the Student Id");
+                String id1=scan.next();
+                while(!id1.matches("[6-9]{1}[0-9]{3}]*")){
+                    System.out.println("You Entered the wrong input");
+                    System.out.println("Enter the id again");
+                    id1=scan.next();
+                }
+                s1.setId(id1);
+
+
+                System.out.println("Enter the Student Phone Number");
+                String phno1=scan.next();
+                while(!phno1.matches("[6-9]{1}[0-9]{9}")){
+                    System.out.println("You entered the wrong Phone Number");
+
+                    System.out.println("Enter the Student Phone Number again");
+                    phno1=scan.next();
+                }
+
+                System.out.println("Sending the OTP");
+                Thread.sleep(1000);
+
+                Random random = new Random();
+                int otp = random.nextInt(100)*random.nextInt(100);
+
+                OtpSender.sendOtp("*Subject*: *Your One-Time Password (OTP)*\n" +
+                        " Dear, User\n" +
+                        "       Thank you for choosing our service. Please find your One-Time Password (OTP) below:\n" +
+                        "               Your OTP are here:- "+otp+
+                        "                Please use this OTP to Verifying the Student. It is valid for a single use and should be entered within 30 second Until you have not access. Please keep this OTP confidential and do not share it with anyone.\n" +
+                        "If you did not request this OTP or have any concerns regarding your account's security, please contact our support team immediately at :- (844) 814-4627.\n\n" +
+                        "  Thank you for your cooperation.\n" +
+                        "  *Best regards,*\n" +
+                        "  *Tushar Kumar*\n" +
+                        "  *From Amazon*\n" +
+                        "  *8057184462*",phno1);
+
+                LocalDateTime sentOTPTime = LocalDateTime.now();
+
+
+                System.out.println("Please Enter the OTP which is received by your phone");
+                int userOtp = scan.nextInt();
+                LocalDateTime userEnterOTPtime = LocalDateTime.now();
+
+                if(userEnterOTPtime.isAfter(sentOTPTime.plusSeconds(30))){
+                    System.out.println("OTP Expired");
+                    break;
+                }
+//
+                System.out.print("Verifying");
+                Thread.sleep(1000);
+                System.out.print(".");
+                Thread.sleep(1000);
+                System.out.print(".");
+                Thread.sleep(1000);
+                System.out.print(".\n");
+                Thread.sleep(1000);
+
+
+                while(userOtp != otp){
+                    System.out.println("\nInvalid please enter again");
+                    System.out.println("Enter the OTP again which received by your phone");
+                     userOtp = scan.nextInt();
+//
+                    System.out.print("Verifying\n");
+                    Thread.sleep(1000);
+                    System.out.print(".");
+                    Thread.sleep(1000);
+                    System.out.print(".");
+                    Thread.sleep(1000);
+                    System.out.print(".");
+                    Thread.sleep(1000);
+                }
+                System.out.print("◼◼◼◼◼◼◼◼◼◼◼ Your number Verified Successfully ◼◼◼◼◼◼◼◼◼◼◼\n");
+                s1.setPhNo(phno1);
+
+                System.out.println("Enter the Student Standard");
+                String standard1=scan.next();
+                while(!standard1.matches("([1-9]|1[0-2])")){
+                    System.out.println("You entered the wrong standard");
+
+                    System.out.println("Enter the Student standard Again");
+                    standard1=scan.next();
+                }
+                s1.setStandard(standard1);
+//
+                System.out.println("Enter the Student StreetNo1");
+                String streetNo11=scan.next();
+                while(!streetNo11.matches("([1-9]|1[0-2])")){
+                    System.out.println("You entered the wrong streetNo1");
+
+                    System.out.println("Enter the Student streetNo1 Again");
+                    streetNo11=scan.next();
+                }
+                addr.setStreetNo1(streetNo11);
+
+                System.out.println("Enter the Student streetNo2");
+                String streetNo21=scan.next();
+                while(!streetNo21.matches("([1-9]|1[0-2])")){
+                    System.out.println("You entered the wrong streetNo2");
+
+                    System.out.println("Enter the Student streetNo2 Again");
+                    streetNo21=scan.next();
+                }
+                addr.setStreetNo2(streetNo21);
+
+
+                System.out.println("Enter the Student Pincode");
+                String pincode1=scan.next();
+                while(!pincode1.matches("[0-9]{3}[0-9]{3}]*")){
+                    System.out.println("You Entered the wrong input");
+                    System.out.println("Enter the pincode again");
+                    pincode1=scan.next();
+                }
+                addr.setPincode(pincode1);
+
+                System.out.println("Enter the Student city");
+
+                String city1 = scan.next();
+                while(!city1.matches("[a-zA-Z]*")){
+                    System.out.println("\nYou Entered the Wrong input");
+
+                    System.out.println("Enter the Student city again");
+                    city1 =scan.next();
+                }
+                addr.setCity(city1);
+
+                System.out.println("Enter the Student country");
+
+                String country1 = scan.next();
+                while(!country1.matches("[a-zA-Z]*")){
+                    System.out.println("\nYou Entered the Wrong input");
+
+                    System.out.println("Enter the Student country again");
+                    country1=scan.next();
+                }
+                addr.setCountry(country1);
+
+                OtpSender.sendOtp("*******************************************" +
+                                       " Hello parents,\n Your Child Admission are Successful..\n " +
+                                       "ADMISSION DATE ARE:- "+s1.getAdmissionDate()+"\n"+
+                                       "*******************************************",phno1);
+
+//                System.out.println("ADMISSION DATE ARE:- "+s1.getAdmissionDate());
+//                System.out.println(" ");
+
+                s1.setAddress(addr);
+                school.getStudent().add(s1);
+                s1.setAdmissionDate(LocalDate.now());
+
+//                OtpSender.sendOtp("",phno1);
+
+            }
+            else if(choice==2){
+                Address addr1=new Address();
+                ArrayList<Student> temp=school.getStudent();
+                for(int i=0;i<temp.size();i++){
+                    System.out.println("\nInformation of "+(i+1)+" Student");
+                    System.out.println("Name:- "+temp.get(i).getName());
+                    System.out.println("Adddmission Date:- "+temp.get(i).getAdmissionDate());
+                    System.out.println("Student Id:- "+temp.get(i).getId());
+                    System.out.println("Standard:- "+temp.get(i).getStandard());
+                    System.out.println("Phone Number:- "+temp.get(i).getPhNo());
+                    System.out.println("\nAddress of the student are:- ");
+                    System.out.println("Street No 1:- "+temp.get(i).getAddress().getStreetNo1());
+                    System.out.println("Street No 2:- "+temp.get(i).getAddress().getStreetNo2());
+                    System.out.println("Pincode:- "+temp.get(i).getAddress().getPincode());
+                    System.out.println("City:- "+temp.get(i).getAddress().getCity());
+                    System.out.println("Country:- "+temp.get(i).getAddress().getCountry());
+                    System.out.println("Marks of the Student are:- "+temp.get(i).getMarks());
+
+                }
+            }
+            else if(choice==3){
+                System.out.println("Enter the Student Id");
+                String tempId = scan.next();
+                ArrayList<Student> tempList2 = school.getStudent();
+
+                boolean found=false;
+                for(int i=0;i<tempList2.size();i++){
+
+                    if(tempList2.get(i).getId().equals(tempId)){
+
+                        System.out.println("Student Found\n");
+
+                        System.out.println("Name = "+tempList2.get(i).getName());
+                        System.out.println("Phone Number = "+tempList2.get(i).getPhNo());
+                        System.out.println("Date of first Student = "+tempList2.get(i).getFeesData());
+                        System.out.println("\nAddress of the student are:- ");
+                        System.out.println("Street No 1:- "+tempList2.get(i).getAddress().getStreetNo1());
+                        System.out.println("Street No 2:- "+tempList2.get(i).getAddress().getStreetNo2());
+                        System.out.println("Pincode:- "+tempList2.get(i).getAddress().getPincode());
+                        System.out.println("City:- "+tempList2.get(i).getAddress().getCity());
+                        System.out.println("Country:- "+tempList2.get(i).getAddress().getCountry());
+                        System.out.println("Marks of the Student are:- "+tempList2.get(i).getMarks());
+                        found=true;
+                        break;
+                    }
+                }
+                if(!found){
+                    System.out.println("\nNot Student found");
+                }
+            }
+            else if(choice==4){
+                System.out.println("Enter the Student Name");
+                String tempName = scan.next();
+                ArrayList<Student> tempList3 = school.getStudent();
+
+                boolean found=false;
+                for(int i=0;i<tempList3.size();i++){
+
+                    if(tempList3.get(i).getName().contains(tempName)){
+
+                        System.out.println("Student Found\n");
+
+                        System.out.println("Name = "+tempList3.get(i).getName());
+                        System.out.println("Phone Number = "+tempList3.get(i).getPhNo());
+                        System.out.println("Address Of the student are:- ");
+                        System.out.println("Street No 1:- "+tempList3.get(i).getAddress().getStreetNo1());
+                        System.out.println("Street No 2:- "+tempList3.get(i).getAddress().getStreetNo2());
+                        System.out.println("Pincode:- "+tempList3.get(i).getAddress().getPincode());
+                        System.out.println("City:- "+tempList3.get(i).getAddress().getCity());
+                        System.out.println("Country:- "+tempList3.get(i).getAddress().getCountry());
+                        System.out.println("Marks of the Student are:- "+tempList3.get(i).getMarks());
+
+                        found=true;
+
+                    }
+
+                }
+                if(!found){
+                    System.out.println("Not Student found");
+                }
+            }
+            else if(choice==5) {
+
+////                AdmissionMonth and admissionYear contain admission time data....
+////                tempYear and tempMonth contain current time.....
+//                System.out.println("Enter month");
+//                int tempMonth = scan.nextInt();
+//                System.out.println("Enter year");
+//                int tempYear = scan.nextInt();
+//
+//                System.out.println("Enter the Student Id");
+//                String tempId = scan.next();
+//                ArrayList<Student> tempList4 = school.getStudent();
+//
+//                boolean found=false;
+//                for(int i=0;i<tempList4.size();i++){
+//
+//                    if(tempList4.get(i).getId().equals(tempId)){
+//
+//                        int admissionMonth = tempList4.get(i).getAdmissionDate().getMonthValue();
+//                        int admissionYear = tempList4.get(i).getAdmissionDate().getYear();
+//
+////                        System.out.println("admission month and year "+ admissionMonth +" "+admissionYear);
+////                        System.out.println(tempMonth+" "+ tempYear);
+//
+//                        if(admissionYear > tempYear){
+//                            System.out.println(" Invalid because student can't submit their previous year fees ");
+//                            break;
+//                        }
+//                        if(admissionYear == tempYear && admissionMonth>tempMonth){
+//                            System.out.println("Invalid because student can't submit their previous month fees");
+//                            break;
+//                        }
+//                        found=true;
+//                        break;
+//                    }
+//                }
+////                System.out.println("You can Absolutely submit your fees");
+//                if(!found){
+//                    System.out.println("\nNot Student found");
+//                }
+
+
+                System.out.println("Enter the Student Id");
+                String tempId = scan.next();
+                ArrayList<Student> tempList8 = school.getStudent();
+
+                boolean found = false;
+                for (int i = 0; i < tempList8.size(); i++) {
+
+                    if (tempList8.get(i).getId().equals(tempId)) {
+                        System.out.println("Last Fees Found");
+                        System.out.println(tempList8.get(i).getFeesData().get(tempList8.get(i).getFeesData().size()-1));
+                        System.out.println(" Enter the how many Months You want to submitted the fees");
+                        int p=scan.nextInt();
+                        if(p>=1&&p<=3){
+                            LocalDate lastFees = tempList8.get(i).getFeesData().get(tempList8.get(i).getFeesData().size()-1);
+                            for(int s=2;s<=p;s++){
+
+                                 tempList8.get(i).getFeesData().add(lastFees.plusMonths(s));
+
+                            }
+                            System.out.println("Fees Will Be Submitted ");
+                            System.out.println(tempList8.get(i).getFeesData());
+
+                        }
+                        else{
+                            System.out.println(" Only three months Ahead Fees Only You Submitted ");
+                        }
+
+                    }
+
+
+                }
+            }
+            else if(choice==6){
+                System.out.println("Enter the Student Standard");
+                String tempName2 = scan.next();
+                ArrayList<Student> tempList5 = school.getStudent();
+
+                
+                boolean found=false;
+                for(int i=0;i<tempList5.size();i++){
+
+                    if(tempList5.get(i).getStandard().contains(tempName2)){
+
+                        System.out.println("Student Found\n");
+
+                        System.out.println("Name = "+tempList5.get(i).getName());
+                        System.out.println("Phone Number = "+tempList5.get(i).getPhNo());
+                        System.out.println("Id = "+tempList5.get(i).getId());
+                        System.out.println("Standard = "+tempList5.get(i).getStandard());
+                        System.out.println("Address of the student are:- \n");
+                        System.out.println("Street No 1:- "+tempList5.get(i).getAddress().getStreetNo1());
+                        System.out.println("Street No 2:- "+tempList5.get(i).getAddress().getStreetNo2());
+                        System.out.println("Pin code:- "+tempList5.get(i).getAddress().getPincode());
+                        System.out.println("City:- "+tempList5.get(i).getAddress().getCity());
+                        System.out.println("Country:- "+tempList5.get(i).getAddress().getCountry());
+                        System.out.println("Marks of the Student are:- "+tempList5.get(i).getMarks());
+
+                        found=true;
+                    }
+                }
+                if(!found){
+                    System.out.println("\nNot Student found");
+                }
+
+            }
+            else if(choice==7){
+                        System.out.println("Enter the Id of the student");
+                String tempName3 = scan.next();
+                ArrayList<Student> tempList6 = school.getStudent();
+
+                boolean found=false;
+                for(int i=0;i<tempList6.size();i++){
+
+                    if(tempList6.get(i).getId().equals(tempName3)){
+
+                        System.out.println("Student Found\n");
+                        if(tempList6.get(i).getStandard().length()==1){
+                            System.out.println("Enter your Hindi Marks");
+                            Double hindi=scan.nextDouble();
+                            System.out.println("Enter your Sanskrit Marks");
+                            Double sanskrit=scan.nextDouble();
+                            System.out.println("Enter your Social Science Marks");
+                            Double socialScience=scan.nextDouble();
+                            System.out.println("Enter your Math Marks");
+                            Double math=scan.nextDouble();
+                            System.out.println("Enter your English Marks");
+                            Double english=scan.nextDouble();
+
+                            Double percentage=(hindi+english+math+socialScience+sanskrit)*100/500d;
+                            System.out.println("The Percentage of the student are:- "+percentage);
+
+                            OtpSender.sendOtp("Hi, "+tempList6.get(i).getName()+percentage+"\n Your Percentage are:- "+percentage,tempList6.get(i).getPhNo());
+
+                            CallTwilio.twilioCall(tempList6.get(i).getPhNo());
+
+                            HashMap<String,Double>  tMap=new HashMap<>();
+
+                            tMap.put("Hindi",hindi);
+                            tMap.put("Sanskrit",sanskrit);
+                            tMap.put("SocialScience",socialScience);
+                            tMap.put("Math",math);
+                            tMap.put("English",english);
+
+                            tempList6.get(i).setMarks(tMap);
+                            tempList6.get(i).setPercentage(percentage);
+
+                        }
+                        else{
+                            System.out.println("Enter your Physics Marks");
+                            Double physics= scan.nextDouble();
+                            System.out.println("Enter your Chemistry Marks");
+                            Double chemistry= scan.nextDouble();
+                            System.out.println("Enter your Biology Marks");
+                            Double biology= scan.nextDouble();
+                            System.out.println("Enter your Math Marks");
+                            Double math= scan.nextDouble();
+                            System.out.println("Enter your Hindi Marks");
+                            Double hindi= scan.nextDouble();
+
+                            Double percentage=(physics+chemistry+math+biology+hindi)*100/500d;
+                            System.out.println("The percentage of Student are:- "+percentage);
+
+                            OtpSender.sendOtp("Hi, "+tempList6.get(i).getName()+percentage+"\n Your Percentage are:- "+percentage,tempList6.get(i).getPhNo());
+
+
+                            HashMap<String,Double>  tMap=new HashMap<>();
+                            tMap.put("Physics",physics);
+                            tMap.put("Chemistry",chemistry);
+                            tMap.put("Biology",biology);
+                            tMap.put("Math",math);
+                            tMap.put("Hindi",hindi);
+
+                            tempList6.get(i).setMarks(tMap);
+                            tempList6.get(i).setPercentage(percentage);
+                        }
+                        found=true;
+                    }
+                }
+                if(!found){
+                    System.out.println("\nNot Student found");
+                }
+            }
+
+            else if (choice==8) {
+                System.out.println("Enter the Student Standard");
+                String std=scan.next();
+                ArrayList<Student> tempList7=school.getStudent();
+                ArrayList<Student> filterList=new ArrayList<>();
+
+                while(!std.matches("([1-9]|1[0-2])")){
+                    System.out.println("You entered the wrong standard");
+
+                    System.out.println("Enter the Student standard Again");
+                    std=scan.next();
+                }
+//                s1.setStandard(std);
+
+                for(int i=0;i< tempList7.size();i++){
+
+                    if(tempList7.get(i).getStandard().equals(std)){
+
+                        filterList.add(tempList7.get(i));
+                    }
+                }
+                Collections.sort(filterList,(s1,s2)->s2.getPercentage().compareTo(s1.getPercentage()));
+
+//                int compare=doubleValue1.compareTo(doubleValue2);
+//
+                for (Student student : filterList) {
+
+                    System.out.println(student.getName() + " " +student.getPercentage());
+
+                }
+            }
+            else if(choice==9){
+                break;
+            }
+            else{
+
+                System.out.println("\nInvalid choice");
+            }
+        }
+    }
+}

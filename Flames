@@ -1,0 +1,37 @@
+def calculate_flames(name1, name2):
+    # Convert names to lowercase and remove spaces
+    name1 = name1.lower().replace(" ", "")
+    name2 = name2.lower().replace(" ", "")
+
+    # Create a dictionary to count unique letters in both names
+    letter_count = {}
+    for letter in name1 + name2:
+        if letter in letter_count:
+            letter_count[letter] += 1
+        else:
+            letter_count[letter] = 1
+
+    # Calculate the total count of unique letters
+    total_count = sum(letter_count.values())
+
+    # Define the FLAMES categories
+    categories = ["Friendship", "Love", "Affection", "Marriage", "Enemy", "Siblings"]
+
+    # Calculate the result by eliminating letters in a cyclic manner
+    current_index = 0
+    for category in categories:
+        if total_count == 1:
+            return category
+        current_index = (current_index + total_count - 1) % len(categories)
+        total_count -= 1
+        del categories[current_index]
+
+# Input names from the user
+name1 = input("Enter the first name: ")
+name2 = input("Enter the second name: ")
+
+# Calculate the FLAMES result
+result = calculate_flames(name1, name2)
+
+# Display the result
+print(f"The relationship between {name1} and {name2} is: {result}")

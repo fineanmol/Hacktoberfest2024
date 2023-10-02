@@ -45,36 +45,13 @@ public class Main {
     // pn(max);
     // *********************** Code Begins From Here*************************
     public static void solve() {
-        int n = c.i(), k = c.i(), a[] = new int[n], x = 1;
-        for (int i = 0; i < n / 2; i++) {
-            a[i] = 1;
-            a[n - 1 - i] = 2;
-            k -= 3;
-        }
-        // pn(k);
-        if (k < 0 || (k & 1) != 0) {
-            pn(0);
-            return;
-        }
-        int ind = 0;
-        while (k > 0) {
-            if (a[ind] + k <= 100000) {
-                a[ind] += k;
-                k = 0;
-            } else {
-                a[ind] += k / 2;
-                k /= 2;
-                ind++;
+        int n = c.i(), k = c.i(), a[] = c.intArray(n), cnt[] = new int[101];
+        for (int e : a)
+            if (e == k) {
+                pry();
+                return;
             }
-        }
-        watch(a);
-    }
-
-    private static long fac(int n) {
-        long x = 1;
-        for (int i = 2; i <= n; i++)
-            x = (x * i) % mod;
-        return x;
+        prn();
     }
 
     public static void main(String[] args) throws FileNotFoundException {

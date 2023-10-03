@@ -10,19 +10,19 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 160px;
+  height: 16rem;
   overflow:hidden;
   
   font-family: 'Lato', sans-serif;
-  font-size: 35px;
-  line-height: 40px;
+  font-size: 3.5rem;
+  line-height: 4rem;
   color: #ecf0f1;
   
   &__container {
     font-weight: 600;
     overflow: hidden;
-    height: 40px;
-    padding: 0 40px;
+    height: 4rem;
+    padding: 0 4rem;
 
     &:before {
       content: '[';
@@ -40,8 +40,8 @@ body {
       top: 0;
       
       color: #16a085;
-      font-size: 42px;
-      line-height: 40px;
+      font-size: 4.2rem;
+      line-height: 4rem;
       
       -webkit-animation-name: opacity;
       -webkit-animation-duration: 2s;
@@ -59,7 +59,7 @@ body {
 
     &__list {
       margin-top: 0;
-      padding-left: 110px;
+      padding-left: 11rem;
       text-align: left;
       list-style: none;
       
@@ -71,7 +71,7 @@ body {
       animation-iteration-count: infinite;
 
       &__item {
-        line-height:40px;
+        line-height:4rem;
         margin:0;
       }
     }

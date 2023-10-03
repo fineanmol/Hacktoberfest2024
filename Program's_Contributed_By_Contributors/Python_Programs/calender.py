@@ -1,6 +1,4 @@
-# Program to display calendar of the given month and year
-
-# importing calendar module
+#calendar module
 import calendar
 
 # To take month and year input from the user

@@ -24,3 +24,12 @@ class Coffee:
                                 print(f'Here is your change {self.get_change(budget)}$')
 
                         exit('Thanks for your transaction')
+                        # Create an instance of the Coffee class
+                        #just added this code taking input from th user 
+coffee1 = Coffee("Latte", 3.50)
+
+# Ask the user for their budget
+user_budget = float(input('Enter your budget: '))
+
+# Call the sell method to sell coffee to the user
+coffee1.sell(user_budget)

@@ -1,0 +1,10 @@
+def gcd_euclid(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+
+num1 = int(input("Enter Number 1: "))
+num2 = int(input("Enter Number 2: "))
+gcd = gcd_euclid(num1, num2)
+print(f"The GCD of {num1} and {num2} is {gcd}")

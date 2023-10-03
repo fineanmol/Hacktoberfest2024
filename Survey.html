@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="styles.css",rel="stylesheet">
+    <title>Survey Form
+    </title>
+  </head>
+  <body>
+  <h1 id="title">Survey Form</h1>
+      <p id="description">Please fill up the survey form of our website so that we can improve our performance</p> 
+    <form id="survey-form">
+      <div class="Name">
+        <label id="name-label" for="name">Name</label>
+        <input class="form-control" type="text" id="name" placeholder="Enter your name" required/>
+      </div>
+      <div class="Email">
+        <label id="email-label" for="email">Email</label>
+        <input class="form-control" type="email" id="email" placeholder="Enter your email" required/>
+      </div>
+      <div class="Age">
+        <label id="number-label" for="number">Age</label>
+        <input class="form-contol" type="number" id="number" placeholder="Age" min="1" max="140" required/>
+      </div>
+      <div class="Role">
+        <label id="dropdown-box" for="dropdown">Which option best describes your current position ?</label>
+        <select name="postion" id="dropdown" required>
+          <option disabled selected value>Select current role</option>
+          <option value="Student">Student</option>
+          <option value="Full Time Job">Full Time Job</option>
+          <option value="Full Time Learner">Full Time Learner</option>
+          <option value="Prefer not to say">Prefer not to say</option>
+          <option value="Others">Others</option>
+        </select>
+      </div>
+      <fieldset>
+  <legend>Select a maintenance drone:</legend>
+
+  <div>
+    <input type="radio" id="huey" name="drone" value="huey" checked />
+    <label for="huey">Huey</label>
+  </div>
+
+  <div>
+    <input type="radio" id="dewey" name="drone" value="dewey" />
+    <label for="dewey">Dewey</label>
+  </div>
+
+  <div>
+    <input type="radio" id="louie" name="drone" value="louie" />
+    <label for="louie">Louie</label>
+  </div>
+</fieldset>
+      <div id="checkbox">
+        <label>What would you like to improve ?</label>
+        <label for="a">
+          <input type="checkbox" id="a" name="Web-Dev" value="Web-Dev">Web-Development
+        </label>
+        <label for="b">
+          <input type="checkbox" id="b" name="DSA" value="DSA">Data Structure And Algorithm
+        </label>
+        <label for="c">
+          <input type="checkbox" id="c" name="python" value="python">Python
+        </label> 
+      </div>
+      <div>
+        <p>Any comments or suggestion ?</p>
+        <textarea id="comment" placeholder="Enter your comment"></textarea>
+      </div>
+      <input type="submit" id="submit">
+   </form>
+  </body>
+</html>

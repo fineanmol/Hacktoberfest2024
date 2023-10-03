@@ -2051,13 +2051,5 @@ contributors = [
     fullname:"Evgeny Skorlov",
     username:"https://github.com/ru-asdx",
   },
-  {
-    id:423,
-    fullname:"Vayu darji",
-    username:"https://github.com/vayudarji",
-  },
-
-
-
-
+  
 ];

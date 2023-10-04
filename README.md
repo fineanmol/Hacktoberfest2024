@@ -1,4 +1,4 @@
-Hacktoberfest-2022
+Hacktoberfest-2023
 
 **Checkout this Project as well [Annoying Button😡](https://annoyingsubmitbutton.netlify.app/) , It's hacktoberfest github : [https://github.com/fineanmol/Annoying-submit-button](https://github.com/fineanmol/Annoying-submit-button)**
 
@@ -40,11 +40,11 @@ Hacktoberfest 2022
 - Clone on your local machine
 
 ```terminal
-git clone https://github.com/fineanmol/Hacktoberfest2022.git
+git clone https://github.com/<your-username>/Hacktoberfest2023.git
 ```
 - Navigate to project directory.
 ```terminal
-cd Hacktoberfest2022
+cd Hacktoberfest2023
 ```
 
 - Create a new Branch
@@ -53,7 +53,7 @@ cd Hacktoberfest2022
 git checkout -b my-new-branch
 ```
 
-<!--- - Add your Name to `contributors/contributorsList.js`. -->
+- Add your Name to `contributors/contributorsList.js`.
 
 ```markdown
 git add .

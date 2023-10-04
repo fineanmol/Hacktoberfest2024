@@ -31,4 +31,4 @@ while (1 < 2):
         print("Paper beat rock, I win! ")
         continue
     else:
-        print("You win!")
+        print("You win! Congratulations")

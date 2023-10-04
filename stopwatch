@@ -1,0 +1,61 @@
+#include <iostream>
+#include <ctime>
+//<ctime> headerfile/set of functions, macros and types to work with date and time.
+#include <chrono>
+//chrono is a headerfile ./and type of function to work with time
+
+using namespace std;
+using namespace std::chrono;
+// std::chrono::duration represents a time interval
+
+
+int main() 
+{
+    bool is_running = false;
+    time_t start_time, end_time;
+    double elapsed_time = 0;
+    //elapsed time:two timestamps/ at the beginning of the code and the other at the end.
+
+
+    while (true) {
+        cout << "Press s to start, p to stop, r to reset, or q to quit: ";
+        char input;
+        cin >> input;
+
+        if (input == 's') {
+            if (!is_running) {
+                start_time = time(nullptr);
+                is_running = true;
+                cout << "Stopwatch started." << endl;
+            }
+            else {
+                cout << "Stopwatch is already running." << endl;
+            }
+        }
+        else if (input == 'p') {
+            if (is_running) {
+                end_time = time(nullptr);
+                elapsed_time += difftime(end_time, start_time);
+                is_running = false;
+                cout << "Elapsed time: " << elapsed_time << " seconds." << endl;
+            }
+            else {
+                cout << "Stopwatch is not running." << endl;
+            }
+        }
+        else if (input == 'r') {
+            is_running = false;
+            elapsed_time = 0;
+            cout << "Stopwatch reset." << endl;
+        }
+        else if (input == 'q') {
+            cout << "Goodbye!" << endl;
+            break;
+        }
+        else {
+            cout << "Invalid input." << endl;
+        }
+    }
+
+    return 0;
+}

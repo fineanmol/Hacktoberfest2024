@@ -1,0 +1,179 @@
+#banner{
+    background-image: url(./images/22.jpg);
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+body{
+    padding: 0%;
+    margin: 0%;
+}
+.nav-img{
+    padding-left: 0%;
+    margin-left: 0px;
+    width: 100%;
+    height: 75px;
+}
+
+.nav-img-cont{
+    padding-left: 70px;
+    padding-top: 50px;
+}
+.banner-h1{
+    font-size: 70px;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: white;
+}
+.navbar{
+    margin-bottom: 175px;
+}
+.banner-btn{
+    background-color: #0df8ad;
+    border-color: #0df8ad;
+    border-radius: 35px;
+    color: white;
+    text-transform: uppercase;
+    padding: 21px 34px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.footer-btn{
+    background-color: #0df8ad;
+    border-color: #0df8ad;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-left: -150px;
+}
+
+.banner-ctn{
+    text-align: center;
+}
+/* .shoe-image{
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block; */
+/* } */
+.image-left{
+    background-image: url(./images/27.jpg);
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+
+}
+.image-right{
+    background-image: url(./images/23-1.jpg);
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+
+}
+#about{
+    background-image: url(./images/4.png);
+    width: 100%;
+    height: 80vh;
+    background-position: center;
+    padding: 200px;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#about h2{
+    font-weight: 500;
+    font-size: 35px;
+    text-transform: capitalize;
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#about p{
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 500;
+}
+#about a{
+    color: #3DFFC2;
+    text-transform: capitalize;
+}
+.shoe-left{
+    background-image: url(./images/30.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 80vh;
+}
+.shoe-right img{
+    width: 105.5%;
+    height: 40vh;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.shoe-left2{
+    background-image: url(./images/36.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;   
+}
+.shoe-right2 img{
+    width: 105.5%;
+    height: 50vh;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.shoe-left3{
+    background-image: url(./images/15.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;   
+}
+#companies{
+    padding: 50px;
+    text-align: center;
+    margin-top: 35px;
+}
+#companies p{
+    font-size: 25px;
+    text-transform: capitalize;
+
+}
+#footer img{
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+
+#footer input{
+        width: 60%;
+        margin-left: 130px;
+        border-radius: 5px;
+        color: grey;
+        text-transform: capitalize;
+        padding: 15px 30px;
+        font-weight: 300;
+        letter-spacing: 2px;
+    
+}

@@ -1,0 +1,223 @@
+body{
+    margin:0;
+}
+#logo-head{
+    width: 105px;
+    margin-bottom: -5px;
+    
+}
+#head-search{
+    width: 25px;
+    margin-bottom: -7px;
+}
+#head-txt{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    font-weight: 120px;
+    color: white;
+}
+#head-button-1{
+    padding: 13.5px;
+    border-color:#ffffff;
+    border-radius: 8px;
+    background-color: rgba(147, 69, 69, 0);
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 12px;
+}
+#head-button-2{
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-size: 11px;
+}
+#blue-label{
+    background-color: rgb(63, 107, 200);
+    color: aliceblue;
+    max-width: 900px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 23px;
+    width: fit-content;
+    border-radius: 120px;
+    font-size: 13px;
+    margin:auto;
+    text-align: center;
+}
+#cross-btn{
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px;
+    color: white;
+    font-size: 20px;
+}
+#sec-left{
+    position: fixed;
+    width: 50%;
+    left: 0;
+
+}
+#sec-right{
+    position: fixed;
+    width: 50%;
+    left:0
+}
+#left-most{
+    background-color: #541554;
+    float:left;
+    width:10%;
+    height: 459px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#left-div{
+    background-color: #541554;
+    width: 40%;
+    float:left;
+    margin: auto;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-size: 60px;
+    padding-top: 0px;
+    padding-bottom: 25px;
+}
+#right-div{
+    background-color: #541554;
+    width: 50%;
+    float: right;
+    padding-top:0px;
+    padding-bottom: 0px;
+    color: white;
+    margin: auto;
+}
+#car-btn-1{
+    background-color: white;
+    padding: 15px;
+    font-size: 10px;
+    border-radius: 3px;
+    color: #541554;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    margin-right: 20px;
+    width: 270px;
+    border-color: rgba(245, 245, 220, 0);
+}
+#blue-label-text{
+    padding-top: 570px;
+    color:white;
+    text-align: center;
+    font-size: 58px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#car-btn-2{
+    background-color: rgb(63, 107, 200);
+    font-size: 10px;
+    border-radius: 3px;
+    border-color: rgba(240, 248, 255, 0);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 270px;
+}
+#car-2-btn-text{
+    margin-top: 5px;
+    color: white;
+    margin-right: 5px;
+}
+#btn-container{
+    display:flex;
+}
+#left-sec-carou{
+    float:left;
+    padding-left: 0px;
+    width: 50%;
+}
+#right-sec-carou{
+    float:right;
+    width: 50%;
+}
+#left-third-carou{
+    float:left;
+    padding-left: 0px;
+    width: 50%;
+}
+#right-third-carou{
+    float:right;
+    width: 50%;
+}
+#left-four-carou{
+    float:left;
+    padding-left: 0px;
+    width: 50%;
+}
+#right-sec-carou{
+    float:right;
+    width: 50%;
+}
+#bel-carou-btn-1{
+    padding: 12px;
+    background-color: #541554;
+    border-color: #54155400;
+    color: white;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 480;
+    letter-spacing: 1.2px;
+    border-radius: 5px;
+}
+#bel-carou-btn-2{
+    padding: 12px;
+    background-color: white;
+    border-color:#541554;
+    border-right-color: #541554;
+    color:#541554;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 580;
+    letter-spacing: 1.2px;
+    border-radius: 5px;
+}
+#table-3{
+    font-size: 80px;
+    padding: 150px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    color: #541554;
+}
+#table-4{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 80px;
+    padding-bottom:0px;
+}
+#left-carou-five{
+    float: left;
+    width: 40%;
+    padding-top:0px;
+    z-index: 11;
+    position: relative;
+}
+
+#carou-vid-1{
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 12px;
+    border-radius: 60px;
+    border-bottom: 0px;
+}
+#right-carou-five{
+    float: right;
+    width: 50%;
+}
+.yt-vid{
+    position:relative;
+    right:0;
+
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+#right-four-carou{
+    margin-left: 800px;
+}

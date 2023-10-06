@@ -1,0 +1,157 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="robots" content="noindex">
+	<meta name="googlebot" content="noindex">
+	
+	
+	
+	<title>Error</title>
+	
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">	
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+      body {
+        font-family: 'Open Sans', sans-serif;
+      }
+	</style>
+	
+
+	
+</head>
+<body><div class="container py-3">
+	<header>
+    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        <span class="fs-4">Drivebot Pro</span>
+      </a>
+
+      <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Log in</button>
+              </nav>
+    </div>
+
+  </header>
+<div class="page-wrap d-flex flex-row align-items-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+                <span class="display-1 d-block">404</span>
+                
+                                <div class="mb-4 lead"> 
+                <div class="alert alert-danger" role="alert"><center><span style="color: black;"> <strong>Download Limit Exceeded, Generate Again</strong></span></center></div> 
+                	<br>
+                  
+                
+                  
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script>window.history.replaceState(null, null, window.location.pathname);
+    var url = "//dolatiaschan.com/4/4432263";
+    let delay;;
+    
+    var new_url = '';
+    if(new_url != null)
+    {
+        delay = 10000;
+        CreateCopyBox(new_url);
+    }
+    else
+    {
+        delay = 3000;
+    }
+    
+    window.onload = function ()
+    {
+        setTimeout(GoToURL, delay);
+    }
+    function GoToURL()
+    {
+        if(typeof IE_fix != "undefined") // IE8 and lower fix to pass the http referer
+        {
+            var referLink = document.createElement("a");
+            referLink.href = url;
+            document.body.appendChild(referLink);
+            referLink.click();
+        }
+        else { window.location.replace(url); } // All other browsers
+    }
+    
+        
+    
+function CreateCopyBox(copyurl) 
+{
+		var divbox = document.createElement('div');
+		divbox.setAttribute('class', 'input-group mb-3');
+		var inputbox = document.createElement('input');
+		inputbox.setAttribute('class', 'form-control');
+		inputbox.value = copyurl;
+		var btncopy = document.createElement('button');
+		btncopy.setAttribute('class', 'btn btn-outline-secondary');
+		btncopy.setAttribute('type', 'button');
+		btncopy.innerHTML = '<i class="fas fa-copy"></i> Copy';
+		btncopy.onclick = function () {
+			inputbox.select();
+			inputbox.setSelectionRange(0, 99999);
+			document.execCommand("copy");
+		}
+		divbox.appendChild(inputbox);
+		divbox.appendChild(btncopy);
+		document.getElementById('copyurlbox').appendChild(divbox);
+}
+
+
+    
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script type="text/javascript">
+
+var login = document.getElementById('exampleModal');
+
+if(login) {
+
+	login.addEventListener('show.bs.modal', function () {
+
+		try{
+			grecaptcha.render(document.getElementById('rc'), {
+				'sitekey' : ''
+			});
+		} catch(e) {
+			//console.log(e)
+		}
+
+	})
+
+	login.addEventListener('hide.bs.modal', function () {
+
+		try{
+			grecaptcha.reset(0)
+		} catch(e) {
+			//console.log(e)
+		}
+
+	})
+
+}
+
+</script>
+</div>
+</body>
+</html>

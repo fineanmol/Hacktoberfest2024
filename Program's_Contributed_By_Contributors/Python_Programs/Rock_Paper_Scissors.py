@@ -19,7 +19,7 @@ while (1 < 2):
     opponenetChoice = random.choice(choices)
     print "I chose: " + opponenetChoice
     if opponenetChoice == str.upper(userChoice):
-        print "Tie! "
+        print "Tie!Try Again "
     #if opponenetChoice == str("R") and str.upper(userChoice) == "P"
     elif opponenetChoice == 'R' and userChoice.upper() == 'S':      
         print "Scissors beats rock, I win! "

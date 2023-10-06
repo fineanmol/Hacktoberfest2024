@@ -1,0 +1,70 @@
+/****************************************************************
+ 
+    Following is the class structure of the Node class:
+
+        class Node
+        {
+        public:
+	        int data;
+	        Node *next;
+	        Node(int data)
+	        {
+		        this->data = data;
+		        this->next = NULL;
+	        }
+        };
+
+*****************************************************************/
+
+Node *swapNodes(Node *head, int i, int j)
+{
+	if(i==j)
+	{
+		return head;
+	}
+	Node* prev_i=NULL;
+	Node* curr_i=head;
+	int count=0;
+	while(curr_i!=NULL && count<i)
+	{
+		prev_i=curr_i;
+		curr_i=curr_i->next;
+		count++;
+	}
+	
+	Node* prev_j=NULL;
+	Node* curr_j=head;
+	count=0;
+	while(curr_j!=NULL && count<j)
+	{
+		prev_j=curr_j;
+		curr_j=curr_j->next;
+		count++;
+	}
+	if(curr_j==NULL || curr_i==NULL)
+	{
+		return head;
+	}
+	if(prev_i!=NULL)
+	{
+		prev_i->next=curr_j;
+	}
+	else
+	{
+		head=curr_j;
+	}
+	if(prev_j!=NULL)
+	{
+		prev_j->next=curr_i;
+	}
+	else
+	{
+		head=curr_i;
+	}
+
+	Node*temp=curr_i->next;
+	curr_i->next=curr_j->next;
+	curr_j->next=temp;
+
+	return head;
+}

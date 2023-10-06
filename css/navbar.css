@@ -1,60 +1,83 @@
-.navbar{
-  padding:.5rem 2rem
+/* Improved Navbar CSS */
+
+.navbar {
+  padding: 1rem 2rem; /* Adjust padding for better spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
 }
-nav{
-  background-color:var(--nav-color)
+
+nav {
+  background-color: var(--nav-color);
 }
-.navbar-nav{
-  width:100%
+
+.navbar-nav {
+  width: 100%;
+  display: flex; /* Display links horizontally */
+  justify-content: flex-end; /* Align links to the right */
 }
-.navbar-brand{
-  line-height:1;
-  margin-right:1rem
+
+.navbar-brand {
+  line-height: 1;
+  margin-right: 1rem;
+  font-weight: 700; /* Make the brand text bold */
 }
-.navbar-brand svg{
-  height:37px;
-  width:auto;
-  vertical-align:middle
+
+.navbar-brand svg {
+  height: 37px;
+  width: auto;
+  vertical-align: middle;
 }
-.navbar-light .navbar-nav .nav-link{
-  color:var(--text);
-  position:relative;
-  padding:5px;
-  margin:0 10px!important
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--text);
+  position: relative;
+  padding: 10px 15px; /* Increase padding for better clickability */
+  margin: 0 10px !important;
+  text-transform: uppercase; /* Uppercase text for a professional look */
 }
-.navbar-light .navbar-nav .active{
-  background-color:#f1ffc5
+
+.navbar-light .navbar-nav .active {
+  background-color: #f1ffc5;
 }
-.navbar-light .navbar-nav .active>.nav-link{
-  color:#df271a;
-  font-weight:700
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: #df271a;
 }
-.navbar-light .navbar-nav .nav-link::before{
-  background-color:currentColor;
-  bottom:-1px;
-  content:"";
-  height:1px;
-  left:auto;
-  right:0;
-  position:absolute;
-  -webkit-transition:width .2s ease-in-out;
-  -o-transition:width .2s ease-in-out;
-  transition:width .2s ease-in-out;
-  width:0
+
+.navbar-light .navbar-nav .nav-link::before {
+  background-color: currentColor;
+  bottom: -1px;
+  content: "";
+  height: 2px; /* Make the underline thicker */
+  left: 0;
+  position: absolute;
+  width: 0;
+  -webkit-transition: width 0.2s ease-in-out;
+  -o-transition: width 0.2s ease-in-out;
+  transition: width 0.2s ease-in-out;
 }
-.navbar-light .navbar-nav .nav-link:hover{
-  color:#000
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #000;
 }
-.navbar-light .navbar-nav .nav-link:hover::before{
-  left:0;
-  right:auto;
-  width:100%
+
+.navbar-light .navbar-nav .nav-link:hover::before {
+  left: 0;
+  right: auto;
+  width: 100%;
 }
-.nav-link svg{
-  width:auto;
-  height:25px;
-  vertical-align:text-top
+
+.nav-link svg {
+  width: auto;
+  height: 25px;
+  vertical-align: middle; /* Adjust vertical alignment */
 }
-.navbar-light .navbar-nav .nav-link:hover{
-  color:#dc143c
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #dc143c;
+}
+
+/* Add hover effect for the entire navbar */
+.navbar-light .navbar-nav:hover {
+  background-color: #fff; /* Change background color on hover */
+  transition: background-color 0.2s ease-in-out;
 }

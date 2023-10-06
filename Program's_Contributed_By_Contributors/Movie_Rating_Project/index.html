@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Favorite Movies</title>
+    <link rel="stylesheet" href="assets/styles/app.css" />
+    <script src="assets/scripts/app.js" defer></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="assets/scripts/main.js" defer></script>
+  </head>
+  <body>
+    <div id="backdrop"></div>
+    <div class="modal card" id="add-modal">
+      <div class="modal__content">
+        <label for="title">Movie Title</label>
+        <input type="text" name="title" id="title" />
+        <label for="image-url">Image URL</label>
+        <input type="text" name="image-url" id="image-url" />
+        <label for="rating">Your Rating</label>
+        <input
+          type="number"
+          step="1"
+          max="5"
+          min="1"
+          name="rating"
+          id="rating"
+        />
+      </div>
+      <div class="modal__actions">
+        <button class="btn btn--passive">Cancel</button>
+        <button class="btn btn--success">Add</button>
+      </div>
+    </div>
+    <div class="modal card" id="delete-modal">
+      <h2 class="modal__title">Are you sure?</h2>
+      <p class="modal__content">
+        Are you sure you want to delete this item? This action can't be made
+        undone!
+      </p>
+      <div class="modal__actions">
+        <button class="btn btn--passive">No (Cancel)</button>
+        <button class="btn btn--danger">Yes</button>
+      </div>
+    </div>
+
+    <header>
+      <h1>Favorite Movies</h1>
+      <button id="addMovieBtn">ADD MOVIE</button>
+    </header>
+
+    <main>
+      <section id="entry-text" class="card">
+        <p>Your personal movie database!</p>
+        <ul id="movie-list">
+          <!--Dhacha-->
+          <!-- <li class="movie-element__image">
+            <h2 class="movie-element__info">Thor</h2>
+            <img
+            
+            src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRHXV5at6mvLIF852fvIA5jeUi6bVYs8swuCPUCRWdRxWp0sr5Q"
+            alt=""
+            />
+            <p>rating <span><span>5</span>/5</span> </p>
+          </li> -->
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
+
+<!-- example img input :
+
+https://media.tenor.com/gmUmuAcdK78AAAAM/batman.gif
+https://i.gifer.com/origin/5b/5b713e8317ee41c0f7d33be032dfc2d0_w200.gif -->

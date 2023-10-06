@@ -1,3 +1,5 @@
+package Misc;
+import java.util.*;
 class SpiralMatrix 
 {  
     //defining method to print the spiral pattern or matrix  
@@ -88,8 +90,10 @@ class SpiralMatrix
     }  
     public static void main(String args[])  
     {  
-        int size = 5;  
+        Scanner sc=new Scanner(System.in);
+        int size = sc.nextInt();  
         System.out.println("Spiral Matrix or Pattern is: \n");   
         printSpiralPattern(size);  
+        sc.close();
     }  
 }  

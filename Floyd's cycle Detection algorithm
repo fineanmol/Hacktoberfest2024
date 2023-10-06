@@ -1,0 +1,57 @@
+ Floyd’s cycle finding algorithm or Hare-Tortoise algorithm is a pointer algorithm that uses only two pointers, moving through the sequence at different speeds. This algorithm is used to find a loop in a linked list.
+It uses two pointers one moving twice as fast as the other one. The faster one is called the fast pointer and the other one is called the slow pointer.
+
+ ** Algorithm to find whether there is a cycle or not :
+
+Declare 2 nodes say slowPointer and fastPointer pointing to the linked list head.
+Move slowPointer by one node and fastPointer by 2 nodes till either of one reaches null.
+If at any point in the above traversal, slowPointer and fastPointer are found to be pointing to the same node, which implies the list has a cycle.
+
+
+// C++ program to implement the above approach
+#include <bits/stdc++.h>
+using namespace std;
+ 
+class Node {
+public:
+    int data;
+    Node* next;
+ 
+    Node(int data)
+    {
+        this->data = data;
+        next = NULL;
+    }
+};
+Node* head = NULL;
+class Linkedlist {
+public:
+    void insert(int value)
+    {
+        Node* newNode = new Node(value);
+        if (head == NULL)
+            head = newNode;
+        else {
+            newNode->next = head;
+            head = newNode;
+        }
+    }
+    bool detectLoop()
+    {
+        Node *slowPointer = head,
+             *fastPointer = head;
+ 
+        while (slowPointer != NULL
+               && fastPointer != NULL
+               && fastPointer->next != NULL) {
+            slowPointer = slowPointer->next;
+            fastPointer = fastPointer->next->next;
+            if (slowPointer == fastPointer)
+                return 1;
+        }
+ 
+        return 0;
+    }
+};
+The concepts of Floyd’s Cycle detection algorithm can also be applied to many other linked list problems. So it is pretty necessary to understand the working of these.
+

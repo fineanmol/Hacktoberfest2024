@@ -15,17 +15,17 @@ jobs:
       - name: Check if it's an issue or pull request
         run: |
           if [[ ${{ github.event_name }} == 'issues' ]]; then
-            comment_body="@${{ github.event.issue.user.login }} Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event.\nMeanwhile, if you want to work on this issue, please raise a PR, and we will review and merge it."
+            echo "::set-output name=COMMENT_BODY::@${{ github.event.issue.user.login }} Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event.\nMeanwhile, if you want to work on this issue, please raise a PR, and we will review and merge it."
           else
-            comment_body="@${{ github.event.pull_request.user.login }} Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event."
+            echo "::set-output name=COMMENT_BODY::@${{ github.event.pull_request.user.login }} Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event."
           fi
-          echo "::set-env name=COMMENT_BODY::$comment_body"
         shell: bash
 
       - name: Comment on issue/PR
         run: |
           echo "Commenting on issue/PR..."
-          echo "$COMMENT_BODY" | gh issue comment ${{ github.event.issue.number }} --body -
+          comment_body="${{ steps.check.outputs.COMMENT_BODY }}"
+          echo "$comment_body" | gh issue comment ${{ github.event.issue.number }} --body -
         env:
           GITHUB_TOKEN: ${{ secrets.AUTOMERGE_TOKEN }}
         if: ${{ github.event_name == 'issues' || github.event_name == 'pull_request' }}

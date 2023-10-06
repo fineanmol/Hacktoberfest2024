@@ -33,8 +33,8 @@ def alarm():
         # Check whether set alarm is equal to current time or not
         if current_time == set_alarm_time:
             print("Time to Wake up")
-            # Playing sound
-            winsound.PlaySound("sound.wav",winsound.SND_ASYNC)
+            # Playing sound continuously
+            winsound.PlaySound("sound.wav",winsound.SND_ASYNC|winsound.SND_LOOP|winsound.SND_FILENAME)
  
 # Add Labels, Frame, Button, Optionmenus
 Label(root,text="Alarm Clock",font=("Helvetica 20 bold"),fg="red").pack(pady=10)
@@ -44,7 +44,7 @@ frame = Frame(root)
 frame.pack()
  
 hour = StringVar(root)
-hours = ('00', '01', '02', '03', '04', '05', '06', '07',
+hours = ('Hr','00', '01', '02', '03', '04', '05', '06', '07',
          '08', '09', '10', '11', '12', '13', '14', '15',
          '16', '17', '18', '19', '20', '21', '22', '23', '24'
         )
@@ -54,7 +54,7 @@ hrs = OptionMenu(frame, hour, *hours)
 hrs.pack(side=LEFT)
  
 minute = StringVar(root)
-minutes = ('00', '01', '02', '03', '04', '05', '06', '07',
+minutes = ('Min','00', '01', '02', '03', '04', '05', '06', '07',
            '08', '09', '10', '11', '12', '13', '14', '15',
            '16', '17', '18', '19', '20', '21', '22', '23',
            '24', '25', '26', '27', '28', '29', '30', '31',
@@ -68,7 +68,7 @@ mins = OptionMenu(frame, minute, *minutes)
 mins.pack(side=LEFT)
  
 second = StringVar(root)
-seconds = ('00', '01', '02', '03', '04', '05', '06', '07',
+seconds = ('Sec','00', '01', '02', '03', '04', '05', '06', '07',
            '08', '09', '10', '11', '12', '13', '14', '15',
            '16', '17', '18', '19', '20', '21', '22', '23',
            '24', '25', '26', '27', '28', '29', '30', '31',
@@ -82,6 +82,10 @@ secs = OptionMenu(frame, second, *seconds)
 secs.pack(side=LEFT)
  
 Button(root,text="Set Alarm",font=("Helvetica 15"),command=Threading).pack(pady=20)
- 
+
+#Created an option button to stop the countinous alarm sound
+stop_alarm = lambda: winsound.PlaySound(None, winsound.SND_PURGE)
+button = Button(root, text='Stop Alarm', bg='red', fg='white', command=stop_alarm).pack(pady=30)
+
 # Execute Tkinter
 root.mainloop()

@@ -70,7 +70,7 @@ git commit -m "Relevant message"
 git push origin my-new-branch
 ```
 
-- Create a new pull request from your forked repository by clicking in the `New Pull Request` button located at the top of your repo.
+- Create a new pull request from your forked repository by clicking the `New Pull Request` button at the top of your repo.
 
 <br>
 

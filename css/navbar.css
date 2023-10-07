@@ -56,5 +56,7 @@ nav{
   vertical-align:text-top
 }
 .navbar-light .navbar-nav .nav-link:hover{
-  color:#dc143c
+  color:#dc143c;
+  font-weight: bold;
+  font-size: 18px;
 }

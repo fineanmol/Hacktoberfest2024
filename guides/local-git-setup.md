@@ -104,7 +104,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 When prompted, complete the form (if you choose to set a password, be sure to remember or make note of it!)
 
-Next we should to ensure that the SSH agent is running, and that the key is added to it.
+Next, we should to ensure that the SSH agent is running and that the key is added to it.
 
 ```
 eval "$(ssh-agent -s)"
@@ -113,7 +113,7 @@ ssh-add ~/.ssh/id_rsa
 
 #### Adding your key to GitHub
 
-Next we need to add the public key to your GitHub profile.
+Next, we need to add the public key to your GitHub profile.
 
 Copy the contents of your newly generated SSH public key (the one ending in `.pub`). You can view the file by running `cat ~/.ssh/id_ed25519.pub` (if you named your key something else, update that accordingly)
 
@@ -124,23 +124,23 @@ Next head over to GitHub, and log into your account
 4. Paste Your Key
 5. In the "Title" field, enter a descriptive label (like "My Laptop" or "Work PC").
 6. Paste your key into the "Key" field.
-7. Click Add SSH key.
+7. Click the Add SSH key.
 
 
 ---
 
-## Configuring the gitconfig
+## Configuring the git config
 
 
 Like other applications and services, git is configurable through a dotfile. You'll likely find your git config in `~/.gitconfig` - but it can be managed using the `git config` command.
 
-Before we make our first commit, there's a few things we need to setup in the git config. We can do this by running the following commands:
+Before we make our first commit, there are a few things we need to set up in the git config. We can do this by running the following commands:
 
 ```bash
 git config --global user.name "Your Full Name"
 git config --global user.email "youremail@example.com"
 ```
 
-That's all you need for now, but there's many other setting which can be tweaked here, such as setting aliases shorthands, default editor/ conflict / diff programs, enabling features, using plugins, etc. It's also possible (and sometimes preferable) to have different git configurations for different projects.
+That's all you need for now, but there are many other settings that can be tweaked here, such as setting aliases shorthands, default editor/conflict/diff programs, enabling features, using plugins, etc. It's also possible (and sometimes preferable) to have different git configurations for different projects.
 
 To learn about those, see the [Git Configuration](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration).

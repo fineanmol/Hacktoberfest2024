@@ -2066,7 +2066,7 @@ contributors = [
   },
   {
     id: 426,
-    fullname: "Xiaoren C.",
+    fullname: "Xiaoren Chung",
     username: "https://github.com/smoll-xiao",
   },
 ];

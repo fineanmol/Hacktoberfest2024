@@ -42,15 +42,15 @@ cout<<t[i]<<" ";
 }
 int main()
 {
-int n;
-int a[10][10];
-cout<<"Enter the number of nodes\n";
-cin>>n;
-cout<<"Enter the adjacency matrix row wise\n ";
+int n = 5;
+int a[5][5]={
+{0,0,1,0,0},
+{0,0,1,0,0},
+{0,0,0,1,1},
+{0,0,0,0,1},
+{0,0,0,0,0}
+};
 
-for (int i=0; i<n; i++)
-for ( int j=0; j<n; j++)
-cin>>a[i][j];
 topological_sort(a,n);
 return 0;
 }

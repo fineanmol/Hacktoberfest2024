@@ -181,6 +181,7 @@ a:hover {
 .heading:hover {
   color: #fe0c43;
   transition: 1s;
+  
 }
 .content {
   margin-top: 80px;

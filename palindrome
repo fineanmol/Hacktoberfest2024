@@ -1,0 +1,16 @@
+#Program to find to check a given number is a Palindrome or not
+
+n=int(input("Enter the Number you want to check"))
+temp=n
+rev=0
+while temp!=0:
+      rem=temp%10
+      rev=rev*10+rem
+      temp=temp//10
+
+print("The Reverse of the given number is",rev)
+if n==rev:
+    print("The Given number is a Palindrome")
+else:
+    print("The Given number is not a Palindrome")
+

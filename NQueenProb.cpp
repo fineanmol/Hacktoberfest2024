@@ -1,3 +1,5 @@
+//problem: To find all the possible ways to place n Queens
+
 #include <bits/stdc++.h>
 using namespace std;
 bool canPass(int board[][20], int n, int i, int j)

@@ -275,6 +275,7 @@ contributors = [
     fullname: "Amey",
     username: "https://github.com/ameygangwal",
   },
+  
   {
     id: 56,
     fullname: "João Jesus",
@@ -2061,6 +2062,11 @@ contributors = [
   },
   {
     id: 425,
+    fullname: "Priyanshu Ranjan",
+    username: "https://github.com/RanjanTheDoer",
+  },
+  {
+    id: 426,
     fullname: "Auro S.",
     username: "https://github.com/aurocodes",
   },

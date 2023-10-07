@@ -622,7 +622,7 @@ body {
   text-decoration: none;
 }
 .box #loadMore {
-  padding: 10px;
+  padding: 10px 25px;
   margin: 0;
   border-radius: 10px;
   background-color: #fc3e6a;

@@ -1,4 +1,4 @@
-// Write a C++ program to implement a stack using an array with push and pop operations. Find the top element of the stack and check if the stack is empty or not.
+
 #include<iostream>
 #define size 1000
 using namespace std;

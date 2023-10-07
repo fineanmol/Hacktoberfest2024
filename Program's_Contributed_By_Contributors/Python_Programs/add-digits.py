@@ -4,7 +4,6 @@
 # Memory
 # 13.16MB
 # Beats 81.39%of users with Python
-
 class Solution(object):
     def addDigits(self, num):
         """

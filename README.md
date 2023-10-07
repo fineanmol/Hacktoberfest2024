@@ -26,12 +26,12 @@ Hacktoberfest 2023
 
 # Contribution Rules📚:
 
-- You are allowed to make pull requests that break the rules. We just merge it ;)
-- Do NOT add any build steps e.g npm install (we want to keep this a simple static site)
+- You are allowed to make pull requests that break the rules. We just merge it ;).
+- Do NOT add any build steps e.g npm install (we want to keep this a simple static site).
 - Do NOT remove other content.
-- Styling/code can be pretty, ugly or stupid, big or small as long as it works
+- Styling/code can be pretty, ugly or stupid, big or small as long as it works.
 <!-- - Add your name to the contributorsList file. -->
-- Try to keep pull requests small to minimize merge conflicts
+- Try to keep pull requests small to minimize merge conflicts.
 
 
 ## Getting Started 🤩🤗:
@@ -95,8 +95,8 @@ This will give you any eventual conflicts and allow you to easily solve them in 
 
 For more information on syncing forks [read this article from Github](https://help.github.com/articles/syncing-a-fork/).
 
-## Swags of Hacktoberfest:
-- Many of the candidates get attracted towards hacktoberfest to get swags . So, after 4 successfully merged pull request as for 2021 you will be eligible to get a Hacktoberfest T-shirt and Some stickers on your doorstep.
+## ✨Swags of Hacktoberfest✨:
+- Many of the candidates get attracted towards hacktoberfest to get swag. So, after 4 successfully merged pull request as for 2021 you will be eligible to get a Hacktoberfest T-shirt and Some stickers on your doorstep.
  
      <li><B><p><img src="https://miro.medium.com/max/1050/1*4JctIO7irt8hFxBmTvUpiQ.jpeg" width="400" height="225" style="width: 400px; height: 225px;" alt="tshirt image"></a></p><p><img src="https://miro.medium.com/max/1050/1*jkffr74bq5RsQ_xqDhgqYQ.jpeg" width="400" height="225" style="width: 400px; height: 225px;" alt="stickers image"></p>
 </b></li>
@@ -119,7 +119,7 @@ For more information on syncing forks [read this article from Github](https://he
 - How many pull request (PR) must be made, if I want to get an awesome tshirt from Hacktoberfest 2023?
   - 4
 - How do I track my progress to get an awesome shirt from Hacktoberfest 2023?
-  - [go to :](https://hacktoberfest.digitalocean.com/profile/). (Check Out Your Own Stats at Right Top)
+  - [go to :](https://hacktoberfest.digitalocean.com/profile/) (Check Out Your Own Stats at Right Top)
 - What is the duration of Hacktoberfest 2023?
   - It is from 1st october to 31st october 2023...
 - What is the event for?

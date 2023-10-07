@@ -1,8 +1,5 @@
-//Count Reverse Pairs
-//Problem Statement: Given an array of numbers, you need to return the count of reverse pairs. Reverse Pairs are those pairs where i<j and arr[i]>2*arr[j].
-
-
-
+// Maximum Product Subarray in an Array
+// Problem Statement: Given an array that contains both negative and positive integers, find the maximum product subarray.
 
 #include<bits/stdc++.h>
 using namespace std;

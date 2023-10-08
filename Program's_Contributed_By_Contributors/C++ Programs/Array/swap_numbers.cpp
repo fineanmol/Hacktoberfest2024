@@ -23,9 +23,8 @@ int main()
 
 void cyclicSwap(int *a, int *b, int *c)
 {
-    int temp;
-    temp = *b;
-    *b = *a;
-    *a = *c;
-    *c = temp;
+   *a=*a+*b+*c;
+   *b=*a-(*b+*c);
+   *c=*a-(*b+*c);
+   *a=*a-(*b+*c);
 }

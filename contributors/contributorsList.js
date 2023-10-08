@@ -1,4 +1,4 @@
-contributors = [
+const contributors = [
   {
     id: 1,
     fullname: "Anmol Agarwal",
@@ -2070,3 +2070,31 @@ contributors = [
     username: "https://github.com/haarsh09",
   },
 ];
+
+
+function addContributor(newContributor) {
+  const existingIndex = contributors.findIndex(
+    (contributor) => contributor.username === newContributor.username
+  );
+
+  if (existingIndex !== -1) {
+    // Contributor already exists; remove the existing duplicate
+    contributors.splice(existingIndex, 1);
+  }
+
+  // Add the new contributor to the list
+  contributors.push(newContributor);
+
+  return {
+    success: true,
+    message: "Contributor added successfully.",
+  };
+}
+
+
+
+
+
+
+
+

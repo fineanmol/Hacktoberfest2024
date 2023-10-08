@@ -24,5 +24,6 @@ def armstrongChecker(num:int) -> bool:
         result += int(i) ** len(temp)
     return num == result
 
-number = int(input("Enter a number: "))
+#number = int(input("Enter a number: "))
+number = 370
 print(f"\n\tGiven number is {number} \n\t{armstrongChecker(number) = }\n")

@@ -2068,5 +2068,5 @@ contributors = [
     id: 426,
     fullname: "Aldo Nunes",
     username: "https://github.com/AldoNunes001",
-  },
+  }
 ];

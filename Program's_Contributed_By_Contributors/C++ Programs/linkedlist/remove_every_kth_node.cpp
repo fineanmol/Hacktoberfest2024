@@ -1,7 +1,6 @@
 #include<bits/stdc++.h> 
 using namespace std; 
 
-/* Linked list Node */
 struct Node 
 { 
 	int data; 

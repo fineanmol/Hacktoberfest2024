@@ -2066,7 +2066,7 @@ contributors = [
   },
   {
     id: 426,
-    fullname: 'M Naufal H',
+    fullname: 'M Naufal Helmi',
     username: 'https://github.com/mnaufal-helmi',
   },
 ];

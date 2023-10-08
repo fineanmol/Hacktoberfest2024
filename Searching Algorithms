@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+int linearSearch(int n, int key,int array[]){           //linear search
+    for (int i=0;i<n;i++){
+        if (key==array[i]){
+            return i;
+        }
+        
+    }
+    return -1;
+}
+
+int binarySearch(int n, int key,int arr[]){            //binary search
+    int s=0;
+    int e=n;
+    while (s<=e){
+        int mid=(s+e)/2;
+        if (key==arr[mid]){
+            return mid;
+        
+        }else if(key>arr[mid]){
+            s=mid+1;
+        }
+        else{
+            e=mid-1;
+        }
+    }
+    return -1;
+    
+    
+}
+
+int main(){
+    int n,key;
+    cout<<"Enter number of elements of the array: ";
+    cin>>n;
+    cout<<"ELEMENTS: ";
+    int array[n];
+    for (int i=0; i<n; i++){
+        cin>>array[i];
+    }
+    cout<<"Enter key: ";
+    cin>>key;
+    cout<<binarySearch(n,key,array)<<endl;
+    cout<<linearSearch(n,key,array)<<endl;
+
+    return 0;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motivation</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+  <div>
+    <img id="img" src="./assets/images/daenerys.jpeg" alt="Daenerys"/>
+    <h1 id="h1">That Special Moment</h1>
+    <p id="p">When you find perfect kaddu in the market</p>
+  </div>
+</body>
+<script>
+  let res = fetch('https://api.quotable.io/random#');
+  res.then((val1) =>{
+    console.log(val1.status);
+    return val1.json();
+  }).then((val2)=>{
+    console.log(val2.tags[0]);
+    console.log(val2.content);
+    document.getElementById('h1').innerHTML = val2.tags[0];
+    document.getElementById('p').innerHTML = val2.content;
+  });
+  let img = fetch('https://picsum.photos/600/320');
+  img.then((val1) =>{
+    console.log(val1.status);
+    return val1.blob();
+  }).then((val2)=>{
+    console.log(val2);
+    document.getElementById('img').src = URL.createObjectURL(val2);
+  });
+</script>
+<!--Random Quotes ===  https://api.quotable.io/random# -->
+<!-- Random Picture === https://picsum.photos/600/320 -->
+</html>

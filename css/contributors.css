@@ -621,15 +621,18 @@ body {
 .box #loadMore u {
   text-decoration: none;
 }
+
 .box #loadMore {
-  padding: 10px;
+  padding: 10px 20px;
   margin: 0;
   border-radius: 10px;
   background-color: #fc3e6a;
   color: whitesmoke;
   border: none;
   transition: ease-out 0.4s;
+  cursor: pointer; /* Added cursor pointer for better usability */
 }
+
 .box #loadMore:hover {
   color: black;
   font-weight: 600;

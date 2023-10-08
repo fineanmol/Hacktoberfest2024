@@ -1,4 +1,4 @@
-class Trie{
+public class Trie{
     Trie child[];
     boolean isEnd;
     Trie(){

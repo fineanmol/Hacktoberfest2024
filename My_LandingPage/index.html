@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pista</title>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" inegrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRY@EXT1nuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Types</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul> 
+            <div class="logo-container">
+                <img src="logo.png" alt="">
+            </div>
+        </nav>
+        <div class="main-content">
+            <div class="image-pista">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"> <img src="1.png"></div>
+                      <div class="swiper-slide"><img src="2.png"></div>
+                      <div class="swiper-slide"><img src="3.png"></div>
+                    </div>
+                  </div>
+               
+            </div>
+            <div class="main-text">
+                <h1>The Pistachios </h1>
+                <p>Lorem ipsun dolor sit amet consectetur, adipisicing elit.adipiscing elit.</p>
+                <button>Know More</button>
+            </div>
+        </div>
+        <div class="right">
+            <div class="box">
+                <div class="image">
+                    <img src="4.png" alt="">                  
+                </div>
+                <div class="inner-box">
+                    <h3>100% Organic</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="5.png" alt="">                  
+                </div>
+                <div class="inner-box">
+                    <h3>Not Expensive</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="6.png" alt="">                  
+                </div>
+                <div class="inner-box">
+                    <h3>Super Healthy</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>  
+        </div>
+
+        <div class="social-links">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="far fa-envelope"></i>
+        </div>
+
+
+      
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,         
+        });
+      </script>
+    
+</body>
+</html>

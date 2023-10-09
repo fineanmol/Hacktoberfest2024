@@ -1,0 +1,25 @@
+import numpy as np
+
+def calculate_kurtosis(pmf):
+    n = len(pmf)
+    mean = sum(i * pmf[i] for i in range(n))
+    variance = sum((i - mean) ** 2 * pmf[i] for i in range(n))
+    kurtosis = sum(((i - mean) ** 4) * pmf[i] for i in range(n)) / (variance ** 2) - 3
+    return kurtosis
+
+def main():
+    
+    pmf_values = input("Enter the PMF values separated by spaces: ").split()
+    pmf_values = [float(val) for val in pmf_values]
+
+    
+    pmf_sum = sum(pmf_values)
+    pmf = [val / pmf_sum for val in pmf_values]
+
+    # Calculate the kurtosis
+    kurtosis = calculate_kurtosis(pmf)
+
+    print("Kurtosis of the given probability density function (PDF):", kurtosis)
+
+if __name__ == "__main__":
+    main()

@@ -2066,7 +2066,7 @@ contributors = [
   },
    {
     id: 426,
-    fullname: "Ahmad Ubah.",
+    fullname: "Ahmad Ubah",
     username: "https://github.com/Dev-Ahmadubah",
   },
 ];

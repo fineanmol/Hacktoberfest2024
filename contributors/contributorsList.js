@@ -2064,4 +2064,24 @@ contributors = [
     fullname: "Auro S.",
     username: "https://github.com/aurocodes",
   },
+  {
+    id: 426,
+    fullname: "Franklin Eduardo",
+    username: "https://github.com/mancharger",
+  },
+  {
+    id: 427,
+    fullname: "Franklin Eduardo",
+    username: "https://github.com/mancharger",
+  },
+  {
+    id: 426,
+    fullname: "Franklin Eduardo",
+    username: "https://github.com/mancharger",
+  },
+  {
+    id: 428,
+    fullname: "Franklin Eduardoo",
+    username: "https://github.com/mancharger",
+  },
 ];

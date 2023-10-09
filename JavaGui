@@ -1,0 +1,66 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class LoginGUI extends JFrame {
+    private JTextField usernameField;
+    private JPasswordField passwordField;
+
+    public LoginGUI() {
+        setTitle("Login Page");
+        setSize(300, 150);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(3, 2));
+
+        JLabel usernameLabel = new JLabel("Username:");
+        JLabel passwordLabel = new JLabel("Password:");
+
+        usernameField = new JTextField();
+        passwordField = new JPasswordField();
+
+        JButton loginButton = new JButton("Login");
+        loginButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String username = usernameField.getText();
+                String password = new String(passwordField.getPassword());
+
+                // Replace this with your authentication logic
+                if (authenticate(username, password)) {
+                    JOptionPane.showMessageDialog(LoginGUI.this, "Login Successful!");
+                } else {
+                    JOptionPane.showMessageDialog(LoginGUI.this, "Login Failed. Please try again.");
+                }
+            }
+        });
+
+        panel.add(usernameLabel);
+        panel.add(usernameField);
+        panel.add(passwordLabel);
+        panel.add(passwordField);
+        panel.add(new JLabel());
+        panel.add(loginButton);
+
+        add(panel);
+        setVisible(true);
+    }
+
+    // Replace this with your actual authentication logic
+    private boolean authenticate(String username, String password) {
+        // Simulate authentication logic (e.g., using hardcoded values)
+        return username.equals("admin") && password.equals("password");
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new LoginGUI();
+            }
+        });
+    }
+}

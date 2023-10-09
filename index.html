@@ -205,74 +205,89 @@
         // Load contributors after document loads.
         render(contributors);
 
-        function loadMore() {
-            if (initialContributorsNumber >= contributors.length) {
-                render(contributors)
-            } else {
-                initialContributorsNumber += 84;
-                document.getElementById('contributors').innerHTML = "<div class='text-center' id='loading'>Loading...</div>"
-                render(contributors)
-                document.querySelectorAll('a.box-item').forEach(con => {
-                    // console.log(con.href)
-                    con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
-                })
-                document.getElementById('loading').setAttribute('hidden', true)
-                if (initialContributorsNumber >= contributors.length) {
-                    document.getElementById('loadMore').setAttribute('hidden', true)
-                }
-            }
-        }
+// Function to load more contributors when the "Load More" button is clicked
+function loadMore() {
+    if (initialContributorsNumber >= contributors.length) {
+        // Render all contributors if we have already loaded all of them
+        render(contributors);
+    } else {
+        initialContributorsNumber += 84;
+        // Display a loading message while loading more contributors
+        document.getElementById('contributors').innerHTML = "<div class='text-center' id='loading'>Loading...</div>";
+        render(contributors);
 
-		const loadMoreBtn = document.getElementById("loadMore")
-		loadMoreBtn.addEventListener("click", loadMore)
-
-
+        // Append profile images to contributor links
         document.querySelectorAll('a.box-item').forEach(con => {
-            // console.log(con.href)
-            con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`
-        })
+            con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`;
+        });
 
-        searchbox.addEventListener('keyup', async (e) => {
-            searchbox.value !== '' ? document.getElementById('loadMore').classList.add('hidden') : document.getElementById('loadMore').classList.remove('hidden')
+        // Hide the loading message once contributors are loaded
+        document.getElementById('loading').setAttribute('hidden', true);
 
-            searchResult = await filterUsers(e.target.value, contributors)
-            document.getElementById('contributors').innerHTML = e.target.value !== '' ? "<div class='text-center' id='loading'>Loading...</div>" : ''
+        if (initialContributorsNumber >= contributors.length) {
+            // Hide the "Load More" button when all contributors are displayed
+            document.getElementById('loadMore').setAttribute('hidden', true);
+        }
+    }
+}
 
-            e.target.value !== '' ?
-                searchResult.forEach((item) => {
-                    let username = document.createElement('span');
-                    username.innerHTML = item.fullname;
+// Event listener for the "Load More" button
+const loadMoreBtn = document.getElementById("loadMore");
+loadMoreBtn.addEventListener("click", loadMore);
 
-                    let user = document.createElement('a');
-                    user.className = 'box-item'
-                    user.setAttribute('href', item.username)
-                    user.append(username)
+// Preload profile images for all contributors initially
+document.querySelectorAll('a.box-item').forEach(con => {
+    con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split('https://github.com/')[1]}">`;
+});
 
-                    document.getElementById('contributors').append(user)
-                })
-                :
-                contributors.forEach((item) => {
-                    let username = document.createElement('span');
-                    username.innerHTML = item.fullname;
+// Event listener for the search box
+searchbox.addEventListener('keyup', async (e) => {
+    // Hide the "Load More" button when searching
+    searchbox.value !== '' ? document.getElementById('loadMore').classList.add('hidden') : document.getElementById('loadMore').classList.remove('hidden');
 
-                    let user = document.createElement('a');
-                    user.className = 'box-item'
-                    user.setAttribute('href', item.username)
-                    user.append(username)
-                    if (item.id <= initialContributorsNumber) {
-                        document.getElementById('contributors').append(user)
-                    }
+    // Filter contributors based on search input
+    const searchResult = await filterUsers(e.target.value, contributors);
+    document.getElementById('contributors').innerHTML = e.target.value !== '' ? "<div class='text-center' id='loading'>Loading...</div>" : '';
 
-                })
+    if (e.target.value !== '') {
+        // Display search results
+        searchResult.forEach((item) => {
+            let username = document.createElement('span');
+            username.innerHTML = item.fullname;
 
-            document.querySelectorAll('a.box-item').forEach(con => {
-                // console.log(con.href)
-                con.innerHTML += `<img loading="lazy" src="https://github.com/${con.href.split('https://github.com/')[1]}.png">`
-            })
+            let user = document.createElement('a');
+            user.className = 'box-item';
+            user.setAttribute('href', item.username);
+            user.append(username);
 
-            document.getElementById('loading').setAttribute('hidden', true)
+            document.getElementById('contributors').append(user);
+        });
+    } else {
+        // Display all contributors when search input is empty
+        contributors.forEach((item) => {
+            let username = document.createElement('span');
+            username.innerHTML = item.fullname;
 
-        })
+            let user = document.createElement('a');
+            user.className = 'box-item';
+            user.setAttribute('href', item.username);
+            user.append(username);
+
+            if (item.id <= initialContributorsNumber) {
+                document.getElementById('contributors').append(user);
+            }
+        });
+    }
+
+    // Append profile images to contributor links
+    document.querySelectorAll('a.box-item').forEach(con => {
+        con.innerHTML += `<img loading="lazy" src="https://github.com/${con.href.split('https://github.com/')[1]}.png">`;
+    });
+
+    // Hide the loading message once contributors are loaded
+    document.getElementById('loading').setAttribute('hidden', true);
+});
+
 
 
 

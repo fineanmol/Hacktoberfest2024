@@ -1,4 +1,4 @@
-""" Rock Paper Scissors for python 2
+""" Rock Paper Scissors
 ----------------------------------------
 """
 import random
@@ -13,7 +13,7 @@ while (1 < 2):
         print "Please choose a letter:"
         print "[R]ock, [S]cissors or [P]aper."
         continue
-    print userChoice                                                                                                                                                                                                                                                                                                                                        
+    // Echo the user's choice                                                                                                                                                                                                                                                                                                                                        
     print "You chose: " + userChoice
     choices = ['R', 'P', 'S']
     opponenetChoice = random.choice(choices)

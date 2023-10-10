@@ -17,7 +17,7 @@ def bubbleSort(arr):
 # Driver code
 
 # Example to test the above code
-arr = [ 2, 1, 10, 23 ]
+arr = [ 5,4,1,9 ]
 
 bubbleSort(arr)
 

@@ -1,34 +1,29 @@
-""" Rock Paper Scissors
-----------------------------------------
-"""
 import random
-import os
-import re
-os.system('cls' if os.name=='nt' else 'clear')
-while (1 < 2):
-    print "\n"
-    print "Rock, Paper, Scissors - Shoot!"
-    userChoice = raw_input("Choose your weapon [R]ock], [P]aper, or [S]cissors: ")
-    if not re.match("[SsRrPp]", userChoice):
-        print "Please choose a letter:"
-        print "[R]ock, [S]cissors or [P]aper."
-        continue
-    // Echo the user's choice                                                                                                                                                                                                                                                                                                                                        
-    print "You chose: " + userChoice
-    choices = ['R', 'P', 'S']
-    opponenetChoice = random.choice(choices)
-    print "I chose: " + opponenetChoice
-    if opponenetChoice == str.upper(userChoice):
-        print "Tie! "
-    #if opponenetChoice == str("R") and str.upper(userChoice) == "P"
-    elif opponenetChoice == 'R' and userChoice.upper() == 'S':      
-        print "Scissors beats rock, I win! "
-        continue
-    elif opponenetChoice == 'S' and userChoice.upper() == 'P':      
-        print "Scissors beats paper! I win! "
-        continue
-    elif opponenetChoice == 'P' and userChoice.upper() == 'R':      
-        print "Paper beat rock, I win! "
-        continue
-    else:       
-        print "You win!"
+
+while True:
+    user_action = input("Enter a choice (rock, paper, scissors): ")
+    possible_actions = ["rock", "paper", "scissors"]
+    computer_action = random.choice(possible_actions)
+    print(f"\nYou chose {user_action}, computer chose {computer_action}.\n")
+
+    if user_action == computer_action:
+        print(f"Both players selected {user_action}. It's a tie!")
+    elif user_action == "rock":
+        if computer_action == "scissors":
+            print("Rock smashes scissors! You win!")
+        else:
+            print("Paper covers rock! You lose.")
+    elif user_action == "paper":
+        if computer_action == "rock":
+            print("Paper covers rock! You win!")
+        else:
+            print("Scissors cuts paper! You lose.")
+    elif user_action == "scissors":
+        if computer_action == "paper":
+            print("Scissors cuts paper! You win!")
+        else:
+            print("Rock smashes scissors! You lose.")
+
+    play_again = input("Play again? (y/n): ")
+    if play_again.lower() != "y":
+        break

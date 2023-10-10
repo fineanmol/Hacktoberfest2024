@@ -2065,7 +2065,7 @@ contributors = [
     username: "https://github.com/aurocodes",
   },
      id: 426,
-     fullname: "Yongky W.",
+     fullname: "Yongky Wanda.",
      username: "https://github.com/yongkyw",
    },
 ];

@@ -2068,5 +2068,5 @@ contributors = [
     id: 426,
     fullname: "Gaurav Naval",
     username: "https://github.com/Naval1704",
-  },
+  }
 ];

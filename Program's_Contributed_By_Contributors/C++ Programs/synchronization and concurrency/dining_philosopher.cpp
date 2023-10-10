@@ -1,35 +1,153 @@
-#include <iostream>
-#include <thread>
-#include <mutex>
+#include <bits/stdc++.h>
+#include <pthread.h>
+#include <unistd.h>
+using namespace std;
 
-const int NUM_PHILOSOPHERS = 5;
+#define N 10
+#define THINKING 2
+#define HUNGRY 1
+#define EATING 0
+#define LEFT (phnum + 4) % N
+#define RIGHT (phnum + 1) % N
 
-std::mutex forks[NUM_PHILOSOPHERS];
+int phil[N];
+int times = 200;
 
-void philosopher(int id) {
-    int left_fork = id;
-    int right_fork = (id + 1) % NUM_PHILOSOPHERS;
+class monitor {
 
-    std::unique_lock<std::mutex> left_lock(forks[left_fork]);
-    std::this_thread::sleep_for(std::chrono::milliseconds(1)); // Simulate thinking
-    std::unique_lock<std::mutex> right_lock(forks[right_fork]);
+	int state[N];
 
-    std::cout << "Philosopher " << id << " is eating." << std::endl;
+	// Philosopher condition variable
+	pthread_cond_t phcond[N];
 
-    right_lock.unlock();
-    left_lock.unlock();
+	// mutex variable for synchronization
+	pthread_mutex_t condLock;
+
+public:
+	// Test for the desired condition
+	// i.e. Left and Right philosopher are not reading
+	void test(int phnum)
+	{
+
+		if (state[(phnum + 1) % 5] != EATING
+			and state[(phnum + 4) % 5] != EATING
+			and state[phnum] == HUNGRY) {
+			state[phnum] = EATING;
+
+			pthread_cond_signal(&phcond[phnum]);
+		}
+	}
+
+	// Take Fork function
+	void take_fork(int phnum)
+	{
+
+		pthread_mutex_lock(&condLock);
+
+		// Indicates it is hungry
+		state[phnum] = HUNGRY;
+
+		// test for condition
+		test(phnum);
+
+		// If unable to eat.. wait for the signal
+		if (state[phnum] != EATING) {
+			pthread_cond_wait(&phcond[phnum], &condLock);
+		}
+		cout << "Philosopher " << phnum << " is Eating"
+			<< endl;
+
+		pthread_mutex_unlock(&condLock);
+	}
+
+	// Put Fork function
+	void put_fork(int phnum)
+	{
+
+		pthread_mutex_lock(&condLock);
+
+		// Indicates that I am thinking
+		state[phnum] = THINKING;
+
+		test(RIGHT);
+		test(LEFT);
+
+		pthread_mutex_unlock(&condLock);
+	}
+
+	// constructor
+	monitor()
+	{
+
+		for (int i = 0; i < N; i++) {
+			state[i] = THINKING;
+		}
+
+		for (int i = 0; i < N; i++) {
+			pthread_cond_init(&phcond[i], NULL);
+		}
+
+		pthread_mutex_init(&condLock, NULL);
+	}
+
+	// destructor
+	~monitor()
+	{
+
+		for (int i = 0; i < N; i++) {
+			pthread_cond_destroy(&phcond[i]);
+		}
+
+		pthread_mutex_destroy(&condLock);
+	}
 }
 
-int main() {
-    std::thread philosophers[NUM_PHILOSOPHERS];
+// Global Object of the monitor
+phil_object;
 
-    for (int i = 0; i < NUM_PHILOSOPHERS; ++i) {
-        philosophers[i] = std::thread(philosopher, i);
-    }
+void* philosopher(void* arg)
+{
+	int c = 0;
+	while (c < times) {
+		int i = *(int*)arg;
+		sleep(1);
+		phil_object.take_fork(i);
+		sleep(0.5);
+		phil_object.put_fork(i);
+		c++;
+	}
+}
 
-    for (int i = 0; i < NUM_PHILOSOPHERS; ++i) {
-        philosophers[i].join();
-    }
+int main()
+{
 
-    return 0;
+	// Declaration...
+	pthread_t thread_id[N];
+	pthread_attr_t attr;
+
+	// Initialization...
+	pthread_attr_init(&attr);
+	pthread_attr_setdetachstate(&attr,
+								PTHREAD_CREATE_JOINABLE);
+
+	for (int i = 0; i < N; i++) {
+		phil[i] = i;
+	}
+
+	for (int i = 0; i < N; i++) {
+		pthread_create(&thread_id[i], &attr, philosopher,
+					&phil[i]);
+		cout << "Philosopher " << i + 1 << " is thinking..."
+			<< endl;
+	}
+
+	for (int i = 0; i < N; i++) {
+		pthread_join(thread_id[i], NULL);
+	}
+
+
+	pthread_attr_destroy(&attr);
+	pthread_exit(NULL);
+
+	return 0;
 }

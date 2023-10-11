@@ -4,7 +4,7 @@
   --white: white;
   --black: rgb(39 41 52);
   --gray: #fafafa;
-  --text: black;
+  --text: #181818;
   --box: #feeef2;
   --box-hover: #fe0c43;
   --nav-color: rgb(255, 230, 230);
@@ -13,7 +13,7 @@
 [data-theme="dark"] {
   --white: rgb(39 41 52);
   --black: white;
-  --gray: black;
+  --gray: #181818;
   --text: rgb(242, 244, 251);
   --box: rgb(61 62 73);
   --box-hover: rgb(57 148 255);
@@ -87,7 +87,7 @@ body {
   right: 40px;
   width: 40px;
   height: 40px;
-  color: #000;
+  color: #181818;
   background-color: var(--lightt);
   cursor: pointer;
   outline: 0;
@@ -153,7 +153,7 @@ input:-webkit-autofill:active {
 .light .form-control {
   background-color: #fff;
   border-color: #eee;
-  color: #000;
+  color: #181818;
   outline: 0;
   box-shadow: none;
 }
@@ -164,7 +164,7 @@ input:-webkit-autofill:active {
   color: #b8b9bc;
 }
 a {
-  color: #000;
+  color: #181818;
   text-decoration: none;
 }
 a:hover {
@@ -631,7 +631,7 @@ body {
   transition: ease-out 0.4s;
 }
 .box #loadMore:hover {
-  color: black;
+  color: #181818;
   font-weight: 600;
   box-shadow: inset 120px 0 0 0 #fe0c43;
 }

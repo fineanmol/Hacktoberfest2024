@@ -79,7 +79,7 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #111;
+  background: #181818;
   height: auto;
   width: 100vw;
   padding-top: 40px;
@@ -141,7 +141,7 @@ footer {
 
 .footer-bottom {
   position: absolute;
-  background: #000;
+  background: #181818;
   width: 100vw;
   padding: 20px;
   text-align: center;

@@ -2035,8 +2035,8 @@ contributors = [
   },
   {
     id: 420,
-    fullname: "Auro S.",
-    username: "https://github.com/aurocodes",
+    fullname: "Keshav R Karanth",
+    username: "https://github.com/keshavrkaranth",
   },
 
   {
@@ -2054,10 +2054,22 @@ contributors = [
     fullname: "Mohit Yadav",
     username: "https://github.com/ymohit1603",
   },
+
   ,
   {
     id: 424,
     fullname: "Kunal Vaghela",
     username: "https://github.com/Kunal0127",
+
+  {
+    id: 425,
+    fullname: "Sumit Br",
+    username: "https://github.com/SumitBr",
+  },
+  {
+    id: 426,
+    fullname: "Auro S.",
+    username: "https://github.com/aurocodes",
+
   },
 ];

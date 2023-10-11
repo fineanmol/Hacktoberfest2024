@@ -2068,5 +2068,5 @@ contributors = [
     id: 426,
     fullname: "Mihir Sahu",
     username: "https://github.com/0xmihirsahu",
-  },
+  }
 ];

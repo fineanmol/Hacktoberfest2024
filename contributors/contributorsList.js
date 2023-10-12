@@ -2066,7 +2066,7 @@ contributors = [
   },
   {
     id: 426,
-    fullname: "Shivam Singh Negi",
+    fullname: "Shivam Singh Negi ",
     username: "https://github.com/shivam-singh-negi",
   },
 ];

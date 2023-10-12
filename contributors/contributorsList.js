@@ -2064,4 +2064,9 @@ contributors = [
     fullname: "Auro S.",
     username: "https://github.com/aurocodes",
   },
+  {
+    id: 426,
+    fullname: "Shivam Singh Negi",
+    username: "https://github.com/shivam-singh-negi",
+  },
 ];

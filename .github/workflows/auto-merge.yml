@@ -1,0 +1,25 @@
+name: Auto-Merge PRs
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  auto_merge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check PR status
+        run: |
+          PR_NUMBER=$(jq -r ".pull_request.number" "$GITHUB_EVENT_PATH")
+          PR_URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/pulls/${PR_NUMBER}"
+          PR_STATE=$(curl -s -H "Authorization: token ${{ secrets.AUTOMERGE_TOKEN }}" $PR_URL | jq -r .state)
+          
+          if [ "$PR_STATE" = "open" ]; then
+            echo "PR is still open. Merging..."
+            curl -s -X PUT -H "Authorization: token ${{ secrets.AUTOMERGE_TOKEN }}" $PR_URL/merge
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.AUTOMERGE_TOKEN }}

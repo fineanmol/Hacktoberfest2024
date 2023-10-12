@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:elevation="2dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/test3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_player_name"
+            style="@style/BoldText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_player"
+            tools:text="Kevin De Bruyne" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_player_club"
+            style="@style/MediumText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_player_name"
+            tools:text="Manchester City" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_player_position"
+            style="@style/MediumText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_player_club"
+            tools:text="AMF/CMF" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_player_nationally"
+            style="@style/MediumText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_player_position"
+            tools:text="Belgium" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_player_description"
+            style="@style/MediumText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_player_nationally"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec odio magna. Fusce vel condimentum lacus. Suspendisse eget ullamcorper neque. Donec maximus, magna eu cursus sollicitudin, erat quam dapibus leo, et dapibus sapien metus et augue. Aliquam posuere cursus diam commodo scelerisque. Aliquam at turpis volutpat, feugiat nulla a, ornare est. Praesent sodales magna eget dapibus fermentum. Phasellus sit amet tortor eu magna rhoncus mollis non a massa. In sit amet finibus metus. In et mollis mauris. Curabitur nunc quam, feugiat et orci et, porttitor vulputate justo. Aenean interdum eu tellus et euismod." />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_search_google"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:backgroundTint="@null"
+            android:background="@drawable/bg_btn"
+            android:text="@string/search_btn_text"
+            app:layout_constraintEnd_toEndOf="@+id/tv_player_description"
+            app:layout_constraintStart_toStartOf="@+id/tv_player_description"
+            app:layout_constraintTop_toBottomOf="@+id/tv_player_description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

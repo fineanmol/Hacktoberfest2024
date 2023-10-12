@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/playerWordStartFragment">
+
+    <fragment
+        android:id="@+id/playerWordStartFragment"
+        android:name="com.vinz.playerpedia.fragment.PlayerWordStartFragment"
+        android:label="fragment_player_word_start"
+        tools:layout="@layout/fragment_player_word_start">
+        <action
+            android:id="@+id/action_playerWordStartFragment_to_playerWordDataFragment"
+            app:destination="@id/playerWordDataFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/playerWordDataFragment"
+        android:name="com.vinz.playerpedia.fragment.PlayerWordDataFragment"
+        android:label="fragment_player_word_data"
+        tools:layout="@layout/fragment_player_word_data">
+        <action
+            android:id="@+id/action_playerWordDataFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.vinz.playerpedia.fragment.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
+
+</navigation>

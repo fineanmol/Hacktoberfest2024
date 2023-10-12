@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PlayerPedia</string>
+    <string name="playerpedia_title">PlayerPedia</string>
+    <string name="playerpedia_subtitle">Where you can find your favorite players</string>
+    <string name="changeview_desc">For changing view</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="playerword_title">Everything about football player</string>
+    <string name="playerword_subtitle">Find your favorite player here!</string>
+    <string name="search_btn_text">Search on Google</string>
+</resources>

@@ -124,7 +124,7 @@ footer {
 .socials a {
   text-decoration: none;
   color: #fff;
-  border: 1.1px solid blue;
+  border: 1.1px solid pink;
   padding: 5px;
   border-radius: 50%;
 }
@@ -185,7 +185,7 @@ footer {
 }
 
 .footer-menu ul li a:hover {
-  color: blue;
+  color: #27bcda;
 }
 
 @media (max-width:500px) {

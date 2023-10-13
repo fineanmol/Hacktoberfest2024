@@ -1,0 +1,37 @@
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    string s;
+    getline(cin,s);
+    char arr[26]={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+    int len=s.length();
+    for(int i=0;i<26;i++){
+        for(int j=0;j<len;j++){
+            if(arr[i]==s[j] || arr[i]==char(s[j]+32)){
+                arr[i]='1';
+            }
+        }
+    }
+
+    for(int i=0;i<26;i++){
+        cout<<arr[i];
+    }
+
+    int ans=0;
+    for(int i=0;i<26;i++){
+        if(arr[i]=='1'){
+            ans=ans+1;
+        }
+    }
+    cout<<ans;
+    if(ans!=sizeof(arr)){
+        cout<<"not pangram";
+    }
+    else{
+        cout<<"pangram";
+    }
+
+    return 0;
+}

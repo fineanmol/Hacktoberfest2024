@@ -193,5 +193,6 @@ footer {
     display: flex;
     margin-top: 10px;
     margin-bottom: 40px;
+    margin-left: 30px;
   }
 }

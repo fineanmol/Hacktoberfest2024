@@ -7,7 +7,7 @@ def binary_search(arr, low, high, x):
 	# Check base case
 	if high >= low:
 
-		mid = (high + low) // 2
+		mid = low + (high-low) // 2  # might be possible that (high + low) exceeds the integer range in python
 
 		# If element is present at the middle itself
 		if arr[mid] == x:

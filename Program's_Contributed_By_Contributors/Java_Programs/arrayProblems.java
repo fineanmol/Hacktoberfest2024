@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class array Problems {
+public class arrayProblems {
     //program for array rotation
     static void rot(int arr[], int num){
         int array[] = new int[arr.length];

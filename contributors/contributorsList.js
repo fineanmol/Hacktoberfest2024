@@ -2064,4 +2064,10 @@ contributors = [
     fullname: "Auro S.",
     username: "https://github.com/aurocodes",
   },
+  {
+    id: 373,
+    fullname: "Shekhar Patel",
+    username: "https://github.com/duplixx/",
+  },
+
 ];

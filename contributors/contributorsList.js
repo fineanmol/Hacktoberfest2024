@@ -2066,7 +2066,7 @@ contributors = [
   },
   {
     id: 426,
-    fullname: "NITIN SINGH",
+    fullname: "Nitin Singh",
     username: "https://github.com/nitin111singh",
   },
 ];

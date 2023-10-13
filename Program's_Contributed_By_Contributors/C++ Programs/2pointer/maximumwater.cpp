@@ -43,4 +43,4 @@ int main()
  
     cout << (maxWater(height, n));
 }
-// code contributed by nitin111singh
+// code contributed by NITIN SINGH

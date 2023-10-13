@@ -124,7 +124,7 @@ footer {
 .socials a {
   text-decoration: none;
   color: #fff;
-  border: 1.1px solid white;
+  border: 1.1px solid blue;
   padding: 5px;
   border-radius: 50%;
 }
@@ -136,7 +136,7 @@ footer {
 }
 
 .socials a:hover i {
-  color: blue;
+  color: blue; 
 }
 
 .footer-bottom {

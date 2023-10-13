@@ -4,7 +4,16 @@ using namespace std;
 int main()
 {
 
-	vector<int> nums = {1,1,1,2,3,2,3,2};
+	//vector<int> nums = {1,1,1,2,3,2,3,2};
+	//making a dynamic user input array
+	int n;
+	cin>>n;
+	vector<int> nums;
+	for(int i=0;i<n;i++){
+		int x;
+		cin>>x;
+		nums.push_back(x);
+	}
 	int num1 = INT_MIN;
         int num2 = INT_MIN;
         int count1=0,count2=0;

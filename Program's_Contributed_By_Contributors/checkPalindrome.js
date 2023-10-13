@@ -1,8 +1,8 @@
 // Palindrome 
 
-// A string is a palindrome if it is read the same from forward or backward. 
-//   For example, dad reads the same either from forward or backward. 
-//   So the word dad is a palindrome. Similarly, madam is also a palindrome.
+// A string is a palindrome if it is read the same forwards and backwards. 
+//   For example, dad reads the same forwards and backwards. 
+//   So, the word dad is a palindrome. Similarly, madam is also a palindrome.
 
   
 

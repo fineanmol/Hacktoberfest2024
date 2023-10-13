@@ -3,28 +3,30 @@ using namespace std;
 
 int main() {
     cout << "Enter the number of denominations: ";
-    int n;
-    cin >> n;
+    int numberOfCoins;
+    cin >> numberOfCoins;
 
-    int denomination[n];
+    int denomination[numberOfCoins];
     cout << "Enter the denominations in ascending order: ";
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < numberOfCoins; i++) {
         cin >> denomination[i];
     }
 
-    int V;
+    int totalAmount;
     cout << "Enter the amount for which you want to find the minimal number of denominations: ";
-    cin >> V;
+    cin >> totalAmount;
 
-    sort(denomination, denomination + n);
+    sort(denomination, denomination + numberOfCoins);
+    
     vector<int> ans;
-    for (int i = n - 1; i >= 0; i--) {
-        while (V >= denomination[i]) {
-            V -= denomination[i];
+    int x = totalAmount;
+    for (int i = numberOfCoins - 1; i >= 0; i--) {
+        while (x >= denomination[i]) {
+            x -= denomination[i];
             ans.push_back(denomination[i]);
         }
     }
-    cout << "Following is minimal number of change for " << V << ": ";
+    cout << "Following is minimal number of change for " << totalAmount << ": ";
     for (int i = 0; i < ans.size(); i++)
         cout << ans[i] << " ";
 

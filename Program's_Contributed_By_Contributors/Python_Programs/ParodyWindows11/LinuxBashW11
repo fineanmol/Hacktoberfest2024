@@ -1,0 +1,26 @@
+#!/bin/bash
+echo Downloading required modules
+sudo apt update
+sudo apt upgrade
+sudo apt install python3-pip
+sudo apt install python3-tk
+pip3 install requests
+pip3 install psutil
+pip3 install tkinterweb
+echo Important modules have been downloaded.
+echo Starting Windows 11 Download...
+git clone "https://github.com/Viswas-Programs/ParodyWindows11.git" --branch <"Install"> --single-branch <"ParodyWindows11">
+echo Finished downloading!
+echo Extracting files...
+cd ParodyWindows11
+echo Finished installation process.
+echo
+read -p "Configure your username: " username
+read -sp "Configure your password for $username" password
+cd ProgramFiles
+mkdir $username
+touch accConfiguration1.conf
+echo -e "$username\n$password" > accConfiguration1.conf
+echo Starting up..
+cd ..
+python3 "Windows 11.py"

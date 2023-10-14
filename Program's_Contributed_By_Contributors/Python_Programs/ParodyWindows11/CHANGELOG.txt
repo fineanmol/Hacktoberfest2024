@@ -1,0 +1,115 @@
+v1.0->
+-The main windows 11.
+-Apps
+-Start menu
+-Shutdown button
+-Clock widget
+-A basic security system
+-Functional in-construction installer.
+
+
+v1.0.1->
+-Online Update system
+-Bug fixes
+
+
+v1.1.0->
+-Notification system
+-Bug fixes
+
+
+v1.1.1->
+-Implementation of notification system in Update Manager App
+-Added desktop icons!
+-3rd party app support, with a loader to load the external app! (auto find and custom find)
+
+
+v1.1.2->
+-Added more desktop icons.
+-Right click menu on desktop
+-Add new icons to the desktop (built-in apps only in this version
+-Fixed some bugs that prevented pinning apps to taskbar
+-Removed some really, really trash CLI apps that create inconsistency to the OS. (Computer guess, Memory Hogger, CLI Guessing Game and more. )
+Although note, they can be loaded into the os with the 3rd party app loader.)
+
+
+v1.1.3->
+-Replaced text buttons in taskbar for icons like real operating system
+-Using the notification system for critical errors (caught by the try except clause)
+-Removed the grouping of apps from games and utilities and unified them for easier installation of the OS.
+-Fixed a bug in the third party app loader. [still in works, will be guaranteed the fix in 1.1.4.1 or 1.1.5]
+-Finally, made the OS like a real OS, with making the OS full screen no matter what. [NOTE, Click on the super key\Windows button to get out of it and access the real os!]
+-Removed the dummy call to checkTheme() function in the login process, since it didn't work there.
+
+
+v1.1.4->
+-Added a safe mode to the OS, to start with the safe mode, you simply need to start the file with the -safemode parameter while starting to activate it!
+-You can also start the safemode by pressing the escape key in login window aswell as the main window
+-Fixed a major bug where the login system wouldn't work with linux, but will in Windows, so now it's more cross platform.
+-Minor bug fixes.
+=-=-=-=-=-=-=
+[NEW]v2.0!->
+New features/apps-
+-Added new apps. (Web browser, alarms, IRC-Like chat app etc)
+-Added a new shutdown menu (XP Style)
+-Added shutdown and restarting in safe mode menu.
+-Added a settings app for customization of the desktop!
+-Real File system like folder creations for downloads, documents, music, pictures and all that stuff.
+-Added a software store to download trusted apps assured by the FOSS community (exaggeration)!
+-Added error handling if the app is not present in your system or if it's corrupted (just a try except block)
+-Now, taskbar pinning and desktop icons pinning will be saved, and will  be applied to the next start too! (TLDR Changes will be applied)
+-Added a command prompt program to access features that arent in the GUI of the shell. will add new commands as we progress
+-Users (any user can have their own apps)
+-In safe mode, if main Windows 11 can't be launched, it then tries to launch the command prompt, if it fails even then, it launches the built in safe mode!
+-Reverted the installer to downloading zipfiles as it's becoming more complicated to manage things.
+-Introduction with the new Guest account!
+
+Technical ->
+-Modularized apps - third party apps need to create the main file in the programfiles directory.
+How this works is that when an app adds the entry in the apps list, ParodyWin11 takes that and adds it in the start menu! so it can be launched from there! See my windows 11 wiki on the repo to find more about this.
+-Removed the "Apps" class because all apps (Except settings), even in-built apps, were removed from the main file and split into different files.
+-Now you can add any third party app to any user you want but inside the user folder!
+
+Bug Fixes-
+-Fixed a critical bug in Notifications menu where notifications crammed up in the same row and column and showed 1 that's big to cover everything.
+
+
+v2.1->
+Features ->
+-Added a new linux bash installer, that is tested, to use it, run the 'dos2unix' command on the bash script, and then run it! 
+-Now, the Shell, comes with a user, called 'defaultuser0' with password 'SYSTEM' (inspired from enderman youtube channel about defaultuser0 from Windows 10 OOBE)
+-Added BSOD If something goes wrong at the high level
+-Added a safe mode GUI, but the fallbacks still exist. So if the GUI doesn't load up, it gets to Built in safe mode (hardcoded)
+-Added new, user-specific themeing. so if one user keeps one theme, the other one, just has it's own theme.
+	Note that system theme is different from user theme, enable the checkbox while customizing the theme for system-wide change!
+-New error styles
+-[FileManager] added command bar, double clicks, and right click menus
+
+Technical ->
+-Changed the error handlers from using tkinter.messagebox to my own one, to support themeing consistency. (the error handler file 	is located right inside ProgramFiles folder. the file name is 'errorHandler.py' without the quotes, and the error storage 	data is in 'errorHandles.py' in the same directory level.)
+
+Bug Fixes ->
+-You couldn't shutdown if you weren't logged in, and once you call it from guest account, the files are deleted immediately without doing anything.
+-For a long time, the default apps weren't being shipped with the OS, but in the apps list, they all had entries. So, now, it ships with the software! (Bundled). 
+	Now you could obviously uninstall them in no time, delete the folder, the app launcher, and remove the entries in 	<username>/APPS_COMMAND_LST and <username>/APPS_LIST.txt, as simple as that! (The file extensions differ, the command list 	has no file extension, 	((-while the apps list has a .txt extension)
+-The app importer, if fails, now will show a error message, instead of doing nothing;
+	This was not the intentional behaviour, I developed this in 1.6 or smth, but the problem was that the File name was the same name as my folder name, so python took the file name instead (self-importing), and so, didn't give an error. Now it's fixed!
+
+v2.2 ->
+Features -> 
+-Added a new system and user config system that doesn't involve text files
+-Finally, now app names can be separated with spaces and names can involve capital letters! [But the app file itself should be fully lowercase no spaces if you're developing an app for this shell (which is unlikely)]
+
+Bug Fixes ->
+-Fixed a bug where if the auto recovery environment fails to load icons, it would be stuck in a black screen with no way of escape.
+  Now it has a fallback full screen command prompt that it defaults to when it can't load icons!
+-Fixed a bug with Update Manager
+
+v2.3 ->
+Features ->
+-Widget now stay even after shutdown (you can enable a widget permanently but can edit it's status in -configchange)
+
+Bug fixes ->
+-Fixed a bug with notepad with not checking the uncommon installed modules for crytography module
+
+Also for a note: this project is still active, just not developing it that active, but it will never die ;D. this update is like after 2 months or smth

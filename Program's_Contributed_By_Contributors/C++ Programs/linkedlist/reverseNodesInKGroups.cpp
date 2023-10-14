@@ -13,6 +13,7 @@ class Node{
 
     ~Node(){
         while(this-> next != NULL){
+            Node* temp = this->next;
             this -> next = NULL;
             delete next;
         }
@@ -21,24 +22,9 @@ class Node{
 };
 
 void insertAtHead(Node* &head, int d){
-    if(head == NULL){
-        Node* newNode = new Node(d);
-        head = newNode;
-    }
-
     Node* newNode = new Node(d);
-    newNode -> next = head;
+    newNode->next = head;
     head = newNode;
-}
-
-void printLL(Node* head){
-    cout << "inside func" << endl;
-    while (head != NULL) {
-        cout << head -> data << " ";
-        head = head -> next;
-    }
-
-    cout << endl;
 }
 
 Node* reverseListInKGroup(Node* &head, int k){
@@ -66,6 +52,16 @@ Node* reverseListInKGroup(Node* &head, int k){
     return prev;
 
 }
+
+void printLL(Node* head) {
+    cout << "inside func" << endl;
+    while (head != NULL) {
+        cout << head->data << " ";
+        head = head->next;
+    }
+    cout << endl;
+}
+
 
 int main() {
 

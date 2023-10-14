@@ -1,0 +1,10 @@
+def timsort(a):
+#a = array to sort
+    min_run = 32
+    for i in range(0, len(a), min_run):
+        insertion_sort(a[i:i+min_run])
+    while min_run < len(a):
+        for i in range(0, len(a), 2 * min_run):
+            merge_sort(a[i:i+2 * min_run])
+        min_run = min_run * 2
+    return a

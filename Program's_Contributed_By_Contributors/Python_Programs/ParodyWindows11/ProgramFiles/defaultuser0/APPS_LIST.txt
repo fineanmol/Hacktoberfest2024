@@ -1,0 +1,12 @@
+CommandPrompt
+Notepad
+fileshare
+BlackJack
+FileManager
+UpdateManager
+LoadExternalApps
+WebBrowser
+IPChat
+AlarmsAndTimer
+softwareStore
+ControlPanel

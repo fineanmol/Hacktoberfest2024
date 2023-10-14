@@ -205,7 +205,10 @@
         // Load contributors after document loads.
         render(contributors);
 
-        function loadMore() {
+        function loadMore(event) {
+            event.preventDefault();
+            var href = this.getAttribute("href");
+            window.location.href = href;
             if (initialContributorsNumber >= contributors.length) {
                 render(contributors)
             } else {

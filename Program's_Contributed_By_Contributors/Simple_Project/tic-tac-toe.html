@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe</title>
+    <style type="text/css" media="all">
+      body {
+        font-family: Arial;
+        text-align: center;
+        background-color: azure;
+      }
+      h1 {
+        font-size: 50px;
+        color: darkviolet;
+      }
+      .hidden {
+        display: none;
+      }
+
+      .board {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(3, 100px);
+        margin: 0 auto;
+      }
+
+      .cell {
+        width: 100px;
+        height: 100px;
+        border: 1px solid darkviolet;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 100px;
+        font-weight: bolder;
+        color: white;
+        background-color: white;
+        transition: all 500ms ease-in-out;
+      }
+
+      .scoreboard {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      #winnerMessage {
+        margin-top: 20px;
+      }
+      .X {
+        background: red;
+      }
+      .O {
+        background: green;
+      }
+      #playButton {
+        background: darkviolet;
+        color: white;
+        font-weight: bold;
+      }
+      #playButton:hover {
+        background: tomato;
+      }
+      .scoreboard {
+        margin-top: 20px;
+        font-size: 30px;
+        text-transform: capitalize;
+      }
+      .score {
+        color: darkviolet;
+        font-weight: bold;
+      }
+      #winnerText {
+        color: white;
+        background: blue;
+        font-size: 30px;
+        border-radius: 100px;
+        padding: 10px;
+        margin: auto;
+        text-transform: capitalize;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tic-Tac-Toe</h1>
+      <form id="nameInput">
+        <input
+          type="text"
+          id="playerName"
+          placeholder="Enter your name"
+          required
+        />
+        <button type="submit" id="playButton">Play</button>
+      </form>
+      <div id="gameBoard" class="hidden">
+        <div class="scoreboard">
+          <span id="selectedName" class="name">Player</span>
+          <span id="playerScore" class="score"> 0</span> :
+          <span id="robotScore" class="score">0</span>
+          <span class="name"> Robot</span>
+        </div>
+        <div class="board">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+      </div>
+      <div id="winnerMessage" class="hidden">
+        <p id="winnerText"></p>
+      </div>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+      const playerNameInput = document.getElementById("playerName");
+      const selectedName = document.getElementById("selectedName");
+      const playButton = document.getElementById("playButton");
+      const nameInputContainer = document.getElementById("nameInput");
+      const gameBoard = document.getElementById("gameBoard");
+      const winnerMessage = document.getElementById("winnerMessage");
+      const winnerText = document.getElementById("winnerText");
+      const playerScoreElement = document.getElementById("playerScore");
+      const robotScoreElement = document.getElementById("robotScore");
+      const cells = document.querySelectorAll(".cell");
+
+      let currentPlayer = "X";
+      let playerScore = 0;
+      let robotScore = 0;
+      let gameOver = false;
+
+      nameInputContainer.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const playerName = playerNameInput.value;
+        if (playerName.trim() !== "") {
+          nameInputContainer.classList.add("hidden");
+          gameBoard.classList.remove("hidden");
+          selectedName.textContent = playerNameInput.value;
+        }
+      });
+
+      cells.forEach((cell) => {
+        cell.addEventListener("click", () => {
+          if (!gameOver && cell.textContent === "") {
+            cell.textContent = currentPlayer;
+            cell.classList.add(currentPlayer);
+
+            if (checkWin(currentPlayer)) {
+              gameOver = true;
+              winnerText.textContent = `${
+                currentPlayer === "X" ? playerNameInput.value : "Robot"
+              } wins!`;
+              updateScore();
+              showWinnerMessage();
+            } else if (isBoardFull()) {
+              gameOver = true;
+              winnerText.textContent = "It's a draw!";
+              showWinnerMessage();
+            } else {
+              currentPlayer = currentPlayer === "X" ? "O" : "X";
+              if (currentPlayer === "O") {
+                setTimeout(robotMove, 500);
+              }
+            }
+          }
+        });
+      });
+
+      function robotMove() {
+        if (!gameOver) {
+          const bestMove = getBestMove();
+          cells[bestMove].click();
+        }
+      }
+
+      function getBestMove() {
+        let bestScore = -Infinity;
+        let move;
+
+        for (let i = 0; i < cells.length; i++) {
+          if (cells[i].textContent === "") {
+            cells[i].textContent = "O";
+            let score = minimax(cells, 0, false);
+            cells[i].textContent = "";
+
+            if (score > bestScore) {
+              bestScore = score;
+              move = i;
+            }
+          }
+        }
+
+        return move;
+      }
+
+      function minimax(board, depth, isMaximizing) {
+        const scores = {
+          X: -10,
+          O: 10,
+          draw: 0,
+        };
+
+        if (checkWin("O")) {
+          return scores.O - depth;
+        } else if (checkWin("X")) {
+          return scores.X + depth;
+        } else if (isBoardFull()) {
+          return scores.draw;
+        }
+
+        if (isMaximizing) {
+          let bestScore = -Infinity;
+          for (let i = 0; i < board.length; i++) {
+            if (board[i].textContent === "") {
+              board[i].textContent = "O";
+              let score = minimax(board, depth + 1, false);
+              board[i].textContent = "";
+              bestScore = Math.max(score, bestScore);
+            }
+          }
+          return bestScore;
+        } else {
+          let bestScore = Infinity;
+          for (let i = 0; i < board.length; i++) {
+            if (board[i].textContent === "") {
+              board[i].textContent = "X";
+              let score = minimax(board, depth + 1, true);
+              board[i].textContent = "";
+              bestScore = Math.min(score, bestScore);
+            }
+          }
+          return bestScore;
+        }
+      }
+
+      function checkWin(player) {
+        const winConditions = [
+          [0, 1, 2],
+          [3, 4, 5],
+          [6, 7, 8], // Rows
+          [0, 3, 6],
+          [1, 4, 7],
+          [2, 5, 8], // Columns
+          [0, 4, 8],
+          [2, 4, 6], // Diagonals
+        ];
+
+        for (const condition of winConditions) {
+          const [a, b, c] = condition;
+          if (
+            cells[a].textContent === player &&
+            cells[b].textContent === player &&
+            cells[c].textContent === player
+          ) {
+            return true;
+          }
+        }
+
+        return false;
+      }
+
+      function isBoardFull() {
+        return Array.from(cells).every((cell) => cell.textContent !== "");
+      }
+
+      function updateScore() {
+        if (currentPlayer === "X") {
+          playerScore++;
+        } else {
+          robotScore++;
+        }
+        playerScoreElement.textContent = `${playerScore}`;
+        robotScoreElement.textContent = `${robotScore}`;
+      }
+
+      function showWinnerMessage() {
+        winnerMessage.classList.remove("hidden");
+        setTimeout(() => {
+          winnerMessage.classList.add("hidden");
+          clearBoard();
+        }, 2000);
+      }
+
+      function clearBoard() {
+        cells.forEach((cell) => {
+          cell.textContent = "";
+          cell.classList.remove("X", "O");
+        });
+        gameOver = false;
+        currentPlayer = "X";
+      }
+    </script>
+  </body>
+</html>

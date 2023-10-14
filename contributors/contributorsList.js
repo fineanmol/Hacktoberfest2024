@@ -959,6 +959,7 @@ contributors = [
   },
   {
     id: 192,
+    
     fullname: "Yash jain",
     username: "https://github.com/yashjain1974",
   },
@@ -2064,4 +2065,9 @@ contributors = [
     fullname: "Auro S.",
     username: "https://github.com/aurocodes",
   },
+  {
+    id: 426,
+    fullname: "Shikhar Srivastava",
+    username: "https://github.com/CsBatch"
+  }
 ];

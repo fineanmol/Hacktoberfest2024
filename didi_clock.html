@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wall Clock Style with Digital Clock</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #analog-clock {
+      width: 200px;
+      height: 200px;
+      background-color: #fff;
+      border: 10px solid #333;
+      border-radius: 50%;
+      position: relative;
+      font-size: 1.2rem;
+    }
+
+    .hand {
+      position: absolute;
+      transform-origin: center;
+      width: 2px;
+      background-color: #333;
+    }
+
+    #hour-hand {
+      height: 50px;
+      top: 50px;
+      left: 99px;
+    }
+
+    #minute-hand {
+      height: 70px;
+      top: 50px;
+      left: 99px;
+    }
+
+    #second-hand {
+      height: 80px;
+      top: 50px;
+      left: 99px;
+      background-color: red;
+    }
+
+    #digital-clock {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="analog-clock">
+    <div id="hour-hand" class="hand"></div>
+    <div id="minute-hand" class="hand"></div>
+    <div id="second-hand" class="hand"></div>
+  </div>
+  <div id="digital-clock">00:00:00</div>
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const seconds = now.getSeconds();
+
+      const secondDeg = (seconds / 60) * 360;
+      const minuteDeg = ((minutes * 60 + seconds) / 3600) * 360;
+      const hourDeg = ((hours % 12) * 360 + (minutes / 60) * 30) - 90;
+
+      document.getElementById('second-hand').style.transform = `rotate(${secondDeg}deg)`;
+      document.getElementById('minute-hand').style.transform = `rotate(${minuteDeg}deg)`;
+      document.getElementById('hour-hand').style.transform = `rotate(${hourDeg}deg)`;
+
+      const timeString = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+      document.getElementById('digital-clock').textContent = timeString;
+    }
+
+    // Update the clock every second
+    setInterval(updateClock, 1000);
+
+    // Initial call to set the clock
+    updateClock();
+  </script>
+</body>
+</html>

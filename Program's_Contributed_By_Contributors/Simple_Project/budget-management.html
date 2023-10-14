@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Budget Management</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main class="container py-5">
+    <h1 class="h1 text-center mb-5">Budget Management</h1>
+    <div
+      class="row row-cols-1 row-cols-md-2 justify-content-center align-items-center"
+    >
+      <img
+        src="https://raw.githubusercontent.com/fs-nirjhor/budget-management-fsn/main/images/budget-management.webp"
+        alt="illustration"
+        class="col img-fluid"
+      />
+      <form class="col shadow p-3 rounded" id="amount-form">
+        <h3 class="h3 mb-3 text-center text-primary">Earn</h3>
+        <div
+          class="form-group d-flex align-items-center justify-content-between mb-3"
+        >
+          <label for="salary" class="text-nowrap me-3">Salary:</label>
+          <input
+            type="number"
+            class="form-control w-75"
+            id="salary"
+            min="0"
+            placeholder="Enter your salary"
+          />
+        </div>
+        <div
+          class="form-group d-flex align-items-center justify-content-between"
+        >
+          <label for="out-incomes" class="text-nowrap me-3">Out Income:</label>
+          <input
+            type="number"
+            class="form-control w-75"
+            id="out-incomes"
+            min="0"
+            placeholder="Enter your out income"
+          />
+        </div>
+        <h3 class="h3 my-3 text-center text-primary">Expenses</h3>
+        <div
+          class="form-group d-flex align-items-center justify-content-between mb-3"
+        >
+          <label for="food" class="text-nowrap me-3">Food:</label>
+          <input
+            type="number"
+            class="form-control w-75"
+            id="food"
+            min="0"
+            placeholder="Enter your foods expense"
+          />
+        </div>
+
+        <div
+          class="form-group d-flex align-items-center justify-content-between mb-3"
+        >
+          <label for="clothes" class="text-nowrap me-3">Clothes:</label>
+          <input
+            type="number"
+            class="form-control w-75"
+            id="clothes"
+            min="0"
+            placeholder="Enter your clothes expense"
+          />
+        </div>
+
+        <div
+          class="form-group d-flex align-items-center justify-content-between mb-3"
+        >
+          <label for="rent" class="text-nowrap me-3">House-rent:</label>
+          <input
+            type="number"
+            class="form-control w-75"
+            id="rent"
+            min="0"
+            placeholder="Enter your house rent"
+          />
+        </div>
+        <div
+          class="form-group d-flex align-items-center justify-content-between mb-3"
+        >
+          <label for="other-expenses" class="text-nowrap me-3">Other Expenses:</label>
+          <input
+            type="number"
+            class="form-control w-75"
+            id="other-expenses"
+            min="0"
+            placeholder="Enter your other expense"
+          />
+        </div>
+
+        <button
+          class="btn btn-primary px-5 ms-auto d-block"
+          id="calculateButton"
+         
+          onclick="calculateBudget()"
+        >
+          Calculate
+        </button>
+      </form>
+
+        <div
+          class="modal fade"
+          id="floating-box"
+          aria-labelledby="alert"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-danger text-white">
+                <h1 class="modal-title fs-5" id="alert"></h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <div class="my-3 d-none" id="unsaved-results">
+        <h3 class="h3 my-3 text-center text-primary">Balance Summary</h3>
+        <p>Expenses: $<span id="expense-amount" class="text-danger fw-bold"></span></p>
+        <p>Balance: $<span id="balance-amount" class="text-success fw-bold"></span></p>
+       
+        <div class="d-none mt-3" id="saved-results">
+          <p>Saving Amount: $<span id="saving-amount" class="text-danger fw-bold"></span></p>
+          <p>Remaining Balance: $<span id="remaining-balance" class="text-success fw-bold"></span></p>
+          <button
+          class="btn btn-primary px-5 my-3 ms-auto d-block"         
+          onclick="location.reload()"
+        >
+          Finish
+        </button>
+        </div>
+      </div>
+      </div>
+    
+      <div class="modal fade" id="saving-box" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+          <div class="modal-body">
+            <div class="d-flex align-items-center justify-content-between my-3">
+              <span>Savings:</span>
+              <input
+                type="number"
+                name="save"
+                id="saving-input"
+                class="form-control w-50"
+              />
+              <span>%</span>
+              <button class="btn btn-primary" id="saveButton">Save</button>
+            </div>
+            <p id="saving-error" class="text-danger"></p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      function calculateBudget() {
+        event.preventDefault();
+      const salary = parseFloat(document.getElementById("salary").value);
+      const outIncomes = parseFloat(document.getElementById("out-incomes").value);
+      const food = parseFloat(document.getElementById("food").value);
+      const clothes = parseFloat(document.getElementById("clothes").value);
+      const rent = parseFloat(document.getElementById("rent").value);
+      const otherExpenses = parseFloat(document.getElementById("other-expenses").value);
+      
+
+      const calculateButton = document.getElementById("calculateButton");
+      const saveButton = document.getElementById("saveButton");
+      const alert = document.getElementById("alert");
+      const floatingBox = new bootstrap.Modal(document.getElementById("floating-box"));
+      const savingBox = new bootstrap.Modal(document.getElementById("saving-box"));
+
+
+        if (isNaN(salary) || isNaN(outIncomes) || isNaN(food) || isNaN(clothes) || isNaN(rent) || isNaN(otherExpenses)) {
+          alert.textContent = "Please fill in all fields properly.";
+          floatingBox.show();
+          return;
+        }
+
+        if (salary < 0 || outIncomes < 0 || food < 0 || clothes < 0 || rent < 0 || otherExpenses < 0) {
+          alert.textContent = "Expenses cannot be negative.";
+          floatingBox.show();
+          return;
+        }
+
+        if (food + clothes + rent + otherExpenses > salary + outIncomes) {
+          alert.textContent = "Expenses cannot exceed salary.";
+          floatingBox.show();
+          return;
+        } 
+        
+        const remainingAmount = salary + outIncomes - (food + clothes + rent + otherExpenses);
+
+        alert.textContent = "";
+
+        document.getElementById("unsaved-results").classList.remove("d-none");
+        document.getElementById("unsaved-results").classList.add("d-block");
+        document.getElementById("amount-form").classList.add("d-none");
+
+        document.getElementById("expense-amount").textContent =
+          (food + clothes + rent + otherExpenses).toFixed(2);
+        document.getElementById("balance-amount").textContent = remainingAmount.toFixed(2);
+
+        savingBox.show();
+
+        saveButton.addEventListener("click", () => {
+          const savingsPercentage = parseFloat(
+        document.getElementById("saving-input").value
+      );
+          if (isNaN(savingsPercentage) || savingsPercentage < 0) {
+            document.getElementById("saving-error").textContent = "Invalid savings percentage.";
+            return;
+          }
+          
+          document.getElementById("saved-results").classList.remove("d-none");
+          document.getElementById("saved-results").classList.add("d-block");
+
+          const savingsAmount = (savingsPercentage / 100) * remainingAmount;
+          const finalRemainingAmount = remainingAmount - savingsAmount;
+          document.getElementById("saving-amount").textContent = savingsAmount.toFixed(2);
+          document.getElementById("remaining-balance").textContent =
+            finalRemainingAmount.toFixed(2);
+
+            savingBox.hide();
+        });
+      }
+    </script>
+  </body>
+</html>

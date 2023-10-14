@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <title>Temperature Hot</title> 
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+   
+    <style>
+      body {
+        background: url(https://github.com/fs-nirjhor/tempareture-fsn/blob/main/images/bg-image.jpg?raw=true) no-repeat;
+        background-size: cover;
+        height: 100vh;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <form class="col-md-6 m-auto py-5">
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter your city"
+            id="search-box"
+            value="Dhaka"
+          />
+          <div class="input-group-append">
+            <button id="search-button" type="button" class="btn btn-danger">
+              Search
+            </button>
+          </div>
+        </div>
+      </form>
+      <div class="weather-status text-white text-center">
+        <img id="icon" />
+        <h1 id="city"></h1>
+        <h3><span id="temperature"></span></h3>
+        <h1 class="lead" id="weather"></h1>
+      </div>
+    </div>
+    <script>
+      const showWeather = () => {
+        const city = document.getElementById("search-box").value;
+        const fetchURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=473d74ca7d1ad8984ed0cd8da8d31f1b&units=metric`;
+        fetch(fetchURL)
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.name) {
+              document.getElementById("temperature").innerText =
+                data.main.temp + " °C";
+              document.getElementById("city").innerText = data.name;
+              document.getElementById("weather").innerText =
+                data.weather[0].main;
+              const iconURL = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+              document.getElementById("icon").setAttribute("src", iconURL);
+              document.getElementById("search-box").value = "";
+            } else {
+              alert(data.message);
+            }
+          })
+          .catch((error) => alert(error.message));
+      };
+      showWeather();
+      document
+        .getElementById("search-button")
+        .addEventListener("click", showWeather);
+    </script>
+  </body>
+</html>

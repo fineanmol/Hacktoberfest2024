@@ -6,7 +6,7 @@
     /* height: 100px; */
     background: linear-gradient(to left, #FF0844, #FF4563);
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    color: blue;
+    color: aqua;
     text-align: center;
     z-index: 1000;
 
@@ -124,7 +124,7 @@ footer {
 .socials a {
   text-decoration: none;
   color: #fff;
-  border: 1.1px solid white;
+  border: 1.1px solid aqua;
   padding: 5px;
   border-radius: 50%;
 }
@@ -136,7 +136,7 @@ footer {
 }
 
 .socials a:hover i {
-  color: aqua;
+  color: blue; 
 }
 
 .footer-bottom {

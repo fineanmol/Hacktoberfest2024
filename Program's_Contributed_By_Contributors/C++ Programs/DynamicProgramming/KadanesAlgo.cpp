@@ -26,3 +26,13 @@ int main(){
 
     cout<<maxSubarraySum(arr, n)<<endl;
 }
+
+/*
+    Example 1:
+    Arr: 1 2 3 -2 5
+    Ans: 9
+
+    Example 2:
+    Arr: -1 -2 -3 -4
+    Ans: -1
+*/

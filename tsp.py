@@ -41,22 +41,3 @@ def main():
 if __name__ == '__main__':
     main()
 
-
-
-
-
-
-#### Code Explanation
-
-- The code begins by importing the `permutations` function from the `itertools` library, which is used to generate all possible permutations of points.
-
-- `calculate_total_distance` is a function that calculates the total distance of a given order of points in the TSP.
-
-- The `distance` function calculates the Euclidean distance between two points.
-
-- The `tsp_bruteforce` function is the main TSP solver, which finds the best path and its total distance using a brute-force approach.
-
-- The `main` function is the entry point of the program. It takes user input for the number of points and their coordinates, then calls the TSP solver to find the best path and distance.
-
-- Finally, if the script is run directly (not imported as a module), it calls the `main` function to start the TSP solving process.
-

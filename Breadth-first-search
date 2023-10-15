@@ -1,0 +1,55 @@
+#include <iostream>
+#include <vector>
+#include <queue>
+
+class Graph {
+private:
+    int V; // Number of vertices
+    std::vector<std::vector<int>> adj; // Adjacency list
+
+public:
+    Graph(int vertices) : V(vertices), adj(vertices) {}
+
+    void addEdge(int u, int v) {
+        adj[u].push_back(v);
+        adj[v].push_back(u); // For undirected graph
+    }
+
+    void BFS(int start) {
+        std::vector<bool> visited(V, false);
+        std::queue<int> q;
+
+        visited[start] = true;
+        q.push(start);
+
+        while (!q.empty()) {
+            int current = q.front();
+            q.pop();
+            std::cout << current << " ";
+
+            for (int neighbor : adj[current]) {
+                if (!visited[neighbor]) {
+                    visited[neighbor] = true;
+                    q.push(neighbor);
+                }
+            }
+        }
+    }
+};
+
+int main() {
+    Graph graph(6);
+
+    graph.addEdge(0, 1);
+    graph.addEdge(0, 2);
+    graph.addEdge(1, 3);
+    graph.addEdge(1, 4);
+    graph.addEdge(2, 4);
+    graph.addEdge(3, 5);
+
+    std::cout << "Breadth-First Traversal (starting from vertex 0): ";
+    graph.BFS(0);
+    std::cout << std::endl;
+
+    return 0;
+}

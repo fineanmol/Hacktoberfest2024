@@ -10,5 +10,5 @@ def find_primes(num):
       primes.append(n)             
   return primes
 
-  number = int(input("Enter a number: "))
-  print(find_primes(number))
+number = int(input("Enter a number: "))
+print(find_primes(number))

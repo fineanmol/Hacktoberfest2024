@@ -4,7 +4,6 @@ contributors = [
     fullname: "Anmol Agarwal",
     username: "https://github.com/fineanmol",
   },
-
   {
     id: 2,
     fullname: "Amitava Mitra",
@@ -82,7 +81,7 @@ contributors = [
   },
   {
     id: 17,
-    fullname: "ShagiGanesh",
+    fullname: "Shagi Ganesh",
     username: "https://github.com/ShagiG",
   },
   {
@@ -122,7 +121,7 @@ contributors = [
   },
   {
     id: 25,
-    fullname: "NITIN JAIN",
+    fullname: "Nitin Jain",
     username: "https://github.com/nitin-jain3",
   },
   {

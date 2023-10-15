@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav-item{
+    font-size: 4vh !important;
+    padding: 4vw;
+}
+.header2{
+    background-color:  rgb(235, 106, 60) !important;
+    
+}
+@media only screen and (max-width: 900px) {
+    .image1{
+        width: 41vw;
+        height: 14vh;
+    }
+    .header1{
+        flex-wrap: wrap !important;
+        justify-content: center;
+    }
+    .install{
+      display: none;
+  }
+  #footer{
+    padding: 0px !important;
+}
+}
+.district{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color:  skyblue;
+    color: black;
+    font-size: 9vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0.5em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.article{
+    height: 100%;
+    background-color: antiquewhite;
+    margin: 0.5em;
+    padding-left: 0.2em;
+   
+}
+.article p{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: large
+}
+/* footer section styles */
+
+#footer{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    padding: 75px;
+    background-color: #ececec;
+  }
+  #footer p, #footer a{
+    color: rgb(109, 109, 109);
+    text-decoration: none;
+  }
+  #footer a:hover{
+    color:#088178;
+  }
+  #footer .about a{
+    display: block;
+    padding:8px 0;
+  }
+  #footer .myaccount a{
+    display: block;
+    padding:8px 0;
+  }
+  #footer .download img{
+    border: 1px solid #08817969;
+    border-radius: 7px;
+  }
+  
+  

@@ -11,6 +11,7 @@ class pascals_triangle {
             }
             temp[temp.length-1]=1;
             result[i]=temp;
+            
         }
         for(int i=0;i < result.length;i++){
             for(int j=0;j < result[i].length;j++){

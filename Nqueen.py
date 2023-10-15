@@ -1,12 +1,7 @@
-# N is the number of queens / rows / cols
 global N
 N = 16
-
 global L
 L = [-1 for x in range(N)]
-
-# Assume every queen is placed in a different row
-# So a function takes in some number representing row
 
 def is_safe(row, col):
     for x in range(row):
@@ -29,7 +24,6 @@ def it(row):
             L[row] = -1
     return False
 
-# Call initiator function
 if(it(0)):
 	for i in range(len(L)):
 		print("(" + str(i) + ", " + str(L[i]) + ") ", end='')

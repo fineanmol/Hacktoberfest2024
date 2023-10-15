@@ -1,0 +1,25 @@
+{
+  "name": "snakemaster",
+  "version": "0.0.1",
+  "description": "It's a retro-style snake game written in Node.js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/darkRaspberry/snakeMaster.git"
+  },
+  "author": "darkRaspberry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darkRaspberry/snakeMaster/issues"
+  },
+  "homepage": "https://github.com/darkRaspberry/snakeMaster#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.54.0/phaser-arcade-physics.min.js" integrity="sha512-R0O3lifd547D6WF2+23IB+hqZ7r0AgxJ5/ZMShHRUwRYvH1RTyGC+OB4/8JbnFpCpOPwNNOmwJjsV680DwnADQ==" crossorigin="anonymous"></script>
+  <title>snakeMaster</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+  <body>
+    <h1>snakeMaster</h1>
+    <div id="txt"></div>
+    <div class="container">
+    <div id="phaserGame">
+      <script type="module" src="js/singlePhase.js"></script>
+    </div>
+  </div>
+  <script>
+    function startTime() {
+      const today = new Date();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      let s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+      setTimeout(startTime, 1000);
+    }
+    
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+    </script>
+  </body>
+
+</html>

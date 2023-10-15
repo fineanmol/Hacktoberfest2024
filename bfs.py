@@ -29,5 +29,4 @@ graph = {
     'F': ['C', 'E']
 }
 
-print("Breadth-First Traversal starting from 'A':")
 bfs(graph, 'A')

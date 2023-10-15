@@ -1,0 +1,77 @@
+Certainly! Here's a simple Java program for a classic game called "Hangman." In this game, the computer selects a random word, and the player has to guess it by suggesting letters one at a time. The player has a limited number of attempts to guess the word correctly.
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class HangmanGame {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+        String[] words = { "java", "programming", "hangman", "computer", "code", "gaming" };
+        String wordToGuess = words[random.nextInt(words.length)];
+        int maxAttempts = 6;
+        int attempts = 0;
+        boolean[] guessedLetters = new boolean[wordToGuess.length()];
+
+        System.out.println("Welcome to Hangman!");
+        System.out.println("Try to guess the word.");
+
+        while (attempts < maxAttempts) {
+            displayWordStatus(wordToGuess, guessedLetters);
+            System.out.print("Enter a letter: ");
+            char guess = scanner.next().charAt(0);
+
+            if (isGuessCorrect(wordToGuess, guessedLetters, guess)) {
+                System.out.println("Correct guess!");
+            } else {
+                attempts++;
+                System.out.println("Incorrect guess. Attempts left: " + (maxAttempts - attempts));
+            }
+
+            if (isWordGuessed(guessedLetters)) {
+                System.out.println("Congratulations! You guessed the word: " + wordToGuess);
+                break;
+            }
+        }
+
+        if (attempts == maxAttempts) {
+            System.out.println("You ran out of attempts. The word was: " + wordToGuess);
+        }
+
+        scanner.close();
+    }
+
+    public static void displayWordStatus(String word, boolean[] guessedLetters) {
+        System.out.print("Word: ");
+        for (int i = 0; i < word.length(); i++) {
+            if (guessedLetters[i]) {
+                System.out.print(word.charAt(i));
+            } else {
+                System.out.print("_");
+            }
+            System.out.print(" ");
+        }
+        System.out.println();
+    }
+
+    public static boolean isGuessCorrect(String word, boolean[] guessedLetters, char guess) {
+        boolean correctGuess = false;
+        for (int i = 0; i < word.length(); i++) {
+            if (word.charAt(i) == guess) {
+                guessedLetters[i] = true;
+                correctGuess = true;
+            }
+        }
+        return correctGuess;
+    }
+
+    public static boolean isWordGuessed(boolean[] guessedLetters) {
+        for (boolean letterGuessed : guessedLetters) {
+            if (!letterGuessed) {
+                return false;
+            }
+        }
+        return true;
+    }
+}

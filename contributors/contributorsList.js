@@ -120,6 +120,7 @@ contributors = [
     fullname: "Panchadeep Mazumder",
     username: "https://github.com/panchadeep",
   },
+  
   {
     id: 25,
     fullname: "NITIN JAIN",
@@ -2062,6 +2063,11 @@ contributors = [
   {
     id: 425,
     fullname: "Auro S.",
+    username: "https://github.com/aurocodes",
+  },
+  {
+    id: 426,
+    fullname: "MOHAMMED SALMAN THURAAB",
     username: "https://github.com/aurocodes",
   },
 ];

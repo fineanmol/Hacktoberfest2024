@@ -4,8 +4,6 @@ import java.util.*;
  * Buy and Sell Stock problem with transaction fees.
  * Author: Yash Kesharwani
  * File: BestTimeToBuySellStock.java
- * Comments: This program calculates the maximum profit
- * achievable when buying and selling stocks with fees.
  */
 public class Best_time_to_buy_sell_stock {
     /**

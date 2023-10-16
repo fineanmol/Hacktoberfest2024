@@ -12,7 +12,11 @@ while(num>0):
     rem=num%10
     rev=rev*10+rem
     num=num//10
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 5998c9ba2c1ee0750a1f98f64387354baac0d685
     l2.append(rem)
     if rem not in l1:
         l1.append(rem)

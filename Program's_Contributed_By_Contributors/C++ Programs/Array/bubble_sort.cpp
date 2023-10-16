@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+//Taking input
+void input(int a[], int n) {
+    for (int i = 0; i < n; i++) {
+        cout << "Enter element " << i << ": ";
+        cin >> a[i];
+    }
+}
+//swap function
+void swap(int& c, int& d) {
+    int temp = c;
+    c = d;
+    d = temp;
+}
+//bubble sort function
+void bubble_sort(int a[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - 1 - i; j++) {
+            if (a[j] > a[j + 1]) {
+                swap(a[j], a[j + 1]);
+            }
+        }
+    }
+}
+
+int main() {
+    int n;
+    cout << "Enter the number of elements in the array: ";
+    cin >> n;
+    int numbers[n];
+    input(numbers, n);
+
+    cout << "Before sorting: ";
+    //displaying element 
+    for (int i = 0; i < n; i++) {
+        cout << numbers[i] << ",";
+    }
+
+    bubble_sort(numbers, n);
+
+    cout << "\nAfter sorting: ";
+    for (int i = 0; i < n; i++) {
+        cout << numbers[i] << ",";
+    }
+
+    return 0;
+}

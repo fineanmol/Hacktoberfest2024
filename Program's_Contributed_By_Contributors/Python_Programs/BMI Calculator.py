@@ -18,10 +18,10 @@ if b==2:
              Weight*=0.453592
 
 #convert height into metres
-Height = Height / 100
+Height /=100
 
 #calculate BMI
-BMI = Weight / (Height*Height)
+BMI = Weight / (Height**2)
 
 #printing BMI
 print(f"Your Body Mass Index is: {BMI}")

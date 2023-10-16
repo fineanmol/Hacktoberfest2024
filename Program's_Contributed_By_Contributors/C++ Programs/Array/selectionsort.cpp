@@ -16,7 +16,6 @@ void selectionSort(vector<int> arr, int n)
         swap(arr[minIndex], arr[i]);
     }
 
-    // Print bhi kar lete hai na bhaii
     cout<<"Your sorted array is: ";
     for(int i=0; i<n; i++){
         cout<<arr[i]<<" ";

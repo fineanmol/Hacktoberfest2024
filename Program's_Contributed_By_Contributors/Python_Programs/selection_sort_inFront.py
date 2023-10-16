@@ -12,7 +12,6 @@ def selection_sort_inFront(a):
         a[i]=minimum
         print(a)
     
-numbers = "44 55 12 42 94 18 6 67"
-a = [int(i) for i in numbers.split()]
+a = [44, 55, 12, 42, 94, 18, 6, 67]
 
-print(selection_sort_inFront(a))
+selection_sort_inFront(a)

@@ -40,7 +40,7 @@ int main() {
     cout << "Before sorting: "<<endl;
     display(numbers,n); 
     bubble_sort(numbers, n);
-    cout << "\nAfter sorting: "<<endl;
+    cout << "\n After sorting: "<<endl;
     display(numbers,n);
     
     return 0;

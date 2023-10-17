@@ -23,6 +23,12 @@ void bubble_sort(int a[], int n) {
         }
     }
 }
+//display function
+void display(int a[],int n){
+    for(int i=0;i<n;i++){
+        cout<<a[i]<<" ";
+    }
+}
 
 int main() {
     int n;
@@ -31,18 +37,11 @@ int main() {
     int numbers[n];
     input(numbers, n);
 
-    cout << "Before sorting: ";
-    //displaying element 
-    for (int i = 0; i < n; i++) {
-        cout << numbers[i] << ",";
-    }
-
+    cout << "Before sorting: "<<endl;
+    display(numbers,n); 
     bubble_sort(numbers, n);
-
-    cout << "\nAfter sorting: ";
-    for (int i = 0; i < n; i++) {
-        cout << numbers[i] << ",";
-    }
-
+    cout << "\nAfter sorting: "<<endl;
+    display(numbers,n);
+    
     return 0;
 }

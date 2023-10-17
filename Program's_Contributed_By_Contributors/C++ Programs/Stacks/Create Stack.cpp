@@ -1,5 +1,4 @@
-/* C++ program to implement basic stack 
-operations */
+/* C++ program to implement basic stack operations */
 #include <bits/stdc++.h> 
 
 using namespace std; 

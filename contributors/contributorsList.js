@@ -2066,7 +2066,7 @@ contributors = [
   },
   {
     id: 426,
-    fullname: "Tanmay G.",
+    fullname: "Tanmay Giram.",
     username: "https://github.com/Tanmay-Giram",
   },
 ];

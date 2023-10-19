@@ -1,0 +1,63 @@
+#include <stdio.h>
+
+int main() {
+    int rowsA, colsA, rowsB, colsB, i, j, k;
+    
+    // Get the number of rows and columns for matrix A from the user
+    printf("Enter the number of rows for matrix A: ");
+    scanf("%d", &rowsA);
+    printf("Enter the number of columns for matrix A: ");
+    scanf("%d", &colsA);
+    
+    // Get the number of rows and columns for matrix B from the user
+    printf("Enter the number of rows for matrix B: ");
+    scanf("%d", &rowsB);
+    printf("Enter the number of columns for matrix B: ");
+    scanf("%d", &colsB);
+    
+    // Check if matrix multiplication is possible
+    if (colsA != rowsB) {
+        printf("Matrix multiplication is not possible.\n");
+        return 1; // Exit with an error code
+    }
+    
+    // Declare and initialize matrices A, B, and productMatrix
+    int matrixA[rowsA][colsA], matrixB[rowsB][colsB], productMatrix[rowsA][colsB];
+    
+    // Get elements for matrix A from the user
+    printf("Enter elements of matrix A:\n");
+    for (i = 0; i < rowsA; i++) {
+        for (j = 0; j < colsA; j++) {
+            scanf("%d", &matrixA[i][j]);
+        }
+    }
+    
+    // Get elements for matrix B from the user
+    printf("Enter elements of matrix B:\n");
+    for (i = 0; i < rowsB; i++) {
+        for (j = 0; j < colsB; j++) {
+            scanf("%d", &matrixB[i][j]);
+        }
+    }
+    
+    // Multiply matrices A and B to get the productMatrix
+    for (i = 0; i < rowsA; i++) {
+        for (j = 0; j < colsB; j++) {
+            productMatrix[i][j] = 0;
+            for (k = 0; k < colsA; k++) {
+                productMatrix[i][j] += matrixA[i][k] * matrixB[k][j];
+            }
+        }
+    }
+    
+    // Print the productMatrix
+    printf("Product of Matrices A and B:\n");
+    for (i = 0; i < rowsA; i++) {
+        for (j = 0; j < colsB; j++) {
+            printf("%d ", productMatrix[i][j]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}

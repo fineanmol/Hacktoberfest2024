@@ -1,0 +1,19 @@
+body {
+    background-color: #393E46;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1{
+    color: #00B7C2;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#board {
+    background-color: #212121;
+    width: 700px;
+    height: 700px;
+}

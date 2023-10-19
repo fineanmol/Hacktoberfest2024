@@ -1,6 +1,7 @@
 
 #include <bits/stdc++.h>
-
+/*
+//Program riddled with errors
 void markParents(BinaryTreeNode<int> *root, unordered_map<BinaryTreeNode<int> *, BinaryTreeNode<int> *> &parent_track, BinaryTreeNode<int> *target)
 {
     queue<BinaryTreeNode<int> *> queue;
@@ -71,4 +72,6 @@ vector<BinaryTreeNode<int> *> printNodesAtDistanceK(BinaryTreeNode<int> *root, B
         result.push_back(current);
     }
     return result;
+    
 }
+*/

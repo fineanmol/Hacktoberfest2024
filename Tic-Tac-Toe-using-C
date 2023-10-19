@@ -1,0 +1,86 @@
+#include <stdio.h>
+
+// Function to print the Tic Tac Toe board
+void printBoard(char board[3][3]) {
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf(" %c ", board[i][j]);
+            if (j < 2) printf("|");
+        }
+        printf("\n");
+        if (i < 2) printf("---+---+---\n");
+    }
+}
+
+// Function to check if the game is over
+int isGameOver(char board[3][3], char player) {
+    // Check rows, columns, and diagonals for a win
+    for (int i = 0; i < 3; i++) {
+        if (board[i][0] == player && board[i][1] == player && board[i][2] == player) return 1;
+        if (board[0][i] == player && board[1][i] == player && board[2][i] == player) return 1;
+    }
+    if (board[0][0] == player && board[1][1] == player && board[2][2] == player) return 1;
+    if (board[0][2] == player && board[1][1] == player && board[2][0] == player) return 1;
+    
+    // Check for a draw
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (board[i][j] == ' ') return 0; // There are empty cells, the game is not a draw
+        }
+    }
+    return -1; // It's a draw
+}
+
+int main() {
+    char board[3][3] = { {' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '} };
+    int row, col;
+    char currentPlayer = 'X';
+
+    printf("Welcome to Tic Tac Toe!\n");
+    
+    int gameStatus = 0; // 0: game in progress, 1: X wins, 2: O wins, -1: draw
+
+    while (gameStatus == 0) {
+        // Print the board
+        printf("\n");
+        printBoard(board);
+
+        // Input move from the current player
+        printf("\nPlayer %c, enter row (0-2) and column (0-2) to make your move: ", currentPlayer);
+        scanf("%d %d", &row, &col);
+
+        // Check if the move is valid
+        if (row < 0 || row > 2 || col < 0 || col > 2 || board[row][col] != ' ') {
+            printf("Invalid move. Try again.\n");
+            continue;
+        }
+
+        // Update the board
+        board[row][col] = currentPlayer;
+
+        // Check if the game is over
+        gameStatus = isGameOver(board, currentPlayer);
+
+        // Switch players
+        if (currentPlayer == 'X') {
+            currentPlayer = 'O';
+        } else {
+            currentPlayer = 'X';
+        }
+    }
+
+    // Print the final state of the board
+    printf("\n");
+    printBoard(board);
+
+    // Print the game result
+    if (gameStatus == 1) {
+        printf("\nPlayer X wins!\n");
+    } else if (gameStatus == 2) {
+        printf("\nPlayer O wins!\n");
+    } else {
+        printf("\nIt's a draw!\n");
+    }
+
+    return 0;
+}

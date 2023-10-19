@@ -1,0 +1,167 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #1a1a1a; /* Dark background color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #292929; /* Dark background for header */
+    color: #fff;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: #f1c40f; /* Neon color for hover */
+}
+
+#hero {
+    background-image: url('path/to/hero-image.jpg');
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #f1c40f; /* Neon yellow for headings */
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #f1c40f; /* Neon yellow for buttons */
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e67e22; /* Slightly darker neon orange on hover */
+}
+
+#about {
+    background-color: #1a1a1a; /* Dark background color for the about section */
+    padding: 80px 0;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 36px;
+    color: #f1c40f; /* Neon yellow for section headings */
+    margin-bottom: 30px;
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+#services {
+    background-color: #292929; /* Dark background color for the services section */
+    padding: 80px 0;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 36px;
+    color: #f1c40f; /* Neon yellow for section headings */
+    margin-bottom: 30px;
+}
+
+.service-card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    color: #f1c40f; /* Neon yellow for service titles */
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 16px;
+}
+
+#portfolio {
+    background-color: #1a1a1a; /* Dark background color for the portfolio section */
+    padding: 80px 0;
+    text-align: center;
+}
+
+#portfolio h2 {
+    font-size: 36px;
+    color: #f1c40f; /* Neon yellow for section headings */
+    margin-bottom: 30px;
+}
+
+.portfolio-item {
+    margin-bottom: 30px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+}
+
+
+.btn, .menu li a:hover, .hero-content h1, .service-card h3, #about h2, #services h2, #portfolio h2 {
+    color: #f1c40f; /* Neon yellow */
+}
+
+.btn:hover {
+    background-color: #e67e22; /* Neon orange on hover */
+}
+

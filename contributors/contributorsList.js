@@ -2059,8 +2059,13 @@ contributors = [
     fullname: "Sumit Br",
     username: "https://github.com/SumitBr",
   },
-  {
+   {
     id: 425,
+    fullname: "Shubham Kashyap",
+    username: "https://github.com/Shubhamkyup",
+  },
+  {
+    id: 426,
     fullname: "Auro S.",
     username: "https://github.com/aurocodes",
   },

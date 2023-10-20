@@ -6,7 +6,7 @@ struct node
 {
 	int data;
 	struct node *next;
-};
+};//to make a newnode
 struct node *newnode, *temp;
 	struct node *front=0; //front points first node
 	struct node *rear=0;//rear should point last node

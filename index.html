@@ -48,6 +48,51 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <!-- <link rel="stylesheet" href="search.css"> -->
+    <style>
+        /* ... (previous CSS code) ... */
+ 
+        
+        /* Adjust the position of the autocomplete box */
+        .ui-widget {
+            position: relative;
+        }
+        /* Set a width for individual items in the autocomplete list */
+        .ui-menu-item {
+            width: 100%;
+        }
+        /* Highlight the matched text in autocomplete suggestions */
+        .ui-state-highlight,
+        .ui-widget-content .ui-state-highlight,
+        .ui-widget-header .ui-state-highlight {
+            background-color: #FFD700 !important;
+            color: #000;
+        }
+        .search-container {
+            position: relative;
+        }
+ 
+        .ui-autocomplete {
+            max-height: 150px;
+            max-width: 300px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding-right: 5px;
+            position: absolute;
+            background-color: #fff; /* Add white background color */
+            border: 1px solid #ccc;
+        }
+
+        .search-container .fa-search {
+            position: absolute;
+            top: 12px;
+            left: 10px;
+            color: #aaa;
+        }
+
+
+
+    </style>
     <script src="https://kit.fontawesome.com/d9f7ec7b29.js" crossorigin="anonymous"></script>
     <!-- <script async defer src="https://buttons.github.io/buttons.js"></script> -->
     <title>Hacktoberfest 2023 - Contributors</title>
@@ -61,6 +106,7 @@
         }
         
     </style>
+    
 
 
 </head>
@@ -113,6 +159,9 @@
                 <div class="moon">
                 </div>
             </div>
+
+           
+
             <div class="d-flex justify-content-between align-items-center">
                 <p class=" rubberBand delay-4s" >Add yourself to the list if you contribute.</p>
                 <div class="inputs mr-3">
@@ -379,6 +428,70 @@
 
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+     <!-- Add the following code before the closing </body> tag -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+    <script>
+        // $(function() {
+        //     const availableContributors = contributors.map(contributor => contributor.fullname); // Extracting full names of contributors
+        //     $("#search").autocomplete({
+        //         source: availableContributors,
+        //         open: function(event, ui) {
+        //             $('.ui-autocomplete').css('background-color', 'white'); // Set white background for the autocomplete box
+        //         },
+        //         response: function(event, ui) {
+        //             ui.content.forEach(item => {
+        //                 item.label = item.label; // Ensure the label remains unchanged
+        //             });
+        //         },
+        //         // Custom rendering for each item
+        //         _renderItem: function(ul, item) {
+        //             return $("<li>")
+        //                 .append("<div><i class='fa fa-search search-icon'></i> " + item.label + "</div>")
+        //                 .appendTo(ul);
+        //         }
+        //     });
+        // });
+
+
+        $(function() {
+            const availableContributors = contributors.map(contributor => contributor.fullname); // Extracting full names of contributors
+            $("#search").autocomplete({
+                source: availableContributors
+            });
+
+            // Add search icon before suggestions
+            $("input.ui-autocomplete-input").on("focus", function() {
+                $('.ui-menu-item').each(function() {
+                    $(this).prepend('<i class="fa fa-search"></i>&nbsp;');
+                });
+            });
+        });
+
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "/") {
+                event.preventDefault(); // Prevents the "/" character from appearing in the search input
+                document.getElementById("search").focus(); // Focus on the search input field
+            }
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const searchBox = document.getElementById('search');
+                if (searchBox.value !== '') {
+                    searchBox.value = '';
+                    searchBox.blur();
+                    
+                }
+            }
+        });
+
+
+    </script>
+    
+    
+
 </body>
 
 </html>

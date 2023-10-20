@@ -4,6 +4,8 @@
 // var b = 0
 // var result = b
 
+//Method 1
+
 function fib (n){
     const result = [0,1];
     for (let i = 2; i <= n; i++){

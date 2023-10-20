@@ -3,6 +3,7 @@ package practical17.Program//Question : https://leetcode.com/problems/sliding-wi
 class Solution {
 
     //helper class to combine cur_index's value & cur_index
+    //<value,index>
     public class pair
     {
         int val; //value

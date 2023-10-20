@@ -4,6 +4,7 @@ class Solution {
     public int largestRectangleArea(int[] h) {
 
         //monotonic stack
+        //stack impl
         
         int n=h.length;
         int left[]=new int[n];  //left small elem's ind'

@@ -188,33 +188,34 @@ void printArray(int array[],int n){
 
 int main() {
     cout<< "My template"<<endl;
-    int array[]={23,3,19,8,14,12,12,12,12};
+    int array[]={23,3,19,8,14,12,12,12,12, 24, 68, 32, 9856, 0, 69};
     int size= sizeof(array)/sizeof(array[0]);
     
-//    cout<<"Bubble Sort"<<endl;
-//    bubbleSort(array, size);
-//    printArray(array, size);
+    cout<<"Bubble Sort"<<endl;
+    bubbleSort(array, size);
+    printArray(array, size);
     
-//    cout<<"Insertion Sort"<<endl;
-//    Insertionsort(array, size);
-//    printArray(array, size);
+    cout<<"Insertion Sort"<<endl;
+    Insertionsort(array, size);
+    printArray(array, size);
 
-//    cout<<"Selection Sort"<<endl;
-//    selectionSort(array, size);
-//    printArray(array, size);
+    cout<<"Selection Sort"<<endl;
+    selectionSort(array, size);
+    printArray(array, size);
 
-//    cout<<"Quick Sort"<<endl;
-//    quickSort(array, 0, size-1);
-//    printArray(array, size-1);  
+    cout<<"Quick Sort"<<endl;
+    quickSort(array, 0, size-1);
+    printArray(array, size);  
 
-//    cout<<"Iterative Merge Sort"<<endl
-//    iMergeSort(array, size);
-//    printArray(array, size);
+    cout<<"Iterative Merge Sort"<<endl;
+    iMergeSort(array, size);
+    printArray(array, size);
 
-//    cout<<"Merge Recursive"<<endl;
-//    mergeRecurssive(array, 0, size-1);
-//    printArray(array, size);
+    cout<<"Merge Recursive"<<endl;
+    mergeRecurssive(array, 0, size-1);
+    printArray(array, size);
 
+cout<<"count sort"<<endl;
 countSort(array, size);   
 printArray(array, size); 
 

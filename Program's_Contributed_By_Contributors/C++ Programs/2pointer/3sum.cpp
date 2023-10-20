@@ -9,24 +9,24 @@ int main()
 	sort(vals.begin(),vals.end());
 	for(int i=0;i<vals.size();i++)
 	{
-		int x = vals[i];
-		int l = i+1;
-		int r = vals.size()-1;
-		while(l<r)
+	    int x = vals[i];
+	    int l = i+1;
+	    int r = vals.size()-1;
+	        while(l<r)
 		{
-			if(x+vals[l]+vals[r]==target)
-			{
-				cout<<"Triplet Found: "<<x<<" "<<vals[l]<<" "<<vals[r]<<endl;
-				return 0;
-			}
-			if(x+vals[l]+vals[r]>target)
-			{
-				r--;
-			}
-			else
-			{
-				l++;
-			}
+		   if(x+vals[l]+vals[r]==target)
+		   {
+			cout<<"Triplet Found: "<<x<<" "<<vals[l]<<" "<<vals[r]<<endl;
+			return 0;
+	           }
+		   if(x+vals[l]+vals[r]>target)
+		   {
+			r--;
+		   }
+		   else
+		   {
+			l++;
+		   }
 		}
 	}
 

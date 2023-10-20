@@ -2038,7 +2038,11 @@ contributors = [
     fullname: "Keshav R Karanth",
     username: "https://github.com/keshavrkaranth",
   },
-
+{
+    id: 421,
+    fullname: "Yash Patel",
+    username: "https://github.com/yashpatel08",
+  },
   {
     id: 421,
     fullname: "Gautami SInha",

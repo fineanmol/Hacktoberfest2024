@@ -1,56 +1,74 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-class Node {
+class node
+{
 public:
-    int val;
-    Node* next;
+	int data;
+	node *next;
+	node(int data)
+	{
+		this->data = data;
+		this->next = NULL;
+	}
 };
 
-Node* reverse(Node* head)
+void addNode(node *&head, int data)
 {
-	Node* dummy = NULL;
-	while(head!=NULL)
+	node *newnode = new node(data);
+	if (head == NULL)
 	{
-		Node* temp = head->next;
-		head->next = dummy;
-		dummy = head;
-		head = temp;
+		head = newnode;
+		return;
 	}
-	return dummy;
-}
-
-int main()
-{
-	Node* head = new Node();
-	Node* one = new Node();
-	Node* two = new Node();
-	Node* three = new Node();
-	Node* four = new Node();
-	head->val = 5;
-	one->val = 2;
-	two->val = 3;
-	three->val = 1;
-	four->val = 4;
-	head->next = one;
-	one->next = two;
-	two->next = three;
-	three->next = four;
-	four->next = NULL;
-	Node* temp = head;
-	while(temp)
+	node *temp = head;
+	while (temp->next != NULL)
 	{
-		cout<<temp->val<<"->";
 		temp = temp->next;
 	}
-	cout<<"NULL"<<endl;
-	Node* newHead = reverse(head);
-	while(newHead)
-	{
-		cout<<newHead->val<<"->";
-		newHead = newHead->next;
-	}
-	cout<<"NULL"<<endl;
+	temp->next = newnode;
+}
 
+void reverseLinkedList(node *&head)
+{
+    // For 0 or 1 node linked list
+    if (head == NULL || head->next == NULL)
+        return;
+
+    node *curr = head;
+    node *prev = NULL;
+    while (curr)
+    {
+        node *forward = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = forward;
+    }
+    head = prev;
+}
+
+void traverse(node *head)
+{
+	node *temp = head;
+	while (temp != NULL)
+	{
+		cout << temp->data << " ";
+		temp = temp->next;
+	}
+	cout << endl;
+}
+
+int main(int argc, char const *argv[])
+{
+	node *head = NULL;
+	addNode(head, 10);
+	addNode(head, 20);
+	addNode(head, 30);
+	addNode(head, 40);
+	addNode(head, 50);
+	addNode(head, 60);
+	traverse(head);
+	reverseLinkedList(head);
+	traverse(head);
 	return 0;
 }

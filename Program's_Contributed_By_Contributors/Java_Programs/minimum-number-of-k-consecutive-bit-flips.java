@@ -1,7 +1,7 @@
 package practical17.Program//Question : https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips/description/
 
-//Question exp : convert alll 0 -> 1 by doing k bit flip
-
+//Question exp : convert all 0 -> 1 by doing k bit flip
+//given star
 //Ans approach : greedy approach
 class Solution {
     public int minKBitFlips(int[] nums, int k) {

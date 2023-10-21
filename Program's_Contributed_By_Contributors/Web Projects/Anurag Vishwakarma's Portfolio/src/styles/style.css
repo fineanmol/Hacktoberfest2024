@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+
+:root {
+    --bodyBackgroundColour: rgb(9, 23, 50); 
+    --highlitedMainText : rgb(161, 244, 144);
+    --mutedText: rgb(187, 179, 179);
+    font-size: 60%;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    --planetLight: linear-gradient(160deg, pink 5%, rgb(7, 39, 67) 70%);
+    --planetLightInverse: linear-gradient(160deg, rgb(7, 39, 67) , pink , rgb(7, 39, 67) );
+    
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.1s linear !important;
+}
+
+.displayNone {
+    display: none !important;
+}
+
+.evenSpaceColumn {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+body {
+    width: 100vw !important;
+    overflow-x: hidden;
+    background-color: var(--bodyBackgroundColour);
+}
+a, li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.bluredCircles {
+    position: absolute;
+    background-color: #fff;
+    background-image: var(--planetLight);
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    box-shadow: 1rem 1rem 5rem pink;
+    transition: all 1s linear !important;
+    z-index: 0;
+}
+
+
+
+#backgroundBall1 {
+    top: 75vh;
+    left: 5vw;
+}
+#backgroundBall2 {
+    top: 1rem;
+    left: 2rem;
+}
+#backgroundBall3 {
+    top: 60rem;
+    right: 2rem;
+}
+#backgroundBall4 {
+    top: 20rem;
+    left: 40rem;
+}
+
+
+.portfolioHeadingSection {
+    height: 100px;
+    width: 100%;
+    overflow-x: hidden;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.folioHeadingArea {
+    width: 80vw;
+    
+    height: 100%;
+    min-width: 350px !important;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    z-index: 1;
+}
+
+.desinedByAnurag {
+    width: max-content;
+    transition: all 0.2s linear;
+}
+
+.folioHeadingArea .navItemsList {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.folioHeadingArea .navItemsList li {
+    margin: 0 2rem;
+    padding: 0 1rem;
+}
+
+.mainContainer {
+    width: 100vw;
+    /* height: 100vh; Temp */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.portfolioMainContent {
+    width: 80vw;
+    /* height: 100%; */
+    min-width: 350px;
+    /* background-color: rgb(92, 82, 82); */
+}
+
+.portfolioHeroSection {
+    width: 100%;
+    height: 80vh;
+    /* background-color: aliceblue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolioHeroSection .heroTextArea {
+    display: flex;
+    height: 100%;
+    width: 60%;;
+    align-items: center;
+}
+.portfolioHeroSection .heroImageArea {
+    display: flex;
+    height: 100%;
+    width: 40%;
+    align-items: center;
+    position: relative;
+}
+.portfolioHeroSection .heroImageArea img{
+    
+    position: absolute;
+    width: 105%;
+    height: 90%;
+    transition: all 0.2s linear;
+    /* background-color: blueviolet; */
+} 
+#avatar {
+    filter: drop-shadow(1px -2px 45px rgba(54, 124, 159, 0.953));
+
+}
+
+.intro {
+    /* width: 100%; */
+    
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: column; */
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* row-gap: -50px !important; */
+    /* background-color: red; */
+}
+
+
+.helloSection {
+    font-size: 2rem;
+    color: var(--mutedText);
+    padding: 3rem 0;
+}
+.helloSection>span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 1rem;
+    color: #fff;
+}
+
+.typingNameSection {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--highlitedMainText);
+    font-size: 5rem;
+    padding: 1rem 0.5rem;
+    border-right: 0.3rem solid red;
+    text-shadow: 1px 2px 4px cadetblue;
+}
+
+
+.diffPortfolioSections {
+    margin-top: 25rem;
+    
+}
+
+.diffPortfolioSections .SectionsHeading {
+    font-family: 'Foldit', cursive;
+    font-size: 5rem;
+    width: 100%;
+    text-align: center !important;
+    z-index: -1;
+}
+.SectionsMainContent {
+    width: 100%;
+    font-family: 'Kalam', cursive;
+    color: aliceblue;
+}
+
+.aboutSection, .skillsSection {
+    height: 90vh;
+    width: 100%;
+    
+}
+
+
+.aboutMeTextContainer {
+    font-size: 2.5rem;
+    
+    
+}
+
+.mySkillsMainContent {
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.mySkillsMainContent .mySkillBoxes {
+    padding: 3rem;
+}

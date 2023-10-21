@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anurag Vishwakarma's Portfolio</title>
+    <meta name="description"
+        content="Hello!, My name is Anurag Vishwakarma. I am currently persuing Diploma in major of Computer Science & Engineering from Dr. BR Ambedkar Polytechnic College, Gwalior. I am currently learning Web Development so that I can create awesome websites.">
+    <meta name="keywords"
+        content="Anurag Vishwakarma, Anurag, vcma, Anurag Portfolio, Portfolio, Web Developer, Engineer, Polygwalior, Gwalior, Projects, HTML, CSS, JavaScript, PHP, MySql, Website">
+    <meta name="author" content="Anurag Vishwakarma">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="src/styles/responsive.css">
+</head>
+
+<body>
+    <div class="bluredCircles" id="backgroundBall1"></div>
+    <div class="bluredCircles" id="backgroundBall2"></div>
+    <div class="bluredCircles" id="backgroundBall3"></div>
+    <div class="bluredCircles" id="backgroundBall4"></div>
+
+
+    <div class="mainContainer">
+        <header class="portfolioHeadingSection">
+            <div class="folioHeadingArea">
+                <div class="desinedByAnurag" id="desinedByAnurag">
+                    &copy; Designed by Anurag.
+                </div>
+                <button id="toggleNavBar" onclick="navBarToggleFunction()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </button>
+                <div class="navigationBar" id="navigationBar">
+                    <ul class="navItemsList">
+                        <li><a href="https://polygwalior.ac.in/student/21BRAC0401.php" style="color: aliceblue;">Home</a></li>
+                        <li><a href="https://vcma.rf.gd/Portfolio" style="color: aliceblue;">Portfolio</a></li>
+                        <li><a style="color: aliceblue;" onclick="{document.getElementById('myAboutSection').scrollIntoView('behaviour: smooth');}">About</a></li>
+                        <li><a href="https://polygwalior.ac.in/student/21017C04014_1.php" style="color: aliceblue;">Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+
+        <main class="portfolioMainContent">
+            <section class="portfolioHeroSection">
+                <div class="heroTextArea">
+                    <div class="intro">
+                        <div class="helloSection">
+                            <span>
+                                नमस्ते
+                            </span> I am
+                        </div>
+                        <div id="typingName" class="typingNameSection"></div>
+                    </div>
+                </div>
+                <div class="heroImageArea ">
+                    <img id="avatar" src="./src/Assets/images/AnuragVishwakarma.png"
+                        alt="ANURAG VISHWAKARMA">
+                </div>
+            </section>
+            <section id="myAboutSection" class="aboutSection diffPortfolioSections evenSpaceColumn" data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200">
+                <header class="SectionsHeading" data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200"  >About Me</header>
+                <main class="aboutMeMainContent SectionsMainContent" data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200">
+                    <div class="aboutMeTextContainer" data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200">
+                        <span data-aos="fade-up" >
+    Hello! My name is Anurag Vishwakarma I am currently an Engineering Student of Computer Science &
+    Engineering at Dr. B.R. Ambedkar Polytechnic College Gwalior.
+    <br><br>
+
+</span>
+<span data-aos="fade-up" >
+
+    I am currently exploring the field of Web Development. And I have learned HTML, CSS, Javascript,
+    PHP, MySql, Canva, Version Control using Git & GitHub till now.
+</span>
+<span data-aos="fade-up" >
+
+    <br><br>
+    Along with that I have also learned programming in C, C++, Python & Javascript. Infact I have
+    learned Data Structures & Algorithms. All these skills those I have learned till now are making
+    my thinking capability much more better that earlier.
+</span>
+
+                        With that I am keen to explore new things every time.
+                    </div>
+                </main>
+            </section>
+            <section class="skillsSection diffPortfolioSections evenSpaceColumn" data-aos="fade-up" data-aos-duration="3000">
+                <header class="SectionsHeading" data-aos="fade-up" data-aos-duration="3000">Skills</header>
+                <main class="mySkillsMainContent SectionsMainContent" data-aos="fade-up" data-aos-duration="3000">
+                    <div class="mySkillBoxes" data-aos="fade-up" data-aos-duration="3000">C/C++</div>
+                    <div class="mySkillBoxes" data-aos="fade-up" data-aos-duration="3000">Javascript</div>
+                    <div class="mySkillBoxes" data-aos="fade-up" data-aos-duration="3000">Canva</div>
+                    <div class="mySkillBoxes" data-aos="fade-up" data-aos-duration="3000">Python</div>
+                    <div class="mySkillBoxes" data-aos="fade-up" data-aos-duration="3000">Data Structures</div>
+                    <div class="mySkillBoxes" data-aos="fade-up" data-aos-duration="3000">Bootstrap</div>
+                    <div class="mySkillBoxes" data-aos="fade-up" data-aos-duration="3000">Figma</div>
+                    <div class="mySkillBoxes" data-aos="fade-up" data-aos-duration="3000">HTML</div>
+                    <div class="mySkillBoxes" data-aos="fade-up" data-aos-duration="3000">Web Development</div>
+                    <div class="mySkillBoxes" data-aos="fade-up" data-aos-duration="3000">CSS</div>
+                    <div class="mySkillBoxes" data-aos="fade-up" data-aos-duration="3000">Git</div>
+                    <div class="mySkillBoxes" data-aos="fade-up" data-aos-duration="3000">My SQL</div>
+                    <div class="mySkillBoxes" data-aos="fade-up" data-aos-duration="3000">Frontend Development</div>
+                    <div class="mySkillBoxes" data-aos="fade-up" data-aos-duration="3000">Backend Development</div>
+                    <div class="mySkillBoxes" data-aos="fade-up" data-aos-duration="3000">PHP</div>
+                </main>
+            </section>
+        </main>
+
+
+        <footer></footer>
+    </div>
+
+    <script src="src/scripts/nameTyper.js"></script>
+    <script src="src/scripts/imageMoment.js"></script>
+    <script src="src/scripts/ballMoments.js"></script>
+    <script src="src/scripts/navBar.js"></script>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+@media  only screen and (max-width: 1000px) {
+    :root {
+        font-size: 40% !important;
+        width: 100vw !important;
+        overflow-x: hidden !important;
+    }
+}
+
+@media  only screen and (min-width: 700px) {
+    #toggleNavBar {
+        display: none;
+    }
+}
+
+
+@media  only screen and ((max-width: 700px) or (orientation: portrait)) {
+    .portfolioHeroSection {
+        flex-direction: column;
+        
+    }
+    .typingNameSection {
+        width: max-content;
+    }
+    .portfolioHeroSection .heroTextArea {
+        
+        height: 60%;
+        width: 90%;;
+        
+    }
+    .portfolioHeroSection .heroImageArea {
+        
+        height: 40%;
+        width: 50%;;
+    }
+    .portfolioHeroSection .heroImageArea img {
+        
+        height: 100%;
+        width: 90%;
+    }
+
+    .folioHeadingArea {
+        padding: 0 3rem;
+    }
+    #toggleNavBar {
+        border-radius: 1rem;
+        outline: none;
+        border: none;
+        box-shadow: .1rem .1rem 2rem pink;
+        pad: 2rem;
+        display: grid;
+        place-content: center;
+        cursor: pointer;
+    }
+    .navigationBar {
+        position: absolute;
+        top: 16vh;
+        transform: translateX(1000px);
+        width: 50vw;
+        height: 70vh;
+        min-width: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-image: var(--planetLightInverse);
+        box-shadow: 1rem 1rem 3rem pink;
+        transition: all 0.4s linear;
+        border-radius: 5rem;
+    }
+    .navigationBar ul.navItemsList{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        width: 100%;
+        height: 80%;
+        font-size: 3rem;
+    }
+    .navBarActive {
+        transform: translateX(50px);
+    }
+   .SectionsMainContent {
+    padding-left: 3rem;
+   }
+
+   .skillsSection {
+    height: 100vh;
+   }
+   .mySkillsMainContent .mySkillBoxes {
+    margin: 1rem;
+    padding: 1rem;
+}
+}

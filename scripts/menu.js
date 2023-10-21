@@ -26,12 +26,12 @@ const menu = {
       'id': 'facebook'
     },
     'Linkedin': {
-      'text': 'Linked<i class="fa fa-linkedin" style="font-size:20px"></i>',
+      'text': 'Linked <i class="fa fa-linkedin" style="font-size:20px"></i>',
       'href': 'https://www.linkedin.com/in/fineanmol/',
       'id': 'linkedin'
     },
     'NDC': {
-      'text': '<i class="fa fa-twitter" style="font-size:20px"></i>Twitter',
+      'text': '<i class="fa fa-twitter" style="font-size:20px"></i> Twitter',
       'href': 'https://twitter.com/fineanmol',
       'id': 'tools'
     },

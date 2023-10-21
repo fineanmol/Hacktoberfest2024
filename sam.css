@@ -1,0 +1,35 @@
+/* This is a comment in CSS */
+
+/* Styling for heading */
+h1 {
+    color: #0066cc; /* Set text color to a shade of blue */
+    font-size: 2em; /* Set font size to 2 times the default size */
+    text-align: center; /* Center align the text */
+}
+
+/* Styling for paragraphs */
+p {
+    font-size: 1.2em; /* Set font size to 1.2 times the default size */
+    line-height: 1.5; /* Set line height to 1.5 times the font size for better readability */
+}
+
+/* Styling for links */
+a {
+    text-decoration: none; /* Remove underline from links */
+    color: #009900; /* Set text color to a shade of green */
+}
+
+/* Styling for a link when hovered over */
+a:hover {
+    text-decoration: underline; /* Underline the link on hover */
+}
+
+/* Styling for a container */
+.container {
+    width: 80%; /* Set container width to 80% of the parent element */
+    margin: 0 auto; /* Center the container horizontally */
+    background-color: #f4f4f4; /* Set background color to a light gray */
+    padding: 20px; /* Add some space inside the container */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}

@@ -1,0 +1,45 @@
+class ArrayMapper
+  attr_accessor :arrays
+
+  def initialize(*arrays)
+    @arrays = arrays
+  end
+
+  def map_arrays
+    @arrays.map.with_index do |array, index|
+      array.map { |element| element + index }
+    end
+  end
+
+  def sum_arrays
+    @arrays.reduce([]) do |sum_array, array|
+      if sum_array.empty?
+        array
+      else
+        sum_array.zip(array).map { |a, b| a + b }
+      end
+    end
+  end
+
+  def product_arrays
+    @arrays.reduce([]) do |product_array, array|
+      if product_array.empty?
+        array
+      else
+        product_array.zip(array).map { |a, b| a * b }
+      end
+    end
+  end
+
+  def perform_operations
+    {
+      mapped: map_arrays,
+      summed: sum_arrays,
+      product: product_arrays,
+    }
+  end
+end
+
+# Usage:
+mapper = ArrayMapper.new([1, 2, 3], [4, 5, 6], [7, 8, 9])
+puts mapper.perform_operations.inspect

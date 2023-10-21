@@ -13,3 +13,4 @@ func main() {
 	// Passing arguments
 	mul(20, 30)
 }
+

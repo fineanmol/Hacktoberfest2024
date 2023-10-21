@@ -49,41 +49,48 @@ const menu = {
 
 }
 
-function buildMenuHTML (obj = {}) {
-  let html = ''
-  let path = window.location.pathname.split('/')
-  let currentPage = path[path.length - 1] === '' ? '/' : path[path.length - 1]
+function buildSubMenuHTML(item) {
+  let html = '';
+  let path = window.location.pathname.split('/');
+  let currentPage = path[path.length - 1] === '' ? '/' : path[path.length - 1];
 
-  Object.entries(obj).forEach(([key, item]) => {
-    if (key == 'Others') {
-      html += '<li class="dropdown">'
-      html += '<a class="nav-link nested-dropdown" href="#" id="Others"> Others </a>'
-      html += '<div class="dropdown-content">'
-      Object.entries(item).forEach(([key, item]) => {
-        let isCurrent = (currentPage === item.href)
+  Object.entries(item).forEach(([key, subItem]) => {
+    const isCurrent = (currentPage === subItem.href);
+    html += `<div class="nav-item${isCurrent ? ' active' : ''}">
+               <a target="_blank" class="nav-link" href="${subItem.href}"${subItem.id ? ' id="' + subItem.id + '"' : ''}>${subItem.text}</a>
+             </div>`;
+  });
 
-        html += '<div class="nav-item' + (isCurrent ? ' active' : '') + '">'
-        html += '<a target="_blank" class="nav-link" href="' + item.href + '"' + (item.id ? ' id="' + item.id + '"' : '') + '>' + item.text + '</a>'
-        html += '</div>'
-      })
-      html += '</div>'
+  return html;
+}
+
+function buildMenuHTML(obj = {}) {
+  let html = '';
+  let path = window.location.pathname.split('/');
+  let currentPage = path[path.length - 1] === '' ? '/' : path[path.length - 1];
+
+  for (const key in obj) {
+    if (key === 'Others') {
+      html += `<li class="dropdown">
+                 <a class="nav-link nested-dropdown" href="#" id="Others"> Others </a>
+                 <div class="dropdown-content">${buildSubMenuHTML(obj[key])}</div>
+               </li>`;
     } else {
-      if (currentPage.indexOf('.html') == -1) {
-        currentPage = currentPage.concat('.html')
-      }
-
-      let isCurrent = (currentPage === item.href)
-
-      html += '<li class="nav-item' + (isCurrent ? ' active' : '') + '">'
-      html += '<a target="_blank" class="nav-link" href="' + item.href + '"' + (item.id ? ' id="' + item.id + '"' : '') + '>' + item.text + '</a>'
-      html += '</li>'
+      const isCurrent = (currentPage === obj[key].href);
+      html += `<li class="nav-item${isCurrent ? ' active' : ''}">
+                 <a target="_blank" class="nav-link" href="${obj[key].href}"${obj[key].id ? ' id="' + obj[key].id + '"' : ''}>${obj[key].text}</a>
+               </li>`;
     }
-  })
-  document.getElementById('menu').innerHTML = html
+  }
+
+  const menuElement = document.getElementById('menu');
+  if (menuElement) {
+    menuElement.innerHTML = html;
+  }
 }
 
-function buildMenu () {
-  buildMenuHTML(menu)
+function buildMenu() {
+  buildMenuHTML(menu);
 }
 
-buildMenu()
+buildMenu();

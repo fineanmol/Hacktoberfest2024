@@ -71,6 +71,5 @@ int main()
     string infix = "((a+(b*c))-d)"; 
     string postfix;
     postfix = convert(infix);
-    
     return 0;
 }

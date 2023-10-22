@@ -5,23 +5,32 @@ a= int(input((" Height in 1.inches or 2. feet and inches or 3.centimeters? choos
 if a==1:
              Height = float(input(" Enter your height: "))
              Height*=2.54
-elif ( a==2 ):
+elif a==2 :
              Height_1 = str(input(" Enter in this format: 5'4 or foot'inches ->" ))
              Height =  float(Height_1[0]) *12 *2.54  + float(Height_1[2]) *2.54 
-             
+elif a == 3:
+    # Input height in centimeters
+    Height = float(input("Enter your height in centimeters: "))
+else:
+    print("Invalid choice. Please choose 1, 2, or 3.")
+    exit()             
 
 #input weight
 b= int( input (" Weight in 1.kg or 2.pounds? choose and type 1 or 2 ->"))
 
-Weight = float( input(" Enter your Weight-> "))
-if b==2:
-             Weight*=0.453592
-
+if b == 1:
+    weight = float(input("Enter your weight in kg: "))
+elif b==2:
+    weight *=0.453592
+else:
+    print("Invalid choice. Please choose 1 or 2.")
+    exit()
+    
 #convert height into metres
 Height = Height / 100
 
 #calculate BMI
-BMI = Weight / (Height*Height)
+BMI = weight / (Height*Height)
 
 #printing BMI
 print(f"Your Body Mass Index is: {BMI}")

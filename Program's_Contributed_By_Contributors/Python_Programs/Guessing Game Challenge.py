@@ -37,3 +37,6 @@ while True:
             print('WARM!')
         else:
             print('COLD!')
+    print("Nice job!")
+    while True: 
+         guess = int(input("I'm thinking of a number between 1 and 100.\n  What is your guess? "))

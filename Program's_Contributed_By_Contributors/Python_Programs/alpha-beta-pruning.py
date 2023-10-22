@@ -37,7 +37,7 @@ def alpha_beta(node, depth, alpha, beta, maximizing_player):
                 break
         return value
     
-root = Node(3)
+root = Node(5)
 child1 = Node(15)
 child2 = Node(2)
 child3 = Node(9)

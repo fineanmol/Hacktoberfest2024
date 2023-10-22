@@ -135,7 +135,7 @@
     </div>
     <!-- Please maintain the alignment... -->
     <div class="box mx-auto my-5 justify-content-center" id="box">
-        <a data-aos="zoom-in-down" href="https://hacktoberfest.com/" class="btn btn-outline-secondary btn-lg load-more" id="loadMore"><u>Load More</u></a>
+        <a data-aos="zoom-in-down" href="https://hacktoberfest.com/" class="btn btn-lg load-more" id="loadMore"><u>Load More</u></a>
     </div>
     </div>
     </div>
@@ -205,7 +205,10 @@
         // Load contributors after document loads.
         render(contributors);
 
-        function loadMore() {
+        function loadMore(event) {
+            event.preventDefault();
+            var href = this.getAttribute("href");
+            window.location.href = href;
             if (initialContributorsNumber >= contributors.length) {
                 render(contributors)
             } else {

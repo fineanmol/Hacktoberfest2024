@@ -2068,5 +2068,5 @@ contributors = [
     id: 426,
     fullname: "Kundai Chasinda",
     username: "https://github.com/Kundai10",
-  }
+  },
 ];

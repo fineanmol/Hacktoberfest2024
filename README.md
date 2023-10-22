@@ -126,7 +126,16 @@ For more information on syncing forks [read this article from Github](https://he
   - For the open source community engagement and learn how to contribute to open source.
 
 
+## Steps to use docker
 
+```bash
+docker build -t your-image:1 .
+```
+
+
+```bash
+docker run -itd -p 80:80 your-image:1
+```
 
 ###### *We will do our best to merge as much as possible from everyone. However, time is limited and the merge conflicts are horrible :astonished: <3*
 <br>

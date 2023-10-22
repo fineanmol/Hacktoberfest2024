@@ -1,0 +1,11 @@
+Run echo "Commenting on issue/PR..."
+  echo "Commenting on issue/PR..."
+  comment_body="@NIRMAL1508 Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event."
+  echo "$comment_body" | gh issue comment  --body -
+  shell: /usr/bin/bash -e {0}
+  env:
+    COMMENT_BODY: @NIRMAL1508 Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event.
+    GITHUB_TOKEN: 
+Commenting on issue/PR...
+accepts 1 arg(s), received 0
+Error: Process completed with exit code 1.

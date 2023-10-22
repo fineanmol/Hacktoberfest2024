@@ -627,8 +627,8 @@ body {
   border-radius: 10px;
   background-color: #fc3e6a;
   color: whitesmoke;
-  border: none;
   transition: ease-out 0.4s;
+  font-weight: 600;
 }
 .box #loadMore:hover {
   color: black;

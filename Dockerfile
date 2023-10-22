@@ -1,3 +1,7 @@
-FROM nginx
+FROM ubuntu
 MAINTAINER label="Rohan"
-COPY index.html /usr/share/nginx/html/index.html
+RUN apt update -y
+RUN apt install nginx -y
+COPY . /var/www/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

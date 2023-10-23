@@ -25,7 +25,7 @@ body {
     padding: 0 40px;
 
     &:before {
-      content: '[';
+      content: '[Hello world!]';
       left: 0;
     }
 

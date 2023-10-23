@@ -1,3 +1,16 @@
+"""
+Perform binary search on a sorted array to find the index of a given element.
+
+Args:
+arr (list): A sorted list of integers.
+low (int): The starting index of the search range.
+high (int): The ending index of the search range.
+x (int): The element to search for in the array.
+
+Returns:
+int: The index of the element in the array, or -1 if it is not present.
+"""
+
 # Python 3 program for recursive binary search.
 # Modifications needed for the older Python 2 are found in comments.
 

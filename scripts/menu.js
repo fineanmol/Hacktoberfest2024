@@ -8,7 +8,7 @@ const menu = {
   
 },'hacktoberfest2':{
 'text':'HacktoberFest Project 2',
-  'href':'https://github.com/fineanmol/hacktoberfest'
+  'href':'https://github.com/fineanmol/hacktoberfest/'
   
 },
   //'Others': {

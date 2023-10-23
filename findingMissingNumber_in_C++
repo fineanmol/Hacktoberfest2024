@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+int findMissingNumber(const std::vector<int>& nums, int n) {
+    int expectedSum = n * (n + 1) / 2;
+    int actualSum = 0;
+    for (int num : nums) {
+        actualSum += num;
+    }
+    return expectedSum - actualSum;
+}
+int main() {
+    int n;
+    std::cout << "Enter the value of n (the range of numbers 1 to n): ";
+    std::cin >> n;
+    std::vector<int> nums(n - 1); // An array of size n-1 to hold n-1 numbers
+    std::cout << "Enter " << n - 1 << " numbers in the range of 1 to " << n << ":\n";
+    for (int i = 0; i < n - 1; i++) {
+        std::cin >> nums[i];
+    }
+    int missingNumber = findMissingNumber(nums, n);
+    std::cout << "The missing number is: " << missingNumber << std::endl;
+    return 0;
+}

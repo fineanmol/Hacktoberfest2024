@@ -30,7 +30,7 @@ body {
     }
 
     &:after {
-      content: ']';
+      content: '[Hello world]';
       position: absolute;
       right: 0;
     }

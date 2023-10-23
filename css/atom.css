@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper{
+    background-color: #1d2130;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 750px;
+    height: auto;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+/* Header part */
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 10px 65px;
+    /* border: 1px solid yellowgreen; */
+}
+.heading h1{
+    color: white;
+    letter-spacing: 3px;
+}
+
+/* Making Atoms */
+
+.atom{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.atom .orbit{
+    position: relative;
+    width: 250px;
+    height:250px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin: 40px 0px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: spin 5s linear infinite;
+}
+
+.atom .side-name{
+    position: absolute;
+    color: white;
+    letter-spacing: 2px;
+
+}
+.atom .electron{
+    top: 55px; 
+    left: 250px;
+}
+.atom .positron{
+    top: 55px;
+    right: -100px;
+}
+
+.orbit .electron{
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid blueviolet;
+    box-shadow: 0 0 10px blueviolet;
+}
+.orbit #red{
+    border: 2px solid red;
+    box-shadow: 0 0 10px red;
+}
+
+.proton{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), 2px 2px 5px white inset;
+}
+
+.atom .sub-name{
+    position: absolute;
+    color: white;
+    font-size: 1.1em;
+    letter-spacing: 2.5px;
+}
+.atom .proton-left{
+    top: 85px;
+    left: 90px; 
+}
+.atom .antiproton-right{
+    top: 85px;
+    left: 570px;
+}
+
+
+ .orbit .Red {
+    background-color: red;
+}
+
+/* Footer Part (Atom naming) */
+
+footer{
+    /* border: 1px solid #fff; */
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    padding-left: 70px;
+    padding-right: 40px;
+}
+footer h3{
+    color: blueviolet;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+}
+footer #red{
+    color: red;
+}
+
+.atom .delay{
+    animation: spin 10s linear infinite;
+    animation-delay: 1s;
+}
+
+/* Animation (Rotating the orbit) */
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,59 @@
+    <!-- 
+        Developer : Kaushal Kishore
+        Date: 22/Mar/2023
+        Mini Project: Rotating Electron and Positron
+        TECH STACH used : HTML5 & CSS3
+        Rsponsiveness: Not Resposnive yet
+    -->
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Electron-Positron</title>
+        <link rel="stylesheet" href="./css/atom.css">
+    </head>
+    <body>
+        <div class="wrapper">
+
+            <!-- Main Contents -->
+
+            <div class="container">
+
+                <!-- Header -->
+
+                <div class="heading">
+                    <h1>Matter</h1>
+                    <h1>Antimatter</h1>
+                </div>
+
+                <!-- Rotating Atoms -->
+                
+                <div class="atom">
+                    <h3 class="side-name electron">Electrons</h3>
+                    <h3 class="sub-name proton-left">Proton</h3>
+                    <div class="orbit">
+                        <div class="electron"></div>
+                        <div class="proton"></div>
+                    </div>
+                    <h3 class="side-name positron">Positrons</h3>
+                    <h3 class="sub-name antiproton-right">Antiproton</h3>
+                    <div class="orbit delay">
+                        <div class="electron" id="red"></div>
+                        <div class="proton Red"></div>
+                    </div>
+                </div>
+
+                <!-- The Footer part -->
+
+                <footer>
+                    <h3>Hydrogen</h3>
+                    <h3 id="red">Antihydrogen</h3>
+                </footer>
+            </div>
+        </div>
+    </body>
+    </html>

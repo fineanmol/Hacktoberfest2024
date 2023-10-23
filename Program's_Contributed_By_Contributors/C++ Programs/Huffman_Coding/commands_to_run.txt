@@ -1,0 +1,20 @@
+In order to run this project open and compile the Huffman.cpp file.
+While compiling the file we need to pass the Original txt and the file where compressed file is to be stored using command line arguments.
+
+To Compress-
+(1) g++ Huffman.cpp -o main  
+(2)./main sample.txt compressed.txt  
+sample.txt
+compressed.txt
+Select the option 1.Compress 2.Decompress
+(3) 1
+Compressed Successfully!
+ 
+To Decompress-
+(1) g++ Huffman.cpp -o main  
+(2) ./main compressed.txt decompressed.txt  
+compressed.txt
+decompressed.txt
+Select the option 1.Compress 2.Decompress
+(3)2
+Decompressed Successfully!

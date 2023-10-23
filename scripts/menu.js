@@ -14,15 +14,15 @@ const menu = {
   //'Others': {
     'Instagram': {
       'text': 'Instagram Connect',
-      'href': 'https://instagram.com/fineanmol'
+      'href': 'https://instagram.com/fineanmol/'
     },
     'Instagram': {
       'text': 'Connect on <i class="fa fa-instagram" style="font-size:22px"></i>',
-      'href': 'https://instagram.com/fineanmol'
+      'href': 'https://instagram.com/fineanmol/'
     },
     'Facebook': {
       'text': '<i class="fa fa-facebook" style="font-size:20px"></i>acebook',
-      'href': 'https://www.facebook.com/fineanmol',
+      'href': 'https://www.facebook.com/fineanmol/',
       'id': 'facebook'
     },
     'Linkedin': {
@@ -32,7 +32,7 @@ const menu = {
     },
     'NDC': {
       'text': '<i class="fa fa-twitter" style="font-size:20px"></i>Twitter',
-      'href': 'https://twitter.com/fineanmol',
+      'href': 'https://twitter.com/fineanmol/',
       'id': 'tools'
     },
     'Stars': {

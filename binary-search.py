@@ -8,7 +8,7 @@ high (int): The ending index of the search range.
 x (int): The element to search for in the array.
 
 Returns:
-int: The index of the element in the array, or -1 if it is not present.
+int: The index of the element in the array or -1 if it is not present.
 """
 
 # Python 3 program for recursive binary search.

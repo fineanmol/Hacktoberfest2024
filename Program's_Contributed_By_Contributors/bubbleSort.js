@@ -16,7 +16,7 @@ function swap(array, i, j) {
 console.log(bubbleSort([5, 2, 1, 13, 7]));
 
 //////optimized
-function bubbleSort2(array) {
+function bubbleSortV2(array) {
   var countOuter = 0;
   var countInner = 0;
   var countSwap = 0;

@@ -5,3 +5,5 @@
 .github
 *.github/
 /.vs
+node_modules
+package-lock.json

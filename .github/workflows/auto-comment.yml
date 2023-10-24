@@ -1,0 +1,31 @@
+name: Auto Comment
+
+on:
+  issues:
+    types:
+      - opened
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if it's an issue or pull request
+        run: |
+          if [[ ${{ github.event_name }} == 'issues' ]]; then
+            echo "COMMENT_BODY=@${{ github.event.issue.user.login }} Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event.\nMeanwhile, if you want to work on this issue, please raise a PR, and we will review and merge it." >> $GITHUB_ENV
+          else
+            echo "COMMENT_BODY=@${{ github.event.pull_request.user.login }} Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event." >> $GITHUB_ENV
+          fi
+        shell: bash
+
+      - name: Comment on issue/PR
+        run: |
+          echo "Commenting on issue/PR..."
+          comment_body="${{ env.COMMENT_BODY }}"
+          echo "$comment_body" | gh issue comment ${{ github.event.issue.number }} --body -
+        env:
+          GITHUB_TOKEN: ${{ secrets.AUTOMERGE_TOKEN }}
+        if: ${{ github.event_name == 'issues' || github.event_name == 'pull_request' }}

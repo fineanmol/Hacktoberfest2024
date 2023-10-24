@@ -17,12 +17,13 @@ public class LetterFrequency {
         }
     }
 
+    //LetterFrequencyAlgorithm using HashMap
     public static Map<Character, Integer> calculateLetterFrequency(String text) {
         Map<Character, Integer> letterFrequency = new HashMap<>();
 
-        for (char c : text.toCharArray()) {
-            if (Character.isLetter(c)) {
-                char lowercase = Character.toLowerCase(c);
+        for (char letter : text.toCharArray()) {
+            if (Character.isLetter(letter)) {
+                char lowercase = Character.toLowerCase(letter);
                 letterFrequency.put(lowercase, letterFrequency.getOrDefault(lowercase, 0) + 1);
             }
         }

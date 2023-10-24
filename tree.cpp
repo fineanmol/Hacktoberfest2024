@@ -1,74 +1,82 @@
+#include <iostream>
 
-#include <bits/stdc++.h>
+using namespace std;
 
-void markParents(BinaryTreeNode<int> *root, unordered_map<BinaryTreeNode<int> *, BinaryTreeNode<int> *> &parent_track, BinaryTreeNode<int> *target)
-{
-    queue<BinaryTreeNode<int> *> queue;
-    queue.push(root);
-    while (!queue.empty())
-    {
-        BinaryTreeNode<int> *current = queue.front();
-        queue.pop();
-        if (current->left)
-        {
-            parent_track[current->left] = current;
-            queue.push(current->left);
-        }
-        if (current->right)
-        {
-            parent_track[current->right] = current;
-            queue.push(current->right);
-        }
-    }
+struct Node{
+    int data;
+    Node * left;
+    Node * right;
+};
+
+Node* createNode(int data){
+    Node * newNode = new Node();
+    newNode -> data = data;
+    newNode -> left = nullptr;
+    newNode -> right = nullptr;
+
+    return newNode;
 }
 
-vector<BinaryTreeNode<int> *> printNodesAtDistanceK(BinaryTreeNode<int> *root, BinaryTreeNode<int> *target, int k)
-{
-    unordered_map<BinaryTreeNode<int> *, BinaryTreeNode<int> *> parent_track;
 
-    markParents(root, parent_track, target);
+//   Preorder Traversal
 
-    unordered_map<BinaryTreeNode<int> *, bool> visited;
+void preorder(Node * root){
 
-    queue<BinaryTreeNode<int> *> queue;
-    queue.push(target);
-    visited[target] = true;
-    int curr_level = 0;
+    if(root == nullptr) return;
 
-    while (!queue.empty())
-    {
-        int size = queue.size();
+    cout << root -> data << endl;
+    preorder(root -> left);
+    preorder(root -> right);
+}
 
-        if (curr_level++ == k)
-            break;
+//  Inorder Traversal
 
-        for (int i = 0; i < size; i++)
-        {
-            BinaryTreeNode<int> *current = queue.front();
-            queue.pop();
-            if (current->left && !visited[current->left])
-            {
-                queue.push(current->left);
-                visited[current->left] = true;
-            }
-            if (current->right && !visited[current->right])
-            {
-                queue.push(current->right);
-                visited[current->right] = true;
-            }
-            if (parent_track[current] && !visited[parent_track[current]])
-            {
-                queue.push(parent_track[current]);
-                visited[parent_track[current]] = true;
-            }
-        }
-    }
-    vector<BinaryTreeNode<int> *> result;
-    while (!queue.empty())
-    {
-        BinaryTreeNode<int> *current = queue.front();
-        queue.pop();
-        result.push_back(current);
-    }
-    return result;
+void inorder(Node * root){
+
+    if(root == nullptr) return;
+
+    inorder(root -> left);
+    cout << root -> data << endl;
+    inorder(root -> right);
+}
+
+// Postorder Traversal
+
+void postorder(Node * root){
+    
+    if(root == nullptr) return;
+    
+    postorder(root -> left);
+     postorder(root -> right);
+    cout << root -> data << endl;
+   
+
+}
+
+int main(){
+
+    // Level 1
+    Node * root = createNode(1);
+    // Level 2
+    root -> left = createNode(2);
+    root -> right = createNode(3);
+    // Level 3
+    root ->left -> left = createNode(4);
+    root ->left -> right = createNode(5);
+    root ->right -> left = createNode(6);
+    root ->right -> right = createNode(7);
+    // Level 4
+    root-> left-> right-> left = createNode(9);
+    root-> right-> right -> left = createNode(15);
+
+    cout << "Preorder Traversal" << endl;
+    preorder(root);
+    cout << "Inorder Traversal" << endl;
+    inorder(root);
+    cout << "Postorder Traversal" << endl;
+    postorder(root);
+    
+
+    system("pause>0");  
+
 }

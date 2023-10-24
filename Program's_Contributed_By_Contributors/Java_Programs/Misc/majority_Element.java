@@ -1,10 +1,20 @@
 
 // import java.util.Arrays;
+import java.util.Scanner;
 import java.util.HashMap;
 
 public class majority_Element {
     public static void main(String[] args) {
-        int[] nums = { 2, 2, 1, 1, 1, 2, 2 };
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of elements: ");
+        int len = sc.nextInt();
+        //int[] nums = { 2, 2, 1, 1, 1, 2, 2 };
+        int[] nums = new int[len];
+        for(int i = 0; i<len; i++)
+        {
+            System.out.print("Enter an element: ");
+            nums[i] = sc.nextInt();
+        }
         int answer = optimal(nums);
         System.out.println(answer);
     }

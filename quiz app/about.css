@@ -1,0 +1,103 @@
+body{
+    background-image: url("abhi.jpg");
+    background-repeat:repeat;
+    background-size:cover;
+    background-position:center;
+    text-align: center;
+  }
+  img{
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.41);
+    box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.41);
+}
+img:hover{
+        cursor: pointer;
+        box-shadow: 0 0.4rem 1.4rem 0 rgba(52, 126, 163, 0.5);
+        transform: translateY(-0.2rem);
+        transition: transform 150ms;
+}
+.box-wrapper{
+    display:flex;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+.box-wrapper::after{
+    content:'';
+    display:block;
+    clear:both;
+}
+.box{
+    width:50%;
+    float:left;
+}
+.box-1{
+    text-align: center;
+}
+.box-2{
+    text-align: center;
+}
+.up{
+    margin-top: 8%;
+    font-family: sans-serif;
+}
+.above{
+    font-family: sans-serif;
+    color: rgb(34, 3, 3);
+}
+.hello{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+}
+.above:hover{
+    transform: translateY(-0.2rem);
+        transition: transform 150ms;
+}
+.hello:hover{
+    transform: translateY(-0.1rem);
+        transition: transform 150ms;
+}
+.btn{
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    padding: 0.6rem 4rem;
+    width: 20rem;
+    text-align: center;
+    border: 0.1rem solid #23395b;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #fcfcfc;
+    background-color: rgb(9, 3, 83);
+    animation-name: gk;
+    animation-duration: 7s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+  }
+.btn:hover{
+cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(52, 126, 163, 0.5);
+  transform: translateY(-0.2rem);
+  transition: transform 150ms;
+}
+
+@media(max-width:800px){
+    body{
+        font-size: 60%;
+        background-repeat: repeat;
+    }
+    img{
+        border-radius: 75%;
+    }
+    .up{
+        margin-top: 30%;
+    }
+}
+@keyframes gk{
+    from{
+      background-color: rgb(9, 3, 83);
+    }
+    to{
+      background-color: rgb(42, 39, 87);
+    }
+  }

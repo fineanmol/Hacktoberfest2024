@@ -1,0 +1,177 @@
+:root {
+  background-image: url("abhi.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 1rem;
+}
+h1 {
+  font-size: 5.4rem;
+  color: #23395b;
+  margin-bottom: 5rem;
+  animation-name: change-color;
+  animation-duration: 5s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode:backwards;
+}
+h1 > span {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.anc:hover{
+  cursor: pointer;
+  transform: translateY(-0.2rem);
+  transition: transform 150ms;
+}
+h2 {
+  font-size: 4.2rem;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+h3 {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+.me{
+        margin: 0px 40px 60px 20px;
+        font-size: 20px;
+        font-weight: 600;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color:crimson;
+        animation-name: abhi;
+        animation-duration: 5s;
+        animation-delay: 0.5s;
+        animation-iteration-count:infinite;
+        animation-fill-mode: forwards;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.container > * {
+  width: 100%;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.text-center {
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+
+.btn {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  width: 20rem;
+  text-align: center;
+  border: 0.1rem solid #23395b;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #fcfcfc;
+  background-color: rgb(9, 3, 83);
+  animation-name: gk;
+  animation-duration: 7s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+}
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(52, 126, 163, 0.5);
+  transform: translateY(-0.2rem);
+  transition: transform 150ms;
+}
+.btn[disabled]:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input {
+  margin-bottom: 1rem;
+  width: 20rem;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  border: none;
+  box-shadow: 0 0.1rem 1.4rem 0 rgba(52, 126, 163, 0.5);
+}
+input::placeholder {
+  color: #aaa;
+}
+@keyframes change-color{
+  from{
+    color:#23395b;
+  }
+  to{
+    color: crimson;
+  }
+
+}
+
+@keyframes abhi{
+  from{
+    color:crimson;
+  }
+  to{
+    color: rgba(13, 4, 71, 0.945);
+  }
+}
+@keyframes gk{
+  from{
+    background-color: rgb(9, 3, 83);
+  }
+  to{
+    background-color: rgb(42, 39, 87);
+  }
+}
+@media(max-width:800px){
+  .anc{
+    font-size:30px;
+  }
+  #finalScore{
+    font-size: 35px;
+  }
+  .me{
+    font-size: 15px;
+    margin-left: 10%;
+  }
+  #question{
+    font-size: 30px;
+  }
+}

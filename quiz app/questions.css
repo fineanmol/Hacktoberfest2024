@@ -1,0 +1,84 @@
+.choice-container {
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-size: 1.8rem;
+  border: 0.1rem solid rgba(52, 126, 163, 0.5);
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(52, 126, 163, 0.5);
+  transform: translateY(-0.2rem);
+  transition: transform 150ms;
+}
+.choice-prefix {
+  padding: 1.5rem 2.5rem;
+  background-color: #23395b;
+  color: white;
+}
+.choice-text {
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.correct {
+  background-color: #28a745;
+}
+.incorrect {
+  background-color: #dc3545;
+}
+
+#hud {
+  display: flex;
+  justify-content: space-between;
+}
+.hud-prefix {
+  text-align: center;
+  font-size: 2rem;
+  animation-name: change;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+.hud-main-text {
+  text-align: center;
+}
+#progressBar {
+  width: 20rem;
+  margin-top: 1.5rem;
+  height: 4rem;
+  border: 0.3rem solid #23395b;
+}
+#progressBarFull {
+  background-color: #23395b;
+  height: 3.4rem;
+  width: 0%;
+}
+
+#loader {
+  border: 1.6rem solid white;
+  border-radius: 50%;
+  border-top: 1.6rem solid #23395b;
+  width: 12rem;
+  height: 12rem;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes change{
+  from{
+    color: #23395b;
+  }
+  to{
+    color:rgb(3, 26, 32);
+  }
+}

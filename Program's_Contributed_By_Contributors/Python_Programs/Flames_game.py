@@ -90,8 +90,7 @@ if __name__ == "__main__":
 		# where we have to perform slicing.
 		split_index = (count % len(result) - 1)
 
-		# this steps is done for performing
-		# anticlock-wise circular fashion counting.
+		# this steps is done for performing anticlock-wise circular fashion counting.
 		if split_index >= 0:
 
 			# list slicing

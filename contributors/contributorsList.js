@@ -2068,5 +2068,5 @@ contributors = [
     id: 426,
     fullname: "Kumud Verma",
     username: "https://github.com/KUMUD-TECH"
-  }
+  },
 ];

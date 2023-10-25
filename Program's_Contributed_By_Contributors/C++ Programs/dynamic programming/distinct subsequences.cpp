@@ -18,7 +18,7 @@ class Solution {
     int n = s.size();
     int m = t.size();
 
-    // Resursion + Memoization method
+    // Resursion + Memoization method :
     // vector<vector<int>> dp(n,vector<int>(m,-1));
     //  return f(0,0,s,t,dp);
 

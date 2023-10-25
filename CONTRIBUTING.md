@@ -64,4 +64,4 @@ To pull any new changes from your parent repo simply run
 git merge upstream/master
 ```
 
-This will give you any eventual conflicts and allow you to easily solve them in your repo. It's a good idea to use it frequently in between your own commits to make sure that your repo is up to date with its parent.
+This will give you any eventual conflicts and allow you to easily solve them in your repository. It's a good idea to use it frequently in between your own commits to make sure that your repo is up to date with its parent.

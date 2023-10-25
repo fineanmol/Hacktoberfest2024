@@ -52,6 +52,8 @@
     <!-- <script async defer src="https://buttons.github.io/buttons.js"></script> -->
     <title>Hacktoberfest 2023 - Contributors</title>
     <style>
+       
+
         .hidden {
             display: none;
         }
@@ -59,7 +61,6 @@
         .st0 {
             fill: #FF0844;
         }
-        
     </style>
 
 
@@ -114,7 +115,7 @@
                 </div>
             </div>
             <div class="d-flex justify-content-between align-items-center">
-                <p class=" rubberBand delay-4s" >Add yourself to the list if you contribute.</p>
+                <p class=" rubberBand delay-4s">Add yourself to the list if you contribute.</p>
                 <div class="inputs mr-3">
                     <i class="fa fa-search"></i>
                     <input type="text" id="search" class="form-control " placeholder="Search Contributors..">
@@ -135,30 +136,37 @@
     </div>
     <!-- Please maintain the alignment... -->
     <div class="box mx-auto my-5 justify-content-center" id="box">
-        <a data-aos="zoom-in-down" href="https://hacktoberfest.com/" class="btn btn-outline-secondary btn-lg load-more" id="loadMore"><u>Load More</u></a>
+        <a data-aos="zoom-in-down" href="https://hacktoberfest.com/" class="btn btn-outline-secondary btn-lg load-more"
+            id="loadMore"><u>Load More</u></a>
     </div>
     </div>
     </div>
     </div>
     <div class="footer mt-auto py-3 bg-light text-center">
         <div class="container">
-            <span class="text-muted"><div id="stats"></div></span>
+            <span class="text-muted">
+                <div id="stats"></div>
+            </span>
         </div>
     </div>
     <footer>
         <div class="footer-content">
             <h3>Hacktoberfest 2023</h3>
             <p>This Project is participating in <b>Hacktoberfest</b>. Copyright &copy; 2023.</p>
-           
+
             <div class="footer-menu">
-		<!--Social media handles... -->    
-            <ul class="socials">
-                <li><a href="https://www.facebook.com/fineanmol" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="https://twitter.com/fineanmol" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://www.instagram.com/fineanmol" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="https://www.instagram.com/fineanmol" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/fineanmol/" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
-            </ul>
+                <!--Social media handles... -->
+                <ul class="socials">
+                    <li><a href="https://www.facebook.com/fineanmol" target="_blank"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li><a href="https://twitter.com/fineanmol" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/fineanmol" target="_blank"><i
+                                class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://www.instagram.com/fineanmol" target="_blank"><i class="fa fa-youtube"></i></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/fineanmol/" target="_blank"><i
+                                class="fa fa-linkedin-square"></i></a></li>
+                </ul>
             </div>
         </div>
     </footer>
@@ -172,9 +180,9 @@
         let initialContributorsNumber = 72;
 
         console.log(contributors)
-        function filterUsers(str='ContributorName', array) {
+        function filterUsers(str = 'ContributorName', array) {
             const inputString = typeof str === 'string' ? str.toLowerCase() : '';
-            var fullName=''
+            var fullName = ''
             if (str == '') return "Cannot be empty, please enter a name"
             else return array.filter((item) => {
                 const fullName = item.fullname || '';
@@ -223,8 +231,8 @@
             }
         }
 
-		const loadMoreBtn = document.getElementById("loadMore")
-		loadMoreBtn.addEventListener("click", loadMore)
+        const loadMoreBtn = document.getElementById("loadMore")
+        loadMoreBtn.addEventListener("click", loadMore)
 
 
         document.querySelectorAll('a.box-item').forEach(con => {

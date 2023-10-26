@@ -1,39 +1,18 @@
-# Python 3 program for recursive binary search.
-# Modifications needed for the older Python 2 are found in comments.
+# Python code to demonstrate working
+# of binary search in library
+from bisect import bisect_left
 
-# Returns index of x in arr if present, else -1
-def binary_search(arr, low, high, x):
-
-	# Check base case
-	if high >= low:
-
-		mid = (high + low) // 2
-
-		# If element is present at the middle itself
-		if arr[mid] == x:
-			return mid
-
-		# If element is smaller than mid, then it can only
-		# be present in left subarray
-		elif arr[mid] > x:
-			return binary_search(arr, low, mid - 1, x)
-
-		# Else the element can only be present in right subarray
-		else:
-			return binary_search(arr, mid + 1, high, x)
-
+def BinarySearch(a, x):
+	i = bisect_left(a, x)
+	if i != len(a) and a[i] == x:
+		return i
 	else:
-		# Element is not present in the array
 		return -1
 
-# Test array
-arr = [ 2, 3, 4, 10, 40 ]
-x = 10
-
-# Function call
-result = binary_search(arr, 0, len(arr)-1, x)
-
-if result != -1:
-	print("Element is present at index", str(result))
+a = [1, 2, 4, 4, 8]
+x = int(4)
+res = BinarySearch(a, x)
+if res == -1:
+	print(x, "is absent")
 else:
-	print("Element is not present in array")
+	print("First occurrence of", x, "is present at", res)

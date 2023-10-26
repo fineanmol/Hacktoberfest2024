@@ -1,0 +1,8 @@
+.glitch {
+    font-size: 7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    text-shadow: 0.05em 0 0 #00ffff, -0.03em -0.04em 0 #ff0000, 0.025em 0.04em 0 #ffff00;
+    animation: glitch 725ms infinite;
+}

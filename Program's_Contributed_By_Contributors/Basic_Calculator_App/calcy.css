@@ -1,0 +1,68 @@
+body{
+    background-color: rgb(214, 214, 214);
+}
+.container{
+    width: 350px;
+    height: 400px;
+    background: rgb(214, 214, 214);
+    margin: 120px auto;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #babecc, -5px -5px 10px #ffffff;
+    border:0.5px solid rgb(252, 252, 252);
+    
+}
+.calcy-box{
+    width: 200px;
+    margin: 20px auto;
+    
+}
+#display{
+    border: none;
+    outline: none;
+    color: black;
+    background:transparent ;
+    text-align: right;
+    padding: 15px;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: inset 2px 2px 5px #8c8c8f, inset -2px -2px 8px #ffffff;
+    margin: 40px 0px 20px 0px;
+
+}
+.button{
+    margin: 15px 0px 0px 5px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    outline: none;
+    display: inline block;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50% ;
+    font-style: italic;
+    background: rgb(214, 214, 214);
+    box-shadow:5px 5px 10px rgb(170, 162, 168), -5px -5px 10px #ffffff;
+    cursor: pointer;
+   
+}
+.button:active{
+    
+    box-shadow: inset 1px 1px 1px #babecc, inset -1px -1px 1px #ffffff;
+}
+
+h1{
+    color: black;
+    
+}
+footer{
+    color: rgb(12, 12, 12);
+}
+.mathsbuttons{
+    background: black;
+    color:white ;
+}
+.clearbutton{
+    background: red;
+    color: white;
+}
+

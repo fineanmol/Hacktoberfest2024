@@ -1,0 +1,32 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   background-color: black;
+  }
+  .circle1{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 200px;
+   width: 200px;
+   border-radius: 50%;
+   border: 3px solid #fe444425;
+   border-top: 3px solid red;
+   animation: ani 3s linear infinite;
+  }
+  .circle2{
+   width: 130px;
+   height: 130px;
+   border-radius: 50%;
+   border: 3px solid #fee84422;
+   border-top: 3px solid #f9ce24;
+   animation: ani 2s linear infinite;
+  }

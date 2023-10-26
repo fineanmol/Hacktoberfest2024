@@ -1,3 +1,4 @@
+// Solving issue #7095
 #include <iostream>
 #include <vector>
 #include <algorithm>

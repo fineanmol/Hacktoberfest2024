@@ -23,7 +23,6 @@ export default function App() {
         </Routes>
         <p className='p-10 text-center text-gray-600'>Hint : Use the Big Logo to get back to home page </p>
       </Router>
-
     </div>
   )
 }

@@ -1,0 +1,31 @@
+import openai
+
+# Replace 'YOUR_API_KEY' with your actual API key
+api_key = 'YOUR_API_KEY'
+
+def chat_with_gpt3(prompt):
+    openai.api_key = api_key
+
+    try:
+        response = openai.Completion.create(
+            engine="davinci",
+            prompt=prompt,
+            max_tokens=50  # Adjust this to control response length
+        )
+
+        return response.choices[0].text.strip()
+
+    except Exception as e:
+        return str(e)
+
+if __name__ == "__main__":
+    print("Welcome to Your Chatbot!")
+
+    while True:
+        user_input = input("You: ")
+        if user_input.lower() == 'exit':
+            print("Chatbot: Goodbye!")
+            break
+
+        chatbot_response = chat_with_gpt3(f"You: {user_input}\nChatbot:")
+        print(chatbot_response)

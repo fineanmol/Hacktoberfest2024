@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body{
+    background-color: white;
+    background:  url(bg.jpg);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+
+    font-family:  Roboto;
+
+}
+
+nav ul{
+    align-items: center;
+    display: flex;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color:white
+
+}
+
+nav ul li{
+    padding: 0 12px;
+}
+
+.brand img{
+    width: 44px;
+    padding: 0 12px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.container {
+    
+    font-family: Roboto;
+    font-size: .5rem;
+    min-height: 60vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 13px;
+    padding: 24px;
+    background-image: url("Cover.jpg");
+    box-shadow: inset;
+}
+
+.bottom {
+    position:sticky;
+    height: 130px;
+    background-color: black;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    
+}
+
+.icons{
+    display: flex;
+    justify-content: space-around;
+    color: grey;
+    padding: 10px;
+}
+
+.icons i{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.cover{
+    size: 30px;
+}
+
+#songprogress{
+    width: 90vh;
+}
+
+
+.SongItemContainer{
+    margin-top: 40px;
+}
+
+.SongItems {
+    background-color: white;
+    color: black;
+    width: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 30px;
+    margin-top: 20px;
+    padding: 1px;
+    margin-left: 150px;
+    cursor: pointer;
+}
+
+.SongItems img{
+    height: 30px;
+    border-radius: 34px;
+}
+
+.songListPlay i{
+    cursor: pointer;
+}
+
+.songInfo{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: Roboto;
+    position: absolute;
+    left: 0;
+    margin-left: 30px;
+    opacity: 1;
+}
+
+.songInfo img{
+    height: 60px;
+    margin: 20px;
+    
+    transition: ease-in 2s;
+}
+
+.play{
+    padding: 5px;
+    color: white;
+    background-color: black;
+    border-radius: 30px;
+}
+
+.title {
+    margin-left: 250px;
+}
+.songname{
+    font-weight: bold;
+}

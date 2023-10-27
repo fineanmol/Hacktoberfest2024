@@ -2,7 +2,7 @@ class Trie:
 
     def __init__(self) -> None:
         self.children = {}
-        self.isTerminal = 0
+        self.isTerminal = 0 
 
 
 def insertNode(root: Trie, word: str):

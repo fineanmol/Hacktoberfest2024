@@ -1,0 +1,43 @@
+public static void main(String[] args) {
+    int firstInteger=114, secondInteger=67;
+
+
+    if (firstInteger>secondInteger) {
+
+        int result=firstInteger-secondInteger;
+
+        while (firstInteger != secondInteger) {
+
+            if (secondInteger > result) {
+                firstInteger = secondInteger;
+                secondInteger = result;
+                result = firstInteger - secondInteger;
+            } else {
+                firstInteger = result;
+                result = firstInteger - secondInteger;
+            }
+        }
+        System.out.println(firstInteger);
+    }
+    else {
+
+        int result=secondInteger-firstInteger;
+
+        while (secondInteger!=firstInteger) {
+
+            if (firstInteger>result)  {
+                secondInteger=firstInteger;
+                firstInteger=result;
+                result=secondInteger-firstInteger;
+
+            }
+            else {
+                secondInteger=result;
+                result=secondInteger-firstInteger;
+            }
+        }
+        System.out.println(secondInteger);
+    }
+
+
+}

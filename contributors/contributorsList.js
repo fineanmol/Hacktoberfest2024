@@ -2068,5 +2068,5 @@ contributors = [
     id: 426,
     fullname: "Kaif Imteyaz",
     username: "https://github.com/Kaif-Imteyaz",
-  },
+  }
 ];

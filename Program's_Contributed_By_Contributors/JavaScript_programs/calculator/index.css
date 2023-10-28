@@ -1,0 +1,116 @@
+body {
+    background-color: #393646;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.calculadora {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #c5c1b6;
+    border-radius: 15px;
+    background-color: #6D5D6E;
+    height: 800px;
+    width: 600px;
+    margin-top: 60px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.calculadora .display {
+    display: flex;
+    border: solid 1px #333;
+    border-radius: 20px;
+    background-color: #4F4557;
+    width: 90%;
+    height: 100px;
+    color: #eee;
+    justify-content: end;
+    align-items: center;
+    font-size: 1.2rem;
+    overflow: hidden;
+    padding: 0px 8px;
+    box-sizing: border-box;
+}
+
+.calculadora .spacer {
+    height: 1px;
+    width: 100%;
+    border: solid 1px rgb(79, 69, 87, 0.7);
+    box-sizing: border-box;
+}
+
+.calculadora .keyboard {
+    display: grid;
+    background-color: #6D5D6E;
+    width: 100%;
+    height: 80%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 10px;
+}
+
+.calculadora .keyboard :nth-child(17) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.key {
+    border: solid 1px #6D5D6E;
+    border-radius: 10px;
+    background-color: #4F4557;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #eee;
+    box-shadow: 5px 5px 15px 1px #333;
+}
+
+.operation {
+    background-color: #c5c1b6;
+    border: solid 1px #333;
+    color: black;
+    box-shadow: 5px 5px 15px 1px rgb(51, 51, 51, 0.5);
+}   
+
+.func {
+    background-color: #413b46;
+}
+
+@media (max-width: 675px) {
+    .calculadora {
+        width: 400px;
+        height: 600px;
+    }
+
+    .calculadora .display {
+        font-size: 0.9rem;
+        height: 70px;
+    }
+
+    .key {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 465px) {
+    .calculadora {
+        width: 300px;
+        height: 450px;
+    }
+
+    .calculadora .display {
+        height: 50px;
+        font-size: 0.7rem;
+    }
+
+    .key {
+        font-size: 1rem;
+    }
+}

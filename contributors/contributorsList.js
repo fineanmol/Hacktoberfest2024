@@ -10,6 +10,7 @@ contributors = [
     fullname: "Amitava Mitra",
     username: "https://github.com/Amitava123",
   },
+  
   {
     id: 3,
     fullname: "Philson Philip",
@@ -2064,4 +2065,10 @@ contributors = [
     fullname: "Auro S.",
     username: "https://github.com/aurocodes",
   },
+{
+    id: 426,
+    fullname: "Moahmed Aathil",
+    username: "https://github.com/aathil1231",
+  },
+
 ];

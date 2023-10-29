@@ -11,7 +11,7 @@ int main()
             int x = target - nums[i];
             if(mp.find(x)!=mp.end())
             {
-                cout<<mp[x]<<" "<<i<<endl;
+                cout<<mp[x]<<"   "<<i<<endl;
                 return 0;
             }
             else

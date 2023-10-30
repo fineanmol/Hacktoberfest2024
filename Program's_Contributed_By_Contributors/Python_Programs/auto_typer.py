@@ -1,4 +1,4 @@
-#Python Based Auto Typer
+# Python Based Auto Typer
 import pyautogui
 import time
 sleeptime=time.sleep(10)

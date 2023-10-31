@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-
+#include <iostream>
 int help(int base, int pow)
 {
 	if(pow==0)
@@ -15,8 +15,9 @@ int help(int base, int pow)
 
 int main()
 {
-	int base = 4;
-	int pow = -2;
+	int base,pow;
+	cout<<"Enter base and power"<<endl;
+	cin>>base>>pow;
 	if(pow<0)
 		cout<<1.0/help(base,-pow)<<endl;
 	else

@@ -7,7 +7,6 @@ root.title('CalcX')
 e = Entry(root, width=35, borderwidth=4)
 e.grid(column=0, row=0, columnspan=3)
 
-
 def ln():
     s = int(e.get())
     e.delete(0, END)

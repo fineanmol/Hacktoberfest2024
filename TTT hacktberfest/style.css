@@ -1,0 +1,153 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+    
+    body{
+      color: #545454;
+      display: flex;
+      font-family: sans-serif;
+      justify-content: center;
+    }
+    .container{
+      background-color: #14BDAC;
+      margin:40px;
+      padding: 50px;
+      border-radius: 25px;
+      /* width: 500px;
+      height: 500px; */
+    }
+    .title{
+      margin-top: 0px;
+      text-align: center;
+    }
+    
+    .title span{
+      color: #F2EBD3;
+    }
+    
+    .status-action{
+      display: flex;
+      justify-content: space-around;
+      margin-top: 25px;
+      font-size: 22px;
+      height: 30px;
+    }
+    .status span{
+      color: #f2ebd3;
+    }
+    
+    .reset{
+      cursor: pointer;
+    }
+    
+    .reset:hover{
+      color: #F2EBD3;
+    }
+    
+    .game-grid{
+      background: #0da192;
+      display:grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: repeat(3,1fr);
+      grid-gap: 10px;
+      margin-top: 30px;
+    
+    }
+    
+    .game-cell{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+      width: 100px;
+      background-color: #14BDAC;
+      cursor: pointer;
+    }
+    
+    .X::after{
+      content: '×';
+      font-size: 120px;
+    }
+    .O::after{
+      content: '○';
+      color: #f2ebd3;
+      font-size: 125px;
+    }
+    .won::after{
+      color: orange;
+    }
+    
+    @media only screen and (max-width: 1024px) {
+      .game-grid {
+        margin-top: 25px;
+        grid-gap: 10px;
+      }
+    
+      .game-cell {
+        height: 100px;
+        width: 100px;
+      }
+    
+      .x::after {
+        font-size: 150px;
+      }
+    
+      .o::after {
+        font-size: 175px;
+      }
+    }
+    
+    @media only screen and (max-width: 540px) {
+      .container {
+        margin: 25px;
+        padding: 25px;
+      }
+    
+      .game-cell {
+        height: 100px;
+        width: 100px;
+      }
+    
+      .x::after {
+        font-size: 100px;
+      }
+    
+      .o::after {
+        font-size: 125px;
+      }
+    }
+    
+    a{
+      color:black;
+    }
+    .fa-linkedin:hover{
+      color: orange;
+    }
+    .fa-github:hover{
+      color: orange;
+    }
+    .fa-youtube:hover{
+      color: orange;
+    }
+    .cp{
+      justify-content: center;
+      text-align: center;
+      font-size: 12px;
+        color: #f2ebd3;
+    }
+    .fa {
+        justify-content: center;
+        margin-top: 15px;
+      padding: 15px;
+      font-size: 5px;
+      width: 50px;
+      text-decoration: none;
+    }
+    
+    footer{
+      justify-content: center;
+      text-align: center;
+    }

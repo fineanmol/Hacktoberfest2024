@@ -1,5 +1,9 @@
 Hacktoberfest-2023
 
+<br><a href="https://github.com/fineanmol/Hacktoberfest2022"> <img src="https://img.shields.io/github/contributors/fineanmol/Hacktoberfest2022?style=for-the-badge"></a>
+<a href="https://github.com/fineanmol/Hacktoberfest2022"> <img src="https://img.shields.io/github/repo-size/fineanmol/Hacktoberfest2022?style=for-the-badge"></a>
+
+
 **Checkout this Project as well [Annoying Button😡](https://annoyingsubmitbutton.netlify.app/) , It's hacktoberfest github : [https://github.com/fineanmol/Annoying-submit-button](https://github.com/fineanmol/Annoying-submit-button)**
 
 

@@ -50,10 +50,10 @@ greetings = ['Hello! I am Jarvis Sir. How may I help you?', 'Sup!', 'Hey', 'Bonj
 value = random.choice(greetings)
 
 #For random songs
-songs = ['on my way' , 'kandhon se milte hain', 'Raabta', 'Shiv Tandav Stotram']
+songs = ['on my way' , 'Kho gaye hum kaha', 'Raabta', 'Shiv Tandav Stotram','Cant help falling in love','Alone','Blank space']
 gaana = random.choice(songs)
 
-gaane = ['ben 10 theme song guitar' , 'kfir pirates of the caribbean', 'Jai Jai Shivshankar Song']
+gaane = ['ben 10 theme song guitar' , 'kfir pirates of the caribbean', 'Jai Jai Shivshankar Song','Jashn-e-bahara','Garaj garaj']
 othersongs = random.choice(gaane)
 
 
@@ -78,15 +78,15 @@ def date():
 
 def wishMe():
     
-    # hour = int(datetime.datetime.now().hour)
-    # if hour>=0 and hour<12:
-    #     speak("Good Morning!")
+    hour = int(datetime.datetime.now().hour)
+    if hour>=0 and hour<12:
+         speak("Good Morning!")
 
-    # elif hour>=12 and hour<18:
-    #     speak("Good Afternoon!")   
+    elif hour>=12 and hour<18:
+         speak("Good Afternoon!")   
 
-    # else:
-    #     speak("Good Evening!")  
+    else:
+         speak("Good Evening!")  
 
     speak(value)       
 

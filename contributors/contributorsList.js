@@ -2019,12 +2019,16 @@ contributors = [
   },
   {
     id: 417,
+    fullname: "Abhishek mittal",
+    username: "https://github.com/mittal-sahab-sudo",
+  },
+    id: 418,
     fullname: "Krish Katyal",
     username: "https://github.com/krishkatyal",
   },
 
   {
-    id: 418,
+    id: 419,
     fullname: "Arshpreet Singh Bedi",
     username: "https://github.com/avibedi1768",
   },

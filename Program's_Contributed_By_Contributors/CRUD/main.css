@@ -1,0 +1,106 @@
+* {
+    background-color: #5e5b5b;
+}
+
+.container {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.crud {
+    color: #fff;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 37%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 40%;
+    padding: 12px 20px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    flex-wrap: wrap-reverse;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    width: 120px;
+    background-color: #146c43;
+    color: #f7f5f5;
+    padding: 12px 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border-color: #fff;
+    cursor: pointer;
+    font-family: Times New Roman;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#stud {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+    text-align: center;
+    border: 1px solid #fcfffd;
+    margin-left: auto; 
+    margin-right: auto;  
+}
+
+#stud th {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #1a1118;
+    color: #fff;
+  }
+  
+#stud td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #595663;
+    color: #fff;
+  }
+
+#edit {
+    background-color: #ffc107;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#edit:hover {
+    background-color:#ffca2c
+}
+
+#delete {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#delete:hover {
+    background-color:#b02a37
+}

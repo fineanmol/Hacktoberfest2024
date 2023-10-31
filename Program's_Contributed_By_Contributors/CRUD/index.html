@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="script.js"></script>
+    <title>CRUD Application</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CRUD Application</h1>
+    </div>
+    <form action="" id="student-form" method="POST">
+        <div class="crud">
+            <label for="userName">Name</label> <br>
+            <input type="text" name="userName" id="userName" placeholder="Enter your Name" maxlength="25" required>
+            <br>
+            <label for="email">Email</label> <br>
+            <input type="email" name="email" id="email" placeholder="you@mail.com" maxlength="25" required> <br>
+            <label for="rollno">Roll Number</label> <br>
+            <input type="number" name="rollno" id="rollno" placeholder="Enter your Roll No." maxlength="15" required>
+            <br>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <table id="stud">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Roll Number</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="student-list">
+            <tr>
+                <td>Parvathy</td>
+                <td>abc@gmail.com</td>
+                <td>123</td>
+                <td>
+                    <a href="#" class="btn btn-warning btn-sm edit" id="edit">Edit</a>
+                    <a href="#" class="btn btn-danger btn-sm delete" id="delete">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>

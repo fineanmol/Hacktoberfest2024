@@ -15,8 +15,11 @@ int help(int base, int pow)
 
 int main()
 {
-	int base = 4;
-	int pow = -2;
+	int base ;
+	cin>>base;
+	
+	int pow ;
+	cin>>pow;
 	if(pow<0)
 		cout<<1.0/help(base,-pow)<<endl;
 	else

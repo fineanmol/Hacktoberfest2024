@@ -114,7 +114,7 @@ For more information on syncing forks [read this article from Github](https://he
 - Why are you not using digitalocean?
   - Because we only know JavaScript and suck at servers. We use [now](https://zeit.co/now) instead.
 
-- Should I come closer to the text saying 'Don't come closer' on the left side of the home tab ?
+- Should I come closer to the text saying 'Don't come closer' on the left side of the home tab?
   - Nope.
 - How many pull request (PR) must be made, if I want to get an awesome tshirt from Hacktoberfest 2023?
   - 4

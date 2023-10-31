@@ -33,6 +33,8 @@ git add .
 ```
 - Commit your changes.
 
+- [Sreerag R] [https://github.com/SREERAGRAYIRATH404]
+
 ```markdown
 git commit -m "Relevant message"
 ```

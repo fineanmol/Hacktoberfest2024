@@ -53,7 +53,9 @@ cd Hacktoberfest2023
 git checkout -b my-new-branch
 ```
 
-<!--- - Add your Name to `contributors/contributorsList.js`. -->
+- Add your Name to `contributors/contributorsList.js`.
+
+- Update the changes to your Branch.
 
 ```markdown
 git add .
@@ -68,8 +70,7 @@ git commit -m "Relevant message"
 git push origin my-new-branch
 ```
 
-
-- Create a new pull request from your forked repository
+- Create a new pull request from your forked repository by clicking the `New Pull Request` button at the top of your repo.
 
 <br>
 

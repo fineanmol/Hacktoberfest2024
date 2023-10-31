@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Netflix-homepage</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header{
+        background-color: #111;
+        padding: 20px;
+        color: #fff;
+        text-align: center;
+    }
+    nav {
+        background-color: #000 ;
+        padding: 10px;
+        text-align: center;
+    }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    .hero {
+        background-image: url('https://images8.alphacoders.com/115/1152301.png');
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+    }
+    .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+     .hero p {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e50914;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .col {
+            width: 25%;
+            float: left;
+            padding: 0 10px;
+        }
+        .col img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .col h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .col p {
+            font-size: 14px;
+            color: #888;
+        }
+</style>
+</head>
+<body>
+    <header>
+        <h1>
+            Netflix
+        </h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">TV Shows</a>
+        <a href="#">Movies</a>
+        <a href="#">Latest</a>
+        <a href="#">My List</a>
+    </nav>
+    <div class="hero">
+        <div class="content">
+        <h1>Welcome to Netflix</h1>
+        <p>Watch unlimited movies and TV shows anytime, anywhere.</p>
+        <a class="button" href="#">Get Started</a>
+    </div>
+</div>
+<div class="content">
+    <h2>Popular Movies</h2>
+    <div class="row">
+        <div class="col">
+            <img src="m1.jpeg" alt="Movie 1">
+            <h3>Movie 1</h3>
+            <p>After surviving a crash landing, an astronaut and his
+                passenger must outlast the perils of prehistoric Earth
+                to reach their only hope for escape.</p>
+        </div>
+    <div class="col">
+        <img src="m2.jpeg" alt="Movie 2">
+<h3>Movie 2</h3>
+<p>A hardened gun-for-hire's latest mission becomes a
+    soul-searching race to survive when he's sent into
+    Bangladesh to rescue a drug lord's kidnapped son.</p>
+</div>
+
+<div class="col">
+<img src="m3.jpeg" alt="Movie 3">
+<h3>Movie 3</h3>
+<p>Nameless. Fearless. Relentless. The CIA trained him
+    to be a ghost, to exist in the gray. Now they want to
+    make their most dangerous asset disappear.</p>
+</div>
+<div class="col">
+    <img src="m4.jpeg" alt="Movie 4">
+    <h3>Movie 4</h3>
+    <p>In this romantic comedy, a German woman's trip to a
+        house she's inherited in Croatia helps her rediscover
+        her own happiness.</p>
+    </div>
+    <div>
+    <h2>Popular TV Shows</h2>
+    <div class="row">
+        <div class="col">
+            <img src="t1.jpeg" alt="TV Show 1">
+            <h3>TV Show 1</h3>
+            <p>After recent trauma, Devi starts her first day as a high
+                school sophomore determined to shake off old labels
+                and finally become cool.</p>
+        </div>
+        <div class="col">
+            <img src="t2.jpeg" alt="TV Show 2">
+            <h3>TV Show 2</h3>
+            <p>Made half-human and half-spirit by accident, a young
+                man is employed by a company of grim reapers in the
+                underworld to carry out special missions.</p>
+        </div>
+        <div class="col">
+            <img src="t3.jpeg" alt="TV Show 3">
+            <h3>TV Show 3</h3>
+            <p>Thomas schemes to get closer to Billy Kimber at the
+                Cheltenham races, and considers an offer from IRA
+                sympathizers to buy his stolen guns.</p>
+        </div>
+        <div class="col">
+            <img src="t4.jpeg" alt="TV Show 4">
+            <h3>TV Show 4</h3>
+            <p>A monstrous killing spree and an age-old murder
+                mystery await Wednesday Addams at Nevermore
+                Academy, a boarding school for teens with magical
+                powers.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

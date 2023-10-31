@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+    <div class="app-wrap">
+        <h1>Live Weather</h1>
+        <label for="weather">
+            <input type="text" autocomplete="off" class="search-box" placeholder="search of a location.....">
+        </label>
+        <main>
+            <section class="location">
+                <div class="city"></div>
+                <div class="date">
+                    <p>Date : <span id="datetime"></span></p>
+                    <script>
+                        var dt = new Date();
+                        document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+                    </script>
+                </div>
+            </section>
+            <div class="current">
+                <div class="temp"></div>
+                <div class="weather"></div>
+                <div class="hi-low"></div>
+            </div>
+        </main>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -24,6 +24,8 @@ public class Practical17 extends Application {
             for (int j = 0; j < 3; j++) {
                 int n = (int) (Math.random() * 2);
 
+                // \\if else condition starts
+
                 if(n==0)
                 {     FileInputStream fin;
                             fin = new FileInputStream("C://Users//SI//OneDrive//Desktop//java_image/X.gif");
@@ -47,7 +49,7 @@ public class Practical17 extends Application {
                     continue;
                 }
                             }
-               
+          
         }
 
             Scene scene = new Scene(root, 200, 200);

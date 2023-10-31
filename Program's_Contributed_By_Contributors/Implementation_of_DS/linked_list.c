@@ -14,6 +14,11 @@ void print(struct Node *);
 void deleteHead(struct Node** head);
 void deleteEnd(struct Node** head);
 void deleteUser(struct Node** head, int position);
+void reverseIterative(struct Node** head);
+void reverseTail(struct Node* current, struct Node* previous, struct Node** head);
+void reverseTailRec(struct Node** head);
+
+
 int main()
 {
     struct Node *head,*second, *third,*fourth;
@@ -48,6 +53,10 @@ int main()
     deleteHead(&head);
     print(head);
 
+    printf("Reversing the linked list using iterative approach becomes : ");
+    reverseIterative(&head);
+    print(head);
+
     printf("Deleting Last node ");
     deleteEnd(&head);
     print(head);
@@ -55,6 +64,10 @@ int main()
     printf("Deleting at position 3 ");
     deleteUser(&head, 3);
     printf("The list becomes ");
+    print(head);
+
+    printf("Reversing linked list using tail recursive approach : ");
+    reverseTailRec(&head);
     print(head);
     return 0;
 }
@@ -171,4 +184,53 @@ void deleteUser(struct Node** head, int position)
         /*free memory*/
         free(delete);
     }
+}
+
+void reverseIterative(struct Node** head)
+{
+    /*initializing 3 pointers prev&next as NULL and current as head*/
+    struct Node* prev = NULL;
+    struct Node* current = *head;
+    struct Node* next = NULL;
+    /*iterating the linked list*/
+    while (current != NULL)
+    {
+        //store next node as next
+        next = current->next;
+
+        //change next of current - actual reversing
+        current->next = prev;
+
+        //move prev and current pointer one position ahead
+        prev = current;
+        current = next;
+    }
+    *head = prev;
+}
+
+void reverseTail(struct Node* current, struct Node* previous, struct Node** head)
+{
+    //Base Case make last node to be head
+    if (!current->next)
+    {
+        //current node to be head
+        *head = current;
+        //update next node to previous node
+        current->next = previous;
+        return;
+    }
+    //save current->next node for recursive call
+    struct Node* next = current->next;
+    //update next
+    current->next = previous;
+    reverseTail(next, current, head);
+}
+
+void reverseTailRec(struct Node** head)
+{
+    if (!head)
+        return;
+    
+    //call reverseTail with prev as NULL
+    reverseTail(*head, NULL, head);
 }

@@ -2061,6 +2061,11 @@ contributors = [
   },
   {
     id: 425,
+    fullname: "Abhijeet Thakur",
+    username: "https://github.com/AbhijeetThakur1",
+  },
+  {
+    id: 426,
     fullname: "Auro S.",
     username: "https://github.com/aurocodes",
   },

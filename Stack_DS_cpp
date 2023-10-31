@@ -1,0 +1,149 @@
+#include<iostream>
+#include<string.h>
+
+using namespace std;
+
+class stack{
+	int n;
+	int top;
+	int* ar;
+	 public:
+	 	//initialise all values
+		stack(int size){
+	 		n=size;
+	 		ar=new int[n]; 
+	 		top=-1;
+	 		for(int i=0;i<n;i++)
+	 			ar[i]=0;		 }
+		//function to check if stack is empty
+		bool isEmpty(){
+			if(top==-1)
+			return true;
+			return false;
+		}
+		//function to check if stack is full
+		bool isFull(){
+			if(top==n-1)
+			return true;
+			return false;
+		}
+		//function to add value to stack
+		void push(int a){
+			if(isFull())
+				cout<<"Stack overflow\n";
+			else{
+				top++;
+				ar[top]=a;
+			}
+		}
+		//fuction to remove value from stack
+		int pop(){
+			if(isEmpty()){
+				cout<<"Stack underflow\n";
+				return 0;
+				}
+			else{
+				int topval=ar[top];
+				ar[top]=0;
+				top--;
+				return topval;
+			}
+		}
+		//function to peek in stack
+		int peek(int i){
+			if(!isEmpty())
+			return ar[i];
+			else{
+			cout<<"stack underflow";
+			return 0;
+			}
+		}
+		//function to return totol count of elements in a stack
+		int count(){
+			return top+1;
+		}
+		//function to change a value
+		void change(int pos,int a){
+			ar[pos]=a;
+			cout<< "changed at: "<<pos<<endl;
+		}
+		//function to display stack
+		void display(){
+			cout<<"Your stack looks something like this:\n";
+			for(int a=n-1;a>=0;a--)
+			cout<<ar[a]<<endl;
+			cout<<endl;
+		}
+};
+
+int main(){
+	 cout<<"Please enter size of stack";
+	 int size;
+	 cin>>size;
+	 stack st(size);
+	 int op,pos,val;
+	 do{
+	 	
+	 	cout<<"**************************************************************************\n";
+	 	cout<<"Enter number with the operation you will like to perform. Enter 0 to exit"<<endl;
+	 	cout<<"1. Push()\n";
+	 	cout<<"2. Pop()\n";
+	 	cout<<"3. isEmpty()\n";
+	 	cout<<"4. isFull()\n";
+	 	cout<<"5. peek()\n";
+	 	cout<<"6. change()\n";
+	 	cout<<"7. count()\n";
+	 	cout<<"8. display()\n";
+	 	cout<<"**************************************************************************\n";
+	 	
+		cin>>op;
+		system("cls");
+	 	if(op>8||op<0)
+	 	continue;
+	 	
+	 	switch(op){
+	 		case 1:
+	 			cout<<"Pls Enter value to push in stack\n";
+	 			cin>>val;
+	 			st.push(val);
+	 			break;
+	 		case 2:
+	 			cout<<"Value poped:"<<st.pop()<<endl;
+	 			break;
+	 		case  3:
+	 			if(st.isEmpty())
+	 			cout<<"Stack is empty\n";
+	 			else
+	 			cout<<"Stack is not empty\n";
+	 			break;
+	 		case 4:
+	 			if(st.isFull())
+	 			cout<<"Stack is Full\n";
+	 			else
+	 			cout<<"Stack is not full\n";
+	 			break;
+	 		case 5:
+	 			cout<<"Please enter position to peak at:\n";
+	 			cin>>pos;
+	 			cout<<"Value at index "<<pos<<"is: "<<st.peek(pos)<<endl;
+	 			break;
+	 		case 6:
+	 			cout<<"Please enter the Position to change value at\n";
+	 			cin>>pos;
+	 			cout<<"Please enter new value\n";
+	 			cin>>val;
+	 			st.change(pos,val);
+	 			break;
+	 		case 7:
+	 			cout<<"Stack has "<<st.count()<<" values stored!\n";
+	 			break;
+	 		case 8:
+	 			st.display();
+	 			break;
+	 		default:
+	 			cout<<"lol";
+		 }
+		 
+	 }while(op!=0);
+	 return 0;
+}

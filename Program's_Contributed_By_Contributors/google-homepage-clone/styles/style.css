@@ -1,0 +1,237 @@
+#navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    float: right;
+    padding-top: 10px;
+    padding-right: 15px;
+    justify-content: flex-end;
+} 
+
+.nav-element {
+    padding-left: 18px;
+    color: #262626;
+    text-decoration-line: none;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+#apps-back {
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    background-color: #e8e8e8;
+    top: 11;
+    right: 66;
+}
+
+#github-back {
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    background-color: #e8e8e8;
+    top: 11;
+    right: 16;
+    z-index: -1;
+}
+
+#gmail:hover {
+    text-decoration: underline;
+}
+
+#google-images:hover {
+    text-decoration: underline;
+}
+
+#apps-container:hover #apps-back{
+    opacity: 1;
+}
+
+#github-container:hover #github-back {
+    opacity: 1;
+}
+
+#apps-image {
+    opacity: 0.5;
+    position: relative;
+    width: 30px;
+}
+
+#github-img {
+    width: 35px;
+    border-radius: 50%;
+}
+
+#rightside{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+    font-size: 13px;
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+}
+
+#leftside{
+    font-family: sans-serif;
+    font-size: 13px;
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+}
+
+#footer-element {
+    padding: 20px;
+    color: #878787;
+    text-decoration: none;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+}
+
+#footer-element:hover {
+    text-decoration: underline;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid darkgray;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    background: #e8e8e8;
+    font-size: 1.4rem;
+}
+
+#google-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12vh;
+    width: 270px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#mic-icon {
+    width:15px;
+}
+
+#mic-button {
+    cursor: pointer;
+    padding-right: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: none;
+}
+
+#search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 8px;
+    border-radius: 30px;
+}
+
+#search-icon {
+    opacity: 0.6;
+    width: 20px;
+    padding-left: 8px;
+}
+
+#search-input {
+    width: 100%;
+    border: none;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+#search-input:focus {
+    outline: none;
+}
+
+#search-bar:hover {
+    box-shadow: 0 2px 5px #ccc
+}
+
+#buttons-container {
+    display: flex;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
+.button {
+    position: relative;;
+    font-size: 14px;
+    font-family: sans-serif;
+    background-color: #f8f9fa;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:hover{
+    border: 1px solid lightgray;
+}
+
+#langs {
+    font-family: sans-serif;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+}
+#langs a {
+    padding: 0 3px;
+    text-decoration: none;
+}
+
+#langs a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 745px) {
+    footer{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #search-bar {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    #rightside {
+        justify-content: space-evenly;
+    }
+}

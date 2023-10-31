@@ -24,8 +24,8 @@ jobs:
       - name: Comment on issue/PR
         run: |
           echo "Commenting on issue/PR..."
-          comment_body="${{ env.COMMENT_BODY }}"
-          echo "$comment_body" | gh issue comment ${{ github.event.issue.number }} --body -
+          comment_body="${ env.COMMENT_BODY }"
+          echo "$comment_body" | gh issue comment --body "@aditya-shrimali Please Star ⭐️ the repo to earn 'hacktober-accepted' label for the event." 
         env:
           GITHUB_TOKEN: ${{ secrets.AUTOMERGE_TOKEN }}
         if: ${{ github.event_name == 'issues' || github.event_name == 'pull_request' }}

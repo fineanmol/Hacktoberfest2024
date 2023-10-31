@@ -22,7 +22,7 @@ Hacktoberfest 2023
 - [Hacktoberfest Intro](https://www.youtube.com/watch?v=mq_FIHdxmIk)
 - [How to pull request [Overview]](https://youtu.be/DIj2q02gvKs)
 - [Merge Conflict / comment](https://youtu.be/zOx5PJTY8CI)
-
+- [Git/Github Tutorial](https://youtu.be/apGV9Kg7ics)
 
 # Contribution Rules📚:
 

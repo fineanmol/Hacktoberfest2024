@@ -1987,12 +1987,6 @@ contributors = [
   },
 
   {
-    id: 441,
-    fullname: "Parth Panjwani",
-    username: "https://github.com/Parth-Panjwani",
-  },
-
-  {
     id: 412,
     fullname: "Garima Jain",
     username: "https://github.com/garimajain12",
@@ -2064,4 +2058,13 @@ contributors = [
     fullname: "Auro S.",
     username: "https://github.com/aurocodes",
   },
+  { 
+    id: 426, fullname: "Hritik Raj",
+    username: "https://github.com/Hritikraj8804", },
+  {
+    id: 427,
+    fullname: "Parth Panjwani",
+    username: "https://github.com/Parth-Panjwani",
+  },
+   
 ];

@@ -1,1 +1,1 @@
-This repository contains JS files for the project
+This repository contains JS files for the project!

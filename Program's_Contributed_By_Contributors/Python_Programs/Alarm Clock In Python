@@ -108,11 +108,11 @@ print("Alarm set to go off in %s" % datetime.timedelta(seconds=time_diff_seconds
 
 time.sleep(time_diff_seconds)
 
-# Time for the alarm to go off
+# Time for the alarm to turn off
 
 print("Wake Up!")
 
-# Load list of possible video URLs
+# Load list of possible video in URLs
 
 with open("youtube_alarm_videos.txt", "r") as alarm_file:
 

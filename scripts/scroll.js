@@ -35,6 +35,10 @@ function scrollTo(element, to, duration, callback) {
             callback()
         }
     }
+    var alert = function() {
+        alert('Hello from HackotberFest')
+    }
+    alert()
     animateScroll()
 }
 Math.easeInOutQuad = function(t, b, c, d) {

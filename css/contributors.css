@@ -176,12 +176,14 @@ a:hover {
   cursor: default;
   font-size: 2rem;
   font-family: "Special Elite", cursive;
-  transition: all 1s;
+  transition: margin-left 0.5s; /* Transición solo para margin-left */
 }
+
 .heading:hover {
   color: #fe0c43;
-  transition: 1s;
+  margin-left: 5px; /* Mueve el texto 5px hacia la derecha al hacer hover */
 }
+
 .content {
   margin-top: 80px;
 }

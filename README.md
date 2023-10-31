@@ -10,7 +10,7 @@ Hacktoberfest { [Live Website](https://fineanmol.github.io/Hacktoberfest2023/)}
 
 
 **This is a beginner-friendly project to help you get started with your
-[hacktoberfest](https://hacktoberfest.digitalocean.com/). If you don't know where to start, feel free to watch the videos linked below, and read the contribution rules. Happy Learning <3 💙 !!**
+[hacktoberfest](https://hacktoberfest.digitalocean.com/). If you don't know where to start, feel free to watch the videos linked below and read the contribution rules. Happy Learning <3 💙 !!**
 
 P.S. Star ⭐ and Share this repository, if you had fun!! 😍
 
@@ -26,7 +26,7 @@ Hacktoberfest 2023
 
 # Contribution Rules📚:
 
-- You are allowed to make pull requests that break the rules. We just merge it ;)
+- You are not allowed to make pull requests that break the rules. We just merge it ;)
 - Do NOT add any build steps e.g npm install (we want to keep this a simple static site)
 - Do NOT remove other content.
 - Styling/code can be pretty, ugly or stupid, big or small as long as it works

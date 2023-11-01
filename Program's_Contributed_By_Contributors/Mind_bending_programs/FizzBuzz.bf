@@ -1,4 +1,4 @@
-BrainFuck implementation of FizzBuzz
+Mind-bending implementation of FizzBuzz
 Author: @muhazafasa
 ++++++++++[>++++++++++<-]>>++++++++++>->>>>>>>>>>>>>>>>-->+++++++[->++
 ++++++++<]>[->+>+>+>+<<<<]+++>>+++>>>++++++++[-<++++<++++<++++>>>]++++

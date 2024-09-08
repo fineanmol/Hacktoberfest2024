@@ -33,8 +33,6 @@ class TodoListApp(QMainWindow):
         self.remove_button.clicked.connect(self.remove_task)
         self.layout.addWidget(self.remove_button)
 
-        
-
         self.update_task_list()
 
     def add_task(self):

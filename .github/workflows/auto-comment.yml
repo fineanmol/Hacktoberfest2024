@@ -12,37 +12,20 @@ jobs:
   auto-comment:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the repository
-        uses: actions/checkout@v3
-
-      - name: Set up environment variables
-        id: setup
-        run: |
-          if [[ "${{ github.event_name }}" == 'issues' ]]; then
-            echo "COMMENT_BODY=@${{ github.event.issue.user.login }} Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event.\nMeanwhile, if you want to work on this issue, please raise a PR, and we will review and merge it." >> $GITHUB_ENV
-            echo "ITEM_NUMBER=${{ github.event.issue.number }}" >> $GITHUB_ENV
-            echo "GH_COMMAND=issue" >> $GITHUB_ENV
-          elif [[ "${{ github.event_name }}" == 'pull_request' ]]; then
-            echo "COMMENT_BODY=@${{ github.event.pull_request.user.login }} Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event." >> $GITHUB_ENV
-            echo "ITEM_NUMBER=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
-            echo "GH_COMMAND=pr" >> $GITHUB_ENV
-          else
-            echo "Unsupported event type: ${{ github.event_name }}"
-            exit 1
-          fi
-        shell: bash
-
-      - name: Authenticate with GitHub CLI using PAT
-        run: echo "${{ secrets.PAT_TOKEN }}" | gh auth login --with-token
-
       - name: Comment on issue/PR
-        run: |
-          echo "Commenting on $GH_COMMAND #$ITEM_NUMBER..."
-          gh $GH_COMMAND comment $ITEM_NUMBER --body "$COMMENT_BODY"
-        env:
-          COMMENT_BODY: ${{ env.COMMENT_BODY }}
-          ITEM_NUMBER: ${{ env.ITEM_NUMBER }}
-          GH_COMMAND: ${{ env.GH_COMMAND }}
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
-        shell: bash
-        if: env.GH_COMMAND != ''
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.PAT_TOKEN }}
+          script: |
+            const commentBody = context.event_name === 'issues' ?
+              `@${{ github.event.issue.user.login }} Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event.\nMeanwhile, if you want to work on this issue, please raise a PR, and we will review and merge it.` :
+              `@${{ github.event.pull_request.user.login }} Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event.`;
+            
+            const issue_number = context.event_name === 'issues' ? context.payload.issue.number : context.payload.pull_request.number;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue_number,
+              body: commentBody
+            });

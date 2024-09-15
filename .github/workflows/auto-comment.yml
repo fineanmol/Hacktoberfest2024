@@ -13,24 +13,31 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Debug Token
-        run: echo "Token: ${{ secrets.PAT_TOKEN }}"
         env:
           PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
         
       - name: Comment on issue/PR
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.PAT_TOKEN }}
+          'github-token': ${{ secrets.PAT_TOKEN }}
           script: |
-            const commentBody = context.event_name === 'issues' ?
-              `@${{ github.event.issue.user.login }} Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event.\nMeanwhile, if you want to work on this issue, please raise a PR, and we will review and merge it.` :
-              `@${{ github.event.pull_request.user.login }} Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event.`;
-            
-            const issue_number = context.event_name === 'issues' ? context.payload.issue.number : context.payload.pull_request.number;
+            const userLogin = context.event_name === 'issues'
+              ? context.payload.issue.user.login
+              : context.payload.pull_request.user.login;
+
+            let commentBody = `@${userLogin} Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event.`;
+
+            if (context.event_name === 'issues') {
+              commentBody += `\nMeanwhile, if you want to work on this issue, please raise a PR, and we will review and merge it.`;
+            }
+
+            const issueNumber = context.event_name === 'issues'
+              ? context.payload.issue.number
+              : context.payload.pull_request.number;
 
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: issue_number,
+              issue_number: issueNumber,
               body: commentBody
             });

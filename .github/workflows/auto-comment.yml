@@ -9,35 +9,23 @@ on:
       - opened
 
 jobs:
-  auto-comment:
+  run:
     runs-on: ubuntu-latest
     steps:
-      - name: Debug Token
-        env:
-          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
-        
+      - name: Check if it's an issue or pull request
+        run: |
+          if [[ ${{ github.event_name }} == 'issues' ]]; then
+            echo "COMMENT_BODY=@${{ github.event.issue.user.login }} Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event.\nMeanwhile, if you want to work on this issue, please raise a PR, and we will review and merge it." >> $GITHUB_ENV
+          else
+            echo "COMMENT_BODY=@${{ github.event.pull_request.user.login }} Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event." >> $GITHUB_ENV
+          fi
+        shell: bash
+
       - name: Comment on issue/PR
-        uses: actions/github-script@v6
-        with:
-          'github-token': ${{ secrets.PAT_TOKEN }}
-          script: |
-            const userLogin = context.event_name === 'issues'
-              ? context.payload.issue.user.login
-              : context.payload.pull_request.user.login;
-
-            let commentBody = `@${userLogin} Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event.`;
-
-            if (context.event_name === 'issues') {
-              commentBody += `\nMeanwhile, if you want to work on this issue, please raise a PR, and we will review and merge it.`;
-            }
-
-            const issueNumber = context.event_name === 'issues'
-              ? context.payload.issue.number
-              : context.payload.pull_request.number;
-
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: issueNumber,
-              body: commentBody
-            });
+        run: |
+          echo "Commenting on issue/PR..."
+          comment_body="${{ env.COMMENT_BODY }}"
+          echo "$comment_body" | gh issue comment ${{ github.event.issue.number }} --body -
+        env:
+          GITHUB_TOKEN: ${{ secrets.AUTOMERGE_TOKEN }}
+        if: ${{ github.event_name == 'issues' || github.event_name == 'pull_request' }}

@@ -32,8 +32,8 @@ jobs:
           fi
         shell: bash
 
-      - name: Authenticate with GitHub CLI
-        run: echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+      - name: Authenticate with GitHub CLI using PAT
+        run: echo "${{ secrets.PAT_TOKEN }}" | gh auth login --with-token
 
       - name: Comment on issue/PR
         run: |
@@ -43,6 +43,6 @@ jobs:
           COMMENT_BODY: ${{ env.COMMENT_BODY }}
           ITEM_NUMBER: ${{ env.ITEM_NUMBER }}
           GH_COMMAND: ${{ env.GH_COMMAND }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
         shell: bash
         if: env.GH_COMMAND != ''

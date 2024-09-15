@@ -32,10 +32,17 @@ jobs:
           fi
         shell: bash
 
+      - name: Authenticate with GitHub CLI
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+
       - name: Comment on issue/PR
         run: |
           echo "Commenting on $GH_COMMAND #$ITEM_NUMBER..."
           echo -e "$COMMENT_BODY" | gh $GH_COMMAND comment $ITEM_NUMBER --body -
         env:
+          COMMENT_BODY: ${{ env.COMMENT_BODY }}
+          ITEM_NUMBER: ${{ env.ITEM_NUMBER }}
+          GH_COMMAND: ${{ env.GH_COMMAND }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
         if: env.GH_COMMAND != ''

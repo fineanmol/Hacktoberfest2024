@@ -1,14 +1,41 @@
-            - name: Auto Commentter
-  # You may pin to the exact commit or the version.
-  # uses: zt4ff/auto-commenter@7610366680386c00a9691d96959eef1ed8349160
-  uses: zt4ff/auto-commenter@v2
-  with:
-    # The Github authetication token
-    token: # optional, default is ${{ github.token }}
-    # the name and target of the repository
-    repository: # optional, default is ${{ github.repository }}
-    # The commit SHA
-    sha: # optional
-    # The type of comment to be sent
-    type: # default is love_texts
-          
+name: Auto Comment
+
+on:
+  issues:
+    types:
+      - opened
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v3
+
+      - name: Set up variables
+        id: setup
+        run: |
+          if [[ "${{ github.event_name }}" == 'issues' ]]; then
+            echo "COMMENT_BODY=@${{ github.event.issue.user.login }} Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event.\nMeanwhile, if you want to work on this issue, please raise a PR, and we will review and merge it." >> $GITHUB_ENV
+            echo "ITEM_NUMBER=${{ github.event.issue.number }}" >> $GITHUB_ENV
+            echo "GH_COMMAND=issue" >> $GITHUB_ENV
+          elif [[ "${{ github.event_name }}" == 'pull_request' ]]; then
+            echo "COMMENT_BODY=@${{ github.event.pull_request.user.login }} Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event." >> $GITHUB_ENV
+            echo "ITEM_NUMBER=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+            echo "GH_COMMAND=pr" >> $GITHUB_ENV
+          else
+            echo "Unsupported event type: ${{ github.event_name }}"
+            exit 1
+          fi
+        shell: bash
+
+      - name: Comment on issue/PR
+        run: |
+          echo "Commenting on $GH_COMMAND #$ITEM_NUMBER..."
+          echo -e "$COMMENT_BODY" | gh $GH_COMMAND comment $ITEM_NUMBER --body -
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: env.GH_COMMAND != ''

@@ -9,13 +9,13 @@ on:
       - opened
 
 jobs:
-  run:
+  auto-comment:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repository
         uses: actions/checkout@v3
 
-      - name: Set up variables
+      - name: Set up environment variables
         id: setup
         run: |
           if [[ "${{ github.event_name }}" == 'issues' ]]; then
@@ -38,11 +38,11 @@ jobs:
       - name: Comment on issue/PR
         run: |
           echo "Commenting on $GH_COMMAND #$ITEM_NUMBER..."
-          echo -e "$COMMENT_BODY" | gh $GH_COMMAND comment $ITEM_NUMBER --body -
+          gh $GH_COMMAND comment $ITEM_NUMBER --body "$COMMENT_BODY"
         env:
           COMMENT_BODY: ${{ env.COMMENT_BODY }}
           ITEM_NUMBER: ${{ env.ITEM_NUMBER }}
           GH_COMMAND: ${{ env.GH_COMMAND }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
         if: env.GH_COMMAND != ''

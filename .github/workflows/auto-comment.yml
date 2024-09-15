@@ -12,6 +12,11 @@ jobs:
   auto-comment:
     runs-on: ubuntu-latest
     steps:
+      - name: Debug Token
+        run: echo "Token: ${{ secrets.PAT_TOKEN }}"
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+        
       - name: Comment on issue/PR
         uses: actions/github-script@v6
         with:

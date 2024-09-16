@@ -5,7 +5,7 @@ nav{
   background-color:var(--nav-color)
 }
 .navbar-nav{
-  width:100%
+  width:100%!important
 }
 .navbar-brand{
   line-height:1;

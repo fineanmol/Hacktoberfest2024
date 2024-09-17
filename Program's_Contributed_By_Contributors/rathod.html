@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>test this one</header>
+
+    <div class="main">
+        <img src="1.png" alt="png" height="310px" width="210px" class="image">
+
+        <figure class="figure">
+            <div>
+                <h4>star</h4>
+                <h4>2/4</h4>
+            </div>
+            <div>
+                <h4>hoorr</h4>
+                <h4>drama</h4>
+            </div>
+            <div class="button">
+                <span>View Details</span>
+            </div>
+        </figure>
+    </div>
+
+    <div class="main">
+        <img src="1.png" alt="png" height="310px" width="210px" class="image">
+
+        <figure class="figure">
+            <div>
+                <h4>star</h4>
+                <h4>2/4</h4>
+            </div>
+            <div>
+                <h4>hoorr</h4>
+                <h4>drama</h4>
+            </div>
+        </figure>
+    </div>
+
+
+
+
+    <style>
+        body{
+            background-color: grey;
+        }
+        .button{
+            background: #6ac045;
+            color: white;
+            font-size: 16px;
+            width: 130px;
+            padding:8px 10px;
+            border-radius: 3px;
+            box-sizing: border-box;
+            margin:0 auto;
+        }
+        
+
+
+        
+        .main{
+            display: inline-block;
+            font-weight: bold;
+            font-size:medium;
+            color:white;
+
+            
+            position:relative;
+           
+            margin:initial;
+        }
+
+       
+
+        .image{
+            position: relative;
+            display: inline-block;
+            border:5px solid white;
+            box-sizing: border-box;
+            margin-left: 35px;
+            
+
+            
+            
+        }
+
+        .figure{
+            display: none;
+            
+            
+            
+            ;
+            
+            
+        }
+        
+        
+
+        .image:hover  + .figure{
+            display: block;
+            
+        }
+
+        
+        
+        .figure:hover, .figure{
+            
+            background:linear-gradient(to bottom,rgba(29,29,29,0.65) 0,rgba(29,29,29,1) 100%) ;
+            transition:all 2s;
+            position: absolute; 
+
+            width: 210px;
+            height: 310px;
+            margin-left: 35px;
+            box-sizing: border-box;
+
+            left: 0;
+            right: 0;
+            top:0;
+            text-align: center;
+            margin-top: inherit;
+            transition-property: all;
+            transition-duration: 1s;
+           
+        }
+    
+
+
+        .image{
+            display: inline;
+        }
+
+        
+    </style>
+    
+</body>
+</html>

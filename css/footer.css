@@ -136,7 +136,9 @@ footer {
 }
 
 .socials a:hover i {
-  color: aqua;
+  color: rgb(249, 77, 58);
+  transition: color 1s ease;
+  transform: scale(1.04);
 }
 
 .footer-bottom {

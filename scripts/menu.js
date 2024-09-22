@@ -17,7 +17,7 @@ const menu = {
       'href': 'https://instagram.com/fineanmol'
     },
     'Instagram': {
-      'text': 'Connect on <i class="fa fa-instagram" style="font-size:22px"></i>',
+      'text': '<i class="fa fa-instagram" style="font-size:22px"></i> Instagram',
       'href': 'https://instagram.com/fineanmol'
     },
     'Facebook': {
@@ -31,7 +31,7 @@ const menu = {
       'id': 'linkedin'
     },
     'NDC': {
-      'text': '<i class="fa fa-twitter" style="font-size:20px"></i>Twitter',
+      'text': '<i class="fa fa-twitter" style="font-size:20px"></i> Twitter',
       'href': 'https://twitter.com/fineanmol',
       'id': 'tools'
     },
@@ -44,6 +44,12 @@ const menu = {
       'text': '<a class="github-button" href="https://github.com/fineanmol/Hacktoberfest2022/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork fineanmol/Hacktoberfest2022 on GitHub">Fork</a>',
       'href': 'https://github.com/fineanmol/Hacktoberfest2022',
       'id': 'tools'
+    },
+    // add a help and support section
+    'Help': {
+      'text': 'Help & Support',
+      'href': '', // add a link to the help page
+      'id': 'help',
     }
     
 

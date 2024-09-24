@@ -2078,6 +2078,5 @@ contributors = [
     id: 428,
     fullname: "Mahipal Choudhary",
     username: "https://github.com/choudharymahipal",
-  },
-  
+  }
 ];

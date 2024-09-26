@@ -12,20 +12,38 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - name: Check if it's an issue or pull request
+      - name: Check out the repository
+        uses: actions/checkout@v3
+
+      - name: Determine event type and set variables
         run: |
-          if [[ ${{ github.event_name }} == 'issues' ]]; then
+          if [[ "${{ github.event_name }}" == 'issues' ]]; then
             echo "COMMENT_BODY=@${{ github.event.issue.user.login }} Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event.\nMeanwhile, if you want to work on this issue, please raise a PR, and we will review and merge it." >> $GITHUB_ENV
-          else
+            echo "ITEM_NUMBER=${{ github.event.issue.number }}" >> $GITHUB_ENV
+            echo "GH_COMMAND=issue" >> $GITHUB_ENV
+          elif [[ "${{ github.event_name }}" == 'pull_request' ]]; then
             echo "COMMENT_BODY=@${{ github.event.pull_request.user.login }} Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event." >> $GITHUB_ENV
+            echo "ITEM_NUMBER=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+            echo "GH_COMMAND=pr" >> $GITHUB_ENV
+          else
+            echo "Unsupported event type: ${{ github.event_name }}"
+            exit 1
           fi
         shell: bash
 
-      - name: Comment on issue/PR
+      - name: Unset GITHUB_TOKEN and authenticate GitHub CLI
         run: |
-          echo "Commenting on issue/PR..."
-          comment_body="${{ env.COMMENT_BODY }}"
-          echo "$comment_body" | gh issue comment ${{ github.event.issue.number }} --body -
+          unset GITHUB_TOKEN
+          echo "${{ secrets.AUTOMERGE_TOKEN }}" | gh auth login --with-token
+        shell: bash
+
+      - name: Comment on issue/PR
+        if: env.GH_COMMAND != ''
+        run: |
+          echo "Commenting on $GH_COMMAND #$ITEM_NUMBER..."
+          gh $GH_COMMAND comment $ITEM_NUMBER --body "$COMMENT_BODY"
         env:
-          GITHUB_TOKEN: ${{ secrets.AUTOMERGE_TOKEN }}
-        if: ${{ github.event_name == 'issues' || github.event_name == 'pull_request' }}
+          COMMENT_BODY: ${{ env.COMMENT_BODY }}
+          ITEM_NUMBER: ${{ env.ITEM_NUMBER }}
+          GH_COMMAND: ${{ env.GH_COMMAND }}
+        shell: bash

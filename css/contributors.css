@@ -135,6 +135,8 @@ body {
   box-shadow: none;
 }
 @media (max-width: 768px) {
+#stats{flex-direction: column;}
+
   .form-control,
   .form-control:focus,
   .from-control:active {

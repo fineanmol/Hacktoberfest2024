@@ -1,5 +1,9 @@
 .navbar{
-  padding:.5rem 2rem
+  padding:.5rem 2rem;
+  box-shadow: 0 4px 6px rgba(231, 104, 152, 1);
+    /* Subtle drop shadow */
+  border-bottom: .5px solid #e76898;
+    /* Thin border with #e76898 color */
 }
 nav{
   background-color:var(--nav-color)
@@ -57,4 +61,30 @@ nav{
 }
 .navbar-light .navbar-nav .nav-link:hover{
   color:#dc143c
+}
+
+/* Dark theme styles for the navbar and drop shadow and border*/
+.dark-theme .navbar {
+  background-color: #1f1822 !important;
+  /* Change background color */
+  box-shadow: 0 4px 6px rgba(231, 104, 152, 1);
+    /* Slightly darker drop shadow for dark theme */
+  border-bottom: .1px solid #e76898;
+    /* Thin border for dark theme */
+}
+
+.dark-theme .navbar-light .navbar-nav .nav-link {
+  color: white !important;
+  /* Change text color to white */
+}
+
+.dark-theme .navbar-light .navbar-nav .nav-link:hover {
+  color: #dc143c !important;
+  /* Hover color for nav links */
+}
+
+/* Add any additional styles as needed for dropdowns or other menu elements */
+.dark-theme .dropdown-menu {
+  background-color: #1f1822 !important;
+  color: white !important;
 }

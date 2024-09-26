@@ -207,9 +207,15 @@ function easeInOutCubic(t, b, c, d) {
 
 // Toggle dark/light theme
 $(".tdnn").click(function () {
-  $("body").toggleClass("light");
-  $(".moon").toggleClass("sun");
-  $(".tdnn").toggleClass("day");
+    $("body").toggleClass("light");
+    $("body").toggleClass("dark-theme"); // Add class for dark theme in nav.css
+
+    $(".moon").toggleClass("sun");
+    $(".tdnn").toggleClass("day");
+
+    // Toggle for the navbar and menu
+    $("nav").toggleClass("dark-theme");
+    $(".navbar-nav").toggleClass("dark-theme");
 });
 
 // Display live stats with the dynamic year

@@ -1,15 +1,14 @@
 #footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100vw;
-    /* height: 100px; */
-    background: linear-gradient(to left, #FF0844, #FF4563);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    color: blue;
-    text-align: center;
-    z-index: 1000;
-
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  /* height: 100px; */
+  background: linear-gradient(to left, #ff0844, #ff4563);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  color: blue;
+  text-align: center;
+  z-index: 1000;
 }
 #footer h3 {
   padding: 5rem;
@@ -81,7 +80,6 @@ footer {
   right: 0;
   background: #111;
   height: auto;
-  width: 100vw;
   padding-top: 40px;
   color: #fff;
 }
@@ -132,11 +130,11 @@ footer {
 .socials a i {
   font-size: 1.1rem;
   width: 20px;
-  transition: color .4s ease;
+  transition: color 0.4s ease;
 }
 
 .socials a:hover i {
-  color: aqua;
+  color: #fc3e6a;
 }
 
 .footer-bottom {
@@ -162,7 +160,7 @@ footer {
 
 .footer-bottom span {
   text-transform: uppercase;
-  opacity: .4;
+  opacity: 0.4;
   font-weight: 200;
 }
 
@@ -186,9 +184,10 @@ footer {
 
 .footer-menu ul li a:hover {
   color: #27bcda;
+  background-color: #fff;
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .footer-menu ul {
     display: flex;
     margin-top: 10px;

@@ -1,0 +1,43 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+struct Node {
+    int data;
+    Node* left;
+    Node* right;
+    Node(int val) {
+        data = val;
+        left = right = NULL;
+    }
+};
+
+bool ValidateBSTChecker(Node* node, int min_val, int max_val) {
+    if (node == NULL) 
+        return true;
+
+    if (node->data < min_val || node->data > max_val)
+        return false;
+
+    return ValidateBSTChecker(node->left, min_val, node->data - 1) &&
+           ValidateBSTChecker(node->right, node->data + 1, max_val);
+}
+
+bool ValidateBST(Node* root) {
+    return ValidateBSTChecker(root, INT_MIN, INT_MAX);
+}
+
+int main() {
+    // Example usage
+    Node* root = new Node(4);
+    root->left = new Node(2);
+    root->right = new Node(5);
+    root->left->left = new Node(1);
+    root->left->right = new Node(3);
+
+    if (ValidateBST(root))
+        cout << "The tree is a valid BST.";
+    else
+        cout << "The tree is not a valid BST.";
+
+    return 0;
+}

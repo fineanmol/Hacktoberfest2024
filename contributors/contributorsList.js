@@ -2075,4 +2075,9 @@ contributors = [
     username: "https://github.com/yajneshkumar790",
   },
   
+  {id: 428,
+  fullname: "Syeda fariha Naqvi",
+  username: "https://github.com/farihaNaqvi",
+  },
+  
 ];

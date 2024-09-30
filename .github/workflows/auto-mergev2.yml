@@ -1,4 +1,4 @@
-name: Auto-Merge PRs
+name: Auto-Merge PRs v2
 
 on:
   pull_request:

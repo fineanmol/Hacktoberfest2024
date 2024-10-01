@@ -53,8 +53,8 @@ nav{
 .nav-link svg{
   width:auto;
   height:25px;
-  vertical-align:text-top
+  vertical-align:text-top;
 }
 .navbar-light .navbar-nav .nav-link:hover{
-  color:#dc143c
+  color:#dc143c;
 }

@@ -1,0 +1,460 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+margin: 0;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-family: 700;
+}
+img{
+max-width: 100%;
+height: auto;
+}
+
+/* Header Section */
+.header{
+background: rgb(255,255,255);
+border-bottom: 1px solid rgb(230,232,234);
+display:flex;
+justify-content: space-between;
+align-items: center;
+}
+.header-container{
+display: flex;
+flex-direction: column;
+position: sticky;
+top: 0;
+right: 0;
+left: 0;
+z-index: 1;
+
+}
+/* ICONS */
+.menuIcon{
+width:40px;
+}
+.searchIcon{
+width: 55px;
+}
+.logoImg{
+width:45%;
+}
+/* Buttons */
+.register-btn{
+border:#000;
+background-color: #000;
+outline-color: #000;
+font-weight: 700;
+padding:7px 10px;
+
+}
+.header-buttons{
+margin-right: 20px;
+}
+.sign-btn,.register-btn{
+outline: none;
+cursor: pointer;
+border: none;
+font-size: 16px;
+font-weight: 700;
+padding:7px 10px;
+color:#FFF;
+}
+/* LOGO */
+.headerlogo{
+margin-left: 4.5em;
+}
+.sign-btn:hover,.register-btn:hover{
+background: rgb(58,60,62);
+color:#FFF;
+}
+/* Navbar */
+.navbar{
+border-bottom: 1px solid rgb(230,232,234);
+background: rgb(255,255,255);
+}
+.nav-items{
+display: flex;
+justify-content:center;
+list-style-type: none;
+}
+.nav-item-2{
+padding: 8px;
+font-weight:700;
+}
+.nav-item:hover,li:hover{
+background:rgb(230,232,234);
+}
+.main-container{
+background:rgb(255,255,255);
+border-bottom: 4px solid rgb(32,34,36);
+padding: 20px;
+}
+.container{
+max-width: 1280px;
+width: 100%;
+}
+/* .card-media{
+width: 100%;
+} */
+.row{
+display:grid;
+grid-template-columns:repeat(4,2fr);
+gap:20px;
+}
+.card{
+grid-column: 2/4;
+background: rgb(255,255,255);
+border-bottom: 1px solid rgb(230,232,234);
+}
+.thirdColumn{
+grid-column: 4/5;
+}
+.third-card-description{
+margin-bottom: 20px;
+}
+/* .card-img{
+width: 100%;
+} */
+
+.column{
+grid-column: 1/2;
+display: flex;
+flex-direction: column;
+}
+.card-title{
+color:rgb(32,34,36);
+font-size: 18px;
+font-weight: 700;
+max-width: 380px;
+margin-bottom: 20px;
+}
+.card-title,.card-description,.card-detail-title{
+color:rgb(32,34,36);
+}
+.card-details{
+display: flex;
+justify-content: flex-start;
+}
+.card-description{
+font-weight: 400;
+font-size: 16px;
+margin-top: 10px;
+}
+.card-detail-title,.space{
+font-size: 16px;
+font-weight: 700;
+margin-top: 20px;
+}
+.cities-detail{
+font-size: 14px;
+color:rgb(84,86,88);
+border-bottom: rgb(230,232,234);
+margin: 20px 0;
+}
+.cities-details,.cities-end {
+border-bottom: none;
+display: flex;
+
+}
+.third-card-description{
+line-height:1.4;
+font-size: 16px;
+
+}
+/* .second-card-img{
+max-width: 100%;
+} */
+.second-card-title{
+margin-top: 20px;
+}
+.second-card-title,.red{
+font-size: 28px;
+font-weight: 700;
+max-width: 750px;
+}
+.red{
+color:rgb(235,0,0);
+}
+.space{
+margin-right: 5px;
+}
+.third-card-title{
+font-weight: 500;
+max-width: 340px;
+margin: 20px 0;
+}
+.third-card-title,.sinking-title{
+font-size:18px;
+}
+/* Main Section */
+.sinking{
+background: #FFF;
+padding: 20px 0; /* Add padding if needed */
+min-height: 200px;
+
+}
+.sinking-title{
+margin-left: 14px;
+}
+.sinking-description {
+display: flex;
+align-items: center;
+padding: 10px 0;
+}
+
+.sinking-row {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 15px;
+padding: 0 12px;
+}
+
+.column-matila,.column-malani{
+display: flex;
+flex-direction:column;
+}
+.card-body-title{
+width: 100%;
+margin: 10px;
+}
+
+.column-matila .female-character-img, .column-malani .male-character-img {
+max-width: 100%;
+display: block;
+margin: 0 auto;
+}
+.matila-card-title h2{
+font-size: 18px;
+}
+.matilda-description,.malani-description{
+font-size: 16px;
+margin: 15px 0;
+}
+.matila-card-title h2 ,.malani-card-title,.information-title{
+font-weight: 700;
+color:rgb(32,34,36);
+}
+.malani-card-title{
+font-size: 21px;
+}
+.malani-description{
+max-width: 595px;
+}
+.matilda-details{
+display: flex;
+align-items: center;
+}
+.receipe{
+background: rgb(248, 248, 248);
+padding:20px 0;
+border-top: 2px solid rgb(32,34,36);
+border-bottom:2px solid rgb(32,34,36);
+
+}
+.receipe-details{
+display: flex;
+justify-content: center;
+}
+.receipe-img{
+max-width: 100%;
+margin: 0 auto;
+}
+
+.premiere{
+background: rgb(255,255,255);
+border-top: 2px solid rgb(32,34,36);
+border-bottom: 2px solid rgb(32,34,36);
+}
+.premiere-row{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap:10px;
+padding:10px;
+}
+.premiere-details{
+margin-bottom: 20px;
+}
+.league-title{
+text-align:left;
+margin-left: 16px;
+}
+.chelsea-column,.oshea-column,.liverpool-column,.liverpool-column{
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+.burnley-img,.chelsea-img,.liverpool-img,.sports-img{
+width: 100%;
+}
+.red-title{
+color:rgb(235,0,0);
+margin-right: 5px;
+}
+.chelsea-details,.burnley-details{
+display: flex;
+flex-direction: column;
+margin: 15px 0;
+}
+.chelsea-title{
+max-width: 416px;
+}
+
+.chelsea-title,.burnley-title,.liverpool-title,.sports-title{
+color: rgb(32,34,36);
+}
+.red-title,.chelsea-title,.burnley-title,.liverpool-title,.sports-title{
+font-size: 18px;
+font-weight: 700;
+}
+.chelsea-description{
+max-width: 411px;
+}
+.burley-description,.liverpool-description{
+max-width: 400px;
+}
+.chelsea-description,.burley-description,.liverpool-description,.information-description{
+font-size: 15px;
+font-weight: 500;
+color: rgb(32,34,36);
+margin-top: 10px;
+}
+.burley-details,.liverpool-details{
+margin-top: 10px;
+}
+/* Sports Section */
+
+.sports{
+background: rgb(255,255,255);
+padding:10px 0;
+border-bottom: 2px solid rgb(255,255,255);
+}
+.sports-title{
+margin-bottom: 15px;
+}
+.sports-row{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+gap: 15px;
+}
+
+.sports-details{
+padding:15px;
+}
+.information-title{
+font-size: 28px;
+}
+.sports-information{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.information-description{
+max-width: 400px;
+margin-bottom: 10px;
+}
+.see-btn{
+cursor: pointer;
+font-size: 16px;
+color:rgb(32,34,36);
+border:2px solid rgb(32,34,36);
+padding:6px 12px;
+outline: 2px solid rgb(32,34,36);
+}
+.see-btn:hover{
+background:rgb(58,60,62);
+color: #FFF;
+}
+
+/* Responsive Media Queries */
+
+/* Tablet Screen */
+@media (max-width:991px){
+.row{
+grid-template-columns: repeat(3,1fr);
+}
+.card{
+grid-column: 2/4;
+}
+.thirdColumn{
+grid-column: 1/4;
+}
+.third-column-tablet{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+grid-template-rows: repeat(2,1fr);
+}
+.third-column-card-2{
+grid-column: 2/3;
+grid-row: 1/2;
+}
+.third-column-card-3{
+grid-column: 1/2;
+grid-row: 2/3;
+}
+.third-column-card{
+grid-column: 1/2;
+grid-row: 1/2;
+}
+.sports-information{
+margin-top: 20px;
+}
+.navbar{
+display: none;
+}
+}
+
+@media(max-width: 767px) {
+.row {
+grid-template-columns: 1fr;
+grid-template-rows: repeat(3, 1fr); /* Defines 3 rows for mobile */
+}
+
+.column {
+grid-row: 2 / 4;
+grid-column: 1/2;
+}
+
+.card {
+grid-row: 1 / 2;
+grid-column: 1/2;
+}
+
+.thirdColumn {
+grid-row: 3 / 4;
+grid-column: 1/2;
+}
+.third-column-tablet{
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: repeat(3,1fr);
+}
+.third-column-card-2{
+grid-column: 1/2;
+grid-row: 3/4;
+}
+.third-column-card-3{
+grid-column: 1/2;
+grid-row: 2/3;
+}
+.third-column-card{
+grid-column: 1/2;
+grid-row: 1/2;
+margin-top: 20px;
+}
+.header-img{
+display: flex;
+margin-left: 20px;
+}
+.header-buttons{
+display: none;
+}
+.sinking-row,.premiere-row,.sports-row{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,1fr);
+}
+
+}

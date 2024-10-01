@@ -11,14 +11,14 @@
     z-index: 1000;
 
 }
-#footer h3 {
+#footer h2 {
   padding: 5rem;
   height: 30px;
 }
 .footer-icon {
   color: #ff2222;
 }
-#footer h3 span:hover {
+#footer h2 span:hover {
   cursor: pointer;
   cursor: hand;
 }

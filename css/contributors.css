@@ -635,3 +635,28 @@ body {
   font-weight: 600;
   box-shadow: inset 120px 0 0 0 #fe0c43;
 }
+
+
+
+/* Dark Mode Toggle Button Styling */
+.dark-mode-toggle {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#toggle-dark-mode {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 25px;
+  background-color: #212529;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#toggle-dark-mode:hover {
+  background-color: #fff;
+  color: #212529;
+}

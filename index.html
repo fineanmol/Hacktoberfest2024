@@ -69,6 +69,10 @@
             </ul>
         </div>
     </nav>
+    <!-- Dark Mode Toggle Button -->
+    <div class="dark-mode-toggle">
+        <button id="toggle-dark-mode" class="btn btn-secondary">🌙 Dark Mode</button>
+    </div>
 
     <!-- Main Content -->
     <div class="content">
@@ -129,6 +133,32 @@
             </div>
         </div>
     </footer>
+
+    <!-- scripting for dark mode -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleDarkModeBtn = document.getElementById("toggle-dark-mode");
+            
+            // Check if dark mode is already enabled
+            if (localStorage.getItem("theme") === "dark") {
+                document.documentElement.setAttribute("data-theme", "dark");
+                toggleDarkModeBtn.textContent = "☀️ Light Mode";
+            }
+    
+            toggleDarkModeBtn.addEventListener("click", function () {
+                if (document.documentElement.getAttribute("data-theme") === "dark") {
+                    document.documentElement.setAttribute("data-theme", "light");
+                    toggleDarkModeBtn.textContent = "🌙 Dark Mode";
+                    localStorage.setItem("theme", "light");
+                } else {
+                    document.documentElement.setAttribute("data-theme", "dark");
+                    toggleDarkModeBtn.textContent = "☀️ Light Mode";
+                    localStorage.setItem("theme", "dark");
+                }
+            });
+        });
+    </script>
+    
 
     <!-- JavaScript Dependencies -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

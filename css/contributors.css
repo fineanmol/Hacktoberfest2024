@@ -118,6 +118,39 @@ body {
   width: max-content;
   margin: 0;
 }
+
+@media screen and (max-width: 767.98px) {
+  .container--search {
+    flex-direction: column;
+    align-items: flex-start !important;
+    row-gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .container--search p {
+    width: unset;
+    word-break: break-word;
+  }
+
+  .container--search .inputs,
+  .container--search #search {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .container .tdnn {
+    float: none;
+    position: absolute;
+    right: 12px;
+    top: 0;
+  }
+}
+@media screen and (max-width: 367.98px) {
+  .container .tdnn {
+    transform: scale(0.75);
+  }
+}
+
 .inputs {
   position: relative;
 }

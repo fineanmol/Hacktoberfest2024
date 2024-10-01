@@ -48,7 +48,7 @@ build/
 *.dll
 *.so
 *.dylib
-
+*.class
 # Backup files
 *.bak
 *.swp

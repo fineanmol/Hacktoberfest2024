@@ -11,6 +11,8 @@ class Demo2 extends Demo1 {
 }
 public class Inheritance {
     public static void main(String[] args) {
-        
+        Demo2 demo = new Demo2();
+        demo.m1();
+        demo.m2();
     }
 }

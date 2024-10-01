@@ -4,7 +4,11 @@ class Demo1{
         System.out.println("In Demo1 class m1 method called....");
     }
 }
-
+class Demo2 extends Demo1 {
+    void m2(){
+        System.out.println("In Demo2 m2 method called....");
+    }
+}
 public class Inheritance {
     
 }

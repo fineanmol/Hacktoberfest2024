@@ -14,22 +14,9 @@ const currentYear = new Date().getFullYear();
 
 // Function to set the current year in the HTML
 function setCurrentYear() {
-  const yearElements = [
-    // { id: "current-year", defaultValue: currentYear },
-    { id: "current-year-title", defaultValue: currentYear },
-    { id: "current-year-footer", defaultValue: currentYear },
-    { id: "current-year-copyright", defaultValue: currentYear },
-  ];
-
-  yearElements.forEach((element) => {
-    const el = document.getElementById(element.id);
-    if (el) {
-      el.textContent = element.defaultValue;
-    } else {
-      console.warn(`Element with ID '${element.id}' not found in the DOM.`);
-    }
+  document.querySelectorAll("[data-year]").forEach(el => {
+    el.textContent = currentYear;
   });
-
   // Set the document title with the current year
   document.title = `Hacktoberfest ${currentYear} - Contributors`;
 }
@@ -71,43 +58,35 @@ function render(array) {
       document.getElementById("contributors").append(user);
     }
   });
+
+  // Add avatars after rendering the contributors
+  document.querySelectorAll("a.box-item").forEach((con) => {
+    con.innerHTML += `<img loading="lazy" src="https://github.com/${
+      con.href.split("https://github.com/")[1]
+    }.png">`;
+  });
 }
 
-// Load contributors after document loads.
+// Initial rendering of contributors
 render(contributors);
 
 /**
- * Loads more contributors when "Load More" button is clicked.
+ * Loads more contributors when scrolled near the bottom of the page.
  */
 function loadMore() {
   if (initialContributorsNumber >= contributors.length) {
-    render(contributors);
+    return; // No more contributors to load
   } else {
-    initialContributorsNumber += 84;
-    document.getElementById("contributors").innerHTML =
-      "<div class='text-center' id='loading'>Loading...</div>";
-    render(contributors);
-    document.querySelectorAll("a.box-item").forEach((con) => {
-      con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${
-        con.href.split("https://github.com/")[1]
-      }">`;
-    });
-    document.getElementById("loading").setAttribute("hidden", true);
-    if (initialContributorsNumber >= contributors.length) {
-      document.getElementById("loadMore").setAttribute("hidden", true);
-    }
+    initialContributorsNumber += 84; // Increase the number of contributors displayed
+    render(contributors); // Render the newly loaded contributors
   }
 }
 
-// Event listener for "Load More" button
-const loadMoreBtn = document.getElementById("loadMore");
-loadMoreBtn.addEventListener("click", loadMore);
-
-// Add avatars to contributor links
-document.querySelectorAll("a.box-item").forEach((con) => {
-  con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${
-    con.href.split("https://github.com/")[1]
-  }">`;
+// Infinite scrolling functionality
+window.addEventListener("scroll", () => {
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500) {
+    loadMore(); // Load more contributors when near the bottom of the page
+  }
 });
 
 // Event listener for the search box
@@ -134,18 +113,7 @@ searchbox.addEventListener("keyup", async (e) => {
 
         document.getElementById("contributors").append(user);
       })
-    : contributors.forEach((item) => {
-        let username = document.createElement("span");
-        username.innerHTML = item.fullname;
-
-        let user = document.createElement("a");
-        user.className = "box-item";
-        user.setAttribute("href", item.username);
-        user.append(username);
-        if (item.id <= initialContributorsNumber) {
-          document.getElementById("contributors").append(user);
-        }
-      });
+    : render(contributors); // Re-render contributors if no search input
 
   document.querySelectorAll("a.box-item").forEach((con) => {
     con.innerHTML += `<img loading="lazy" src="https://github.com/${
@@ -206,10 +174,10 @@ function easeInOutCubic(t, b, c, d) {
 }
 
 // Toggle dark/light theme
-$(".tdnn").click(function () {
-  $("body").toggleClass("light");
-  $(".moon").toggleClass("sun");
-  $(".tdnn").toggleClass("day");
+document.querySelector(".tdnn").addEventListener("click", () => {
+  document.body.classList.toggle("light");
+  document.querySelector(".moon").classList.toggle("sun");
+  document.querySelector(".tdnn").classList.toggle("day");
 });
 
 // Display live stats with the dynamic year

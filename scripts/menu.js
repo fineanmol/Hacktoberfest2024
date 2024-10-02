@@ -87,3 +87,5 @@ function buildMenu () {
 }
 
 buildMenu()
+
+document.getElementById("loadMore").style.display = "none"; // Hide the Load More button

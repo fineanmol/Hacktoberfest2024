@@ -206,7 +206,8 @@ a:hover {
   overflow: hidden;
   white-space: nowrap;
   letter-spacing: 0;
-  transition: letter-spacing 0.5s;
+  /* transition: letter-spacing 0.5s; */
+  transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 @media (min-width: 768px) {
   .box {
@@ -235,7 +236,8 @@ a:hover {
   letter-spacing: 2px;
   font-weight: 700;
   /* transform: rotate(3deg); */
-  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+  /* transition: left 1s cubic-bezier(0.86, 0, 0.07, 1); */
+  transform: translateX(-30px);
 }
 .box-item::before {
   content: "";

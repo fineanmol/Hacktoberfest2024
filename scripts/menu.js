@@ -17,21 +17,21 @@ const menu = {
       'href': 'https://instagram.com/fineanmol'
     },
     'Instagram': {
-      'text': 'Connect on <i class="fa fa-instagram" style="font-size:22px"></i>',
+      'text': '<i class="fa fa-instagram" style="font-size:22px"></i>',
       'href': 'https://instagram.com/fineanmol'
     },
     'Facebook': {
-      'text': '<i class="fa fa-facebook" style="font-size:20px"></i>acebook',
+      'text': '<i class="fa fa-facebook" style="font-size:20px"></i>',
       'href': 'https://www.facebook.com/fineanmol',
       'id': 'facebook'
     },
     'Linkedin': {
-      'text': 'Linked<i class="fa fa-linkedin" style="font-size:20px"></i>',
+      'text': '<i class="fa fa-linkedin" style="font-size:22px"></i>',
       'href': 'https://www.linkedin.com/in/fineanmol/',
       'id': 'linkedin'
     },
     'NDC': {
-      'text': '<i class="fa fa-twitter" style="font-size:20px"></i>Twitter',
+      'text': '<i class="fa fa-twitter" style="font-size:22px"></i>',
       'href': 'https://twitter.com/fineanmol',
       'id': 'tools'
     },

@@ -66,7 +66,7 @@ To keep your fork up-to-date with the main repository and avoid conflicts:
    ```bash
    git remote add upstream https://github.com/fineanmol/Hacktoberfest2024
    ```
-
+ git remote add upstream https://github.com/fineanmol/Hacktoberfest2024
 2. **Verify the New Remote:**
 
    ```bash

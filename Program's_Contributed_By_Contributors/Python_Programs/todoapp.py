@@ -45,8 +45,7 @@ class TodoListApp(QMainWindow):
     def remove_task(self):
         selected_index = self.task_list.currentIndex()
         if selected_index.isValid():
-            task = self.tasks[selected_index.row()]
-            self.tasks.remove(task)
+            del self.tasks[selected_index.row()]
             self.update_task_list()
 
     def update_task_list(self):

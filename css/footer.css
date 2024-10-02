@@ -28,6 +28,7 @@
   flex-wrap: wrap;
   margin-bottom: 80px;
 }
+
 #backToTop {
   display: none;
   position: fixed;
@@ -49,11 +50,16 @@
   opacity: 0.6;
 }
 #backToTop:hover svg {
-  opacity: 1;
+  opacity: 1; 
 }
 #backToTop:hover {
   transform: scale(1.1);
 }
+
+#back-to-top-btn:hover{
+  color:white;
+}
+
 @keyframes backToTopShowAnim {
   0% {
     transform: scale(0);

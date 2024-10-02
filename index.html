@@ -59,11 +59,11 @@
                 </path>
             </svg>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+        <button class="navbar-toggler" id="ham-menu-btn" type="button" data-toggle="collapse" data-target="#navbarColor01"
             aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarColor01">
+        <div class="collapse navbar-collapse" id="ham-menu">
             <ul class="navbar-nav mr-auto" id="menu">
                 <!-- Navbar items will be dynamically added -->
             </ul>
@@ -143,6 +143,35 @@
     <script src="./scripts/menu.js"></script>
     <script src="./contributors/contributorsList.js"></script>
     <script src="./scripts/main.js"></script>
+
+    <script>
+        document.getElementById("ham-menu-btn").addEventListener("click", function () {
+
+            var hamMenu = document.getElementById("ham-menu");
+            if (hamMenu.style.display === "none") {
+                hamMenu.style.display = "flex";
+                hamMenu.style.backgroundColor = "#fff";
+                hamMenu.style.position = "absolute";
+                hamMenu.style.fontSize = "1.5rem";
+                hamMenu.style.top = "60px";
+                hamMenu.style.left = "0";
+                hamMenu.style.width = "70%";
+                hamMenu.style.height = "100vh";
+                hamMenu.style.zIndex = "40";
+                
+
+                var menu = document.getElementById("menu");
+                menu.style.flexDirection = "column";
+                menu.style.alignItems = "center";
+                menu.style.justifyContent = "center";
+                menu.style.gap = "1rem";
+
+            } else {
+                hamMenu.style.display = "none";
+            }
+        }); 
+    </script>
+    
 </body>
 
 </html>

@@ -59,11 +59,3 @@ nav{
   color:#dc143c
 }
 
-
-@media screen and (max-width:768px){
-
-  #ham-menu{
-    display:none;
-  }
-  
-}

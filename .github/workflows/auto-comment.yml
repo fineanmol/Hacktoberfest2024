@@ -1,16 +1,49 @@
 name: Auto Comment
-on: [issues]
+
+on:
+  issues:
+    types:
+      - opened
+  pull_request:
+    types:
+      - opened
+
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - uses: wow-actions/auto-comment@v1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          issuesOpened: |
-             @{{ author }} Please Star ⭐️ the repo to earn "**_hacktober-accepted_**" label for the event.
-             Meanwhile if you want to work on this issue, Please raise the PR and we will review and merge it.
-       
+      - name: Check out the repository
+        uses: actions/checkout@v3
 
-          pullRequestOpened: |
-             @{{ author }} Please Star ⭐️ the repo to earn "**_hacktober-accepted_**" label for the event..
+      - name: Determine event type and set variables
+        run: |
+          if [[ "${{ github.event_name }}" == 'issues' ]]; then
+            echo "COMMENT_BODY=@${{ github.event.issue.user.login }} Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event.\nMeanwhile, if you want to work on this issue, please raise a PR, and we will review and merge it." >> $GITHUB_ENV
+            echo "ITEM_NUMBER=${{ github.event.issue.number }}" >> $GITHUB_ENV
+            echo "GH_COMMAND=issue" >> $GITHUB_ENV
+          elif [[ "${{ github.event_name }}" == 'pull_request' ]]; then
+            echo "COMMENT_BODY=@${{ github.event.pull_request.user.login }} Please Star ⭐️ the repo to earn '**_hacktober-accepted_**' label for the event." >> $GITHUB_ENV
+            echo "ITEM_NUMBER=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+            echo "GH_COMMAND=pr" >> $GITHUB_ENV
+          else
+            echo "Unsupported event type: ${{ github.event_name }}"
+            exit 1
+          fi
+        shell: bash
+
+      - name: Unset GITHUB_TOKEN and authenticate GitHub CLI
+        run: |
+          unset GITHUB_TOKEN
+          echo "${{ secrets.AUTOMERGE_TOKEN }}" | gh auth login --with-token
+        shell: bash
+
+      - name: Comment on issue/PR
+        if: env.GH_COMMAND != ''
+        run: |
+          echo "Commenting on $GH_COMMAND #$ITEM_NUMBER..."
+          gh $GH_COMMAND comment $ITEM_NUMBER --body "$COMMENT_BODY"
+        env:
+          COMMENT_BODY: ${{ env.COMMENT_BODY }}
+          ITEM_NUMBER: ${{ env.ITEM_NUMBER }}
+          GH_COMMAND: ${{ env.GH_COMMAND }}
+        shell: bash

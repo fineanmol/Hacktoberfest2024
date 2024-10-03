@@ -2076,7 +2076,7 @@ contributors = [
 	},
 	{
 		id: 428,
-		fullname: 'Jere',
+		fullname: 'Jere Mäennenä',
 		username: 'https://github.com/maennenajere',
 	},
 ];

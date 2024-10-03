@@ -2076,7 +2076,7 @@ contributors = [
   },
   {
     id: 428,
-    fullname: "Ansh Gautam",
+    fullname: "Ansh Gautam ",
     username: "https://github.com/anshgautam-github",
   },
   

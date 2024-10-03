@@ -214,7 +214,6 @@ a:hover {
     flex-wrap: wrap;
     flex-direction: row;
   }
- 
   .box-item {
     width: calc(50% - 20px);
   }
@@ -512,8 +511,6 @@ a:hover {
     transform: scale(1) translate(0, 0);
   }
 }
-
-
 
 @media (max-width: 1024px) {
   .word span {

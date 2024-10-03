@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2014-2024 ProjectEverest
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <dimen name="card_margin_start">20.0dp</dimen>
+    <dimen name="card_margin_end">20.0dp</dimen>
+    <dimen name="card_margin_rui_start">38.0dp</dimen>
+    <dimen name="card_margin_rui_end">24.0dp</dimen>
+    <dimen name="card_padding_end">70.0dp</dimen>
+    <dimen name="card_height">75.0dp</dimen>
+    <dimen name="card_height_rui">75.0dp</dimen>
+    <dimen name="card_height_round">75.0dp</dimen>
+    <dimen name="card_radius_highlight">32dp</dimen>
+    <dimen name="card_radius">32dp</dimen>
+    <dimen name="top_card_radius">4dp</dimen>
+    <dimen name="mid_card_radius">4dp</dimen>
+    <dimen name="bot_card_radius">4dp</dimen>
+    <dimen name="pref_top_card_bottom_margin">2dp</dimen>
+    <dimen name="pref_mid_card_bottom_margin">2dp</dimen>
+    <dimen name="pref_bot_card_bottom_margin">20dp</dimen>
+    <dimen name="dashboard_icon_size">42dp</dimen>
+    <dimen name="top_pref_start">60dp</dimen>
+    <dimen name="card_height_oos">70.0dp</dimen>
+    <dimen name="card_highlight_margin_end">20dp</dimen>
+    <dimen name="card_highlight_margin_start">20dp</dimen>
+    <dimen name="card_margin_start_aqua">20dp</dimen>
+    <dimen name="card_margin_end_aqua">20dp</dimen>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="default_padding">16dp</dimen>
+    <dimen name="header_text_size_contextual">24sp</dimen>
+    <dimen name="header_text_size_default">36sp</dimen>
+    <dimen name="homepage_user_icon_size">110dp</dimen>
+    <dimen name="homepage_banner_margin_top">44dp</dimen>
+    <dimen name="homepage_avatar_margin_top">10dp</dimen>
+    <dimen name="top_level_preference_summary_max_width">200dp</dimen>
+    <dimen name="personalization_solo_preference_height">100dp</dimen>
+
+    <!-- Recents overview -->
+    <dimen name="recents_view_icon_size_height">42dp</dimen>
+    <dimen name="recents_view_icon_size_width">60dp</dimen>
+    <dimen name="custom_overview_actions_height">112dp</dimen>
+    <dimen name="overview_clear_all_container_height">48dp</dimen>
+    <dimen name="overview_clear_all_container_margin_bottom">9dp</dimen>
+
+     <!-- Meminfo in overview -->
+    <dimen name="meminfo_bottom_margin_gesture">16dp</dimen>
+    <dimen name="meminfo_bottom_margin_transient_taskbar">96dp</dimen>
+    <dimen name="meminfo_bottom_margin_three_button">15dp</dimen>
+    <dimen name="meminfo_top_margin">12dp</dimen>
+
+    <!-- Overview scrolling scale animation -->
+    <dimen name="overview_scroll_scale">0.9</dimen>
+
+    <!-- QuickSpace -->
+    <dimen name="quickspace_title_size">20sp</dimen>
+    <dimen name="quickspace_subtitle_size">16sp</dimen>
+    <dimen name="quickspace_alternate_title_size">18sp</dimen>
+    <dimen name="quickspace_alternate_subtitle_size">16sp</dimen>
+    
+    <!-- Extra bottom margin for overview TaskViews -->
+    <dimen name="overview_task_extra_top_margin">40dp</dimen>
+    <dimen name="overview_task_extra_bottom_margin">40dp</dimen>
+</resources>

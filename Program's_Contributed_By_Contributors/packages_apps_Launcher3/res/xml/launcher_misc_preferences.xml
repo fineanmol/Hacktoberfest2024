@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2014-2024 BlissRoms Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<androidx.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:launcher="http://schemas.android.com/apk/res-auto"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.launcher3">
+
+    <SwitchPreference
+        android:key="pref_allow_phone_taskbar"
+        android:title="@string/pref_allow_phone_taskbar_title"
+        android:summary="@string/pref_allow_phone_taskbar_summary"
+        launcher:iconSpaceReserved="false" 
+        android:layout="@layout/top_level_preference_top_card" />
+
+    <SwitchPreference
+        android:key="pref_allowRotation"
+        android:title="@string/allow_rotation_title"
+        android:summary="@string/allow_rotation_desc"
+        android:defaultValue="false"
+        android:persistent="true"
+        launcher:logIdOn="615"
+        launcher:logIdOff="616"
+        launcher:iconSpaceReserved="false"
+        android:layout="@layout/top_level_preference_middle_card" />
+
+    <Preference
+        android:key="pref_trust_apps"
+        android:title="@string/trust_apps_manager_name"
+        android:layout="@layout/top_level_preference_middle_card" />
+
+     <com.android.launcher3.settings.preferences.CustomSeekBarPreference
+        android:key="pref_blur_depth"
+        android:title="@string/background_blur_title"
+        android:summary="@string/background_blur_summary"
+        android:persistent="true"
+        android:max="125"
+        android:min="0"
+        settings:units="px"
+        android:defaultValue="125"
+        settings:customlayout="@layout/preference_custom_seekbar_middle" />
+
+    <androidx.preference.PreferenceScreen
+        android:persistent="false"
+        android:title="@string/suggestion_pref_screen_title"
+        android:key="pref_suggestions"
+        android:layout="@layout/top_level_preference_middle_card"
+        android:summary="@string/suggestion_pref_screen_desc">
+        <intent android:action="android.settings.ACTION_CONTENT_SUGGESTIONS_SETTINGS" />
+    </androidx.preference.PreferenceScreen>
+
+    <SwitchPreference
+        android:key="pref_action_toast_enabled"
+        android:title="@string/action_toast_enabled_title"
+        android:summary="@string/action_toast_enabled_summary"
+        android:defaultValue="true"
+        android:layout="@layout/top_level_preference_middle_card"
+        android:persistent="true"/>
+
+    <com.android.launcher3.settings.preference.RestartPreference
+        android:key="pref_restart"
+        android:title="@string/pref_restart_title"
+        android:summary="@string/pref_restart_summary"
+        android:layout="@layout/top_level_preference_bottom_card" />
+
+</androidx.preference.PreferenceScreen>

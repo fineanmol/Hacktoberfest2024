@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2014-2024 BlissRoms Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<androidx.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:launcher="http://schemas.android.com/apk/res-auto"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.launcher3">
+
+   <SwitchPreference
+        android:key="pref_drawer_search"
+        android:title="@string/drawer_search_title"
+        android:summary="@string/drawer_search_summary"
+        android:defaultValue="true"
+        launcher:iconSpaceReserved="false"
+        android:layout="@layout/top_level_preference_top_card" />
+
+    <SwitchPreference
+        android:key="pref_drawer_show_labels"
+        android:title="@string/drawer_show_labels"
+        android:defaultValue="true"
+        android:persistent="true"
+        launcher:iconSpaceReserved="false"
+        android:layout="@layout/top_level_preference_middle_card" />
+
+    <com.android.launcher3.settings.preferences.CustomSeekBarPreference
+        android:key="pref_app_drawer_opacity"
+        android:title="@string/background_opacity_title"
+        android:persistent="true"
+        android:max="100"
+        android:min="0"
+        settings:units="%"
+        settings:customlayout="@layout/preference_custom_seekbar_middle"
+        android:defaultValue="100" />
+
+    <com.android.launcher3.settings.preferences.CustomSeekBarPreference
+        android:key="pref_row_height"
+        android:title="@string/row_height_title"
+        android:persistent="true"
+        android:max="150"
+        android:min="75"
+        settings:units="%"
+        android:defaultValue="100"
+        settings:customlayout="@layout/preference_custom_seekbar_bottom" />
+
+</androidx.preference.PreferenceScreen>

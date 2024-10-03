@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2018 CypherOS
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:launcher="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/quickspace_content"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="start|center_vertical"
+    android:orientation="vertical">
+
+    <com.android.launcher3.quickspace.views.DoubleShadowTextView
+        android:id="@+id/quick_event_title"
+        style="@style/QuickSpaceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:singleLine="true"
+        android:scrollHorizontally="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColor="?workspaceTextColor"
+        android:textSize="@dimen/quickspace_title_size"
+        launcher:ambientShadowBlur="3dp"
+        launcher:ambientShadowColor="?workspaceAmbientShadowColor"
+        launcher:keyShadowBlur="2dp"
+        launcher:keyShadowColor="?workspaceKeyShadowColor"
+        launcher:keyShadowOffsetX="0.5dip" />
+
+        <LinearLayout
+            android:id="@+id/quick_event_weather_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:layout_weight="0.0"
+            android:background="@drawable/bg_quickspace"
+            android:clickable="true"
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp">
+
+            <ImageView
+                android:id="@+id/quick_event_weather_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="start|center_vertical"
+                android:scaleType="fitXY" />
+
+            <com.android.launcher3.quickspace.views.DoubleShadowTextView
+                android:id="@+id/quick_event_weather_temp"
+                style="@style/QuickSpaceSubText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:drawablePadding="8dp"
+                android:paddingStart="6dp"
+                android:textColor="?workspaceTextColor"
+                android:textSize="@dimen/quickspace_subtitle_size"
+                android:letterSpacing="0.01"
+                launcher:ambientShadowBlur="3dp"
+                launcher:ambientShadowColor="?workspaceAmbientShadowColor"
+                launcher:keyShadowBlur="2dp"
+                launcher:keyShadowColor="?workspaceKeyShadowColor"
+                launcher:keyShadowOffsetX="0.5dip" />
+        </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/subtitle_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp">
+
+        <ImageView
+            android:id="@+id/quick_event_icon_sub"
+            android:layout_width="26dp"
+            android:layout_height="20dp"
+            android:layout_gravity="start|center_vertical"
+            android:scaleType="fitXY"
+            android:layout_weight="0.0"
+            android:paddingEnd="6dp" />
+
+        <com.android.launcher3.quickspace.views.DoubleShadowTextView
+            android:id="@+id/quick_event_title_sub"
+            style="@style/QuickSpaceSubText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:layout_weight="1.0"
+            android:drawablePadding="8dp"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:scrollHorizontally="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textColor="?workspaceTextColor"
+            android:textSize="@dimen/quickspace_subtitle_size"
+            android:letterSpacing="0.01"
+            launcher:ambientShadowBlur="3dp"
+            launcher:ambientShadowColor="?workspaceAmbientShadowColor"
+            launcher:keyShadowBlur="2dp"
+            launcher:keyShadowColor="?workspaceKeyShadowColor"
+            launcher:keyShadowOffsetX="0.5dip" />
+
+    </LinearLayout>
+
+</LinearLayout>

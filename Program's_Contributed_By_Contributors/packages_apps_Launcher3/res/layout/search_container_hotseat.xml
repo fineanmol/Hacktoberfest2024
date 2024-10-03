@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.launcher3.qsb.QsbLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/qsb_widget_height"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
+    android:contentDescription="@string/label_search"
+    android:paddingVertical="@dimen/qsb_widget_vertical_padding">
+
+    <FrameLayout
+        android:id="@+id/inner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="12dp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            tools:ignore="RtlSymmetry">
+
+            <com.android.launcher3.qsb.AssistantIconView
+                android:id="@+id/mic_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:contentDescription="@string/label_voice_search"
+                android:focusable="false"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="@dimen/qsb_icon_padding"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_mic_color" />
+	    
+            <ImageView
+                android:id="@+id/lens_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:contentDescription="@string/label_lens"
+                android:focusable="false"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="@dimen/qsb_icon_padding"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_lens_color" />
+
+        </LinearLayout>
+               
+        <ImageView
+            android:id="@+id/g_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="12dp"
+            android:gravity="start|center"
+            android:clipToPadding="false"
+            android:clickable="true"
+            android:focusable="false"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="@dimen/qsb_icon_padding"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_super_g_color" />
+
+    </FrameLayout>
+
+</com.android.launcher3.qsb.QsbLayout>

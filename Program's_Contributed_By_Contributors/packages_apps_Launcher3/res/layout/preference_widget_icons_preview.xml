@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2020 Shift GmbH
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="12dp"
+    android:paddingTop="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:paddingBottom="12dp">
+        <ImageView
+            android:id="@+id/pref_icon_a"
+            android:layout_height="56dp"
+            android:layout_width="0dp"
+            android:layout_weight="1" />
+        <ImageView
+            android:id="@+id/pref_icon_b"
+            android:layout_height="56dp"
+            android:layout_width="0dp"
+            android:layout_weight="1" />
+        <ImageView
+            android:id="@+id/pref_icon_c"
+            android:layout_height="56dp"
+            android:layout_width="0dp"
+            android:layout_weight="1" />
+        <ImageView
+            android:id="@+id/pref_icon_d"
+            android:layout_height="56dp"
+            android:layout_width="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:paddingTop="12dp">
+        <ImageView
+            android:id="@+id/pref_icon_e"
+            android:layout_height="56dp"
+            android:layout_width="0dp"
+            android:layout_weight="1" />
+        <ImageView
+            android:id="@+id/pref_icon_f"
+            android:layout_height="56dp"
+            android:layout_width="0dp"
+            android:layout_weight="1" />
+        <ImageView
+            android:id="@+id/pref_icon_g"
+            android:layout_height="56dp"
+            android:layout_width="0dp"
+            android:layout_weight="1" />
+        <ImageView
+            android:id="@+id/pref_icon_h"
+            android:layout_height="56dp"
+            android:layout_width="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="65dp"
+    android:background="?android:attr/activatedBackgroundIndicator"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="30dp"
+        android:layout_marginStart="14dip"
+        android:layout_marginEnd="16dip"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@android:id/icon"
+            android:tint="@*android:color/accent_device_default"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dip"
+        android:layout_marginEnd="6dip"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@android:id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="?android:textColorPrimary"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal" />
+
+        <TextView
+            android:id="@android:id/summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_below="@android:id/title"
+            android:textColor="?android:textColorSecondary"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal" />
+
+    </RelativeLayout>
+
+</LinearLayout>

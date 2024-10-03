@@ -97,7 +97,7 @@ body {
   transition-timing-function: ease-in-out;
   transition-property: background, color;
   transform: translateY(7px);
-  transition: 0.5s;
+  transition: 0.6s;
 }
 #back-to-top-btn:focus,
 #back-to-top-btn:hover {
@@ -214,6 +214,7 @@ a:hover {
     flex-wrap: wrap;
     flex-direction: row;
   }
+ 
   .box-item {
     width: calc(50% - 20px);
   }
@@ -511,6 +512,9 @@ a:hover {
     transform: scale(1) translate(0, 0);
   }
 }
+
+
+
 @media (max-width: 1024px) {
   .word span {
     cursor: pointer;

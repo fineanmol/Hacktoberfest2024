@@ -235,6 +235,7 @@ a:hover {
   letter-spacing: 2px;
   font-weight: 700;
   /* transform: rotate(3deg); */
+  transform: scale(1.05);
   transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 .box-item::before {

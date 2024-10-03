@@ -129,5 +129,5 @@ Many candidates get attracted to Hacktoberfest for the swags. After 4 successful
 ## Our Top Contributors 
 
 <p align="center"><a href="https://github.com/fineanmol/Hacktoberfest2024/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=fineanmol/Hacktoberfest2024" max={1000} columns={100} anon={1}/>
+  <img src="https://contrib.rocks/image?repo=fineanmol/Hacktoberfest2024&columns=100&max=1000&anon=1"/>
 </a></p>

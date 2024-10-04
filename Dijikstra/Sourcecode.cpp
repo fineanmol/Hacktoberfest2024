@@ -102,7 +102,7 @@ int main()
 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0},
     };
     int source;
-    string stations[53]={"Gandhi Nagar","Karond","Berasia","Budhwara","Jahangirabad","Roushanpura1","Kotra Sultanabad","Nehru Nagar","Syamla Hills","Van Vihar","Jawahar Chowk","Rangmahal", "Vidhan Sabha",
+    string stations[53]={"Gandhi-Nagar","Karond","Berasia","Budhwara","Jahangirabad","Roushanpura1","Kotra Sultanabad","Nehru Nagar","Syamla Hills","Van Vihar","Jawahar Chowk","Rangmahal", "Vidhan Sabha",
     "MP Nagar","6 no Stop","Shivaji Nagar","Char Imli","Bittan Market","Shahpura","Gulmohar","Akriti Eco City","Saliya","Chandbad","Ashoka Garden","Govindpura","Minal","Piplani","Ayodhya Bypass", "Anand Nagar",
     "Awadhpuri","Barkheda Pathani","Saket Nagar","AIIMS","Barkatullah University","Misrod","Ratanpur","Bairagarh","Lalghati","Tazul Masjid","Hamidia Hospital","Kamla Park","Polytechnic Square","Roushanpura2","New Market",
     "Mata Mandir","MANIT Square","Patrakar Colony","Chuna Bhatti","Sarvdharm", "Bima Kunj","Danish Kunj","Nayapura","Bairagarh Chichli"};

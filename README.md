@@ -97,10 +97,9 @@ For more information on syncing forks, [read this article from GitHub](https://h
 
 ## Swags of Hacktoberfest:
 
-Many candidates get attracted to Hacktoberfest for the swags. After 4 successfully merged pull requests, as of 2024, you will be eligible to get a Hacktoberfest T-shirt and some stickers delivered to your doorstep.
+Many candidates get attracted to Hacktoberfest for the swags. After 4 successfully merged pull requests, as of 2024, you will be eligible to get digital badges from Holopin, you will receive a notification in your Hacktoberfest profile on the Hacktoberfest website. Additionally, you will receive an email from Holopin to claim each level of your badge.
 
-<li><B><p><img src="https://miro.medium.com/max/1050/1*4JctIO7irt8hFxBmTvUpiQ.jpeg" width="400" height="225" style="width: 400px; height: 225px;" alt="t-shirt image"></a></p><p><img src="https://miro.medium.com/max/1050/1*jkffr74bq5RsQ_xqDhgqYQ.jpeg" width="400" height="225" style="width: 400px; height: 225px;" alt="stickers image"></p>
-</b></li>
+Due to logistical challenges assoicated with creating a reward, it is unfortunately no longer feasible for Hacktoberfest to provide a free t-shirt or stickers.
 
 # FAQs (Frequently Asked Questions)
 

@@ -1,3 +1,6 @@
+# run this on terminal before running the program 
+# pip install litellm crewai crewai-tools pdfplumber python-docx gradio
+
 import os
 from pathlib import Path
 import litellm

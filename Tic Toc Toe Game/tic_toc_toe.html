@@ -39,10 +39,11 @@
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
         .cell:hover {
             background-color: #e0e0e0;
+            transform: scale(1.05);
         }
         .status {
             margin: 20px 0;
@@ -61,6 +62,16 @@
         }
         .restart-btn:hover {
             background-color: #45a049;
+        }
+        @media (max-width: 500px) {
+            .game-board {
+                grid-template-columns: repeat(3, 80px);
+                grid-template-rows: repeat(3, 80px);
+            }
+            .cell {
+                width: 80px;
+                height: 80px;
+            }
         }
     </style>
 </head>

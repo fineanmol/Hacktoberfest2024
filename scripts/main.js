@@ -161,7 +161,7 @@ const backToTopButton = document.querySelector("#back-to-top-btn");
 
 window.addEventListener("scroll", scrollFunction);
 function scrollFunction() {
-  if (window.pageYOffset > 300) {
+  if (window.scrollY > 300) {
     if (!backToTopButton.classList.contains("btnEntrance")) {
       backToTopButton.classList.remove("btnExit");
       backToTopButton.classList.add("btnEntrance");
@@ -176,6 +176,7 @@ function scrollFunction() {
       }, 250);
     }
   }
+  
 }
 
 backToTopButton.addEventListener("click", smoothScrollBackToTop);

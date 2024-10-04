@@ -2075,7 +2075,7 @@ contributors = [{
     },
     {
         id: 427,
-        fullname: "Tio Risnanto", // add your fullname here
+        fullname: "Tio Risnanto",
         username: "https://github.com/risnanto73", // add your username here
     },
 

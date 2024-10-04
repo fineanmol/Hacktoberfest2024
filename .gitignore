@@ -1,62 +1,24 @@
-# IntelliJ IDEA files
-*.iml
-.idea/
-.idea/*
-
-# macOS specific files
-.DS_Store
-
-# Git directory
-.git/
-
-# Visual Studio files
-.vs/
-.vscode/
-
-# Log files
+# Logs
+logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Temporary files
-*.tmp
-*.temp
+node_modules
+dist
+dist-ssr
+*.local
 
-# Node.js dependencies
-node_modules/
-
-# Python compiled files
-__pycache__/
-*.py[cod]
-
-# Coverage reports
-coverage/
-*.cover
-*.coverage
-*.coveragerc
-
-# Build directories
-dist/
-build/
-
-# Environment variables
-.env
-.env.local
-.env.*.local
-
-# Compiled binary files
-*.out
-*.exe
-*.dll
-*.so
-*.dylib
-
-# Backup files
-*.bak
-*.swp
-*~
-
-# Package-lock and yarn files
-package-lock.json
-yarn.lock
-
-# GitHub specific directories
-.github/
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

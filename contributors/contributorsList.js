@@ -2070,6 +2070,11 @@ contributors = [
     username: "https://github.com/DianaBabenko",
   },
   {
+    id: 429,
+    fullname: "Shreyansh Goyal",
+    username: "https://github.com/shreyanshgoyal18",
+  },
+  {
     id: 427,
     fullname: "Yajnesh Kumar",
     username: "https://github.com/yajneshkumar790",

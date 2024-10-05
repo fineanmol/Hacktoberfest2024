@@ -36,21 +36,31 @@ class TodoListApp(QMainWindow):
         self.update_task_list()
 
     def add_task(self):
-        task = self.task_input.text()
-        if task:
-            self.tasks.append(task)
-            self.task_input.clear()
-            self.update_task_list()
+        task = self.task_input.text().strip()  # Strip leading/trailing spaces
+        if not task:
+            self.label.setText("Task cannot be empty.")  # Provide feedback to the user
+            return
+        if task in self.tasks:
+            self.label.setText("Task already exists.")  # Feedback for duplicates
+            return
+        self.tasks.append(task)
+        self.task_input.clear()
+        self.label.setText("Enter a task:")
+        self.update_task_list()
 
     def remove_task(self):
         selected_index = self.task_list.currentIndex()
         if selected_index.isValid():
             task = self.tasks[selected_index.row()]
             self.tasks.remove(task)
+            self.label.setText(f"Removed task: {task}")  # Feedback after removing
             self.update_task_list()
+        else:
+            self.label.setText("No task selected.")  # Feedback for no selection
 
     def update_task_list(self):
         self.task_list.setModel(QStringListModel(self.tasks))
+        self.remove_button.setEnabled(bool(self.tasks))  # Disable if no tasks
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

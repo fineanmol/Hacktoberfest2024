@@ -305,9 +305,18 @@ a:hover {
   border-radius: 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
 }
 #stats a {
-  padding: 0 5px;
+  padding: 0 10px;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+#stats a:hover {
+  color: var(--box-hover);
 }
 .word {
   font-family: Anton, sans-serif;

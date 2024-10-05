@@ -2,6 +2,7 @@ import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QWidget, QLineEdit, QPushButton, QListView
 from PySide6.QtCore import QStringListModel
 
+
 class TodoListApp(QMainWindow):
     def __init__(self):
         super().__init__()

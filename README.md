@@ -34,7 +34,7 @@ Hacktoberfest 2024
 - Clone it on your local machine
 
 ```terminal
-git clone https://github.com/fineanmol/Hacktoberfest2024.git
+git clone https://github.com/<-your username->/Hacktoberfest2024.git
 ```
 
 - Navigate to the project directory.

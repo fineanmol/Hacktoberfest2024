@@ -31,6 +31,11 @@ contributors = [
     username: "https://github.com/dwikychandra21",
   },
   {
+    id: 6,
+    fullname: "Sachinkun",
+    username: "https://github.com/Sachinkun",
+  },
+  {
     id: 7,
     fullname: "Ritesh Kumar",
     username: "https://github.com/ritesh2905",

@@ -2074,5 +2074,10 @@ contributors = [
     fullname: "Yajnesh Kumar",
     username: "https://github.com/yajneshkumar790",
   },
+    {
+    id: 1,
+    fullname: "Ayush Patel",
+    username: "https://github.com/ayush-patel1",
+  },
   
 ];

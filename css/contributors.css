@@ -558,7 +558,7 @@ body {
   transition: all 0.5s ease-in-out;
   background: var(--bgColor--night);
   cursor: pointer;
-  margin: 0 0 0 10px;
+  margin: 0 0 0 0px;
   flex-shrink: 0;
 }
 .day {

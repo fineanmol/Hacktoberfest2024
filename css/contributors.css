@@ -120,6 +120,8 @@ body {
 }
 .inputs {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .form-control,
 .form-control:focus,
@@ -130,9 +132,12 @@ body {
   background: var(--darkbg);
   outline: 0;
   color: #eee;
-  width: 20rem;
+  width: 100%;
+  min-width: 200px;
+  max-width: 20rem;
   accent-color: var(--lightt);
   box-shadow: none;
+  height: 38px;
 }
 @media (max-width: 768px) {
   .form-control,
@@ -544,7 +549,7 @@ body {
   color: var(--lightt);
 }
 .tdnn {
-  float: right;
+  float: none;
   font-size: 15%;
   position: relative;
   height: var(--toggleHeight);
@@ -553,7 +558,8 @@ body {
   transition: all 0.5s ease-in-out;
   background: var(--bgColor--night);
   cursor: pointer;
-  margin: 0 0 0 10px;
+  margin: 0 0 0 0px;
+  flex-shrink: 0;
 }
 .day {
   background: #ffbf71;
@@ -634,4 +640,18 @@ body {
   color: black;
   font-weight: 600;
   box-shadow: inset 120px 0 0 0 #fe0c43;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .inputs {
+    margin-bottom: 10px;
+  }
+  
+  .tdnn {
+    align-self: flex-end;
+  }
 }

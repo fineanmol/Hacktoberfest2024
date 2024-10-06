@@ -135,8 +135,20 @@ footer {
   transition: color .4s ease;
 }
 
-.socials a:hover i {
-  color: aqua;
+.facebook:hover {
+    color: #1877F2; /* Facebook Blue */
+}
+
+.twitter :hover{
+    color: #1DA1F2; /* Twitter Blue */
+}
+
+.instagram:hover {
+    color: #E4405F; /* Instagram Pinkish-Red */
+}
+
+.linkedin :hover{
+    color: #0077B5; /* LinkedIn Blue */
 }
 
 .footer-bottom {

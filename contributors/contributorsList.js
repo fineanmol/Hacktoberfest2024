@@ -2076,8 +2076,12 @@ contributors = [
   },
   {
     id: 428,
-    fullname: "Rushabh Wagh",
+    fullname: "rushabh wagh",
     username: "https://github.com/wrexrus",
   },
-  
+  {
+    id: 429,
+    fullname: "wrex rushabh",
+    username: "https://github.com/wrexrus",
+  },
 ];

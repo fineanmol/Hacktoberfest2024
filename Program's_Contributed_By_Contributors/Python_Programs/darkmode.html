@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Example</title>
+    <style>
+        /*Light Mode Styles */
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+
+        .dark-mode h1 {
+            color: #ccc;
+        }
+
+        /* Button styling */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #444;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #666;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Dark Mode Toggle Example</h1>
+    <p>Click the button below to toggle between dark and light modes.</p>
+
+    <button id="toggle-button">Switch to Dark Mode</button>
+
+    <script>
+        // Check if dark mode was previously set and apply it on page load
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            document.getElementById('toggle-button').textContent = 'Switch to Light Mode';
+        }
+
+        // Add event listener to the button to toggle dark mode
+        document.getElementById('toggle-button').addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+
+            // Update the button text based on the mode
+            if (document.body.classList.contains('dark-mode')) {
+                this.textContent = 'Switch to Light Mode';
+                localStorage.setItem('darkMode', 'enabled');  
+            } else {
+                this.textContent = 'Switch to Dark Mode';
+                localStorage.setItem('darkMode', 'disabled');  
+            }
+        });
+    </script>
+
+</body>
+</html>
+Footer

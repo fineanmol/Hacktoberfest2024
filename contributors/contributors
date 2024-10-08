@@ -1,0 +1,22 @@
+var options = {
+  valueNames: [
+    'name',
+    'born',
+    { data: ['id'] },
+    { name: 'timestamp', attr: 'data-timestamp' },
+    { name: 'link', attr: 'href' },
+    { name: 'image', attr: 'src' }
+  ]
+};
+
+var hackerList = new List('hacker-list', options);
+
+hackerList.add({
+  name: 'Jonas',
+  born: '1985',
+  id: 2,
+  timestamp: '1337',
+  link: 'http://arnklint.com'
+  image: 'jonas.gif'
+});
+Next topic: Options ›

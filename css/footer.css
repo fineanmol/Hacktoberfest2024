@@ -188,6 +188,14 @@ footer {
   color: #27bcda;
 }
 
+.copyright{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:whitesmoke;
+
+}
+
 @media (max-width:500px) {
   .footer-menu ul {
     display: flex;

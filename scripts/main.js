@@ -122,8 +122,8 @@ searchbox.addEventListener("keyup", async (e) => {
       ? "<div class='text-center' id='loading'>Loading...</div>"
       : "";
 
-  e.target.value !== ""
-    ? searchResult.forEach((item) => {
+    if(e.target.value !== "" && searchResult.length > 0)
+    { searchResult.forEach((item) => {
         let username = document.createElement("span");
         username.innerHTML = item.fullname;
 
@@ -133,8 +133,14 @@ searchbox.addEventListener("keyup", async (e) => {
         user.append(username);
 
         document.getElementById("contributors").append(user);
-      })
-    : contributors.forEach((item) => {
+      })}
+      else if(searchResult.length == 0 )
+        { 
+          const noResultMsg = document.createElement("p");
+          noResultMsg.innerText = "No contributors were found.";
+          document.getElementById("contributors").append(noResultMsg);}
+    else{
+      contributors.forEach((item) => {
         let username = document.createElement("span");
         username.innerHTML = item.fullname;
 
@@ -146,6 +152,7 @@ searchbox.addEventListener("keyup", async (e) => {
           document.getElementById("contributors").append(user);
         }
       });
+    } 
 
   document.querySelectorAll("a.box-item").forEach((con) => {
     con.innerHTML += `<img loading="lazy" src="https://github.com/${

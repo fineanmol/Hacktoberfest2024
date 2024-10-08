@@ -15,6 +15,11 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v3
 
+         - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
       - name: Determine event type and set variables
         run: |
           if [[ "${{ github.event_name }}" == 'issues' ]]; then

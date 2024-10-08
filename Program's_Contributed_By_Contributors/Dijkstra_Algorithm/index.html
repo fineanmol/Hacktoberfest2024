@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dijkstra's Algorithm Visualization with vis.js</title>
+    <script type="text/javascript" src="https://unpkg.com/vis-network@9.1.2/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Dijkstra's Algorithm Visualization</h2>
+        <div class="form-group">
+            <label for="numNodes">Number of Nodes:</label>
+            <input type="number" id="numNodes" min="2" max="100" value="5">
+        </div>
+       
+        <div class="form-group">
+            <label for="directed">Is Directed:</label>
+            <input type="checkbox" id="directed">
+        </div>
+
+        <button id="generateBtn">Generate Graph</button>
+        <button id="runDijkstraBtn">Run Dijkstra</button>
+        
+        <div id="network" style="height: 500px; border: 1px solid lightgray;"></div>
+    </div>
+    
+    <script src="src/script.js"></script>
+</body>
+</html>

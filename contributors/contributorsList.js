@@ -2076,7 +2076,7 @@ contributors = [
   },
   {
     id: 428,
-    fullname: "Omnath Ganapure",
+    fullname: "Omnath ganapure",
     username: "https://github.com/Om6214"
   }
   

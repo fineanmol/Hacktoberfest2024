@@ -2076,7 +2076,7 @@ contributors = [
   },
   {
     id: 428,
-    fullname: "Serhii Korneliuk",
+    fullname: "Serhii Korneliuk ",
     username: "https://github.com/Seiger",
   },
 

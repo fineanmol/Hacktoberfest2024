@@ -1,5 +1,10 @@
 contributors = [
   {
+    id: 0,
+    fullname: "Rishabh Sharma",
+    username: "https://github.com/Rishabh32700",
+  },
+  {
     id: 1,
     fullname: "Anmol Agarwal",
     username: "https://github.com/fineanmol",

@@ -1,59 +1,53 @@
-import sys
-from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QWidget, QLineEdit, QPushButton, QListView
-from PySide6.QtCore import QStringListModel
+import kivy
+from kivy.app import App
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.recycleview import RecycleView
+from kivy.uix.textinput import TextInput
+from kivy.uix.button import Button
 
-class TodoListApp(QMainWindow):
-    def __init__(self):
-        super().__init__()
-        self.setWindowTitle("Todo List App")
-        self.setGeometry(100, 100, 400, 300)
 
+class TodoRecycleView(RecycleView):
+    def __init__(self, **kwargs):
+        super(TodoRecycleView, self).__init__(**kwargs)
+        self.data = []
+
+
+class TodoApp(App):
+    def build(self):
         self.tasks = []
+        self.layout = BoxLayout(orientation="vertical")
 
-        self.central_widget = QWidget()
-        self.setCentralWidget(self.central_widget)
+        # RecycleView for displaying tasks
+        self.rv = TodoRecycleView()
+        self.layout.add_widget(self.rv)
 
-        self.layout = QVBoxLayout()
-        self.central_widget.setLayout(self.layout)
-        self.task_list = QListView()
-        self.task_list.setEditTriggers(QListView.NoEditTriggers)
-        self.task_list.setSelectionMode(QListView.SingleSelection)
-        self.layout.addWidget(self.task_list)
-        self.label = QLabel("Enter a task:")
-        self.layout.addWidget(self.label)
+        # TextInput for adding tasks
+        self.task_input = TextInput(hint_text="Enter a task", multiline=False)
+        self.layout.add_widget(self.task_input)
 
-        self.task_input = QLineEdit()
-        self.layout.addWidget(self.task_input)
+        # Add and Remove buttons
+        self.add_button = Button(text="Add Task")
+        self.add_button.bind(on_press=self.add_task)
+        self.layout.add_widget(self.add_button)
 
-        self.add_button = QPushButton("Add")
-        self.add_button.clicked.connect(self.add_task)
-        self.layout.addWidget(self.add_button)
+        self.remove_button = Button(text="Remove Selected Task")
+        self.remove_button.bind(on_press=self.remove_task)
+        self.layout.add_widget(self.remove_button)
 
-        self.remove_button = QPushButton("Remove")
-        self.remove_button.clicked.connect(self.remove_task)
-        self.layout.addWidget(self.remove_button)
+        return self.layout
 
-        self.update_task_list()
-
-    def add_task(self):
-        task = self.task_input.text()
+    def add_task(self, instance):
+        task = self.task_input.text
         if task:
-            self.tasks.append(task)
-            self.task_input.clear()
-            self.update_task_list()
+            self.tasks.append({"text": task})
+            self.rv.data = self.tasks
+            self.task_input.text = ""
 
-    def remove_task(self):
-        selected_index = self.task_list.currentIndex()
-        if selected_index.isValid():
-            task = self.tasks[selected_index.row()]
-            self.tasks.remove(task)
-            self.update_task_list()
+    def remove_task(self, instance):
+        if self.rv.data:
+            self.rv.data.pop()
+            self.rv.refresh_from_data()
 
-    def update_task_list(self):
-        self.task_list.setModel(QStringListModel(self.tasks))
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = TodoListApp()
-    window.show()
-    sys.exit(app.exec())
+    TodoApp().run()

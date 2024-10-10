@@ -67,6 +67,16 @@ function render(array) {
     user.setAttribute("id", item.id);
     user.append(username);
 
+    // Add avatars to contributor links
+    if(item.username) {
+      const avatar = document.createElement("img");
+      avatar.setAttribute("loading", "lazy");
+      avatar.setAttribute("src", `https://avatars.githubusercontent.com/${
+        item.username.split("https://github.com/")[1]
+      }`);
+      user.prepend(avatar);
+    }
+
     if (item.id <= initialContributorsNumber) {
       document.getElementById("contributors").append(user);
     }
@@ -87,11 +97,7 @@ function loadMore() {
     document.getElementById("contributors").innerHTML =
       "<div class='text-center' id='loading'>Loading...</div>";
     render(contributors);
-    document.querySelectorAll("a.box-item").forEach((con) => {
-      con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${
-        con.href.split("https://github.com/")[1]
-      }">`;
-    });
+
     document.getElementById("loading").setAttribute("hidden", true);
     if (initialContributorsNumber >= contributors.length) {
       document.getElementById("loadMore").setAttribute("hidden", true);
@@ -102,13 +108,6 @@ function loadMore() {
 // Event listener for "Load More" button
 const loadMoreBtn = document.getElementById("loadMore");
 loadMoreBtn.addEventListener("click", loadMore);
-
-// Add avatars to contributor links
-document.querySelectorAll("a.box-item").forEach((con) => {
-  con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${
-    con.href.split("https://github.com/")[1]
-  }">`;
-});
 
 // Event listener for the search box
 searchbox.addEventListener("keyup", async (e) => {
@@ -146,12 +145,6 @@ searchbox.addEventListener("keyup", async (e) => {
           document.getElementById("contributors").append(user);
         }
       });
-
-  document.querySelectorAll("a.box-item").forEach((con) => {
-    con.innerHTML += `<img loading="lazy" src="https://github.com/${
-      con.href.split("https://github.com/")[1]
-    }.png">`;
-  });
 
   document.getElementById("loading").setAttribute("hidden", true);
 });

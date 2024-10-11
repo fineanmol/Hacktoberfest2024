@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MindMapify</title>
+    <style>
+        body {
+            font-family: Arial sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .chat-log {
+            padding: 20px;
+        }
+        .chat-log .message {
+            margin-bottom: 20px;
+        }
+        .chat-log .message .username {
+            font-weight: bold;
+            color: #337ab7;
+        }
+        .chat-log .message .text {
+            padding-left: 10px;
+        }
+        .input-field {
+            padding: 20px;
+        }
+        .input-field input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+        .input-field button[type="submit"] {
+            background-color: #337ab7;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .input-field button[type="submit"]:hover {
+            background-color: #23527c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MindMapify</h1>
+        <div class="chat-log">
+            {% for message in conversation %}
+            <div class="message">
+                <span class="username">{{ message.username }}</span>
+                <span class="text">{{ message.text }}</span>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="input-field">
+            <form action="" method="post">
+                <input type="text" name="user_input" placeholder="Type a message...">
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,7 +1,62 @@
+# IntelliJ IDEA files
 *.iml
-.git/objects/
+.idea/
+.idea/*
+
+# macOS specific files
 .DS_Store
-*.idea*
-.github
-*.github/
-/.vs
+
+# Git directory
+.git/
+
+# Visual Studio files
+.vs/
+.vscode/
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Node.js dependencies
+node_modules/
+
+# Python compiled files
+__pycache__/
+*.py[cod]
+
+# Coverage reports
+coverage/
+*.cover
+*.coverage
+*.coveragerc
+
+# Build directories
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Compiled binary files
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Backup files
+*.bak
+*.swp
+*~
+
+# Package-lock and yarn files
+package-lock.json
+yarn.lock
+
+# GitHub specific directories
+.github/

@@ -122,7 +122,6 @@ body {
   position: relative;
 }
 .form-control,
-.form-control:focus,
 .from-control:active {
   text-indent: 30px;
   border: 1px solid var(--darkt) !important;
@@ -133,6 +132,16 @@ body {
   width: 20rem;
   accent-color: var(--lightt);
   box-shadow: none;
+}
+.form-control:focus{
+  text-indent: 30px;
+  border: 1px solid var(--darkt);
+  align-content: normal;
+  outline: 0;
+  background: var(--nav-color);
+  color: #1e1e28;
+  width: 20rem;
+   box-shadow: none;
 }
 @media (max-width: 768px) {
   .form-control,
@@ -147,7 +156,7 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   transition: background-color 5000s;
-  -webkit-text-fill-color: #fff !important;
+  -webkit-text-fill-color: #1e1e28 !important;
 }
 
 .light .form-control {

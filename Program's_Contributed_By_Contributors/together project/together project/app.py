@@ -4,7 +4,7 @@ from together import Together
 
 app = Flask(__name__)
 
-client = Together(api_key=os.environ.get("6ac70d93fd09dc1231ef8a57725909ad34370f93363dda88d7c6b1e91ff3eafd"))
+client = Together(api_key=os.environ.get("together_api_key_here"))
 
 conversation = []
 

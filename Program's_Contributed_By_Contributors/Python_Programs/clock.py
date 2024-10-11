@@ -5,7 +5,7 @@ from tkinter import Label, Tk
 window = Tk()
 window.title("")
 window.geometry("200x80")
-window.configure(bg="green")  # =======Background of the clock=====
+window.configure(bg="blue")  # =======Background of the clock=====
 window.resizable(False, False)  # =====setting a fixed window size =======
 
 clock_label = Label(

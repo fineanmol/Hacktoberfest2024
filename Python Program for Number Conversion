@@ -1,0 +1,23 @@
+def convert_and_display(decimal):
+    binary = bin(decimal)[2:]      
+    octal = oct(decimal)[2:]       
+    hexadecimal = hex(decimal)[2:].upper()  
+
+    print(f"Decimal: {decimal}")
+    print(f"Binary: {binary}")
+    print(f"Octal: {octal}")
+    print(f"Hexadecimal: {hexadecimal}")
+
+def main():
+    while True:
+        try:
+            decimal = int(input("Enter a decimal number (or 'q' to quit): "))
+            convert_and_display(decimal)
+        except ValueError:
+            print("Please enter a valid integer.")
+        except KeyboardInterrupt:
+            print("\nExiting the program.")
+            break
+
+if __name__ == "__main__":
+    main()

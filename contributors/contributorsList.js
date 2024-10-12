@@ -1,5 +1,10 @@
 contributors = [
   {
+    id: 0,
+    fullname: "Syed Moazam Ali",
+    username: "https://github.com/MoazamAli45",
+  },
+  {
     id: 1,
     fullname: "Anmol Agarwal",
     username: "https://github.com/fineanmol",
@@ -2074,5 +2079,4 @@ contributors = [
     fullname: "Yajnesh Kumar",
     username: "https://github.com/yajneshkumar790",
   },
-  
 ];

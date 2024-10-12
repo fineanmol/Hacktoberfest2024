@@ -635,3 +635,60 @@ body {
   font-weight: 600;
   box-shadow: inset 120px 0 0 0 #fe0c43;
 }
+
+
+body
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100vh
+  background-color: black
+
+.netflix-stick-container
+  display: flex
+  justify-content: center
+  align-items: flex-end  // Align the stick to the bottom if desired
+  height: 100vh  // Keeps the full height for centering purposes
+
+  .netflix-stick
+    width: 7vh
+    height: 30vh
+    background-color: #b1060f
+    position: relative
+    
+    &:before
+      content: ""
+      position: absolute
+      width: 7vh
+      height: 30vh
+      background-color: #e50913
+      transform: skew(20deg)
+      left: 5.5vh
+      box-shadow: 0 0 2.5vh -1vh black
+
+    &:after
+      content: ""
+      position: absolute
+      width: 7vh
+      height: 30vh
+      background-color: #b1060f
+      left: 11vh
+      z-index: -1
+
+  .thing
+    width: 7.5vh
+    height: 2vh
+    position: absolute
+    background-color: black
+    bottom: -1vh
+    transform: rotateZ(-5deg)
+
+    &:before
+      content: ""
+      width: 7.8vh
+      height: 2vh
+      position: absolute
+      background-color: black
+      bottom: -1vh
+      transform: rotateZ(12deg)  
+      left: 10.2vh

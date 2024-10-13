@@ -85,17 +85,19 @@ function loadMore() {
   } else {
     initialContributorsNumber += 84;
     document.getElementById("contributors").innerHTML =
-      "<div class='text-center' id='loading'>Loading...</div>";
-    render(contributors);
-    document.querySelectorAll("a.box-item").forEach((con) => {
-      con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${
-        con.href.split("https://github.com/")[1]
-      }">`;
-    });
-    document.getElementById("loading").setAttribute("hidden", true);
-    if (initialContributorsNumber >= contributors.length) {
-      document.getElementById("loadMore").setAttribute("hidden", true);
-    }
+      "<div class='text-center' id='loading'><i class='fa fa-spinner fa-spin fa-3x'></i></div>";
+    setTimeout(() => {
+      render(contributors);
+      document.querySelectorAll("a.box-item").forEach((con) => {
+        con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${
+          con.href.split("https://github.com/")[1]
+        }">`;
+      });
+      document.getElementById("loading").setAttribute("hidden", true);
+      if (initialContributorsNumber >= contributors.length) {
+        document.getElementById("loadMore").setAttribute("hidden", true);
+      }
+    }, 2000);
   }
 }
 

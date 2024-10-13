@@ -12,6 +12,9 @@ import java.util.stream.Stream;
  */
 public class FibonacciJavaStreams {
 
+    /**
+     * Calculates the Fibonacci number for a given index.
+     */
     public static Optional<BigDecimal> calculate(final BigDecimal index) {
         if (index == null || index.compareTo(BigDecimal.ZERO) < 0) {
             return Optional.empty();

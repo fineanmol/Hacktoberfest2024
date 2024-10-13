@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic JavaScript Example</title>
+</head>
+<body>
+
+  <h1>Simple JavaScript Example</h1>
+
+  <p id="greeting">Hello, World!</p>
+
+  <label for="num1">Enter first number:</label>
+  <input type="number" id="num1" placeholder="Number 1">
+
+  <label for="num2">Enter second number:</label>
+  <input type="number" id="num2" placeholder="Number 2">
+
+  <button onclick="calculateSum()">Calculate Sum</button>
+
+  <p id="result"></p>
+
+  <script>
+    // JavaScript function to change text content
+    document.getElementById('greeting').textContent = "Welcome to JavaScript!";
+
+    // Function to calculate sum of two numbers
+    function calculateSum() {
+      const num1 = parseFloat(document.getElementById('num1').value);
+      const num2 = parseFloat(document.getElementById('num2').value);
+      
+      if (!isNaN(num1) && !isNaN(num2)) {
+        const sum = num1 + num2;
+        document.getElementById('result').textContent = `Sum: ${sum}`;
+      } else {
+        document.getElementById('result').textContent = 'Please enter valid numbers!';
+      }
+    }
+  </script>
+
+</body>
+</html>

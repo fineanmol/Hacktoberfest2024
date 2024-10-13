@@ -2074,5 +2074,9 @@ contributors = [
     fullname: "Yajnesh Kumar",
     username: "https://github.com/yajneshkumar790",
   },
-  
+  {
+    id: 427,
+    fullname: "Aniket Swaroop Shrivastava",
+    username: "https://github.com/gh4aniket",
+  },
 ];

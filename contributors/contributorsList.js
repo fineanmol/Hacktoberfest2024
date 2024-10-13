@@ -21,9 +21,9 @@ contributors = [
     username: "https://github.com/SHIV1003",
   },
   {
-    id: 5,
-    fullname: "Shradha Khapra",
-    username: "https://github.com/shradha-khapra",
+    id:5,
+    fullname:"Rishabh Rawat",
+    username:"https://github.com/RishabhRawatt"
   },
   {
     id: 6,
@@ -2073,6 +2073,11 @@ contributors = [
     id: 427,
     fullname: "Yajnesh Kumar",
     username: "https://github.com/yajneshkumar790",
+  },
+   {
+    id: 428,
+    fullname: "Shradha Khapra",
+    username: "https://github.com/shradha-khapra",
   },
   
 ];

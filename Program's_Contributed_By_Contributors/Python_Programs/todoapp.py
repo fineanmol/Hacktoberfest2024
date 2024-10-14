@@ -2,7 +2,7 @@ import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QWidget, QLineEdit, QPushButton, QListView
 from PySide6.QtCore import QStringListModel
 
-
+#class
 class TodoListApp(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -36,6 +36,7 @@ class TodoListApp(QMainWindow):
 
         self.update_task_list()
 
+    #add task function
     def add_task(self):
         task = self.task_input.text()
         if task:
@@ -43,6 +44,7 @@ class TodoListApp(QMainWindow):
             self.task_input.clear()
             self.update_task_list()
 
+    #remove task function
     def remove_task(self):
         selected_index = self.task_list.currentIndex()
         if selected_index.isValid():
@@ -50,10 +52,12 @@ class TodoListApp(QMainWindow):
             self.tasks.remove(task)
             self.update_task_list()
 
+    #update task function
     def update_task_list(self):
         self.task_list.setModel(QStringListModel(self.tasks))
 
 
+#main function
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = TodoListApp()

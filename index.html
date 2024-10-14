@@ -34,7 +34,7 @@
         }
     </style>
 </head>
-
+<script src="script.js"></script>
 <body>
 
     <!-- Back-to-top Button -->
@@ -72,26 +72,27 @@
 
     <!-- Main Content -->
     <div class="content">
-        <div class="container">
-            <span class="heading"><b>CONTRIBUTORS</b> </span>
-            <div class="heart"></div>
-            <div class="tdnn">
+        <div class="container animated-container">
+            <span class="heading animated-heading"><b>CONTRIBUTORS</b></span>
+            <div class="heart animated-heart"></div>
+            <div class="tdnn animated-moon">
                 <div class="moon"></div>
             </div>
-            <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between align-items-center animated-fade-in">
                 <p class="rubberBand delay-4s">Add yourself to the list if you contribute.</p>
-                <div class="inputs mr-3">
+                <div class="inputs mr-3 animated-inputs">
                     <i class="fa fa-search"></i>
                     <input type="text" id="search" class="form-control" placeholder="Search Contributors..">
                 </div>
             </div>
             <div>
-                <a class="github-button" href="https://github.com/fineanmol/Hacktoberfest2023" data-icon="octicon-star"
+                <a class="github-button animated-github-button" href="https://github.com/fineanmol/Hacktoberfest2023" data-icon="octicon-star"
                     data-size="large" data-show-count="true" aria-label="Star fineanmol/Hacktoberfest2023 on GitHub">To
                     Get "HacktoberFest-Accepted" label, Star ✩ the repo </a>
             </div>
             <hr style="width:90%">
         </div>
+        
         <div class="container-fluid">
             <!-- Contributors will be displayed here -->
             <div class="box mx-auto my-5 justify-content-center" id="contributors" data-aos="zoom-in-down"></div>

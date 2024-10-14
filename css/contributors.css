@@ -635,3 +635,113 @@ body {
   font-weight: 600;
   box-shadow: inset 120px 0 0 0 #fe0c43;
 }
+/* General container animation */
+.animated-container {
+  animation: fadeIn 1s ease-out, zoomIn 1s ease-out;
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.animated-container.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Fade-in effect for the container */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* Zoom-in effect for the container */
+@keyframes zoomIn {
+  0% {
+      transform: scale(0.95);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+/* Heading animation */
+.animated-heading {
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+      transform: translateY(30px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Heart animation */
+.animated-heart {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+/* Moon animation */
+.animated-moon {
+  animation: moonPulse 2s ease-in-out infinite;
+}
+
+@keyframes moonPulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+/* Fade-in for the elements within the container */
+.animated-fade-in {
+  animation: fadeIn 2s ease-in;
+}
+
+/* Input fields animation */
+.animated-inputs {
+  animation: slideUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes slideUp {
+  0% {
+      transform: translateY(20px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* GitHub button animation */
+.animated-github-button {
+  animation: fadeInUp 1.5s ease-in-out 1s;
+  opacity: 0;
+}
+
+.animated-github-button.loaded {
+  opacity: 1;
+}

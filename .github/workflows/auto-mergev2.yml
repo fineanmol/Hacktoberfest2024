@@ -1,0 +1,47 @@
+name: Auto-Merge PRs
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+  check_suite:
+    types:
+      - completed
+
+jobs:
+  auto_merge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up jq
+        run: sudo apt-get install -y jq
+
+      - name: Check PR status and merge
+        env:
+          GITHUB_TOKEN: ${{ secrets.AUTOMERGE_TOKEN }}
+        run: |
+          PR_NUMBER=$(jq -r ".pull_request.number" "$GITHUB_EVENT_PATH")
+          PR_URL="https://api.github.com/repos/${{ github.repository }}/pulls/${PR_NUMBER}"
+          PR_STATUS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" $PR_URL)
+
+          MERGEABLE=$(echo "$PR_STATUS" | jq -r .mergeable)
+          PR_STATE=$(echo "$PR_STATUS" | jq -r .state)
+          PR_MERGED=$(echo "$PR_STATUS" | jq -r .merged)
+
+          echo "PR Number: $PR_NUMBER"
+          echo "PR State: $PR_STATE"
+          echo "Mergeable: $MERGEABLE"
+          echo "Already Merged: $PR_MERGED"
+
+          if [ "$PR_STATE" = "open" ] && [ "$MERGEABLE" = "true" ] && [ "$PR_MERGED" = "false" ]; then
+            echo "PR is open, mergeable, and not yet merged. Attempting to merge..."
+            MERGE_RESPONSE=$(curl -s -X PUT -H "Authorization: token $GITHUB_TOKEN" "$PR_URL/merge" -d '{"merge_method":"squash"}')
+            echo "Merge Response: $MERGE_RESPONSE"
+          else
+            echo "PR cannot be merged at this time."
+          fi

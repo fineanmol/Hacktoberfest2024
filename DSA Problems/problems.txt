@@ -1,0 +1,35 @@
+𝟭𝗗 𝗔𝗿𝗿𝗮𝘆
+
+1. How would you find the second-largest element in an array with the least number of comparisons?
+2. Write a function to move all zeros in an array to the end, maintaining the relative order of the other elements.
+3. How would you reverse an array in place?
+4. Given an array of integers, write an algorithm to find the subarray with the largest sum.
+5. Write a function to rotate an array by 'k' positions.
+6. How would you merge two sorted arrays into a single sorted array?
+
+𝗧𝗶𝗺𝗲 𝗖𝗼𝗺𝗽𝗹𝗲𝘅𝗶𝘁𝘆
+
+1. What is Big O notation, and why is it important in analyzing time complexity?
+2. Explain the time complexity of binary search and how it can be optimized in certain cases.
+3. How would you calculate the time complexity of a recursive algorithm, and how does it differ from iterative approaches?
+4. What are the time complexities for the best, worst, and average cases of merge sort and quicksort?
+5. Given a set of cities and the distance between each pair, how would you solve the Traveling Salesman Problem (TSP), and what is its time complexity?
+6. What is the difference between Big O, Big Theta (Θ), and Big Omega (Ω) notations? Provide examples for each.
+
+𝗟𝗶𝗻𝗸𝗲𝗱 𝗟𝗶𝘀𝘁𝘀
+
+1. How do you reverse a singly linked list in place?
+2. How would you detect a cycle in a linked list?
+3. Write a function to merge two sorted linked lists into a single sorted linked list.
+4. How would you find the middle element of a linked list in one pass?
+5. How would you delete a node from a singly linked list without having access to the head node?
+6. Write an algorithm to remove duplicates from an unsorted linked list.
+
+𝗚𝗿𝗮𝗽𝗵𝘀
+
+1. How do you represent a graph using an adjacency list and an adjacency matrix? Which one is more efficient for sparse graphs?
+2. Explain Depth First Search (DFS) and Breadth First Search (BFS) and their time complexity.
+3. Write an algorithm to detect a cycle in a directed graph.
+4. How would you find the shortest path between two nodes in an unweighted graph?
+5. Explain Dijkstra’s algorithm for finding the shortest path in a weighted graph.
+6. How do you detect a cycle in an undirected graph?

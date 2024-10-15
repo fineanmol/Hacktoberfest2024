@@ -10,7 +10,7 @@ In this current repo, there are a lot of conflicts; we are not merging until all
 
 P.S. Star ⭐ and share this repository if you had fun!! 😍
 
-Hacktoberfest 2024
+Hacktoberfest-2024
 ![Event Completed](/scripts/Event_Completed_.png)
 
 # 📌 Videos 📽️:
@@ -58,7 +58,7 @@ git add .
 - Commit your changes.
 
 ```markdown
-git commit -m "Relevant message"
+git commit -s -m "Relevant message"
 ```
 
 - Then push

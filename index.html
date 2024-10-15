@@ -9,10 +9,10 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <meta name="description"
-        content="This is a static website serving as a beginner friendly project to help developers get started with hacktoberfest - Gateway to open source.">
+        content="This is a static website serving as a beginner friendly project to help developers get started with Hacktoberfest - Gateway to open source.">
     <link rel="icon" href="https://hacktoberfestswaglist.com/img/hacktoberfest-favicon.ico" type="image/x-icon">
 
-    <!-- CSS Dependencies -->
+    <!-- External CSS and font dependencies -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="./css/footer.css">
 
     <title>Hacktoberfest - Contributors</title>
+
+    <!-- Custom inline styles for specific elements -->
     <style>
         .hidden {
             display: none;
@@ -39,30 +41,26 @@
 
     <!-- Back-to-top Button -->
     <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
-    <!--
-        __  __              __    __          __                 ____             __
-      / / / /____ _ _____ / /__ / /_ ____   / /_   ___   _____ / __/___   _____ / /_
-      / /_/ // __ `// ___// //_// __// __ \ / __ \ / _ \ / ___// /_ / _ \ / ___// __/
-    / __  // /_/ // /__ / ,<  / /_ / /_/ // /_/ //  __// /   / __//  __/(__  )/ /_
-    /_/ /_/ \__,_/ \___//_/|_| \__/ \____//_.___/ \___//_/   /_/   \___//____/ \__/
-                                                i just want a t-shirt at this point
-    -->
-    <!--Navbar-->
+    
+    <!-- Navbar section -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
         <a class="navbar-brand" href="/">
+            <!-- SVG logo for Hacktoberfest -->
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300"
-                style="enable-background:new 0 0 300 300;" xml:space="preserve" role="img"
-                aria-labelledby="dyn2wm4vin1xgraye3ggy9kf12oaz8a" class="header__logo" width="50px" height="50px">
+                style="enable-background:new 0 0 300 300;" xml:space="preserve" role="img" aria-labelledby="dyn2wm4vin1xgraye3ggy9kf12oaz8a"
+                class="header__logo" width="50px" height="50px">
                 <title id="dyn2wm4vin1xgraye3ggy9kf12oaz8a">Hacktoberfest <span id="current-year-title"></span></title>
                 <path class="st0"
                     d="M0.7,0.7v298.7h298.7V0.7H0.7z M197.8,271.4l-32-32v-95.6l-31.4,31.4v79l-17.3,17.3L99.8,254V70.4L95,65.6  L73,87.7L61.7,76.5l47.8-47.8l0.1,0.1l0,0l1.9,1.8l22.8,22.8V136l31.4-31.4V70.2L150,54.4l25.8-25.8l24.7,24.7v169.1l12.1,12.1  l14.7-14.7l11.1,11.1L197.8,271.4z">
                 </path>
             </svg>
         </a>
+        <!-- Responsive toggle button for mobile view -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
             aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- Navbar items container -->
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto" id="menu">
                 <!-- Navbar items will be dynamically added -->
@@ -73,7 +71,7 @@
     <!-- Main Content -->
     <div class="content">
         <div class="container">
-            <span class="heading"><b>CONTRIBUTORS</b> </span>
+            <span class="heading"><b>CONTRIBUTORS</b></span>
             <div class="heart"></div>
             <div class="tdnn">
                 <div class="moon"></div>
@@ -93,16 +91,17 @@
             <hr style="width:90%">
         </div>
         <div class="container-fluid">
-            <!-- Contributors will be displayed here -->
+            <!-- Contributors box -->
             <div class="box mx-auto my-5 justify-content-center" id="contributors" data-aos="zoom-in-down"></div>
         </div>
     </div>
 
+    <!-- Load More Button -->
     <div class="box mx-auto my-5 justify-content-center" id="box">
         <a data-aos="zoom-in-down" class="btn btn-outline-secondary btn-lg load-more" id="loadMore"><u>Load More</u></a>
     </div>
 
-    <!-- Footer -->
+    <!-- Footer section -->
     <div class="footer mt-auto py-3 bg-light text-center">
         <div class="container">
             <span class="text-muted">
@@ -111,12 +110,14 @@
         </div>
     </div>
 
+    <!-- Additional Footer Information -->
     <footer>
         <div class="footer-content">
             <h3>Hacktoberfest <span id="current-year-footer"></span></h3>
             <p>This Project is participating in <b>Hacktoberfest</b>. Copyright &copy; <span
                     id="current-year-copyright"></span>.</p>
             <div class="footer-menu">
+                <!-- Social media icons -->
                 <ul class="socials">
                     <li><a href="https://www.facebook.com/fineanmol" target="_blank"><i class="fa fa-facebook"></i></a>
                     </li>
@@ -130,7 +131,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript Dependencies -->
+    <!-- External JS dependencies -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6QA4fZSN7NTMZBeZfFgOwOLfLZc4eME6vH3kn4tEWvJgC4ndOlxogypGLyBI"

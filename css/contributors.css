@@ -620,18 +620,39 @@ body {
 }
 .box #loadMore u {
   text-decoration: none;
+  cursor: pointer;
 }
 .box #loadMore {
-  padding: 10px;
+  padding: 8px 30px;
   margin: 0;
   border-radius: 10px;
   background-color: #fc3e6a;
   color: whitesmoke;
   border: none;
   transition: ease-out 0.4s;
+  font-size: 1.1em;
 }
 .box #loadMore:hover {
   color: black;
   font-weight: 600;
   box-shadow: inset 120px 0 0 0 #fe0c43;
+}
+.box #loadMore::after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
+  animation: ellipsis steps(4,end) 900ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+@keyframes ellipsis {
+  to {
+    width: 1.25em;    
+  }
+}
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.25em;    
+  }
 }

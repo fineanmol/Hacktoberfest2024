@@ -12,6 +12,9 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out the repository
+        uses: actions/checkout@v3
+
       - name: Determine event type and set variables
         run: |
           if [[ "${{ github.event_name }}" == 'issues' ]]; then

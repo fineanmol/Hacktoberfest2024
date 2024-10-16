@@ -1,8 +1,8 @@
-## Hacktoberfest-2024
+# Hacktoberfest-2024
 
 **Check out this project as well: [Annoying Button😡](https://annoyingsubmitbutton.netlify.app/). It's Hacktoberfest GitHub repo: [https://github.com/fineanmol/Annoying-submit-button](https://github.com/fineanmol/Annoying-submit-button)**
 
-# Submit your PR on this new repo [Hacktoberfest](https://github.com/fineanmol/hacktoberfest). We are merging all PRs there.
+## Submit your PR on this new repo [Hacktoberfest](https://github.com/fineanmol/hacktoberfest). We are merging all PRs there
 
 In this current repo, there are a lot of conflicts; we are not merging until all conflicts are resolved. Hacktoberfest { [Live Website](https://fineanmol.github.io/Hacktoberfest2024/) }
 
@@ -11,15 +11,15 @@ In this current repo, there are a lot of conflicts; we are not merging until all
 P.S. Star ⭐ and share this repository if you had fun!! 😍
 
 Hacktoberfest 2024
-![Event Completed](/scripts/Event_Completed_.png)
+![Event Completed](/public/event_completed.png)
 
-# 📌 Videos 📽️:
+## 📌 Videos 📽️
 
 - [Hacktoberfest Intro](https://www.youtube.com/watch?v=mq_FIHdxmIk)
 - [How to pull request [Overview]](https://youtu.be/DIj2q02gvKs)
 - [Merge Conflict / comment](https://youtu.be/zOx5PJTY8CI)
 
-# Contribution Rules📚:
+## Contribution Rules📚
 
 - You are allowed to make pull requests that break the rules. We just merge it ;)
 - Do NOT add any build steps, e.g., npm install (we want to keep this a simple static site)
@@ -28,7 +28,7 @@ Hacktoberfest 2024
 <!-- - Add your name to the contributorsList file. -->
 - Try to keep pull requests small to minimize merge conflicts
 
-## Getting Started 🤩🤗:
+## Getting Started 🤩🤗
 
 - Fork this repo (button on top)
 - Clone it on your local machine
@@ -69,11 +69,10 @@ git push origin my-new-branch
 
 - Create a new pull request from your forked repository
 
-<br>
 
 ## Avoid Conflicts {Syncing your fork}
 
-An easy way to avoid conflicts is to add an 'upstream' for your git repo, as other PRs may be merged while you're working on your branch/fork.   
+An easy way to avoid conflicts is to add an 'upstream' for your git repo, as other PRs may be merged while you're working on your branch/fork.
 
 ```terminal
 git remote add upstream https://github.com/fineanmol/Hacktoberfest2024
@@ -95,14 +94,14 @@ This will give you any eventual conflicts and allow you to easily solve them in 
 
 For more information on syncing forks, [read this article from GitHub](https://help.github.com/articles/syncing-a-fork/).
 
-## Swags of Hacktoberfest:
+## Swags of Hacktoberfest
 
 Many candidates get attracted to Hacktoberfest for the swags. After 4 successfully merged pull requests, as of 2024, you will be eligible to get a Hacktoberfest T-shirt and some stickers delivered to your doorstep.
 
 <li><B><p><img src="https://miro.medium.com/max/1050/1*4JctIO7irt8hFxBmTvUpiQ.jpeg" width="400" height="225" style="width: 400px; height: 225px;" alt="t-shirt image"></a></p><p><img src="https://miro.medium.com/max/1050/1*jkffr74bq5RsQ_xqDhgqYQ.jpeg" width="400" height="225" style="width: 400px; height: 225px;" alt="stickers image"></p>
 </b></li>
 
-# FAQs (Frequently Asked Questions)
+## FAQs (Frequently Asked Questions)
 
 - Who all can contribute?
   - Anyone with a GitHub account and who is signed up for [Hacktoberfest](https://hacktoberfest.digitalocean.com/) :)
@@ -123,10 +122,9 @@ Many candidates get attracted to Hacktoberfest for the swags. After 4 successful
 - What is the event for?
   - For open source community engagement and to learn how to contribute to open source.
 
-###### *We will do our best to merge as much as possible from everyone. However, time is limited, and the merge conflicts are horrible :astonished: <3*
-<br>
+## *We will do our best to merge as much as possible from everyone. However, time is limited, and the merge conflicts are horrible :astonished: <3*
 
-## Our Top Contributors 
+## Our Top Contributors
 
 <p align="center"><a href="https://github.com/fineanmol/Hacktoberfest2024/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=fineanmol/Hacktoberfest2024" max={1000} columns={100} anon={1}/>

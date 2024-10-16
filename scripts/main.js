@@ -1,4 +1,6 @@
 // Initialize AOS (Animate On Scroll)
+import contributors from "../contributors/contributor.json" with { type: "json" };
+
 AOS.init();
 
 // Array containing contributors data
@@ -88,9 +90,8 @@ function loadMore() {
       "<div class='text-center' id='loading'>Loading...</div>";
     render(contributors);
     document.querySelectorAll("a.box-item").forEach((con) => {
-      con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${
-        con.href.split("https://github.com/")[1]
-      }">`;
+      con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split("https://github.com/")[1]
+        }">`;
     });
     document.getElementById("loading").setAttribute("hidden", true);
     if (initialContributorsNumber >= contributors.length) {
@@ -105,9 +106,8 @@ loadMoreBtn.addEventListener("click", loadMore);
 
 // Add avatars to contributor links
 document.querySelectorAll("a.box-item").forEach((con) => {
-  con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${
-    con.href.split("https://github.com/")[1]
-  }">`;
+  con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${con.href.split("https://github.com/")[1]
+    }">`;
 });
 
 // Event listener for the search box
@@ -124,33 +124,32 @@ searchbox.addEventListener("keyup", async (e) => {
 
   e.target.value !== ""
     ? searchResult.forEach((item) => {
-        let username = document.createElement("span");
-        username.innerHTML = item.fullname;
+      let username = document.createElement("span");
+      username.innerHTML = item.fullname;
 
-        let user = document.createElement("a");
-        user.className = "box-item";
-        user.setAttribute("href", item.username);
-        user.append(username);
+      let user = document.createElement("a");
+      user.className = "box-item";
+      user.setAttribute("href", item.username);
+      user.append(username);
 
-        document.getElementById("contributors").append(user);
-      })
+      document.getElementById("contributors").append(user);
+    })
     : contributors.forEach((item) => {
-        let username = document.createElement("span");
-        username.innerHTML = item.fullname;
+      let username = document.createElement("span");
+      username.innerHTML = item.fullname;
 
-        let user = document.createElement("a");
-        user.className = "box-item";
-        user.setAttribute("href", item.username);
-        user.append(username);
-        if (item.id <= initialContributorsNumber) {
-          document.getElementById("contributors").append(user);
-        }
-      });
+      let user = document.createElement("a");
+      user.className = "box-item";
+      user.setAttribute("href", item.username);
+      user.append(username);
+      if (item.id <= initialContributorsNumber) {
+        document.getElementById("contributors").append(user);
+      }
+    });
 
   document.querySelectorAll("a.box-item").forEach((con) => {
-    con.innerHTML += `<img loading="lazy" src="https://github.com/${
-      con.href.split("https://github.com/")[1]
-    }.png">`;
+    con.innerHTML += `<img loading="lazy" src="https://github.com/${con.href.split("https://github.com/")[1]
+      }.png">`;
   });
 
   document.getElementById("loading").setAttribute("hidden", true);

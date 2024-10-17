@@ -84,14 +84,15 @@ function loadMore() {
     render(contributors);
   } else {
     initialContributorsNumber += 84;
-    document.getElementById("contributors").innerHTML =
-      "<div class='text-center' id='loading'>Loading...</div>";
-    render(contributors);
-    document.querySelectorAll("a.box-item").forEach((con) => {
-      con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${
-        con.href.split("https://github.com/")[1]
-      }">`;
-    });
+   document.querySelectorAll("a.box-item").forEach((con) => {
+  const username = con.href.split("https://github.com/")[1]; 
+  if (username) {
+    con.innerHTML += `<img loading="lazy" src="https://avatars.githubusercontent.com/${username}.png">`;
+  } else {
+    console.warn(`Invalid GitHub URL for contributor: ${con.href}`);
+  }
+});
+
     document.getElementById("loading").setAttribute("hidden", true);
     if (initialContributorsNumber >= contributors.length) {
       document.getElementById("loadMore").setAttribute("hidden", true);

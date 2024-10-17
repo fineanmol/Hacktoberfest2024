@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <h2>Check the Weather</h2>
+
+        <div class="search">
+            <input type="text" placeholder="enter city name" class="cityName">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <div class="weather">
+            <img src="images/rain.png" class="weather-icon">
+            <h1 class="temp">22 °C</h1>
+            <h2 class="city">Mumbai</h2>
+
+            <div class="details">
+                <div class="col">
+                    <img src="images/humidity.png" class="humidity-icon">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p><br>
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <img src="images/wind.png" class="wind-icon">
+                    <div>
+                        <p class="wind">15 km/h</p>
+                        <p>Wind Speed</p><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

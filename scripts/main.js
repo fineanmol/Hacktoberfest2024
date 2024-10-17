@@ -64,6 +64,7 @@ function render(array) {
     let user = document.createElement("a");
     user.className = "box-item";
     user.setAttribute("href", item.username);
+    user.setAttribute("target", "_blank");
     user.setAttribute("id", item.id);
     user.append(username);
 

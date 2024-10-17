@@ -236,6 +236,9 @@ a:hover {
   font-weight: 700;
   /* transform: rotate(3deg); */
   transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+  box-shadow: 0 0 10px rgb(247, 162, 226),
+                0 0 15px rgb(252, 163, 237), 
+                0 0 20px rgb(240, 96, 156); 
 }
 .box-item::before {
   content: "";
@@ -635,3 +638,23 @@ body {
   font-weight: 600;
   box-shadow: inset 120px 0 0 0 #fe0c43;
 }
+
+/* WebKit Browsers */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fddfdf;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(202, 40, 73);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(202, 40, 73);
+}
+

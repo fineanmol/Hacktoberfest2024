@@ -1,0 +1,51 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Solution {
+public:
+    string longestPalindrome(string s) {
+        if (s.empty()) return "";
+        int start = 0, maxLength = 1;
+
+        for (int i = 0; i < s.size(); i++) {
+            // Odd length palindrome
+            int len1 = expandAroundCenter(s, i, i);
+            // Even length palindrome
+            int len2 = expandAroundCenter(s, i, i + 1);
+            int len = max(len1, len2);
+
+            if (len > maxLength) {
+                start = i - (len - 1) / 2;
+                maxLength = len;
+            }
+        }
+
+        return s.substr(start, maxLength);
+    }
+
+private:
+    // Helper function to expand around the center
+    int expandAroundCenter(const string& s, int left, int right) {
+        while (left >= 0 && right < s.size() && s[left] == s[right]) {
+            left--;
+            right++;
+        }
+        // Return length of the palindrome
+        return right - left - 1;
+    }
+};
+
+int main() {
+    Solution solution;
+    string s;
+    
+    cout << "Enter the string: ";
+    cin >> s;
+
+    string longestPalindromicSubstring = solution.longestPalindrome(s);
+    cout << "The longest palindromic substring is: " << longestPalindromicSubstring << endl;
+
+    return 0;
+}

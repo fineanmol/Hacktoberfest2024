@@ -12,41 +12,35 @@ const menu = {
   
 },
   //'Others': {
-    'Instagram': {
-      'text': 'Instagram Connect',
-      'href': 'https://instagram.com/fineanmol'
-    },
-    'Instagram': {
-      'text': 'Connect on <i class="fa fa-instagram" style="font-size:22px"></i>',
-      'href': 'https://instagram.com/fineanmol'
-    },
-    'Facebook': {
-      'text': '<i class="fa fa-facebook" style="font-size:20px"></i>acebook',
-      'href': 'https://www.facebook.com/fineanmol',
-      'id': 'facebook'
-    },
-    'Linkedin': {
-      'text': 'Linked<i class="fa fa-linkedin" style="font-size:20px"></i>',
-      'href': 'https://www.linkedin.com/in/fineanmol/',
-      'id': 'linkedin'
-    },
-    'NDC': {
-      'text': '<i class="fa fa-twitter" style="font-size:20px"></i>Twitter',
-      'href': 'https://twitter.com/fineanmol',
-      'id': 'tools'
-    },
-    'Stars': {
+  'Instagram': {
+    'text': 'Instagram <i class="fa fa-instagram" style="font-size:20px"></i>',
+    'href': 'https://instagram.com/fineanmol'
+  },
+  'Facebook': {
+    'text': '<i class="fa fa-facebook" style="font-size:20px; margin-bottom: 2px;"></i>acebook',
+    'href': 'https://www.facebook.com/fineanmol',
+    'id': 'facebook'
+  },
+  'Linkedin': {
+    'text': 'Linked<i class="fa fa-linkedin" style="font-size:20px; margin-left: 2px;"></i>',
+    'href': 'https://www.linkedin.com/in/fineanmol/',
+    'id': 'linkedin'
+  },
+  'Twitter': {
+    'text': '<i class="fa fa-twitter" style="font-size:20px; margin-right: 2px;"></i>Twitter',
+    'href': 'https://twitter.com/fineanmol',
+    'id': 'tools'
+  },
+  'Stars': {
       'text': '<a class="github-button" href="https://github.com/fineanmol/Hacktoberfest2022" data-icon="octicon-star" data-show-count="true" aria-label="Star fineanmol/Hacktoberfest2022 on GitHub">Stars</a>',
       'href': 'https://github.com/fineanmol/Hacktoberfest2022',
       'id': 'tools'
-    },
-    'Forks': {
+  },
+  'Forks': {
       'text': '<a class="github-button" href="https://github.com/fineanmol/Hacktoberfest2022/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork fineanmol/Hacktoberfest2022 on GitHub">Fork</a>',
       'href': 'https://github.com/fineanmol/Hacktoberfest2022',
       'id': 'tools'
-    }
-    
-
+  }
 }
 
 function buildMenuHTML (obj = {}) {

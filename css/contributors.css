@@ -66,6 +66,8 @@ body {
   position: relative;
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 body {
   margin: 0;
@@ -163,12 +165,16 @@ input:-webkit-autofill:active {
   left: 10px;
   color: #b8b9bc;
 }
+/* Links */
 a {
-  color: #000;
+  color: var(--first-color);
   text-decoration: none;
 }
+
+
 a:hover {
   text-decoration: none;
+  color: var(--hover-color);
 }
 .heading {
   text-transform: uppercase;
@@ -282,6 +288,13 @@ a:hover {
   padding: 4px;
   border-radius: 50%;
 }
+/* Box styling */
+.box-item {
+  background-color: var(--container-color);
+  border: 2px solid var(--border-color);
+  color: var(--text-color);
+}
+
 .box-item:hover a {
   color: #fff;
 }
@@ -520,6 +533,14 @@ a:hover {
     line-height: 0.8;
   }
 }
+/* Media Queries */
+@media (max-width: 600px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+  }
+}
 :root {
   --darkbg: #251d29;
   --darkt: #e76898;
@@ -534,10 +555,27 @@ a:hover {
   --bgColor--day: #9ee3fb;
   --toggleBtn-bgColor--day: var(--bgColor--day);
 }
+:root {
+  /* Theme colors */
+  --text-color: #d3d3d3; /* Greyish white for text */
+  --body-color: #0b0b0b; /* Dark black for background */
+  --container-color: #141414; /* Slightly lighter black for containers */
+  --scrollbar-color: #4caf50; /* Neon green for scrollbar */
+  --scroll-thumb-color: #5e005e; /* Deep purple for scrollbar thumb */
+  --first-color: #ff7518; /* Pumpkin orange for primary actions (buttons, links) */
+  --first-color-alt: #ffae42; /* Lighter orange for hover states */
+  --hover-color: #4caf50; /* Neon green for hover effect */
+  --border-color: #5e005e; /* Deep purple for borders */
+}
 body {
   transition: all 0.2s ease-in-out;
   background: var(--darkbg);
   color: var(--darkt);
+}
+/* Background and text colors */
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
 }
 .light {
   background: var(--lightbg);
@@ -635,3 +673,47 @@ body {
   font-weight: 600;
   box-shadow: inset 120px 0 0 0 #fe0c43;
 }
+
+
+
+
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  background-color: var(--container-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: var(--first-color);
+}
+
+/* Back to top button */
+#back-to-top-btn {
+  background-color: var(--first-color);
+  color: var(--text-color);
+}
+
+#back-to-top-btn:hover {
+  background-color: var(--first-color-alt);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--scrollbar-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb-color);
+}
+
+
+
+
+

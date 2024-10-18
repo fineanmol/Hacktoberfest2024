@@ -1,10 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:300);
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 5px;
 }
+
 body {
   display: flex;
   justify-content: center;
@@ -12,40 +13,64 @@ body {
   flex-direction: column;
   height: 100vh;
   margin: 0;
-  font-family: Montserrat, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f4;
 }
+
 .container {
   width: 28rem;
   height: 34rem;
-  background-color: rgb(110, 100, 100);
+  background-color: #6e6464;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  padding: 1.5rem;
 }
+
+#top, #bottom {
+  position: relative;
+}
+
 #top {
   top: -0.4rem;
   left: -0.35rem;
 }
+
 #bottom {
   bottom: -0.3rem;
   left: -0.35rem;
 }
+
 input[type="range"]::-webkit-slider-runnable-track {
   cursor: pointer;
-  background-color:blue;
+  background-color: blue;
   border-radius: 0.3rem;
   height: 0.6rem;
+  transition: background-color 0.3s ease;
 }
+
 input[type="range"]::-webkit-slider-thumb {
-  background-color:grey;
-  color:navy;
-  cursor: hand;
+  background-color: grey;
+  cursor: pointer;
   margin-top: -0.1rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
 }
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  background-color: #ff1493;
+}
+
 h4 {
   text-shadow: 0.2px 0.2px 14px #ff1493;
+  font-weight: 600;
 }
+
 .css {
   background-color: blue;
   color: grey;
@@ -53,4 +78,13 @@ h4 {
   padding: 1.25rem 2.5rem;
   width: 21.87rem;
   height: 8.1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.css:hover {
+  background-color: #0056b3;
+  color: white;
+  transform: translateY(-3px);
 }

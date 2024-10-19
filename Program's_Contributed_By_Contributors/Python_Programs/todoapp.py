@@ -52,6 +52,13 @@ class TodoListApp(QMainWindow):
     def update_task_list(self):
         self.task_list.setModel(QStringListModel(self.tasks))
 
+    def show_message(self, title, message):
+        msg_box = QMessageBox(self)
+        msg_box.setWindowTitle(title)
+        msg_box.setText(message)
+        msg_box.setIcon(QMessageBox.Warning)
+        msg_box.exec()
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = TodoListApp()

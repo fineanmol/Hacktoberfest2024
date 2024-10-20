@@ -1,0 +1,7 @@
+Added transform property on hover for consistent UI
+
+1. Added transform: scale(1.05) to .box-item:hover.
+2. Improved component structure for styling separation.
+3. Adjusted media queries for responsiveness.
+
+

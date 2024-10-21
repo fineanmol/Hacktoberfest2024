@@ -30,9 +30,9 @@ const menu = {
       'href': 'https://www.linkedin.com/in/fineanmol/',
       'id': 'linkedin'
     },
-    'NDC': {
-      'text': '<i class="fa fa-twitter" style="font-size:20px"></i>Twitter',
-      'href': 'https://twitter.com/fineanmol',
+    'X': {
+      'text': '<i class="fa fa-X" style="font-size:20px"></i>X',
+      'href': 'https://cdn.prod.website-files.com/5d66bdc65e51a0d114d15891/64cebc6c19c2fe31de94c78e_X-vector-logo-download.png',
       'id': 'tools'
     },
     'Stars': {

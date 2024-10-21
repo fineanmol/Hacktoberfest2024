@@ -7,12 +7,9 @@ class TodoListApp(QMainWindow):
         super().__init__()
         self.setWindowTitle("Todo List App")
         self.setGeometry(100, 100, 400, 300)
-
         self.tasks = []
-
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
-
         self.layout = QVBoxLayout()
         self.central_widget.setLayout(self.layout)
         self.task_list = QListView()

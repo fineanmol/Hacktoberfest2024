@@ -1662,6 +1662,7 @@ contributors = [
     fullname: "Arpit Ujjwal",
     username: "https://github.com/ArpitUjjwal",
   },
+  
   {
     id: 332,
     fullname: "Amisha Aggarwal",
@@ -2073,6 +2074,11 @@ contributors = [
     id: 427,
     fullname: "Yajnesh Kumar",
     username: "https://github.com/yajneshkumar790",
+  },
+  {
+    id: 428,
+    fullname: "Lamine Gaye",
+    username: "https://github.com/abda-gaye",
   },
   
 ];

@@ -33,7 +33,15 @@ function setCurrentYear() {
   // Set the document title with the current year
   document.title = `Hacktoberfest ${currentYear} - Contributors`;
 }
+function updateContributorsCount() {
+  const count = contributors.length; 
+  const statsElement = document.getElementById('stats');
+  statsElement.innerHTML = `Contributeurs: ${count}`; 
+}
 
+window.onload = function() {
+  updateContributorsCount();
+};
 // Call the function to set the current year
 setCurrentYear();
 

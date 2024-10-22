@@ -12,6 +12,8 @@ def guess_number():
 
         user_guess = int(input("Enter your guess: "))   #Asks the user for their guess
         attempts += 1   #Increase the number of attempts by 1 if the user has made a guess
+        if user_guess < 1 or user_guess > 100:  #If the user guesses a number outside of the range it will print an error message
+            print('!Error: Please Enter a number between 1 and 100')
 
         if user_guess < number_to_guess:    #If the user's guess is less than the number to guess
             if number_to_guess - user_guess < 5:  #If the user's guess is within 5 of the number to guess

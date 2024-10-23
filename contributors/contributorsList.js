@@ -2076,7 +2076,7 @@ contributors = [
   },
   {
     id: 428,
-    fullname: "Harshit Jaiswal",
+    fullname: "Harshit Jaiswal ",
     username: " https://github.com/harshu84190",
   },
 

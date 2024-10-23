@@ -143,6 +143,33 @@
     <script src="./scripts/menu.js"></script>
     <script src="./contributors/contributorsList.js"></script>
     <script src="./scripts/main.js"></script>
+
+    <script>
+        document.getElementById("search").addEventListener("keyup", function () {
+            const filter = this.value.toLowerCase();
+            const contributorDivs = document.querySelectorAll("#contributors .contributor");
+
+            contributorDivs.forEach(div => {
+                const name = div.textContent.toLowerCase();
+                div.style.display = name.includes(filter) ? "" : "none";
+            });
+        });
+    </script>
+    <script>
+        const backToTopButton = document.getElementById("back-to-top-btn");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        backToTopButton.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
 </body>
 
 </html>

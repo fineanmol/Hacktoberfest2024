@@ -13,31 +13,26 @@ class TodoListApp(QMainWindow):
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
 
-        self.layout = QVBoxLayout()
-        self.central_widget.setLayout(self.layout)
-        self.task_list = QListView()
-        self.task_list.setEditTriggers(QListView.NoEditTriggers)
-        self.task_list.setSelectionMode(QListView.SingleSelection)
+        self.layout = QVBoxLayout(self.central_widget)
+        self.task_list = QListView(editTriggers=QListView.NoEditTriggers, selectionMode=QListView.SingleSelection)
         self.layout.addWidget(self.task_list)
-        self.label = QLabel("Enter a task:")
-        self.layout.addWidget(self.label)
+
+        self.layout.addWidget(QLabel("Enter a task:"))
 
         self.task_input = QLineEdit()
         self.layout.addWidget(self.task_input)
 
-        self.add_button = QPushButton("Add")
-        self.add_button.clicked.connect(self.add_task)
+        self.add_button = QPushButton("Add", clicked=self.add_task)
         self.layout.addWidget(self.add_button)
 
-        self.remove_button = QPushButton("Remove")
-        self.remove_button.clicked.connect(self.remove_task)
+        self.remove_button = QPushButton("Remove", clicked=self.remove_task)
         self.layout.addWidget(self.remove_button)
 
         self.update_task_list()
 
     def add_task(self):
-        task = self.task_input.text()
-        if task:
+        task = self.task_input.text().strip()
+        if task and task not in self.tasks:
             self.tasks.append(task)
             self.task_input.clear()
             self.update_task_list()
@@ -45,8 +40,7 @@ class TodoListApp(QMainWindow):
     def remove_task(self):
         selected_index = self.task_list.currentIndex()
         if selected_index.isValid():
-            task = self.tasks[selected_index.row()]
-            self.tasks.remove(task)
+            self.tasks.pop(selected_index.row())
             self.update_task_list()
 
     def update_task_list(self):

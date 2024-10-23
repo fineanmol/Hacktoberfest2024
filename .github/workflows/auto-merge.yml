@@ -11,15 +11,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check PR status
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Check PR status and merge
         run: |
           PR_NUMBER=$(jq -r ".pull_request.number" "$GITHUB_EVENT_PATH")
           PR_URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/pulls/${PR_NUMBER}"
-          PR_STATE=$(curl -s -H "Authorization: token ${{ secrets.AUTOMERGE_TOKEN }}" $PR_URL | jq -r .state)
-          
+          PR_STATE=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" $PR_URL | jq -r .state)
+
           if [ "$PR_STATE" = "open" ]; then
             echo "PR is still open. Merging..."
-            curl -s -X PUT -H "Authorization: token ${{ secrets.AUTOMERGE_TOKEN }}" $PR_URL/merge
+            MERGE_RESPONSE=$(curl -s -X PUT -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" $PR_URL/merge)
+
+            # Check if the merge was successful
+            if echo "$MERGE_RESPONSE" | jq -e '.merged'; then
+              echo "PR merged successfully."
+            else
+              echo "Failed to merge PR: $MERGE_RESPONSE"
+              exit 1
+            fi
+          else
+            echo "PR is not open; current state: $PR_STATE"
           fi
         env:
-          GITHUB_TOKEN: ${{ secrets.AUTOMERGE_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

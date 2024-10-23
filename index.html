@@ -143,6 +143,18 @@
     <script src="./scripts/menu.js"></script>
     <script src="./contributors/contributorsList.js"></script>
     <script src="./scripts/main.js"></script>
+
+    <script>
+        document.getElementById("search").addEventListener("keyup", function () {
+            const filter = this.value.toLowerCase();
+            const contributorDivs = document.querySelectorAll("#contributors .contributor");
+
+            contributorDivs.forEach(div => {
+                const name = div.textContent.toLowerCase();
+                div.style.display = name.includes(filter) ? "" : "none";
+            });
+        });
+    </script>
 </body>
 
 </html>

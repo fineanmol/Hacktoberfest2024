@@ -125,13 +125,17 @@ footer {
   text-decoration: none;
   color: #fff;
   border: 1.1px solid white;
-  padding: 5px;
+  padding: 10px; /* Adjust padding to ensure proper spacing */
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; /* Set width */
+  height: 40px; /* Set height */
 }
 
 .socials a i {
   font-size: 1.1rem;
-  width: 20px;
   transition: color .4s ease;
 }
 

@@ -180,12 +180,12 @@ footer {
 }
 
 .footer-menu ul li a {
-  color: #cfd2d6;
+  color:whitesmoke;
   text-decoration: none;
 }
 
 .footer-menu ul li a:hover {
-  color: black;
+  color:deeppink;
 }
 
 

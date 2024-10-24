@@ -176,17 +176,19 @@ footer {
 
 .footer-menu ul li {
   padding-right: 10px;
-  display: block;
+  display:block;
 }
 
 .footer-menu ul li a {
-  color: #cfd2d6;
+  color:whitesmoke;
   text-decoration: none;
 }
 
 .footer-menu ul li a:hover {
-  color: #27bcda;
+  color:deeppink;
 }
+
+
 
 @media (max-width:500px) {
   .footer-menu ul {

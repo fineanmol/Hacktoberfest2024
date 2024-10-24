@@ -176,7 +176,7 @@ footer {
 
 .footer-menu ul li {
   padding-right: 10px;
-  display: block;
+  display:block;
 }
 
 .footer-menu ul li a {
@@ -185,8 +185,10 @@ footer {
 }
 
 .footer-menu ul li a:hover {
-  color: #27bcda;
+  color: black;
 }
+
+
 
 @media (max-width:500px) {
   .footer-menu ul {

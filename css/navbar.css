@@ -1,20 +1,25 @@
 .navbar{
-  padding:.5rem 2rem
+  padding:.5rem 2rem;     
+ 
 }
 nav{
-  background-color:var(--nav-color)
+  
+  background-color:lightgreen;
 }
 .navbar-nav{
-  width:100%
+  width:100%;
+
 }
 .navbar-brand{
   line-height:1;
-  margin-right:1rem
+  margin-right:1rem;
+  
 }
 .navbar-brand svg{
-  height:37px;
+  height:70px;
   width:auto;
-  vertical-align:middle
+  vertical-align:middle;
+  color:rgb(77, 199, 77);
 }
 .navbar-light .navbar-nav .nav-link{
   color:var(--text);
@@ -23,7 +28,7 @@ nav{
   margin:0 10px!important
 }
 .navbar-light .navbar-nav .active{
-  background-color:#f1ffc5
+  background-color: #f1ffc5
 }
 .navbar-light .navbar-nav .active>.nav-link{
   color:#df271a;

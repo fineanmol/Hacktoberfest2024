@@ -1987,12 +1987,6 @@ contributors = [
   },
 
   {
-    id: 441,
-    fullname: "Parth Panjwani",
-    username: "https://github.com/Parth-Panjwani",
-  },
-
-  {
     id: 412,
     fullname: "Garima Jain",
     username: "https://github.com/garimajain12",
@@ -2074,5 +2068,26 @@ contributors = [
     fullname: "Yajnesh Kumar",
     username: "https://github.com/yajneshkumar790",
   },
-  
+  {
+    id: 428,
+    fullname: "Aviraj Saha",
+    username: "https://github.com/avirsaha",
+
+  },
+  {
+    id: 429,
+    fullname: "Kali Kai",
+    username: "https://github.com/kalijester68",
+  },
+  {
+    id: 430,
+    fullname: "Vinícius Bezerra",
+    username: "https://github.com/viniciuseneas",
+  }, 
+    {
+    id: 441,
+    fullname: "Parth Panjwani",
+    username: "https://github.com/Parth-Panjwani",
+  },
+
 ];

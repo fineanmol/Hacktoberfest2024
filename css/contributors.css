@@ -28,7 +28,7 @@
   box-sizing: inherit;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: 50ms;
+  transition: 200ms;
 }
 ::selection {
   background-color: #4835f7;

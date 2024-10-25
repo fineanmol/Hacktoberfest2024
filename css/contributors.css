@@ -301,7 +301,7 @@ a:hover {
 }
 #stats {
   background-color: var(--footer-color);
-  padding: 20px;
+  padding: 30px;
   border-radius: 20px;
   display: flex;
   justify-content: center;

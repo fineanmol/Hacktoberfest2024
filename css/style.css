@@ -21,7 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  align-items:center;
 }
 #top {
   top: -0.4rem;

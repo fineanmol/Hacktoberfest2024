@@ -2069,25 +2069,7 @@ contributors = [
     username: "https://github.com/yajneshkumar790",
   },
   {
-    id: 428,
-    fullname: "Aviraj Saha",
-    username: "https://github.com/avirsaha",
-
+    id:428,
+    fullname: "Ayushi Pal",
+    username: "https://github.com/ayushii06",
   },
-  {
-    id: 429,
-    fullname: "Kali Kai",
-    username: "https://github.com/kalijester68",
-  },
-  {
-    id: 430,
-    fullname: "Vinícius Bezerra",
-    username: "https://github.com/viniciuseneas",
-  }, 
-    {
-    id: 441,
-    fullname: "Parth Panjwani",
-    username: "https://github.com/Parth-Panjwani",
-  },
-
-];

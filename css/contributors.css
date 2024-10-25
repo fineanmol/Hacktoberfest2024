@@ -549,6 +549,7 @@ body {
   position: relative;
   height: var(--toggleHeight);
   width: var(--toggleWidth);
+  min-width: 4.5rem;
   border-radius: var(--toggleHeight);
   transition: all 0.5s ease-in-out;
   background: var(--bgColor--night);

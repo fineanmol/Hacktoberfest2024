@@ -58,3 +58,17 @@ nav{
 .navbar-light .navbar-nav .nav-link:hover{
   color:#dc143c
 }
+
+ul#socialmenu {
+  justify-content: flex-end;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+}
+
+.social-icon i {
+  margin-right: 5px; /* Space between icon and text */
+}
+

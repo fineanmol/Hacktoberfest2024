@@ -212,6 +212,7 @@ $(".tdnn").click(function () {
   $(".tdnn").toggleClass("day");
 });
 
+
 // Display live stats with the dynamic year
 document.getElementById(
   "stats"

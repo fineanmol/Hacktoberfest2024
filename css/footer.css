@@ -127,6 +127,7 @@ footer {
   border: 1.1px solid white;
   padding: 5px;
   border-radius: 50%;
+  transition: border-color 0.2s ease;
 }
 
 .socials a i {
@@ -186,6 +187,7 @@ footer {
 
 .footer-menu ul li a:hover {
   color: #27bcda;
+  border-color: #006e85;
 }
 
 @media (max-width:500px) {

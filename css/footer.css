@@ -138,7 +138,15 @@ footer {
 .socials a:hover i {
   color: aqua;
 }
-
+.linkedin a:hover i {
+  color: #0077B5;
+}
+.facebook a:hover i {
+  color: #316FF6;
+}
+.instagram a:hover i {
+  color: #E1306C;
+}
 .footer-bottom {
   position: absolute;
   background: #000;

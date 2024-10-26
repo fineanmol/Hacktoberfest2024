@@ -107,8 +107,8 @@ body {
   transition: 0.5s;
 }
 .light #back-to-top-btn {
-  color: #7c7575;
-  background-color: rgba(255, 255, 255, 0.1);
+  color: rgb(242, 244, 251);
+  background-color: #d43370;
 }
 .container {
   position: relative;

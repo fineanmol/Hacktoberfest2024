@@ -1986,43 +1986,6 @@ contributors = [{
     },
 
     {
-        id: 441,
-        fullname: "Parth Panjwani",
-        username: "https://github.com/Parth-Panjwani",
-    },
-
-    {
-        id: 412,
-        fullname: "Garima Jain",
-        username: "https://github.com/garimajain12",
-    },
-    {
-        id: 413,
-        fullname: "Niraj Pradhan",
-        username: "https://github.com/nirajpdn",
-    },
-    {
-        id: 414,
-        fullname: "David Gillick",
-        username: "https://github.com/VertexAssassins",
-    },
-    {
-        id: 415,
-        fullname: "Vatsal K",
-        username: "https://github.com/vatsalkudecha",
-    },
-    {
-        id: 416,
-        fullname: "Alejandro Armenta",
-        username: "https://github.com/alexanderNWO",
-    },
-    {
-        id: 417,
-        fullname: "Krish Katyal",
-        username: "https://github.com/krishkatyal",
-    },
-
-    {
         id: 418,
         fullname: "Arshpreet Singh Bedi",
         username: "https://github.com/avibedi1768",
@@ -2078,5 +2041,64 @@ contributors = [{
         fullname: "Tio Risnanto",
         username: "https://github.com/risnanto73",
     },
+
+];
+=======
+  {
+    id: 421,
+    fullname: "Gautami SInha",
+    username: "https://github.com/amnotcreative",
+  },
+  {
+    id: 422,
+    fullname: "Evgeny Skorlov",
+    username: "https://github.com/ru-asdx",
+  },
+  {
+    id: 423,
+    fullname: "Mohit Yadav",
+    username: "https://github.com/ymohit1603",
+  },
+  {
+    id: 424,
+    fullname: "Sumit Br",
+    username: "https://github.com/SumitBr",
+  },
+  {
+    id: 425,
+    fullname: "Auro S.",
+    username: "https://github.com/aurocodes",
+  },
+  {
+    id: 426,
+    fullname: "Diana Babenko",
+    username: "https://github.com/DianaBabenko",
+  },
+  {
+    id: 427,
+    fullname: "Yajnesh Kumar",
+    username: "https://github.com/yajneshkumar790",
+  },
+  {
+    id: 428,
+    fullname: "Aviraj Saha",
+    username: "https://github.com/avirsaha",
+
+  },
+  {
+    id: 429,
+    fullname: "Kali Kai",
+    username: "https://github.com/kalijester68",
+  },
+  {
+    id: 430,
+    fullname: "Vinícius Bezerra",
+    username: "https://github.com/viniciuseneas",
+  }, 
+    {
+    id: 441,
+    fullname: "Parth Panjwani",
+    username: "https://github.com/Parth-Panjwani",
+  },
 
 ];

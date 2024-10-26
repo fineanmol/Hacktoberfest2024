@@ -2084,10 +2084,14 @@ contributors = [
     fullname: "Vinícius Bezerra",
     username: "https://github.com/viniciuseneas",
   }, 
+  {
+    id: 431,
+    fullname: "Ndeye Siga Pouille",
+    username: "https://github.com/Seegah",
+  }, 
     {
     id: 441,
     fullname: "Parth Panjwani",
     username: "https://github.com/Parth-Panjwani",
   },
-
 ];

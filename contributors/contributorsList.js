@@ -2085,9 +2085,14 @@ contributors = [
     username: "https://github.com/viniciuseneas",
   }, 
     {
-    id: 441,
+    id: 431,
     fullname: "Parth Panjwani",
     username: "https://github.com/Parth-Panjwani",
+  },
+  {
+    id: 432,
+    fullname: "Nishant Gaurav",
+    username: "https://github.com/imbiber",
   },
 
 ];

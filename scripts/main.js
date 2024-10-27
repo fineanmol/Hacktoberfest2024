@@ -216,3 +216,20 @@ $(".tdnn").click(function () {
 document.getElementById(
   "stats"
 ).innerHTML = `You guys are awesome, we have again passed the GitHub rate limit this hour. <a href="https://github.com/fineanmol/Hacktoberfest${currentYear}" target="_blank">Here</a> is a link to check out our repo's live stats.`;
+const button = document.querySelector('.annoying-button');
+
+button.addEventListener('click', () => {
+    const randomColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+    button.style.backgroundColor = randomColor;
+});
+const messages = [
+  "I'm watching you!",
+  "Catch me if you can!",
+  "Oh no, not again!",
+  "Click me if you dare!"
+];
+
+button.addEventListener('mouseover', () => {
+  const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+  button.innerText = randomMessage;
+});

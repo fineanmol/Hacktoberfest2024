@@ -2090,7 +2090,7 @@ contributors = [
   },
   {
     id: 413,
-    fullname: "Abhinav Bansal",
+    fullname: "Abhinav Bansal ",
     username: "https://github.com/BansalAbhinav",
   },
 ];

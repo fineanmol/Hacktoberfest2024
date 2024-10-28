@@ -135,8 +135,24 @@ footer {
   transition: color .4s ease;
 }
 
-.socials a:hover i {
-  color: aqua;
+.socials a[href*="facebook.com"]:hover i {
+  color: #3b5998;
+  filter: drop-shadow(0 0 1rem #a5c1ff);
+}
+
+.socials a[href*="twitter.com"]:hover i {
+  color: #1DA1F2;
+  filter: drop-shadow(0 0 1rem #89cef8);
+}
+
+.socials a[href*="instagram.com"]:hover i {
+  color: #C13584;
+  filter: drop-shadow(0 0 1rem #ffa5d8);
+}
+
+.socials a[href*="linkedin.com"]:hover i {
+  color: #0077b5;
+  filter: drop-shadow(0 0 1rem #83d3ff);
 }
 
 .footer-bottom {

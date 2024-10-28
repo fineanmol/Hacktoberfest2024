@@ -24,6 +24,9 @@ class TodoListApp(QMainWindow):
 
         self.task_input = QLineEdit()
         self.layout.addWidget(self.task_input)
+        
+        self.task_input = QLineEdit()
+        self.layout.addWidget(self.task_input)
 
         self.add_button = QPushButton("Add")
         self.add_button.clicked.connect(self.add_task)

@@ -2089,5 +2089,10 @@ contributors = [
     fullname: "Parth Panjwani",
     username: "https://github.com/Parth-Panjwani",
   },
+  {
+    id: 432,
+    fullname: "Satyam Singh",
+    username: "https://github.com/satmm",
+  },
 
 ];

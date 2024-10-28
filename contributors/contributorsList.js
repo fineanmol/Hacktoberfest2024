@@ -2072,7 +2072,6 @@ contributors = [
     id: 428,
     fullname: "Aviraj Saha",
     username: "https://github.com/avirsaha",
-
   },
   {
     id: 429,
@@ -2083,11 +2082,15 @@ contributors = [
     id: 430,
     fullname: "Vinícius Bezerra",
     username: "https://github.com/viniciuseneas",
-  }, 
-    {
+  },
+  {
     id: 441,
     fullname: "Parth Panjwani",
     username: "https://github.com/Parth-Panjwani",
   },
-
+  {
+    id: 442,
+    fullname: "Yash Saraswat",
+    username: "https://github.com/yash-saraswat",
+  },
 ];

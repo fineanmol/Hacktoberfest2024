@@ -1,3 +1,6 @@
+body{
+  padding: 0px;
+}
 #footer {
     position: fixed;
     left: 0;

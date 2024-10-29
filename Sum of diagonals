@@ -1,0 +1,41 @@
+import java.util.*;
+
+public class DiagonalSum {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the size of the square matrix: ");
+        int n = scanner.nextInt();
+        
+        int[][] matrix = new int[n][n];
+
+        System.out.println("Enter the elements of the matrix:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                matrix[i][j] = scanner.nextInt();
+            }
+        }
+
+        int sum = calculateSum(matrix);
+        System.out.println("Diagonal Sum: " + sum);
+        
+        scanner.close(); // Close the scanner
+    }
+
+    public static int calculateSum(int[][] matrix) {
+        int sum = 0;
+        int n = matrix.length; // Assuming square matrix
+        
+        for (int i = 0; i < n; i++) {
+            sum = sum + matrix[i][i]; // Primary diagonal
+            sum = sum + matrix[i][n - i - 1]; // Secondary diagonal
+        }
+        
+        // If the matrix has odd dimensions, subtract the center element
+        if (n % 2 != 0) {
+            sum -= matrix[n / 2][n / 2]; // Center element is counted twice
+        }
+        
+        return sum;
+    }
+}

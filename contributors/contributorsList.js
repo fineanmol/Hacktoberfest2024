@@ -2092,7 +2092,7 @@ contributors = [
 
   {
     id: 442,
-    fullname: "Daniella E",
+    fullname: "Daniella E.",
     username: "https://github.com/GitElla404",
   },
 

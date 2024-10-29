@@ -31,7 +31,7 @@ const menu = {
       'id': 'linkedin'
     },
     'NDC': {
-      'text': '<i class="fa fa-twitter" style="font-size:20px"></i>Twitter',
+      'text': '<i class="fa-brands fa-x-twitter" style="font-size:20px"></i>Twitter',
       'href': 'https://twitter.com/fineanmol',
       'id': 'tools'
     },

@@ -635,3 +635,14 @@ body {
   font-weight: 600;
   box-shadow: inset 120px 0 0 0 #fe0c43;
 }
+
+
+.contributor {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.1rem;
+}
+#contributor-count {
+  font-weight: bold;
+  margin-top: 10px;
+}

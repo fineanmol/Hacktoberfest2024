@@ -216,3 +216,13 @@ $(".tdnn").click(function () {
 document.getElementById(
   "stats"
 ).innerHTML = `You guys are awesome, we have again passed the GitHub rate limit this hour. <a href="https://github.com/fineanmol/Hacktoberfest${currentYear}" target="_blank">Here</a> is a link to check out our repo's live stats.`;
+
+
+
+
+function updateTotalContributors() {
+    const total = Contributors.length;
+    document.getElementById('contributor-count').innerText = `Total Contributors: ${total}.`;
+}
+
+window.onload = updateTotalContributors;

@@ -13,6 +13,21 @@ P.S. Star ⭐ and share this repository if you had fun!! 😍
 Hacktoberfest 2024
 ![Event Completed](/scripts/Event_Completed_.png)
 
+<details>
+  <summary>Table of Contents</summary>
+
+- [📌 Videos 📽️:](#-videos-️)
+- [Contribution Rules📚:](#contribution-rules)
+  - [Getting Started 🤩🤗:](#getting-started-)
+  - [Avoid Conflicts {Syncing your fork}](#avoid-conflicts-syncing-your-fork)
+  - [Swags of Hacktoberfest:](#swags-of-hacktoberfest)
+- [FAQs (Frequently Asked Questions)](#faqs-frequently-asked-questions)
+  - [Our Top Contributors](#our-top-contributors)
+
+</details>
+
+<br />
+
 # 📌 Videos 📽️:
 
 - [Hacktoberfest Intro](https://www.youtube.com/watch?v=mq_FIHdxmIk)

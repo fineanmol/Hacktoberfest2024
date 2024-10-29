@@ -1,0 +1,14 @@
+function DecimalToBinary(num) {
+    
+    if (num >= 1) {
+        DecimalToBinary(Math.floor(num / 2));
+    }
+    process.stdout.write((num % 2).toString()); 
+}
+
+// Driver code
+const dec_val = 5; 
+
+// Calling function
+DecimalToBinary(dec_val);
+console.log(); // output 101

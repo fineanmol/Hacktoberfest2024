@@ -177,10 +177,13 @@ a:hover {
   font-size: 2rem;
   font-family: "Special Elite", cursive;
   transition: all 1s;
+  letter-spacing: 2px; /* Add spacing between letters */
 }
 .heading:hover {
   color: #fe0c43;
   transition: 1s;
+  transform: scale(1.1); /* Increase the size of the heading on hover */
+  text-shadow: 2px 2px 4px rgba(227, 252, 40, 0.3); /* Add a subtle text shadow */
 }
 .content {
   margin-top: 80px;
@@ -207,6 +210,7 @@ a:hover {
   white-space: nowrap;
   letter-spacing: 0;
   transition: letter-spacing 0.5s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow */
 }
 @media (min-width: 768px) {
   .box {

@@ -81,7 +81,7 @@ footer {
   right: 0;
   background: #111;
   height: auto;
-  width: 100vw;
+  width: auto;
   padding-top: 40px;
   color: #fff;
 }

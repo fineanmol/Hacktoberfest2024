@@ -1987,12 +1987,6 @@ contributors = [
   },
 
   {
-    id: 441,
-    fullname: "Parth Panjwani",
-    username: "https://github.com/Parth-Panjwani",
-  },
-
-  {
     id: 412,
     fullname: "Garima Jain",
     username: "https://github.com/garimajain12",
@@ -2073,11 +2067,6 @@ contributors = [
     id: 427,
     fullname: "Yajnesh Kumar",
     username: "https://github.com/yajneshkumar790",
-  },
-  {
-    id: 428,
-    fullname: "Yash Patil",
-    username: "https://github.com/yashpatil02121",
   },
   
 ];

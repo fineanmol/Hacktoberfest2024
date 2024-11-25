@@ -102,7 +102,7 @@ Many candidates get attracted to Hacktoberfest for the swags. After 4 successful
 <li><B><p><img src="https://miro.medium.com/max/1050/1*4JctIO7irt8hFxBmTvUpiQ.jpeg" width="400" height="225" style="width: 400px; height: 225px;" alt="t-shirt image"></a></p><p><img src="https://miro.medium.com/max/1050/1*jkffr74bq5RsQ_xqDhgqYQ.jpeg" width="400" height="225" style="width: 400px; height: 225px;" alt="stickers image"></p>
 </b></li>
 
-# FAQs (Frequently Asked Questions)
+# FAQs (Frequently Asked Questions).
 
 - Who all can contribute?
   - Anyone with a GitHub account and who is signed up for [Hacktoberfest](https://hacktoberfest.digitalocean.com/) :)

@@ -35,14 +35,14 @@ class TodoListApp(QMainWindow):
 
         self.update_task_list()
 
-    def add_task(self):
+    def add_task(self):         #to add a certain task
         task = self.task_input.text()
         if task:
             self.tasks.append(task)
             self.task_input.clear()
             self.update_task_list()
 
-    def remove_task(self):
+    def remove_task(self):      #to remove a specific task
         selected_index = self.task_list.currentIndex()
         if selected_index.isValid():
             task = self.tasks[selected_index.row()]

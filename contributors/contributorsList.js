@@ -2070,6 +2070,11 @@ contributors = [
   },
   {
     id: 428,
+
+    fullname: "Vara Rahul Rajana",
+    username: "https://github.com/rajanarahul93",
+  }
+
     fullname: "Aviraj Saha",
     username: "https://github.com/avirsaha",
 
@@ -2089,5 +2094,4 @@ contributors = [
     fullname: "Parth Panjwani",
     username: "https://github.com/Parth-Panjwani",
   },
-
 ];

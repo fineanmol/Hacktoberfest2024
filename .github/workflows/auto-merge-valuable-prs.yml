@@ -29,10 +29,10 @@ jobs:
         id: find-prs
         run: |
           # Get PRs with the valuable-contribution label that are mergeable
-          valuable_prs=$(gh pr list --state open --label "valuable-contribution" --json number,title,author,mergeable,mergeable_state --limit 50)
+          valuable_prs=$(gh pr list --state open --label "valuable-contribution" --json number,title,author,mergeable --limit 50)
           
           # Also check PRs that don't only modify contributors file
-          all_prs=$(gh pr list --state open --json number,title,author,mergeable,mergeable_state,files --limit 50)
+          all_prs=$(gh pr list --state open --json number,title,author,mergeable,files --limit 50)
           
           echo "valuable_prs=$valuable_prs" >> $GITHUB_OUTPUT
           echo "all_prs=$all_prs" >> $GITHUB_OUTPUT

@@ -1,0 +1,80 @@
+name: 🎉 Auto-Close Contributor PRs
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    paths:
+      - 'contributors/contributorsList.js'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  check-contributor-pr:
+    runs-on: ubuntu-latest
+    if: github.repository == 'fineanmol/Hacktoberfest2024'
+    
+    steps:
+      - name: 🔄 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🔍 Check if PR only modifies contributors
+        id: check-files
+        run: |
+          # Get the PR number from the event
+          pr_number="${{ github.event.pull_request.number }}"
+          
+          # Get files changed in this PR
+          files_changed=$(gh pr view $pr_number --json files --jq '.files[].path')
+          echo "Files changed in PR #$pr_number:"
+          echo "$files_changed"
+          
+          # Count non-contributor files
+          other_files=0
+          contributor_file_found=false
+          
+          while IFS= read -r file; do
+            if [ "$file" = "contributors/contributorsList.js" ]; then
+              contributor_file_found=true
+            else
+              other_files=$((other_files + 1))
+            fi
+          done <<< "$files_changed"
+          
+          echo "contributor_file_found=$contributor_file_found" >> $GITHUB_OUTPUT
+          echo "other_files=$other_files" >> $GITHUB_OUTPUT
+          echo "pr_number=$pr_number" >> $GITHUB_OUTPUT
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🎉 Close contributor-only PR
+        if: steps.check-files.outputs.contributor_file_found == 'true' && steps.check-files.outputs.other_files == '0'
+        run: |
+          pr_number="${{ steps.check-files.outputs.pr_number }}"
+          author="${{ github.event.pull_request.user.login }}"
+          
+          echo "🎉 Closing contributor-only PR #$pr_number by @$author"
+          
+          # Close the PR with a thank you message
+          gh pr close $pr_number --comment "🎉 Thank you for your contribution to Hacktoberfest 2024! Your changes have been merged automatically into the main branch to resolve merge conflicts. ✅ Your contribution is now live! 🌟 You're officially part of Hacktoberfest 2024! Thank you @$author for participating in open source! 🚀 This PR was automatically closed because your contributor information has already been merged. #Hacktoberfest #OpenSource"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: ✅ Log valuable PR
+        if: steps.check-files.outputs.other_files != '0'
+        run: |
+          pr_number="${{ steps.check-files.outputs.pr_number }}"
+          author="${{ github.event.pull_request.user.login }}"
+          
+          echo "✅ PR #$pr_number by @$author contains valuable changes beyond contributors"
+          echo "This PR will be reviewed for auto-merge or manual review"
+          
+          # Add a label to indicate this PR has valuable content
+          gh pr edit $pr_number --add-label "valuable-contribution"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} 

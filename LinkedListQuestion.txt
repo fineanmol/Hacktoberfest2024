@@ -1,0 +1,55 @@
+Questions on Linked List
+
+#basic terminology question related to linked list
+Q1. Explain Linked List in short.
+Q2. How will you represent a linked list in a graphical view
+Q3. How many types of Linked List exist?
+Q4. Explain Singly Linked List in short.
+Q5. What do you understand by Doubly Linked List?
+Q6. Explain Multiply Linked List in short.
+Q7. How will you explain Circular Linked List?
+Q8. How many pointers are necessary to implement a simple Linked List?
+Q9. How can you represent a linked list node?
+Q10. Which type of memory allocation is referred for Linked List?
+Q11. What do you know about traversal in linked lists?
+Q12. What are the main differences between the Linked List and Linear Array?
+Q13. What does the dummy header in the linked list contain?
+Q14. Mention a few applications of Linked Lists?
+Q15. How can you insert a node to the beginning of a singly linked list?
+Q16. Name some applications which use Linked Lists.
+Q17. Differentiate between singly and doubly linked lists? 
+Q18. What is the main advantage of a linked list?
+Q19. How can someone add an item to the beginning of the list?
+Q20. How can someone insert a node at the end of Linked List?
+
+#Programming questions on linked list
+Q1. Print the Middle of a given linked list
+Q2. Flattening a linked list
+Q3. Delete the elements in an linked list whose sum is equal to zero
+Q4. Delete middle of linked list
+Q5. Remove duplicate elements from sorted linked list
+Q6. Add 1 to a number represented as a linked list
+Q7. Reverse a linked list in groups of given size
+Q8. Detect loop in linked list
+Q9. Remove loop in linked list
+Q10. Find nth node from the end of linked list
+Q11. Function to check if a singly linked list is a palindrome
+Q12. Reverse alternate k node in a singly linked list
+Q13. Delete last occurrence of an item from linked list
+Q14. Rotate a linked list.
+Q15. Delete n nodes after m nodes of a linked list.
+Q16. Merge a linked list into another linked list at alternate positions.
+Q17. Write a function to delete a linked list.
+Q18. Write a function to reverse the nodes of a linked list.
+Q19. Why quicksort is preferred for arrays and merge sort for linked lists.
+Q20. Write a program to insert a node at the end of a circular linked list
+Q21. Write a program in C to insert a node at the beginning of a circular linked list
+Q22. Write a program in C to insert a node at any position in a circular linked list
+Q23. Write a program in C to delete a node from the middle of a circular linked list.
+Q24. Write a program in C to delete the node at the end of a circular linked list.
+Q25. Write a program in C to search an element in a circular linked list.
+Q26. Write a C programming to sort a given linked list by bubble sort.
+Q27. Write a C programming to sort a given linked list by bubble sort
+Q28. Write a program in C to delete a node from the beginning of a doubly linked list.
+Q29. Write a program in C to insert a new node at the beginning in a doubly linked list.
+Q30. Write a program in C to insert a new node at any position in a doubly linked list.

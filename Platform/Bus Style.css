@@ -1,0 +1,43 @@
+*{
+font-family: "Poppins" ,sans-serif;
+}
+
+.button{
+    height: 45px;
+    margin: 45px 0;
+}
+
+.button input{
+    height: 100%;
+    width: 25%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #71b7e6,green);
+   
+}
+ 
+.button input:hover{
+    background: linear-gradient(-135deg, #71b7e6,green);
+}
+
+.container1{
+    max-width: 1270px;
+    width: 150%;
+    height: 50%;
+    background:black;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.container1 .title{
+    font-size: 50px;
+    font-weight: 500;
+    position: relative;
+}
+
+

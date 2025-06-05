@@ -1,0 +1,64 @@
+#include <iostream>
+
+class ListNode {
+public:
+    int data;
+    ListNode* next;
+    ListNode(int val) : data(val), next(nullptr) {}
+};
+
+class Solution {
+public:
+    ListNode* sortedInsert(ListNode* head, int data) {
+        ListNode* newNode = new ListNode(data);
+        if (head == nullptr || head->data >= data) {
+            newNode->next = head;
+            return newNode;
+        }
+
+        ListNode* current = head;
+        while (current->next != nullptr && current->next->data < data) {
+            current = current->next;
+        }
+
+        newNode->next = current->next;
+        current->next = newNode;
+        return head;
+    }
+};
+
+void printList(ListNode* head) {
+    ListNode* current = head;
+    while (current != nullptr) {
+        std::cout << current->data << " ";
+        current = current->next;
+    }
+    std::cout << std::endl;
+}
+
+int main() {
+    // Example 1
+    ListNode* head1 = new ListNode(25);
+    head1->next = new ListNode(36);
+    head1->next->next = new ListNode(47);
+    head1->next->next->next = new ListNode(58);
+    head1->next->next->next->next = new ListNode(69);
+    head1->next->next->next->next->next = new ListNode(80);
+
+    Solution sol1;
+    int data1 = 19;
+    ListNode* newHead1 = sol1.sortedInsert(head1, data1);
+    std::cout << "Example 1: ";
+    printList(newHead1);
+
+    // Example 2
+    ListNode* head2 = new ListNode(50);
+    head2->next = new ListNode(100);
+
+    Solution sol2;
+    int data2 = 75;
+    ListNode* newHead2 = sol2.sortedInsert(head2, data2);
+    std::cout << "Example 2: ";
+    printList(newHead2);
+
+    return 0

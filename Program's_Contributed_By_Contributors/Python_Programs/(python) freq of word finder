@@ -1,0 +1,15 @@
+import string
+from collections import Counter
+
+
+
+punct = string.punctuation
+p = str.maketrans(punct + "\n\r", ' '*(len(punct)+2))
+
+wc = Counter(text.translate(p).split())
+
+while True:
+    word=input("Enter a word: ") 
+    if not word.strip():
+        break 
+    print(f"'{word}' occures {wc.get(word,0)} times.") 

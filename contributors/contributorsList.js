@@ -2482,6 +2482,11 @@ contributors = [
     fullname: "Parth Panjwani",
     username: "https://github.com/Parth-Panjwani",
   },
+  {
+    id: 441,
+    fullname: "Gokul M",
+    username: "https://github.com/Gokul-MK",
+  }
 
   {
     id: 442,

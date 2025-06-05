@@ -57,20 +57,18 @@ function filterUsers(str = "ContributorName", array) {
  * @param {Array} array - The array of contributors to render.
  */
 function render(array) {
+  const fragment = document.createDocumentFragment();
   array.forEach((item) => {
-    let username = document.createElement("span");
-    username.innerHTML = item.fullname;
-
-    let user = document.createElement("a");
-    user.className = "box-item";
-    user.setAttribute("href", item.username);
-    user.setAttribute("id", item.id);
-    user.append(username);
-
     if (item.id <= initialContributorsNumber) {
-      document.getElementById("contributors").append(user);
+      let user = document.createElement("a");
+      user.className = "box-item";
+      user.setAttribute("href", item.username);
+      user.setAttribute("id", item.id);
+      user.innerHTML = `<span>${item.fullname}</span><img loading="lazy" src="https://avatars.githubusercontent.com/${item.username.split("https://github.com/")[1]}">`;
+      fragment.appendChild(user);
     }
   });
+  document.getElementById("contributors").appendChild(fragment);
 }
 
 // Load contributors after document loads.
@@ -216,3 +214,4 @@ $(".tdnn").click(function () {
 document.getElementById(
   "stats"
 ).innerHTML = `You guys are awesome, we have again passed the GitHub rate limit this hour. <a href="https://github.com/fineanmol/Hacktoberfest${currentYear}" target="_blank">Here</a> is a link to check out our repo's live stats.`;
+

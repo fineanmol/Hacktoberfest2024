@@ -2424,6 +2424,16 @@ contributors = [
   },
 
   {
+
+    id:422,
+    fullname:"Evgeny Skorlov",
+    username:"https://github.com/ru-asdx",
+  },
+{
+  id:423,
+  fullname:"Adnan Kaisar",
+  username:"https://github.com/whoadnan101",
+},
     id: 422,
     fullname: "Evgeny Skorlov",
     username: "https://github.com/ru-asdx",

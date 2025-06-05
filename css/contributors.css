@@ -66,6 +66,7 @@ body {
   position: relative;
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
+  padding:0;
 }
 body {
   margin: 0;
@@ -95,7 +96,7 @@ body {
   border-radius: 25%;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
-  transition-property: background, color;
+  transition-property: position, color;
   transform: translateY(7px);
   transition: 0.5s;
 }
@@ -106,6 +107,14 @@ body {
   transform: translateY(-7px);
   transition: 0.5s;
 }
+
+/* changing the color of the btn on hover */
+#back-to-top-btn:hover .fa-angle-double-up{
+  color:#d43370;
+}
+
+
+
 .light #back-to-top-btn {
   color: rgb(242, 244, 251);
   background-color: #d43370;

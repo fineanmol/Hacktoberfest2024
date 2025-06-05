@@ -81,9 +81,7 @@ function buildMenuHTML (obj = {}) {
   })
   document.getElementById('menu').innerHTML = html
 }
+ 
 
-function buildMenu () {
-  buildMenuHTML(menu)
-}
+buildMenuHTML(menu)
 
-buildMenu()

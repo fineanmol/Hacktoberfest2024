@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 5px;
+  border: 4.5px;
 }
 body {
   display: flex;
@@ -16,7 +16,7 @@ body {
 }
 .container {
   width: 28rem;
-  height: 34rem;
+  height: 33.5rem;
   background-color: rgb(110, 100, 100);
   display: flex;
   flex-direction: column;
@@ -44,7 +44,7 @@ input[type="range"]::-webkit-slider-thumb {
   margin-top: -0.1rem;
 }
 h4 {
-  text-shadow: 0.2px 0.2px 14px #ff1493;
+  text-shadow: 0.3px 0.3px 15px #ff1493;
 }
 .css {
   background-color: blue;

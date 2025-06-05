@@ -1,0 +1,74 @@
+NumPy is a powerful library for numerical computing in Python. It provides support for working with arrays and matrices, along with a wide range of mathematical functions to operate on these arrays. Below are some basic NumPy tutorial codes to help you get started:
+
+1 . Installation:
+
+Before you can use NumPy, you need to install it. You can use pip for installation: 
+  pip install numpy
+
+2. Importing NumPy:
+
+In your Python code, you need to import the NumPy library:
+  import numpy as np
+
+3. Creating NumPy Arrays:
+
+You can create NumPy arrays using the `np.array()` function. For example:
+  import numpy as np
+
+  # Create a 1D array
+  arr_1d = np.array([1, 2, 3, 4, 5])
+  
+  # Create a 2D array
+  arr_2d = np.array([[1, 2, 3], [4, 5, 6]])
+
+4. Array Attributes:
+
+NumPy arrays have attributes like `shape`, `dtype`, and `size`. For example:
+
+    print(arr_1d.shape)  # (5,)
+    print(arr_2d.shape)  # (2, 3)
+    print(arr_1d.dtype)  # int64
+    print(arr_2d.size)   # 6
+
+5. Array Operations:
+
+NumPy allows you to perform element-wise operations on arrays:
+
+    a = np.array([1, 2, 3])
+    b = np.array([4, 5, 6])
+    
+    # Addition
+    result_add = a + b
+    
+    # Multiplication
+    result_mul = a * b
+    
+6. Indexing and Slicing:
+
+You can access elements or slices of NumPy arrays using indexing and slicing:
+
+    a = np.array([0, 1, 2, 3, 4, 5])
+    
+    # Access an element
+    element = a[2]  # This gets the value 2
+    
+    # Slice an array
+    subarray = a[1:4]  # This gets [1, 2, 3]
+
+7. Array Functions:
+
+NumPy provides various functions for creating arrays, such as `np.zeros()`, `np.ones()`, and `np.linspace()`, as well as mathematical functions like `np.mean()`, `np.sum()`, and `np.max()`.
+
+    zeros_array = np.zeros((2, 3))
+    ones_array = np.ones((3, 3))
+    linspace_array = np.linspace(0, 1, 5)  # Generates [0.0, 0.25, 0.5, 0.75, 1.0]
+    mean_value = np.mean(arr_1d)
+    sum_value = np.sum(arr_1d)
+    max_value = np.max(arr_1d)
+
+8. Reshaping Arrays:
+
+You can reshape arrays using `np.reshape()`:
+
+    a = np.array([1, 2, 3, 4, 5, 6])
+    reshaped = a.reshape(2, 3)

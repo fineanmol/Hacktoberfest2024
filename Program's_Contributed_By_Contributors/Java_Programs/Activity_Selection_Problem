@@ -1,0 +1,18 @@
+public class ActivitySelection {
+    public static void Activities(int[] s, int[] f, int n){
+        int i=0;
+        System.out.print("Activities selected are: "+ i+" ");
+        for(int j=1;j<n;j++){
+            if(f[i]<s[j]){
+                System.out.print(j+" ");
+                i=j;
+            }
+        }
+    }
+    public static void main(String[] args) {
+        int[] s={1,3,3};
+        int[] f={2,4,7};
+        int n=s.length;
+        Activities(s,f,n);
+    }
+}

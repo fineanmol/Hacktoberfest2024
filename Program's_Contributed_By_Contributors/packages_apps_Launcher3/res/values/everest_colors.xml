@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2014-2023 ProjectEverest
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <color name="user_crd_bg">@*android:color/system_neutral1_0</color>
+    <color name="card_surface_color">@*android:color/system_accent1_100</color>
+    <color name="top_level_preference_icon_tint">@*android:color/system_neutral1_1000</color>
+    <color name="top_level_preference_text_color_primary">@color/top_level_preference_icon_tint</color>
+    <color name="top_level_preference_text_color_secondary">@color/op_control_text_color_secondary</color>
+    <color name="op_control_text_color_primary">@color/op_control_text_color_primary_light</color>
+    <color name="op_control_text_color_primary_inverse">#ffffff</color>
+    <color name="op_control_text_color_primary_inverse_translucent">#E0ffffff</color>
+    <color name="op_control_text_color_primary_translucent">#E0000000</color>
+    <color name="op_control_text_color_primary_light">#d8000000</color>
+    <color name="op_control_text_color_secondary">@color/op_control_text_color_secondary_light</color>
+    <color name="op_control_text_color_secondary_light">#66000000</color>
+    <color name="oneplus_accent_text_color">#ffc41442</color>
+    <color name="op_control_bg_color_weaken_light">#0a000000</color>
+    <color name="op_control_contextual_card_solid_color">@color/op_control_bg_color_weaken_light</color>
+    <color name="op_control_accent_color_green">@color/op_control_accent_color_green_light</color>
+    <color name="op_control_accent_color_green_light">#ff0bd270</color>
+    <color name="op_control_accent_color_green_dark">#ff06743e</color>
+    <color name="oneplus_homepage_icon_background">#ffffff</color>
+    <color name="settingsHeaderColor">@*android:color/system_accent1_600</color>
+    <color name="oneplus_accent_color">@color/settingsHeaderColor</color>
+    <color name="settings_accent_color">@color/oneplus_accent_color</color>
+    <color name="config_tab_color">@android:color/system_neutral1_50</color>
+    <color name="config_tab_text_color">@android:color/system_neutral1_1000</color>
+    <color name="theme_accent">@android:color/system_accent1_600</color>
+    <color name="homepage_rising_background">@android:color/system_accent1_600</color>
+    <color name="option_border_default">#5f6368</color>
+    <color name="option_border_color">@android:color/system_accent1_600</color>
+    <color name="lockscreen_widget_background_color_dark">@android:color/system_neutral1_900</color>
+    <color name="lockscreen_widget_background_color_light">@android:color/system_neutral1_0</color>
+    <color name="lockscreen_widget_active_color_dark">@android:color/system_accent1_100</color>
+    <color name="lockscreen_widget_active_color_light">@android:color/system_accent1_600</color>
+    <color name="sound_engine_menu_border_selected_color">#0b6ae2</color>
+    <!-- Appseat -->
+    <color name="appseat_color">@*android:color/system_neutral2_50</color>
+</resources>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@drawable/rising_preference_middle_background_card"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?android:attr/listPreferredItemHeightSmall"
+    android:layout_marginStart="@dimen/card_margin_start_aqua"
+    android:layout_marginEnd="@dimen/card_margin_end_aqua"
+    android:layout_marginTop="2dp"
+    android:paddingEnd="6dp"
+    android:paddingStart="20dp"
+    android:gravity="center_vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="fill_parent"
+        android:layout_marginVertical="6dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1.0"
+            android:layout_marginEnd="10dp">
+            <TextView
+                android:ellipsize="marquee"
+                android:id="@android:id/title"
+                android:fadingEdge="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/top_level_preference_text_color_primary"
+                style="@style/op_control_text_style_h6" />
+
+            <TextView
+                android:id="@android:id/summary"
+                style="@style/op_control_text_style_body1"
+                android:layout_width="@dimen/top_level_preference_summary_max_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@android:id/title"
+                android:layout_alignStart="@android:id/title"
+                android:layout_alignLeft="@android:id/title"
+                android:layout_marginTop="2.0dip"
+                android:maxLines="4"
+                android:textColor="@color/top_level_preference_text_color_secondary" />
+                
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:orientation="vertical">
+
+            <SeekBar
+                android:id="@*android:id/seekbar"
+                android:layout_gravity="center_vertical"
+                android:paddingStart="0dp"
+                android:paddingEnd="12dp"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"/>
+
+            <TextView
+                android:id="@+id/suppression_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:textAlignment="viewStart"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:visibility="gone"
+                android:textAppearance="@*android:style/TextAppearance.DeviceDefault.Body1"
+                android:textColor="?android:attr/textColorSecondary"/>
+
+        </LinearLayout>
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:paddingHorizontal="16dp"
+            android:layout_alignParentEnd="true"
+            app:cardBackgroundColor="#00000000"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:id="@+id/icon_frame"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp">
+
+                <androidx.preference.internal.PreferenceImageView
+                    android:id="@android:id/icon"
+                    android:padding="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_surface_color"
+                    android:tint="@color/top_level_preference_icon_tint"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:id="@android:id/widget_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="12dp"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2014-2024 BlissRoms Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <color name="user_crd_bg">@*android:color/system_neutral1_800</color>
+    <color name="card_surface_color">@*android:color/system_neutral1_700</color>
+    <color name="top_level_preference_icon_tint">@*android:color/system_accent1_100</color>
+    <color name="top_level_preference_text_color_primary">@color/top_level_preference_icon_tint</color>
+    <color name="top_level_preference_text_color_secondary">@color/op_control_text_color_secondary</color>
+    <color name="op_control_text_color_primary">#ffffffff</color>
+    <color name="op_control_text_color_primary_inverse">#000000</color>
+    <color name="op_control_text_color_primary_inverse_translucent">#E0000000</color>
+    <color name="op_control_text_color_primary_translucent">#E0FFFFFF</color>
+    <color name="op_control_text_color_secondary">#89ffffff</color>
+    <color name="oneplus_accent_text_color">#fff0648a</color>
+    <color name="op_control_contextual_card_solid_color">#ff1c1e20</color>
+    <color name="op_control_accent_color_green">@color/op_control_accent_color_green_dark</color>
+    <color name="oneplus_homepage_icon_background">#000000</color>
+    <color name="settingsHeaderColor">@*android:color/system_accent1_100</color>
+    <color name="oneplus_accent_color">@color/settingsHeaderColor</color>
+    <color name="settings_accent_color">@color/oneplus_accent_color</color>
+    <color name="config_tab_color">@android:color/system_neutral1_900</color>
+    <color name="config_tab_text_color">@android:color/system_neutral1_10</color>
+    <color name="theme_accent">@android:color/system_accent1_100</color>
+    <color name="homepage_rising_background">@android:color/system_accent1_100</color>
+    <color name="option_border_default">#5f6368</color>
+    <color name="option_border_color">@android:color/system_accent1_100</color>
+    <!-- Appseat -->
+    <color name="appseat_color">@*android:color/system_neutral2_900</color>
+
+    <color name="gicon_mask">#1AFFFFFF</color>
+</resources>

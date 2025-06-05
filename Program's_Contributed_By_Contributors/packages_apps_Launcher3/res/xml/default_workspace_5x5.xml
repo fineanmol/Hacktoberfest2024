@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<favorites xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher3">
+
+    <!-- Hotseat -->
+    <include launcher:workspace="@xml/dw_hotseat_5" />
+
+    <!-- Screen 0 -->
+    <appwidget
+        launcher:packageName="com.google.android.googlequicksearchbox"
+        launcher:className="com.google.android.apps.gsa.staticplugins.smartspace.widget.SmartspaceWidgetProvider"
+        launcher:screen="0"
+        launcher:x="0"
+        launcher:y="0"
+        launcher:spanX="5"
+        launcher:spanY="1" />
+
+    <!-- Google Folder -->
+    <folder
+        launcher:title="@string/google_folder_title"
+        launcher:screen="0"
+        launcher:x="0"
+        launcher:y="-1">
+        <favorite
+            launcher:packageName="com.google.android.googlequicksearchbox"
+            launcher:className="com.google.android.googlequicksearchbox.SearchActivity"/>
+        <favorite
+            launcher:packageName="com.google.android.gm"
+            launcher:className="com.google.android.gm.ConversationListActivityGmail"/>
+        <favorite
+            launcher:packageName="com.google.android.apps.maps"
+            launcher:className="com.google.android.maps.MapsActivity"/>
+        <favorite
+            launcher:packageName="com.google.android.youtube"
+            launcher:className="com.google.android.youtube.app.honeycomb.Shell$HomeActivity"/>
+        <favorite
+            launcher:packageName="com.google.android.apps.docs"
+            launcher:className="com.google.android.apps.docs.app.NewMainProxyActivity"/>
+        <favorite
+            launcher:packageName="com.google.android.apps.youtube.music"
+            launcher:className="com.google.android.apps.youtube.music.activities.MusicActivity"/>
+        <favorite
+            launcher:packageName="com.google.android.videos"
+            launcher:className="com.google.android.youtube.videos.EntryPoint"/>
+        <favorite
+            launcher:packageName="com.google.android.apps.tachyon"
+            launcher:className="com.google.android.apps.tachyon.MainActivity"/>
+        <favorite
+            launcher:packageName="com.google.android.apps.photos"
+            launcher:className="com.google.android.apps.photos.home.HomeActivity"/>
+        <favorite
+            launcher:packageName="com.android.chrome"
+            launcher:className="com.google.android.apps.chrome.Main" />
+        <favorite
+            launcher:packageName="com.google.android.calendar"
+            launcher:className="com.android.calendar.AllInOneActivity" />
+        <favorite
+            launcher:packageName="com.google.android.apps.plus"
+            launcher:className="com.google.android.apps.plus.phone.HomeActivity" />
+        <favorite
+            launcher:packageName="com.google.android.play.games"
+            launcher:className="com.google.android.gms.games.ui.destination.main.MainActivity" />
+        <favorite
+            launcher:packageName="com.google.android.apps.books"
+            launcher:className="com.google.android.apps.books.app.BooksActivity" />
+        <favorite
+            launcher:packageName="com.google.android.apps.magazines"
+            launcher:className="com.google.apps.dots.android.app.activity.CurrentsStartActivity" />
+    </folder>
+
+    <resolve
+        launcher:screen="0"
+        launcher:x="4"
+        launcher:y="-1" >
+        <favorite launcher:uri="#Intent;action=android.intent.action.MAIN;category=android.intent.category.APP_MARKET;end" />
+        <favorite launcher:uri="market://details?id=com.android.launcher" />
+    </resolve>
+
+    <!-- Screen 1 -->
+    <appwidget
+        launcher:packageName="org.lineageos.eleven"
+        launcher:className="org.lineageos.eleven.appwidgets.AppWidgetLarge"
+        launcher:screen="1"
+        launcher:x="0"
+        launcher:y="0"
+        launcher:spanX="5"
+        launcher:spanY="2" />
+
+    <resolve
+        launcher:screen="1"
+        launcher:x="1"
+        launcher:y="-1" >
+        <favorite launcher:uri="#Intent;action=android.intent.action.MAIN;category=android.intent.category.APP_GALLERY;end" />
+        <favorite launcher:uri="#Intent;type=images/*;end" />
+    </resolve>
+
+    <favorite
+        launcher:packageName="org.lineageos.eleven"
+        launcher:className="org.lineageos.eleven.ui.activities.HomeActivity"
+        launcher:screen="1"
+        launcher:x="2"
+        launcher:y="-1" />
+
+    <favorite
+        launcher:packageName="com.android.settings"
+        launcher:className="com.android.settings.Settings"
+        launcher:screen="1"
+        launcher:x="3"
+        launcher:y="-1" />
+
+</favorites>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2014-2024 ProjectEverest
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+
+    <!-- String representing the fragment class for app drawer settings activity.-->
+    <string name="app_drawer_settings_fragment_name" translatable="false">com.android.launcher3.settings.SettingsAppDrawer$AppDrawerSettingsFragment</string>
+
+    <!-- String representing the fragment class for home screen settings activity.-->
+    <string name="home_screen_settings_fragment_name" translatable="false">com.android.launcher3.settings.SettingsHomescreen$HomescreenSettingsFragment</string>
+
+    <!-- String representing the fragment class for icons settings activity.-->
+    <string name="icons_settings_fragment_name" translatable="false">com.android.launcher3.settings.SettingsIcons$IconsSettingsFragment</string>
+
+    <!-- String representing the fragment class for misc settings activity.-->
+    <string name="misc_settings_fragment_name" translatable="false">com.android.launcher3.settings.SettingsMisc$MiscSettingsFragment</string>
+
+    <!-- String representing the fragment class for recents view settings activity.-->
+    <string name="recents_settings_fragment_name" translatable="false">com.android.launcher3.settings.SettingsRecents$RecentsSettingsFragment</string>
+
+    <!-- Sort sections of apps list, in case AlphabeticIndex (of current locale)
+         returns duplicate labels for some reasons. -->
+    <bool name="config_appsListSortSections">false</bool>
+
+    <!-- Themed icons -->
+    <string name="drawable_factory_class" translatable="false">com.android.launcher3.icons.ThirdPartyDrawableFactory</string>
+
+    <!-- Icon pack -->
+    <string name="icon_pack_settings_class" translatable="false">com.android.launcher3.icons.pack.IconPackSettingsFragment</string>
+
+    <!-- Quickspace -->
+    <item type="id" name="reserved_container_workspace" />
+    
+    <!-- Themed Icon pack -->
+    <string name="themed_icon_pack_settings_class" translatable="false">com.android.launcher3.icons.pack.ThemeIconsSettingsFragment</string>
+</resources>

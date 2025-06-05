@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>AGE CAL</title>
+    <style>
+        body{
+            font-family: arial;
+            box-sizing: border-box;
+        }
+        input{
+            font-size: 20px;
+            width: 100%;
+        }
+        #input{
+            border: 1px solid #cdcdcd;;
+            border-radius: 5px;
+            background-color: #f6f6f6;
+            padding: 20px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        button{
+            color: white;
+            text-align: center;
+            background-color: #428bca;
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            margin: 0px;
+        }
+        button:hover{
+            background-color: #4382B7;
+            cursor: pointer;
+        }
+        #bottom{
+            display: none;
+            border: 1px solid #cdcdcd;;
+            border-radius: 5px;
+            background-color: #f6f6f6;
+            padding: 20px;
+        }
+        span{
+            font-weight: bold;
+        }
+        p{
+            
+        }        
+    </style>
+</head>
+<body>
+    <h1>AGE CALCULATOR</h1>
+    <div id="input">
+        <form>
+            <label for="dob">Date Of Birth:</label><br/>
+            <input type="date" name="dob" id="dob" value="1970-01-01"/><br/><br />
+            <label for="bd">Age At Date:</label><br/>
+            <input type="date" name="bd" id="bd" /><br/><br />
+            <button type="button" onclick="cal()">Calculate</button>
+        </form>
+    </div >
+    <div id="bottom">
+     
+       <span>Age:</span>
+        <p id="age"></p><br/>
+        <span>Age In Months:</span>
+        <p id="months"></p><br/>
+        <span>Age In Weeks:</span>
+        <p id="weeks"></p><br/>
+        <span>Age In Days:</span>
+        <p id="days"></p><br/>
+        <span>Age In Hours:</span>
+        <p id="hours"></p><br/>
+        <span>Age In Minutes:</span>
+        <p id="minutes"></p><br/>
+        <span>Age In Seconds:</span>
+        <p id="seconds"></p><br/>
+       
+    </div>
+</body>
+    <script>
+        var e = new Date();
+        var o = e.toISOString();
+        var t = o.split("T")
+       document.getElementById('bd').value = t[0];
+        function cal(){
+             if(dob.value == ""){
+            alert("Please Input Date Of Birth");
+            }
+            else if(dob.value>bd.value){
+                alert("Invalid Input");
+            }
+            else{
+            document.getElementById('bottom').style.display = "block";
+            var a = new Date(bd.value);
+            var b = new Date(dob.value);
+            var r = a.getTime() - b.getTime();
+            var u = new Date(r);
+            var v = new Date(0);
+            var year = u.getFullYear() - v.getFullYear();
+            var month = u.getMonth() - v.getMonth();
+            var day = u.getDate() - v.getDate();
+            //month = Math.abs(month);
+            //day = Math.abs(day);
+            document.getElementById('age').innerHTML = year +" Years ," +month + " Months ,"  +  day + " Days .";
+            var m = (year*12)+month
+           document.getElementById('months').innerHTML = m + " Months, " + day + " Days .";
+            var w = (m*4.345);
+            w = Math.round(w);
+            document.getElementById('weeks').innerHTML = w + " Weeks, " + day + " Days ."
+            var d = (w*7) + day;
+            document.getElementById('days').innerHTML = d + " Days."
+            var h = d*24;
+            document.getElementById('hours').innerHTML = h + " Hours."
+            var mi = h*60;
+            document.getElementById('minutes').innerHTML = mi + " Minutes."
+            var s = mi*60;
+            document.getElementById('seconds').innerHTML = s + " Seconds."
+            }
+        }
+    </script>
+</html>

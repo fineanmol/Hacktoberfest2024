@@ -1,0 +1,93 @@
+html code here:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+    <link rel="stylesheet" href="Hacktoberfest.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Guess the Number Game</h1>
+        <p>Guess a number between 1 and 100:</p>
+        <input type="number" id="guess" min="1" max="100">
+        <button id="check">Check</button>
+        <p id="message"></p>
+    </div>
+    <script src="Hacktoberfest.js"></script>
+</body>
+</html>
+
+css code here:
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    max-width: 400px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="number"] {
+    width: 80px;
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+#message {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+javascript code here: 
+document.addEventListener('DOMContentLoaded', function () {
+    const minNumber = 1;
+    const maxNumber = 100;
+    const randomNumber = Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
+    let attempts = 0;
+
+    const guessInput = document.getElementById('guess');
+    const checkButton = document.getElementById('check');
+    const messageElement = document.getElementById('message');
+
+    checkButton.addEventListener('click', function () {
+        const userGuess = parseInt(guessInput.value);
+
+        if (isNaN(userGuess) || userGuess < minNumber || userGuess > maxNumber) {
+            messageElement.textContent = 'Please enter a valid number between 1 and 100.';
+        } else {
+            attempts++;
+
+            if (userGuess === randomNumber) {
+                messageElement.textContent = `Congratulations! You guessed the number ${randomNumber} in ${attempts} attempts.`;
+                checkButton.disabled = true;
+            } else if (userGuess < randomNumber) {
+                messageElement.textContent = 'Try a higher number.';
+            } else {
+                messageElement.textContent = 'Try a lower number.';
+            }
+        }
+    });
+});

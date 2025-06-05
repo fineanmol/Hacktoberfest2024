@@ -1,0 +1,18 @@
+#Change the background gradient colour of the tik tack toe game
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #3498db, #8e44ad); /* Adjust colors as needed */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    background: rgba(255, 255, 255, 0.7); /* Add a semi-transparent white background for the game area */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}

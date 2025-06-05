@@ -1,0 +1,9 @@
+Hey I am new to Contributing and new to Hacktoberfest
+
+Wanna know where to learn programming course for free?
+
+try this: 
+https://cs50.harvard.edu/x/2022/
+
+This is a Comupter Science course from Harvard University, it is offered free by Prof. David Malan and Co 
+so use it to learn more or just fill in knowledge gaps 

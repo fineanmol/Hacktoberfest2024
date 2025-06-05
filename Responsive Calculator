@@ -1,0 +1,124 @@
+-------------------------------------------------------------------index.html----------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <div class="calculator">
+        <div class="display">
+            <input type="text" id="result" value="" readonly>
+        </div>
+        <div class="buttons">
+            <div class="row">
+                <button onclick="clearInput()">C</button>
+                <button onclick="appendToInput('7')">7</button>
+                <button onclick="appendToInput('8')">8</button>
+                <button onclick="appendToInput('9')">9</button>
+                <button onclick="appendToInput('/')">/</button>
+            </div>
+            <div class="row">
+                <button onclick="appendToInput('4')">4</button>
+                <button onclick="appendToInput('5')">5</button>
+                <button onclick="appendToInput('6')">6</button>
+                <button onclick="appendToInput('*')">*</button>
+            </div>
+            <div class="row">
+                <button onclick="appendToInput('1')">1</button>
+                <button onclick="appendToInput('2')">2</button>
+                <button onclick="appendToInput('3')">3</button>
+                <button onclick="appendToInput('-')">-</button>
+            </div>
+            <div class="row">
+                <button onclick="appendToInput('0')">0</button>
+                <button onclick="appendToInput('.')">.</button>
+                <button onclick="calculateResult()">=</button>
+                <button onclick="appendToInput('+')">+</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+-------------------------------------------------------------------style.css----------------------------------------------------------------------------------------------
+
+body{
+    background: url("calci_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    background-color: #e3e3e3;
+    border-radius: 5px;
+    width: 400px;
+    padding: 10px;
+    text-align: center;
+}
+
+.display input {
+    width: 90%;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.buttons .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button {
+    width: 23%;
+    height: 70px;
+    font-size: 24px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #212121;
+    color: white;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #555;
+}
+
+
+
+-------------------------------------------------------------------script.js----------------------------------------------------------------------------------------------
+
+
+let input = document.getElementById('result');
+
+function appendToInput(value) {
+    input.value += value;
+}
+
+function clearInput() {
+    input.value = '';
+}
+
+function calculateResult() {
+    try {
+        input.value = eval(input.value);
+    } catch (error) {
+        input.value = 'Error';
+    }
+}

@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300);
 * {
   margin: 0;
-  padding: 0;
+  padding: 1;
   box-sizing: border-box;
   border: 5px;
 }

@@ -2410,6 +2410,11 @@ contributors = [
     fullname: "Amit Kumar",
     username: "https://github.com/amit-kumar",
   },
+  {
+    id:420,
+    fullname: "Avaneesh Srivastava",
+    username: "https://github.com/Avaneesh-dev",
+  },
 
   {
     id: 420,

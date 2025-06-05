@@ -1,0 +1,18 @@
+class Solution {
+    public int findMaxK(int[] arr) {
+        int max=0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]>max && ispresent(-arr[i],arr))max=arr[i];
+        }
+        if(max>0)
+        return max;
+        else
+            return -1;
+    }
+    public boolean ispresent(int x,int nums[]){
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]==x)return true;
+    }
+        return false;
+    }
+}

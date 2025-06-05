@@ -1,0 +1,115 @@
+[
+    {
+        "userName": "crazy",
+        "pin": 4444,
+        "Balance": 10000,
+        "transactions": [
+            {
+                "transID": 124536,
+                "type": "credit",
+                "amt": 1000,
+                "dateOfTrans": "2023-09-27 11:44:29.475018",
+                "currentBal": 10000
+            },
+            {
+                "transID": 124537,
+                "type": "debit",
+                "amt": 500,
+                "dateOfTrans": "2023-09-27 11:44:29.475018",
+                "currentBal": 9500
+            },
+            {
+                "transID": 124578,
+                "type": "debit",
+                "amt": 50,
+                "dateOfTrans": "2023-09-27 11:49:46.242608",
+                "currentBal": 9450
+            },
+            {
+                "transID": 124578,
+                "type": "debit",
+                "amt": 50,
+                "dateOfTrans": "2023-09-27 11:50:00.298747",
+                "currentBal": 9400
+            },
+            {
+                "transID": 124578,
+                "type": "debit",
+                "amt": 3,
+                "dateOfTrans": "2023-09-27 11:56:56.641310",
+                "currentBal": 9397
+            },
+            {
+                "transID": 124578,
+                "type": "debit",
+                "amt": 3,
+                "dateOfTrans": "2023-09-27 11:57:09.065439",
+                "currentBal": 9400
+            },
+            {
+                "transID": 124578,
+                "type": "debit",
+                "amt": 5,
+                "dateOfTrans": "2023-09-27 12:04:00.439480",
+                "currentBal": 9395
+            },
+            {
+                "transID": 124578,
+                "type": "credit",
+                "amt": 4,
+                "dateOfTrans": "2023-09-27 12:04:02.055387",
+                "currentBal": 9399
+            },
+            {
+                "transID": 124578,
+                "upiID": "soubhik",
+                "type": "debit",
+                "amt": 100,
+                "dateOfTrans": "2023-09-27 12:05:53.631628",
+                "currentBal": 9299
+            },
+            {
+                "transID": 124578,
+                "type": "debit",
+                "amt": 100,
+                "dateOfTrans": "2023-09-27 12:14:22.382354",
+                "currentBal": 9199
+            },
+            {
+                "transID": 124578,
+                "type": "debit",
+                "amt": 121,
+                "dateOfTrans": "2023-09-27 12:14:30.445988",
+                "currentBal": 9078
+            },
+            {
+                "transID": 124578,
+                "type": "debit",
+                "amt": 78,
+                "dateOfTrans": "2023-09-27 12:14:37.022460",
+                "currentBal": 9000
+            },
+            {
+                "transID": 124578,
+                "type": "credit",
+                "amt": 1000,
+                "dateOfTrans": "2023-09-27 12:14:45.614085",
+                "currentBal": 10000
+            }
+        ]
+    },
+    {
+        "userName": "alpha",
+        "pin": 1234,
+        "Balance": 10000,
+        "transactions": [
+            {
+                "transID": 124536,
+                "type": "credit",
+                "amt": 1000,
+                "dateOfTrans": "2023-09-27 11:44:29.475018",
+                "currentBal": 10000
+            }
+        ]
+    }
+]

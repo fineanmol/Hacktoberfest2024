@@ -1,0 +1,14 @@
+body{
+
+    background-color:burlywood;
+    margin: 0;
+    padding: 0;
+}
+.container{
+
+    width: 500px;
+    height: 500px;
+    margin: 5px auto;
+    background-color: lightcyan;
+    position: relative;
+}

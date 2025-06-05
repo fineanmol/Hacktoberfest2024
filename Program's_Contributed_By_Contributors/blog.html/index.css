@@ -1,0 +1,140 @@
+
+.navbar{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 70px;
+    background-color:yellow;
+}
+input{
+    width: 500px;
+    height: 30px;
+    align-items: center;
+    position: absolute;
+    top: 17px;
+    left: 100px;
+    border: none;
+    background-color: rgb(235, 235, 177);
+}
+::placeholder{
+color: black;
+font-size: 14px;
+}
+.first-page{
+    background-color: yellow;
+    margin-top: 70px;
+    width: 100%;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 200px 500px;
+    column-gap: 60%;
+}
+h1{
+   font-size: 320px;
+    margin-left:220px;
+    margin-top:-80px ;
+}
+h4{
+    font-size: 25px;
+    margin-left: 90px;
+    margin-top:80px;
+}
+.quote{
+ font-size: 18px;
+ width: 220px;
+ margin-left: 50px;
+ margin-top:-20px;   
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 50px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.box1{
+    display: grid;
+    grid-template-rows: 200px 80px;
+    margin-left:20px;
+    width: 300px;
+    background-color: rgb(238, 226, 133);
+}
+.pic{
+   width: 300px;
+   height:150px; 
+}
+h2{
+    font-size: 20px;
+    margin-top: -35px;
+    text-align: center;
+}
+.para1{
+margin-top: -80px;
+text-align: left;
+font-size: 18px;
+margin-left: 10px;
+}
+.flexbox{
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    height: 350px;
+    margin:30px;
+    box-shadow: 5px 5px 5px yellow;
+    
+}
+.video{
+    width: 50%;
+    height: 350px;
+}
+.video-description{
+display: grid;
+grid-template-rows: 40px 200px;
+width: 50%;
+height: 350px;
+background-color: rgb(236, 236, 218);
+}
+.video-title{
+    font-size: 25px;
+    text-align: left;
+    margin-left: 30px;
+}
+.details{
+    font-size: 19px;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 40px;
+}
+.middle{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    margin-left: 70px;
+}
+.middle-pic{
+    width: 350px;
+    height: 300px;
+}
+.video1{
+width: 70%;
+height: 360px;
+}
+.video-description1{
+    display: grid;
+    grid-template-rows: 40px 200px;
+    width: 90%;
+    height: 300px;
+    margin-left: -100px;
+    
+    }
+    .video-title1{
+        font-size: 23px;
+        text-align: left;
+    }
+    .details1{
+        font-size: 16px;
+        text-align: left;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }

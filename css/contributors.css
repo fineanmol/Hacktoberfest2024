@@ -259,7 +259,7 @@ a:hover {
   transform: skew(-25deg);
 }
 .box-item::after {
-  background: #fff;
+  background: white;
   transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
   z-index: 0;
   opacity: 0.8;
@@ -292,7 +292,7 @@ a:hover {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background-color: #ddd;
+  background-color: red;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #c1c1c1;

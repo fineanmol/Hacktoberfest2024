@@ -2362,6 +2362,12 @@ contributors = [
     fullname: "Isnani",
     username: "https://github.com/Isnani25",
   },
+    {
+    id: 412,
+    fullname: "Pradeep Kokal",
+    username: "https://github.com/pradeepkokal"
+
+  }
 
   {
     id: 412,

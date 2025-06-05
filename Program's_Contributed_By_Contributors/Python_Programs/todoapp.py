@@ -1,5 +1,5 @@
 import sys
-from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QWidget, QLineEdit, QPushButton, QListView
+from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QWidget, QLineEdit, QPushButton, QListView, QMessageBox
 from PySide6.QtCore import QStringListModel
 
 class TodoListApp(QMainWindow):
@@ -36,18 +36,28 @@ class TodoListApp(QMainWindow):
         self.update_task_list()
 
     def add_task(self):
-        task = self.task_input.text()
-        if task:
-            self.tasks.append(task)
-            self.task_input.clear()
-            self.update_task_list()
+        task = self.task_input.text().strip()  # Trim whitespace
+        if not task:
+            QMessageBox.warning(self, "Warning", "Task cannot be empty.")
+            return
+
+        if task in self.tasks:  # Prevent duplicates
+            QMessageBox.warning(self, "Warning", "Task already exists.")
+            return
+
+        self.tasks.append(task)
+        self.task_input.clear()
+        self.update_task_list()
 
     def remove_task(self):
         selected_index = self.task_list.currentIndex()
-        if selected_index.isValid():
-            task = self.tasks[selected_index.row()]
-            self.tasks.remove(task)
-            self.update_task_list()
+        if not selected_index.isValid():
+            QMessageBox.warning(self, "Warning", "Please select a task to remove.")
+            return
+        
+        task = self.tasks[selected_index.row()]
+        self.tasks.remove(task)
+        self.update_task_list()
 
     def update_task_list(self):
         self.task_list.setModel(QStringListModel(self.tasks))

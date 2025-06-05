@@ -1,0 +1,5 @@
+            - name: Automatic Merge by lotsOlogs
+  # You may pin to the exact commit or the version.
+  # uses: lots0logs/gh-action-auto-merge@e1c6c23f77ac698552eb5490a0f0f48e60aab3e0
+  uses: lots0logs/gh-action-auto-merge@1.0.0
+          

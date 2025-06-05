@@ -1,0 +1,77 @@
+// C# program to sort an
+// array using stack
+using System;
+using System.Collections.Generic;
+
+class GFG
+{
+	// This function return
+	// the sorted stack
+	static Stack<int> sortStack(Stack<int> input)
+	{
+		Stack<int> tmpStack = new Stack<int>();
+	
+		while (input.Count != 0)
+		{
+			// pop out the
+			// first element
+			int tmp = input.Peek();
+			input.Pop();
+	
+			// while temporary stack is
+			// not empty and top of stack
+			// is smaller than temp
+			while (tmpStack.Count != 0 &&
+					tmpStack.Peek() < tmp)
+			{
+				// pop from temporary
+				// stack and push it
+				// to the input stack
+				input.Push(tmpStack.Peek());
+				tmpStack.Pop();
+			}
+	
+			// push temp in
+			// temporary of stack
+			tmpStack.Push(tmp);
+		}
+	
+		return tmpStack;
+	}
+	
+	static void sortArrayUsingStacks(int []arr,
+									int n)
+	{
+		// Push array elements
+		// to stack
+		Stack<int> input = new Stack<int>();
+		for (int i = 0; i<n; i++)
+		input.Push(arr[i]);
+	
+		// Sort the temporary stack
+		Stack<int> tmpStack = sortStack(input);
+	
+		// Put stack elements in arrp[]
+		for (int i = 0; i < n; i++)
+		{
+			arr[i] = tmpStack.Peek();
+			tmpStack.Pop();
+		}
+	}
+	
+	// Driver Code
+	static void Main()
+	{
+		int []arr = new int[] {10, 5,
+							15, 45};
+		int n = arr.Length;
+	
+		sortArrayUsingStacks(arr, n);
+	
+		for (int i = 0; i < n; i++)
+		Console.Write(arr[i] + " ");
+	}
+}
+
+// This code is contributed by
+// Manish Shaw(manishshaw1)

@@ -1,0 +1,160 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.regex.Pattern;
+
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.text.PDFTextStripper;
+
+public class PDFSorterGUI extends JFrame {
+    private JTextField folderTextField;
+    private JTextField keywordsTextField;
+    private JTextField sizeTextField;
+    private JTextField pageRangeTextField;
+    private JTextArea logTextArea;
+
+    private Map<String, String> keywordToDirectoryMap = new HashMap<>();
+    private long minSizeBytes;
+    private int startPage;
+    private int endPage;
+
+    public PDFSorterGUI() {
+        setTitle("PDF Sorter");
+        setSize(600, 400);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(6, 2));
+
+        panel.add(new JLabel("Select Folder:"));
+        folderTextField = new JTextField();
+        panel.add(folderTextField);
+
+        panel.add(new JLabel("Keywords (comma-separated):"));
+        keywordsTextField = new JTextField();
+        panel.add(keywordsTextField);
+
+        panel.add(new JLabel("Minimum Size (bytes):"));
+        sizeTextField = new JTextField();
+        panel.add(sizeTextField);
+
+        panel.add(new JLabel("Page Range (e.g., 1-5):"));
+        pageRangeTextField = new JTextField();
+        panel.add(pageRangeTextField);
+
+        JButton sortButton = new JButton("Sort PDFs");
+        sortButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String folderPath = folderTextField.getText();
+                String keywords = keywordsTextField.getText();
+                String sizeStr = sizeTextField.getText();
+                String pageRangeStr = pageRangeTextField.getText();
+
+                // Parse keywords
+                String[] keywordArray = keywords.split(",");
+                keywordToDirectoryMap.clear();
+                for (String keyword : keywordArray) {
+                    keywordToDirectoryMap.put(keyword.trim(), "/path/to/sorted/directory"); // Replace with actual directory
+                }
+
+                // Parse minimum size
+                try {
+                    minSizeBytes = Long.parseLong(sizeStr);
+                } catch (NumberFormatException ex) {
+                    logTextArea.append("Invalid minimum size value.\n");
+                    return;
+                }
+
+                // Parse page range
+                String[] pageRange = pageRangeStr.split("-");
+                if (pageRange.length != 2) {
+                    logTextArea.append("Invalid page range format.\n");
+                    return;
+                }
+                try {
+                    startPage = Integer.parseInt(pageRange[0]);
+                    endPage = Integer.parseInt(pageRange[1]);
+                } catch (NumberFormatException ex) {
+                    logTextArea.append("Invalid page range values.\n");
+                    return;
+                }
+
+                // Sort the PDFs
+                sortPDFs(folderPath);
+            }
+        });
+
+        panel.add(new JLabel());
+        panel.add(sortButton);
+
+        logTextArea = new JTextArea();
+        logTextArea.setEditable(false);
+
+        JScrollPane scrollPane = new JScrollPane(logTextArea);
+
+        getContentPane().add(panel, BorderLayout.NORTH);
+        getContentPane().add(scrollPane, BorderLayout.CENTER);
+    }
+
+    private void sortPDFs(String folderPath) {
+        File directory = new File(folderPath);
+        File[] files = directory.listFiles();
+
+        if (files != null) {
+            for (File file : files) {
+                if (file.isFile() && file.getName().endsWith(".pdf")) {
+                    try {
+                        PDDocument document = PDDocument.load(file);
+                        long fileSize = file.length();
+
+                        if (fileSize < minSizeBytes) {
+                            continue;
+                        }
+
+                        PDFTextStripper pdfTextStripper = new PDFTextStripper();
+                        int pageCount = document.getNumberOfPages();
+
+                        if (pageCount < startPage || pageCount > endPage) {
+                            continue;
+                        }
+
+                        String text = pdfTextStripper.getText(document);
+
+                        for (Map.Entry<String, String> entry : keywordToDirectoryMap.entrySet()) {
+                            String keyword = entry.getKey();
+                            String destinationDirectory = entry.getValue();
+
+                            if (Pattern.compile(Pattern.quote(keyword), Pattern.CASE_INSENSITIVE).matcher(text).find()) {
+                                File destination = new File(destinationDirectory, file.getName());
+                                if (file.renameTo(destination)) {
+                                    logTextArea.append("Moved " + file.getName() + " to " + destinationDirectory + "\n");
+                                } else {
+                                    logTextArea.append("Failed to move " + file.getName() + "\n");
+                                }
+                                break;
+                            }
+                        }
+
+                        document.close();
+                    } catch (IOException e) {
+                        logTextArea.append("Error processing PDF: " + file.getName() + "\n");
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            PDFSorterGUI sorterGUI = new PDFSorterGUI();
+            sorterGUI.setVisible(true);
+        });
+    }
+}

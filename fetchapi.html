@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="">Pokemon name's (API)</h1>
+    <ol id="api"></ol>
+</body>
+
+<script>
+    fetch('https://pokeapi.co/api/v2/pokemon')
+    .then( (apidata)=> {
+        // console.log(apidata);
+        return apidata.json();
+    })
+    .then( (actualdata) => {
+        // console.log(actualdata);
+        console.log(actualdata.results);
+
+        const pokemon =  actualdata.results;
+        // console.log(pokemon[0]);
+        let poke_final = "";
+        for(let i=0 ; i<19; i++ ){
+            console.log(pokemon[i]);
+            let fname = pokemon[i].name;
+            poke_final = poke_final + "<li>" + fname + "</li><br>";
+        };
+        document.getElementById('api').innerHTML = poke_final;
+    })
+    .catch( (error)=> {
+        console.log(`The error is : ${error}`);
+    });
+
+</script>
+
+</html>

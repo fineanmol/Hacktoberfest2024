@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Webpage</title>
+    <style>
+        /* Basic Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-transform: uppercase;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 20px;
+            max-width: 600px;
+            line-height: 1.6;
+            animation: slideIn 3s ease-out;
+        }
+
+        /* Button Styles */
+        .cool-button {
+            padding: 15px 30px;
+            border: none;
+            background-color: #ff7675;
+            color: white;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+            animation: pulse 1.5s infinite;
+        }
+
+        .cool-button:hover {
+            background-color: #d63031;
+        }
+
+        /* Keyframe animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Floating Bubbles */
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: float 10s ease-in infinite;
+            opacity: 0.6;
+        }
+
+        .bubble:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            animation-duration: 12s;
+        }
+
+        .bubble:nth-child(3) {
+            width: 80px;
+            height: 80px;
+            animation-duration: 15s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-110vh) translateX(40vw);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Welcome to My Cool Webpage!</h1>
+        <p>This is a simple and interactive webpage with floating bubbles, smooth animations, and a stylish gradient background. Feel free to explore the magic of HTML and CSS!</p>
+        <button class="cool-button">Click Me!</button>
+    </div>
+
+    <!-- Floating Bubbles -->
+    <div class="bubble" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="bubble" style="left: 20%; animation-delay: 2s;"></div>
+    <div class="bubble" style="left: 30%; animation-delay: 4s;"></div>
+    <div class="bubble" style="left: 40%; animation-delay: 6s;"></div>
+    <div class="bubble" style="left: 50%; animation-delay: 8s;"></div>
+    <div class="bubble" style="left: 60%; animation-delay: 10s;"></div>
+    <div class="bubble" style="left: 70%; animation-delay: 12s;"></div>
+</body>
+</html>

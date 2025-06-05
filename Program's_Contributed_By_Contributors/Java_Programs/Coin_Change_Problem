@@ -1,0 +1,25 @@
+package com.company.Greedy;
+import java.util.*;
+
+public class CoinChange {
+        static int[] deno = {1, 2, 5, 10, 20, 50, 100, 500, 1000};
+        static int n = deno.length;
+
+        public static void f1(int amount,int n, int[] deno) {
+            Vector<Integer> ans=new Vector<>();
+            for(int i=n-1;i>=0;i--){
+                while(amount>=deno[i]) {
+                    amount -= deno[i];
+                    ans.add(deno[i]);
+                }
+            }
+            for (int j=0;j<ans.size();j++){
+                System.out.print(" "+ans.elementAt(j));
+            }
+        }
+        public static void main(String args[]){
+            int amount=59;
+            f1(amount);
+        }
+    }
+

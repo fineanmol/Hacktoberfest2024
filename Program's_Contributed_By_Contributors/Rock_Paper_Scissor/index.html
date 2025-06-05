@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:site_name" content="Rock Paper Scissor">
+    <meta property="og:title" content="Rock Paper Scissor" />
+    <meta property="og:description" content="A stupid game created by a geek" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/styleDusri.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/emoji/48/000000/rock-emoji.png" type="image/x-icon">
+    <!-- <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=633bb251c2af2800193d4bbe&product=sticky-share-buttons" async="async"></script>    <title>Rock Paper Scissor</title> -->
+</head>
+<body>
+    <!-- FUCKER SCREEN -->
+    <div class="fucker-section">
+        <img src="./img/fucker.gif" alt="...">
+        <p>Calm Down DICKHEAD !!!</p>
+        <p> You can make your next move in <span id="fuck-sec" style="font-weight: bold;">-</span> seconds</p>
+    </div>
+
+    <!--MENU BUTTONS  -->
+    
+    <div class="up-downMenubtn">
+        <img class="updown" src="https://img.icons8.com/ios-glyphs/90/000000/expand-arrow--v1.png"/>
+        <img style="--i:3" id="capture-ss" onclick="capture()" src="https://img.icons8.com/ios-glyphs/64/aab8c5/unsplash.png"/>      
+        <div style="--i:2" onclick="toggleFullscreen()" title="Fullscreen mode" class="fullscreen-icon">
+                    <div class="sec1">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="sec2">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="sec3">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="sec4">
+                        <span></span>
+                        <span></span>
+                    </div>
+           </div>
+           <img style="--i:1" id="animate-hint" title="Open hint" onclick="hintdown()" class="hint_icon"  src="https://img.icons8.com/ios-glyphs/64/aab8c5/info-squared.png"/>
+        </div>
+        <!-- <img src="https://img.icons8.com/sf-black-filled/64/aab8c5/info.png"/> -->
+    
+
+    <div class="social_media">
+        <a target="_blank" href="https://www.instagram.com/codingsmurfs/">
+            <img src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/64/000000/external-instagram-photo-and-video-sharing-social-networking-service-owned-by-facebook-logo-filled-tal-revivo.png"/>
+        </a>
+    </div>
+
+
+
+    <!-- SCREENS -->
+    <div class="hint">
+        <!-- <div class="sharethis-sticky-share-buttons"></div> -->
+        <img title="Close hint" onclick="hintup()" class="hint_icon_" src="https://img.icons8.com/ios-glyphs/30/aab8c5/macos-close.png"/>
+        <table>
+            <tr>
+                <th>Level</th>
+                <th>Level Name</th>
+                <th>Min.Score</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Novice</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Learner</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Intermediate</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Champion</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Expert</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Master</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Legendary</td>
+                <td>20</td>
+            </tr>
+        </table>
+        <div class="creator_space">
+            <p >- I created this game in the hopes that you will enjoy it, also I challenge you to show up to level 5 and share it with others.</p>
+            <p >If you find any kind of bug, feel free to  <a style="color: var(--light-white);" href="mailto: sankalpt92@gmail.com">Contact</a></p>
+
+        </div>
+      </div>
+    <!-- ....Alert... -->
+    <div class="alertScreen">
+        <!-- <img class="celeb" src="./img/celeb.gif" > -->
+        <ul>
+            <li id="alertLevel" >Level 1 ( Novice )</li>
+            <li id="alertComment" >Best of Luck!</li>
+        </ul>
+    </div>
+
+
+    <!--MAIN GAME -->
+    <h2 style="margin-block-end: 1.5rem;">Rock, Paper & Scissor</h2>
+    <div class="level">
+        <ul>
+            <li><span id="level">1</span>Level</li>
+            <li><label id="levelname">Novice</label></li>
+            <li><span id="turns">3</span>Turns</li>
+        </ul>
+    </div>
+    <div class="screen">
+
+        <div id="user">00</div><span>:</span>
+        <div id="comp">00</div>
+
+    </div>
+    <h2 id="comment">
+        <ul>
+            <li><span  id="user_comment">--</span>(you)</li>
+            <li><span id="comp_comment">--</span>(comp)</li>
+        </ul>
+        <div id="status">Make your move!</div>
+        <!-- <div>Rock</div>
+            (you)
+        <div >Paper</div>
+        (comp),
+        <div id="status">You Lose!</div> -->
+
+    </h2>
+    <!-- <h2 id="comment">Rock <span>(you)</span> beats Paper <span>(comp)</span>, You Lose!</h2> -->
+
+    <div class="loading">
+        <span style="--i:1"></span>
+        <span style="--i:2"></span>
+        <span style="--i:3"></span>
+        <span style="--i:4"></span>
+    </div>
+    
+    <div class="deck">
+        <span id="Rock"><img src="./img/rock.png" alt="..." draggable="false"></span>
+        <span id="Paper"><img src="./img/paper.png" alt="..." draggable="false"></span>
+        <span id="Scissor"><img src="./img/scissor.png" alt="..." draggable="false"></span>
+    </div>
+
+    
+    <footer>Designed & developed by Sankalp</footer>
+</body>
+
+
+<script src="./Js/app1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+
+    document.querySelector(".up-downMenubtn").addEventListener("click",function(){
+        this.classList.toggle("open");
+        this.classList.contains("open")?document.querySelector(".updown").setAttribute('src',"https://img.icons8.com/ios-glyphs/90/aab8c5/collapse-arrow.png"):document.querySelector(".updown").setAttribute('src',"https://img.icons8.com/ios-glyphs/90/000000/expand-arrow.png")
+        
+    })
+
+
+
+    function capture () {
+        setTimeout(() => {
+            html2canvas(document.body).then((canvas) => {
+                let a = document.createElement("a");
+                a.download = "RockPaperScissor.png";
+                a.href = canvas.toDataURL("image/png");
+                a.click(); // MAY NOT ALWAYS WORK!
+            });
+        }, 1100);
+    }
+
+
+
+
+    let hint = document.querySelector(".hint");
+    const hintdown=()=>{
+        hint.classList.add("show");
+        document.querySelector('.hint_icon').removeAttribute('id')
+    }
+    const hintup=()=>{
+        hint.classList.remove("show");
+    }
+
+    let fullscreenBtn = document.querySelector(".fullscreen-icon")
+    let elem = document.documentElement;
+    let fullscreen = false;
+
+    const openFullscreen=()=> {
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+    }
+    fullscreenBtn.classList.add('close')
+        fullscreen=true;
+    }
+    
+
+    const closeFullscreen=()=> {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+  fullscreenBtn.classList.remove('close');
+  fullscreen =false;
+}
+    const toggleFullscreen=()=>{
+        fullscreen ? closeFullscreen() : openFullscreen();
+    }
+</script>
+</html>

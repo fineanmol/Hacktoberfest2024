@@ -1,0 +1,5 @@
+{"FileInspector": ["Description: This is a file inspecting tool, or in simple terms, a properties menu!", "https://github.com/Viswas-Programs/fileinspector/raw/main/fileinspector.py"],
+"OnlineBanking": ["Description: This is a dummy accounting program that emulates online banking", "https://github.com/Viswas-Programs/ParodyBank/raw/v5/Installer.py"],
+"WebBrowser": ["Description: A simple web browser that has a force dark mode feature built in", "https://github.com/Viswas-Programs/WebBrowser/raw/main/WebBrowser.py"],
+"FileManager": ["Description: A simple file manager that can browse folders and open files! (not groundbreaking)", "https://github.com/Viswas-Programs/FileManager/raw/main/FileManager.py"],
+"IPChat": ["Description: A mimic of an IRC Chat, but tested only for local servers. (hence the name)", "https://github.com/Viswas-Programs/IPChat/raw/main/IPChat.py"]}

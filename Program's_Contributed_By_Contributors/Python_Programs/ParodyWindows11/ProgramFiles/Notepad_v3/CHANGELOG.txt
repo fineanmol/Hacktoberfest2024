@@ -1,0 +1,19 @@
+We don't have changelogs recorded for v2. sorry!
+
+v3 
+3.1->
+-Added control panel
+-Made programming mode support keyword highlighting for programming languages (Only Python, JS and C are supported)
+-Zooming in and out
+v3.2->
+-Added Dark Mode Support
+-Added font changing support
+-Added customizability of themes, for every widget type possible
+-Bug fixes
+v3.3->
+-A new update system which (would) actually work online
+-File Sharing from one pc to another. (so seamless working of files with one computer to another)
+-Bug fixes
+v3.3.1 ->
+-Made sure that the message for Linux only systems, about the title bar function, is not shown more than 1 time. (Being not spammy is nice innit?)
+v3.3.2

@@ -95,6 +95,48 @@ This will give you any eventual conflicts and allow you to easily solve them in 
 
 For more information on syncing forks, [read this article from GitHub](https://help.github.com/articles/syncing-a-fork/).
 
+## Pull/Merge Request Details
+
+Your Pr/Mrs Must Be Within The Bounds Of Hacktoberfest.
+[ Excluded ]
+
+Repos That Go Against Hacktoberfest’s Values Will Be Excluded From Qualification And Pr/Mrs Made To Those Repos Won’t Count.
+[ Spam ]
+
+Your Pr/Mrs Must Not Be Spammy.
+[ Participating ]
+
+Your Pr/Mrs Must Be In A Repo Tagged With The “Hacktoberfest” Topic, Or Be Labeled “Hacktoberfest-Accepted.”
+[ Invalid ]
+
+Your Pr/Mrs Must Not Be Labeled As “Invalid”.
+[ Accepted ]
+
+Your Pr/Mrs Must Be Merged, Have The “Hacktoberfest-Accepted” Label, Or Have An Overall Approving Review.
+Once Your Pr/Mrs Pass All The Checks Above, It Will Be Accepted For Hacktoberfest After The 7-Day Review Period.
+
+## Measures To Reduce Spam
+Spammy Pull/Merge Requests Will Be Labeled As “Spam.”
+**Maintainers:** Label Spammy Requests “Spam” And Close Them. Pr/Mrs Labeled “Spam” Won’t Count Toward Hacktoberfest. Contributors With 2+ Spammy Pr/Mrs Are Disqualified.
+
+**Pull/Merge Requests Must Be Approved By A Maintainer.**
+Maintainers Accept Pr/Mrs By Merging Them, Labeling Them “Hacktoberfest-Accepted,” Or Giving Them An Overall Approving Review. Accepted Pr/Mrs Enter A 7-Day Review Window, During Which Approval Can Be Revoked By The Maintainer Or By Our Team.
+
+**Bad Repositories Will Be Excluded.**
+Pr/Mrs Should Be Useful To Maintainers. Repos That Encourage Simplistic Pr/Mrs (Like Adding A Name Or Profile To A List Or Arbitrarily Curating Content) Will Be Excluded From Hacktoberfest. Remember: Quantity Is Fun, Quality Is Key.
+
+Found A Repository That You Think Doesn’t Follow Our Values? Report It To Us And We’ll Take A Look.
+
+**Avoid Submitting Low-Quality Pull/Merge Requests.**
+Hacktoberfest Is About Contributing Meaningfully To Open-Source Projects. Here Are Some Examples Of Low-Quality Pull/Merge Requests That Won’t Count Towards Hacktoberfest.
+
+- **Automated Pull/Merge Requests:** Scripted Opening Pull Requests To Remove Whitespace, Fix Typos Or Optimize Images.
+- **Disruptive Pull/Merge Requests:** Taking Someone Else’s Branch/Commits And Making A Pull Request.
+- Anything That A Project Maintainer Flags As Spam.
+- Anything That Looks Like An Attempt To Duplicate Your Pull Request Count For October.
+- Multiple Pull/Merge Requests For The Same Issue That Are Unnecessary -For Example Five Pr/Mrs To Remove A Stray Whitespace Is Not.
+
+
 ## Swags of Hacktoberfest:
 
 Many candidates get attracted to Hacktoberfest for the swags. After 4 successfully merged pull requests, as of 2024, you will be eligible to get a Hacktoberfest T-shirt and some stickers delivered to your doorstep.

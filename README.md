@@ -4,7 +4,7 @@
 
 # Submit your PR on this new repo [Hacktoberfest](https://github.com/fineanmol/hacktoberfest). We are merging all PRs there.
 
-In this current repo, there are a lot of conflicts; we are not merging until all conflicts are resolved. Hacktoberfest { [Live Website](https://fineanmol.github.io/Hacktoberfest2024/) }
+In this current repo, there are a lot of conflicts, we are not merging until all conflicts are resolved. Hacktoberfest { [Live Website](https://fineanmol.github.io/Hacktoberfest2024/) }
 
 **This is a beginner-friendly project to help you get started with your [Hacktoberfest](https://hacktoberfest.digitalocean.com/). If you don't know where to start, feel free to watch the videos linked below and read the contribution rules. Happy Learning <3 💙 !!**
 

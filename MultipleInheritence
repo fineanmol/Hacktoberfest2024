@@ -1,0 +1,34 @@
+Multilevel inheritance refers to a mechanism in OO technology where one can
+inherit from a derived class, thereby making this derived class the base class
+for the new class. As you can see in below flow diagram C is subclass or child class of 
+B and B is a child class of A. For more details and example refer – Multilevel inheritance in Java.
+
+Class X
+{
+   public void methodX()
+   {
+     System.out.println("Class X method");
+   }
+}
+Class Y extends X
+{
+public void methodY()
+{
+System.out.println("class Y method");
+}
+}
+Class Z extends Y
+{
+   public void methodZ()
+   {
+     System.out.println("class Z method");
+   }
+   public static void main(String args[])
+   {
+     Z obj = new Z();
+     obj.methodX(); //calling grand parent class method
+     obj.methodY(); //calling parent class method
+     obj.methodZ(); //calling local method
+  }
+}
+

@@ -1,0 +1,12 @@
+Hierarchical Inheritance
+In such kind of inheritance one class is inherited by many sub classes. In below example class B,C and D inherits the same class A. A is parent class (or base class) of B,C & D. Read More at – Hierarchical Inheritance in java with example program.
+
+What is Multilevel Inheritance In Java? In Java (and in other object-oriented languages) a class can get features from another class. This mechanism is known as inheritance. When multiple classes are involved and their parent-child relation i
+s formed in a chained way then such formation is known as multi-level inheritance.
+
+ Hybrid Inheritance
+In simple terms you can say that Hybrid inheritance is a combination of Single and Multiple inheritance. A typical flow diagram would look like below. A hybrid inheritance can be achieved in the java in a same way as multiple inheritance can be!! Using interfaces. yes you heard it right. By using interfaces you can have multiple as well as hybrid inheritance in Java.
+
+Single Inheritance
+Single inheritance is damn easy to understand. When a class extends another one class only then we  call it a single inheritance. The below flow diagram shows that class B extends only one class which is A. Here A is a parent class of B and B would be  a child class of A.
+

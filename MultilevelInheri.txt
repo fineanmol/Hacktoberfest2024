@@ -1,0 +1,120 @@
+What is Multilevel Inheritance In Java?
+
+In Java (and in other object-oriented languages) a class can get features from another class. This mechanism is known as inheritance.
+
+When multiple classes are involved and their parent-child relation is formed in a chained way then such formation is known as multi-level inheritance.
+In multilevel inheritance, a parent a class has a maximum of one direct child class only.
+In multi-level inheritance, the inheritance linkage is formed in a linear way and minimum 3 classes are involved.
+Code re-usability can be extended with multi-level inheritance.
+
+class Person
+
+{
+
+Person()
+
+{
+
+System.out.println("Person constructor");
+
+}
+
+void nationality()
+
+{
+
+System.out.println("Indian");
+
+}
+
+void place()
+
+{
+
+System.out.println("Mumbai");
+
+}
+
+}
+
+class Emp extends Person
+
+{
+
+Emp()
+
+{
+
+System.out.println("Emp constructor");
+
+}
+
+void organization()
+
+{
+
+System.out.println("IBM");
+
+}
+
+void place()
+
+{
+
+System.out.println("New York");
+
+}
+
+}
+
+class Manager extends Emp
+
+{
+
+Manager()
+
+{
+
+System.out.println("Manager constructor");
+
+}
+
+void subordinates()
+
+{
+
+System.out.println(12);
+
+}
+
+void place()
+
+{
+
+System.out.println("London");
+
+}
+
+}
+
+class Check
+
+{
+
+public static void main(String arg[])
+
+{
+
+Manager m=new Manager();
+
+m.nationality();
+
+m.organization();
+
+m.subordinates();
+
+m.place();
+
+}
+
+}

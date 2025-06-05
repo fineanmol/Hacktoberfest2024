@@ -1,0 +1,13 @@
+
+def bubble():
+    l=[1,2,6,57,4,66,7,635,7775,5,7]
+    print(l)
+    k=len(l)
+    for i in range(k):
+        for j in range(k-1-i):
+            if l[j]>l[j+1]:
+                l[j],l[j+1]=l[j+1],l[j]
+    print(l)
+
+
+#this is my first opensource contribution...thank you :)

@@ -135,8 +135,20 @@ footer {
   transition: color .4s ease;
 }
 
-.socials a:hover i {
-  color: aqua;
+.socials a[href*="facebook.com"]:hover i {
+  color: #3b5998; /* Facebook blue */
+}
+
+.socials a[href*="twitter.com"]:hover i {
+  color: #1DA1F2; /* Twitter blue */
+}
+
+.socials a[href*="instagram.com"]:hover i {
+  color: #C13584; /* Instagram gradient color */
+}
+
+.socials a[href*="linkedin.com"]:hover i {
+  color: #0077b5; /* LinkedIn blue */
 }
 
 .footer-bottom {

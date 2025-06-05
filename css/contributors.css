@@ -622,16 +622,17 @@ body {
   text-decoration: none;
 }
 .box #loadMore {
+  font-family:sans-serif;
   padding: 10px;
   margin: 0;
   border-radius: 10px;
-  background-color: #fc3e6a;
+  background-color: #FF8787;
   color: whitesmoke;
   border: none;
   transition: ease-out 0.4s;
 }
 .box #loadMore:hover {
-  color: black;
+  color: #D2001A;
   font-weight: 600;
-  box-shadow: inset 120px 0 0 0 #fe0c43;
+  box-shadow: inset 120px 0 0 0 #FA7070;
 }

@@ -2330,7 +2330,7 @@ contributors = [
   {
     id: 387,
     fullname: "Vaibahv Aswal",
-    username: "https://github.com/ShrutiMishra-2005",
+    username: "https://github.com/ShrutiMishra-2005"
   },
 
   {
@@ -2350,11 +2350,10 @@ contributors = [
     fullname: "Shivam Sisodia",
     username: "https://github.com/shivamsisodia07",
   },
-
   {
     id: 410,
     fullname: "Vjelson Tuazonl",
-    username: "https://github.com/VJelson",
+    username: "https://github.com/VJelson"
   },
 
   {
@@ -2365,48 +2364,52 @@ contributors = [
 
   {
     id: 412,
+    fullname: "Ripunjay Singh",
+    username: "https://github.com/rpj09",
+  },
+    id: 413,
     fullname: "Garima Jain",
     username: "https://github.com/garimajain12",
   },
 
   {
-    id: 413,
+    id: 414,
     fullname: "Niraj Pradhan",
     username: "https://github.com/nirajpdn",
   },
 
   {
-    id: 414,
+    id: 415,
     fullname: "David Gillick",
     username: "https://github.com/VertexAssassins",
   },
 
   {
-    id: 415,
+    id: 416,
     fullname: "Vatsal K",
     username: "https://github.com/vatsalkudecha",
   },
 
   {
-    id: 416,
+    id: 417,
     fullname: "Alejandro Armenta",
     username: "https://github.com/alexanderNWO",
   },
 
   {
-    id: 417,
+    id: 418,
     fullname: "Krish Katyal",
     username: "https://github.com/krishkatyal",
   },
 
   {
-    id: 418,
+    id: 419,
     fullname: "Arshpreet Singh Bedi",
     username: "https://github.com/avibedi1768",
   },
 
   {
-    id: 419,
+    id: 420,
     fullname: "Amit Kumar",
     username: "https://github.com/amit-kumar",
   },

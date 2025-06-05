@@ -1,9 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300);
 * {
-  margin: 0;
-  padding: 0;
+  margin: 20px;
+  padding: 10px;
   box-sizing: border-box;
   border: 5px;
+  border-color: black;
+	border-radius: 5px;
+  
 }
 body {
   display: flex;
@@ -45,6 +48,8 @@ input[type="range"]::-webkit-slider-thumb {
 }
 h4 {
   text-shadow: 0.2px 0.2px 14px #ff1493;
+  	color: cyan;
+
 }
 .css {
   background-color: blue;

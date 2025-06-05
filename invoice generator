@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVOICE : MDN</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        html{
+            font-family: monospace;
+        }
+
+        body{
+            width: 700px;
+            margin: 0 auto;
+        } 
+        div{
+            width: 50%;
+            margin-bottom: 20px;
+            background-color: blueviolet;
+            border: 2px solid black;
+            border-radius: 15px;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <h1>MY INVOICE</h1>
+    <div>
+        <p>Invoice totals before sales tax ($) :</p>
+
+        <ul class="before">
+
+        </ul>
+    </div>
+
+    <div>
+        <p>Invoice totals with 6% sales tax added ($) : </p>
+        <ul class="after">
+
+        </ul>
+    </div>
+
+</body>
+
+<script>
+const totals = [123,222.98,211.98,323.9882,222.988,222.98];
+const beforeList = document.querySelector('.before');
+const afterList = document.querySelector('.after');
+
+for(let i = 0; i < totals.length; i++){
+    const listItem = document.createElement('li');
+    listItem.textContent = totals[i];
+    beforeList.appendChild(listItem);
+}
+
+for(let j = 0; j < totals.length; j++){
+    const listItem = document.createElement('li');
+    listItem.textContent = (totals[j] * 1.06).toFixed(2);
+    afterList.appendChild(listItem);
+}
+
+
+
+</script>
+
+</html>

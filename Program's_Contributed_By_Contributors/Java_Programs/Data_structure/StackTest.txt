@@ -1,0 +1,95 @@
+Operations:
+
+1. Push
+2. Pop
+3. Peek
+4. Is empty
+5. Display
+6. Exit
+
+
+Test case-1 (Test case for push)
+
+size of stack - 4
+
+choice- 1
+ input- 10
+choice- 1
+ input- 20
+choice- 1
+ input- 30
+choice- 5
+
+Output:- 30 20 10
+
+------------------------------------------------------------------------------------------------   
+
+Test case-2 (Test case for pop)
+
+choice- 1
+ input- 10
+choice- 1
+ input- 20
+choice- 1 
+ input- 30
+choice- 2
+choice- 2
+choice- 5
+
+Output:- 10
+
+------------------------------------------------------------------------------------------------   
+
+Test case-3 (Test case for Top elements)
+
+choice- 1
+ input- 10
+choice- 1
+ input- 20
+choice- 1 
+ input- 30
+choice- 3
+
+Output:- Top element is 30
+
+------------------------------------------------------------------------------------------------   
+
+Test case-4 (Test case to check Empty Stack)
+
+choice- 4
+
+Output:- Stack is Empty
+
+choice- 1
+ input- 10
+choice- 4
+
+Output:- Stack is not Empty
+
+------------------------------------------------------------------------------------------------   
+
+Test case-5 (Test case for Display Stack)
+
+choice- 1
+ input- 10
+choice- 1 
+ input- 20
+choice- 1
+ input- 30
+choice- 5
+Output:- 30 20 10
+
+------------------------------------------------------------------------------------------------   
+
+Test case-6 (Test case for Invalid user choice from Menu)
+
+choice- 7
+Output:- Invalid choice
+
+------------------------------------------------------------------------------------------------   
+
+Test case-7 (Test case for invalid input type)
+
+input - hi
+Output:- 
+java.util.InputMismatchException

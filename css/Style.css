@@ -46,6 +46,9 @@ input[type="range"]::-webkit-slider-thumb {
 h4 {
   text-shadow: 0.2px 0.2px 14px #ff1493;
 }
+h4 {
+  text-shadow: 0.2px 0.2px 14px #0000 !important;
+}
 .css {
   background-color: blue;
   color: grey;

@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+.bg-container {
+    background-image: linear-gradient(to right, #f3eaff, #dac0ff);
+    /* height: 100vh; */
+    padding: 20px 10px;
+    /* font-family: "Roboto"; */
+}
+
+.main-heading {
+    color: #790909;
+    font-weight: bold;
+    font-size: 48px;
+    margin-right: 0;
+}
+
+.para,
+#seconds {
+    padding-top: 0px;
+    color: #3e4c59;
+}
+
+.clock-img {
+    height: 45px;
+    width: 45px;
+    margin-right: 25px;
+    margin-top: 20px;
+}
+
+.secs {
+    color: #3e4c59;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.quote-container {
+    background-color: #f2ebfe;
+    border-radius: 15px;
+    border: 1px solid #9aa5b1;
+}
+
+.quote-display {
+    font-size: 18px;
+    color: #323f4b;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+.Result {
+    font-size: 20px;
+    color: #3e4c59;
+}
+
+.button {
+    height: 38px;
+    width: 80px;
+    border-radius: 10px;
+    border-width: 0;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.submit-btn {
+    /* height: 36px; */
+    background-color: #790909;
+
+    color: #fff;
+}
+
+.reset-btn {
+    background-color: rgb(5, 199, 8);
+}

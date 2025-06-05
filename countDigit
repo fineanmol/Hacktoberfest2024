@@ -1,0 +1,12 @@
+import java.util.*;
+class countDigit
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number");
+        int n = sc.nextInt();
+        int s = (int)Math.log10(n)+1;
+        System.out.println("The number of digits are: "+s);
+    }
+}

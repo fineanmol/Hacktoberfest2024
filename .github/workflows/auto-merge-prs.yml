@@ -18,7 +18,6 @@ jobs:
   auto-merge:
     runs-on: ubuntu-latest
     if: github.repository == 'fineanmol/Hacktoberfest2024'
-    
     steps:
       - name: 🔄 Checkout repository
         uses: actions/checkout@v4
@@ -29,7 +28,7 @@ jobs:
       - name: 📋 Get open PRs
         id: get-prs
         run: |
-          # Get all open PRs
+          # This returns an array of PR objects in JSON.
           prs=$(gh pr list --state open --json number,title,author,mergeable,files --limit 100)
           echo "prs=$prs" >> $GITHUB_OUTPUT
         env:
@@ -37,83 +36,77 @@ jobs:
 
       - name: 🔍 Process PRs
         run: |
-          echo '${{ steps.get-prs.outputs.prs }}' | jq -r '.[] | @base64' | while IFS= read -r pr_data; do
-            pr=$(echo "$pr_data" | base64 -d)
-            pr_number=$(echo "$pr" | jq -r '.number')
-            pr_title=$(echo "$pr" | jq -r '.title')
-            pr_author=$(echo "$pr" | jq -r '.author.login')
-            pr_mergeable=$(echo "$pr" | jq -r '.mergeable')
-            
-            echo "🔄 Processing PR #$pr_number by @$pr_author"
-            echo "Title: $pr_title"
-            echo "Mergeable: $pr_mergeable"
-            
-            # Get files changed in this PR
-            files_changed=$(echo "$pr" | jq -r '.files[].path')
-            echo "Files changed: $files_changed"
-            
-            # Check if only contributors file is modified
-            contributors_only=false
-            other_files_count=0
-            contributors_modified=false
-            
-            while IFS= read -r file; do
-              if [ "$file" = "contributors/contributorsList.js" ]; then
-                contributors_modified=true
-              else
-                other_files_count=$((other_files_count + 1))
+          echo "${{ steps.get-prs.outputs.prs }}" \
+            | jq -r '.[] | @base64' \
+            | while IFS= read -r pr_data; do
+              pr=$(echo "$pr_data" | base64 -d)
+              pr_number=$(echo "$pr" | jq -r '.number')
+              pr_title=$(echo "$pr" | jq -r '.title')
+              pr_author=$(echo "$pr" | jq -r '.author.login')
+              pr_mergeable=$(echo "$pr" | jq -r '.mergeable')
+
+              echo "🔄 Processing PR #$pr_number by @$pr_author"
+              echo "Title: $pr_title"
+              echo "Mergeable: $pr_mergeable"
+
+              # Get files changed in this PR
+              files_changed=$(echo "$pr" | jq -r '.files[].path')
+              echo "Files changed: $files_changed"
+
+              # Check if only contributors file is modified
+              contributors_only=false
+              other_files_count=0
+              contributors_modified=false
+
+              while IFS= read -r file; do
+                if [ "$file" = "contributors/contributorsList.js" ]; then
+                  contributors_modified=true
+                else
+                  other_files_count=$(( other_files_count + 1 ))
+                fi
+              done <<< "$files_changed"
+
+              if [ "$contributors_modified" = "true" ] && [ "$other_files_count" = "0" ]; then
+                contributors_only=true
               fi
-            done <<< "$files_changed"
-            
-            if [ "$contributors_modified" = "true" ] && [ "$other_files_count" = "0" ]; then
-              contributors_only=true
-            fi
-            
-            echo "Contributors only: $contributors_only"
-            echo "Other files count: $other_files_count"
-            
-            # Decision logic
-            if [ "$contributors_only" = "true" ]; then
-              echo "🎉 Closing contributor-only PR #$pr_number with thank you message"
-              
-              # Close PR with thank you message
-              gh pr close $pr_number --comment "🎉 Thank you for your contribution to Hacktoberfest 2024! Your changes have been merged automatically into the main branch to resolve merge conflicts. ✅ Your contribution is now live! 🌟 You're officially part of Hacktoberfest 2024! Thank you for participating in open source! 🚀 #Hacktoberfest #OpenSource"
 
-            elif [ "$pr_mergeable" = "MERGEABLE" ] || [ "$pr_mergeable" = "true" ]; then
-              echo "✅ Auto-merging valuable PR #$pr_number"
-              
-              # Merge the PR
-              gh pr merge $pr_number --merge --delete-branch --subject "🤖 Auto-merge PR #$pr_number: $pr_title" --body "Automatically merged by GitHub Actions - no conflicts detected. Thank you @$pr_author for your valuable contribution! 🚀"
+              echo "Contributors only: $contributors_only"
+              echo "Other files count: $other_files_count"
 
-            elif [ "$pr_mergeable" = "CONFLICTING" ] || [ "$pr_mergeable" = "false" ]; then
-              echo "⚠️ PR #$pr_number has conflicts - adding comment for manual review"
-              
-              # Add comment about conflicts
-              gh pr comment $pr_number --body "🔧 **Merge Conflicts Detected** - This PR has merge conflicts that need manual resolution. Please: 1. Pull latest changes from master 2. Resolve conflicts 3. Push updated branch. The PR will auto-merge once conflicts are resolved. Thank you! 🚀"
+              # Decision logic
+              if [ "$contributors_only" = "true" ]; then
+                echo "🎉 Closing contributor-only PR #$pr_number with thank you message"
+                gh pr close "$pr_number" \
+                  --comment "🎉 Thank you for your contribution to Hacktoberfest 2024! Your changes have been merged automatically into the main branch to resolve merge conflicts. ✅ Your contribution is now live! 🌟 You're officially part of Hacktoberfest 2024! Thank you for participating in open source! 🚀 #Hacktoberfest #OpenSource"
+              elif [ "$pr_mergeable" = "MERGEABLE" ] || [ "$pr_mergeable" = "true" ]; then
+                echo "✅ Auto-merging valuable PR #$pr_number"
+                gh pr merge "$pr_number" \
+                  --merge --delete-branch \
+                  --subject "🤖 Auto-merge PR #$pr_number: $pr_title" \
+                  --body "Automatically merged by GitHub Actions—no conflicts detected. Thank you @$pr_author for your valuable contribution! 🚀"
+              elif [ "$pr_mergeable" = "CONFLICTING" ] || [ "$pr_mergeable" = "false" ]; then
+                echo "⚠️ PR #$pr_number has conflicts—adding comment for manual review"
+                gh pr comment "$pr_number" \
+                  --body "🔧 **Merge Conflicts Detected** — This PR has merge conflicts that need manual resolution. Please: 1. Pull latest changes from master 2. Resolve conflicts 3. Push updated branch. The PR will auto-merge once conflicts are resolved. Thank you! 🚀"
+              else
+                echo "👀 PR #$pr_number needs manual review (mergeable status: $pr_mergeable)"
+                gh pr comment "$pr_number" \
+                  --body "👀 **Manual Review Required** — This PR is being reviewed manually to ensure quality and compatibility. Thank you for your patience! A maintainer will review this soon. 🚀"
+              fi
 
-            else
-              echo "ℹ️ PR #$pr_number needs manual review (mergeable status: $pr_mergeable)"
-              
-              # Add comment for manual review
-              gh pr comment $pr_number --body "👀 **Manual Review Required** - This PR is being reviewed manually to ensure quality and compatibility. Thank you for your patience! A maintainer will review this soon. 🚀"
-            fi
-            
-            echo "---"
-            sleep 2  # Rate limiting
-          done
+              echo "---"
+              sleep 2  # Rate limiting
+            done
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 📊 Update repository stats
         run: |
-          # Count contributors
           contributor_count=$(grep -c "id:" contributors/contributorsList.js)
           echo "📊 Total Contributors: $contributor_count"
           
-          # Update README if it exists with contributor count
           if [ -f "README.md" ]; then
-            # You can add logic here to update contributor count in README
-            echo "README.md found - could update contributor count"
+            echo "README.md found – could update contributor count"
           fi
 
       - name: 🎯 Summary
@@ -122,4 +115,4 @@ jobs:
           echo "✅ Contributor-only PRs: Closed with thank you messages"
           echo "✅ Valuable PRs: Auto-merged if no conflicts"
           echo "⚠️ Conflicting PRs: Commented for manual resolution"
-          echo "👀 Complex PRs: Flagged for manual review" 
+          echo "👀 Complex PRs: Flagged for manual review"

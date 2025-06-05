@@ -1,0 +1,8 @@
+Delete all contacts belonging to Accounts Name FIELD having 'A' in them.
+
+public class DeleteA {
+public static void newOpp() {
+        list<Contact>ContactList = [SELECT Id FROM Contact WHERE Account.Name like '%a%'];
+        delete Contactlist;
+}
+}

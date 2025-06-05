@@ -1,0 +1,11 @@
+Find all the Products having Description field containing 'a' in it.
+
+public class FindAllProduct {
+    public static void findPro() {
+        List<Product2>productList=[SELECT Name,Description FROM Product2 WHERE Description LIKE '%a%'];
+        for(Product2 pro:ProductList){
+            string test = pro.Name;
+            system.debug('product Name: '+test);
+        }
+    }
+}

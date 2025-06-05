@@ -1,0 +1,16 @@
+Create 20 Opportunity with Closed Date, Stage and Opportyunity Name.
+
+
+public class CreateNewOpportunity {
+    public static void newOpp() {
+        list<opportunity> addOpp=new list<opportunity>();
+        for(integer i=21;i<41;i++){
+            Opportunity opp = new Opportunity();
+            opp.Name='Name'+i; 
+            opp.closeDate=system.today();
+            opp.StageName='Qualification'+i;
+            opp.Customer_Name__c ='Name'+i;
+            addOpp.add(opp);
+        } insert addOpp;
+    }
+}

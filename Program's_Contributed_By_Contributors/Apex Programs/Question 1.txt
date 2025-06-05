@@ -1,0 +1,14 @@
+Create 20 new Accounts Records in salesforce with atleast 5 fields filled.
+
+public class Addnew {
+    public static void newAccount() {
+        for(integer i=0;i<=20;i++)
+        { Account a=new Account(); 
+            a.Name='Mynameis' + i;
+            a.AccountNumber='123';
+            a.Rating='Hot'; a.Fax='23456';
+            a.Description='xyz';
+            insert a; 
+        }
+    }
+}

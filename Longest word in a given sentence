@@ -1,0 +1,60 @@
+class Node {
+    String data;
+    Node next;
+
+    Node(String data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+class LinkedList {
+    Node head;
+
+    void append(String data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+        Node current = head;
+        while (current.next != null) {
+            current = current.next;
+        }
+        current.next = newNode;
+    }
+
+    String findLongestWord() {
+        if (head == null) {
+            return null;
+        }
+        String longestWord = head.data;
+        Node current = head.next;
+        while (current != null) {
+            if (current.data.length() > longestWord.length()) {
+                longestWord = current.data;
+            }
+            current = current.next;
+        }
+        return longestWord;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        String sentence = "This is a sample sentence with some long words in it.";
+
+        LinkedList wordList = new LinkedList();
+
+        // Split the sentence into words and append them to the linked list
+        String[] words = sentence.split(" ");
+        for (String word : words) {
+            wordList.append(word);
+        }
+
+        String longestWord = wordList.findLongestWord();
+
+        System.out.println("Original Sentence: " + sentence);
+        System.out.println("Longest Word: " + longestWord);
+    }
+}

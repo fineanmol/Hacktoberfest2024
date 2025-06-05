@@ -1,0 +1,132 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.ArrayList;
+
+public class AddressBookApp {
+private JFrame frame;
+private JList<String> contactList;
+private DefaultListModel<String> listModel;
+private JTextField nameField, emailField;
+private JButton addButton, deleteButton;
+
+private ArrayList<Contact> contacts;
+
+public AddressBookApp() {
+frame = new JFrame("Address Book");
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+frame.setLayout(new BorderLayout());
+frame.setSize(400, 300);
+
+listModel = new DefaultListModel<>();
+contactList = new JList<>(listModel);
+
+nameField = new JTextField(20);
+emailField = new JTextField(20);
+
+addButton = new JButton("Add Contact");
+deleteButton = new JButton("Delete Contact");
+
+contacts = new ArrayList<>();
+
+setupUI();
+setupListeners();
+}
+
+private void setupUI() {
+JPanel inputPanel = new JPanel(new GridLayout(2, 2));
+inputPanel.add(new JLabel("Name:"));
+inputPanel.add(nameField);
+inputPanel.add(new JLabel("Email:"));
+inputPanel.add(emailField);
+
+JPanel buttonPanel = new JPanel(new FlowLayout());
+buttonPanel.add(addButton);
+buttonPanel.add(deleteButton);
+
+JPanel leftPanel = new JPanel(new BorderLayout());
+leftPanel.add(inputPanel, BorderLayout.NORTH);
+leftPanel.add(buttonPanel, BorderLayout.SOUTH);
+
+frame.add(leftPanel, BorderLayout.WEST);
+frame.add(new JScrollPane(contactList), BorderLayout.CENTER);
+}
+
+private void setupListeners() {
+addButton.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+String name = nameField.getText();
+String email = emailField.getText();
+if (!name.isEmpty() && !email.isEmpty()) {
+Contact contact = new Contact(name, email);
+contacts.add(contact);
+listModel.addElement(contact.toString());
+clearFields();
+}
+}
+});
+
+deleteButton.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+int selectedIndex = contactList.getSelectedIndex();
+if (selectedIndex != -1) {
+contacts.remove(selectedIndex);
+listModel.remove(selectedIndex);
+}
+}
+});
+
+contactList.addListSelectionListener(new ListSelectionListener() {
+public void valueChanged(ListSelectionEvent e) {
+int selectedIndex = contactList.getSelectedIndex();
+if (selectedIndex != -1) {
+Contact selectedContact = contacts.get(selectedIndex);
+nameField.setText(selectedContact.getName());
+emailField.setText(selectedContact.getEmail());
+}
+}
+});
+}
+
+private void clearFields() {
+nameField.setText("");
+emailField.setText("");
+}
+
+public void display() {
+frame.setVisible(true);
+}
+
+public static void main(String[] args) {
+SwingUtilities.invokeLater(new Runnable() {
+public void run() {
+AddressBookApp app = new AddressBookApp();
+app.display();
+}
+});
+}
+
+private class Contact {
+private String name;
+private String email;
+
+public Contact(String name, String email) {
+this.name = name;
+this.email = email;
+}
+
+public String getName() {
+return name;
+}
+
+public String getEmail() {
+return email;
+}
+
+@Override
+public String toString() {
+return name + " (" + email + ")";
+}
+}
+}
+// program created by arpitbatra01 (PR1)

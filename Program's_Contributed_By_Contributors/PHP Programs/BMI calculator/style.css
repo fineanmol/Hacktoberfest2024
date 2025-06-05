@@ -1,0 +1,23 @@
+body{
+    background-color: #6b95be;
+    width: 100%;
+    height: 100vh;
+}
+
+form{
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    top: 30vh;
+    text-align: center;
+}
+
+label{
+    width: 100%;
+    text-align: center;
+}
+
+input{
+    display: block;
+    margin: 0 auto;
+}

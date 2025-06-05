@@ -1,0 +1,45 @@
+def is_valid(board, row, col, num):
+    # Check if 'num' is valid in the current row, column, and 3x3 box
+    for i in range(9):
+        if board[row][i] == num or board[i][col] == num or board[row - row % 3 + i // 3][col - col % 3 + i % 3] == num:
+            return False
+    return True
+
+def solve_sudoku(board):
+    for row in range(9):
+        for col in range(9):
+            if board[row][col] == 0:
+                for num in range(1, 10):
+                    if is_valid(board, row, col, num):
+                        board[row][col] = num
+                        if solve_sudoku(board):
+                            return True
+                        board[row][col] = 0  # Backtrack if no valid number is found
+                return False  # No valid number found, need to backtrack further
+    return True  # All cells filled
+
+def print_sudoku(board):
+    for row in board:
+        print(" ".join(map(str, row)))
+
+def get_user_input():
+    board = []
+    print("Enter the Sudoku puzzle row by row. Use 0 to represent empty cells.")
+    for _ in range(9):
+        row = input("Enter row (9 numbers, space-separated): ").split()
+        row = [int(num) for num in row]
+        board.append(row)
+    return board
+
+if __name__ == "__main__":
+    # Code created by Lord Zeus
+    sudoku_board = get_user_input()
+
+    print("\nEntered Sudoku Puzzle:")
+    print_sudoku(sudoku_board)
+
+    if solve_sudoku(sudoku_board):
+        print("\nSolved Sudoku:")
+        print_sudoku(sudoku_board)
+    else:
+        print("\nNo solution exists.")

@@ -419,18 +419,31 @@ a:hover {
   transform-origin: bottom center;
 }
 @keyframes shrinkjump {
-  10%,
-  35% {
-    transform: scale(2, 0.2) translate(0, 0);
+  0% {
+    transform: scale(1) translate(0, 0); /* Starting point */
   }
-  45%,
-  50% {
-    transform: scale(1) translate(0, -150px);
+  10%, 35% {
+    transform: scale(2, 0.2) translate(0, 0); /* Shrink and squash */
+  }
+  45%, 50% {
+    transform: scale(1) translate(0, -150px); /* Jump up */
+  }
+  65% {
+    transform: scale(1.5, 0.8) translate(0, -75px); /* Mid-air scaling effect */
   }
   80% {
-    transform: scale(1) translate(0, 0);
+    transform: scale(1) translate(0, 0); /* Return to original position */
+  }
+  100% {
+    transform: scale(1) translate(0, 0); /* Ensure end state matches start state */
   }
 }
+
+/* Applying the keyframes */
+.element {
+  animation: shrinkjump 3s ease-in-out infinite; /* Adjust timing and ease */
+}
+
 .word span:nth-child(8).active {
   animation: falling 2s ease-out;
   transform-origin: bottom center;

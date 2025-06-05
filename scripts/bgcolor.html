@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Change Background Color</title>
+    <style>
+      body {
+        transition: background-color 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="changeColorButton">Change Color</button>
+
+    <script>
+      document
+        .getElementById("changeColorButton")
+        .addEventListener("click", function () {
+          document.body.style.backgroundColor = getRandomColor();
+        });
+
+      function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+    </script>
+  </body>
+</html>

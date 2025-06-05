@@ -1,0 +1,17 @@
+<html>
+    <title>Wifi.net</title>
+
+    <body>
+        <h1>Login Hotspot Mikrotik</h1>
+        <input id="Username" type="Username">
+        <input id="Username" type="Password">
+    </body>
+
+    <style>
+    Username {
+        background-color: gray;
+        position: relative;
+
+    }
+    </style>
+</html>

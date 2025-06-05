@@ -16,7 +16,7 @@ permissions:
 jobs:
   auto-merge-valuable:
     runs-on: ubuntu-latest
-    if: github.repository == 'fineanmol/Hacktoberfest2024'
+    # if: github.repository == 'fineanmol/Hacktoberfest2024'
     
     steps:
       - name: 🔄 Checkout repository

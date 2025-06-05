@@ -44,10 +44,10 @@ input[type="range"]::-webkit-slider-thumb {
   margin-top: -0.1rem;
 }
 h4 {
-  text-shadow: 0.2px 0.2px 14px #ff1493;
+  text-shadow: 0.2px 0.2px 14px #02b54f;
 }
 .css {
-  background-color: blue;
+  background-color: maroon;
   color: grey;
   text-align: center;
   padding: 1.25rem 2.5rem;

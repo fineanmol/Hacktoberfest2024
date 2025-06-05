@@ -3,7 +3,7 @@ const scrollButton = document.getElementById("backToTop");
 
 function handleScroll() {
   const scrollTop =
-    document.body.scrollTop || document.documentElement.scrollTop;
+    window.scrollY || document.body.scrollTop || document.documentElement.scrollTop;
   scrollButton.style.display = scrollTop > 150 ? "block" : "none";
 }
 
@@ -23,23 +23,24 @@ scrollButton.addEventListener("mouseup", () => {
 });
 
 function smoothScrollTo(to, duration, callback) {
-  const start = document.documentElement.scrollTop,
+  const start = document.documentElement.scrollTop || document.body.scrollTop,
     change = to - start,
-    increment = 20;
-  let currentTime = 0;
+    startTime = performance.now();
 
-  function animateScroll() {
-    currentTime += increment;
-    const val = Math.easeInOutQuad(currentTime, start, change, duration);
+  function animateScroll(currentTime) {
+    const elapsed = currentTime - startTime;
+    const val = Math.easeInOutQuad(elapsed, start, change, duration);
+
     document.documentElement.scrollTop = val;
+    document.body.scrollTop = val;
 
-    if (currentTime < duration) {
-      setTimeout(animateScroll, increment);
+    if (elapsed < duration) {
+      requestAnimationFrame(animateScroll);
     } else if (callback && typeof callback === "function") {
       callback();
     }
   }
-  animateScroll();
+  requestAnimationFrame(animateScroll);
 }
 
 Math.easeInOutQuad = (t, b, c, d) => {

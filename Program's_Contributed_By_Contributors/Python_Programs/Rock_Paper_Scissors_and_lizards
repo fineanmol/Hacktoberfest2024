@@ -1,0 +1,107 @@
+print("GET READY TO PLAY ROCK PAPER SCISSORS AND LIZARD")
+
+#asking user to enter their name
+user1=input(" User1 What's your name:")
+user2=input("User2 What's your name:")
+user3=input("User3 What's your name:")
+
+#asking user to enter their move
+# %s to format string with users name
+u1_ans=input("%s what do you want to choose rock,paper,scissors or lizard:" %user1)
+u2_ans=input("%s what do you want to choose rock,paper,scissors or lizard:" %user2)
+u3_ans=input("%s what do you want to choose rock,paper,scissors or lizard:" %user3)
+
+#defining my function name as compare taking u1,u2 and u3  as arguments
+def compare(u1,u2,u3):
+    if u1==u2 or u2==u3 or u3==u1 or u1==u2==u3:#using if condition
+        return("It's a tie!")
+    elif u1=="rock" and u2=="lizard":#using elif for multiple cases
+        if u3=="paper":
+            return("""User1 and user3 wins!
+                   User3 is final winner!!""")#returning function value
+        else:
+            return("""User1 and user2 wins!
+                   User 1 is final winner!!""")
+    elif u1=="lizard" and u2=="rock":
+        if u3=="paper":
+            return("""user3 and user2 wins!
+                   User3 is final winner!!""")
+        else:
+            return("""User1 and user2 wins!
+                   User1 is final winner!!""")
+    elif u1=="rock" and u2=="scissors":
+        if u3=="lizard":
+            return("""User1 and user3 wins!
+                   User1 is final winner!!""")
+        else:
+            return("""user2 and user3 wins!
+                   User3 is final winner!!""")
+    elif u1=="rock" and u2=="paper":
+        if u3=="lizard":
+        return("""User1 and user2 wins !
+                   User2 is final winner!!""")
+        else:
+            return("""user3 and user2 wins
+                   User3 is final winner!!""")
+    elif u1=="lizard" and u2=="scissors":
+        if u3=="rock":
+            return("""user3 and User1 wins !
+                   User3 is the final winner!!""")
+        else:
+            return("""User1 and user2 wins !
+                   User1 is the final winner!!""")
+    elif u1=="lizard" and u2=="paper":
+        if u3=="scissors":
+            return("""User1 and user3 wins!
+                   User1 is the finla winner!!""")
+        else:
+            return("""user2 and user3 wins !
+                   User2 is the final winner!!""")
+    elif u1=="scissors" and u2=="paper":
+        if u3=="rock":
+            return("""User1 and user2 wins !
+                   User1 is the final winner!!""")
+        else:
+            return("""user3 and User1 wins !
+                   User3 is the final winner!!""")
+    elif u1=="scissors" and u2=="rock":
+        if u3=="paper":
+            return("""User1 and user3 wins!
+                   User1 is the final winner""")
+        else:
+            return("""user3 and user2 wins!
+                   User2 is the final winner""")
+    elif u1=="scissors" and u2=="lizard":
+        if u3=="rock":
+            return("""user and user2 wins !
+                   User3 is the final winner""")
+        else:
+            return("""User1 and user2 wins!
+                   User2 is final winner!!""")
+                   elif u1=="paper" and u2=="scissors":
+        if u3=="rock":
+            return("""user2 and User1 wins !
+                   User2 is the final winner!!""")
+        else:
+            return("""user3 and user2 wins!
+                   User3 is the final winner!!""")
+    elif u1=="paper" and u2=="rock":
+        if u3=="lizard":
+            return("""User1 and User2 wins !
+                   User1 is the final winner!!""")
+        else:
+            return("""user3 and User1 wins !
+                   User3 is the final winner!!""")
+    elif u1=="paper" and u2=="lizard":
+        if u3=="rock":
+            return("""user1 nad user3 wins !
+                   User1 is the final winner!!""")
+        else:
+            return("""user2 and user3 wins !
+                   User2 is the final winner""")
+    else:
+        return("""Invalid input!
+You have not entered 'rock','paper','scissors' and 'lizard'
+try again!!!""")
+
+print(compare(u1_ans,u2_ans,u3_ans))#calling compare function in print statement

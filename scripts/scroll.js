@@ -48,3 +48,16 @@ Math.easeInOutQuad = (t, b, c, d) => {
   t--;
   return (-c / 2) * (t * (t - 2) - 1) + b;
 };
+
+//Adding js for the search input field
+
+$('.inputs').on('click', function() {
+  $('.inputs').toggleClass('active');
+  $('.inputs i').toggleClass('active');
+});
+
+const themeToggle = document.getElementById('theme-toggle');
+
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-theme');
+});

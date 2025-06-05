@@ -9,6 +9,8 @@
   --box-hover: #fe0c43;
   --nav-color: rgb(255, 230, 230);
   --footer-color: #ededed;
+  --input-bg-color: rgba(255, 255, 255, 0.752);
+  --input-text-color: black;
 }
 [data-theme="dark"] {
   --white: rgb(39 41 52);
@@ -20,6 +22,8 @@
   --nav-color: #1e1e28;
   --footer-color: #ededed;
   --container-text: #ffb3c6;
+  --input-bg-color: #333; 
+  --input-text-color: white;
 }
 *,
 ::after,
@@ -157,6 +161,46 @@ input:-webkit-autofill:active {
   outline: 0;
   box-shadow: none;
 }
+/*Adding Style for the search input field*/
+
+.inputs {
+  transition: width 0.5s ease-in-out;
+  
+}
+
+.inputs input {
+  background-color: var(--input-bg-color);
+  color: var(--input-text-color);
+  border: 1px solid #ccc; 
+  transition: background-color 0.5s ease; 
+}
+
+.inputs input::placeholder {
+  color: var(--input-text-color); 
+}
+
+.inputs.active {
+  width: 200px; 
+}
+
+.inputs:hover {
+  background-color: #e32c3e;
+  box-shadow: 0 0 10px rgba(200, 221, 221, 1.5); 
+}
+
+.inputs i{
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+.inputs i.active {
+  transform: rotate(360deg);
+}
+
+.inputs i:hover {
+  transform: scale(1.9);
+}
+
 .inputs i {
   position: absolute;
   top: 12px;
@@ -233,8 +277,6 @@ a:hover {
   size: 30cm;
   color: rgb(255, 255, 255);
   letter-spacing: 2px;
-  font-weight: 700;
-  /* transform: rotate(3deg); */
   transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 .box-item::before {

@@ -1,0 +1,162 @@
+using System;
+using System.Collections.Generic;
+
+class BankAccount
+{
+    public string AccountNumber { get; set; }
+    public string AccountHolderName { get; set; }
+    public decimal Balance { get; set; }
+
+    public BankAccount(string accountNumber, string accountHolderName)
+    {
+        AccountNumber = accountNumber;
+        AccountHolderName = accountHolderName;
+        Balance = 0;
+    }
+
+    public void Deposit(decimal amount)
+    {
+        Balance += amount;
+        Console.WriteLine($"Deposited {amount:C}. Updated balance: {Balance:C}");
+    }
+
+    public void Withdraw(decimal amount)
+    {
+        if (Balance >= amount)
+        {
+            Balance -= amount;
+            Console.WriteLine($"Withdrawn {amount:C}. Updated balance: {Balance:C}");
+        }
+        else
+        {
+            Console.WriteLine("Insufficient balance.");
+        }
+    }
+
+    public void DisplayBalance()
+    {
+        Console.WriteLine($"Account Number: {AccountNumber}");
+        Console.WriteLine($"Account Holder: {AccountHolderName}");
+        Console.WriteLine($"Balance: {Balance:C}");
+    }
+}
+
+class Program
+{
+    private static Dictionary<string, BankAccount> accounts = new Dictionary<string, BankAccount>();
+
+    static void Main(string[] args)
+    {
+        while (true)
+        {
+            Console.WriteLine("Welcome to Simple Banking System");
+            Console.WriteLine("1. Create Account");
+            Console.WriteLine("2. Deposit");
+            Console.WriteLine("3. Withdraw");
+            Console.WriteLine("4. Check Balance");
+            Console.WriteLine("5. Exit");
+            Console.Write("Enter your choice: ");
+
+            int choice;
+            if (!int.TryParse(Console.ReadLine(), out choice))
+            {
+                Console.WriteLine("Invalid choice. Please try again.");
+                continue;
+            }
+
+            switch (choice)
+            {
+                case 1:
+                    CreateAccount();
+                    break;
+                case 2:
+                    Deposit();
+                    break;
+                case 3:
+                    Withdraw();
+                    break;
+                case 4:
+                    CheckBalance();
+                    break;
+                case 5:
+                    return;
+                default:
+                    Console.WriteLine("Invalid choice. Please try again.");
+                    break;
+            }
+        }
+    }
+
+    private static void CreateAccount()
+    {
+        Console.Write("Enter account number: ");
+        string accountNumber = Console.ReadLine();
+        Console.Write("Enter account holder name: ");
+        string accountHolderName = Console.ReadLine();
+
+        BankAccount account = new BankAccount(accountNumber, accountHolderName);
+        accounts[accountNumber] = account;
+        Console.WriteLine("Account created successfully.");
+    }
+
+    private static void Deposit()
+    {
+        Console.Write("Enter account number: ");
+        string accountNumber = Console.ReadLine();
+
+        if (accounts.ContainsKey(accountNumber))
+        {
+            Console.Write("Enter amount to deposit: ");
+            if (decimal.TryParse(Console.ReadLine(), out decimal amount))
+            {
+                accounts[accountNumber].Deposit(amount);
+            }
+            else
+            {
+                Console.WriteLine("Invalid amount. Please try again.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Account not found.");
+        }
+    }
+
+    private static void Withdraw()
+    {
+        Console.Write("Enter account number: ");
+        string accountNumber = Console.ReadLine();
+
+        if (accounts.ContainsKey(accountNumber))
+        {
+            Console.Write("Enter amount to withdraw: ");
+            if (decimal.TryParse(Console.ReadLine(), out decimal amount))
+            {
+                accounts[accountNumber].Withdraw(amount);
+            }
+            else
+            {
+                Console.WriteLine("Invalid amount. Please try again.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Account not found.");
+        }
+    }
+
+    private static void CheckBalance()
+    {
+        Console.Write("Enter account number: ");
+        string accountNumber = Console.ReadLine();
+
+        if (accounts.ContainsKey(accountNumber))
+        {
+            accounts[accountNumber].DisplayBalance();
+        }
+        else
+        {
+            Console.WriteLine("Account not found.");
+        }
+    }
+}

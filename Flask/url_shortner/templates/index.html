@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+   <center><h1>{% block title %} Welcome to URL Shortener {% endblock %}</h1></center>
+   <center><h3>By chaitanya dubal</h3></center>
+    <form method="post">
+    <div class="form-group">
+
+        <center><label for="url">URL</label></center>
+        <center><input type="text" name="url"
+               placeholder="URL to shorten" class="form-control"
+               value="{{ request.form['url'] }}" autofocus></input></center>
+    </div>
+
+    <div class="form-group">
+        <center><button type="submit" class="btn btn-primary">Submit</button></center>
+    </div>
+    </form>
+
+    {% if short_url %}
+    <hr>
+    <center><span>{{ short_url }}</span></center>
+    {% endif %}
+{% endblock %}

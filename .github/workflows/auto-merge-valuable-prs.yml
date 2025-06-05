@@ -16,8 +16,7 @@ permissions:
 jobs:
   auto-merge-valuable:
     runs-on: ubuntu-latest
-    # if: github.repository == 'fineanmol/Hacktoberfest2024'
-    
+
     steps:
       - name: 🔄 Checkout repository
         uses: actions/checkout@v4
@@ -25,121 +24,93 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 🔍 Find mergeable valuable PRs
+      - name: 🔍 Find all open PRs with mergeableState
         id: find-prs
         run: |
-          # Get PRs labeled "valuable-contribution" and check mergeable status
-          valuable_prs=$(gh pr list \
-            --state open \
-            --label "valuable-contribution" \
-            --json number,title,author,mergeable \
-            --limit 50)
-
-          # Also fetch all open PRs (to inspect their file changes)
+          # 1) Fetch all open PRs, including mergeableState and file list
           all_prs=$(gh pr list \
             --state open \
-            --json number,title,author,mergeable,files \
-            --limit 50)
+            --json number,title,author,mergeableState,files \
+            --limit 3000)
 
-          # Save the JSON blobs into step outputs as multiline strings
-          echo "valuable_prs<<EOF" >> $GITHUB_OUTPUT
-          echo "$valuable_prs"       >> $GITHUB_OUTPUT
-          echo "EOF"                 >> $GITHUB_OUTPUT
-
-          echo "all_prs<<EOF"        >> $GITHUB_OUTPUT
-          echo "$all_prs"           >> $GITHUB_OUTPUT
-          echo "EOF"                 >> $GITHUB_OUTPUT
+          # 2) Save that JSON into a step output as a multiline string
+          echo "all_prs<<EOF" >> $GITHUB_OUTPUT
+          echo "$all_prs"        >> $GITHUB_OUTPUT
+          echo "EOF"             >> $GITHUB_OUTPUT
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: ✅ Auto-merge valuable PRs
+      - name: ✅ Auto-merge non-conflicting PRs
         run: |
-          # ── FIXED LINES BELOW ──
-          # Write the multiline JSON into temporary files so jq can safely parse them
-          echo "${{ steps.find-prs.outputs.valuable_prs }}" > valuable_prs.json
-          echo "${{ steps.find-prs.outputs.all_prs }}"      > all_prs.json
+          # ── STEP A: Dump the JSON blob to a file for safe parsing ──
+          echo "${{ steps.find-prs.outputs.all_prs }}" > all_prs.json
 
-          # Process “valuable-contribution” PRs first
-          jq -r '.[] | @base64' valuable_prs.json | while IFS= read -r pr_data; do
-            if [ -n "$pr_data" ]; then
-              pr=$(echo "$pr_data" | base64 -d)
-              pr_number=$(echo "$pr" | jq -r '.number')
-              pr_title=$(echo "$pr" | jq -r '.title')
-              pr_author=$(echo "$pr" | jq -r '.author.login')
-              pr_mergeable=$(echo "$pr" | jq -r '.mergeable')
-
-              echo "🔄 Processing valuable PR #$pr_number by @$pr_author"
-              echo "Title: $pr_title"
-              echo "Mergeable: $pr_mergeable"
-
-              if [ "$pr_mergeable" = "MERGEABLE" ] || [ "$pr_mergeable" = "true" ]; then
-                echo "✅ Auto-merging valuable PR #$pr_number"
-                if gh pr merge $pr_number --merge --delete-branch; then
-                  echo "✅ Successfully merged PR #$pr_number"
-                  gh pr comment $pr_number \
-                    --body "🚀 **Automatically Merged!** Thank you @$pr_author for your valuable contribution to Hacktoberfest 2024! Your code has been successfully merged into the main branch. 🎉 #Hacktoberfest #OpenSource" \
-                    || true
-                else
-                  echo "❌ Failed to merge PR #$pr_number"
-                fi
-              else
-                echo "⚠️ PR #$pr_number not mergeable yet"
-              fi
-
-              sleep 2  # rate-limit
-            fi
-          done
-
-          # Next: process any other open PRs that might deserve “valuable-contribution”
+          # ── STEP B: Loop over each PR entry (base64-encoded) ──
           jq -r '.[] | @base64' all_prs.json | while IFS= read -r pr_data; do
-            if [ -n "$pr_data" ]; then
-              pr=$(echo "$pr_data" | base64 -d)
-              pr_number=$(echo "$pr" | jq -r '.number')
-              pr_title=$(echo "$pr" | jq -r '.title')
-              pr_author=$(echo "$pr" | jq -r '.author.login')
-              pr_mergeable=$(echo "$pr" | jq -r '.mergeable')
-
-              # List all files changed in this PR
-              files_changed=$(echo "$pr" | jq -r '.files[].path // empty')
-
-              # If there are no changed files, skip
-              if [ -z "$files_changed" ]; then
-                continue
-              fi
-
-              # Detect if it’s “contributors-only”
-              contributors_only=true
-              while IFS= read -r file; do
-                if [ -n "$file" ] && [ "$file" != "contributors/contributorsList.js" ]; then
-                  contributors_only=false
-                  break
-                fi
-              done <<< "$files_changed"
-
-              # Skip any PRs that only touch contributorsList.js
-              if [ "$contributors_only" = "true" ]; then
-                continue
-              fi
-
-              echo "🔄 Processing unlabeled PR #$pr_number by @$pr_author"
-
-              if [ "$pr_mergeable" = "MERGEABLE" ] || [ "$pr_mergeable" = "true" ]; then
-                echo "✅ Auto-merging valuable PR #$pr_number"
-                # First, tag it “valuable-contribution”
-                gh pr edit $pr_number --add-label "valuable-contribution" || true
-
-                if gh pr merge $pr_number --merge --delete-branch; then
-                  echo "✅ Successfully merged PR #$pr_number"
-                  gh pr comment $pr_number \
-                    --body "🚀 **Automatically Merged!** Thank you @$pr_author for your valuable contribution to Hacktoberfest 2024! Your code has been successfully merged. 🎉 #Hacktoberfest #OpenSource" \
-                    || true
-                else
-                  echo "❌ Failed to merge PR #$pr_number"
-                fi
-              fi
-
-              sleep 2  # rate-limit
+            if [ -z "$pr_data" ]; then
+              continue
             fi
+
+            pr=$(echo "$pr_data" | base64 -d)
+            pr_number=$(echo "$pr" | jq -r '.number')
+            pr_title=$(echo "$pr" | jq -r '.title')
+            pr_author=$(echo "$pr" | jq -r '.author.login')
+            pr_mergeableState=$(echo "$pr" | jq -r '.mergeableState')
+
+            # 1) Skip any PR that only touches contributors/contributorsList.js
+            files_changed=$(echo "$pr" | jq -r '.files[].path // empty')
+            if [ -z "$files_changed" ]; then
+              # No files changed? Strange, but skip.
+              continue
+            fi
+
+            contributors_only=true
+            while IFS= read -r file; do
+              if [ -n "$file" ] && [ "$file" != "contributors/contributorsList.js" ]; then
+                contributors_only=false
+                break
+              fi
+            done <<< "$files_changed"
+
+            if [ "$contributors_only" = "true" ]; then
+              # There is only contributorsList.js in the changes → skip
+              continue
+            fi
+
+            # 2) Only act on PRs that GitHub marks as “MERGEABLE”
+            if [ "$pr_mergeableState" != "MERGEABLE" ]; then
+              # Either there’s a conflict or GitHub hasn’t computed mergeability → skip
+              echo "⚠️ Skipping PR #$pr_number (state: $pr_mergeableState)"
+              continue
+            fi
+
+            echo "🔄 Processing PR #$pr_number by @$pr_author — \"$pr_title\""
+            echo "    • mergeableState = $pr_mergeableState"
+
+            # 3) Check if the label “valuable-contribution” already exists on this PR
+            has_label=$(gh pr view "$pr_number" --json labels \
+              | jq -r '.labels[].name' \
+              | grep -x "valuable-contribution" || echo "")
+
+            if [ -z "$has_label" ]; then
+              # Add the label, since it’s MERGEABLE and unlabeled
+              echo "    • Adding label “valuable-contribution”"
+              gh pr edit "$pr_number" --add-label "valuable-contribution" || true
+            fi
+
+            # 4) Merge the PR and delete its branch
+            echo "    • Attempting to merge PR #$pr_number"
+            if gh pr merge "$pr_number" --merge --delete-branch; then
+              echo "✅ Successfully merged PR #$pr_number"
+              gh pr comment "$pr_number" \
+                --body "🚀 **Automatically merged!** Thank you @$pr_author for your contribution. 🎉 #AutoMerge" \
+                || true
+            else
+              echo "❌ Failed to merge PR #$pr_number"
+            fi
+
+            # Rate-limit pause to avoid hitting GitHub API limits
+            sleep 2
           done
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -148,5 +119,5 @@ jobs:
         run: |
           echo "🤖 Auto-merge workflow completed!"
           contributor_count=$(grep -c "id:" contributors/contributorsList.js || echo 0)
-          echo "📊 Total Contributors: $contributor_count"
-          echo "✅ Processed valuable PRs for auto-merging"
+          echo "📊 Total Contributors (lines in contributorsList.js): $contributor_count"
+          echo "✅ Attempted to merge all non-conflicting PRs"

@@ -16,7 +16,7 @@
   height: 30px;
 }
 .footer-icon {
-  color: #ff2222;
+  color: blue;
 }
 #footer h3 span:hover {
   cursor: pointer;
@@ -136,7 +136,7 @@ footer {
 }
 
 .socials a:hover i {
-  color: aqua;
+  color: purple;
 }
 
 .footer-bottom {
@@ -192,6 +192,7 @@ footer {
   .footer-menu ul {
     display: flex;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    margin-left: 30px;
   }
 }

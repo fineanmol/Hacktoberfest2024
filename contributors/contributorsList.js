@@ -2482,6 +2482,11 @@ contributors = [
     fullname: "Parth Panjwani",
     username: "https://github.com/Parth-Panjwani",
   },
+  {
+    id: 442,
+    fullname: "Arshad Ariff",
+    username: "https://github.com/ArshadAriff",
+  },
 
   {
     id: 442,

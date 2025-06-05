@@ -1,9 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:300);
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 5px;
 }
 body {
   display: flex;
@@ -24,24 +23,25 @@ body {
   align-items: center;
 }
 #top {
+  position: relative; /* Added relative positioning */
   top: -0.4rem;
   left: -0.35rem;
 }
 #bottom {
+  position: relative; /* Added relative positioning */
   bottom: -0.3rem;
   left: -0.35rem;
 }
 input[type="range"]::-webkit-slider-runnable-track {
   cursor: pointer;
-  background-color:blue;
+  background-color: blue;
   border-radius: 0.3rem;
   height: 0.6rem;
 }
 input[type="range"]::-webkit-slider-thumb {
-  background-color:grey;
-  color:navy;
-  cursor: hand;
-  margin-top: -0.1rem;
+  background-color: grey;
+  color: navy;
+  cursor: pointer; /* Corrected cursor value */
 }
 h4 {
   text-shadow: 0.2px 0.2px 14px #ff1493;

@@ -122,6 +122,8 @@ Many candidates get attracted to Hacktoberfest for the swags. After 4 successful
   - It is from 1st October to 31st October 2024.
 - What is the event for?
   - For open source community engagement and to learn how to contribute to open source.
+- Can I contribute to any repository on github?
+  - No, Only on the repositories under the tag of Hacktoberfest 2024
 
 ###### *We will do our best to merge as much as possible from everyone. However, time is limited, and the merge conflicts are horrible :astonished: <3*
 <br>

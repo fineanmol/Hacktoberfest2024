@@ -42,10 +42,10 @@ jobs:
 
       - name: ✅ Auto-merge non-conflicting PRs
         run: |
-          # ── STEP A: Dump the JSON into a local file so `jq` can parse it safely ──
+          # STEP A: Dump the JSON blob to a file so jq can parse it safely
           echo "${{ steps.find-prs.outputs.all_prs }}" > all_prs.json
 
-          # ── STEP B: Loop over each PR record (base64-encoded) ──
+          # STEP B: Loop over each PR record (base64-encoded)
           jq -r '.[] | @base64' all_prs.json | while IFS= read -r pr_data; do
             if [ -z "$pr_data" ]; then
               continue

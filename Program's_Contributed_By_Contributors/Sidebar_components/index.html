@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive sidebar</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Main container for the sidebar and content -->
+  <div class="main_box">
+    <!-- Checkbox input for toggling the sidebar -->
+    <input type="checkbox" id="check" />
+    
+    <!-- Hamburger menu button -->
+    <div class="btn_one">
+      <label for="check">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+    </div>
+
+    <!-- Sidebar menu -->
+    <div class="sidebar_menu">
+      <!-- Logo container -->
+      <div class="logo">
+      </div>
+
+      <!-- Close button for the sidebar -->
+      <div class="btn_two">
+        <label for="check" style="color: grey">
+          <i class="fa-solid fa-xmark"></i>
+        </label>
+      </div>
+
+      <!-- Menu items -->
+      <div class="menu">
+        <ul>
+          <!-- Gallery link -->
+          <li>
+            <i class="fa-solid fa-image"></i>
+            <a href="#">Gallery</a>
+          </li>
+          <!-- Shortcuts link -->
+          <li>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <a href="#">Shortcuts</a>
+          </li>
+          <!-- Exhibits link -->
+          <li>
+            <i class="fa-solid fa-photo-film"></i>
+            <a href="#">Exhibits</a>
+          </li>
+          <!-- Events link -->
+          <li>
+            <i class="fa-solid fa-calendar-days"></i>
+            <a href="#">Events</a>
+          </li>
+          <!-- Store link -->
+          <li>
+            <i class="fa-solid fa-store"></i>
+            <a href="#">Store</a>
+          </li>
+          <!-- Contact link -->
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <a href="#">Contact</a>
+          </li>
+          <!-- Feedback link -->
+          <li>
+            <i class="fa-regular fa-comments"></i>
+            <a href="#">Feedback</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Social media links -->
+      <div class="social_media">
+        <ul>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

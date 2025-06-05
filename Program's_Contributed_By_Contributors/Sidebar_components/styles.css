@@ -1,0 +1,151 @@
+/* Reset default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Styles for the main container */
+.main_box {
+  background-color: rgb(35, 33, 33);
+  height: 100vh;
+  background-size: cover;
+}
+
+/* Styles for the hamburger menu button */
+.btn_one i {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  left: 16px;
+  line-height: 60px;
+  cursor: pointer;
+  transition: all 0.3s linear; /* Added a transition effect on hover */
+}
+
+/* Styles for the sidebar menu */
+.sidebar_menu {
+  position: fixed;
+  left: -300px;
+  height: 100vh;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s linear; /* Added a transition effect for smoother animation */
+}
+
+/* Styles for the logo container */
+.sidebar_menu .logo {
+  position: absolute;
+  width: 87%;
+  line-height: 60px;
+  left: 40px;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+  height: 40px;
+}
+
+/* Styles for the logo link */
+.sidebar_menu .logo a {
+  position: absolute;
+  left: 10px;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Styles for the close button */
+.sidebar_menu .btn_two i {
+  position: absolute;
+  color: grey;
+  font-size: 25px;
+  line-height: 30px;
+  left: 275px;
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.3s linear; /* Added a transition effect on hover */
+}
+
+/* Styles for the menu items */
+.sidebar_menu .menu {
+  position: absolute;
+  width: 100%;
+  top: 80px;
+}
+
+/* Styles for menu list items */
+.sidebar_menu .menu li {
+  margin-top: 6px;
+  padding: 14px 20px;
+}
+
+/* Styles for icons and links inside menu items */
+.sidebar_menu .menu i,
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Styles for icons inside menu items */
+.sidebar_menu .menu i {
+  padding-right: 10px;
+}
+
+/* Styles for the social media links */
+.sidebar_menu .social_media {
+  position: absolute;
+  left: 25%;
+  bottom: 50px;
+}
+
+/* Styles for social media icons */
+.sidebar_menu .social_media i {
+  color: white;
+  opacity: 0.5;
+  padding: 0 5px;
+}
+
+/* Hide the checkbox input */
+#check {
+  display: none;
+}
+
+/* Highlight menu items on hover */
+.sidebar_menu .menu li:hover {
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+/* Increase font size of the hamburger menu icon on hover */
+.btn_one i:hover {
+  font-size: 40px;
+}
+
+/* Increase font size of the close button icon on hover */
+.btn_two i:hover {
+  font-size: 40px;
+}
+
+/* Increase opacity and scale of social media icons on hover */
+.sidebar_menu .social_media i:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Show the sidebar menu when the checkbox is checked */
+#check:checked ~ .sidebar_menu {
+  left: 0;
+}
+
+/* Hide the hamburger menu icon when the checkbox is checked */
+#check:checked ~ .btn_one i {
+  opacity: 0;
+}
+
+/* Show the close button icon when the checkbox is checked */
+#check:checked ~ .sidebar_menu .btn_two i {
+  opacity: 1;
+}

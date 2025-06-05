@@ -1,0 +1,92 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+/* body img{
+    width: 150px;
+    position: relative;
+} */
+.mab{
+    float: center;
+    
+}
+.runway{
+    height: 150px;
+    width: 100%;
+    bottom: 0px;
+    position: absolute;
+    background-image: url(images/road.jpg);
+    background-size: 100% 40%;
+}
+.pk{
+    width: 950px;
+    bottom: 1150px;
+    position: absolute;
+    right: -170px;
+    top:86%;
+    animation: plane 4s linear infinite;
+    transform-origin: 100% 50%;
+}
+.container h3{
+    text-align: center;
+    margin-top: -110px;
+    width: 1500px;
+  font-size: 90px;
+       border: 10px solid black;
+    border-radius: 13px;
+    border-style: groove;
+    margin-left: 1950px;
+    color: darkgoldenrod;
+    animation: col 4s infinite;
+
+}
+
+@keyframes col{
+    0%{
+        background-color: blanchedalmond;
+    }
+    20%{
+        background-color: rgb(206, 135, 28);
+        text-decoration: blue;
+    }
+    40%{
+        background-color: rgb(205, 255, 212);
+    }
+    60%{
+        background-color: rgb(255, 205, 247);
+    }
+    80%{
+        background-color: rgb(137, 14, 231);
+    }
+    100%{
+        background-color: rgb(196, 47, 28);
+    }
+}
+@keyframes plane{
+    0%{
+        transform: translateX(0px) translateY(0px) rotate(0deg);
+    }
+    30%{
+        transform: translateX(-1500px) translateY(0px) rotate(10deg);
+    }
+    50%{
+        transform: translateX(-3000px) translateY(-300px) rotate(0deg);
+    }
+    70%{
+        transform: translateX(-4500px) translateY(-700px) rotate(20deg);
+    }
+    100%{
+        transform: translateX(-5500px) translateY(-0px) rotate(30deg);
+    }
+}

@@ -16,7 +16,7 @@ const menu = {
       'text': 'Instagram Connect',
       'href': 'https://instagram.com/fineanmol'
     },
-    'Instagram': {
+    'InstagramAlt': {
       'text': 'Connect on <i class="fa fa-instagram" style="font-size:22px"></i>',
       'href': 'https://instagram.com/fineanmol'
     },

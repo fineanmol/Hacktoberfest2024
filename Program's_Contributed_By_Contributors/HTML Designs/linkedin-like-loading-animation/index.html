@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Linkedin Like Loading Animation</title>    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="center">
+		<div class="initial-load-animation">
+			<div class="logo-image"></div>
+			<div class="loading-bar">
+				<div class="blue-bar"></div>
+			</div>
+		</div>
+	</div>
+	<script>
+	setInterval(function() {
+		setTimeout(function() {
+			$('.initial-load-animation').addClass('fade-load');
+		}, 3000);
+		setTimeout(function() {
+			$('.initial-load-animation').removeClass('fade-load');
+		}, 5000);
+	}, 5000);
+	</script>
+</body>
+
+</html>

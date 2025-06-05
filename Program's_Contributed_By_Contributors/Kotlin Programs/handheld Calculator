@@ -1,0 +1,49 @@
+fun main() {
+    println("Kotlin Calculator")
+
+    // Input: Get the first number
+    print("Enter the first number: ")
+    val num1 = readLine()?.toDoubleOrNull()
+
+    // Check if the input is a valid number
+    if (num1 == null) {
+        println("Invalid input. Please enter a valid number.")
+        return
+    }
+
+    // Input: Get the second number
+    print("Enter the second number: ")
+    val num2 = readLine()?.toDoubleOrNull()
+
+    // Check if the input is a valid number
+    if (num2 == null) {
+        println("Invalid input. Please enter a valid number.")
+        return
+    }
+
+    // Input: Get the operation to be performed
+    print("Enter the operation (+, -, *, /): ")
+    val operation = readLine()
+
+    // Perform the calculation based on the selected operation
+    val result = when (operation) {
+        "+" -> num1 + num2
+        "-" -> num1 - num2
+        "*" -> num1 * num2
+        "/" -> {
+            if (num2 != 0.0) {
+                num1 / num2
+            } else {
+                println("Division by zero is not allowed.")
+                return
+            }
+        }
+        else -> {
+            println("Invalid operation. Please enter a valid operation (+, -, *, /).")
+            return
+        }
+    }
+
+    // Output: Display the result
+    println("Result: $result")
+}

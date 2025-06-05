@@ -1,0 +1,44 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <climits>
+
+std::pair<int, int> closestPairSum(const std::vector<int>& nums, int target) {
+    if (nums.size() < 2) {
+        return std::make_pair(INT_MAX, INT_MAX);
+    }
+
+    std::vector<int> sortedNums = nums;
+    std::sort(sortedNums.begin(), sortedNums.end());
+
+    int left = 0;
+    int right = sortedNums.size() - 1;
+    int closestSum = INT_MAX;
+    std::pair<int, int> resultPair;
+
+    while (left < right) {
+        int currentSum = sortedNums[left] + sortedNums[right];
+        if (abs(currentSum - target) < abs(closestSum - target)) {
+            closestSum = currentSum;
+            resultPair = std::make_pair(sortedNums[left], sortedNums[right]);
+        }
+
+        if (currentSum < target) {
+            left++;
+        } else {
+            right--;
+        }
+    }
+
+    return resultPair;
+}
+
+int main() {
+    std::vector<int> nums = {1, 2, 3, 4, 5};
+    int target = 9;
+    std::pair<int, int> result = closestPairSum(nums, target);
+
+    std::cout << "Pair with sum closest to " << target << ": (" << result.first << ", " << result.second << ")" << std::endl;
+
+    return 0;
+}

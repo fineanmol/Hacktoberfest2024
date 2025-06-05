@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Your favourite music is here</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/Images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="Images/logo.png" alt="Spotify">Spotify</li>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="songList">
+            <h1>Best of my playlists</h1>
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img src="/Images/1.jpg" alt="1">
+                    <span class="songName">Chandigarh kare Ashiqui Remix</span>
+                    <span class="songlistplay"><span class="timeStamp">5:30 <i id="1" class="songItemPlay fa-regular fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="/Images/2.jpg" alt="1">
+                    <span class="songName">Srivalli-Remix</span>
+                    <span class="songlistplay"><span class="timeStamp">5:30 <i id="2" class="songItemPlay fa-regular fa-circle-play"></i></span></span>
+                </div>                
+                <div class="songItem">
+                    <img src="/Images/3.jpg" alt="1">
+                    <span class="songName">I'll Be There For You x Woh Din</span>
+                    <span class="songlistplay"><span class="timeStamp">5:30 <i id="3" class="songItemPlay fa-regular fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="/Images/4.jpg" alt="1">
+                    <span class="songName">Brown Munde</span>
+                    <span class="songlistplay"><span class="timeStamp">5:30 <i id="4" class="songItemPlay fa-regular fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="/Images/5.jpg" alt="1">
+                    <span class="songName">Sakhiyaan</span>
+                    <span class="songlistplay"><span class="timeStamp">5:30 <i id="5" class="songItemPlay fa-regular fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="/Images/6.jpg" alt="1">
+                    <span class="songName">Maar Khayega</span>
+                    <span class="songlistplay"><span class="timeStamp">5:30 <i id="6" class="songItemPlay fa-regular fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="/Images/7.jpg" alt="1">
+                    <span class="songName">Main Agar Kahoon</span>
+                    <span class="songlistplay"><span class="timeStamp">5:30 <i id="7" class="songItemPlay fa-regular fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="/Images/8.jpg" alt="1">
+                    <span class="songName">Lafda Zala</span>
+                    <span class="songlistplay"><span class="timeStamp" id="timeStamp">5:30<i id="8" class="songItemPlay fa-regular fa-circle-play"></i></span></span>
+                </div>
+                
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+        <div class="icons">
+            <!-- fontawesome icons -->
+            <i class="fa-solid fa-2x fa-backward-step" id="previous"></i>
+            <i class="fa-regular fa-2x fa-circle-play" id="masterPlay"></i>
+            <i class="fa-solid fa-2x fa-forward-step" id="next"></i>
+        </div>
+        <div class="songInfo"><img src="/Images/equalizer.gif" width="50px" id="gif"><span id="masterSongName">Chandigarh kare Ashiqui Remix</span></div>
+    </div>
+    <script src="https://kit.fontawesome.com/fd91f88bff.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

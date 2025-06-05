@@ -4,7 +4,6 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
   schedule:
-    # Check for mergeable PRs every 2 hours
     - cron: '0 */2 * * *'
   workflow_dispatch:
 
@@ -18,34 +17,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🔄 Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 🔍 Find all open PRs (with mergeable & files)
+      - name: Find all open PRs (with mergeable & files)
         id: find-prs
         run: |
-          # Fetch all open PRs, including the `mergeable` status and the list of changed files
+          # Fetch all open PRs, including mergeable status and changed files
           all_prs=$(gh pr list \
             --state open \
             --json number,title,author,mergeable,files \
             --limit 3000)
 
-          # Store the entire JSON blob into an output variable
+          # Store JSON blob as a multiline output
           echo "all_prs<<EOF" >> $GITHUB_OUTPUT
           echo "$all_prs"        >> $GITHUB_OUTPUT
           echo "EOF"             >> $GITHUB_OUTPUT
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: ✅ Auto-merge non-conflicting PRs
+      - name: Auto-merge non-conflicting PRs
         run: |
-          # STEP A: Dump the JSON blob to a file so jq can parse it safely
+          # Dump the JSON into a temporary file so jq can parse it
           echo "${{ steps.find-prs.outputs.all_prs }}" > all_prs.json
 
-          # STEP B: Loop over each PR record (base64-encoded)
+          # Loop over each PR entry (encoded in base64)
           jq -r '.[] | @base64' all_prs.json | while IFS= read -r pr_data; do
             if [ -z "$pr_data" ]; then
               continue
@@ -57,10 +56,9 @@ jobs:
             pr_author=$(echo "$pr_json" | jq -r '.author.login')
             pr_mergeable=$(echo "$pr_json" | jq -r '.mergeable')
 
-            # 1) Skip PRs that only modify contributors/contributorsList.js
+            # Skip PRs that only modify contributors/contributorsList.js
             files_changed=$(echo "$pr_json" | jq -r '.files[].path // empty')
             if [ -z "$files_changed" ]; then
-              # No files changed? Skip (edge case)
               continue
             fi
 
@@ -73,49 +71,46 @@ jobs:
             done <<< "$files_changed"
 
             if [ "$contributors_only" = "true" ]; then
-              # If the only changed file is contributorsList.js, skip this PR
               continue
             fi
 
-            # 2) Only proceed if GitHub says "MERGEABLE"
+            # Only proceed if GitHub says "MERGEABLE"
             if [ "$pr_mergeable" != "MERGEABLE" ]; then
-              echo "⚠️ Skipping PR #$pr_number (mergeable status: $pr_mergeable)"
+              echo "Skipping PR #$pr_number (mergeable=$pr_mergeable)"
               continue
             fi
 
-            echo "🔄 Processing PR #$pr_number by @$pr_author — \"$pr_title\""
-            echo "    • mergeable = $pr_mergeable"
+            echo "Processing PR #$pr_number by @$pr_author — \"$pr_title\""
+            echo "mergeable=$pr_mergeable"
 
-            # 3) If the "valuable-contribution" label is not already present, add it
+            # If the label "valuable-contribution" is missing, add it
             has_label=$(gh pr view "$pr_number" --json labels \
               | jq -r '.labels[].name' \
               | grep -x "valuable-contribution" || echo "")
 
             if [ -z "$has_label" ]; then
-              echo "    • Adding label “valuable-contribution”"
+              echo "Adding label valuable-contribution to PR #$pr_number"
               gh pr edit "$pr_number" --add-label "valuable-contribution" || true
             fi
 
-            # 4) Merge the PR and delete its branch
-            echo "    • Attempting to merge PR #$pr_number"
+            # Merge the PR and delete its branch
+            echo "Merging PR #$pr_number"
             if gh pr merge "$pr_number" --merge --delete-branch; then
-              echo "✅ Successfully merged PR #$pr_number"
+              echo "Merged PR #$pr_number"
               gh pr comment "$pr_number" \
-                --body "🚀 **Automatically merged!** Thank you @$pr_author for your contribution. 🎉 #AutoMerge" \
-                || true
+                --body "Automatically merged. Thank you @$pr_author!" || true
             else
-              echo "❌ Failed to merge PR #$pr_number"
+              echo "Failed to merge PR #$pr_number"
             fi
 
-            # Pause to avoid hitting GitHub’s rate limits
+            # Brief pause to avoid rate limits
             sleep 2
           done
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 📊 Summary
+      - name: Summary
         run: |
-          echo "🤖 Auto-merge workflow completed!"
+          echo "Auto-merge run complete"
           contributor_count=$(grep -c "id:" contributors/contributorsList.js || echo 0)
-          echo "📊 Total Contributors (lines in contributorsList.js): $contributor_count"
-          echo "✅ Attempted to merge all non-conflicting PRs"
+          echo "Total lines in contributorsList.js: $contributor_count"

@@ -24,16 +24,16 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 🔍 Find all open PRs with mergeableState
+      - name: 🔍 Find all open PRs (with mergeable & files)
         id: find-prs
         run: |
-          # 1) Fetch all open PRs, including mergeableState and file list
+          # Fetch all open PRs, including the `mergeable` status and the list of changed files
           all_prs=$(gh pr list \
             --state open \
-            --json number,title,author,mergeableState,files \
+            --json number,title,author,mergeable,files \
             --limit 3000)
 
-          # 2) Save that JSON into a step output as a multiline string
+          # Store the entire JSON blob into an output variable
           echo "all_prs<<EOF" >> $GITHUB_OUTPUT
           echo "$all_prs"        >> $GITHUB_OUTPUT
           echo "EOF"             >> $GITHUB_OUTPUT
@@ -42,25 +42,25 @@ jobs:
 
       - name: ✅ Auto-merge non-conflicting PRs
         run: |
-          # ── STEP A: Dump the JSON blob to a file for safe parsing ──
+          # ── STEP A: Dump the JSON into a local file so `jq` can parse it safely ──
           echo "${{ steps.find-prs.outputs.all_prs }}" > all_prs.json
 
-          # ── STEP B: Loop over each PR entry (base64-encoded) ──
+          # ── STEP B: Loop over each PR record (base64-encoded) ──
           jq -r '.[] | @base64' all_prs.json | while IFS= read -r pr_data; do
             if [ -z "$pr_data" ]; then
               continue
             fi
 
-            pr=$(echo "$pr_data" | base64 -d)
-            pr_number=$(echo "$pr" | jq -r '.number')
-            pr_title=$(echo "$pr" | jq -r '.title')
-            pr_author=$(echo "$pr" | jq -r '.author.login')
-            pr_mergeableState=$(echo "$pr" | jq -r '.mergeableState')
+            pr_json=$(echo "$pr_data" | base64 -d)
+            pr_number=$(echo "$pr_json" | jq -r '.number')
+            pr_title=$(echo "$pr_json" | jq -r '.title')
+            pr_author=$(echo "$pr_json" | jq -r '.author.login')
+            pr_mergeable=$(echo "$pr_json" | jq -r '.mergeable')
 
-            # 1) Skip any PR that only touches contributors/contributorsList.js
-            files_changed=$(echo "$pr" | jq -r '.files[].path // empty')
+            # 1) Skip PRs that only modify contributors/contributorsList.js
+            files_changed=$(echo "$pr_json" | jq -r '.files[].path // empty')
             if [ -z "$files_changed" ]; then
-              # No files changed? Strange, but skip.
+              # No files changed? Skip (edge case)
               continue
             fi
 
@@ -73,27 +73,25 @@ jobs:
             done <<< "$files_changed"
 
             if [ "$contributors_only" = "true" ]; then
-              # There is only contributorsList.js in the changes → skip
+              # If the only changed file is contributorsList.js, skip this PR
               continue
             fi
 
-            # 2) Only act on PRs that GitHub marks as “MERGEABLE”
-            if [ "$pr_mergeableState" != "MERGEABLE" ]; then
-              # Either there’s a conflict or GitHub hasn’t computed mergeability → skip
-              echo "⚠️ Skipping PR #$pr_number (state: $pr_mergeableState)"
+            # 2) Only proceed if GitHub says "MERGEABLE"
+            if [ "$pr_mergeable" != "MERGEABLE" ]; then
+              echo "⚠️ Skipping PR #$pr_number (mergeable status: $pr_mergeable)"
               continue
             fi
 
             echo "🔄 Processing PR #$pr_number by @$pr_author — \"$pr_title\""
-            echo "    • mergeableState = $pr_mergeableState"
+            echo "    • mergeable = $pr_mergeable"
 
-            # 3) Check if the label “valuable-contribution” already exists on this PR
+            # 3) If the "valuable-contribution" label is not already present, add it
             has_label=$(gh pr view "$pr_number" --json labels \
               | jq -r '.labels[].name' \
               | grep -x "valuable-contribution" || echo "")
 
             if [ -z "$has_label" ]; then
-              # Add the label, since it’s MERGEABLE and unlabeled
               echo "    • Adding label “valuable-contribution”"
               gh pr edit "$pr_number" --add-label "valuable-contribution" || true
             fi
@@ -109,7 +107,7 @@ jobs:
               echo "❌ Failed to merge PR #$pr_number"
             fi
 
-            # Rate-limit pause to avoid hitting GitHub API limits
+            # Pause to avoid hitting GitHub’s rate limits
             sleep 2
           done
         env:

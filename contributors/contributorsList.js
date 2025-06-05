@@ -2482,6 +2482,11 @@ contributors = [
     fullname: "Parth Panjwani",
     username: "https://github.com/Parth-Panjwani",
   },
+   {
+    id: 442,
+    fullname: "Surya Prakash Subudhiray",
+    username: "https://github.com/SuryaAbyss",
+  },
 
   {
     id: 442,

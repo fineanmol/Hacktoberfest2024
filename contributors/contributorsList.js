@@ -2653,7 +2653,7 @@ contributors = [
 
   {
     id: 470,
-    fullname: "Inchara J",
+    fullname: "IncharaJ",
     username: "https://github.com/Incharajayaram",
   },
 
